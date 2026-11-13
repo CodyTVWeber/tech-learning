@@ -1,0 +1,253 @@
+band,kind,front,back,extra
+baby,solfege,Solfege: sing and show Do,"home perch, rest here
+Fist at the middle of the chest.",C-major Do = C4. Do midi 60
+baby,solfege,Solfege: sing and show Sol,"open to the canopy
+Palm toward you, thumb out.",C-major Do = C4. Sol midi 67
+baby,rhythm,Rhythm: say and clap “Ta”,ta,Pattern beats: [1]
+baby,rhythm,Rhythm: say and clap “Two tas”,ta ta,"Pattern beats: [1, 1]"
+baby,song-title,"What song starts: “Jesus loves me, this I know,”",Jesus Loves Me,"Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+baby,song-line,First line of Jesus Loves Me,"Jesus loves me, this I know,","Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+baby,song-title,"What song starts: “Hot cross buns, hot cross buns,”",Hot Cross Buns,"English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+baby,song-line,First line of Hot Cross Buns,"Hot cross buns, hot cross buns,","English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+baby,song-title,"What song starts: “Are you sleeping, are you sleeping,”",Are You Sleeping,"Frère Jacques, traditional, public domain."
+baby,song-line,First line of Are You Sleeping,"Are you sleeping, are you sleeping,","Frère Jacques, traditional, public domain."
+baby,song-title,"What song starts: “High bird in the morning light,”","High Bird, Low Bird",Original learning song for this app.
+baby,song-line,"First line of High Bird, Low Bird","High bird in the morning light,",Original learning song for this app.
+baby,high-low,Is a cardinal call usually higher or lower than an owl hoot?,Higher,Pitch nest in Songbird Forest.
+toddler,solfege,Solfege: sing and show Do,"home perch, rest here
+Fist at the middle of the chest.",C-major Do = C4. Do midi 60
+toddler,solfege,Solfege: sing and show Mi,"steady mid branch
+Flat hand, palm down.",C-major Do = C4. Mi midi 64
+toddler,solfege,Solfege: sing and show Sol,"open to the canopy
+Palm toward you, thumb out.",C-major Do = C4. Sol midi 67
+toddler,solfege,Solfege: sing and show Do2,"high nest, same name
+Fist, held high.",C-major Do = C4. Do2 midi 72
+toddler,rhythm,Rhythm: say and clap “Ta”,ta,Pattern beats: [1]
+toddler,rhythm,Rhythm: say and clap “Two tas”,ta ta,"Pattern beats: [1, 1]"
+toddler,rhythm,Rhythm: say and clap “Ti-ti”,ti-ti,"Pattern beats: [0.5, 0.5]"
+toddler,rhythm,Rhythm: say and clap “Walk four”,1 2 3 4,"Pattern beats: [1, 1, 1, 1]"
+toddler,song-title,"What song starts: “Jesus loves me, this I know,”",Jesus Loves Me,"Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+toddler,song-line,First line of Jesus Loves Me,"Jesus loves me, this I know,","Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+toddler,song-title,"What song starts: “The B-I-B-L-E,”",The B-I-B-L-E,"Traditional children’s gospel song, public domain."
+toddler,song-line,First line of The B-I-B-L-E,"The B-I-B-L-E,","Traditional children’s gospel song, public domain."
+toddler,song-title,"What song starts: “Jesus loves the little children,”",Jesus Loves the Little Children,"C. H. Woolston / George F. Root, 19th century. Public domain."
+toddler,song-line,First line of Jesus Loves the Little Children,"Jesus loves the little children,","C. H. Woolston / George F. Root, 19th century. Public domain."
+toddler,song-title,"What song starts: “Hot cross buns, hot cross buns,”",Hot Cross Buns,"English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+toddler,song-line,First line of Hot Cross Buns,"Hot cross buns, hot cross buns,","English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+toddler,song-title,"What song starts: “Are you sleeping, are you sleeping,”",Are You Sleeping,"Frère Jacques, traditional, public domain."
+toddler,song-line,First line of Are You Sleeping,"Are you sleeping, are you sleeping,","Frère Jacques, traditional, public domain."
+toddler,song-title,"What song starts: “High bird in the morning light,”","High Bird, Low Bird",Original learning song for this app.
+toddler,song-line,"First line of High Bird, Low Bird","High bird in the morning light,",Original learning song for this app.
+toddler,song-title,"What song starts: “Hold the nest, hold the beat,”",The Steady Nest,Original learning song for this app.
+toddler,song-line,First line of The Steady Nest,"Hold the nest, hold the beat,",Original learning song for this app.
+toddler,high-low,Is a cardinal call usually higher or lower than an owl hoot?,Higher,Pitch nest in Songbird Forest.
+preschool,solfege,Solfege: sing and show Do,"home perch, rest here
+Fist at the middle of the chest.",C-major Do = C4. Do midi 60
+preschool,solfege,Solfege: sing and show Re,"step up the branch
+Hand slopes up, fingers together.",C-major Do = C4. Re midi 62
+preschool,solfege,Solfege: sing and show Mi,"steady mid branch
+Flat hand, palm down.",C-major Do = C4. Mi midi 64
+preschool,solfege,Solfege: sing and show Sol,"open to the canopy
+Palm toward you, thumb out.",C-major Do = C4. Sol midi 67
+preschool,solfege,Solfege: sing and show Do2,"high nest, same name
+Fist, held high.",C-major Do = C4. Do2 midi 72
+preschool,rhythm,Rhythm: say and clap “Ta”,ta,Pattern beats: [1]
+preschool,rhythm,Rhythm: say and clap “Two tas”,ta ta,"Pattern beats: [1, 1]"
+preschool,rhythm,Rhythm: say and clap “Ti-ti”,ti-ti,"Pattern beats: [0.5, 0.5]"
+preschool,rhythm,"Rhythm: say and clap “Ta, ti-ti”",ta ti-ti,"Pattern beats: [1, 0.5, 0.5]"
+preschool,rhythm,"Rhythm: say and clap “Ti-ti, ta”",ti-ti ta,"Pattern beats: [0.5, 0.5, 1]"
+preschool,rhythm,Rhythm: say and clap “Walk four”,1 2 3 4,"Pattern beats: [1, 1, 1, 1]"
+preschool,song-title,"What song starts: “Jesus loves me, this I know,”",Jesus Loves Me,"Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+preschool,song-line,First line of Jesus Loves Me,"Jesus loves me, this I know,","Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+preschool,song-title,"What song starts: “Praise God, from whom all blessings flow;”",The Doxology,"Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+preschool,song-line,First line of The Doxology,"Praise God, from whom all blessings flow;","Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+preschool,song-title,"What song starts: “The B-I-B-L-E,”",The B-I-B-L-E,"Traditional children’s gospel song, public domain."
+preschool,song-line,First line of The B-I-B-L-E,"The B-I-B-L-E,","Traditional children’s gospel song, public domain."
+preschool,song-title,"What song starts: “I’ve got the joy, joy, joy, joy down in my heart,”",I’ve Got the Joy,"Traditional gospel chorus, public domain."
+preschool,song-line,First line of I’ve Got the Joy,"I’ve got the joy, joy, joy, joy down in my heart,","Traditional gospel chorus, public domain."
+preschool,song-title,"What song starts: “Jesus loves the little children,”",Jesus Loves the Little Children,"C. H. Woolston / George F. Root, 19th century. Public domain."
+preschool,song-line,First line of Jesus Loves the Little Children,"Jesus loves the little children,","C. H. Woolston / George F. Root, 19th century. Public domain."
+preschool,song-title,"What song starts: “Hot cross buns, hot cross buns,”",Hot Cross Buns,"English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+preschool,song-line,First line of Hot Cross Buns,"Hot cross buns, hot cross buns,","English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+preschool,song-title,"What song starts: “Are you sleeping, are you sleeping,”",Are You Sleeping,"Frère Jacques, traditional, public domain."
+preschool,song-line,First line of Are You Sleeping,"Are you sleeping, are you sleeping,","Frère Jacques, traditional, public domain."
+preschool,song-title,"What song starts: “High bird in the morning light,”","High Bird, Low Bird",Original learning song for this app.
+preschool,song-line,"First line of High Bird, Low Bird","High bird in the morning light,",Original learning song for this app.
+preschool,song-title,"What song starts: “Hold the nest, hold the beat,”",The Steady Nest,Original learning song for this app.
+preschool,song-line,First line of The Steady Nest,"Hold the nest, hold the beat,",Original learning song for this app.
+preschool,song-title,"What song starts: “Low in the moss, then up to the tree,”",Climb the Branch,Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+preschool,song-line,First line of Climb the Branch,"Low in the moss, then up to the tree,",Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+preschool,scale,Name the major scale syllables from home to high home.,Do Re Mi Fa Sol La Ti Do,Original climbing song in the app; not a copyrighted movie lyric.
+preschool,high-low,Is a cardinal call usually higher or lower than an owl hoot?,Higher,Pitch nest in Songbird Forest.
+early,solfege,Solfege: sing and show Do,"home perch, rest here
+Fist at the middle of the chest.",C-major Do = C4. Do midi 60
+early,solfege,Solfege: sing and show Re,"step up the branch
+Hand slopes up, fingers together.",C-major Do = C4. Re midi 62
+early,solfege,Solfege: sing and show Mi,"steady mid branch
+Flat hand, palm down.",C-major Do = C4. Mi midi 64
+early,solfege,Solfege: sing and show Fa,"lean toward the trunk
+Thumb down, like a hook.",C-major Do = C4. Fa midi 65
+early,solfege,Solfege: sing and show Sol,"open to the canopy
+Palm toward you, thumb out.",C-major Do = C4. Sol midi 67
+early,solfege,Solfege: sing and show Do2,"high nest, same name
+Fist, held high.",C-major Do = C4. Do2 midi 72
+early,rhythm,Rhythm: say and clap “Ta”,ta,Pattern beats: [1]
+early,rhythm,Rhythm: say and clap “Two tas”,ta ta,"Pattern beats: [1, 1]"
+early,rhythm,Rhythm: say and clap “Ti-ti”,ti-ti,"Pattern beats: [0.5, 0.5]"
+early,rhythm,"Rhythm: say and clap “Ta, ti-ti”",ta ti-ti,"Pattern beats: [1, 0.5, 0.5]"
+early,rhythm,"Rhythm: say and clap “Ti-ti, ta”",ti-ti ta,"Pattern beats: [0.5, 0.5, 1]"
+early,rhythm,Rhythm: say and clap “Ta rest ta”,ta (shh) ta,"Pattern beats: [1, 0, 1]"
+early,rhythm,Rhythm: say and clap “Walk four”,1 2 3 4,"Pattern beats: [1, 1, 1, 1]"
+early,song-title,"What song starts: “Jesus loves me, this I know,”",Jesus Loves Me,"Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+early,song-line,First line of Jesus Loves Me,"Jesus loves me, this I know,","Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+early,song-title,"What song starts: “Amazing grace! how sweet the sound,”",Amazing Grace,"John Newton, 1779 · tune NEW BRITAIN, public domain."
+early,song-line,First line of Amazing Grace,"Amazing grace! how sweet the sound,","John Newton, 1779 · tune NEW BRITAIN, public domain."
+early,song-title,"What song starts: “Praise God, from whom all blessings flow;”",The Doxology,"Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+early,song-line,First line of The Doxology,"Praise God, from whom all blessings flow;","Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+early,song-title,"What song starts: “This is my Father’s world,”",This Is My Father’s World,"Maltbie Babcock, 1901 · Franklin Sheppard, 1915. Public domain in the United States."
+early,song-line,First line of This Is My Father’s World,"This is my Father’s world,","Maltbie Babcock, 1901 · Franklin Sheppard, 1915. Public domain in the United States."
+early,song-title,"What song starts: “The B-I-B-L-E,”",The B-I-B-L-E,"Traditional children’s gospel song, public domain."
+early,song-line,First line of The B-I-B-L-E,"The B-I-B-L-E,","Traditional children’s gospel song, public domain."
+early,song-title,"What song starts: “I’ve got the joy, joy, joy, joy down in my heart,”",I’ve Got the Joy,"Traditional gospel chorus, public domain."
+early,song-line,First line of I’ve Got the Joy,"I’ve got the joy, joy, joy, joy down in my heart,","Traditional gospel chorus, public domain."
+early,song-title,"What song starts: “Jesus loves the little children,”",Jesus Loves the Little Children,"C. H. Woolston / George F. Root, 19th century. Public domain."
+early,song-line,First line of Jesus Loves the Little Children,"Jesus loves the little children,","C. H. Woolston / George F. Root, 19th century. Public domain."
+early,song-title,"What song starts: “Hot cross buns, hot cross buns,”",Hot Cross Buns,"English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+early,song-line,First line of Hot Cross Buns,"Hot cross buns, hot cross buns,","English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+early,song-title,"What song starts: “Are you sleeping, are you sleeping,”",Are You Sleeping,"Frère Jacques, traditional, public domain."
+early,song-line,First line of Are You Sleeping,"Are you sleeping, are you sleeping,","Frère Jacques, traditional, public domain."
+early,song-title,"What song starts: “High bird in the morning light,”","High Bird, Low Bird",Original learning song for this app.
+early,song-line,"First line of High Bird, Low Bird","High bird in the morning light,",Original learning song for this app.
+early,song-title,"What song starts: “Hold the nest, hold the beat,”",The Steady Nest,Original learning song for this app.
+early,song-line,First line of The Steady Nest,"Hold the nest, hold the beat,",Original learning song for this app.
+early,song-title,"What song starts: “Low in the moss, then up to the tree,”",Climb the Branch,Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+early,song-line,First line of Climb the Branch,"Low in the moss, then up to the tree,",Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+early,song-title,"What song starts: “I sing a call across the pines,”",Echo in the Pines,Original echo song for this app.
+early,song-line,First line of Echo in the Pines,"I sing a call across the pines,",Original echo song for this app.
+early,scale,Name the major scale syllables from home to high home.,Do Re Mi Fa Sol La Ti Do,Original climbing song in the app; not a copyrighted movie lyric.
+early,high-low,Is a cardinal call usually higher or lower than an owl hoot?,Higher,Pitch nest in Songbird Forest.
+primary,solfege,Solfege: sing and show Do,"home perch, rest here
+Fist at the middle of the chest.",C-major Do = C4. Do midi 60
+primary,solfege,Solfege: sing and show Re,"step up the branch
+Hand slopes up, fingers together.",C-major Do = C4. Re midi 62
+primary,solfege,Solfege: sing and show Mi,"steady mid branch
+Flat hand, palm down.",C-major Do = C4. Mi midi 64
+primary,solfege,Solfege: sing and show Fa,"lean toward the trunk
+Thumb down, like a hook.",C-major Do = C4. Fa midi 65
+primary,solfege,Solfege: sing and show Sol,"open to the canopy
+Palm toward you, thumb out.",C-major Do = C4. Sol midi 67
+primary,solfege,Solfege: sing and show La,"soft light in the leaves
+Drooping hand, relaxed.",C-major Do = C4. La midi 69
+primary,solfege,Solfege: sing and show Ti,"almost home again
+Pointer finger points up.",C-major Do = C4. Ti midi 71
+primary,solfege,Solfege: sing and show Do2,"high nest, same name
+Fist, held high.",C-major Do = C4. Do2 midi 72
+primary,rhythm,Rhythm: say and clap “Ta”,ta,Pattern beats: [1]
+primary,rhythm,Rhythm: say and clap “Two tas”,ta ta,"Pattern beats: [1, 1]"
+primary,rhythm,Rhythm: say and clap “Ti-ti”,ti-ti,"Pattern beats: [0.5, 0.5]"
+primary,rhythm,"Rhythm: say and clap “Ta, ti-ti”",ta ti-ti,"Pattern beats: [1, 0.5, 0.5]"
+primary,rhythm,"Rhythm: say and clap “Ti-ti, ta”",ti-ti ta,"Pattern beats: [0.5, 0.5, 1]"
+primary,rhythm,Rhythm: say and clap “Ta rest ta”,ta (shh) ta,"Pattern beats: [1, 0, 1]"
+primary,rhythm,Rhythm: say and clap “Walk four”,1 2 3 4,"Pattern beats: [1, 1, 1, 1]"
+primary,rhythm,Rhythm: say and clap “Ti-ta-ti”,ti ta ti,"Pattern beats: [0.5, 1, 0.5]"
+primary,rhythm,Rhythm: say and clap “Four ti-ti”,ti-ti ti-ti ti-ti ti-ti,"Pattern beats: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]"
+primary,song-title,"What song starts: “Jesus loves me, this I know,”",Jesus Loves Me,"Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+primary,song-line,First line of Jesus Loves Me,"Jesus loves me, this I know,","Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+primary,song-title,"What song starts: “Amazing grace! how sweet the sound,”",Amazing Grace,"John Newton, 1779 · tune NEW BRITAIN, public domain."
+primary,song-line,First line of Amazing Grace,"Amazing grace! how sweet the sound,","John Newton, 1779 · tune NEW BRITAIN, public domain."
+primary,song-title,"What song starts: “Praise God, from whom all blessings flow;”",The Doxology,"Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+primary,song-line,First line of The Doxology,"Praise God, from whom all blessings flow;","Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+primary,song-title,"What song starts: “Holy, holy, holy! Lord God Almighty!”","Holy, Holy, Holy","Reginald Heber, 1826 · John B. Dykes, 1861. Public domain."
+primary,song-line,"First line of Holy, Holy, Holy","Holy, holy, holy! Lord God Almighty!","Reginald Heber, 1826 · John B. Dykes, 1861. Public domain."
+primary,song-title,"What song starts: “What a friend we have in Jesus,”",What a Friend We Have in Jesus,"Joseph Scriven, 1855 · Charles Converse, 1868. Public domain."
+primary,song-line,First line of What a Friend We Have in Jesus,"What a friend we have in Jesus,","Joseph Scriven, 1855 · Charles Converse, 1868. Public domain."
+primary,song-title,"What song starts: “This is my Father’s world,”",This Is My Father’s World,"Maltbie Babcock, 1901 · Franklin Sheppard, 1915. Public domain in the United States."
+primary,song-line,First line of This Is My Father’s World,"This is my Father’s world,","Maltbie Babcock, 1901 · Franklin Sheppard, 1915. Public domain in the United States."
+primary,song-title,"What song starts: “The B-I-B-L-E,”",The B-I-B-L-E,"Traditional children’s gospel song, public domain."
+primary,song-line,First line of The B-I-B-L-E,"The B-I-B-L-E,","Traditional children’s gospel song, public domain."
+primary,song-title,"What song starts: “I’ve got the joy, joy, joy, joy down in my heart,”",I’ve Got the Joy,"Traditional gospel chorus, public domain."
+primary,song-line,First line of I’ve Got the Joy,"I’ve got the joy, joy, joy, joy down in my heart,","Traditional gospel chorus, public domain."
+primary,song-title,"What song starts: “Jesus loves the little children,”",Jesus Loves the Little Children,"C. H. Woolston / George F. Root, 19th century. Public domain."
+primary,song-line,First line of Jesus Loves the Little Children,"Jesus loves the little children,","C. H. Woolston / George F. Root, 19th century. Public domain."
+primary,song-title,"What song starts: “Hot cross buns, hot cross buns,”",Hot Cross Buns,"English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+primary,song-line,First line of Hot Cross Buns,"Hot cross buns, hot cross buns,","English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+primary,song-title,"What song starts: “Are you sleeping, are you sleeping,”",Are You Sleeping,"Frère Jacques, traditional, public domain."
+primary,song-line,First line of Are You Sleeping,"Are you sleeping, are you sleeping,","Frère Jacques, traditional, public domain."
+primary,song-title,"What song starts: “High bird in the morning light,”","High Bird, Low Bird",Original learning song for this app.
+primary,song-line,"First line of High Bird, Low Bird","High bird in the morning light,",Original learning song for this app.
+primary,song-title,"What song starts: “Hold the nest, hold the beat,”",The Steady Nest,Original learning song for this app.
+primary,song-line,First line of The Steady Nest,"Hold the nest, hold the beat,",Original learning song for this app.
+primary,song-title,"What song starts: “Low in the moss, then up to the tree,”",Climb the Branch,Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+primary,song-line,First line of Climb the Branch,"Low in the moss, then up to the tree,",Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+primary,song-title,"What song starts: “I sing a call across the pines,”",Echo in the Pines,Original echo song for this app.
+primary,song-line,First line of Echo in the Pines,"I sing a call across the pines,",Original echo song for this app.
+primary,song-title,"What song starts: “Soft as a feather, hush in the glen,”",Soft as a Feather,Original dynamics song for this app.
+primary,song-line,First line of Soft as a Feather,"Soft as a feather, hush in the glen,",Original dynamics song for this app.
+primary,scale,Name the major scale syllables from home to high home.,Do Re Mi Fa Sol La Ti Do,Original climbing song in the app; not a copyrighted movie lyric.
+primary,high-low,Is a cardinal call usually higher or lower than an owl hoot?,Higher,Pitch nest in Songbird Forest.
+upper,solfege,Solfege: sing and show Do,"home perch, rest here
+Fist at the middle of the chest.",C-major Do = C4. Do midi 60
+upper,solfege,Solfege: sing and show Re,"step up the branch
+Hand slopes up, fingers together.",C-major Do = C4. Re midi 62
+upper,solfege,Solfege: sing and show Mi,"steady mid branch
+Flat hand, palm down.",C-major Do = C4. Mi midi 64
+upper,solfege,Solfege: sing and show Fa,"lean toward the trunk
+Thumb down, like a hook.",C-major Do = C4. Fa midi 65
+upper,solfege,Solfege: sing and show Sol,"open to the canopy
+Palm toward you, thumb out.",C-major Do = C4. Sol midi 67
+upper,solfege,Solfege: sing and show La,"soft light in the leaves
+Drooping hand, relaxed.",C-major Do = C4. La midi 69
+upper,solfege,Solfege: sing and show Ti,"almost home again
+Pointer finger points up.",C-major Do = C4. Ti midi 71
+upper,solfege,Solfege: sing and show Do2,"high nest, same name
+Fist, held high.",C-major Do = C4. Do2 midi 72
+upper,rhythm,Rhythm: say and clap “Ta”,ta,Pattern beats: [1]
+upper,rhythm,Rhythm: say and clap “Two tas”,ta ta,"Pattern beats: [1, 1]"
+upper,rhythm,Rhythm: say and clap “Ti-ti”,ti-ti,"Pattern beats: [0.5, 0.5]"
+upper,rhythm,"Rhythm: say and clap “Ta, ti-ti”",ta ti-ti,"Pattern beats: [1, 0.5, 0.5]"
+upper,rhythm,"Rhythm: say and clap “Ti-ti, ta”",ti-ti ta,"Pattern beats: [0.5, 0.5, 1]"
+upper,rhythm,Rhythm: say and clap “Ta rest ta”,ta (shh) ta,"Pattern beats: [1, 0, 1]"
+upper,rhythm,Rhythm: say and clap “Walk four”,1 2 3 4,"Pattern beats: [1, 1, 1, 1]"
+upper,rhythm,Rhythm: say and clap “Ti-ta-ti”,ti ta ti,"Pattern beats: [0.5, 1, 0.5]"
+upper,rhythm,Rhythm: say and clap “Four ti-ti”,ti-ti ti-ti ti-ti ti-ti,"Pattern beats: [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]"
+upper,rhythm,Rhythm: say and clap “Ta-a ti”,ta-a ti,"Pattern beats: [1.5, 0.5]"
+upper,song-title,"What song starts: “Jesus loves me, this I know,”",Jesus Loves Me,"Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+upper,song-line,First line of Jesus Loves Me,"Jesus loves me, this I know,","Anna Warner, 1860 · William Bradbury, 1862. Public domain."
+upper,song-title,"What song starts: “Amazing grace! how sweet the sound,”",Amazing Grace,"John Newton, 1779 · tune NEW BRITAIN, public domain."
+upper,song-line,First line of Amazing Grace,"Amazing grace! how sweet the sound,","John Newton, 1779 · tune NEW BRITAIN, public domain."
+upper,song-title,"What song starts: “Praise God, from whom all blessings flow;”",The Doxology,"Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+upper,song-line,First line of The Doxology,"Praise God, from whom all blessings flow;","Thomas Ken, 1674 · OLD HUNDREDTH, public domain."
+upper,song-title,"What song starts: “Holy, holy, holy! Lord God Almighty!”","Holy, Holy, Holy","Reginald Heber, 1826 · John B. Dykes, 1861. Public domain."
+upper,song-line,"First line of Holy, Holy, Holy","Holy, holy, holy! Lord God Almighty!","Reginald Heber, 1826 · John B. Dykes, 1861. Public domain."
+upper,song-title,"What song starts: “What a friend we have in Jesus,”",What a Friend We Have in Jesus,"Joseph Scriven, 1855 · Charles Converse, 1868. Public domain."
+upper,song-line,First line of What a Friend We Have in Jesus,"What a friend we have in Jesus,","Joseph Scriven, 1855 · Charles Converse, 1868. Public domain."
+upper,song-title,"What song starts: “This is my Father’s world,”",This Is My Father’s World,"Maltbie Babcock, 1901 · Franklin Sheppard, 1915. Public domain in the United States."
+upper,song-line,First line of This Is My Father’s World,"This is my Father’s world,","Maltbie Babcock, 1901 · Franklin Sheppard, 1915. Public domain in the United States."
+upper,song-title,"What song starts: “Come, Thou Fount of every blessing,”","Come, Thou Fount","Robert Robinson, 1758 · NETTLETON, public domain."
+upper,song-line,"First line of Come, Thou Fount","Come, Thou Fount of every blessing,","Robert Robinson, 1758 · NETTLETON, public domain."
+upper,song-title,"What song starts: “Fairest Lord Jesus, Ruler of all nature,”",Fairest Lord Jesus,"Münster Gesangbuch, 1677 · CRUSADER’S HYMN, public domain."
+upper,song-line,First line of Fairest Lord Jesus,"Fairest Lord Jesus, Ruler of all nature,","Münster Gesangbuch, 1677 · CRUSADER’S HYMN, public domain."
+upper,song-title,"What song starts: “The B-I-B-L-E,”",The B-I-B-L-E,"Traditional children’s gospel song, public domain."
+upper,song-line,First line of The B-I-B-L-E,"The B-I-B-L-E,","Traditional children’s gospel song, public domain."
+upper,song-title,"What song starts: “I’ve got the joy, joy, joy, joy down in my heart,”",I’ve Got the Joy,"Traditional gospel chorus, public domain."
+upper,song-line,First line of I’ve Got the Joy,"I’ve got the joy, joy, joy, joy down in my heart,","Traditional gospel chorus, public domain."
+upper,song-title,"What song starts: “Jesus loves the little children,”",Jesus Loves the Little Children,"C. H. Woolston / George F. Root, 19th century. Public domain."
+upper,song-line,First line of Jesus Loves the Little Children,"Jesus loves the little children,","C. H. Woolston / George F. Root, 19th century. Public domain."
+upper,song-title,"What song starts: “Hot cross buns, hot cross buns,”",Hot Cross Buns,"English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+upper,song-line,First line of Hot Cross Buns,"Hot cross buns, hot cross buns,","English traditional, public domain. Used as a three-note pitch game, not a church hymn."
+upper,song-title,"What song starts: “Are you sleeping, are you sleeping,”",Are You Sleeping,"Frère Jacques, traditional, public domain."
+upper,song-line,First line of Are You Sleeping,"Are you sleeping, are you sleeping,","Frère Jacques, traditional, public domain."
+upper,song-title,"What song starts: “High bird in the morning light,”","High Bird, Low Bird",Original learning song for this app.
+upper,song-line,"First line of High Bird, Low Bird","High bird in the morning light,",Original learning song for this app.
+upper,song-title,"What song starts: “Hold the nest, hold the beat,”",The Steady Nest,Original learning song for this app.
+upper,song-line,First line of The Steady Nest,"Hold the nest, hold the beat,",Original learning song for this app.
+upper,song-title,"What song starts: “Low in the moss, then up to the tree,”",Climb the Branch,Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+upper,song-line,First line of Climb the Branch,"Low in the moss, then up to the tree,",Original solfege song for this app. Not the copyrighted “Do-Re-Mi” lyric.
+upper,song-title,"What song starts: “I sing a call across the pines,”",Echo in the Pines,Original echo song for this app.
+upper,song-line,First line of Echo in the Pines,"I sing a call across the pines,",Original echo song for this app.
+upper,song-title,"What song starts: “Soft as a feather, hush in the glen,”",Soft as a Feather,Original dynamics song for this app.
+upper,song-line,First line of Soft as a Feather,"Soft as a feather, hush in the glen,",Original dynamics song for this app.
+upper,song-title,"What song starts: “Open the window, open the throat,”",Morning Choir Call,Original warm-up song for this app.
+upper,song-line,First line of Morning Choir Call,"Open the window, open the throat,",Original warm-up song for this app.
+upper,scale,Name the major scale syllables from home to high home.,Do Re Mi Fa Sol La Ti Do,Original climbing song in the app; not a copyrighted movie lyric.
+upper,high-low,Is a cardinal call usually higher or lower than an owl hoot?,Higher,Pitch nest in Songbird Forest.

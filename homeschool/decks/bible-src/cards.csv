@@ -1,0 +1,1450 @@
+band,kind,front,back,extra
+baby,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
+baby,verse-ref,"What is the reference?
+“In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
+baby,verse-say,Say this verse: Numbers 6:24,"The LORD bless thee, and keep thee:",KJV · Numbers 6:24
+baby,verse-ref,"What is the reference?
+“The LORD bless thee, and keep thee:”",Numbers 6:24,KJV
+baby,verse-say,Say this verse: Psalms 23:1,The LORD is my shepherd; I shall not want.,KJV · Psalms 23:1
+baby,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want.”",Psalms 23:1,KJV
+baby,verse-say,Say this verse: Psalms 100:1,"Make a joyful noise unto the LORD , all ye lands.",KJV · Psalms 100:1
+baby,verse-ref,"What is the reference?
+“Make a joyful noise unto the LORD , all ye lands.”",Psalms 100:1,KJV
+baby,verse-say,Say this verse: Psalms 136:1,O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.,KJV · Psalms 136:1
+baby,verse-ref,"What is the reference?
+“O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.”",Psalms 136:1,KJV
+baby,verse-say,Say this verse: John 11:35,Jesus wept.,KJV · John 11:35
+baby,verse-ref,"What is the reference?
+“Jesus wept.”",John 11:35,KJV
+baby,verse-say,Say this verse: Philippians 4:4,"Rejoice in the Lord alway: and again I say, Rejoice.",KJV · Philippians 4:4
+baby,verse-ref,"What is the reference?
+“Rejoice in the Lord alway: and again I say, Rejoice.”",Philippians 4:4,KJV
+baby,verse-say,Say this verse: 1 Thessalonians 5:17,Pray without ceasing.,KJV · 1 Thessalonians 5:17
+baby,verse-ref,"What is the reference?
+“Pray without ceasing.”",1 Thessalonians 5:17,KJV
+baby,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
+baby,verse-ref,"What is the reference?
+“He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
+baby,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+baby,book-order,Which book comes after Exodus?,Leviticus,OT · Law
+baby,book-order,Which book comes after Leviticus?,Numbers,OT · Law
+baby,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
+baby,book-order,Which book comes after Job?,Psalms,OT · Poetry
+baby,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
+baby,quality,"Character quality: Love
+What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+baby,quality,"Character quality: Joy
+What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+toddler,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
+toddler,verse-ref,"What is the reference?
+“In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
+toddler,verse-say,Say this verse: Genesis 1:3,"And God said, Let there be light: and there was light.",KJV · Genesis 1:3
+toddler,verse-ref,"What is the reference?
+“And God said, Let there be light: and there was light.”",Genesis 1:3,KJV
+toddler,verse-say,Say this verse: Numbers 6:24,"The LORD bless thee, and keep thee:",KJV · Numbers 6:24
+toddler,verse-ref,"What is the reference?
+“The LORD bless thee, and keep thee:”",Numbers 6:24,KJV
+toddler,verse-say,Say this verse: Psalms 23:1,The LORD is my shepherd; I shall not want.,KJV · Psalms 23:1
+toddler,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want.”",Psalms 23:1,KJV
+toddler,verse-say,Say this verse: Psalms 23:2,He maketh me to lie down in green pastures: he leadeth me beside the still waters.,KJV · Psalms 23:2
+toddler,verse-ref,"What is the reference?
+“He maketh me to lie down in green pastures: he leadeth me beside the still waters.”",Psalms 23:2,KJV
+toddler,verse-say,Say this verse: Psalms 56:3,"What time I am afraid, I will trust in thee.",KJV · Psalms 56:3
+toddler,verse-ref,"What is the reference?
+“What time I am afraid, I will trust in thee.”",Psalms 56:3,KJV
+toddler,verse-say,Say this verse: Psalms 100:1,"Make a joyful noise unto the LORD , all ye lands.",KJV · Psalms 100:1
+toddler,verse-ref,"What is the reference?
+“Make a joyful noise unto the LORD , all ye lands.”",Psalms 100:1,KJV
+toddler,verse-say,Say this verse: Psalms 119:105,"Thy word is a lamp unto my feet, and a light unto my path.",KJV · Psalms 119:105
+toddler,verse-ref,"What is the reference?
+“Thy word is a lamp unto my feet, and a light unto my path.”",Psalms 119:105,KJV
+toddler,verse-say,Say this verse: Psalms 136:1,O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.,KJV · Psalms 136:1
+toddler,verse-ref,"What is the reference?
+“O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.”",Psalms 136:1,KJV
+toddler,verse-say,Say this verse: Jonah 1:17,Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.,KJV · Jonah 1:17
+toddler,verse-ref,"What is the reference?
+“Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.”",Jonah 1:17,KJV
+toddler,verse-say,Say this verse: Matthew 19:14,"But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",KJV · Matthew 19:14
+toddler,verse-ref,"What is the reference?
+“But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.”",Matthew 19:14,KJV
+toddler,verse-say,Say this verse: Luke 2:11,"For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",KJV · Luke 2:11
+toddler,verse-ref,"What is the reference?
+“For unto you is born this day in the city of David a Saviour, which is Christ the Lord.”",Luke 2:11,KJV
+toddler,verse-say,Say this verse: John 10:11,I am the good shepherd: the good shepherd giveth his life for the sheep.,KJV · John 10:11
+toddler,verse-ref,"What is the reference?
+“I am the good shepherd: the good shepherd giveth his life for the sheep.”",John 10:11,KJV
+toddler,verse-say,Say this verse: John 11:35,Jesus wept.,KJV · John 11:35
+toddler,verse-ref,"What is the reference?
+“Jesus wept.”",John 11:35,KJV
+toddler,verse-say,Say this verse: 1 Corinthians 16:14,Let all your things be done with charity.,KJV · 1 Corinthians 16:14
+toddler,verse-ref,"What is the reference?
+“Let all your things be done with charity.”",1 Corinthians 16:14,KJV
+toddler,verse-say,Say this verse: Ephesians 6:1,"Children, obey your parents in the Lord: for this is right.",KJV · Ephesians 6:1
+toddler,verse-ref,"What is the reference?
+“Children, obey your parents in the Lord: for this is right.”",Ephesians 6:1,KJV
+toddler,verse-say,Say this verse: Philippians 4:4,"Rejoice in the Lord alway: and again I say, Rejoice.",KJV · Philippians 4:4
+toddler,verse-ref,"What is the reference?
+“Rejoice in the Lord alway: and again I say, Rejoice.”",Philippians 4:4,KJV
+toddler,verse-say,Say this verse: 1 Thessalonians 5:17,Pray without ceasing.,KJV · 1 Thessalonians 5:17
+toddler,verse-ref,"What is the reference?
+“Pray without ceasing.”",1 Thessalonians 5:17,KJV
+toddler,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
+toddler,verse-ref,"What is the reference?
+“He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
+toddler,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
+toddler,verse-ref,"What is the reference?
+“We love him, because he first loved us.”",1 John 4:19,KJV
+toddler,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+toddler,book-order,Which book comes after Genesis?,Exodus,OT · Law
+toddler,book-order,Which book comes after Exodus?,Leviticus,OT · Law
+toddler,book-order,Which book comes after Leviticus?,Numbers,OT · Law
+toddler,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
+toddler,book-order,Which book comes after Job?,Psalms,OT · Poetry
+toddler,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
+toddler,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
+toddler,book-order,Which book comes after Mark?,Luke,NT · Gospels
+toddler,book-order,Which book comes after Luke?,John,NT · Gospels
+toddler,quality,"Character quality: Love
+What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+toddler,quality,"Character quality: Joy
+What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+toddler,quality,"Character quality: Peace
+What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+toddler,quality,"Character quality: Kindness
+What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+toddler,quality,"Character quality: Gratitude
+What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+toddler,quality,"Character quality: Obedience
+What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+preschool,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
+preschool,verse-ref,"What is the reference?
+“In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
+preschool,verse-say,Say this verse: Genesis 1:3,"And God said, Let there be light: and there was light.",KJV · Genesis 1:3
+preschool,verse-ref,"What is the reference?
+“And God said, Let there be light: and there was light.”",Genesis 1:3,KJV
+preschool,verse-say,Say this verse: Exodus 20:12,Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.,KJV · Exodus 20:12
+preschool,verse-ref,"What is the reference?
+“Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.”",Exodus 20:12,KJV
+preschool,verse-say,Say this verse: Numbers 6:24,"The LORD bless thee, and keep thee:",KJV · Numbers 6:24
+preschool,verse-ref,"What is the reference?
+“The LORD bless thee, and keep thee:”",Numbers 6:24,KJV
+preschool,verse-say,Say this verse: Psalms 19:1,The heavens declare the glory of God; and the firmament sheweth his handywork.,KJV · Psalms 19:1
+preschool,verse-ref,"What is the reference?
+“The heavens declare the glory of God; and the firmament sheweth his handywork.”",Psalms 19:1,KJV
+preschool,verse-say,Say this verse: Psalms 23:1,The LORD is my shepherd; I shall not want.,KJV · Psalms 23:1
+preschool,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want.”",Psalms 23:1,KJV
+preschool,verse-say,Say this verse: Psalms 23:2,He maketh me to lie down in green pastures: he leadeth me beside the still waters.,KJV · Psalms 23:2
+preschool,verse-ref,"What is the reference?
+“He maketh me to lie down in green pastures: he leadeth me beside the still waters.”",Psalms 23:2,KJV
+preschool,verse-say,Say this verse: Psalms 56:3,"What time I am afraid, I will trust in thee.",KJV · Psalms 56:3
+preschool,verse-ref,"What is the reference?
+“What time I am afraid, I will trust in thee.”",Psalms 56:3,KJV
+preschool,verse-say,Say this verse: Psalms 100:1,"Make a joyful noise unto the LORD , all ye lands.",KJV · Psalms 100:1
+preschool,verse-ref,"What is the reference?
+“Make a joyful noise unto the LORD , all ye lands.”",Psalms 100:1,KJV
+preschool,verse-say,Say this verse: Psalms 119:105,"Thy word is a lamp unto my feet, and a light unto my path.",KJV · Psalms 119:105
+preschool,verse-ref,"What is the reference?
+“Thy word is a lamp unto my feet, and a light unto my path.”",Psalms 119:105,KJV
+preschool,verse-say,Say this verse: Psalms 136:1,O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.,KJV · Psalms 136:1
+preschool,verse-ref,"What is the reference?
+“O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.”",Psalms 136:1,KJV
+preschool,verse-say,Say this verse: Psalms 139:14,I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.,KJV · Psalms 139:14
+preschool,verse-ref,"What is the reference?
+“I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.”",Psalms 139:14,KJV
+preschool,verse-say,Say this verse: Proverbs 3:5,Trust in the LORD with all thine heart; and lean not unto thine own understanding.,KJV · Proverbs 3:5
+preschool,verse-ref,"What is the reference?
+“Trust in the LORD with all thine heart; and lean not unto thine own understanding.”",Proverbs 3:5,KJV
+preschool,verse-say,Say this verse: Jonah 1:17,Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.,KJV · Jonah 1:17
+preschool,verse-ref,"What is the reference?
+“Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.”",Jonah 1:17,KJV
+preschool,verse-say,Say this verse: Matthew 5:9,Blessed are the peacemakers: for they shall be called the children of God.,KJV · Matthew 5:9
+preschool,verse-ref,"What is the reference?
+“Blessed are the peacemakers: for they shall be called the children of God.”",Matthew 5:9,KJV
+preschool,verse-say,Say this verse: Matthew 19:14,"But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",KJV · Matthew 19:14
+preschool,verse-ref,"What is the reference?
+“But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.”",Matthew 19:14,KJV
+preschool,verse-say,Say this verse: Matthew 28:6,"He is not here: for he is risen, as he said. Come, see the place where the Lord lay.",KJV · Matthew 28:6
+preschool,verse-ref,"What is the reference?
+“He is not here: for he is risen, as he said. Come, see the place where the Lord lay.”",Matthew 28:6,KJV
+preschool,verse-say,Say this verse: Luke 2:11,"For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",KJV · Luke 2:11
+preschool,verse-ref,"What is the reference?
+“For unto you is born this day in the city of David a Saviour, which is Christ the Lord.”",Luke 2:11,KJV
+preschool,verse-say,Say this verse: Luke 6:31,"And as ye would that men should do to you, do ye also to them likewise.",KJV · Luke 6:31
+preschool,verse-ref,"What is the reference?
+“And as ye would that men should do to you, do ye also to them likewise.”",Luke 6:31,KJV
+preschool,verse-say,Say this verse: John 3:16,"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",KJV · John 3:16
+preschool,verse-ref,"What is the reference?
+“For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life…”",John 3:16,KJV
+preschool,verse-say,Say this verse: John 10:11,I am the good shepherd: the good shepherd giveth his life for the sheep.,KJV · John 10:11
+preschool,verse-ref,"What is the reference?
+“I am the good shepherd: the good shepherd giveth his life for the sheep.”",John 10:11,KJV
+preschool,verse-say,Say this verse: John 11:35,Jesus wept.,KJV · John 11:35
+preschool,verse-ref,"What is the reference?
+“Jesus wept.”",John 11:35,KJV
+preschool,verse-say,Say this verse: John 14:15,"If ye love me, keep my commandments.",KJV · John 14:15
+preschool,verse-ref,"What is the reference?
+“If ye love me, keep my commandments.”",John 14:15,KJV
+preschool,verse-say,Say this verse: 1 Corinthians 16:14,Let all your things be done with charity.,KJV · 1 Corinthians 16:14
+preschool,verse-ref,"What is the reference?
+“Let all your things be done with charity.”",1 Corinthians 16:14,KJV
+preschool,verse-say,Say this verse: Ephesians 4:32,"And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",KJV · Ephesians 4:32
+preschool,verse-ref,"What is the reference?
+“And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.”",Ephesians 4:32,KJV
+preschool,verse-say,Say this verse: Ephesians 6:1,"Children, obey your parents in the Lord: for this is right.",KJV · Ephesians 6:1
+preschool,verse-ref,"What is the reference?
+“Children, obey your parents in the Lord: for this is right.”",Ephesians 6:1,KJV
+preschool,verse-say,Say this verse: Philippians 4:4,"Rejoice in the Lord alway: and again I say, Rejoice.",KJV · Philippians 4:4
+preschool,verse-ref,"What is the reference?
+“Rejoice in the Lord alway: and again I say, Rejoice.”",Philippians 4:4,KJV
+preschool,verse-say,Say this verse: 1 Thessalonians 5:17,Pray without ceasing.,KJV · 1 Thessalonians 5:17
+preschool,verse-ref,"What is the reference?
+“Pray without ceasing.”",1 Thessalonians 5:17,KJV
+preschool,verse-say,Say this verse: Hebrews 13:8,"Jesus Christ the same yesterday, and to day, and for ever.",KJV · Hebrews 13:8
+preschool,verse-ref,"What is the reference?
+“Jesus Christ the same yesterday, and to day, and for ever.”",Hebrews 13:8,KJV
+preschool,verse-say,Say this verse: 1 Peter 5:7,Casting all your care upon him; for he careth for you.,KJV · 1 Peter 5:7
+preschool,verse-ref,"What is the reference?
+“Casting all your care upon him; for he careth for you.”",1 Peter 5:7,KJV
+preschool,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
+preschool,verse-ref,"What is the reference?
+“He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
+preschool,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
+preschool,verse-ref,"What is the reference?
+“We love him, because he first loved us.”",1 John 4:19,KJV
+preschool,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+preschool,book-order,Which book comes after Genesis?,Exodus,OT · Law
+preschool,book-order,Which book comes after Exodus?,Leviticus,OT · Law
+preschool,book-order,Which book comes after Leviticus?,Numbers,OT · Law
+preschool,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
+preschool,book-order,Which book comes after Job?,Psalms,OT · Poetry
+preschool,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
+preschool,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
+preschool,book-order,Which book comes after Matthew?,Mark,NT · Gospels
+preschool,book-order,Which book comes after Mark?,Luke,NT · Gospels
+preschool,book-order,Which book comes after Luke?,John,NT · Gospels
+preschool,book-order,Which book comes after John?,Acts,NT · History
+preschool,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
+preschool,quality,"Character quality: Love
+What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+preschool,quality,"Character quality: Joy
+What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+preschool,quality,"Character quality: Peace
+What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+preschool,quality,"Character quality: Patience
+What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+preschool,quality,"Character quality: Kindness
+What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+preschool,quality,"Character quality: Goodness
+What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+preschool,quality,"Character quality: Gentleness
+What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+preschool,quality,"Character quality: Courage
+What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+preschool,quality,"Character quality: Gratitude
+What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+preschool,quality,"Character quality: Obedience
+What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+preschool,quality,"Character quality: Hope
+What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+preschool,story-order,Bible story order: what comes after “God Makes the World”?,Noah and the Ark,Genesis 7:1
+preschool,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
+preschool,story-order,Bible story order: what comes after “God Calls Abraham”?,Joseph in Egypt,Genesis 50:20
+preschool,story-order,Bible story order: what comes after “Joseph in Egypt”?,Moses and the Burning Bush,Exodus 3:14
+preschool,story-order,Bible story order: what comes after “Moses and the Burning Bush”?,Through the Sea,Exodus 14:21-22
+preschool,story-order,Bible story order: what comes after “Through the Sea”?,Jericho’s Walls,Joshua 6:20
+preschool,story-order,Bible story order: what comes after “Jericho’s Walls”?,Samuel Listens,1 Samuel 3:10
+preschool,story-order,Bible story order: what comes after “Samuel Listens”?,David and Goliath,1 Samuel 17:45
+preschool,story-order,Bible story order: what comes after “David and Goliath”?,Daniel and the Lions,Daniel 6:22
+preschool,story-order,Bible story order: what comes after “Daniel and the Lions”?,Jonah and the Great Fish,Jonah 1:17
+preschool,story-order,Bible story order: what comes after “Jonah and the Great Fish”?,Jesus Is Born,Luke 2:11
+preschool,story-order,Bible story order: what comes after “Jesus Is Born”?,Jesus Calms the Storm,Mark 4:39
+preschool,story-order,Bible story order: what comes after “Jesus Calms the Storm”?,A Crowd Is Fed,John 6:11
+preschool,story-order,Bible story order: what comes after “A Crowd Is Fed”?,The Lost Sheep,Luke 15:4-6
+preschool,story-order,Bible story order: what comes after “The Lost Sheep”?,Jesus and the Children,Matthew 19:14
+preschool,story-order,Bible story order: what comes after “Jesus and the Children”?,The Cross and the Empty Tomb,Matthew 28:6
+early,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
+early,verse-ref,"What is the reference?
+“In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
+early,verse-say,Say this verse: Genesis 1:3,"And God said, Let there be light: and there was light.",KJV · Genesis 1:3
+early,verse-ref,"What is the reference?
+“And God said, Let there be light: and there was light.”",Genesis 1:3,KJV
+early,verse-say,Say this verse: Genesis 1:27,"So God created man in his own image, in the image of God created he him; male and female created he them.",KJV · Genesis 1:27
+early,verse-ref,"What is the reference?
+“So God created man in his own image, in the image of God created he him; male and female created he them.”",Genesis 1:27,KJV
+early,verse-say,Say this verse: Exodus 20:12,Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.,KJV · Exodus 20:12
+early,verse-ref,"What is the reference?
+“Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.”",Exodus 20:12,KJV
+early,verse-say,Say this verse: Numbers 6:24,"The LORD bless thee, and keep thee:",KJV · Numbers 6:24
+early,verse-ref,"What is the reference?
+“The LORD bless thee, and keep thee:”",Numbers 6:24,KJV
+early,verse-say,Say this verse: Deuteronomy 6:5,"And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",KJV · Deuteronomy 6:5
+early,verse-ref,"What is the reference?
+“And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.”",Deuteronomy 6:5,KJV
+early,verse-say,Say this verse: Psalms 19:1,The heavens declare the glory of God; and the firmament sheweth his handywork.,KJV · Psalms 19:1
+early,verse-ref,"What is the reference?
+“The heavens declare the glory of God; and the firmament sheweth his handywork.”",Psalms 19:1,KJV
+early,verse-say,Say this verse: Psalms 23:1,The LORD is my shepherd; I shall not want.,KJV · Psalms 23:1
+early,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want.”",Psalms 23:1,KJV
+early,verse-say,Say this verse: Psalms 23:2,He maketh me to lie down in green pastures: he leadeth me beside the still waters.,KJV · Psalms 23:2
+early,verse-ref,"What is the reference?
+“He maketh me to lie down in green pastures: he leadeth me beside the still waters.”",Psalms 23:2,KJV
+early,verse-say,Say this verse: Psalms 23:4,"Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",KJV · Psalms 23:4
+early,verse-ref,"What is the reference?
+“Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort …”",Psalms 23:4,KJV
+early,verse-say,Say this verse: Psalms 56:3,"What time I am afraid, I will trust in thee.",KJV · Psalms 56:3
+early,verse-ref,"What is the reference?
+“What time I am afraid, I will trust in thee.”",Psalms 56:3,KJV
+early,verse-say,Say this verse: Psalms 100:1,"Make a joyful noise unto the LORD , all ye lands.",KJV · Psalms 100:1
+early,verse-ref,"What is the reference?
+“Make a joyful noise unto the LORD , all ye lands.”",Psalms 100:1,KJV
+early,verse-say,Say this verse: Psalms 119:11,"Thy word have I hid in mine heart, that I might not sin against thee.",KJV · Psalms 119:11
+early,verse-ref,"What is the reference?
+“Thy word have I hid in mine heart, that I might not sin against thee.”",Psalms 119:11,KJV
+early,verse-say,Say this verse: Psalms 119:105,"Thy word is a lamp unto my feet, and a light unto my path.",KJV · Psalms 119:105
+early,verse-ref,"What is the reference?
+“Thy word is a lamp unto my feet, and a light unto my path.”",Psalms 119:105,KJV
+early,verse-say,Say this verse: Psalms 136:1,O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.,KJV · Psalms 136:1
+early,verse-ref,"What is the reference?
+“O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.”",Psalms 136:1,KJV
+early,verse-say,Say this verse: Psalms 139:14,I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.,KJV · Psalms 139:14
+early,verse-ref,"What is the reference?
+“I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.”",Psalms 139:14,KJV
+early,verse-say,Say this verse: Proverbs 3:5,Trust in the LORD with all thine heart; and lean not unto thine own understanding.,KJV · Proverbs 3:5
+early,verse-ref,"What is the reference?
+“Trust in the LORD with all thine heart; and lean not unto thine own understanding.”",Proverbs 3:5,KJV
+early,verse-say,Say this verse: Proverbs 3:6,"In all thy ways acknowledge him, and he shall direct thy paths.",KJV · Proverbs 3:6
+early,verse-ref,"What is the reference?
+“In all thy ways acknowledge him, and he shall direct thy paths.”",Proverbs 3:6,KJV
+early,verse-say,Say this verse: Jonah 1:17,Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.,KJV · Jonah 1:17
+early,verse-ref,"What is the reference?
+“Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.”",Jonah 1:17,KJV
+early,verse-say,Say this verse: Matthew 5:9,Blessed are the peacemakers: for they shall be called the children of God.,KJV · Matthew 5:9
+early,verse-ref,"What is the reference?
+“Blessed are the peacemakers: for they shall be called the children of God.”",Matthew 5:9,KJV
+early,verse-say,Say this verse: Matthew 5:14,Ye are the light of the world. A city that is set on an hill cannot be hid.,KJV · Matthew 5:14
+early,verse-ref,"What is the reference?
+“Ye are the light of the world. A city that is set on an hill cannot be hid.”",Matthew 5:14,KJV
+early,verse-say,Say this verse: Matthew 6:9,"After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",KJV · Matthew 6:9
+early,verse-ref,"What is the reference?
+“After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.”",Matthew 6:9,KJV
+early,verse-say,Say this verse: Matthew 7:12,"Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",KJV · Matthew 7:12
+early,verse-ref,"What is the reference?
+“Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.”",Matthew 7:12,KJV
+early,verse-say,Say this verse: Matthew 19:14,"But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",KJV · Matthew 19:14
+early,verse-ref,"What is the reference?
+“But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.”",Matthew 19:14,KJV
+early,verse-say,Say this verse: Matthew 22:37,"Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.",KJV · Matthew 22:37
+early,verse-ref,"What is the reference?
+“Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.”",Matthew 22:37,KJV
+early,verse-say,Say this verse: Matthew 28:6,"He is not here: for he is risen, as he said. Come, see the place where the Lord lay.",KJV · Matthew 28:6
+early,verse-ref,"What is the reference?
+“He is not here: for he is risen, as he said. Come, see the place where the Lord lay.”",Matthew 28:6,KJV
+early,verse-say,Say this verse: Luke 2:11,"For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",KJV · Luke 2:11
+early,verse-ref,"What is the reference?
+“For unto you is born this day in the city of David a Saviour, which is Christ the Lord.”",Luke 2:11,KJV
+early,verse-say,Say this verse: Luke 6:31,"And as ye would that men should do to you, do ye also to them likewise.",KJV · Luke 6:31
+early,verse-ref,"What is the reference?
+“And as ye would that men should do to you, do ye also to them likewise.”",Luke 6:31,KJV
+early,verse-say,Say this verse: John 3:16,"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",KJV · John 3:16
+early,verse-ref,"What is the reference?
+“For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life…”",John 3:16,KJV
+early,verse-say,Say this verse: John 8:12,"Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",KJV · John 8:12
+early,verse-ref,"What is the reference?
+“Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the l…”",John 8:12,KJV
+early,verse-say,Say this verse: John 10:11,I am the good shepherd: the good shepherd giveth his life for the sheep.,KJV · John 10:11
+early,verse-ref,"What is the reference?
+“I am the good shepherd: the good shepherd giveth his life for the sheep.”",John 10:11,KJV
+early,verse-say,Say this verse: John 11:35,Jesus wept.,KJV · John 11:35
+early,verse-ref,"What is the reference?
+“Jesus wept.”",John 11:35,KJV
+early,verse-say,Say this verse: John 14:6,"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",KJV · John 14:6
+early,verse-ref,"What is the reference?
+“Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.”",John 14:6,KJV
+early,verse-say,Say this verse: John 14:15,"If ye love me, keep my commandments.",KJV · John 14:15
+early,verse-ref,"What is the reference?
+“If ye love me, keep my commandments.”",John 14:15,KJV
+early,verse-say,Say this verse: Romans 12:21,"Be not overcome of evil, but overcome evil with good.",KJV · Romans 12:21
+early,verse-ref,"What is the reference?
+“Be not overcome of evil, but overcome evil with good.”",Romans 12:21,KJV
+early,verse-say,Say this verse: 1 Corinthians 13:4,"Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,",KJV · 1 Corinthians 13:4
+early,verse-ref,"What is the reference?
+“Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,”",1 Corinthians 13:4,KJV
+early,verse-say,Say this verse: 1 Corinthians 16:14,Let all your things be done with charity.,KJV · 1 Corinthians 16:14
+early,verse-ref,"What is the reference?
+“Let all your things be done with charity.”",1 Corinthians 16:14,KJV
+early,verse-say,Say this verse: Ephesians 4:32,"And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",KJV · Ephesians 4:32
+early,verse-ref,"What is the reference?
+“And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.”",Ephesians 4:32,KJV
+early,verse-say,Say this verse: Ephesians 6:1,"Children, obey your parents in the Lord: for this is right.",KJV · Ephesians 6:1
+early,verse-ref,"What is the reference?
+“Children, obey your parents in the Lord: for this is right.”",Ephesians 6:1,KJV
+early,verse-say,Say this verse: Philippians 4:4,"Rejoice in the Lord alway: and again I say, Rejoice.",KJV · Philippians 4:4
+early,verse-ref,"What is the reference?
+“Rejoice in the Lord alway: and again I say, Rejoice.”",Philippians 4:4,KJV
+early,verse-say,Say this verse: Philippians 4:13,I can do all things through Christ which strengtheneth me.,KJV · Philippians 4:13
+early,verse-ref,"What is the reference?
+“I can do all things through Christ which strengtheneth me.”",Philippians 4:13,KJV
+early,verse-say,Say this verse: 1 Thessalonians 5:16-18,Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.,KJV · 1 Thessalonians 5:16-18
+early,verse-ref,"What is the reference?
+“Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.”",1 Thessalonians 5:16-18,KJV
+early,verse-say,Say this verse: 1 Thessalonians 5:17,Pray without ceasing.,KJV · 1 Thessalonians 5:17
+early,verse-ref,"What is the reference?
+“Pray without ceasing.”",1 Thessalonians 5:17,KJV
+early,verse-say,Say this verse: 2 Timothy 1:7,"For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",KJV · 2 Timothy 1:7
+early,verse-ref,"What is the reference?
+“For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.”",2 Timothy 1:7,KJV
+early,verse-say,Say this verse: Hebrews 13:8,"Jesus Christ the same yesterday, and to day, and for ever.",KJV · Hebrews 13:8
+early,verse-ref,"What is the reference?
+“Jesus Christ the same yesterday, and to day, and for ever.”",Hebrews 13:8,KJV
+early,verse-say,Say this verse: 1 Peter 5:7,Casting all your care upon him; for he careth for you.,KJV · 1 Peter 5:7
+early,verse-ref,"What is the reference?
+“Casting all your care upon him; for he careth for you.”",1 Peter 5:7,KJV
+early,verse-say,Say this verse: 1 John 1:9,"If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",KJV · 1 John 1:9
+early,verse-ref,"What is the reference?
+“If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.”",1 John 1:9,KJV
+early,verse-say,Say this verse: 1 John 4:7,"Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",KJV · 1 John 4:7
+early,verse-ref,"What is the reference?
+“Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.”",1 John 4:7,KJV
+early,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
+early,verse-ref,"What is the reference?
+“He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
+early,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
+early,verse-ref,"What is the reference?
+“We love him, because he first loved us.”",1 John 4:19,KJV
+early,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+early,book-order,Which book comes after Genesis?,Exodus,OT · Law
+early,book-order,Which book comes after Exodus?,Leviticus,OT · Law
+early,book-order,Which book comes after Leviticus?,Numbers,OT · Law
+early,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
+early,book-order,Which book comes after Deuteronomy?,Joshua,OT · History
+early,book-order,Which book comes after Joshua?,Judges,OT · History
+early,book-order,Which book comes after Judges?,Ruth,OT · History
+early,book-order,Which book comes after Ruth?,1 Samuel,OT · History
+early,book-order,Which book comes after 1 Samuel?,2 Samuel,OT · History
+early,book-order,Which book comes after 2 Samuel?,1 Kings,OT · History
+early,book-order,Which book comes after 1 Kings?,2 Kings,OT · History
+early,book-order,Which book comes after 2 Kings?,1 Chronicles,OT · History
+early,book-order,Which book comes after 1 Chronicles?,2 Chronicles,OT · History
+early,book-order,Which book comes after 2 Chronicles?,Ezra,OT · History
+early,book-order,Which book comes after Ezra?,Nehemiah,OT · History
+early,book-order,Which book comes after Nehemiah?,Esther,OT · History
+early,book-order,Which book comes after Esther?,Job,OT · Poetry
+early,book-order,Which book comes after Job?,Psalms,OT · Poetry
+early,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
+early,book-order,Which book comes after Proverbs?,Ecclesiastes,OT · Poetry
+early,book-order,Which book comes after Ecclesiastes?,Song of Solomon,OT · Poetry
+early,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
+early,book-order,Which book comes after Matthew?,Mark,NT · Gospels
+early,book-order,Which book comes after Mark?,Luke,NT · Gospels
+early,book-order,Which book comes after Luke?,John,NT · Gospels
+early,book-order,Which book comes after John?,Acts,NT · History
+early,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
+early,quality,"Character quality: Love
+What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+early,quality,"Character quality: Joy
+What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+early,quality,"Character quality: Peace
+What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+early,quality,"Character quality: Patience
+What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+early,quality,"Character quality: Kindness
+What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+early,quality,"Character quality: Goodness
+What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+early,quality,"Character quality: Faith
+What does it look like?",Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+early,quality,"Character quality: Gentleness
+What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+early,quality,"Character quality: Self-control
+What does it look like?","Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+early,quality,"Character quality: Courage
+What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+early,quality,"Character quality: Honesty
+What does it look like?",Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
+early,quality,"Character quality: Gratitude
+What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+early,quality,"Character quality: Obedience
+What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+early,quality,"Character quality: Mercy
+What does it look like?",Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+early,quality,"Character quality: Forgiveness
+What does it look like?","Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+early,quality,"Character quality: Hope
+What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+early,story-order,Bible story order: what comes after “God Makes the World”?,The Garden and the Fall,Genesis 3:1-24
+early,story-order,Bible story order: what comes after “The Garden and the Fall”?,Noah and the Ark,Genesis 7:1
+early,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
+early,story-order,Bible story order: what comes after “God Calls Abraham”?,"Isaac, the Promised Son",Genesis 21:1-3
+early,story-order,"Bible story order: what comes after “Isaac, the Promised Son”?",Joseph in Egypt,Genesis 50:20
+early,story-order,Bible story order: what comes after “Joseph in Egypt”?,Moses and the Burning Bush,Exodus 3:14
+early,story-order,Bible story order: what comes after “Moses and the Burning Bush”?,Through the Sea,Exodus 14:21-22
+early,story-order,Bible story order: what comes after “Through the Sea”?,The Ten Commandments,Exodus 20:1-17
+early,story-order,Bible story order: what comes after “The Ten Commandments”?,Jericho’s Walls,Joshua 6:20
+early,story-order,Bible story order: what comes after “Jericho’s Walls”?,Ruth Stays,Ruth 1:16
+early,story-order,Bible story order: what comes after “Ruth Stays”?,Samuel Listens,1 Samuel 3:10
+early,story-order,Bible story order: what comes after “Samuel Listens”?,David and Goliath,1 Samuel 17:45
+early,story-order,Bible story order: what comes after “David and Goliath”?,David the King,2 Samuel 7:16
+early,story-order,Bible story order: what comes after “David the King”?,Daniel and the Lions,Daniel 6:22
+early,story-order,Bible story order: what comes after “Daniel and the Lions”?,Jonah and the Great Fish,Jonah 1:17
+early,story-order,Bible story order: what comes after “Jonah and the Great Fish”?,Jesus Is Born,Luke 2:11
+early,story-order,Bible story order: what comes after “Jesus Is Born”?,Jesus Is Baptized,Matthew 3:17
+early,story-order,Bible story order: what comes after “Jesus Is Baptized”?,Jesus Calms the Storm,Mark 4:39
+early,story-order,Bible story order: what comes after “Jesus Calms the Storm”?,A Crowd Is Fed,John 6:11
+early,story-order,Bible story order: what comes after “A Crowd Is Fed”?,The Lost Sheep,Luke 15:4-6
+early,story-order,Bible story order: what comes after “The Lost Sheep”?,The Kind Neighbor,Luke 10:33-34
+early,story-order,Bible story order: what comes after “The Kind Neighbor”?,Jesus and the Children,Matthew 19:14
+early,story-order,Bible story order: what comes after “Jesus and the Children”?,The Last Supper,Luke 22:19-20
+early,story-order,Bible story order: what comes after “The Last Supper”?,The Cross and the Empty Tomb,Matthew 28:6
+primary,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
+primary,verse-ref,"What is the reference?
+“In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
+primary,verse-say,Say this verse: Genesis 1:3,"And God said, Let there be light: and there was light.",KJV · Genesis 1:3
+primary,verse-ref,"What is the reference?
+“And God said, Let there be light: and there was light.”",Genesis 1:3,KJV
+primary,verse-say,Say this verse: Genesis 1:27,"So God created man in his own image, in the image of God created he him; male and female created he them.",KJV · Genesis 1:27
+primary,verse-ref,"What is the reference?
+“So God created man in his own image, in the image of God created he him; male and female created he them.”",Genesis 1:27,KJV
+primary,verse-say,Say this verse: Exodus 20:12,Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.,KJV · Exodus 20:12
+primary,verse-ref,"What is the reference?
+“Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.”",Exodus 20:12,KJV
+primary,verse-say,Say this verse: Numbers 6:24,"The LORD bless thee, and keep thee:",KJV · Numbers 6:24
+primary,verse-ref,"What is the reference?
+“The LORD bless thee, and keep thee:”",Numbers 6:24,KJV
+primary,verse-say,Say this verse: Deuteronomy 6:5,"And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",KJV · Deuteronomy 6:5
+primary,verse-ref,"What is the reference?
+“And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.”",Deuteronomy 6:5,KJV
+primary,verse-say,Say this verse: Joshua 1:9,"Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",KJV · Joshua 1:9
+primary,verse-ref,"What is the reference?
+“Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whith…”",Joshua 1:9,KJV
+primary,verse-say,Say this verse: 1 Samuel 16:7,"But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",KJV · 1 Samuel 16:7
+primary,verse-ref,"What is the reference?
+“But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth …”",1 Samuel 16:7,KJV
+primary,verse-say,Say this verse: Psalms 19:1,The heavens declare the glory of God; and the firmament sheweth his handywork.,KJV · Psalms 19:1
+primary,verse-ref,"What is the reference?
+“The heavens declare the glory of God; and the firmament sheweth his handywork.”",Psalms 19:1,KJV
+primary,verse-say,Say this verse: Psalms 23:1,The LORD is my shepherd; I shall not want.,KJV · Psalms 23:1
+primary,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want.”",Psalms 23:1,KJV
+primary,verse-say,Say this verse: Psalms 23:2,He maketh me to lie down in green pastures: he leadeth me beside the still waters.,KJV · Psalms 23:2
+primary,verse-ref,"What is the reference?
+“He maketh me to lie down in green pastures: he leadeth me beside the still waters.”",Psalms 23:2,KJV
+primary,verse-say,Say this verse: Psalms 23:4,"Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",KJV · Psalms 23:4
+primary,verse-ref,"What is the reference?
+“Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort …”",Psalms 23:4,KJV
+primary,verse-say,Say this verse: Psalms 56:3,"What time I am afraid, I will trust in thee.",KJV · Psalms 56:3
+primary,verse-ref,"What is the reference?
+“What time I am afraid, I will trust in thee.”",Psalms 56:3,KJV
+primary,verse-say,Say this verse: Psalms 100:1,"Make a joyful noise unto the LORD , all ye lands.",KJV · Psalms 100:1
+primary,verse-ref,"What is the reference?
+“Make a joyful noise unto the LORD , all ye lands.”",Psalms 100:1,KJV
+primary,verse-say,Say this verse: Psalms 119:11,"Thy word have I hid in mine heart, that I might not sin against thee.",KJV · Psalms 119:11
+primary,verse-ref,"What is the reference?
+“Thy word have I hid in mine heart, that I might not sin against thee.”",Psalms 119:11,KJV
+primary,verse-say,Say this verse: Psalms 119:105,"Thy word is a lamp unto my feet, and a light unto my path.",KJV · Psalms 119:105
+primary,verse-ref,"What is the reference?
+“Thy word is a lamp unto my feet, and a light unto my path.”",Psalms 119:105,KJV
+primary,verse-say,Say this verse: Psalms 136:1,O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.,KJV · Psalms 136:1
+primary,verse-ref,"What is the reference?
+“O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.”",Psalms 136:1,KJV
+primary,verse-say,Say this verse: Psalms 139:14,I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.,KJV · Psalms 139:14
+primary,verse-ref,"What is the reference?
+“I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.”",Psalms 139:14,KJV
+primary,verse-say,Say this verse: Proverbs 3:5,Trust in the LORD with all thine heart; and lean not unto thine own understanding.,KJV · Proverbs 3:5
+primary,verse-ref,"What is the reference?
+“Trust in the LORD with all thine heart; and lean not unto thine own understanding.”",Proverbs 3:5,KJV
+primary,verse-say,Say this verse: Proverbs 3:6,"In all thy ways acknowledge him, and he shall direct thy paths.",KJV · Proverbs 3:6
+primary,verse-ref,"What is the reference?
+“In all thy ways acknowledge him, and he shall direct thy paths.”",Proverbs 3:6,KJV
+primary,verse-say,Say this verse: Proverbs 15:1,A soft answer turneth away wrath: but grievous words stir up anger.,KJV · Proverbs 15:1
+primary,verse-ref,"What is the reference?
+“A soft answer turneth away wrath: but grievous words stir up anger.”",Proverbs 15:1,KJV
+primary,verse-say,Say this verse: Isaiah 9:6,"For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.",KJV · Isaiah 9:6
+primary,verse-ref,"What is the reference?
+“For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, …”",Isaiah 9:6,KJV
+primary,verse-say,Say this verse: Jeremiah 29:11,"For I know the thoughts that I think toward you, saith the LORD , thoughts of peace, and not of evil, to give you an expected end.",KJV · Jeremiah 29:11
+primary,verse-ref,"What is the reference?
+“For I know the thoughts that I think toward you, saith the LORD , thoughts of peace, and not of evil, to give you an expected end.”",Jeremiah 29:11,KJV
+primary,verse-say,Say this verse: Jonah 1:17,Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.,KJV · Jonah 1:17
+primary,verse-ref,"What is the reference?
+“Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.”",Jonah 1:17,KJV
+primary,verse-say,Say this verse: Matthew 5:9,Blessed are the peacemakers: for they shall be called the children of God.,KJV · Matthew 5:9
+primary,verse-ref,"What is the reference?
+“Blessed are the peacemakers: for they shall be called the children of God.”",Matthew 5:9,KJV
+primary,verse-say,Say this verse: Matthew 5:14,Ye are the light of the world. A city that is set on an hill cannot be hid.,KJV · Matthew 5:14
+primary,verse-ref,"What is the reference?
+“Ye are the light of the world. A city that is set on an hill cannot be hid.”",Matthew 5:14,KJV
+primary,verse-say,Say this verse: Matthew 6:9,"After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",KJV · Matthew 6:9
+primary,verse-ref,"What is the reference?
+“After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.”",Matthew 6:9,KJV
+primary,verse-say,Say this verse: Matthew 7:12,"Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",KJV · Matthew 7:12
+primary,verse-ref,"What is the reference?
+“Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.”",Matthew 7:12,KJV
+primary,verse-say,Say this verse: Matthew 11:28,"Come unto me, all ye that labour and are heavy laden, and I will give you rest.",KJV · Matthew 11:28
+primary,verse-ref,"What is the reference?
+“Come unto me, all ye that labour and are heavy laden, and I will give you rest.”",Matthew 11:28,KJV
+primary,verse-say,Say this verse: Matthew 19:14,"But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",KJV · Matthew 19:14
+primary,verse-ref,"What is the reference?
+“But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.”",Matthew 19:14,KJV
+primary,verse-say,Say this verse: Matthew 22:37,"Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.",KJV · Matthew 22:37
+primary,verse-ref,"What is the reference?
+“Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.”",Matthew 22:37,KJV
+primary,verse-say,Say this verse: Matthew 28:6,"He is not here: for he is risen, as he said. Come, see the place where the Lord lay.",KJV · Matthew 28:6
+primary,verse-ref,"What is the reference?
+“He is not here: for he is risen, as he said. Come, see the place where the Lord lay.”",Matthew 28:6,KJV
+primary,verse-say,Say this verse: Luke 2:11,"For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",KJV · Luke 2:11
+primary,verse-ref,"What is the reference?
+“For unto you is born this day in the city of David a Saviour, which is Christ the Lord.”",Luke 2:11,KJV
+primary,verse-say,Say this verse: Luke 6:31,"And as ye would that men should do to you, do ye also to them likewise.",KJV · Luke 6:31
+primary,verse-ref,"What is the reference?
+“And as ye would that men should do to you, do ye also to them likewise.”",Luke 6:31,KJV
+primary,verse-say,Say this verse: John 3:16,"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",KJV · John 3:16
+primary,verse-ref,"What is the reference?
+“For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life…”",John 3:16,KJV
+primary,verse-say,Say this verse: John 8:12,"Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",KJV · John 8:12
+primary,verse-ref,"What is the reference?
+“Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the l…”",John 8:12,KJV
+primary,verse-say,Say this verse: John 10:11,I am the good shepherd: the good shepherd giveth his life for the sheep.,KJV · John 10:11
+primary,verse-ref,"What is the reference?
+“I am the good shepherd: the good shepherd giveth his life for the sheep.”",John 10:11,KJV
+primary,verse-say,Say this verse: John 11:35,Jesus wept.,KJV · John 11:35
+primary,verse-ref,"What is the reference?
+“Jesus wept.”",John 11:35,KJV
+primary,verse-say,Say this verse: John 14:6,"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",KJV · John 14:6
+primary,verse-ref,"What is the reference?
+“Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.”",John 14:6,KJV
+primary,verse-say,Say this verse: John 14:15,"If ye love me, keep my commandments.",KJV · John 14:15
+primary,verse-ref,"What is the reference?
+“If ye love me, keep my commandments.”",John 14:15,KJV
+primary,verse-say,Say this verse: Romans 3:23,"For all have sinned, and come short of the glory of God;",KJV · Romans 3:23
+primary,verse-ref,"What is the reference?
+“For all have sinned, and come short of the glory of God;”",Romans 3:23,KJV
+primary,verse-say,Say this verse: Romans 6:23,For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.,KJV · Romans 6:23
+primary,verse-ref,"What is the reference?
+“For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.”",Romans 6:23,KJV
+primary,verse-say,Say this verse: Romans 12:21,"Be not overcome of evil, but overcome evil with good.",KJV · Romans 12:21
+primary,verse-ref,"What is the reference?
+“Be not overcome of evil, but overcome evil with good.”",Romans 12:21,KJV
+primary,verse-say,Say this verse: 1 Corinthians 10:31,"Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.",KJV · 1 Corinthians 10:31
+primary,verse-ref,"What is the reference?
+“Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.”",1 Corinthians 10:31,KJV
+primary,verse-say,Say this verse: 1 Corinthians 13:4,"Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,",KJV · 1 Corinthians 13:4
+primary,verse-ref,"What is the reference?
+“Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,”",1 Corinthians 13:4,KJV
+primary,verse-say,Say this verse: 1 Corinthians 16:14,Let all your things be done with charity.,KJV · 1 Corinthians 16:14
+primary,verse-ref,"What is the reference?
+“Let all your things be done with charity.”",1 Corinthians 16:14,KJV
+primary,verse-say,Say this verse: Galatians 5:22-23,"But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law.",KJV · Galatians 5:22-23
+primary,verse-ref,"What is the reference?
+“But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no …”",Galatians 5:22-23,KJV
+primary,verse-say,Say this verse: Ephesians 4:32,"And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",KJV · Ephesians 4:32
+primary,verse-ref,"What is the reference?
+“And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.”",Ephesians 4:32,KJV
+primary,verse-say,Say this verse: Ephesians 6:1,"Children, obey your parents in the Lord: for this is right.",KJV · Ephesians 6:1
+primary,verse-ref,"What is the reference?
+“Children, obey your parents in the Lord: for this is right.”",Ephesians 6:1,KJV
+primary,verse-say,Say this verse: Philippians 4:4,"Rejoice in the Lord alway: and again I say, Rejoice.",KJV · Philippians 4:4
+primary,verse-ref,"What is the reference?
+“Rejoice in the Lord alway: and again I say, Rejoice.”",Philippians 4:4,KJV
+primary,verse-say,Say this verse: Philippians 4:6,Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.,KJV · Philippians 4:6
+primary,verse-ref,"What is the reference?
+“Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.”",Philippians 4:6,KJV
+primary,verse-say,Say this verse: Philippians 4:13,I can do all things through Christ which strengtheneth me.,KJV · Philippians 4:13
+primary,verse-ref,"What is the reference?
+“I can do all things through Christ which strengtheneth me.”",Philippians 4:13,KJV
+primary,verse-say,Say this verse: Colossians 3:23,"And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",KJV · Colossians 3:23
+primary,verse-ref,"What is the reference?
+“And whatsoever ye do, do it heartily, as to the Lord, and not unto men;”",Colossians 3:23,KJV
+primary,verse-say,Say this verse: 1 Thessalonians 5:16-18,Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.,KJV · 1 Thessalonians 5:16-18
+primary,verse-ref,"What is the reference?
+“Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.”",1 Thessalonians 5:16-18,KJV
+primary,verse-say,Say this verse: 1 Thessalonians 5:17,Pray without ceasing.,KJV · 1 Thessalonians 5:17
+primary,verse-ref,"What is the reference?
+“Pray without ceasing.”",1 Thessalonians 5:17,KJV
+primary,verse-say,Say this verse: 2 Timothy 1:7,"For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",KJV · 2 Timothy 1:7
+primary,verse-ref,"What is the reference?
+“For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.”",2 Timothy 1:7,KJV
+primary,verse-say,Say this verse: Hebrews 13:8,"Jesus Christ the same yesterday, and to day, and for ever.",KJV · Hebrews 13:8
+primary,verse-ref,"What is the reference?
+“Jesus Christ the same yesterday, and to day, and for ever.”",Hebrews 13:8,KJV
+primary,verse-say,Say this verse: James 1:19,"Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",KJV · James 1:19
+primary,verse-ref,"What is the reference?
+“Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:”",James 1:19,KJV
+primary,verse-say,Say this verse: James 1:22,"But be ye doers of the word, and not hearers only, deceiving your own selves.",KJV · James 1:22
+primary,verse-ref,"What is the reference?
+“But be ye doers of the word, and not hearers only, deceiving your own selves.”",James 1:22,KJV
+primary,verse-say,Say this verse: 1 Peter 5:7,Casting all your care upon him; for he careth for you.,KJV · 1 Peter 5:7
+primary,verse-ref,"What is the reference?
+“Casting all your care upon him; for he careth for you.”",1 Peter 5:7,KJV
+primary,verse-say,Say this verse: 1 John 1:9,"If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",KJV · 1 John 1:9
+primary,verse-ref,"What is the reference?
+“If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.”",1 John 1:9,KJV
+primary,verse-say,Say this verse: 1 John 4:7,"Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",KJV · 1 John 4:7
+primary,verse-ref,"What is the reference?
+“Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.”",1 John 4:7,KJV
+primary,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
+primary,verse-ref,"What is the reference?
+“He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
+primary,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
+primary,verse-ref,"What is the reference?
+“We love him, because he first loved us.”",1 John 4:19,KJV
+primary,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+primary,book-group,Testament and group: Genesis,"OT · Law
+Beginnings: creation, promise, and a family God chose.",1
+primary,book-order,Which book comes after Genesis?,Exodus,OT · Law
+primary,book-group,Testament and group: Exodus,"OT · Law
+God frees Israel from Egypt and gives His law.",2
+primary,book-order,Which book comes after Exodus?,Leviticus,OT · Law
+primary,book-group,Testament and group: Leviticus,"OT · Law
+How a holy God dwells with His people.",3
+primary,book-order,Which book comes after Leviticus?,Numbers,OT · Law
+primary,book-group,Testament and group: Numbers,"OT · Law
+Wilderness years and God’s faithful care.",4
+primary,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
+primary,book-group,Testament and group: Deuteronomy,"OT · Law
+Moses retells the law before the land.",5
+primary,book-order,Which book comes after Deuteronomy?,Joshua,OT · History
+primary,book-group,Testament and group: Joshua,"OT · History
+Israel enters the land God promised.",6
+primary,book-order,Which book comes after Joshua?,Judges,OT · History
+primary,book-group,Testament and group: Judges,"OT · History
+Cycles of forgetting and God’s rescue.",7
+primary,book-order,Which book comes after Judges?,Ruth,OT · History
+primary,book-group,Testament and group: Ruth,"OT · History
+Kindness, gleaning, and a place in David’s line.",8
+primary,book-order,Which book comes after Ruth?,1 Samuel,OT · History
+primary,book-group,Testament and group: 1 Samuel,"OT · History
+Samuel, Saul, and the rise of David.",9
+primary,book-order,Which book comes after 1 Samuel?,2 Samuel,OT · History
+primary,book-group,Testament and group: 2 Samuel,"OT · History
+David’s reign, sin, and God’s covenant.",10
+primary,book-order,Which book comes after 2 Samuel?,1 Kings,OT · History
+primary,book-group,Testament and group: 1 Kings,"OT · History
+Solomon, the temple, and a divided kingdom.",11
+primary,book-order,Which book comes after 1 Kings?,2 Kings,OT · History
+primary,book-group,Testament and group: 2 Kings,"OT · History
+Kings, prophets, and exile.",12
+primary,book-order,Which book comes after 2 Kings?,1 Chronicles,OT · History
+primary,book-group,Testament and group: 1 Chronicles,"OT · History
+David’s line and temple worship remembered.",13
+primary,book-order,Which book comes after 1 Chronicles?,2 Chronicles,OT · History
+primary,book-group,Testament and group: 2 Chronicles,"OT · History
+Judah’s kings and the call to seek the Lord.",14
+primary,book-order,Which book comes after 2 Chronicles?,Ezra,OT · History
+primary,book-group,Testament and group: Ezra,"OT · History
+The people return and rebuild the temple.",15
+primary,book-order,Which book comes after Ezra?,Nehemiah,OT · History
+primary,book-group,Testament and group: Nehemiah,"OT · History
+Walls rebuilt and the law read aloud.",16
+primary,book-order,Which book comes after Nehemiah?,Esther,OT · History
+primary,book-group,Testament and group: Esther,"OT · History
+God preserves His people in a foreign court.",17
+primary,book-order,Which book comes after Esther?,Job,OT · Poetry
+primary,book-group,Testament and group: Job,"OT · Poetry
+Suffering, friends’ speeches, and the fear of the Lord.",18
+primary,book-order,Which book comes after Job?,Psalms,OT · Poetry
+primary,book-group,Testament and group: Psalms,"OT · Poetry
+Songs of prayer, praise, and trust.",19
+primary,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
+primary,book-group,Testament and group: Proverbs,"OT · Poetry
+Wisdom for everyday walking.",20
+primary,book-order,Which book comes after Proverbs?,Ecclesiastes,OT · Poetry
+primary,book-group,Testament and group: Ecclesiastes,"OT · Poetry
+Life under the sun, and fearing God.",21
+primary,book-order,Which book comes after Ecclesiastes?,Song of Solomon,OT · Poetry
+primary,book-group,Testament and group: Song of Solomon,"OT · Poetry
+A poem of faithful love.",22
+primary,book-order,Which book comes after Song of Solomon?,Isaiah,OT · Major Prophets
+primary,book-group,Testament and group: Isaiah,"OT · Major Prophets
+Judgment, comfort, and the coming King.",23
+primary,book-order,Which book comes after Isaiah?,Jeremiah,OT · Major Prophets
+primary,book-group,Testament and group: Jeremiah,"OT · Major Prophets
+Tears, a new covenant, and a call to turn.",24
+primary,book-order,Which book comes after Jeremiah?,Lamentations,OT · Major Prophets
+primary,book-group,Testament and group: Lamentations,"OT · Major Prophets
+Grief over a fallen city.",25
+primary,book-order,Which book comes after Lamentations?,Ezekiel,OT · Major Prophets
+primary,book-group,Testament and group: Ezekiel,"OT · Major Prophets
+Visions of glory, dry bones, and a new heart.",26
+primary,book-order,Which book comes after Ezekiel?,Daniel,OT · Major Prophets
+primary,book-group,Testament and group: Daniel,"OT · Major Prophets
+Faith in exile and kingdoms under God.",27
+primary,book-order,Which book comes after Daniel?,Hosea,OT · Minor Prophets
+primary,book-group,Testament and group: Hosea,"OT · Minor Prophets
+A faithful husband and a wandering people.",28
+primary,book-order,Which book comes after Hosea?,Joel,OT · Minor Prophets
+primary,book-group,Testament and group: Joel,"OT · Minor Prophets
+Locusts, the day of the Lord, and the Spirit poured out.",29
+primary,book-order,Which book comes after Joel?,Amos,OT · Minor Prophets
+primary,book-group,Testament and group: Amos,"OT · Minor Prophets
+Justice rolling down like waters.",30
+primary,book-order,Which book comes after Amos?,Obadiah,OT · Minor Prophets
+primary,book-group,Testament and group: Obadiah,"OT · Minor Prophets
+Edom’s pride brought low.",31
+primary,book-order,Which book comes after Obadiah?,Jonah,OT · Minor Prophets
+primary,book-group,Testament and group: Jonah,"OT · Minor Prophets
+A reluctant prophet and a merciful God.",32
+primary,book-order,Which book comes after Jonah?,Micah,OT · Minor Prophets
+primary,book-group,Testament and group: Micah,"OT · Minor Prophets
+Do justly, love mercy, walk humbly.",33
+primary,book-order,Which book comes after Micah?,Nahum,OT · Minor Prophets
+primary,book-group,Testament and group: Nahum,"OT · Minor Prophets
+Nineveh’s fall.",34
+primary,book-order,Which book comes after Nahum?,Habakkuk,OT · Minor Prophets
+primary,book-group,Testament and group: Habakkuk,"OT · Minor Prophets
+The just shall live by faith.",35
+primary,book-order,Which book comes after Habakkuk?,Zephaniah,OT · Minor Prophets
+primary,book-group,Testament and group: Zephaniah,"OT · Minor Prophets
+The day of the Lord and a singing God.",36
+primary,book-order,Which book comes after Zephaniah?,Haggai,OT · Minor Prophets
+primary,book-group,Testament and group: Haggai,"OT · Minor Prophets
+Rebuild the house of the Lord.",37
+primary,book-order,Which book comes after Haggai?,Zechariah,OT · Minor Prophets
+primary,book-group,Testament and group: Zechariah,"OT · Minor Prophets
+Visions of a coming King, humble and riding.",38
+primary,book-order,Which book comes after Zechariah?,Malachi,OT · Minor Prophets
+primary,book-group,Testament and group: Malachi,"OT · Minor Prophets
+A messenger, a warning, and a promise of the sun of righteousness.",39
+primary,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
+primary,book-group,Testament and group: Matthew,"NT · Gospels
+Jesus the King and Son of David.",40
+primary,book-order,Which book comes after Matthew?,Mark,NT · Gospels
+primary,book-group,Testament and group: Mark,"NT · Gospels
+Jesus the Servant who acts with power.",41
+primary,book-order,Which book comes after Mark?,Luke,NT · Gospels
+primary,book-group,Testament and group: Luke,"NT · Gospels
+Jesus the Savior for all kinds of people.",42
+primary,book-order,Which book comes after Luke?,John,NT · Gospels
+primary,book-group,Testament and group: John,"NT · Gospels
+Jesus the Son who reveals the Father.",43
+primary,book-order,Which book comes after John?,Acts,NT · History
+primary,book-group,Testament and group: Acts,"NT · History
+The Spirit and the spreading church.",44
+primary,book-order,Which book comes after Acts?,Romans,NT · Paul's Letters
+primary,book-group,Testament and group: Romans,"NT · Paul's Letters
+The gospel of God’s righteousness.",45
+primary,book-order,Which book comes after Romans?,1 Corinthians,NT · Paul's Letters
+primary,book-group,Testament and group: 1 Corinthians,"NT · Paul's Letters
+A church called back to love and order.",46
+primary,book-order,Which book comes after 1 Corinthians?,2 Corinthians,NT · Paul's Letters
+primary,book-group,Testament and group: 2 Corinthians,"NT · Paul's Letters
+Weakness, comfort, and true ministry.",47
+primary,book-order,Which book comes after 2 Corinthians?,Galatians,NT · Paul's Letters
+primary,book-group,Testament and group: Galatians,"NT · Paul's Letters
+Freedom in Christ, not by the law’s works.",48
+primary,book-order,Which book comes after Galatians?,Ephesians,NT · Paul's Letters
+primary,book-group,Testament and group: Ephesians,"NT · Paul's Letters
+The church as Christ’s body.",49
+primary,book-order,Which book comes after Ephesians?,Philippians,NT · Paul's Letters
+primary,book-group,Testament and group: Philippians,"NT · Paul's Letters
+Joy in the Lord from a prison letter.",50
+primary,book-order,Which book comes after Philippians?,Colossians,NT · Paul's Letters
+primary,book-group,Testament and group: Colossians,"NT · Paul's Letters
+Christ above all.",51
+primary,book-order,Which book comes after Colossians?,1 Thessalonians,NT · Paul's Letters
+primary,book-group,Testament and group: 1 Thessalonians,"NT · Paul's Letters
+Hope and the coming of the Lord.",52
+primary,book-order,Which book comes after 1 Thessalonians?,2 Thessalonians,NT · Paul's Letters
+primary,book-group,Testament and group: 2 Thessalonians,"NT · Paul's Letters
+Stand firm until He comes.",53
+primary,book-order,Which book comes after 2 Thessalonians?,1 Timothy,NT · Paul's Letters
+primary,book-group,Testament and group: 1 Timothy,"NT · Paul's Letters
+Care for the household of God.",54
+primary,book-order,Which book comes after 1 Timothy?,2 Timothy,NT · Paul's Letters
+primary,book-group,Testament and group: 2 Timothy,"NT · Paul's Letters
+Guard the good deposit.",55
+primary,book-order,Which book comes after 2 Timothy?,Titus,NT · Paul's Letters
+primary,book-group,Testament and group: Titus,"NT · Paul's Letters
+Sound teaching that leads to good works.",56
+primary,book-order,Which book comes after Titus?,Philemon,NT · Paul's Letters
+primary,book-group,Testament and group: Philemon,"NT · Paul's Letters
+A runaway welcomed as a brother.",57
+primary,book-order,Which book comes after Philemon?,Hebrews,NT · General Letters
+primary,book-group,Testament and group: Hebrews,"NT · General Letters
+Jesus, better than all that came before.",58
+primary,book-order,Which book comes after Hebrews?,James,NT · General Letters
+primary,book-group,Testament and group: James,"NT · General Letters
+Faith that works in real life.",59
+primary,book-order,Which book comes after James?,1 Peter,NT · General Letters
+primary,book-group,Testament and group: 1 Peter,"NT · General Letters
+Hope while you sojourn.",60
+primary,book-order,Which book comes after 1 Peter?,2 Peter,NT · General Letters
+primary,book-group,Testament and group: 2 Peter,"NT · General Letters
+True knowledge versus false teachers.",61
+primary,book-order,Which book comes after 2 Peter?,1 John,NT · General Letters
+primary,book-group,Testament and group: 1 John,"NT · General Letters
+That you may know you have life.",62
+primary,book-order,Which book comes after 1 John?,2 John,NT · General Letters
+primary,book-group,Testament and group: 2 John,"NT · General Letters
+Walk in truth and love.",63
+primary,book-order,Which book comes after 2 John?,3 John,NT · General Letters
+primary,book-group,Testament and group: 3 John,"NT · General Letters
+Welcome faithful workers.",64
+primary,book-order,Which book comes after 3 John?,Jude,NT · General Letters
+primary,book-group,Testament and group: Jude,"NT · General Letters
+Contend for the faith.",65
+primary,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
+primary,book-group,Testament and group: Revelation,"NT · Prophecy
+The Lamb wins, and all things are made new.",66
+primary,quality,"Character quality: Love
+What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+primary,quality,"Character quality: Joy
+What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+primary,quality,"Character quality: Peace
+What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+primary,quality,"Character quality: Patience
+What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+primary,quality,"Character quality: Kindness
+What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+primary,quality,"Character quality: Goodness
+What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+primary,quality,"Character quality: Faith
+What does it look like?",Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+primary,quality,"Character quality: Gentleness
+What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+primary,quality,"Character quality: Self-control
+What does it look like?","Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+primary,quality,"Character quality: Courage
+What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+primary,quality,"Character quality: Honesty
+What does it look like?",Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
+primary,quality,"Character quality: Humility
+What does it look like?",Humility walks low before God and does not put others down.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+primary,quality,"Character quality: Gratitude
+What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+primary,quality,"Character quality: Obedience
+What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+primary,quality,"Character quality: Mercy
+What does it look like?",Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+primary,quality,"Character quality: Wisdom
+What does it look like?","Wisdom starts with trusting the Lord, then choosing the good path.",Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+primary,quality,"Character quality: Diligence
+What does it look like?","Diligence works heartily, as to the Lord, not only when watched.","Colossians 3:23 — And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
+primary,quality,"Character quality: Forgiveness
+What does it look like?","Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+primary,quality,"Character quality: Hope
+What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+primary,story-order,Bible story order: what comes after “God Makes the World”?,The Garden and the Fall,Genesis 3:1-24
+primary,story-order,Bible story order: what comes after “The Garden and the Fall”?,Noah and the Ark,Genesis 7:1
+primary,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
+primary,story-order,Bible story order: what comes after “God Calls Abraham”?,"Isaac, the Promised Son",Genesis 21:1-3
+primary,story-order,"Bible story order: what comes after “Isaac, the Promised Son”?",Jacob Becomes Israel,Genesis 32:28
+primary,story-order,Bible story order: what comes after “Jacob Becomes Israel”?,Joseph in Egypt,Genesis 50:20
+primary,story-order,Bible story order: what comes after “Joseph in Egypt”?,Moses and the Burning Bush,Exodus 3:14
+primary,story-order,Bible story order: what comes after “Moses and the Burning Bush”?,Through the Sea,Exodus 14:21-22
+primary,story-order,Bible story order: what comes after “Through the Sea”?,The Ten Commandments,Exodus 20:1-17
+primary,story-order,Bible story order: what comes after “The Ten Commandments”?,Jericho’s Walls,Joshua 6:20
+primary,story-order,Bible story order: what comes after “Jericho’s Walls”?,Ruth Stays,Ruth 1:16
+primary,story-order,Bible story order: what comes after “Ruth Stays”?,Samuel Listens,1 Samuel 3:10
+primary,story-order,Bible story order: what comes after “Samuel Listens”?,David and Goliath,1 Samuel 17:45
+primary,story-order,Bible story order: what comes after “David and Goliath”?,David the King,2 Samuel 7:16
+primary,story-order,Bible story order: what comes after “David the King”?,Solomon Asks for Wisdom,1 Kings 3:9
+primary,story-order,Bible story order: what comes after “Solomon Asks for Wisdom”?,Elijah on the Mountain,1 Kings 18:39
+primary,story-order,Bible story order: what comes after “Elijah on the Mountain”?,Daniel and the Lions,Daniel 6:22
+primary,story-order,Bible story order: what comes after “Daniel and the Lions”?,Esther Speaks Up,Esther 4:14
+primary,story-order,Bible story order: what comes after “Esther Speaks Up”?,Jonah and the Great Fish,Jonah 1:17
+primary,story-order,Bible story order: what comes after “Jonah and the Great Fish”?,Jesus Is Born,Luke 2:11
+primary,story-order,Bible story order: what comes after “Jesus Is Born”?,Jesus Is Baptized,Matthew 3:17
+primary,story-order,Bible story order: what comes after “Jesus Is Baptized”?,Jesus Calms the Storm,Mark 4:39
+primary,story-order,Bible story order: what comes after “Jesus Calms the Storm”?,A Crowd Is Fed,John 6:11
+primary,story-order,Bible story order: what comes after “A Crowd Is Fed”?,The Lost Sheep,Luke 15:4-6
+primary,story-order,Bible story order: what comes after “The Lost Sheep”?,The Kind Neighbor,Luke 10:33-34
+primary,story-order,Bible story order: what comes after “The Kind Neighbor”?,The Son Who Came Home,Luke 15:20
+primary,story-order,Bible story order: what comes after “The Son Who Came Home”?,Jesus and the Children,Matthew 19:14
+primary,story-order,Bible story order: what comes after “Jesus and the Children”?,The Last Supper,Luke 22:19-20
+primary,story-order,Bible story order: what comes after “The Last Supper”?,The Cross and the Empty Tomb,Matthew 28:6
+primary,story-order,Bible story order: what comes after “The Cross and the Empty Tomb”?,The Spirit Comes,Acts 2:4
+upper,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
+upper,verse-ref,"What is the reference?
+“In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
+upper,verse-say,Say this verse: Genesis 1:3,"And God said, Let there be light: and there was light.",KJV · Genesis 1:3
+upper,verse-ref,"What is the reference?
+“And God said, Let there be light: and there was light.”",Genesis 1:3,KJV
+upper,verse-say,Say this verse: Genesis 1:27,"So God created man in his own image, in the image of God created he him; male and female created he them.",KJV · Genesis 1:27
+upper,verse-ref,"What is the reference?
+“So God created man in his own image, in the image of God created he him; male and female created he them.”",Genesis 1:27,KJV
+upper,verse-say,Say this verse: Exodus 20:12,Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.,KJV · Exodus 20:12
+upper,verse-ref,"What is the reference?
+“Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.”",Exodus 20:12,KJV
+upper,verse-say,Say this verse: Numbers 6:24,"The LORD bless thee, and keep thee:",KJV · Numbers 6:24
+upper,verse-ref,"What is the reference?
+“The LORD bless thee, and keep thee:”",Numbers 6:24,KJV
+upper,verse-say,Say this verse: Deuteronomy 6:5,"And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",KJV · Deuteronomy 6:5
+upper,verse-ref,"What is the reference?
+“And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.”",Deuteronomy 6:5,KJV
+upper,verse-say,Say this verse: Joshua 1:9,"Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",KJV · Joshua 1:9
+upper,verse-ref,"What is the reference?
+“Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whith…”",Joshua 1:9,KJV
+upper,verse-say,Say this verse: 1 Samuel 16:7,"But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",KJV · 1 Samuel 16:7
+upper,verse-ref,"What is the reference?
+“But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth …”",1 Samuel 16:7,KJV
+upper,verse-say,Say this verse: Psalms 19:1,The heavens declare the glory of God; and the firmament sheweth his handywork.,KJV · Psalms 19:1
+upper,verse-ref,"What is the reference?
+“The heavens declare the glory of God; and the firmament sheweth his handywork.”",Psalms 19:1,KJV
+upper,verse-say,Say this verse: Psalms 23:1,The LORD is my shepherd; I shall not want.,KJV · Psalms 23:1
+upper,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want.”",Psalms 23:1,KJV
+upper,verse-say,Say this verse: Psalms 23:2,He maketh me to lie down in green pastures: he leadeth me beside the still waters.,KJV · Psalms 23:2
+upper,verse-ref,"What is the reference?
+“He maketh me to lie down in green pastures: he leadeth me beside the still waters.”",Psalms 23:2,KJV
+upper,verse-say,Say this verse: Psalms 23:4,"Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",KJV · Psalms 23:4
+upper,verse-ref,"What is the reference?
+“Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort …”",Psalms 23:4,KJV
+upper,verse-say,Say this verse: Psalms 23:1-6,"The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake. Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",KJV · Psalms 23:1-6
+upper,verse-ref,"What is the reference?
+“The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth m…”",Psalms 23:1-6,KJV
+upper,verse-say,Say this verse: Psalms 56:3,"What time I am afraid, I will trust in thee.",KJV · Psalms 56:3
+upper,verse-ref,"What is the reference?
+“What time I am afraid, I will trust in thee.”",Psalms 56:3,KJV
+upper,verse-say,Say this verse: Psalms 100:1,"Make a joyful noise unto the LORD , all ye lands.",KJV · Psalms 100:1
+upper,verse-ref,"What is the reference?
+“Make a joyful noise unto the LORD , all ye lands.”",Psalms 100:1,KJV
+upper,verse-say,Say this verse: Psalms 119:11,"Thy word have I hid in mine heart, that I might not sin against thee.",KJV · Psalms 119:11
+upper,verse-ref,"What is the reference?
+“Thy word have I hid in mine heart, that I might not sin against thee.”",Psalms 119:11,KJV
+upper,verse-say,Say this verse: Psalms 119:105,"Thy word is a lamp unto my feet, and a light unto my path.",KJV · Psalms 119:105
+upper,verse-ref,"What is the reference?
+“Thy word is a lamp unto my feet, and a light unto my path.”",Psalms 119:105,KJV
+upper,verse-say,Say this verse: Psalms 136:1,O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.,KJV · Psalms 136:1
+upper,verse-ref,"What is the reference?
+“O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.”",Psalms 136:1,KJV
+upper,verse-say,Say this verse: Psalms 139:14,I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.,KJV · Psalms 139:14
+upper,verse-ref,"What is the reference?
+“I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.”",Psalms 139:14,KJV
+upper,verse-say,Say this verse: Proverbs 3:5,Trust in the LORD with all thine heart; and lean not unto thine own understanding.,KJV · Proverbs 3:5
+upper,verse-ref,"What is the reference?
+“Trust in the LORD with all thine heart; and lean not unto thine own understanding.”",Proverbs 3:5,KJV
+upper,verse-say,Say this verse: Proverbs 3:6,"In all thy ways acknowledge him, and he shall direct thy paths.",KJV · Proverbs 3:6
+upper,verse-ref,"What is the reference?
+“In all thy ways acknowledge him, and he shall direct thy paths.”",Proverbs 3:6,KJV
+upper,verse-say,Say this verse: Proverbs 15:1,A soft answer turneth away wrath: but grievous words stir up anger.,KJV · Proverbs 15:1
+upper,verse-ref,"What is the reference?
+“A soft answer turneth away wrath: but grievous words stir up anger.”",Proverbs 15:1,KJV
+upper,verse-say,Say this verse: Isaiah 9:6,"For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.",KJV · Isaiah 9:6
+upper,verse-ref,"What is the reference?
+“For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, …”",Isaiah 9:6,KJV
+upper,verse-say,Say this verse: Isaiah 40:31,"But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",KJV · Isaiah 40:31
+upper,verse-ref,"What is the reference?
+“But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and…”",Isaiah 40:31,KJV
+upper,verse-say,Say this verse: Jeremiah 29:11,"For I know the thoughts that I think toward you, saith the LORD , thoughts of peace, and not of evil, to give you an expected end.",KJV · Jeremiah 29:11
+upper,verse-ref,"What is the reference?
+“For I know the thoughts that I think toward you, saith the LORD , thoughts of peace, and not of evil, to give you an expected end.”",Jeremiah 29:11,KJV
+upper,verse-say,Say this verse: Jonah 1:17,Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.,KJV · Jonah 1:17
+upper,verse-ref,"What is the reference?
+“Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.”",Jonah 1:17,KJV
+upper,verse-say,Say this verse: Micah 6:8,"He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",KJV · Micah 6:8
+upper,verse-ref,"What is the reference?
+“He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly wi…”",Micah 6:8,KJV
+upper,verse-say,Say this verse: Romans 1:16,"For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek.",KJV · Romans 1:16
+upper,verse-ref,"What is the reference?
+“For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and a…”",Romans 1:16,KJV
+upper,verse-say,Say this verse: Matthew 5:9,Blessed are the peacemakers: for they shall be called the children of God.,KJV · Matthew 5:9
+upper,verse-ref,"What is the reference?
+“Blessed are the peacemakers: for they shall be called the children of God.”",Matthew 5:9,KJV
+upper,verse-say,Say this verse: Matthew 5:14,Ye are the light of the world. A city that is set on an hill cannot be hid.,KJV · Matthew 5:14
+upper,verse-ref,"What is the reference?
+“Ye are the light of the world. A city that is set on an hill cannot be hid.”",Matthew 5:14,KJV
+upper,verse-say,Say this verse: Matthew 6:9,"After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",KJV · Matthew 6:9
+upper,verse-ref,"What is the reference?
+“After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.”",Matthew 6:9,KJV
+upper,verse-say,Say this verse: Matthew 6:9-13,"After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come. Thy will be done in earth, as it is in heaven. Give us this day our daily bread. And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.",KJV · Matthew 6:9-13
+upper,verse-ref,"What is the reference?
+“After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come. Thy will be done in earth, as i…”",Matthew 6:9-13,KJV
+upper,verse-say,Say this verse: Matthew 7:12,"Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",KJV · Matthew 7:12
+upper,verse-ref,"What is the reference?
+“Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.”",Matthew 7:12,KJV
+upper,verse-say,Say this verse: Matthew 11:28,"Come unto me, all ye that labour and are heavy laden, and I will give you rest.",KJV · Matthew 11:28
+upper,verse-ref,"What is the reference?
+“Come unto me, all ye that labour and are heavy laden, and I will give you rest.”",Matthew 11:28,KJV
+upper,verse-say,Say this verse: Matthew 19:14,"But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",KJV · Matthew 19:14
+upper,verse-ref,"What is the reference?
+“But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.”",Matthew 19:14,KJV
+upper,verse-say,Say this verse: Matthew 22:37,"Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.",KJV · Matthew 22:37
+upper,verse-ref,"What is the reference?
+“Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.”",Matthew 22:37,KJV
+upper,verse-say,Say this verse: Matthew 28:6,"He is not here: for he is risen, as he said. Come, see the place where the Lord lay.",KJV · Matthew 28:6
+upper,verse-ref,"What is the reference?
+“He is not here: for he is risen, as he said. Come, see the place where the Lord lay.”",Matthew 28:6,KJV
+upper,verse-say,Say this verse: Luke 2:11,"For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",KJV · Luke 2:11
+upper,verse-ref,"What is the reference?
+“For unto you is born this day in the city of David a Saviour, which is Christ the Lord.”",Luke 2:11,KJV
+upper,verse-say,Say this verse: Luke 6:31,"And as ye would that men should do to you, do ye also to them likewise.",KJV · Luke 6:31
+upper,verse-ref,"What is the reference?
+“And as ye would that men should do to you, do ye also to them likewise.”",Luke 6:31,KJV
+upper,verse-say,Say this verse: John 3:16,"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",KJV · John 3:16
+upper,verse-ref,"What is the reference?
+“For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life…”",John 3:16,KJV
+upper,verse-say,Say this verse: John 8:12,"Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",KJV · John 8:12
+upper,verse-ref,"What is the reference?
+“Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the l…”",John 8:12,KJV
+upper,verse-say,Say this verse: John 10:11,I am the good shepherd: the good shepherd giveth his life for the sheep.,KJV · John 10:11
+upper,verse-ref,"What is the reference?
+“I am the good shepherd: the good shepherd giveth his life for the sheep.”",John 10:11,KJV
+upper,verse-say,Say this verse: John 11:35,Jesus wept.,KJV · John 11:35
+upper,verse-ref,"What is the reference?
+“Jesus wept.”",John 11:35,KJV
+upper,verse-say,Say this verse: John 14:6,"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",KJV · John 14:6
+upper,verse-ref,"What is the reference?
+“Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.”",John 14:6,KJV
+upper,verse-say,Say this verse: John 14:15,"If ye love me, keep my commandments.",KJV · John 14:15
+upper,verse-ref,"What is the reference?
+“If ye love me, keep my commandments.”",John 14:15,KJV
+upper,verse-say,Say this verse: Acts 1:8,"But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judæa, and in Samaria, and unto the uttermost part of the earth.",KJV · Acts 1:8
+upper,verse-ref,"What is the reference?
+“But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judæ…”",Acts 1:8,KJV
+upper,verse-say,Say this verse: Romans 3:23,"For all have sinned, and come short of the glory of God;",KJV · Romans 3:23
+upper,verse-ref,"What is the reference?
+“For all have sinned, and come short of the glory of God;”",Romans 3:23,KJV
+upper,verse-say,Say this verse: Romans 6:23,For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.,KJV · Romans 6:23
+upper,verse-ref,"What is the reference?
+“For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.”",Romans 6:23,KJV
+upper,verse-say,Say this verse: Romans 8:28,"And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",KJV · Romans 8:28
+upper,verse-ref,"What is the reference?
+“And we know that all things work together for good to them that love God, to them who are the called according to his purpose.”",Romans 8:28,KJV
+upper,verse-say,Say this verse: Romans 12:21,"Be not overcome of evil, but overcome evil with good.",KJV · Romans 12:21
+upper,verse-ref,"What is the reference?
+“Be not overcome of evil, but overcome evil with good.”",Romans 12:21,KJV
+upper,verse-say,Say this verse: 1 Corinthians 10:31,"Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.",KJV · 1 Corinthians 10:31
+upper,verse-ref,"What is the reference?
+“Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.”",1 Corinthians 10:31,KJV
+upper,verse-say,Say this verse: 1 Corinthians 13:4,"Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,",KJV · 1 Corinthians 13:4
+upper,verse-ref,"What is the reference?
+“Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,”",1 Corinthians 13:4,KJV
+upper,verse-say,Say this verse: 1 Corinthians 16:14,Let all your things be done with charity.,KJV · 1 Corinthians 16:14
+upper,verse-ref,"What is the reference?
+“Let all your things be done with charity.”",1 Corinthians 16:14,KJV
+upper,verse-say,Say this verse: Galatians 5:22-23,"But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law.",KJV · Galatians 5:22-23
+upper,verse-ref,"What is the reference?
+“But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no …”",Galatians 5:22-23,KJV
+upper,verse-say,Say this verse: Ephesians 2:8,For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:,KJV · Ephesians 2:8
+upper,verse-ref,"What is the reference?
+“For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:”",Ephesians 2:8,KJV
+upper,verse-say,Say this verse: Ephesians 4:32,"And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",KJV · Ephesians 4:32
+upper,verse-ref,"What is the reference?
+“And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.”",Ephesians 4:32,KJV
+upper,verse-say,Say this verse: Ephesians 6:1,"Children, obey your parents in the Lord: for this is right.",KJV · Ephesians 6:1
+upper,verse-ref,"What is the reference?
+“Children, obey your parents in the Lord: for this is right.”",Ephesians 6:1,KJV
+upper,verse-say,Say this verse: Philippians 4:4,"Rejoice in the Lord alway: and again I say, Rejoice.",KJV · Philippians 4:4
+upper,verse-ref,"What is the reference?
+“Rejoice in the Lord alway: and again I say, Rejoice.”",Philippians 4:4,KJV
+upper,verse-say,Say this verse: Philippians 4:6,Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.,KJV · Philippians 4:6
+upper,verse-ref,"What is the reference?
+“Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.”",Philippians 4:6,KJV
+upper,verse-say,Say this verse: Philippians 4:13,I can do all things through Christ which strengtheneth me.,KJV · Philippians 4:13
+upper,verse-ref,"What is the reference?
+“I can do all things through Christ which strengtheneth me.”",Philippians 4:13,KJV
+upper,verse-say,Say this verse: Colossians 3:23,"And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",KJV · Colossians 3:23
+upper,verse-ref,"What is the reference?
+“And whatsoever ye do, do it heartily, as to the Lord, and not unto men;”",Colossians 3:23,KJV
+upper,verse-say,Say this verse: 1 Thessalonians 5:16-18,Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.,KJV · 1 Thessalonians 5:16-18
+upper,verse-ref,"What is the reference?
+“Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.”",1 Thessalonians 5:16-18,KJV
+upper,verse-say,Say this verse: 1 Thessalonians 5:17,Pray without ceasing.,KJV · 1 Thessalonians 5:17
+upper,verse-ref,"What is the reference?
+“Pray without ceasing.”",1 Thessalonians 5:17,KJV
+upper,verse-say,Say this verse: 2 Timothy 1:7,"For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",KJV · 2 Timothy 1:7
+upper,verse-ref,"What is the reference?
+“For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.”",2 Timothy 1:7,KJV
+upper,verse-say,Say this verse: 2 Timothy 3:16,"All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:",KJV · 2 Timothy 3:16
+upper,verse-ref,"What is the reference?
+“All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:”",2 Timothy 3:16,KJV
+upper,verse-say,Say this verse: Hebrews 13:8,"Jesus Christ the same yesterday, and to day, and for ever.",KJV · Hebrews 13:8
+upper,verse-ref,"What is the reference?
+“Jesus Christ the same yesterday, and to day, and for ever.”",Hebrews 13:8,KJV
+upper,verse-say,Say this verse: James 1:19,"Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",KJV · James 1:19
+upper,verse-ref,"What is the reference?
+“Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:”",James 1:19,KJV
+upper,verse-say,Say this verse: James 1:22,"But be ye doers of the word, and not hearers only, deceiving your own selves.",KJV · James 1:22
+upper,verse-ref,"What is the reference?
+“But be ye doers of the word, and not hearers only, deceiving your own selves.”",James 1:22,KJV
+upper,verse-say,Say this verse: 1 Peter 5:7,Casting all your care upon him; for he careth for you.,KJV · 1 Peter 5:7
+upper,verse-ref,"What is the reference?
+“Casting all your care upon him; for he careth for you.”",1 Peter 5:7,KJV
+upper,verse-say,Say this verse: 1 John 1:9,"If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",KJV · 1 John 1:9
+upper,verse-ref,"What is the reference?
+“If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.”",1 John 1:9,KJV
+upper,verse-say,Say this verse: 1 John 4:7,"Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",KJV · 1 John 4:7
+upper,verse-ref,"What is the reference?
+“Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.”",1 John 4:7,KJV
+upper,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
+upper,verse-ref,"What is the reference?
+“He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
+upper,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
+upper,verse-ref,"What is the reference?
+“We love him, because he first loved us.”",1 John 4:19,KJV
+upper,verse-say,Say this verse: Revelation 4:11,"Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.",KJV · Revelation 4:11
+upper,verse-ref,"What is the reference?
+“Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were cre…”",Revelation 4:11,KJV
+upper,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+upper,book-group,Testament and group: Genesis,"OT · Law
+Beginnings: creation, promise, and a family God chose.",1
+upper,book-order,Which book comes after Genesis?,Exodus,OT · Law
+upper,book-group,Testament and group: Exodus,"OT · Law
+God frees Israel from Egypt and gives His law.",2
+upper,book-order,Which book comes after Exodus?,Leviticus,OT · Law
+upper,book-group,Testament and group: Leviticus,"OT · Law
+How a holy God dwells with His people.",3
+upper,book-order,Which book comes after Leviticus?,Numbers,OT · Law
+upper,book-group,Testament and group: Numbers,"OT · Law
+Wilderness years and God’s faithful care.",4
+upper,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
+upper,book-group,Testament and group: Deuteronomy,"OT · Law
+Moses retells the law before the land.",5
+upper,book-order,Which book comes after Deuteronomy?,Joshua,OT · History
+upper,book-group,Testament and group: Joshua,"OT · History
+Israel enters the land God promised.",6
+upper,book-order,Which book comes after Joshua?,Judges,OT · History
+upper,book-group,Testament and group: Judges,"OT · History
+Cycles of forgetting and God’s rescue.",7
+upper,book-order,Which book comes after Judges?,Ruth,OT · History
+upper,book-group,Testament and group: Ruth,"OT · History
+Kindness, gleaning, and a place in David’s line.",8
+upper,book-order,Which book comes after Ruth?,1 Samuel,OT · History
+upper,book-group,Testament and group: 1 Samuel,"OT · History
+Samuel, Saul, and the rise of David.",9
+upper,book-order,Which book comes after 1 Samuel?,2 Samuel,OT · History
+upper,book-group,Testament and group: 2 Samuel,"OT · History
+David’s reign, sin, and God’s covenant.",10
+upper,book-order,Which book comes after 2 Samuel?,1 Kings,OT · History
+upper,book-group,Testament and group: 1 Kings,"OT · History
+Solomon, the temple, and a divided kingdom.",11
+upper,book-order,Which book comes after 1 Kings?,2 Kings,OT · History
+upper,book-group,Testament and group: 2 Kings,"OT · History
+Kings, prophets, and exile.",12
+upper,book-order,Which book comes after 2 Kings?,1 Chronicles,OT · History
+upper,book-group,Testament and group: 1 Chronicles,"OT · History
+David’s line and temple worship remembered.",13
+upper,book-order,Which book comes after 1 Chronicles?,2 Chronicles,OT · History
+upper,book-group,Testament and group: 2 Chronicles,"OT · History
+Judah’s kings and the call to seek the Lord.",14
+upper,book-order,Which book comes after 2 Chronicles?,Ezra,OT · History
+upper,book-group,Testament and group: Ezra,"OT · History
+The people return and rebuild the temple.",15
+upper,book-order,Which book comes after Ezra?,Nehemiah,OT · History
+upper,book-group,Testament and group: Nehemiah,"OT · History
+Walls rebuilt and the law read aloud.",16
+upper,book-order,Which book comes after Nehemiah?,Esther,OT · History
+upper,book-group,Testament and group: Esther,"OT · History
+God preserves His people in a foreign court.",17
+upper,book-order,Which book comes after Esther?,Job,OT · Poetry
+upper,book-group,Testament and group: Job,"OT · Poetry
+Suffering, friends’ speeches, and the fear of the Lord.",18
+upper,book-order,Which book comes after Job?,Psalms,OT · Poetry
+upper,book-group,Testament and group: Psalms,"OT · Poetry
+Songs of prayer, praise, and trust.",19
+upper,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
+upper,book-group,Testament and group: Proverbs,"OT · Poetry
+Wisdom for everyday walking.",20
+upper,book-order,Which book comes after Proverbs?,Ecclesiastes,OT · Poetry
+upper,book-group,Testament and group: Ecclesiastes,"OT · Poetry
+Life under the sun, and fearing God.",21
+upper,book-order,Which book comes after Ecclesiastes?,Song of Solomon,OT · Poetry
+upper,book-group,Testament and group: Song of Solomon,"OT · Poetry
+A poem of faithful love.",22
+upper,book-order,Which book comes after Song of Solomon?,Isaiah,OT · Major Prophets
+upper,book-group,Testament and group: Isaiah,"OT · Major Prophets
+Judgment, comfort, and the coming King.",23
+upper,book-order,Which book comes after Isaiah?,Jeremiah,OT · Major Prophets
+upper,book-group,Testament and group: Jeremiah,"OT · Major Prophets
+Tears, a new covenant, and a call to turn.",24
+upper,book-order,Which book comes after Jeremiah?,Lamentations,OT · Major Prophets
+upper,book-group,Testament and group: Lamentations,"OT · Major Prophets
+Grief over a fallen city.",25
+upper,book-order,Which book comes after Lamentations?,Ezekiel,OT · Major Prophets
+upper,book-group,Testament and group: Ezekiel,"OT · Major Prophets
+Visions of glory, dry bones, and a new heart.",26
+upper,book-order,Which book comes after Ezekiel?,Daniel,OT · Major Prophets
+upper,book-group,Testament and group: Daniel,"OT · Major Prophets
+Faith in exile and kingdoms under God.",27
+upper,book-order,Which book comes after Daniel?,Hosea,OT · Minor Prophets
+upper,book-group,Testament and group: Hosea,"OT · Minor Prophets
+A faithful husband and a wandering people.",28
+upper,book-order,Which book comes after Hosea?,Joel,OT · Minor Prophets
+upper,book-group,Testament and group: Joel,"OT · Minor Prophets
+Locusts, the day of the Lord, and the Spirit poured out.",29
+upper,book-order,Which book comes after Joel?,Amos,OT · Minor Prophets
+upper,book-group,Testament and group: Amos,"OT · Minor Prophets
+Justice rolling down like waters.",30
+upper,book-order,Which book comes after Amos?,Obadiah,OT · Minor Prophets
+upper,book-group,Testament and group: Obadiah,"OT · Minor Prophets
+Edom’s pride brought low.",31
+upper,book-order,Which book comes after Obadiah?,Jonah,OT · Minor Prophets
+upper,book-group,Testament and group: Jonah,"OT · Minor Prophets
+A reluctant prophet and a merciful God.",32
+upper,book-order,Which book comes after Jonah?,Micah,OT · Minor Prophets
+upper,book-group,Testament and group: Micah,"OT · Minor Prophets
+Do justly, love mercy, walk humbly.",33
+upper,book-order,Which book comes after Micah?,Nahum,OT · Minor Prophets
+upper,book-group,Testament and group: Nahum,"OT · Minor Prophets
+Nineveh’s fall.",34
+upper,book-order,Which book comes after Nahum?,Habakkuk,OT · Minor Prophets
+upper,book-group,Testament and group: Habakkuk,"OT · Minor Prophets
+The just shall live by faith.",35
+upper,book-order,Which book comes after Habakkuk?,Zephaniah,OT · Minor Prophets
+upper,book-group,Testament and group: Zephaniah,"OT · Minor Prophets
+The day of the Lord and a singing God.",36
+upper,book-order,Which book comes after Zephaniah?,Haggai,OT · Minor Prophets
+upper,book-group,Testament and group: Haggai,"OT · Minor Prophets
+Rebuild the house of the Lord.",37
+upper,book-order,Which book comes after Haggai?,Zechariah,OT · Minor Prophets
+upper,book-group,Testament and group: Zechariah,"OT · Minor Prophets
+Visions of a coming King, humble and riding.",38
+upper,book-order,Which book comes after Zechariah?,Malachi,OT · Minor Prophets
+upper,book-group,Testament and group: Malachi,"OT · Minor Prophets
+A messenger, a warning, and a promise of the sun of righteousness.",39
+upper,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
+upper,book-group,Testament and group: Matthew,"NT · Gospels
+Jesus the King and Son of David.",40
+upper,book-order,Which book comes after Matthew?,Mark,NT · Gospels
+upper,book-group,Testament and group: Mark,"NT · Gospels
+Jesus the Servant who acts with power.",41
+upper,book-order,Which book comes after Mark?,Luke,NT · Gospels
+upper,book-group,Testament and group: Luke,"NT · Gospels
+Jesus the Savior for all kinds of people.",42
+upper,book-order,Which book comes after Luke?,John,NT · Gospels
+upper,book-group,Testament and group: John,"NT · Gospels
+Jesus the Son who reveals the Father.",43
+upper,book-order,Which book comes after John?,Acts,NT · History
+upper,book-group,Testament and group: Acts,"NT · History
+The Spirit and the spreading church.",44
+upper,book-order,Which book comes after Acts?,Romans,NT · Paul's Letters
+upper,book-group,Testament and group: Romans,"NT · Paul's Letters
+The gospel of God’s righteousness.",45
+upper,book-order,Which book comes after Romans?,1 Corinthians,NT · Paul's Letters
+upper,book-group,Testament and group: 1 Corinthians,"NT · Paul's Letters
+A church called back to love and order.",46
+upper,book-order,Which book comes after 1 Corinthians?,2 Corinthians,NT · Paul's Letters
+upper,book-group,Testament and group: 2 Corinthians,"NT · Paul's Letters
+Weakness, comfort, and true ministry.",47
+upper,book-order,Which book comes after 2 Corinthians?,Galatians,NT · Paul's Letters
+upper,book-group,Testament and group: Galatians,"NT · Paul's Letters
+Freedom in Christ, not by the law’s works.",48
+upper,book-order,Which book comes after Galatians?,Ephesians,NT · Paul's Letters
+upper,book-group,Testament and group: Ephesians,"NT · Paul's Letters
+The church as Christ’s body.",49
+upper,book-order,Which book comes after Ephesians?,Philippians,NT · Paul's Letters
+upper,book-group,Testament and group: Philippians,"NT · Paul's Letters
+Joy in the Lord from a prison letter.",50
+upper,book-order,Which book comes after Philippians?,Colossians,NT · Paul's Letters
+upper,book-group,Testament and group: Colossians,"NT · Paul's Letters
+Christ above all.",51
+upper,book-order,Which book comes after Colossians?,1 Thessalonians,NT · Paul's Letters
+upper,book-group,Testament and group: 1 Thessalonians,"NT · Paul's Letters
+Hope and the coming of the Lord.",52
+upper,book-order,Which book comes after 1 Thessalonians?,2 Thessalonians,NT · Paul's Letters
+upper,book-group,Testament and group: 2 Thessalonians,"NT · Paul's Letters
+Stand firm until He comes.",53
+upper,book-order,Which book comes after 2 Thessalonians?,1 Timothy,NT · Paul's Letters
+upper,book-group,Testament and group: 1 Timothy,"NT · Paul's Letters
+Care for the household of God.",54
+upper,book-order,Which book comes after 1 Timothy?,2 Timothy,NT · Paul's Letters
+upper,book-group,Testament and group: 2 Timothy,"NT · Paul's Letters
+Guard the good deposit.",55
+upper,book-order,Which book comes after 2 Timothy?,Titus,NT · Paul's Letters
+upper,book-group,Testament and group: Titus,"NT · Paul's Letters
+Sound teaching that leads to good works.",56
+upper,book-order,Which book comes after Titus?,Philemon,NT · Paul's Letters
+upper,book-group,Testament and group: Philemon,"NT · Paul's Letters
+A runaway welcomed as a brother.",57
+upper,book-order,Which book comes after Philemon?,Hebrews,NT · General Letters
+upper,book-group,Testament and group: Hebrews,"NT · General Letters
+Jesus, better than all that came before.",58
+upper,book-order,Which book comes after Hebrews?,James,NT · General Letters
+upper,book-group,Testament and group: James,"NT · General Letters
+Faith that works in real life.",59
+upper,book-order,Which book comes after James?,1 Peter,NT · General Letters
+upper,book-group,Testament and group: 1 Peter,"NT · General Letters
+Hope while you sojourn.",60
+upper,book-order,Which book comes after 1 Peter?,2 Peter,NT · General Letters
+upper,book-group,Testament and group: 2 Peter,"NT · General Letters
+True knowledge versus false teachers.",61
+upper,book-order,Which book comes after 2 Peter?,1 John,NT · General Letters
+upper,book-group,Testament and group: 1 John,"NT · General Letters
+That you may know you have life.",62
+upper,book-order,Which book comes after 1 John?,2 John,NT · General Letters
+upper,book-group,Testament and group: 2 John,"NT · General Letters
+Walk in truth and love.",63
+upper,book-order,Which book comes after 2 John?,3 John,NT · General Letters
+upper,book-group,Testament and group: 3 John,"NT · General Letters
+Welcome faithful workers.",64
+upper,book-order,Which book comes after 3 John?,Jude,NT · General Letters
+upper,book-group,Testament and group: Jude,"NT · General Letters
+Contend for the faith.",65
+upper,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
+upper,book-group,Testament and group: Revelation,"NT · Prophecy
+The Lamb wins, and all things are made new.",66
+upper,quality,"Character quality: Love
+What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+upper,quality,"Character quality: Joy
+What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+upper,quality,"Character quality: Peace
+What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+upper,quality,"Character quality: Patience
+What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+upper,quality,"Character quality: Kindness
+What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+upper,quality,"Character quality: Goodness
+What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+upper,quality,"Character quality: Faith
+What does it look like?",Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+upper,quality,"Character quality: Gentleness
+What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+upper,quality,"Character quality: Self-control
+What does it look like?","Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+upper,quality,"Character quality: Courage
+What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+upper,quality,"Character quality: Honesty
+What does it look like?",Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
+upper,quality,"Character quality: Humility
+What does it look like?",Humility walks low before God and does not put others down.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+upper,quality,"Character quality: Gratitude
+What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+upper,quality,"Character quality: Obedience
+What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+upper,quality,"Character quality: Mercy
+What does it look like?",Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+upper,quality,"Character quality: Wisdom
+What does it look like?","Wisdom starts with trusting the Lord, then choosing the good path.",Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+upper,quality,"Character quality: Diligence
+What does it look like?","Diligence works heartily, as to the Lord, not only when watched.","Colossians 3:23 — And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
+upper,quality,"Character quality: Forgiveness
+What does it look like?","Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+upper,quality,"Character quality: Hope
+What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+upper,quality,"Character quality: Reverence
+What does it look like?","Reverence honors God as worthy of glory, honor, and power.","Revelation 4:11 — Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created."
+upper,story-order,Bible story order: what comes after “God Makes the World”?,The Garden and the Fall,Genesis 3:1-24
+upper,story-order,Bible story order: what comes after “The Garden and the Fall”?,Noah and the Ark,Genesis 7:1
+upper,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
+upper,story-order,Bible story order: what comes after “God Calls Abraham”?,"Isaac, the Promised Son",Genesis 21:1-3
+upper,story-order,"Bible story order: what comes after “Isaac, the Promised Son”?",Jacob Becomes Israel,Genesis 32:28
+upper,story-order,Bible story order: what comes after “Jacob Becomes Israel”?,Joseph in Egypt,Genesis 50:20
+upper,story-order,Bible story order: what comes after “Joseph in Egypt”?,Moses and the Burning Bush,Exodus 3:14
+upper,story-order,Bible story order: what comes after “Moses and the Burning Bush”?,Through the Sea,Exodus 14:21-22
+upper,story-order,Bible story order: what comes after “Through the Sea”?,The Ten Commandments,Exodus 20:1-17
+upper,story-order,Bible story order: what comes after “The Ten Commandments”?,Jericho’s Walls,Joshua 6:20
+upper,story-order,Bible story order: what comes after “Jericho’s Walls”?,Ruth Stays,Ruth 1:16
+upper,story-order,Bible story order: what comes after “Ruth Stays”?,Samuel Listens,1 Samuel 3:10
+upper,story-order,Bible story order: what comes after “Samuel Listens”?,David and Goliath,1 Samuel 17:45
+upper,story-order,Bible story order: what comes after “David and Goliath”?,David the King,2 Samuel 7:16
+upper,story-order,Bible story order: what comes after “David the King”?,Solomon Asks for Wisdom,1 Kings 3:9
+upper,story-order,Bible story order: what comes after “Solomon Asks for Wisdom”?,Elijah on the Mountain,1 Kings 18:39
+upper,story-order,Bible story order: what comes after “Elijah on the Mountain”?,Daniel and the Lions,Daniel 6:22
+upper,story-order,Bible story order: what comes after “Daniel and the Lions”?,Esther Speaks Up,Esther 4:14
+upper,story-order,Bible story order: what comes after “Esther Speaks Up”?,Jonah and the Great Fish,Jonah 1:17
+upper,story-order,Bible story order: what comes after “Jonah and the Great Fish”?,Jesus Is Born,Luke 2:11
+upper,story-order,Bible story order: what comes after “Jesus Is Born”?,Jesus Is Baptized,Matthew 3:17
+upper,story-order,Bible story order: what comes after “Jesus Is Baptized”?,Jesus Calms the Storm,Mark 4:39
+upper,story-order,Bible story order: what comes after “Jesus Calms the Storm”?,A Crowd Is Fed,John 6:11
+upper,story-order,Bible story order: what comes after “A Crowd Is Fed”?,The Lost Sheep,Luke 15:4-6
+upper,story-order,Bible story order: what comes after “The Lost Sheep”?,The Kind Neighbor,Luke 10:33-34
+upper,story-order,Bible story order: what comes after “The Kind Neighbor”?,The Son Who Came Home,Luke 15:20
+upper,story-order,Bible story order: what comes after “The Son Who Came Home”?,Jesus and the Children,Matthew 19:14
+upper,story-order,Bible story order: what comes after “Jesus and the Children”?,The Last Supper,Luke 22:19-20
+upper,story-order,Bible story order: what comes after “The Last Supper”?,The Cross and the Empty Tomb,Matthew 28:6
+upper,story-order,Bible story order: what comes after “The Cross and the Empty Tomb”?,The Spirit Comes,Acts 2:4
+upper,story-order,Bible story order: what comes after “The Spirit Comes”?,Paul Sent Out,Acts 9:15

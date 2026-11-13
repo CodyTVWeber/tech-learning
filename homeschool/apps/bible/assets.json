@@ -1,0 +1,22 @@
+{
+  "subject": "bible",
+  "title": "Shepherd’s Hillside",
+  "files": [
+    "./",
+    "index.html",
+    "css/hillside.css",
+    "js/data.js",
+    "js/sfx.js",
+    "js/app.js",
+    "sw.js",
+    "assets.json",
+    "images.json",
+    "img/bible-hillside-hero.jpg",
+    "img/bible-sheep.jpg",
+    "img/bible-lantern.jpg",
+    "img/bible-stars.jpg",
+    "img/bible-waters.jpg",
+    "img/bible-olives.jpg",
+    "img/bible-wheat.jpg"
+  ]
+}
