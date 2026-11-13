@@ -1,0 +1,16 @@
+{
+  "band": "primary",
+  "title": "Garden reading time",
+  "mode": "volume",
+  "intro": {
+    "audioText": "Read in the garden. Use the timer, then open a book.",
+    "body": "Quiet reading time. The timer is a sundial, not a test. Books are original decodables."
+  },
+  "minutes": 20,
+  "books": ["sam-sat", "the-fig"],
+  "bookGate": { "the-fig": "sam-sat" },
+  "vocab": [
+    { "id": "v1", "word": "garden", "audioText": "garden", "hint": "A place to plant." },
+    { "id": "v2", "word": "soil", "audioText": "soil", "hint": "The ground plants grow in." }
+  ]
+}

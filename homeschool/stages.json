@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "bands": ["baby", "toddler", "preschool", "early", "primary", "upper"],
+  "note": "Ages live only in this file, as the editable 'age' field. Do not hard-code ages in pages. Do not record when a learner was born. Folder names match displayName until a parent git-mv rename. Hub, precache, and tests read this list — they must not hard-code learner folders. Apps receive band (baby/toddler/preschool/early/primary/upper) via ?band=.",
+  "levelCatalog": {
+    "math": [
+      { "id": "none", "label": "No math track yet" },
+      { "id": "play-counting", "label": "Play-based counting" },
+      { "id": "numbers-to-10", "label": "Numbers to 10 and adding to 10" },
+      { "id": "add-sub-100", "label": "Add and subtract within 100; place value; early multiply" },
+      { "id": "multiply-divide", "label": "Multiply and divide facts" },
+      { "id": "decimals-fractions-long-ops", "label": "Decimals, fractions, and long operations" }
+    ],
+    "reading": [
+      { "id": "none", "label": "No reading track yet" },
+      { "id": "letter-sounds", "label": "Letter sounds first (not letter names)" },
+      { "id": "blends-teams", "label": "Blends, letter teams, long vowels" },
+      { "id": "volume-reading", "label": "Volume reading and vocabulary" }
+    ],
+    "history": [
+      { "id": "none", "label": "No history track" },
+      { "id": "foundations-review", "label": "Cycle 3 history review (public-domain / original only)" },
+      { "id": "cycle3-topics", "label": "Public-domain facts on Cycle 3 history topic titles" }
+    ],
+    "geography": [
+      { "id": "none", "label": "No geography track" },
+      { "id": "us-geography", "label": "US geography and feature names" }
+    ],
+    "essentials-points": [
+      { "id": "none", "label": "No Essentials tracker" },
+      { "id": "charts-tracker", "label": "Blank charts A–M points tracker" }
+    ],
+    "movement": [
+      { "id": "none", "label": "No movement track" },
+      { "id": "creative-movement", "label": "Creative movement" },
+      { "id": "ballet-creative", "label": "Ballet and creative movement" },
+      { "id": "ballet-tap", "label": "Ballet and tap" },
+      { "id": "tap-hiphop", "label": "Tap and hip hop" }
+    ],
+    "presentation": [
+      { "id": "none", "label": "No presentation track" },
+      { "id": "weekly-outline", "label": "Weekly talk outline and timer" }
+    ],
+    "bible": [
+      { "id": "none", "label": "No Bible track yet" },
+      { "id": "family-study", "label": "Public-domain Scripture and family study prompts" }
+    ],
+    "science": [
+      { "id": "none", "label": "No science track" },
+      { "id": "cycle3-topics", "label": "Original science facts on Cycle 3 topic titles" }
+    ],
+    "art": [
+      { "id": "none", "label": "No art track" },
+      { "id": "studio-basics", "label": "Color, shape, and looking closely" }
+    ],
+    "singing": [
+      { "id": "none", "label": "No singing track" },
+      { "id": "family-hymns", "label": "Public-domain hymn tunes and solfege" }
+    ]
+  },
+  "stages": [
+    {
+      "id": "K1",
+      "folder": "Joey",
+      "displayName": "Joey",
+      "age": 10,
+      "band": "upper",
+      "ageBand": "upper elementary",
+      "label": "Essentials + Foundations",
+      "themeColor": "#1f4d3a",
+      "subjects": {
+        "essentials-points": "charts-tracker",
+        "math": "decimals-fractions-long-ops",
+        "reading": "volume-reading",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "none",
+        "presentation": "weekly-outline",
+        "bible": "family-study",
+        "science": "cycle3-topics",
+        "art": "studio-basics",
+        "singing": "family-hymns"
+      }
+    },
+    {
+      "id": "K2",
+      "folder": "Theo",
+      "displayName": "Theo",
+      "age": 7,
+      "band": "primary",
+      "ageBand": "early-middle elementary",
+      "label": "Foundations",
+      "themeColor": "#1e4a6d",
+      "subjects": {
+        "essentials-points": "none",
+        "math": "multiply-divide",
+        "reading": "volume-reading",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "tap-hiphop",
+        "presentation": "weekly-outline",
+        "bible": "family-study",
+        "science": "cycle3-topics",
+        "art": "studio-basics",
+        "singing": "family-hymns"
+      }
+    },
+    {
+      "id": "K3",
+      "folder": "Bella",
+      "displayName": "Bella",
+      "age": 6,
+      "band": "early",
+      "ageBand": "early elementary",
+      "label": "Foundations",
+      "themeColor": "#7a3050",
+      "subjects": {
+        "essentials-points": "none",
+        "math": "add-sub-100",
+        "reading": "blends-teams",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "ballet-tap",
+        "presentation": "weekly-outline",
+        "bible": "family-study",
+        "science": "cycle3-topics",
+        "art": "studio-basics",
+        "singing": "family-hymns"
+      }
+    },
+    {
+      "id": "K4",
+      "folder": "Piper",
+      "displayName": "Piper",
+      "age": 4,
+      "band": "preschool",
+      "ageBand": "early learner",
+      "label": "Foundations, early learner",
+      "themeColor": "#8a5a12",
+      "subjects": {
+        "essentials-points": "none",
+        "math": "numbers-to-10",
+        "reading": "letter-sounds",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "ballet-creative",
+        "presentation": "weekly-outline",
+        "bible": "family-study",
+        "science": "cycle3-topics",
+        "art": "studio-basics",
+        "singing": "family-hymns"
+      }
+    },
+    {
+      "id": "K5",
+      "folder": "Hanna",
+      "displayName": "Hanna",
+      "age": 2,
+      "band": "toddler",
+      "ageBand": "toddler",
+      "label": "Toddler",
+      "themeColor": "#9a4a2a",
+      "subjects": {
+        "essentials-points": "none",
+        "math": "play-counting",
+        "reading": "letter-sounds",
+        "history": "none",
+        "geography": "none",
+        "movement": "creative-movement",
+        "presentation": "none",
+        "bible": "family-study",
+        "science": "none",
+        "art": "studio-basics",
+        "singing": "family-hymns"
+      }
+    },
+    {
+      "id": "K6",
+      "folder": "Shiloh",
+      "displayName": "Shiloh",
+      "age": 0,
+      "band": "baby",
+      "ageBand": "infant",
+      "label": "Care time",
+      "themeColor": "#5a4a78",
+      "subjects": {
+        "essentials-points": "none",
+        "math": "none",
+        "reading": "none",
+        "history": "none",
+        "geography": "none",
+        "movement": "none",
+        "presentation": "none",
+        "bible": "none",
+        "science": "none",
+        "art": "none",
+        "singing": "none"
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "id": "the-fig",
+  "title": "The Fig",
+  "coverSlot": "fig-cover",
+  "graphemes": ["s", "a", "t", "p", "m", "i", "g", "f", "b", "d", "n"],
+  "sightWords": ["the", "a", "is"],
+  "pages": [
+    {
+      "slot": "fig-p1",
+      "words": [
+        { "t": "A", "say": "a" },
+        { "t": "fig", "say": "fig" }
+      ]
+    },
+    {
+      "slot": "fig-p2",
+      "words": [
+        { "t": "A", "say": "a" },
+        { "t": "pig", "say": "pig" },
+        { "t": "sits", "say": "sits" }
+      ]
+    },
+    {
+      "slot": "fig-p3",
+      "words": [
+        { "t": "The", "say": "the" },
+        { "t": "pig", "say": "pig" },
+        { "t": "digs", "say": "digs" }
+      ]
+    },
+    {
+      "slot": "fig-p4",
+      "words": [
+        { "t": "The", "say": "the" },
+        { "t": "fig", "say": "fig" },
+        { "t": "is", "say": "is" },
+        { "t": "big", "say": "big" }
+      ]
+    }
+  ]
+}

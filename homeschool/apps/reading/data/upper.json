@@ -1,0 +1,16 @@
+{
+  "band": "upper",
+  "title": "Garden reading time",
+  "mode": "volume",
+  "intro": {
+    "audioText": "Read. Use the timer. The sample books are short; add your own paper book beside them.",
+    "body": "Volume reading lives mostly on paper. The garden timer keeps time. Sample books are for younger siblings or a quick warm-up."
+  },
+  "minutes": 20,
+  "books": ["sam-sat", "the-fig"],
+  "bookGate": { "the-fig": "sam-sat" },
+  "vocab": [
+    { "id": "v1", "word": "voyage", "audioText": "voyage", "hint": "A long trip. (Not today’s garden word — skip if you like.)" },
+    { "id": "v2", "word": "plot", "audioText": "plot", "hint": "A small piece of garden, or the events in a story." }
+  ]
+}

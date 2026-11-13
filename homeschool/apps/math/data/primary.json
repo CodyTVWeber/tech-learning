@@ -1,0 +1,27 @@
+{
+  "band": "primary",
+  "title": "Crews and shares",
+  "technique": {
+    "title": "Rows and shares",
+    "audioText": "Multiplication is equal rows. Division is sharing into equal crews. 3 times 4 and 12 divided by 4 are the same family.",
+    "body": "Multiplication is equal rows of coins. Division is sharing a chest into equal crews. 3 × 4 = 12 and 12 ÷ 4 = 3 are one family."
+  },
+  "islands": [
+    { "id": "facts", "slot": "island-facts", "label": "Row island" }
+  ],
+  "items": [
+    { "id": "m1", "prompt": "3 rows of 4 coins. How many?", "audioText": "3 rows of 4 coins. How many?", "rows": 3, "cols": 4, "answer": "12", "choices": ["7", "12", "16"] },
+    { "id": "m2", "prompt": "2 rows of 5 coins. How many?", "audioText": "2 rows of 5 coins. How many?", "rows": 2, "cols": 5, "answer": "10", "choices": ["7", "10", "25"] },
+    { "id": "m3", "prompt": "4 × 6 =", "audioText": "4 times 6.", "answer": "24", "choices": ["10", "24", "46"] },
+    { "id": "m4", "prompt": "5 × 5 =", "audioText": "5 times 5.", "answer": "25", "choices": ["10", "20", "25"] },
+    { "id": "m5", "prompt": "12 coins in crews of 4. How many crews?", "audioText": "12 coins in crews of 4. How many crews?", "answer": "3", "choices": ["2", "3", "8"] },
+    { "id": "m6", "prompt": "18 ÷ 3 =", "audioText": "18 divided by 3.", "answer": "6", "choices": ["5", "6", "15"] },
+    { "id": "m7", "prompt": "If 7 × 8 = 56, then 56 ÷ 8 =", "audioText": "If 7 times 8 is 56, then 56 divided by 8.", "answer": "7", "choices": ["6", "7", "8"] },
+    { "id": "m8", "prompt": "9 × 0 =", "audioText": "9 times 0.", "answer": "0", "choices": ["0", "9", "90"] }
+  ],
+  "paper": [
+    { "prompt": "Draw 6 rows of 3. Write 6 × 3 and 18 ÷ 3." },
+    { "prompt": "8 × 7 =     and 56 ÷ 7 =" },
+    { "prompt": "A chest of 24 coins, 4 crews. How many each?" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "band": "early",
+  "title": "Blends in the garden",
+  "mode": "blends",
+  "intro": {
+    "audioText": "Say each sound, then blend. sss aaa t. Sat.",
+    "body": "Tap each seed in order, then blend. Books unlock after a few blends."
+  },
+  "items": [
+    { "id": "b1", "sounds": ["s", "a", "t"], "blend": "sat", "audioText": "s, a, t", "choices": ["sat", "mat", "pat"] },
+    { "id": "b2", "sounds": ["m", "a", "t"], "blend": "mat", "audioText": "m, a, t", "choices": ["sat", "mat", "map"] },
+    { "id": "b3", "sounds": ["p", "a", "t"], "blend": "pat", "audioText": "p, a, t", "choices": ["pat", "pit", "tap"] },
+    { "id": "b4", "sounds": ["t", "a", "p"], "blend": "tap", "audioText": "t, a, p", "choices": ["tap", "pat", "pit"] },
+    { "id": "b5", "sounds": ["s", "i", "t"], "blend": "sit", "audioText": "s, i, t", "choices": ["sat", "sit", "pit"] },
+    { "id": "b6", "sounds": ["p", "i", "g"], "blend": "pig", "audioText": "p, i, g", "choices": ["pig", "pit", "fig"] },
+    { "id": "b7", "sounds": ["f", "i", "g"], "blend": "fig", "audioText": "f, i, g", "choices": ["fig", "pig", "big"] },
+    { "id": "b8", "sounds": ["b", "i", "g"], "blend": "big", "audioText": "b, i, g", "choices": ["big", "dig", "pig"] },
+    { "id": "b9", "sounds": ["d", "i", "g"], "blend": "dig", "audioText": "d, i, g", "choices": ["dig", "fig", "big"] },
+    { "id": "b10", "sounds": ["n", "a", "p"], "blend": "nap", "audioText": "n, a, p", "choices": ["nap", "tap", "map"] },
+    { "id": "w1", "kind": "sight", "prompt": "Helper word. Look and say. Not sounded out letter by letter.", "answer": "the", "audioText": "the", "choices": ["the", "a", "is"] },
+    { "id": "w2", "kind": "sight", "prompt": "Helper word. Look and say. Not sounded out letter by letter.", "answer": "is", "audioText": "is", "choices": ["a", "is", "the"] }
+  ],
+  "books": ["sam-sat", "the-fig"],
+  "bookGate": { "the-fig": "sam-sat" }
+}

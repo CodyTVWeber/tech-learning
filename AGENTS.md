@@ -4,9 +4,14 @@ This file is the only canonical source of project rules. Tool-specific files suc
 
 ## What this repo is
 
-A static learning app for GitHub Pages (served from the root of `main`). No build step. HTML, CSS, and vanilla JavaScript only.
+Two static sites on GitHub Pages (served from the root of `main`). No bundler.
 
-Edit lessons and drills in `data.js`. App behavior lives in `app.js` and `styles.css`. Do not move content into the markup unless you are changing the shell.
+1. **Tech Learning** (this directory’s `index.html`) — adult engineering drills. Edit lessons in `data.js`. App behavior lives in `app.js` and `styles.css`.
+2. **Homeschool** (`homeschool/`) — family learning homes. Canonical rules: `homeschool/AGENTS.md`, `homeschool/SPEC.md`, `homeschool/DESIGN.md`. Faith-friendly Christian family content is allowed **in that tree only**.
+
+## Homeschool exception to the public-content rule
+
+The root “never include names of minors” rule is relaxed **only** for the six first names in `homeschool/stages.json` (folders + UI). Still never last names, birth dates, photos of the learners, addresses, school or medical details, or grade labels. Do not copy homeschool first names into the adult Tech Learning app.
 
 ## Public content rule
 

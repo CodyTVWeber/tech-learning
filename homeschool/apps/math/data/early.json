@@ -1,0 +1,28 @@
+{
+  "band": "early",
+  "title": "Tens and ones",
+  "technique": {
+    "title": "Make a ten, then add",
+    "audioText": "If the ones make ten or more, bundle ten ones into a ten crate. Then add the tens.",
+    "body": "If the ones make ten or more, bundle ten ones into a ten-crate. Write the extra ones. Then add the tens."
+  },
+  "islands": [
+    { "id": "add", "slot": "island-add", "label": "Add dock" },
+    { "id": "place", "slot": "island-place", "label": "Ten crates" }
+  ],
+  "items": [
+    { "id": "e1", "prompt": "What number is 3 tens and 4 ones?", "audioText": "What number is 3 tens and 4 ones?", "answer": "34", "choices": ["34", "43", "304"] },
+    { "id": "e2", "prompt": "What number is 5 tens and 0 ones?", "audioText": "What number is 5 tens and 0 ones?", "answer": "50", "choices": ["5", "15", "50"] },
+    { "id": "e3", "prompt": "40 + 8 =", "audioText": "40 plus 8.", "answer": "48", "choices": ["48", "408", "32"] },
+    { "id": "e4", "prompt": "27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?", "audioText": "27 plus 5. Ones are 12. Bundle a ten. What is the sum?", "answer": "32", "choices": ["22", "32", "212"] },
+    { "id": "e5", "prompt": "46 + 7 =", "audioText": "46 plus 7.", "answer": "53", "choices": ["43", "53", "413"] },
+    { "id": "e6", "prompt": "60 − 10 =", "audioText": "60 minus 10.", "answer": "50", "choices": ["50", "70", "6"] },
+    { "id": "e7", "prompt": "35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?", "audioText": "35 minus 8. Unbundle a ten. What is the difference?", "answer": "27", "choices": ["27", "33", "43"] },
+    { "id": "e8", "prompt": "4 + 4 + 4 =", "audioText": "4 plus 4 plus 4.", "answer": "12", "choices": ["8", "12", "16"] }
+  ],
+  "paper": [
+    { "prompt": "58 + 7. Show the bundled ten." },
+    { "prompt": "42 − 9. Show the unbundled ten." },
+    { "prompt": "3 tens + 12 ones =  ?" }
+  ]
+}

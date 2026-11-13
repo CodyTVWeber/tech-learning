@@ -1,0 +1,166 @@
+{
+  "app": "reading",
+  "theme": "garden",
+  "images": [
+    {
+      "file": "hero-garden.png",
+      "width": 1024,
+      "height": 420,
+      "alt": "A kitchen garden in morning light: soil beds, leaves, a clay pot. No text.",
+      "themeNotes": "Garden home hero. Not a pirate palette.",
+      "slot": "hero"
+    },
+    {
+      "file": "bee.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A honeybee above a blossom.",
+      "themeNotes": "Mascot for sounding out. Speaks phonemes, not letter names.",
+      "slot": "bee"
+    },
+    {
+      "file": "flower-s.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A sunflower. Final wave may show /s/ without printing a letter name.",
+      "themeNotes": "Choice tile for /s/.",
+      "slot": "flower-s"
+    },
+    {
+      "file": "flower-m.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A mossy stone and mint leaves.",
+      "themeNotes": "Choice tile for /m/.",
+      "slot": "flower-m"
+    },
+    {
+      "file": "flower-a.png",
+      "width": 320,
+      "height": 320,
+      "alt": "An apple on soil (short /a/ as in apple — the picture, not the letter name).",
+      "themeNotes": "Choice tile for short /a/.",
+      "slot": "flower-a"
+    },
+    {
+      "file": "flower-t.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A tap of a watering can touching soil.",
+      "themeNotes": "Choice tile for /t/.",
+      "slot": "flower-t"
+    },
+    {
+      "file": "flower-p.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A pea pod.",
+      "themeNotes": "Choice tile for /p/.",
+      "slot": "flower-p"
+    },
+    {
+      "file": "flower-i.png",
+      "width": 320,
+      "height": 320,
+      "alt": "An inchworm on a leaf (short /i/).",
+      "themeNotes": "Choice tile for short /i/.",
+      "slot": "flower-i"
+    },
+    {
+      "file": "bed-sounds.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A soil bed with seed packets.",
+      "themeNotes": "Level tile: sounds.",
+      "slot": "bed-sounds"
+    },
+    {
+      "file": "bed-books.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A soil bed with an open picture book lying on a cloth.",
+      "themeNotes": "Level tile: books.",
+      "slot": "bed-books"
+    },
+    {
+      "file": "sam-sat-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a child sitting on a garden mat in the sun. Title space for Sam Sat.",
+      "themeNotes": "Book 1 cover.",
+      "slot": "sam-sat-cover"
+    },
+    {
+      "file": "sam-sat-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sam sitting on a mat in a garden.",
+      "themeNotes": "Book 1 page 1.",
+      "slot": "sam-sat-p1"
+    },
+    {
+      "file": "sam-sat-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sam tapping the mat.",
+      "themeNotes": "Book 1 page 2.",
+      "slot": "sam-sat-p2"
+    },
+    {
+      "file": "sam-sat-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A simple drawn map on garden soil.",
+      "themeNotes": "Book 1 page 3.",
+      "slot": "sam-sat-p3"
+    },
+    {
+      "file": "sam-sat-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sam sitting at a garden mat with a small plant.",
+      "themeNotes": "Book 1 page 4.",
+      "slot": "sam-sat-p4"
+    },
+    {
+      "file": "fig-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a fig on a branch in a garden.",
+      "themeNotes": "Book 2 cover.",
+      "slot": "fig-cover"
+    },
+    {
+      "file": "fig-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A ripe fig on a low branch.",
+      "themeNotes": "Book 2 page 1.",
+      "slot": "fig-p1"
+    },
+    {
+      "file": "fig-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pig near a garden fig tree.",
+      "themeNotes": "Book 2 page 2.",
+      "slot": "fig-p2"
+    },
+    {
+      "file": "fig-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The pig digging in soil.",
+      "themeNotes": "Book 2 page 3.",
+      "slot": "fig-p3"
+    },
+    {
+      "file": "fig-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A big fig in a basket.",
+      "themeNotes": "Book 2 page 4.",
+      "slot": "fig-p4"
+    }
+  ]
+}

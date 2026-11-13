@@ -1,0 +1,24 @@
+{
+  "band": "toddler",
+  "title": "Count the coins",
+  "technique": {
+    "title": "Point and say",
+    "audioText": "Point to each coin. Say one number for each. The last number you say is how many.",
+    "body": "Point to each coin. Say one number for each. The last number you say is how many."
+  },
+  "islands": [{ "id": "count", "slot": "island-count", "label": "Coin cay" }],
+  "items": [
+    { "id": "t1", "prompt": "How many coins?", "audioText": "How many coins?", "count": 1, "answer": "1", "choices": ["1", "2", "3"] },
+    { "id": "t2", "prompt": "How many coins?", "audioText": "How many coins?", "count": 2, "answer": "2", "choices": ["1", "2", "3"] },
+    { "id": "t3", "prompt": "How many coins?", "audioText": "How many coins?", "count": 3, "answer": "3", "choices": ["2", "3", "4"] },
+    { "id": "t4", "prompt": "How many coins?", "audioText": "How many coins?", "count": 4, "answer": "4", "choices": ["3", "4", "5"] },
+    { "id": "t5", "prompt": "How many coins?", "audioText": "How many coins?", "count": 5, "answer": "5", "choices": ["3", "4", "5"] },
+    { "id": "t6", "prompt": "How many coins?", "audioText": "How many coins?", "count": 2, "answer": "2", "choices": ["2", "4", "5"] },
+    { "id": "t7", "prompt": "How many coins?", "audioText": "How many coins?", "count": 3, "answer": "3", "choices": ["1", "3", "5"] },
+    { "id": "t8", "prompt": "How many coins?", "audioText": "How many coins?", "count": 4, "answer": "4", "choices": ["2", "4", "5"] }
+  ],
+  "paper": [
+    { "prompt": "Draw 3 coins. Write the number." },
+    { "prompt": "Draw 5 coins. Write the number." }
+  ]
+}

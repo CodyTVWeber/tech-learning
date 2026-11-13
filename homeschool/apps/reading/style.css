@@ -1,0 +1,228 @@
+/* Garden — not the voyage. Soil beds, not islands. */
+.garden {
+  --leaf: #2c5a32;
+  --soil: #5c3b22;
+  --path: #efe6d0;
+  --clay: #b04a32;
+  --sun: #e6b33a;
+  --ink: #1c1712;
+  color: var(--ink);
+  background: var(--path);
+  font-family: "Trebuchet MS", "Verdana", sans-serif;
+  min-height: 100%;
+  padding-bottom: 40px;
+}
+
+.garden button {
+  font: inherit;
+  font-weight: 700;
+  min-height: 56px;
+  min-width: 56px;
+  border: 0;
+  border-bottom: 6px solid var(--soil);
+  background: var(--leaf);
+  color: #f6f1e4;
+  cursor: pointer;
+  border-radius: 999px 999px 12px 12px;
+}
+
+.garden-hero {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  background: var(--leaf);
+}
+
+.garden-intro {
+  padding: 12px 14px 0;
+}
+
+.garden-intro h1 {
+  margin: 0;
+  color: var(--leaf);
+  font-size: 1.7rem;
+}
+
+.garden-beds {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+}
+
+.garden-bed {
+  background: var(--soil);
+  color: var(--path);
+  padding: 8px 8px 12px;
+  border-radius: 0 0 18px 18px;
+}
+
+.garden-bed img {
+  width: 100%;
+  height: 88px;
+  object-fit: cover;
+  display: block;
+  background: #7a8f6a;
+}
+
+.garden-bed button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.garden-bee {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.garden-prompt {
+  padding: 8px 14px 16px;
+  text-align: center;
+}
+
+.garden-flowers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 12px 16px;
+}
+
+.garden-flowers button {
+  border-radius: 50% 50% 12px 12px;
+  padding: 8px;
+  background: #f6f1e4;
+  color: var(--ink);
+  border: 3px solid var(--leaf);
+  border-bottom-width: 8px;
+}
+
+.garden-flowers button[data-v="s"] { background: #e8d36a; }
+.garden-flowers button[data-v="m"] { background: #7a9e6e; }
+.garden-flowers button[data-v="t"] { background: #d4a574; }
+.garden-flowers button[data-v="p"] { background: #d48aa0; }
+.garden-flowers button[data-v="a"] { background: #e08a6a; }
+.garden-flowers button[data-v="i"] { background: #8fbfd4; }
+
+.garden-letter {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin-top: 4px;
+  color: var(--ink);
+  text-transform: lowercase;
+  font-weight: 800;
+}
+
+.garden-bed button[disabled] {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+.garden-flowers img {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  background: #c5d4b0;
+}
+
+.garden-flowers button.is-right {
+  background: #cfe8c4;
+}
+
+.garden-flowers button.is-wrong {
+  background: #ecd3c4;
+}
+
+.garden-status {
+  text-align: center;
+  font-weight: 700;
+  min-height: 1.4em;
+}
+
+.book {
+  background: #fbf7ea;
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  min-height: 100%;
+}
+
+.book-page img {
+  width: 100%;
+  height: 42vw;
+  max-height: 240px;
+  object-fit: cover;
+  display: block;
+  background: #d9d2c3;
+}
+
+.book-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  padding: 16px 12px;
+}
+
+.book-words button {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  background: transparent;
+  color: var(--ink);
+  border: 0;
+  border-bottom: 4px solid transparent;
+  border-radius: 0;
+  min-height: 56px;
+}
+
+.book-words button.is-on {
+  border-bottom-color: var(--sun);
+  background: #fff6cc;
+}
+
+.book-nav {
+  display: flex;
+  gap: 8px;
+  padding: 0 12px 20px;
+  justify-content: space-between;
+}
+
+.book-nav button {
+  flex: 1;
+}
+
+.garden-timer {
+  font-size: 2.4rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  color: var(--soil);
+}
+
+.garden img.slot {
+  background: #b7c2a8;
+}
+
+.untested-banner {
+  margin: 0;
+  padding: 10px 12px;
+  background: #5c3b22;
+  color: #efe6d0;
+  font-weight: 700;
+  text-align: center;
+}
+
+html[data-runner] .untested-banner {
+  display: none;
+}
+
+.garden .sr-only,
+.book .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}

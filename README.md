@@ -32,6 +32,10 @@ Keep module `id` and drill `id` values stable once you start recording progress;
 
 To change app behavior (today's-drill picker, export format, theme), edit `app.js` and `styles.css`, not `data.js`.
 
+## Homeschool
+
+A separate static site lives in `homeschool/`. Open `/homeschool/` on Pages (or `http://127.0.0.1:4173/tech-learning/homeschool/` with `python3 tools/homeschool/serve.py`). See `homeschool/README.md`.
+
 ## What's in the box
 
 | Path | Role |
@@ -43,6 +47,7 @@ To change app behavior (today's-drill picker, export format, theme), edit `app.j
 | `examples/payments-skill-draft/` | Sample agent draft for the verification drill |
 | `AGENTS.md` | Canonical instructions for humans and coding agents |
 | `CLAUDE.md` | Pointer to `AGENTS.md` |
+| `homeschool/` | Family learning homes (separate static PWA tree) |
 
 ## License
 

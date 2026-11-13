@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Public decks</title>
+  <link rel="stylesheet" href="../kit/a11y.css">
+  <style>
+    body { margin: 0; font-family: ui-sans-serif, system-ui, sans-serif; background: #f4f1ea; color: #161616; }
+    main { padding: 16px; max-width: 40rem; }
+    a { color: inherit; }
+    li { margin: 10px 0; }
+    .note { border: 2px solid #161616; padding: 12px; background: #fff; }
+  </style>
+</head>
+<body>
+  <main>
+    <p><a href="../">Family homes</a></p>
+    <h1>Public-safe Anki decks</h1>
+    <p>Original / public-domain facts only. Untested, awaiting parent test.</p>
+    <ul id="list"></ul>
+    <p class="note">A private Cycle 3 review deck exists for the family. It is not hosted here. Ask the family if you need it — do not upload copyrighted Classical Conversations recitation text to this repo.</p>
+  </main>
+  <script>
+    fetch("./catalog.json")
+      .then(function (r) { return r.ok ? r.json() : { decks: [] }; })
+      .then(function (data) {
+        const ul = document.getElementById("list");
+        (data.decks || []).forEach(function (d) {
+          const li = document.createElement("li");
+          li.innerHTML =
+            "<strong>" + d.id + "</strong> (" + d.cards + " cards) — " +
+            "<a href=\"./" + d.file + "\">" + d.file + "</a> · " +
+            "<a href=\"./" + d.csv + "\">csv</a>";
+          ul.appendChild(li);
+        });
+        if (!ul.children.length) ul.innerHTML = "<li>No public decks in this build.</li>";
+      });
+  </script>
+</body>
+</html>

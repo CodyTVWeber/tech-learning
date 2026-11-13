@@ -1,0 +1,11 @@
+{
+  "name": "homeschool-ci",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "serve": "python3 serve.py --port 4173"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.1"
+  }
+}

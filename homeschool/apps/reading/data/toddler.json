@@ -1,0 +1,19 @@
+{
+  "band": "toddler",
+  "title": "Garden sounds",
+  "mode": "sounds",
+  "intro": {
+    "audioText": "Listen for the sound. Tap the matching flower. We learn sounds first.",
+    "body": "Listen for the sound. Tap the matching flower. Sounds first — not letter names."
+  },
+  "items": [
+    { "id": "s1", "phoneme": "sss", "audioText": "sss", "answer": "s", "choices": ["s", "m", "t"] },
+    { "id": "s2", "phoneme": "mmm", "audioText": "mmm", "answer": "m", "choices": ["s", "m", "p"] },
+    { "id": "s3", "phoneme": "t", "audioText": "t", "answer": "t", "choices": ["t", "p", "a"] },
+    { "id": "s4", "phoneme": "p", "audioText": "p", "answer": "p", "choices": ["m", "p", "s"] },
+    { "id": "s5", "phoneme": "aaa", "audioText": "a", "answer": "a", "choices": ["a", "s", "t"], "note": "short a as in apple" },
+    { "id": "s6", "phoneme": "sss", "audioText": "sss", "answer": "s", "choices": ["p", "t", "s"] },
+    { "id": "s7", "phoneme": "mmm", "audioText": "mmm", "answer": "m", "choices": ["m", "a", "t"] },
+    { "id": "s8", "phoneme": "p", "audioText": "p", "answer": "p", "choices": ["p", "t", "s"] }
+  ]
+}

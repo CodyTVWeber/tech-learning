@@ -1,0 +1,52 @@
+id,prompt,answer,audio_text,tags
+e1,What number is 3 tens and 4 ones?,34,What number is 3 tens and 4 ones?,math early
+e2,What number is 5 tens and 0 ones?,50,What number is 5 tens and 0 ones?,math early
+e3,40 + 8 =,48,40 plus 8.,math early
+e4,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 plus 5. Ones are 12. Bundle a ten. What is the sum?,math early
+e5,46 + 7 =,53,46 plus 7.,math early
+e6,60 − 10 =,50,60 minus 10.,math early
+e7,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 minus 8. Unbundle a ten. What is the difference?,math early
+e8,4 + 4 + 4 =,12,4 plus 4 plus 4.,math early
+p1,"How many coins?
+● ● ● ● ● ●",6,How many coins?,math preschool
+p2,"How many coins?
+● ● ● ● ● ● ● ●",8,How many coins?,math preschool
+p3,"How many coins?
+● ● ● ● ● ● ● ● ● ●",10,How many coins?,math preschool
+p4,3 coins and 2 more. How many?,5,3 coins and 2 more. How many?,math preschool
+p5,4 coins and 3 more. How many?,7,4 coins and 3 more. How many?,math preschool
+p6,6 coins and 4 more. How many?,10,6 coins and 4 more. How many?,math preschool
+p7,5 coins and 5 more. How many?,10,5 coins and 5 more. How many?,math preschool
+p8,7 coins and 2 more. How many?,9,7 coins and 2 more. How many?,math preschool
+m1,3 rows of 4 coins. How many?,12,3 rows of 4 coins. How many?,math primary
+m2,2 rows of 5 coins. How many?,10,2 rows of 5 coins. How many?,math primary
+m3,4 × 6 =,24,4 times 6.,math primary
+m4,5 × 5 =,25,5 times 5.,math primary
+m5,12 coins in crews of 4. How many crews?,3,12 coins in crews of 4. How many crews?,math primary
+m6,18 ÷ 3 =,6,18 divided by 3.,math primary
+m7,"If 7 × 8 = 56, then 56 ÷ 8 =",7,"If 7 times 8 is 56, then 56 divided by 8.",math primary
+m8,9 × 0 =,0,9 times 0.,math primary
+t1,"How many coins?
+●",1,How many coins?,math toddler
+t2,"How many coins?
+● ●",2,How many coins?,math toddler
+t3,"How many coins?
+● ● ●",3,How many coins?,math toddler
+t4,"How many coins?
+● ● ● ●",4,How many coins?,math toddler
+t5,"How many coins?
+● ● ● ● ●",5,How many coins?,math toddler
+t6,"How many coins?
+● ●",2,How many coins?,math toddler
+t7,"How many coins?
+● ● ●",3,How many coins?,math toddler
+t8,"How many coins?
+● ● ● ●",4,How many coins?,math toddler
+u1,1/2 as a decimal is,0.5,One half as a decimal.,math upper
+u2,0.25 as a fraction is,1/4,0.25 as a fraction.,math upper
+u3,50% of 10 is,5,50 percent of 10.,math upper
+u4,3/10 as a decimal is,0.3,3 tenths as a decimal.,math upper
+u5,Line up 1.2 + 0.45. The sum is,1.65,1.2 plus 0.45.,math upper
+u6,Long divide 84 ÷ 4. First: how many 4s in 8?,2,84 divided by 4. How many 4s in 8?,math upper
+u7,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",1,Bring down 4. 4 divided by 4.,math upper
+u8,So 84 ÷ 4 =,21,So 84 divided by 4 equals.,math upper

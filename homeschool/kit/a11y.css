@@ -1,0 +1,39 @@
+/* Shared accessibility plumbing only. Apps bring their own look. */
+:root {
+  --hs-min-tap: 56px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hs-chrome button:focus-visible,
+.hs-chrome a:focus-visible,
+#app-root button:focus-visible,
+#app-root a:focus-visible,
+#app-root input:focus-visible,
+#app-root [tabindex]:focus-visible {
+  outline: 3px solid #0b0b0b;
+  outline-offset: 3px;
+}
+
+.hs-tap {
+  min-width: var(--hs-min-tap);
+  min-height: var(--hs-min-tap);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hs-chrome *,
+  #app-root * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
