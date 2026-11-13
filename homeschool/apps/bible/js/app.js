@@ -591,7 +591,7 @@
   });
 
   window.addEventListener("hashchange", render);
-  if ("serviceWorker" in navigator) {
+  if (document.documentElement.dataset.runner !== "1" && "serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
   render();

@@ -56,6 +56,21 @@ img { max-width: 100%; display: block; }
   z-index: 2;
 }
 
+.untested-banner {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  margin: 0;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #fff8e8;
+  background: var(--cardinal);
+  border-bottom: 4px solid #1a120c;
+}
+
 .app {
   position: relative;
   z-index: 1;

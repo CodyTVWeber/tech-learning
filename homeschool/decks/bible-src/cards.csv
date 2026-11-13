@@ -26,16 +26,14 @@ baby,verse-ref,"What is the reference?
 baby,verse-say,Say this verse: 1 John 4:8,He that loveth not knoweth not God; for God is love.,KJV · 1 John 4:8
 baby,verse-ref,"What is the reference?
 “He that loveth not knoweth not God; for God is love.”",1 John 4:8,KJV
-baby,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+baby,book-order,What is the first book of the Bible?,Genesis,OT · Law
 baby,book-order,Which book comes after Exodus?,Leviticus,OT · Law
 baby,book-order,Which book comes after Leviticus?,Numbers,OT · Law
 baby,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
 baby,book-order,Which book comes after Job?,Psalms,OT · Poetry
 baby,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
-baby,quality,"Character quality: Love
-What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
-baby,quality,"Character quality: Joy
-What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+baby,quality,What does the character quality “Love” look like?,Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+baby,quality,What does the character quality “Joy” look like?,"Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
 toddler,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
 toddler,verse-ref,"What is the reference?
 “In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
@@ -96,7 +94,7 @@ toddler,verse-ref,"What is the reference?
 toddler,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
 toddler,verse-ref,"What is the reference?
 “We love him, because he first loved us.”",1 John 4:19,KJV
-toddler,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+toddler,book-order,What is the first book of the Bible?,Genesis,OT · Law
 toddler,book-order,Which book comes after Genesis?,Exodus,OT · Law
 toddler,book-order,Which book comes after Exodus?,Leviticus,OT · Law
 toddler,book-order,Which book comes after Leviticus?,Numbers,OT · Law
@@ -106,18 +104,12 @@ toddler,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
 toddler,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
 toddler,book-order,Which book comes after Mark?,Luke,NT · Gospels
 toddler,book-order,Which book comes after Luke?,John,NT · Gospels
-toddler,quality,"Character quality: Love
-What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
-toddler,quality,"Character quality: Joy
-What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
-toddler,quality,"Character quality: Peace
-What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
-toddler,quality,"Character quality: Kindness
-What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-toddler,quality,"Character quality: Gratitude
-What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
-toddler,quality,"Character quality: Obedience
-What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+toddler,quality,What does the character quality “Love” look like?,Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+toddler,quality,What does the character quality “Joy” look like?,"Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+toddler,quality,What does the character quality “Peace” look like?,"Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+toddler,quality,What does the character quality “Kindness” look like?,"Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+toddler,quality,What does the character quality “Gratitude” look like?,"Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+toddler,quality,What does the character quality “Obedience” look like?,"Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
 preschool,verse-say,Say this verse: Genesis 1:1,In the beginning God created the heaven and the earth.,KJV · Genesis 1:1
 preschool,verse-ref,"What is the reference?
 “In the beginning God created the heaven and the earth.”",Genesis 1:1,KJV
@@ -214,7 +206,7 @@ preschool,verse-ref,"What is the reference?
 preschool,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
 preschool,verse-ref,"What is the reference?
 “We love him, because he first loved us.”",1 John 4:19,KJV
-preschool,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+preschool,book-order,What is the first book of the Bible?,Genesis,OT · Law
 preschool,book-order,Which book comes after Genesis?,Exodus,OT · Law
 preschool,book-order,Which book comes after Exodus?,Leviticus,OT · Law
 preschool,book-order,Which book comes after Leviticus?,Numbers,OT · Law
@@ -227,28 +219,17 @@ preschool,book-order,Which book comes after Mark?,Luke,NT · Gospels
 preschool,book-order,Which book comes after Luke?,John,NT · Gospels
 preschool,book-order,Which book comes after John?,Acts,NT · History
 preschool,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
-preschool,quality,"Character quality: Love
-What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
-preschool,quality,"Character quality: Joy
-What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
-preschool,quality,"Character quality: Peace
-What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
-preschool,quality,"Character quality: Patience
-What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-preschool,quality,"Character quality: Kindness
-What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-preschool,quality,"Character quality: Goodness
-What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
-preschool,quality,"Character quality: Gentleness
-What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
-preschool,quality,"Character quality: Courage
-What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
-preschool,quality,"Character quality: Gratitude
-What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
-preschool,quality,"Character quality: Obedience
-What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
-preschool,quality,"Character quality: Hope
-What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+preschool,quality,What does the character quality “Love” look like?,Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+preschool,quality,What does the character quality “Joy” look like?,"Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+preschool,quality,What does the character quality “Peace” look like?,"Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+preschool,quality,What does the character quality “Patience” look like?,Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+preschool,quality,What does the character quality “Kindness” look like?,"Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+preschool,quality,What does the character quality “Goodness” look like?,Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+preschool,quality,What does the character quality “Gentleness” look like?,Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+preschool,quality,What does the character quality “Courage” look like?,Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+preschool,quality,What does the character quality “Gratitude” look like?,"Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+preschool,quality,What does the character quality “Obedience” look like?,"Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+preschool,quality,What does the character quality “Hope” look like?,"Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
 preschool,story-order,Bible story order: what comes after “God Makes the World”?,Noah and the Ark,Genesis 7:1
 preschool,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
 preschool,story-order,Bible story order: what comes after “God Calls Abraham”?,Joseph in Egypt,Genesis 50:20
@@ -415,7 +396,7 @@ early,verse-ref,"What is the reference?
 early,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
 early,verse-ref,"What is the reference?
 “We love him, because he first loved us.”",1 John 4:19,KJV
-early,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
+early,book-order,What is the first book of the Bible?,Genesis,OT · Law
 early,book-order,Which book comes after Genesis?,Exodus,OT · Law
 early,book-order,Which book comes after Exodus?,Leviticus,OT · Law
 early,book-order,Which book comes after Leviticus?,Numbers,OT · Law
@@ -443,38 +424,22 @@ early,book-order,Which book comes after Mark?,Luke,NT · Gospels
 early,book-order,Which book comes after Luke?,John,NT · Gospels
 early,book-order,Which book comes after John?,Acts,NT · History
 early,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
-early,quality,"Character quality: Love
-What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
-early,quality,"Character quality: Joy
-What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
-early,quality,"Character quality: Peace
-What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
-early,quality,"Character quality: Patience
-What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-early,quality,"Character quality: Kindness
-What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-early,quality,"Character quality: Goodness
-What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
-early,quality,"Character quality: Faith
-What does it look like?",Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
-early,quality,"Character quality: Gentleness
-What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
-early,quality,"Character quality: Self-control
-What does it look like?","Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-early,quality,"Character quality: Courage
-What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
-early,quality,"Character quality: Honesty
-What does it look like?",Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
-early,quality,"Character quality: Gratitude
-What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
-early,quality,"Character quality: Obedience
-What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
-early,quality,"Character quality: Mercy
-What does it look like?",Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
-early,quality,"Character quality: Forgiveness
-What does it look like?","Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-early,quality,"Character quality: Hope
-What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+early,quality,What does the character quality “Love” look like?,Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+early,quality,What does the character quality “Joy” look like?,"Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+early,quality,What does the character quality “Peace” look like?,"Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+early,quality,What does the character quality “Patience” look like?,Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+early,quality,What does the character quality “Kindness” look like?,"Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+early,quality,What does the character quality “Goodness” look like?,Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+early,quality,What does the character quality “Faith” look like?,Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+early,quality,What does the character quality “Gentleness” look like?,Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+early,quality,What does the character quality “Self-control” look like?,"Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+early,quality,What does the character quality “Courage” look like?,Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+early,quality,What does the character quality “Honesty” look like?,Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
+early,quality,What does the character quality “Gratitude” look like?,"Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+early,quality,What does the character quality “Obedience” look like?,"Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+early,quality,What does the character quality “Mercy” look like?,Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+early,quality,What does the character quality “Forgiveness” look like?,"Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+early,quality,What does the character quality “Hope” look like?,"Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
 early,story-order,Bible story order: what comes after “God Makes the World”?,The Garden and the Fall,Genesis 3:1-24
 early,story-order,Bible story order: what comes after “The Garden and the Fall”?,Noah and the Ark,Genesis 7:1
 early,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
@@ -691,242 +656,223 @@ primary,verse-ref,"What is the reference?
 primary,verse-say,Say this verse: 1 John 4:19,"We love him, because he first loved us.",KJV · 1 John 4:19
 primary,verse-ref,"What is the reference?
 “We love him, because he first loved us.”",1 John 4:19,KJV
-primary,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
-primary,book-group,Testament and group: Genesis,"OT · Law
+primary,book-order,What is the first book of the Bible?,Genesis,OT · Law
+primary,book-group,Name the testament and group for Genesis.,"OT · Law
 Beginnings: creation, promise, and a family God chose.",1
 primary,book-order,Which book comes after Genesis?,Exodus,OT · Law
-primary,book-group,Testament and group: Exodus,"OT · Law
+primary,book-group,Name the testament and group for Exodus.,"OT · Law
 God frees Israel from Egypt and gives His law.",2
 primary,book-order,Which book comes after Exodus?,Leviticus,OT · Law
-primary,book-group,Testament and group: Leviticus,"OT · Law
+primary,book-group,Name the testament and group for Leviticus.,"OT · Law
 How a holy God dwells with His people.",3
 primary,book-order,Which book comes after Leviticus?,Numbers,OT · Law
-primary,book-group,Testament and group: Numbers,"OT · Law
+primary,book-group,Name the testament and group for Numbers.,"OT · Law
 Wilderness years and God’s faithful care.",4
 primary,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
-primary,book-group,Testament and group: Deuteronomy,"OT · Law
+primary,book-group,Name the testament and group for Deuteronomy.,"OT · Law
 Moses retells the law before the land.",5
 primary,book-order,Which book comes after Deuteronomy?,Joshua,OT · History
-primary,book-group,Testament and group: Joshua,"OT · History
+primary,book-group,Name the testament and group for Joshua.,"OT · History
 Israel enters the land God promised.",6
 primary,book-order,Which book comes after Joshua?,Judges,OT · History
-primary,book-group,Testament and group: Judges,"OT · History
+primary,book-group,Name the testament and group for Judges.,"OT · History
 Cycles of forgetting and God’s rescue.",7
 primary,book-order,Which book comes after Judges?,Ruth,OT · History
-primary,book-group,Testament and group: Ruth,"OT · History
+primary,book-group,Name the testament and group for Ruth.,"OT · History
 Kindness, gleaning, and a place in David’s line.",8
 primary,book-order,Which book comes after Ruth?,1 Samuel,OT · History
-primary,book-group,Testament and group: 1 Samuel,"OT · History
+primary,book-group,Name the testament and group for 1 Samuel.,"OT · History
 Samuel, Saul, and the rise of David.",9
 primary,book-order,Which book comes after 1 Samuel?,2 Samuel,OT · History
-primary,book-group,Testament and group: 2 Samuel,"OT · History
+primary,book-group,Name the testament and group for 2 Samuel.,"OT · History
 David’s reign, sin, and God’s covenant.",10
 primary,book-order,Which book comes after 2 Samuel?,1 Kings,OT · History
-primary,book-group,Testament and group: 1 Kings,"OT · History
+primary,book-group,Name the testament and group for 1 Kings.,"OT · History
 Solomon, the temple, and a divided kingdom.",11
 primary,book-order,Which book comes after 1 Kings?,2 Kings,OT · History
-primary,book-group,Testament and group: 2 Kings,"OT · History
+primary,book-group,Name the testament and group for 2 Kings.,"OT · History
 Kings, prophets, and exile.",12
 primary,book-order,Which book comes after 2 Kings?,1 Chronicles,OT · History
-primary,book-group,Testament and group: 1 Chronicles,"OT · History
+primary,book-group,Name the testament and group for 1 Chronicles.,"OT · History
 David’s line and temple worship remembered.",13
 primary,book-order,Which book comes after 1 Chronicles?,2 Chronicles,OT · History
-primary,book-group,Testament and group: 2 Chronicles,"OT · History
+primary,book-group,Name the testament and group for 2 Chronicles.,"OT · History
 Judah’s kings and the call to seek the Lord.",14
 primary,book-order,Which book comes after 2 Chronicles?,Ezra,OT · History
-primary,book-group,Testament and group: Ezra,"OT · History
+primary,book-group,Name the testament and group for Ezra.,"OT · History
 The people return and rebuild the temple.",15
 primary,book-order,Which book comes after Ezra?,Nehemiah,OT · History
-primary,book-group,Testament and group: Nehemiah,"OT · History
+primary,book-group,Name the testament and group for Nehemiah.,"OT · History
 Walls rebuilt and the law read aloud.",16
 primary,book-order,Which book comes after Nehemiah?,Esther,OT · History
-primary,book-group,Testament and group: Esther,"OT · History
+primary,book-group,Name the testament and group for Esther.,"OT · History
 God preserves His people in a foreign court.",17
 primary,book-order,Which book comes after Esther?,Job,OT · Poetry
-primary,book-group,Testament and group: Job,"OT · Poetry
+primary,book-group,Name the testament and group for Job.,"OT · Poetry
 Suffering, friends’ speeches, and the fear of the Lord.",18
 primary,book-order,Which book comes after Job?,Psalms,OT · Poetry
-primary,book-group,Testament and group: Psalms,"OT · Poetry
+primary,book-group,Name the testament and group for Psalms.,"OT · Poetry
 Songs of prayer, praise, and trust.",19
 primary,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
-primary,book-group,Testament and group: Proverbs,"OT · Poetry
+primary,book-group,Name the testament and group for Proverbs.,"OT · Poetry
 Wisdom for everyday walking.",20
 primary,book-order,Which book comes after Proverbs?,Ecclesiastes,OT · Poetry
-primary,book-group,Testament and group: Ecclesiastes,"OT · Poetry
+primary,book-group,Name the testament and group for Ecclesiastes.,"OT · Poetry
 Life under the sun, and fearing God.",21
 primary,book-order,Which book comes after Ecclesiastes?,Song of Solomon,OT · Poetry
-primary,book-group,Testament and group: Song of Solomon,"OT · Poetry
+primary,book-group,Name the testament and group for Song of Solomon.,"OT · Poetry
 A poem of faithful love.",22
 primary,book-order,Which book comes after Song of Solomon?,Isaiah,OT · Major Prophets
-primary,book-group,Testament and group: Isaiah,"OT · Major Prophets
+primary,book-group,Name the testament and group for Isaiah.,"OT · Major Prophets
 Judgment, comfort, and the coming King.",23
 primary,book-order,Which book comes after Isaiah?,Jeremiah,OT · Major Prophets
-primary,book-group,Testament and group: Jeremiah,"OT · Major Prophets
+primary,book-group,Name the testament and group for Jeremiah.,"OT · Major Prophets
 Tears, a new covenant, and a call to turn.",24
 primary,book-order,Which book comes after Jeremiah?,Lamentations,OT · Major Prophets
-primary,book-group,Testament and group: Lamentations,"OT · Major Prophets
+primary,book-group,Name the testament and group for Lamentations.,"OT · Major Prophets
 Grief over a fallen city.",25
 primary,book-order,Which book comes after Lamentations?,Ezekiel,OT · Major Prophets
-primary,book-group,Testament and group: Ezekiel,"OT · Major Prophets
+primary,book-group,Name the testament and group for Ezekiel.,"OT · Major Prophets
 Visions of glory, dry bones, and a new heart.",26
 primary,book-order,Which book comes after Ezekiel?,Daniel,OT · Major Prophets
-primary,book-group,Testament and group: Daniel,"OT · Major Prophets
+primary,book-group,Name the testament and group for Daniel.,"OT · Major Prophets
 Faith in exile and kingdoms under God.",27
 primary,book-order,Which book comes after Daniel?,Hosea,OT · Minor Prophets
-primary,book-group,Testament and group: Hosea,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Hosea.,"OT · Minor Prophets
 A faithful husband and a wandering people.",28
 primary,book-order,Which book comes after Hosea?,Joel,OT · Minor Prophets
-primary,book-group,Testament and group: Joel,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Joel.,"OT · Minor Prophets
 Locusts, the day of the Lord, and the Spirit poured out.",29
 primary,book-order,Which book comes after Joel?,Amos,OT · Minor Prophets
-primary,book-group,Testament and group: Amos,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Amos.,"OT · Minor Prophets
 Justice rolling down like waters.",30
 primary,book-order,Which book comes after Amos?,Obadiah,OT · Minor Prophets
-primary,book-group,Testament and group: Obadiah,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Obadiah.,"OT · Minor Prophets
 Edom’s pride brought low.",31
 primary,book-order,Which book comes after Obadiah?,Jonah,OT · Minor Prophets
-primary,book-group,Testament and group: Jonah,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Jonah.,"OT · Minor Prophets
 A reluctant prophet and a merciful God.",32
 primary,book-order,Which book comes after Jonah?,Micah,OT · Minor Prophets
-primary,book-group,Testament and group: Micah,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Micah.,"OT · Minor Prophets
 Do justly, love mercy, walk humbly.",33
 primary,book-order,Which book comes after Micah?,Nahum,OT · Minor Prophets
-primary,book-group,Testament and group: Nahum,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Nahum.,"OT · Minor Prophets
 Nineveh’s fall.",34
 primary,book-order,Which book comes after Nahum?,Habakkuk,OT · Minor Prophets
-primary,book-group,Testament and group: Habakkuk,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Habakkuk.,"OT · Minor Prophets
 The just shall live by faith.",35
 primary,book-order,Which book comes after Habakkuk?,Zephaniah,OT · Minor Prophets
-primary,book-group,Testament and group: Zephaniah,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Zephaniah.,"OT · Minor Prophets
 The day of the Lord and a singing God.",36
 primary,book-order,Which book comes after Zephaniah?,Haggai,OT · Minor Prophets
-primary,book-group,Testament and group: Haggai,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Haggai.,"OT · Minor Prophets
 Rebuild the house of the Lord.",37
 primary,book-order,Which book comes after Haggai?,Zechariah,OT · Minor Prophets
-primary,book-group,Testament and group: Zechariah,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Zechariah.,"OT · Minor Prophets
 Visions of a coming King, humble and riding.",38
 primary,book-order,Which book comes after Zechariah?,Malachi,OT · Minor Prophets
-primary,book-group,Testament and group: Malachi,"OT · Minor Prophets
+primary,book-group,Name the testament and group for Malachi.,"OT · Minor Prophets
 A messenger, a warning, and a promise of the sun of righteousness.",39
 primary,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
-primary,book-group,Testament and group: Matthew,"NT · Gospels
+primary,book-group,Name the testament and group for Matthew.,"NT · Gospels
 Jesus the King and Son of David.",40
 primary,book-order,Which book comes after Matthew?,Mark,NT · Gospels
-primary,book-group,Testament and group: Mark,"NT · Gospels
+primary,book-group,Name the testament and group for Mark.,"NT · Gospels
 Jesus the Servant who acts with power.",41
 primary,book-order,Which book comes after Mark?,Luke,NT · Gospels
-primary,book-group,Testament and group: Luke,"NT · Gospels
+primary,book-group,Name the testament and group for Luke.,"NT · Gospels
 Jesus the Savior for all kinds of people.",42
 primary,book-order,Which book comes after Luke?,John,NT · Gospels
-primary,book-group,Testament and group: John,"NT · Gospels
+primary,book-group,Name the testament and group for John.,"NT · Gospels
 Jesus the Son who reveals the Father.",43
 primary,book-order,Which book comes after John?,Acts,NT · History
-primary,book-group,Testament and group: Acts,"NT · History
+primary,book-group,Name the testament and group for Acts.,"NT · History
 The Spirit and the spreading church.",44
 primary,book-order,Which book comes after Acts?,Romans,NT · Paul's Letters
-primary,book-group,Testament and group: Romans,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Romans.,"NT · Paul's Letters
 The gospel of God’s righteousness.",45
 primary,book-order,Which book comes after Romans?,1 Corinthians,NT · Paul's Letters
-primary,book-group,Testament and group: 1 Corinthians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for 1 Corinthians.,"NT · Paul's Letters
 A church called back to love and order.",46
 primary,book-order,Which book comes after 1 Corinthians?,2 Corinthians,NT · Paul's Letters
-primary,book-group,Testament and group: 2 Corinthians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for 2 Corinthians.,"NT · Paul's Letters
 Weakness, comfort, and true ministry.",47
 primary,book-order,Which book comes after 2 Corinthians?,Galatians,NT · Paul's Letters
-primary,book-group,Testament and group: Galatians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Galatians.,"NT · Paul's Letters
 Freedom in Christ, not by the law’s works.",48
 primary,book-order,Which book comes after Galatians?,Ephesians,NT · Paul's Letters
-primary,book-group,Testament and group: Ephesians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Ephesians.,"NT · Paul's Letters
 The church as Christ’s body.",49
 primary,book-order,Which book comes after Ephesians?,Philippians,NT · Paul's Letters
-primary,book-group,Testament and group: Philippians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Philippians.,"NT · Paul's Letters
 Joy in the Lord from a prison letter.",50
 primary,book-order,Which book comes after Philippians?,Colossians,NT · Paul's Letters
-primary,book-group,Testament and group: Colossians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Colossians.,"NT · Paul's Letters
 Christ above all.",51
 primary,book-order,Which book comes after Colossians?,1 Thessalonians,NT · Paul's Letters
-primary,book-group,Testament and group: 1 Thessalonians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for 1 Thessalonians.,"NT · Paul's Letters
 Hope and the coming of the Lord.",52
 primary,book-order,Which book comes after 1 Thessalonians?,2 Thessalonians,NT · Paul's Letters
-primary,book-group,Testament and group: 2 Thessalonians,"NT · Paul's Letters
+primary,book-group,Name the testament and group for 2 Thessalonians.,"NT · Paul's Letters
 Stand firm until He comes.",53
 primary,book-order,Which book comes after 2 Thessalonians?,1 Timothy,NT · Paul's Letters
-primary,book-group,Testament and group: 1 Timothy,"NT · Paul's Letters
+primary,book-group,Name the testament and group for 1 Timothy.,"NT · Paul's Letters
 Care for the household of God.",54
 primary,book-order,Which book comes after 1 Timothy?,2 Timothy,NT · Paul's Letters
-primary,book-group,Testament and group: 2 Timothy,"NT · Paul's Letters
+primary,book-group,Name the testament and group for 2 Timothy.,"NT · Paul's Letters
 Guard the good deposit.",55
 primary,book-order,Which book comes after 2 Timothy?,Titus,NT · Paul's Letters
-primary,book-group,Testament and group: Titus,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Titus.,"NT · Paul's Letters
 Sound teaching that leads to good works.",56
 primary,book-order,Which book comes after Titus?,Philemon,NT · Paul's Letters
-primary,book-group,Testament and group: Philemon,"NT · Paul's Letters
+primary,book-group,Name the testament and group for Philemon.,"NT · Paul's Letters
 A runaway welcomed as a brother.",57
 primary,book-order,Which book comes after Philemon?,Hebrews,NT · General Letters
-primary,book-group,Testament and group: Hebrews,"NT · General Letters
+primary,book-group,Name the testament and group for Hebrews.,"NT · General Letters
 Jesus, better than all that came before.",58
 primary,book-order,Which book comes after Hebrews?,James,NT · General Letters
-primary,book-group,Testament and group: James,"NT · General Letters
+primary,book-group,Name the testament and group for James.,"NT · General Letters
 Faith that works in real life.",59
 primary,book-order,Which book comes after James?,1 Peter,NT · General Letters
-primary,book-group,Testament and group: 1 Peter,"NT · General Letters
+primary,book-group,Name the testament and group for 1 Peter.,"NT · General Letters
 Hope while you sojourn.",60
 primary,book-order,Which book comes after 1 Peter?,2 Peter,NT · General Letters
-primary,book-group,Testament and group: 2 Peter,"NT · General Letters
+primary,book-group,Name the testament and group for 2 Peter.,"NT · General Letters
 True knowledge versus false teachers.",61
 primary,book-order,Which book comes after 2 Peter?,1 John,NT · General Letters
-primary,book-group,Testament and group: 1 John,"NT · General Letters
+primary,book-group,Name the testament and group for 1 John.,"NT · General Letters
 That you may know you have life.",62
 primary,book-order,Which book comes after 1 John?,2 John,NT · General Letters
-primary,book-group,Testament and group: 2 John,"NT · General Letters
+primary,book-group,Name the testament and group for 2 John.,"NT · General Letters
 Walk in truth and love.",63
 primary,book-order,Which book comes after 2 John?,3 John,NT · General Letters
-primary,book-group,Testament and group: 3 John,"NT · General Letters
+primary,book-group,Name the testament and group for 3 John.,"NT · General Letters
 Welcome faithful workers.",64
 primary,book-order,Which book comes after 3 John?,Jude,NT · General Letters
-primary,book-group,Testament and group: Jude,"NT · General Letters
+primary,book-group,Name the testament and group for Jude.,"NT · General Letters
 Contend for the faith.",65
 primary,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
-primary,book-group,Testament and group: Revelation,"NT · Prophecy
+primary,book-group,Name the testament and group for Revelation.,"NT · Prophecy
 The Lamb wins, and all things are made new.",66
-primary,quality,"Character quality: Love
-What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
-primary,quality,"Character quality: Joy
-What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
-primary,quality,"Character quality: Peace
-What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
-primary,quality,"Character quality: Patience
-What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-primary,quality,"Character quality: Kindness
-What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-primary,quality,"Character quality: Goodness
-What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
-primary,quality,"Character quality: Faith
-What does it look like?",Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
-primary,quality,"Character quality: Gentleness
-What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
-primary,quality,"Character quality: Self-control
-What does it look like?","Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-primary,quality,"Character quality: Courage
-What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
-primary,quality,"Character quality: Honesty
-What does it look like?",Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
-primary,quality,"Character quality: Humility
-What does it look like?",Humility walks low before God and does not put others down.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
-primary,quality,"Character quality: Gratitude
-What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
-primary,quality,"Character quality: Obedience
-What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
-primary,quality,"Character quality: Mercy
-What does it look like?",Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
-primary,quality,"Character quality: Wisdom
-What does it look like?","Wisdom starts with trusting the Lord, then choosing the good path.",Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
-primary,quality,"Character quality: Diligence
-What does it look like?","Diligence works heartily, as to the Lord, not only when watched.","Colossians 3:23 — And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
-primary,quality,"Character quality: Forgiveness
-What does it look like?","Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-primary,quality,"Character quality: Hope
-What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+primary,quality,What does the character quality “Love” look like?,Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+primary,quality,What does the character quality “Joy” look like?,"Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+primary,quality,What does the character quality “Peace” look like?,"Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+primary,quality,What does the character quality “Patience” look like?,Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+primary,quality,What does the character quality “Kindness” look like?,"Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+primary,quality,What does the character quality “Goodness” look like?,Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+primary,quality,What does the character quality “Faith” look like?,Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+primary,quality,What does the character quality “Gentleness” look like?,Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+primary,quality,What does the character quality “Self-control” look like?,"Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+primary,quality,What does the character quality “Courage” look like?,Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+primary,quality,What does the character quality “Honesty” look like?,Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
+primary,quality,What does the character quality “Humility” look like?,Humility walks low before God and does not put others down.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+primary,quality,What does the character quality “Gratitude” look like?,"Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+primary,quality,What does the character quality “Obedience” look like?,"Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+primary,quality,What does the character quality “Mercy” look like?,Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+primary,quality,What does the character quality “Wisdom” look like?,"Wisdom starts with trusting the Lord, then choosing the good path.",Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+primary,quality,What does the character quality “Diligence” look like?,"Diligence works heartily, as to the Lord, not only when watched.","Colossians 3:23 — And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
+primary,quality,What does the character quality “Forgiveness” look like?,"Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+primary,quality,What does the character quality “Hope” look like?,"Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
 primary,story-order,Bible story order: what comes after “God Makes the World”?,The Garden and the Fall,Genesis 3:1-24
 primary,story-order,Bible story order: what comes after “The Garden and the Fall”?,Noah and the Ark,Genesis 7:1
 primary,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
@@ -1179,244 +1125,224 @@ upper,verse-ref,"What is the reference?
 upper,verse-say,Say this verse: Revelation 4:11,"Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.",KJV · Revelation 4:11
 upper,verse-ref,"What is the reference?
 “Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were cre…”",Revelation 4:11,KJV
-upper,book-order,Which book comes after (none — this is the first book)?,Genesis,OT · Law
-upper,book-group,Testament and group: Genesis,"OT · Law
+upper,book-order,What is the first book of the Bible?,Genesis,OT · Law
+upper,book-group,Name the testament and group for Genesis.,"OT · Law
 Beginnings: creation, promise, and a family God chose.",1
 upper,book-order,Which book comes after Genesis?,Exodus,OT · Law
-upper,book-group,Testament and group: Exodus,"OT · Law
+upper,book-group,Name the testament and group for Exodus.,"OT · Law
 God frees Israel from Egypt and gives His law.",2
 upper,book-order,Which book comes after Exodus?,Leviticus,OT · Law
-upper,book-group,Testament and group: Leviticus,"OT · Law
+upper,book-group,Name the testament and group for Leviticus.,"OT · Law
 How a holy God dwells with His people.",3
 upper,book-order,Which book comes after Leviticus?,Numbers,OT · Law
-upper,book-group,Testament and group: Numbers,"OT · Law
+upper,book-group,Name the testament and group for Numbers.,"OT · Law
 Wilderness years and God’s faithful care.",4
 upper,book-order,Which book comes after Numbers?,Deuteronomy,OT · Law
-upper,book-group,Testament and group: Deuteronomy,"OT · Law
+upper,book-group,Name the testament and group for Deuteronomy.,"OT · Law
 Moses retells the law before the land.",5
 upper,book-order,Which book comes after Deuteronomy?,Joshua,OT · History
-upper,book-group,Testament and group: Joshua,"OT · History
+upper,book-group,Name the testament and group for Joshua.,"OT · History
 Israel enters the land God promised.",6
 upper,book-order,Which book comes after Joshua?,Judges,OT · History
-upper,book-group,Testament and group: Judges,"OT · History
+upper,book-group,Name the testament and group for Judges.,"OT · History
 Cycles of forgetting and God’s rescue.",7
 upper,book-order,Which book comes after Judges?,Ruth,OT · History
-upper,book-group,Testament and group: Ruth,"OT · History
+upper,book-group,Name the testament and group for Ruth.,"OT · History
 Kindness, gleaning, and a place in David’s line.",8
 upper,book-order,Which book comes after Ruth?,1 Samuel,OT · History
-upper,book-group,Testament and group: 1 Samuel,"OT · History
+upper,book-group,Name the testament and group for 1 Samuel.,"OT · History
 Samuel, Saul, and the rise of David.",9
 upper,book-order,Which book comes after 1 Samuel?,2 Samuel,OT · History
-upper,book-group,Testament and group: 2 Samuel,"OT · History
+upper,book-group,Name the testament and group for 2 Samuel.,"OT · History
 David’s reign, sin, and God’s covenant.",10
 upper,book-order,Which book comes after 2 Samuel?,1 Kings,OT · History
-upper,book-group,Testament and group: 1 Kings,"OT · History
+upper,book-group,Name the testament and group for 1 Kings.,"OT · History
 Solomon, the temple, and a divided kingdom.",11
 upper,book-order,Which book comes after 1 Kings?,2 Kings,OT · History
-upper,book-group,Testament and group: 2 Kings,"OT · History
+upper,book-group,Name the testament and group for 2 Kings.,"OT · History
 Kings, prophets, and exile.",12
 upper,book-order,Which book comes after 2 Kings?,1 Chronicles,OT · History
-upper,book-group,Testament and group: 1 Chronicles,"OT · History
+upper,book-group,Name the testament and group for 1 Chronicles.,"OT · History
 David’s line and temple worship remembered.",13
 upper,book-order,Which book comes after 1 Chronicles?,2 Chronicles,OT · History
-upper,book-group,Testament and group: 2 Chronicles,"OT · History
+upper,book-group,Name the testament and group for 2 Chronicles.,"OT · History
 Judah’s kings and the call to seek the Lord.",14
 upper,book-order,Which book comes after 2 Chronicles?,Ezra,OT · History
-upper,book-group,Testament and group: Ezra,"OT · History
+upper,book-group,Name the testament and group for Ezra.,"OT · History
 The people return and rebuild the temple.",15
 upper,book-order,Which book comes after Ezra?,Nehemiah,OT · History
-upper,book-group,Testament and group: Nehemiah,"OT · History
+upper,book-group,Name the testament and group for Nehemiah.,"OT · History
 Walls rebuilt and the law read aloud.",16
 upper,book-order,Which book comes after Nehemiah?,Esther,OT · History
-upper,book-group,Testament and group: Esther,"OT · History
+upper,book-group,Name the testament and group for Esther.,"OT · History
 God preserves His people in a foreign court.",17
 upper,book-order,Which book comes after Esther?,Job,OT · Poetry
-upper,book-group,Testament and group: Job,"OT · Poetry
+upper,book-group,Name the testament and group for Job.,"OT · Poetry
 Suffering, friends’ speeches, and the fear of the Lord.",18
 upper,book-order,Which book comes after Job?,Psalms,OT · Poetry
-upper,book-group,Testament and group: Psalms,"OT · Poetry
+upper,book-group,Name the testament and group for Psalms.,"OT · Poetry
 Songs of prayer, praise, and trust.",19
 upper,book-order,Which book comes after Psalms?,Proverbs,OT · Poetry
-upper,book-group,Testament and group: Proverbs,"OT · Poetry
+upper,book-group,Name the testament and group for Proverbs.,"OT · Poetry
 Wisdom for everyday walking.",20
 upper,book-order,Which book comes after Proverbs?,Ecclesiastes,OT · Poetry
-upper,book-group,Testament and group: Ecclesiastes,"OT · Poetry
+upper,book-group,Name the testament and group for Ecclesiastes.,"OT · Poetry
 Life under the sun, and fearing God.",21
 upper,book-order,Which book comes after Ecclesiastes?,Song of Solomon,OT · Poetry
-upper,book-group,Testament and group: Song of Solomon,"OT · Poetry
+upper,book-group,Name the testament and group for Song of Solomon.,"OT · Poetry
 A poem of faithful love.",22
 upper,book-order,Which book comes after Song of Solomon?,Isaiah,OT · Major Prophets
-upper,book-group,Testament and group: Isaiah,"OT · Major Prophets
+upper,book-group,Name the testament and group for Isaiah.,"OT · Major Prophets
 Judgment, comfort, and the coming King.",23
 upper,book-order,Which book comes after Isaiah?,Jeremiah,OT · Major Prophets
-upper,book-group,Testament and group: Jeremiah,"OT · Major Prophets
+upper,book-group,Name the testament and group for Jeremiah.,"OT · Major Prophets
 Tears, a new covenant, and a call to turn.",24
 upper,book-order,Which book comes after Jeremiah?,Lamentations,OT · Major Prophets
-upper,book-group,Testament and group: Lamentations,"OT · Major Prophets
+upper,book-group,Name the testament and group for Lamentations.,"OT · Major Prophets
 Grief over a fallen city.",25
 upper,book-order,Which book comes after Lamentations?,Ezekiel,OT · Major Prophets
-upper,book-group,Testament and group: Ezekiel,"OT · Major Prophets
+upper,book-group,Name the testament and group for Ezekiel.,"OT · Major Prophets
 Visions of glory, dry bones, and a new heart.",26
 upper,book-order,Which book comes after Ezekiel?,Daniel,OT · Major Prophets
-upper,book-group,Testament and group: Daniel,"OT · Major Prophets
+upper,book-group,Name the testament and group for Daniel.,"OT · Major Prophets
 Faith in exile and kingdoms under God.",27
 upper,book-order,Which book comes after Daniel?,Hosea,OT · Minor Prophets
-upper,book-group,Testament and group: Hosea,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Hosea.,"OT · Minor Prophets
 A faithful husband and a wandering people.",28
 upper,book-order,Which book comes after Hosea?,Joel,OT · Minor Prophets
-upper,book-group,Testament and group: Joel,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Joel.,"OT · Minor Prophets
 Locusts, the day of the Lord, and the Spirit poured out.",29
 upper,book-order,Which book comes after Joel?,Amos,OT · Minor Prophets
-upper,book-group,Testament and group: Amos,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Amos.,"OT · Minor Prophets
 Justice rolling down like waters.",30
 upper,book-order,Which book comes after Amos?,Obadiah,OT · Minor Prophets
-upper,book-group,Testament and group: Obadiah,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Obadiah.,"OT · Minor Prophets
 Edom’s pride brought low.",31
 upper,book-order,Which book comes after Obadiah?,Jonah,OT · Minor Prophets
-upper,book-group,Testament and group: Jonah,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Jonah.,"OT · Minor Prophets
 A reluctant prophet and a merciful God.",32
 upper,book-order,Which book comes after Jonah?,Micah,OT · Minor Prophets
-upper,book-group,Testament and group: Micah,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Micah.,"OT · Minor Prophets
 Do justly, love mercy, walk humbly.",33
 upper,book-order,Which book comes after Micah?,Nahum,OT · Minor Prophets
-upper,book-group,Testament and group: Nahum,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Nahum.,"OT · Minor Prophets
 Nineveh’s fall.",34
 upper,book-order,Which book comes after Nahum?,Habakkuk,OT · Minor Prophets
-upper,book-group,Testament and group: Habakkuk,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Habakkuk.,"OT · Minor Prophets
 The just shall live by faith.",35
 upper,book-order,Which book comes after Habakkuk?,Zephaniah,OT · Minor Prophets
-upper,book-group,Testament and group: Zephaniah,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Zephaniah.,"OT · Minor Prophets
 The day of the Lord and a singing God.",36
 upper,book-order,Which book comes after Zephaniah?,Haggai,OT · Minor Prophets
-upper,book-group,Testament and group: Haggai,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Haggai.,"OT · Minor Prophets
 Rebuild the house of the Lord.",37
 upper,book-order,Which book comes after Haggai?,Zechariah,OT · Minor Prophets
-upper,book-group,Testament and group: Zechariah,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Zechariah.,"OT · Minor Prophets
 Visions of a coming King, humble and riding.",38
 upper,book-order,Which book comes after Zechariah?,Malachi,OT · Minor Prophets
-upper,book-group,Testament and group: Malachi,"OT · Minor Prophets
+upper,book-group,Name the testament and group for Malachi.,"OT · Minor Prophets
 A messenger, a warning, and a promise of the sun of righteousness.",39
 upper,book-order,Which book comes after Malachi?,Matthew,NT · Gospels
-upper,book-group,Testament and group: Matthew,"NT · Gospels
+upper,book-group,Name the testament and group for Matthew.,"NT · Gospels
 Jesus the King and Son of David.",40
 upper,book-order,Which book comes after Matthew?,Mark,NT · Gospels
-upper,book-group,Testament and group: Mark,"NT · Gospels
+upper,book-group,Name the testament and group for Mark.,"NT · Gospels
 Jesus the Servant who acts with power.",41
 upper,book-order,Which book comes after Mark?,Luke,NT · Gospels
-upper,book-group,Testament and group: Luke,"NT · Gospels
+upper,book-group,Name the testament and group for Luke.,"NT · Gospels
 Jesus the Savior for all kinds of people.",42
 upper,book-order,Which book comes after Luke?,John,NT · Gospels
-upper,book-group,Testament and group: John,"NT · Gospels
+upper,book-group,Name the testament and group for John.,"NT · Gospels
 Jesus the Son who reveals the Father.",43
 upper,book-order,Which book comes after John?,Acts,NT · History
-upper,book-group,Testament and group: Acts,"NT · History
+upper,book-group,Name the testament and group for Acts.,"NT · History
 The Spirit and the spreading church.",44
 upper,book-order,Which book comes after Acts?,Romans,NT · Paul's Letters
-upper,book-group,Testament and group: Romans,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Romans.,"NT · Paul's Letters
 The gospel of God’s righteousness.",45
 upper,book-order,Which book comes after Romans?,1 Corinthians,NT · Paul's Letters
-upper,book-group,Testament and group: 1 Corinthians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for 1 Corinthians.,"NT · Paul's Letters
 A church called back to love and order.",46
 upper,book-order,Which book comes after 1 Corinthians?,2 Corinthians,NT · Paul's Letters
-upper,book-group,Testament and group: 2 Corinthians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for 2 Corinthians.,"NT · Paul's Letters
 Weakness, comfort, and true ministry.",47
 upper,book-order,Which book comes after 2 Corinthians?,Galatians,NT · Paul's Letters
-upper,book-group,Testament and group: Galatians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Galatians.,"NT · Paul's Letters
 Freedom in Christ, not by the law’s works.",48
 upper,book-order,Which book comes after Galatians?,Ephesians,NT · Paul's Letters
-upper,book-group,Testament and group: Ephesians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Ephesians.,"NT · Paul's Letters
 The church as Christ’s body.",49
 upper,book-order,Which book comes after Ephesians?,Philippians,NT · Paul's Letters
-upper,book-group,Testament and group: Philippians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Philippians.,"NT · Paul's Letters
 Joy in the Lord from a prison letter.",50
 upper,book-order,Which book comes after Philippians?,Colossians,NT · Paul's Letters
-upper,book-group,Testament and group: Colossians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Colossians.,"NT · Paul's Letters
 Christ above all.",51
 upper,book-order,Which book comes after Colossians?,1 Thessalonians,NT · Paul's Letters
-upper,book-group,Testament and group: 1 Thessalonians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for 1 Thessalonians.,"NT · Paul's Letters
 Hope and the coming of the Lord.",52
 upper,book-order,Which book comes after 1 Thessalonians?,2 Thessalonians,NT · Paul's Letters
-upper,book-group,Testament and group: 2 Thessalonians,"NT · Paul's Letters
+upper,book-group,Name the testament and group for 2 Thessalonians.,"NT · Paul's Letters
 Stand firm until He comes.",53
 upper,book-order,Which book comes after 2 Thessalonians?,1 Timothy,NT · Paul's Letters
-upper,book-group,Testament and group: 1 Timothy,"NT · Paul's Letters
+upper,book-group,Name the testament and group for 1 Timothy.,"NT · Paul's Letters
 Care for the household of God.",54
 upper,book-order,Which book comes after 1 Timothy?,2 Timothy,NT · Paul's Letters
-upper,book-group,Testament and group: 2 Timothy,"NT · Paul's Letters
+upper,book-group,Name the testament and group for 2 Timothy.,"NT · Paul's Letters
 Guard the good deposit.",55
 upper,book-order,Which book comes after 2 Timothy?,Titus,NT · Paul's Letters
-upper,book-group,Testament and group: Titus,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Titus.,"NT · Paul's Letters
 Sound teaching that leads to good works.",56
 upper,book-order,Which book comes after Titus?,Philemon,NT · Paul's Letters
-upper,book-group,Testament and group: Philemon,"NT · Paul's Letters
+upper,book-group,Name the testament and group for Philemon.,"NT · Paul's Letters
 A runaway welcomed as a brother.",57
 upper,book-order,Which book comes after Philemon?,Hebrews,NT · General Letters
-upper,book-group,Testament and group: Hebrews,"NT · General Letters
+upper,book-group,Name the testament and group for Hebrews.,"NT · General Letters
 Jesus, better than all that came before.",58
 upper,book-order,Which book comes after Hebrews?,James,NT · General Letters
-upper,book-group,Testament and group: James,"NT · General Letters
+upper,book-group,Name the testament and group for James.,"NT · General Letters
 Faith that works in real life.",59
 upper,book-order,Which book comes after James?,1 Peter,NT · General Letters
-upper,book-group,Testament and group: 1 Peter,"NT · General Letters
+upper,book-group,Name the testament and group for 1 Peter.,"NT · General Letters
 Hope while you sojourn.",60
 upper,book-order,Which book comes after 1 Peter?,2 Peter,NT · General Letters
-upper,book-group,Testament and group: 2 Peter,"NT · General Letters
+upper,book-group,Name the testament and group for 2 Peter.,"NT · General Letters
 True knowledge versus false teachers.",61
 upper,book-order,Which book comes after 2 Peter?,1 John,NT · General Letters
-upper,book-group,Testament and group: 1 John,"NT · General Letters
+upper,book-group,Name the testament and group for 1 John.,"NT · General Letters
 That you may know you have life.",62
 upper,book-order,Which book comes after 1 John?,2 John,NT · General Letters
-upper,book-group,Testament and group: 2 John,"NT · General Letters
+upper,book-group,Name the testament and group for 2 John.,"NT · General Letters
 Walk in truth and love.",63
 upper,book-order,Which book comes after 2 John?,3 John,NT · General Letters
-upper,book-group,Testament and group: 3 John,"NT · General Letters
+upper,book-group,Name the testament and group for 3 John.,"NT · General Letters
 Welcome faithful workers.",64
 upper,book-order,Which book comes after 3 John?,Jude,NT · General Letters
-upper,book-group,Testament and group: Jude,"NT · General Letters
+upper,book-group,Name the testament and group for Jude.,"NT · General Letters
 Contend for the faith.",65
 upper,book-order,Which book comes after Jude?,Revelation,NT · Prophecy
-upper,book-group,Testament and group: Revelation,"NT · Prophecy
+upper,book-group,Name the testament and group for Revelation.,"NT · Prophecy
 The Lamb wins, and all things are made new.",66
-upper,quality,"Character quality: Love
-What does it look like?",Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
-upper,quality,"Character quality: Joy
-What does it look like?","Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
-upper,quality,"Character quality: Peace
-What does it look like?","Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
-upper,quality,"Character quality: Patience
-What does it look like?",Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-upper,quality,"Character quality: Kindness
-What does it look like?","Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-upper,quality,"Character quality: Goodness
-What does it look like?",Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
-upper,quality,"Character quality: Faith
-What does it look like?",Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
-upper,quality,"Character quality: Gentleness
-What does it look like?",Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
-upper,quality,"Character quality: Self-control
-What does it look like?","Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
-upper,quality,"Character quality: Courage
-What does it look like?",Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
-upper,quality,"Character quality: Honesty
-What does it look like?",Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
-upper,quality,"Character quality: Humility
-What does it look like?",Humility walks low before God and does not put others down.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
-upper,quality,"Character quality: Gratitude
-What does it look like?","Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
-upper,quality,"Character quality: Obedience
-What does it look like?","Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
-upper,quality,"Character quality: Mercy
-What does it look like?",Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
-upper,quality,"Character quality: Wisdom
-What does it look like?","Wisdom starts with trusting the Lord, then choosing the good path.",Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
-upper,quality,"Character quality: Diligence
-What does it look like?","Diligence works heartily, as to the Lord, not only when watched.","Colossians 3:23 — And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
-upper,quality,"Character quality: Forgiveness
-What does it look like?","Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
-upper,quality,"Character quality: Hope
-What does it look like?","Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
-upper,quality,"Character quality: Reverence
-What does it look like?","Reverence honors God as worthy of glory, honor, and power.","Revelation 4:11 — Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created."
+upper,quality,What does the character quality “Love” look like?,Love seeks the good of another. God loved us first.,1 John 4:8 — He that loveth not knoweth not God; for God is love.
+upper,quality,What does the character quality “Joy” look like?,"Joy is gladness in the Lord, not only when things go our way.","Philippians 4:4 — Rejoice in the Lord alway: and again I say, Rejoice."
+upper,quality,What does the character quality “Peace” look like?,"Peace is quiet trust, and peacemakers help others rest too.",Matthew 5:9 — Blessed are the peacemakers: for they shall be called the children of God.
+upper,quality,What does the character quality “Patience” look like?,Patience waits without snapping. Scripture also calls it longsuffering.,"Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+upper,quality,What does the character quality “Kindness” look like?,"Kindness is tender help. Be kind, tenderhearted, and ready to forgive.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+upper,quality,What does the character quality “Goodness” look like?,Goodness chooses what is right even when no one is watching.,"Romans 12:21 — Be not overcome of evil, but overcome evil with good."
+upper,quality,What does the character quality “Faith” look like?,Faith trusts the Lord with the whole heart and leans not on ourselves.,Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+upper,quality,What does the character quality “Gentleness” look like?,Gentleness is strength under control. A soft answer turns away wrath.,Proverbs 15:1 — A soft answer turneth away wrath: but grievous words stir up anger.
+upper,quality,What does the character quality “Self-control” look like?,"Self-control holds the tongue, the hands, and the wants.","Galatians 5:22-23 — But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law."
+upper,quality,What does the character quality “Courage” look like?,Courage is not loudness. It is obeying God when you feel small.,"Joshua 1:9 — Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest."
+upper,quality,What does the character quality “Honesty” look like?,Honesty tells the truth and keeps its word.,"James 1:22 — But be ye doers of the word, and not hearers only, deceiving your own selves."
+upper,quality,What does the character quality “Humility” look like?,Humility walks low before God and does not put others down.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+upper,quality,What does the character quality “Gratitude” look like?,"Gratitude says thank you to God, because His mercy lasts.",Psalms 136:1 — O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.
+upper,quality,What does the character quality “Obedience” look like?,"Obedience is doing what is asked, as unto the Lord.","Ephesians 6:1 — Children, obey your parents in the Lord: for this is right."
+upper,quality,What does the character quality “Mercy” look like?,Mercy does not give the hurt someone earned. It stoops to help.,"Micah 6:8 — He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?"
+upper,quality,What does the character quality “Wisdom” look like?,"Wisdom starts with trusting the Lord, then choosing the good path.",Proverbs 3:5 — Trust in the LORD with all thine heart; and lean not unto thine own understanding.
+upper,quality,What does the character quality “Diligence” look like?,"Diligence works heartily, as to the Lord, not only when watched.","Colossians 3:23 — And whatsoever ye do, do it heartily, as to the Lord, and not unto men;"
+upper,quality,What does the character quality “Forgiveness” look like?,"Forgiveness lets go of a debt, as God in Christ forgave us.","Ephesians 4:32 — And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you."
+upper,quality,What does the character quality “Hope” look like?,"Hope looks forward because God is faithful, even in hard days.","Romans 8:28 — And we know that all things work together for good to them that love God, to them who are the called according to his purpose."
+upper,quality,What does the character quality “Reverence” look like?,"Reverence honors God as worthy of glory, honor, and power.","Revelation 4:11 — Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created."
 upper,story-order,Bible story order: what comes after “God Makes the World”?,The Garden and the Fall,Genesis 3:1-24
 upper,story-order,Bible story order: what comes after “The Garden and the Fall”?,Noah and the Ark,Genesis 7:1
 upper,story-order,Bible story order: what comes after “Noah and the Ark”?,God Calls Abraham,Genesis 12:1-3
