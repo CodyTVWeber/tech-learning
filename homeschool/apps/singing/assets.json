@@ -1,8 +1,7 @@
 {
-  "subject": "singing",
+  "id": "singing",
   "title": "Songbird Forest",
   "files": [
-    "./",
     "index.html",
     "css/forest.css",
     "js/data.js",

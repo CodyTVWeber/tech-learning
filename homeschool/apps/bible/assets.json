@@ -1,8 +1,7 @@
 {
-  "subject": "bible",
+  "id": "bible",
   "title": "Shepherd’s Hillside",
   "files": [
-    "./",
     "index.html",
     "css/hillside.css",
     "js/data.js",

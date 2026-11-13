@@ -1,7 +1,9 @@
 {
   "apps": [
+    "bible",
     "math",
-    "reading"
+    "reading",
+    "singing"
   ],
   "ids": [
     "art",
