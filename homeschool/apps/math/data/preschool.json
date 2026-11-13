@@ -1,0 +1,28 @@
+{
+  "band": "preschool",
+  "title": "Make ten",
+  "technique": {
+    "title": "Count on",
+    "audioText": "Hold the bigger number in your head. Count on for each extra coin.",
+    "body": "Hold the bigger number in your head. Count on one for each extra coin. Stop when you have counted them all."
+  },
+  "islands": [
+    { "id": "count", "slot": "island-count", "label": "Coin cay" },
+    { "id": "add", "slot": "island-add", "label": "Add dock" }
+  ],
+  "items": [
+    { "id": "p1", "prompt": "How many coins?", "audioText": "How many coins?", "count": 6, "answer": "6", "choices": ["5", "6", "7"] },
+    { "id": "p2", "prompt": "How many coins?", "audioText": "How many coins?", "count": 8, "answer": "8", "choices": ["7", "8", "9"] },
+    { "id": "p3", "prompt": "How many coins?", "audioText": "How many coins?", "count": 10, "answer": "10", "choices": ["8", "9", "10"] },
+    { "id": "p4", "prompt": "3 coins and 2 more. How many?", "audioText": "3 coins and 2 more. How many?", "count": 5, "answer": "5", "choices": ["4", "5", "6"], "left": 3, "right": 2 },
+    { "id": "p5", "prompt": "4 coins and 3 more. How many?", "audioText": "4 coins and 3 more. How many?", "count": 7, "answer": "7", "choices": ["6", "7", "8"], "left": 4, "right": 3 },
+    { "id": "p6", "prompt": "6 coins and 4 more. How many?", "audioText": "6 coins and 4 more. How many?", "count": 10, "answer": "10", "choices": ["9", "10", "11"], "left": 6, "right": 4 },
+    { "id": "p7", "prompt": "5 coins and 5 more. How many?", "audioText": "5 coins and 5 more. How many?", "count": 10, "answer": "10", "choices": ["8", "10", "12"], "left": 5, "right": 5 },
+    { "id": "p8", "prompt": "7 coins and 2 more. How many?", "audioText": "7 coins and 2 more. How many?", "count": 9, "answer": "9", "choices": ["8", "9", "10"], "left": 7, "right": 2 }
+  ],
+  "paper": [
+    { "prompt": "7 + 3 =     (count on from 7)" },
+    { "prompt": "Draw a ten-frame. Fill 8. How many empty?" },
+    { "prompt": "4 + 6 =" }
+  ]
+}

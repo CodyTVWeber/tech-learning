@@ -1,0 +1,28 @@
+{
+  "band": "upper",
+  "title": "Shares, points, and long work",
+  "technique": {
+    "title": "Write the steps, then paper",
+    "audioText": "Name the place. Line up the decimal point. For long division, divide, multiply, subtract, bring down. Then do a fresh problem on paper.",
+    "body": "Fractions, decimals, and percents name the same share (1/2 = 0.5 = 50%). For long multiplication and division: keep places in columns. Divide → multiply → subtract → bring down. The app shows the path once. The real work is on paper."
+  },
+  "islands": [
+    { "id": "share", "slot": "island-share", "label": "Share cove" }
+  ],
+  "items": [
+    { "id": "u1", "prompt": "1/2 as a decimal is", "audioText": "One half as a decimal.", "answer": "0.5", "choices": ["0.2", "0.5", "2.0"] },
+    { "id": "u2", "prompt": "0.25 as a fraction is", "audioText": "0.25 as a fraction.", "answer": "1/4", "choices": ["1/25", "1/4", "25/1"] },
+    { "id": "u3", "prompt": "50% of 10 is", "audioText": "50 percent of 10.", "answer": "5", "choices": ["2", "5", "50"] },
+    { "id": "u4", "prompt": "3/10 as a decimal is", "audioText": "3 tenths as a decimal.", "answer": "0.3", "choices": ["0.03", "0.3", "3.10"] },
+    { "id": "u5", "prompt": "Line up 1.2 + 0.45. The sum is", "audioText": "1.2 plus 0.45.", "answer": "1.65", "choices": ["1.65", "0.57", "5.7"] },
+    { "id": "u6", "prompt": "Long divide 84 ÷ 4. First: how many 4s in 8?", "audioText": "84 divided by 4. How many 4s in 8?", "answer": "2", "choices": ["1", "2", "4"] },
+    { "id": "u7", "prompt": "After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =", "audioText": "Bring down 4. 4 divided by 4.", "answer": "1", "choices": ["0", "1", "4"] },
+    { "id": "u8", "prompt": "So 84 ÷ 4 =", "audioText": "So 84 divided by 4 equals.", "answer": "21", "choices": ["20", "21", "24"] }
+  ],
+  "paper": [
+    { "prompt": "4.6 + 0.75  (line up the points)" },
+    { "prompt": "3/4 of 12" },
+    { "prompt": "Long division: 145 ÷ 5  (show divide, multiply, subtract, bring down)" },
+    { "prompt": "Long multiply: 36 × 24" }
+  ]
+}

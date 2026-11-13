@@ -1,0 +1,21 @@
+{
+  "band": "preschool",
+  "title": "Garden sounds",
+  "mode": "sounds",
+  "intro": {
+    "audioText": "Listen for the sound. Tap the matching flower. Sounds first, not names.",
+    "body": "Same garden, more sounds. Still sounds first — never the ABC song as the first teaching."
+  },
+  "items": [
+    { "id": "q1", "phoneme": "sss", "audioText": "sss", "answer": "s", "choices": ["s", "m", "i"] },
+    { "id": "q2", "phoneme": "mmm", "audioText": "mmm", "answer": "m", "choices": ["a", "m", "t"] },
+    { "id": "q3", "phoneme": "t", "audioText": "t", "answer": "t", "choices": ["p", "t", "s"] },
+    { "id": "q4", "phoneme": "p", "audioText": "p", "answer": "p", "choices": ["p", "m", "i"] },
+    { "id": "q5", "phoneme": "aaa", "audioText": "a", "answer": "a", "choices": ["a", "i", "s"] },
+    { "id": "q6", "phoneme": "i", "audioText": "i", "answer": "i", "choices": ["a", "i", "t"] },
+    { "id": "q7", "phoneme": "sss", "audioText": "sss", "answer": "s", "choices": ["s", "p", "i"] },
+    { "id": "q8", "phoneme": "t", "audioText": "t", "answer": "t", "choices": ["m", "t", "a"] },
+    { "id": "q9", "phoneme": "i", "audioText": "i", "answer": "i", "choices": ["i", "p", "s"] },
+    { "id": "q10", "phoneme": "mmm", "audioText": "mmm", "answer": "m", "choices": ["t", "m", "p"] }
+  ]
+}

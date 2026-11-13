@@ -1,0 +1,33 @@
+{
+  "id": "math",
+  "title": "Treasure Voyage",
+  "shortTitle": "Math",
+  "theme": "pirate treasure voyage",
+  "version": "1",
+  "files": [
+    "index.html",
+    "style.css",
+    "app.js",
+    "sw.js",
+    "manifest.webmanifest",
+    "assets.json",
+    "images.json",
+    "data/toddler.json",
+    "data/preschool.json",
+    "data/early.json",
+    "data/primary.json",
+    "data/upper.json",
+    "images/hero-ship.png",
+    "images/island-count.png",
+    "images/island-add.png",
+    "images/island-place.png",
+    "images/island-facts.png",
+    "images/island-share.png",
+    "images/chest.png",
+    "images/coin.png",
+    "images/cabin.png",
+    "images/paper-desk.png",
+    "images/icon-192.png",
+    "images/icon-512.png"
+  ]
+}

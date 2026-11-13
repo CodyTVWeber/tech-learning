@@ -1,0 +1,97 @@
+/* Learner-home chrome: plain on purpose so apps can look different. */
+.hs-chrome {
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  color: #161616;
+  background: #f4f1ea;
+  border-bottom: 2px solid #161616;
+}
+
+.hs-chrome *,
+.hs-chrome *::before,
+.hs-chrome *::after {
+  box-sizing: border-box;
+}
+
+.hs-chrome-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 64px;
+  padding: 8px 12px;
+}
+
+.hs-chrome-title {
+  flex: 1;
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hs-chrome-sub {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #3d3d3d;
+}
+
+.hs-chrome a,
+.hs-chrome button {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 8px 12px;
+  border: 2px solid #161616;
+  background: #fff;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hs-chrome a[aria-disabled="true"] {
+  visibility: hidden;
+}
+
+.hs-banner {
+  margin: 0;
+  padding: 8px 12px;
+  background: #fff6d6;
+  border-bottom: 2px solid #161616;
+  font-size: 0.85rem;
+}
+
+.hs-update {
+  display: none;
+  padding: 8px 12px;
+  background: #161616;
+  color: #fff;
+}
+
+.hs-update.is-on {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hs-update button {
+  min-height: 56px;
+  border-color: #fff;
+  background: #fff;
+  color: #161616;
+}
+
+body.hs-home,
+body.hs-play {
+  margin: 0;
+  background: #f4f1ea;
+}
+
+body.hs-play #app-root {
+  min-height: calc(100dvh - 96px);
+}

@@ -1,0 +1,51 @@
+name: Homeschool CI
+
+on:
+  push:
+    paths:
+      - "homeschool/**"
+      - "tools/homeschool/**"
+      - "tools/anki/**"
+      - ".github/workflows/homeschool.yml"
+  pull_request:
+    paths:
+      - "homeschool/**"
+      - "tools/homeschool/**"
+      - "tools/anki/**"
+      - ".github/workflows/homeschool.yml"
+
+jobs:
+  decks-assets-offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install genanki
+        run: pip install -r tools/anki/requirements.txt
+      - name: Rebuild decks
+        run: python3 tools/anki/build_decks.py
+      - name: Generate learner PWAs and placeholders
+        run: python3 tools/homeschool/build_assets.py --check
+      - name: Fail if generated files are stale
+        run: |
+          git add -A
+          git diff --cached --exit-code || {
+            echo "Generated files are stale. Run tools/homeschool/build_assets.py and tools/anki/build_decks.py and commit."
+            git diff --cached --stat
+            exit 1
+          }
+      - name: Privacy scan
+        run: python3 tools/homeschool/check_privacy.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Install Playwright
+        working-directory: tools/homeschool
+        run: npm ci && npx playwright install --with-deps chromium
+      - name: Offline PWA smoke
+        working-directory: tools/homeschool
+        run: npx playwright test
+        env:
+          CI: "1"

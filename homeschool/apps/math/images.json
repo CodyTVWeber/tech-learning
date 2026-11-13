@@ -1,0 +1,86 @@
+{
+  "app": "math",
+  "theme": "pirate treasure voyage",
+  "images": [
+    {
+      "file": "hero-ship.png",
+      "width": 1024,
+      "height": 420,
+      "alt": "A wooden sailing ship on bright water with a brass compass. No skulls.",
+      "themeNotes": "Top of the voyage map. Friendly ship, daylight.",
+      "slot": "hero"
+    },
+    {
+      "file": "island-count.png",
+      "width": 320,
+      "height": 240,
+      "alt": "A small sandy island with three crates.",
+      "themeNotes": "Island marker for counting.",
+      "slot": "island-count"
+    },
+    {
+      "file": "island-add.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An island with two piers joining into one dock.",
+      "themeNotes": "Island marker for adding.",
+      "slot": "island-add"
+    },
+    {
+      "file": "island-place.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An island with ten stacked crates and a single crate beside them.",
+      "themeNotes": "Place value.",
+      "slot": "island-place"
+    },
+    {
+      "file": "island-facts.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An island with coin bags in tidy rows.",
+      "themeNotes": "Multiplication arrays.",
+      "slot": "island-facts"
+    },
+    {
+      "file": "island-share.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An island with a treasure chest split by a clean line.",
+      "themeNotes": "Fractions and decimals.",
+      "slot": "island-share"
+    },
+    {
+      "file": "chest.png",
+      "width": 400,
+      "height": 300,
+      "alt": "A closed wooden treasure chest with brass bands.",
+      "themeNotes": "Reward. Opens conceptually via CSS; file is the closed chest.",
+      "slot": "chest"
+    },
+    {
+      "file": "coin.png",
+      "width": 128,
+      "height": 128,
+      "alt": "A round brass coin with a simple ship stamp.",
+      "themeNotes": "Counting token. Repeat in a row; do not use emoji.",
+      "slot": "coin"
+    },
+    {
+      "file": "cabin.png",
+      "width": 800,
+      "height": 400,
+      "alt": "The inside of a ship cabin: table, lantern, paper log.",
+      "themeNotes": "Background for the problem stage.",
+      "slot": "cabin"
+    },
+    {
+      "file": "paper-desk.png",
+      "width": 800,
+      "height": 400,
+      "alt": "A ship desk with blank paper, pencil, and a brass ruler.",
+      "themeNotes": "Now-do-this-on-paper screen.",
+      "slot": "paper"
+    }
+  ]
+}

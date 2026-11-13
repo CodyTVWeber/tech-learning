@@ -1,0 +1,16 @@
+{
+  "decks": [
+    {
+      "id": "math",
+      "file": "math.apkg",
+      "csv": "math.csv",
+      "cards": 40
+    },
+    {
+      "id": "reading",
+      "file": "reading.apkg",
+      "csv": "reading.csv",
+      "cards": 24
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "band": "early",
+  "title": "Blends in the garden",
+  "mode": "blends",
+  "intro": {
+    "audioText": "Say each sound, then blend. sss aaa t. Sat.",
+    "body": "Tap each seed in order, then blend. Books unlock after a few blends."
+  },
+  "items": [
+    { "id": "b1", "sounds": ["s", "a", "t"], "blend": "sat", "audioText": "s, a, t. Blend: sat.", "choices": ["sat", "mat", "pat"] },
+    { "id": "b2", "sounds": ["m", "a", "t"], "blend": "mat", "audioText": "m, a, t. Blend: mat.", "choices": ["sat", "mat", "map"] },
+    { "id": "b3", "sounds": ["p", "a", "t"], "blend": "pat", "audioText": "p, a, t. Blend: pat.", "choices": ["pat", "pit", "tap"] },
+    { "id": "b4", "sounds": ["t", "a", "p"], "blend": "tap", "audioText": "t, a, p. Blend: tap.", "choices": ["tap", "pat", "pit"] },
+    { "id": "b5", "sounds": ["s", "i", "t"], "blend": "sit", "audioText": "s, i, t. Blend: sit.", "choices": ["sat", "sit", "pit"] },
+    { "id": "b6", "sounds": ["p", "i", "g"], "blend": "pig", "audioText": "p, i. Blend: pig. (You will hear pig.)", "choices": ["pig", "pit", "fig"] }
+  ],
+  "books": ["sam-sat", "the-fig"]
+}
