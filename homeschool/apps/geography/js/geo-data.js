@@ -132,18 +132,24 @@ window.HS_FLIGHTS = [
       { id: "denali", name: "Denali", hint: "Alaska, highest in North America" }
     ],
     fact: "Northwest names: Cascades, Mount Rainier, Mount St. Helens, and Denali." },
-  { id: "great-lakes", week: 15, title: "Five Great Lakes", type: "lakes", min: "preschool",
-    lakes: ["Huron", "Ontario", "Michigan", "Erie", "Superior"],
-    fact: "The five Great Lakes are Huron, Ontario, Michigan, Erie, and Superior. HOMES is a memory trick you may invent yourself — this app just names the lakes." },
-  { id: "bays", week: 16, title: "Five bays", type: "features", min: "primary",
+  { id: "great-lakes", week: 15, title: "Five Great Lakes", type: "lakes", min: "toddler",
+    lakes: [
+      { id: "superior", name: "Lake Superior" },
+      { id: "michigan", name: "Lake Michigan" },
+      { id: "huron", name: "Lake Huron" },
+      { id: "erie", name: "Lake Erie" },
+      { id: "ontario", name: "Lake Ontario" }
+    ],
+    fact: "The five Great Lakes are Superior, Michigan, Huron, Erie, and Ontario. This chart names them; it does not use a memory-work sentence." },
+  { id: "bays", week: 16, title: "Bays and the Hudson River", type: "features", min: "primary",
     features: [
       { id: "chesapeake", name: "Chesapeake Bay", hint: "Maryland / Virginia" },
-      { id: "hudson-bay-ny", name: "Hudson (New York harbor/estuary)", hint: "New York" },
+      { id: "hudson-river", name: "Hudson River", hint: "New York" },
       { id: "sf-bay", name: "San Francisco Bay", hint: "California" },
       { id: "puget", name: "Puget Sound", hint: "Washington" },
       { id: "pamlico", name: "Pamlico Sound", hint: "North Carolina" }
     ],
-    fact: "Five waters on this chart: Chesapeake Bay, the Hudson, San Francisco Bay, Puget Sound, and Pamlico Sound." },
+    fact: "Chesapeake Bay, the Hudson River in New York, San Francisco Bay, Puget Sound, and Pamlico Sound." },
   { id: "rivers-east", week: 17, title: "Eastern rivers", type: "rivers", min: "early",
     rivers: [
       { id: "st-lawrence", name: "St. Lawrence River" },
@@ -162,11 +168,25 @@ window.HS_FLIGHTS = [
       { id: "great-salt-lake", name: "Great Salt Lake" }
     ],
     fact: "West-side names: Colorado River, Red River, Rio Grande, Columbia River, and Great Salt Lake." },
-  { id: "trails", week: 19, title: "Seven historic trails", type: "quiz", min: "primary",
-    trails: ["Cumberland Road", "Santa Fe Trail", "Mormon Trail", "Gila Trail", "Old Spanish Trail", "California Trail", "Oregon Trail"],
+  { id: "trails", week: 19, title: "Seven historic trails", type: "trails", min: "primary",
+    trails: [
+      { id: "cumberland-road", name: "Cumberland Road" },
+      { id: "santa-fe", name: "Santa Fe Trail" },
+      { id: "mormon", name: "Mormon Trail" },
+      { id: "gila", name: "Gila Trail" },
+      { id: "old-spanish", name: "Old Spanish Trail" },
+      { id: "california-trail", name: "California Trail" },
+      { id: "oregon-trail", name: "Oregon Trail" }
+    ],
     fact: "Seven historic routes: Cumberland Road, Santa Fe, Mormon, Gila, Old Spanish, California, and Oregon Trails." },
-  { id: "canals", week: 20, title: "Five canals", type: "quiz", min: "primary",
-    canals: ["Erie Canal", "Pennsylvania Canal", "Chesapeake and Ohio Canal", "Ohio and Erie Canal", "Miami and Erie Canal"],
+  { id: "canals", week: 20, title: "Five canals", type: "canals", min: "primary",
+    canals: [
+      { id: "erie-canal", name: "Erie Canal" },
+      { id: "pennsylvania-canal", name: "Pennsylvania Canal" },
+      { id: "chesapeake-ohio", name: "Chesapeake and Ohio Canal" },
+      { id: "ohio-erie", name: "Ohio and Erie Canal" },
+      { id: "miami-erie", name: "Miami and Erie Canal" }
+    ],
     fact: "Five canal names: Erie; Pennsylvania; Chesapeake and Ohio; Ohio and Erie; Miami and Erie." },
   { id: "native-regions", week: 21, title: "Seven Native regions", type: "quiz", min: "primary",
     regions: ["Eastern Woodlands", "Plains", "Plateau", "Northwest Coast", "California", "Great Basin", "Southwest"],

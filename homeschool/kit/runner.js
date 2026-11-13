@@ -48,6 +48,22 @@
         "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
       return;
     }
+    const pathParts = global.location.pathname.split("/").filter(Boolean);
+    const playAt = pathParts.lastIndexOf("play.html");
+    const learnerFolder = playAt > 0 ? decodeURIComponent(pathParts[playAt - 1]) : "";
+    if (learnerFolder && HS.fetchJson) {
+      const stages = await HS.fetchJson(new URL("../stages.json", global.location.href));
+      const me = stages && (stages.stages || []).find(function (s) { return s.folder === learnerFolder; });
+      const level = me && me.subjects ? me.subjects[id] : null;
+      // Reading keeps its own empty-track page when the subject is none.
+      // History, geography, and the other omitted lessons stay on the kit page.
+      if (me && id !== "reading" && (!level || level === "none")) {
+        if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
+        root.innerHTML =
+          "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
+        return;
+      }
+    }
     const band = HS.getBand();
     HS.setBand(band);
     HS.subject = assets.id || id;

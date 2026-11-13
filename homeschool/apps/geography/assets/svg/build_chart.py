@@ -186,7 +186,7 @@ def main():
         ("gulf", 470, 500, "Gulf of Mexico"),
         ("death-valley", 140, 280, "Death Valley"),
         ("chesapeake", 808, 268, "Chesapeake Bay"),
-        ("hudson-bay-ny", 808, 160, "Hudson"),
+        ("hudson-river", 808, 160, "Hudson River"),
         ("sf-bay", 90, 250, "San Francisco Bay"),
         ("puget", 118, 60, "Puget Sound"),
         ("pamlico", 808, 360, "Pamlico Sound"),

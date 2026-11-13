@@ -128,6 +128,95 @@ test("missing assets.json does not break a home", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
+async function fitsViewport(page) {
+  const box = await page.evaluate(() => ({
+    sw: document.documentElement.scrollWidth,
+    cw: document.documentElement.clientWidth,
+  }));
+  expect(box.sw, "page wider than the 412px viewport").toBeLessThanOrEqual(box.cw + 1);
+}
+
+test("geography pin drop lands on its state seat", async ({ page }) => {
+  const errors = [];
+  onErrors(page, errors);
+  await page.goto(BASE + "Bella/play.html?app=geography&band=early", { waitUntil: "load" });
+  await expect(page.locator("#app-root")).toContainText("Expedition");
+  await page.getByRole("button", { name: /New England coast/ }).click();
+  await page.getByRole("button", { name: "Drop pins" }).click();
+  const seat = page.locator('.drop-seat[data-abbr="ME"]');
+  await expect(seat).toBeVisible();
+  const seatBox = await seat.boundingBox();
+  expect(seatBox.height).toBeGreaterThanOrEqual(56);
+  expect(seatBox.width).toBeGreaterThanOrEqual(56);
+  await seat.scrollIntoViewIfNeeded();
+  await page.locator('.pin[data-abbr="ME"]').dragTo(seat);
+  await expect(page.locator("#live")).toContainText(/home|Stamp/);
+  await fitsViewport(page);
+  expect(errors).toEqual([]);
+});
+
+test("history and geography fit a 412px screen and keep 56px controls", async ({ page }) => {
+  await page.goto(BASE + "Bella/play.html?app=history&band=early", { waitUntil: "load" });
+  await expect(page.locator(".station-stop .sign").first()).toBeVisible();
+  const sign = await page.locator(".station-stop .sign").first().boundingBox();
+  expect(sign.height).toBeGreaterThanOrEqual(56);
+  await fitsViewport(page);
+
+  await page.goto(BASE + "apps/history/?band=early", { waitUntil: "load" });
+  const historyBtn = await page.locator(".topbar .icon-btn").first().boundingBox();
+  expect(historyBtn.height).toBeGreaterThanOrEqual(56);
+  expect(historyBtn.width).toBeGreaterThanOrEqual(56);
+  await fitsViewport(page);
+
+  await page.goto(BASE + "apps/geography/?band=early", { waitUntil: "load" });
+  const geoBtn = await page.locator(".topbar .icon-btn").first().boundingBox();
+  expect(geoBtn.height).toBeGreaterThanOrEqual(56);
+  expect(geoBtn.width).toBeGreaterThanOrEqual(56);
+  await fitsViewport(page);
+
+  await page.goto(BASE + "Bella/play.html?app=geography&band=early", { waitUntil: "load" });
+  await fitsViewport(page);
+});
+
+test("toddler and preschool open on pictures, and omitted subjects stay closed", async ({ page }) => {
+  await page.goto(BASE + "Piper/play.html?app=history&band=preschool", { waitUntil: "load" });
+  await expect(page.locator(".picture-ticket").first()).toBeVisible();
+  await expect(page.locator(".lede")).toHaveCount(0);
+  await expect(page.locator(".station-stop")).toHaveCount(0);
+
+  await page.goto(BASE + "Piper/play.html?app=geography&band=preschool", { waitUntil: "load" });
+  await expect(page.locator(".place-card").first()).toBeVisible();
+  await expect(page.locator(".flight-btn")).toHaveCount(0);
+  await expect(page.locator(".lede")).toHaveCount(0);
+
+  await page.goto(BASE + "Bella/play.html?app=history&band=toddler", { waitUntil: "load" });
+  await expect(page.locator(".picture-ticket").nth(2)).toBeVisible();
+
+  await page.goto(BASE + "Bella/play.html?app=geography&band=toddler", { waitUntil: "load" });
+  await expect(page.locator(".place-card")).toHaveCount(6);
+
+  for (const kid of ["Hanna", "Shiloh"]) {
+    for (const app of ["history", "geography"]) {
+      await page.goto(BASE + kid + "/play.html?app=" + app + "&band=toddler", { waitUntil: "load" });
+      await expect(page.locator("#app-root")).toContainText("not on this device");
+      await expect(page.locator("#app")).toHaveCount(0);
+    }
+  }
+});
+
+test("upper geography drills all 50 capitals and history presidents use the full line", async ({ page }) => {
+  await page.goto(BASE + "Joey/play.html?app=geography&band=upper", { waitUntil: "load" });
+  await page.getByRole("button", { name: "All 50 capitals" }).click();
+  await expect(page.locator("h2")).toContainText("Capital 1 of 50");
+  await page.locator(".choice").first().click();
+
+  await page.goto(BASE + "Joey/play.html?app=history&band=upper", { waitUntil: "load" });
+  await page.getByRole("button", { name: "Presidents car" }).click();
+  await expect(page.locator("#main")).toContainText(/of 47/);
+  await expect(page.locator("#main")).toContainText(/president number|What number was/);
+  await expect(page.locator(".choice")).toHaveCount(3);
+});
+
 test("science speaks a prompt inside play.html for a young band", async ({ page }) => {
   await page.addInitScript(() => {
     window.__spoken = [];
