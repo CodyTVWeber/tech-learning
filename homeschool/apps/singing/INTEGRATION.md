@@ -10,7 +10,7 @@ Looks nothing like Shepherd’s Hillside (Bible): cool moss/teal, leaf-cut panel
 
 - Standalone HTML/CSS/JS. Relative paths. No CDN. No build.
 - Precache `assets.json` → `files`.
-- Pictures in `images.json`.
+- Pictures in `images.json`. The screen uses the photoreal JPGs in `img/` (`src` on each slot). `images/*.png` stay as kit placeholders.
 - Band: `?band=` else `localStorage['hs.band']` else picker.
   Bands: `baby`, `toddler`, `preschool`, `early`, `primary`, `upper`.
 - Progress: `HS.progressKey('singing')` (`hs.progress.<folder>.singing`).

@@ -362,9 +362,9 @@
     {
       "id": "s-after6",
       "island": "sense",
-      "kind": "choice",
-      "prompt": "What number comes after 6?",
-      "audioText": "What number comes after 6?",
+      "kind": "moreone",
+      "prompt": "Six coins. Tap one more.",
+      "audioText": "Six coins. Tap one more.",
       "answer": "7",
       "choices": [
         "7",
@@ -375,14 +375,16 @@
         "math",
         "preschool",
         "sense"
-      ]
+      ],
+      "count": 6,
+      "teach": "One more than 6 is 7."
     },
     {
       "id": "s-before10",
       "island": "sense",
-      "kind": "choice",
-      "prompt": "What number comes before 10?",
-      "audioText": "What number comes before 10?",
+      "kind": "lessone",
+      "prompt": "Ten coins. Tap one to take away.",
+      "audioText": "Ten coins. Tap one to take away.",
       "answer": "9",
       "choices": [
         "8",
@@ -393,14 +395,16 @@
         "math",
         "preschool",
         "sense"
-      ]
+      ],
+      "count": 10,
+      "teach": "One less than 10 is 9."
     },
     {
       "id": "s-big",
       "island": "sense",
-      "kind": "choice",
-      "prompt": "Which number is bigger, 4 or 9?",
-      "audioText": "Which number is bigger, 4 or 9?",
+      "kind": "piles",
+      "prompt": "Tap the pile with more coins.",
+      "audioText": "Tap the pile with more coins.",
       "answer": "9",
       "choices": [
         "9",
@@ -411,14 +415,18 @@
         "math",
         "preschool",
         "sense"
-      ]
+      ],
+      "left": 4,
+      "right": 9,
+      "ask": "more",
+      "teach": "9 is more than 4."
     },
     {
       "id": "s-small",
       "island": "sense",
-      "kind": "choice",
-      "prompt": "Which number is smaller, 8 or 3?",
-      "audioText": "Which number is smaller, 8 or 3?",
+      "kind": "piles",
+      "prompt": "Tap the pile with fewer coins.",
+      "audioText": "Tap the pile with fewer coins.",
       "answer": "3",
       "choices": [
         "3",
@@ -429,14 +437,18 @@
         "math",
         "preschool",
         "sense"
-      ]
+      ],
+      "left": 8,
+      "right": 3,
+      "ask": "fewer",
+      "teach": "3 is fewer than 8."
     },
     {
       "id": "s-sh-circle",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "A round porthole is a",
-      "audioText": "A round porthole is a circle, square, or triangle?",
+      "kind": "shapepick",
+      "prompt": "Tap the round porthole.",
+      "audioText": "Tap the round porthole.",
       "answer": "circle",
       "choices": [
         "circle",
@@ -448,15 +460,19 @@
         "preschool",
         "shape"
       ],
-      "shape": "circle",
+      "options": [
+        "circle",
+        "square",
+        "triangle"
+      ],
       "teach": "A circle is round, like a porthole. No corners."
     },
     {
       "id": "s-sh-square",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "Four equal sides make a",
-      "audioText": "Four equal sides make a",
+      "kind": "shapepick",
+      "prompt": "Tap the shape with four equal sides.",
+      "audioText": "Tap the shape with four equal sides.",
       "answer": "square",
       "choices": [
         "square",
@@ -468,15 +484,19 @@
         "preschool",
         "shape"
       ],
-      "shape": "square",
+      "options": [
+        "square",
+        "circle",
+        "triangle"
+      ],
       "teach": "A square has four equal sides and four square corners."
     },
     {
       "id": "s-sh-tri",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "Three sides make a",
-      "audioText": "Three sides make a",
+      "kind": "shapepick",
+      "prompt": "Tap the shape with three sides.",
+      "audioText": "Tap the shape with three sides.",
       "answer": "triangle",
       "choices": [
         "triangle",
@@ -488,7 +508,11 @@
         "preschool",
         "shape"
       ],
-      "shape": "triangle",
+      "options": [
+        "triangle",
+        "circle",
+        "square"
+      ],
       "teach": "A triangle has three sides and three corners."
     },
     {
@@ -541,9 +565,9 @@
     {
       "id": "s-sk-pairs",
       "island": "skip",
-      "kind": "choice",
-      "prompt": "Five pairs of coins. How many coins?",
-      "audioText": "Five pairs of coins. How many coins in all?",
+      "kind": "array",
+      "prompt": "Tap 5 pairs. Two rows of 5.",
+      "audioText": "Five pairs of coins. Tap the grid.",
       "answer": "10",
       "choices": [
         "10",
@@ -555,7 +579,9 @@
         "preschool",
         "skip"
       ],
-      "count": 10
+      "rows": 2,
+      "cols": 5,
+      "teach": "5 pairs is 2 rows of 5, which is 10."
     }
   ]
 }

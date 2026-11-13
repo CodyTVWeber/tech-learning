@@ -3,7 +3,8 @@
   "theme": "Songbird Forest — moss, bark, cardinal, dawn gold, fern path",
   "images": [
     {
-      "file": "img/singing-forest-hero.jpg",
+      "file": "forest-hero.png",
+      "src": "img/singing-forest-hero.jpg",
       "width": 1280,
       "height": 720,
       "alt": "Dawn light through a mossy forest canopy",
@@ -11,7 +12,8 @@
       "slot": "hero"
     },
     {
-      "file": "img/singing-wren.jpg",
+      "file": "wren.png",
+      "src": "img/singing-wren.jpg",
       "width": 1024,
       "height": 1024,
       "alt": "Wren singing on a mossy branch",
@@ -19,7 +21,8 @@
       "slot": "wren"
     },
     {
-      "file": "img/singing-choir.jpg",
+      "file": "choir.png",
+      "src": "img/singing-choir.jpg",
       "width": 1024,
       "height": 768,
       "alt": "Several wild songbirds perched together on a fallen log",
@@ -27,7 +30,8 @@
       "slot": "choir"
     },
     {
-      "file": "img/singing-nest.jpg",
+      "file": "nest.png",
+      "src": "img/singing-nest.jpg",
       "width": 1024,
       "height": 1024,
       "alt": "Bird nest with speckled eggs in ferns",
@@ -35,7 +39,8 @@
       "slot": "nest"
     },
     {
-      "file": "img/singing-cardinal.jpg",
+      "file": "cardinal.png",
+      "src": "img/singing-cardinal.jpg",
       "width": 1024,
       "height": 1024,
       "alt": "Northern cardinal singing on a wet pine branch",
@@ -43,7 +48,8 @@
       "slot": "cardinal"
     },
     {
-      "file": "img/singing-owl.jpg",
+      "file": "owl.png",
+      "src": "img/singing-owl.jpg",
       "width": 768,
       "height": 1024,
       "alt": "Barred owl on a mossy oak limb at blue hour",
@@ -51,7 +57,8 @@
       "slot": "owl"
     },
     {
-      "file": "img/singing-path.jpg",
+      "file": "path.png",
+      "src": "img/singing-path.jpg",
       "width": 1280,
       "height": 720,
       "alt": "Sunlit forest path with ferns and pine needles",

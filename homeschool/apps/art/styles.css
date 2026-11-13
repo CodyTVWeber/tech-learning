@@ -52,9 +52,28 @@ body {
   color: var(--harbor);
   border-bottom: 2px solid var(--copper);
 }
-html[data-runner] .untested-banner,
+html[data-runner] .untested-banner { display: none; }
 html[data-runner] header.top {
-  display: none;
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  top: auto;
+  left: auto;
+  width: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  z-index: 40;
+  gap: 0;
+}
+html[data-runner] header.top .brand,
+html[data-runner] header.top #home-btn-top,
+html[data-runner] header.top #band-chip,
+html[data-runner] header.top #star-count { display: none; }
+html[data-runner] #quiet-btn {
+  background: var(--verdigris-2);
+  color: var(--sail);
+  box-shadow: 0 4px 0 #1a282c;
 }
 .brand { flex: 1; min-width: 0; }
 .brand strong { display: block; font-size: 1.12rem; font-weight: 600; }
@@ -341,19 +360,42 @@ html[data-runner] header.top {
 .toast {
   position: fixed;
   left: 50%;
-  top: 12px;
-  bottom: auto;
+  top: auto;
+  bottom: 16px;
   transform: translateX(-50%);
   background: var(--harbor);
   color: var(--sail);
   padding: 12px 16px;
-  z-index: 9;
+  z-index: 8;
   font-family: var(--sans);
   max-width: min(90vw, 420px);
   pointer-events: none;
 }
 html:not([data-runner]) .toast {
-  top: 78px;
+  top: 140px;
+  bottom: auto;
+}
+.spark {
+  font-size: 2rem;
+  line-height: 1.15;
+  text-align: center;
+  margin: 14px 8px 8px;
+}
+.lesson-model {
+  margin: 0 0 12px;
+  background: #fff;
+  border: 1px solid var(--harbor);
+}
+.lesson-model img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.lesson-model figcaption {
+  padding: 8px 10px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
 }
 
 .stars { color: var(--copper-2); font-family: var(--sans); padding: 0 6px; }

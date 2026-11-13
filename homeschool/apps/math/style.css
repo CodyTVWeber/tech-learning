@@ -131,16 +131,43 @@ html[data-math-band="toddler"] .voyage button {
 }
 
 .voyage-crew {
-  width: 64px;
+  width: 72px;
   text-align: center;
   color: var(--sail);
   font-size: 0.7rem;
   font-family: "Trebuchet MS", sans-serif;
-  opacity: 0.45;
+  opacity: 1;
 }
 
-.voyage-crew.is-aboard {
+.voyage-crew .voyage-porthole {
+  filter: grayscale(0.35);
+  opacity: 0.85;
+}
+
+.voyage-crew.is-aboard .voyage-porthole {
+  filter: none;
   opacity: 1;
+  box-shadow: 0 0 0 3px var(--brass);
+}
+
+.voyage-crew span,
+.voyage-crew small {
+  display: block;
+}
+
+.voyage-crew-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.voyage-hail {
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  background: var(--brass);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .voyage-porthole,
@@ -223,8 +250,9 @@ html[data-math-band="toddler"] .voyage button {
 
 .voyage-island-btn {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
   width: 100%;
   text-align: left;
   background: var(--sail);
@@ -233,7 +261,10 @@ html[data-math-band="toddler"] .voyage button {
 }
 
 .voyage-island-btn.is-stowed {
-  background: #d7c07a;
+  background: var(--sail);
+  box-shadow:
+    inset 0 0 0 4px var(--brass),
+    4px 4px 0 var(--ink);
 }
 
 .voyage-island-btn.is-now {
@@ -253,20 +284,34 @@ html[data-math-band="toddler"] .voyage button {
 }
 
 .voyage-island-pic {
-  width: 88px;
-  height: 72px;
-  flex: 0 0 88px;
+  width: 100%;
+  height: 112px;
+  flex: 0 0 112px;
   position: relative;
   overflow: hidden;
   border: 3px solid var(--wood);
   background: #165566;
 }
 
+.voyage-isle.voyage-island-pic,
+.voyage-island-btn .voyage-island-pic {
+  width: 100%;
+  height: 112px;
+  flex: 0 0 112px;
+}
+
+.voyage-island-pic svg,
+.voyage-hero-art .voyage-isle svg {
+  display: block;
+  width: 100%;
+  height: 112px;
+}
+
 .voyage-isle {
   position: relative;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(#7ec8d4 0 42%, #0e4a57 42%);
+  height: 112px;
+  background: #165566;
 }
 
 .voyage-isle .isle-sea {
@@ -616,6 +661,23 @@ html[data-math-band="toddler"] .voyage button {
   background: #7dba6a;
 }
 
+.voyage-coin-btn.is-gone {
+  opacity: 0.35;
+  background: transparent;
+  position: relative;
+}
+
+.voyage-coin-btn.is-gone::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 46%;
+  height: 4px;
+  background: #8a2a2a;
+  transform: rotate(-18deg);
+}
+
 .voyage-choices,
 .voyage-tables,
 .voyage-pick-grid {
@@ -722,7 +784,8 @@ html[data-math-band="toddler"] .voyage button {
 .voyage-frac {
   display: grid;
   gap: 4px;
-  height: 48px;
+  height: auto;
+  min-height: 56px;
   margin: 12px 0;
   border: 3px solid var(--ink);
 }
@@ -730,8 +793,8 @@ html[data-math-band="toddler"] .voyage button {
 .voyage-frac span,
 .voyage-frac button {
   background: #ecd6b0;
-  min-height: 40px;
-  min-width: 0;
+  min-height: 56px;
+  min-width: 56px;
   padding: 0;
   border: 0;
   border-right: 2px solid var(--ink);
@@ -744,11 +807,12 @@ html[data-math-band="toddler"] .voyage button {
 
 .voyage-tenths {
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: repeat(10, minmax(28px, 1fr));
   gap: 2px;
-  height: 28px;
+  min-height: 56px;
   margin: 8px 0 12px;
   border: 2px solid var(--ink);
+  overflow-x: auto;
 }
 
 .voyage-tenths i {
@@ -867,18 +931,18 @@ html[data-math-band="toddler"] .voyage button {
 .voyage-array {
   display: grid;
   gap: 6px;
-  width: 100%;
+  width: max-content;
   max-width: 100%;
   margin: 12px 0;
-  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  grid-template-columns: repeat(var(--cols, 4), minmax(56px, 1fr));
+  overflow-x: auto;
 }
 
 .voyage-array .voyage-cell {
   aspect-ratio: 1;
-  min-width: 0;
-  min-height: 0;
-  max-width: 72px;
-  width: 100%;
+  min-width: 56px;
+  min-height: 56px;
+  width: 56px;
   padding: 4px;
   background: rgba(14, 74, 87, 0.1);
   border: 2px dashed var(--rope);
@@ -897,10 +961,11 @@ html[data-math-band="toddler"] .voyage-array .voyage-cell {
 
 .voyage-tenframe {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 56px);
+  grid-template-rows: repeat(2, 56px);
   gap: 6px;
-  max-width: 300px;
+  width: max-content;
+  max-width: 100%;
   border: 6px solid var(--wood);
   background: #f7f1dc;
   padding: 8px;
@@ -908,9 +973,10 @@ html[data-math-band="toddler"] .voyage-array .voyage-cell {
 }
 
 .voyage-tenframe button {
-  aspect-ratio: 1;
-  min-width: 0;
-  min-height: 48px;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
   padding: 4px;
   background: #ecd6b0;
 }
@@ -932,7 +998,8 @@ html[data-math-band="toddler"] .voyage-array .voyage-cell {
 }
 
 .voyage-dec span {
-  min-height: 40px;
+  min-height: 56px;
+  min-width: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -962,6 +1029,77 @@ html[data-math-band="toddler"] .voyage-array .voyage-cell {
 
 .voyage-pad button {
   font-size: 1.3rem;
+  min-height: 56px;
+}
+
+.voyage-deal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.voyage-deal button {
+  min-width: 56px;
+  min-height: 72px;
+  background: var(--sail);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 4px;
+}
+
+.voyage-deal button svg {
+  width: 28px;
+  height: 28px;
+}
+
+.voyage-ropes,
+.voyage-shapes,
+.voyage-sides {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.voyage-ropes button,
+.voyage-shapes button,
+.voyage-sides button {
+  min-height: 56px;
+  min-width: 72px;
+  background: var(--sail);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voyage-ropes i,
+.voyage-sides i {
+  display: block;
+  height: 18px;
+  background: #6b3a1f;
+  border: 2px solid var(--ink);
+}
+
+.voyage-sides button.is-on i,
+.voyage-shapes button.is-on {
+  outline: 4px solid var(--brass);
+}
+
+.voyage-shapes svg {
+  width: 80px;
+  height: 64px;
+}
+
+.voyage-tenframe button.is-lock {
+  opacity: 0.85;
+}
+
+.voyage-note {
+  margin: 16px;
 }
 
 .voyage-entry {

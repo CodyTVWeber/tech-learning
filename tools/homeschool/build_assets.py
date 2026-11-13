@@ -52,8 +52,8 @@ def slot_tint(app_name: str, filename: str) -> tuple[int, int, int]:
 
 
 def image_rel(img: dict) -> str:
-    name = str(img.get("file") or "")
-    if "/" in name:
+    name = str(img.get("file") or "").lstrip("./")
+    if name.startswith("images/") or name.startswith("img/"):
         return Path(name).as_posix()
     return "images/" + name
 
@@ -70,6 +70,8 @@ def gen_placeholders(app_dir: Path) -> None:
         man = json.loads(man_path.read_text())
         for img in man.get("images", []):
             dest = app_dir / image_rel(img)
+            # Original stills (svg, jpg, and any non-png) stay as authored.
+            # Flat swatches are only for missing png slots, and a real photo is never replaced.
             if dest.suffix.lower() != ".png":
                 continue
             if is_real_image(dest):
@@ -94,7 +96,8 @@ def runtime_image_rels(app_dir: Path) -> list[str]:
     if man_path.is_file():
         man = json.loads(man_path.read_text())
         for img in man.get("images") or []:
-            rels.append(image_rel(img))
+            src = str(img.get("src") or "").lstrip("./")
+            rels.append(src or image_rel(img))
     for js in app_dir.rglob("data.js"):
         text = js.read_text(encoding="utf-8", errors="replace")
         for match in IMAGE_REF.findall(text):

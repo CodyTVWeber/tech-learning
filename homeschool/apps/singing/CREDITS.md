@@ -21,7 +21,7 @@ Original learning songs written for this app: High Bird Low Bird, The Steady Nes
 No Classical Conversations songs. No copyrighted movie solfege lyrics.
 
 ## Pictures
-Photorealistic stills generated for this app (Cursor image generation, 2026-11-13). Wildlife / forest documentary look, no people, no text in frame.
+Photorealistic stills generated for this app (Cursor image generation, 2026-11-13). Wildlife / forest documentary look, no people, no text in frame. The app shows these JPGs. `images/*.png` are kit placeholder slots the asset builder may repaint; they are not the pictures on screen.
 
 | File | What it shows |
 |---|---|

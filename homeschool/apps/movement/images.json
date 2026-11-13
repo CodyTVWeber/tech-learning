@@ -65,6 +65,402 @@
       "alt": "Empty spotlighted circus ring of packed sawdust",
       "themeNotes": "Freeze band stage.",
       "slot": "ring"
+    },
+    {
+      "file": "poses/march.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Sawdust march: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-march",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/drum-major.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Drum major: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-drum-major",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/high-horse.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "High-step horse: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-high-horse",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/elephant-swing.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Elephant swing: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-elephant-swing",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/quiet-mouse.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Quiet mouse: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-quiet-mouse",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/lion-stretch.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Lion stretch: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-lion-stretch",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/seal-clap.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Seal clap: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-seal-clap",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/tightrope.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Tightrope: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-tightrope",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/juggle-toss.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Pretend juggle: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-juggle-toss",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/wagon-pull.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Wagon pull: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-wagon-pull",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/ribbon-twirl.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Ribbon twirl: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-ribbon-twirl",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/statue.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Parade statue: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-statue",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/bow.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Bow to the crowd: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-bow",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/melt.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Melt: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-melt",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/grow.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Grow like a tent: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-grow",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/spot-spin.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "One-spot spin: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-spot-spin",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/skip.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Skip the ring: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-skip",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/gallop.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Gallop: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-gallop",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/giant-tiny.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Giant and tiny: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-giant-tiny",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/reach-top.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Reach the tent top: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-reach-top",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/clap-stomp.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Clap stomp: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-clap-stomp",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/wiggle.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Wiggle wash: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-wiggle",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/kick-kicks.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Kick kicks: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-kick-kicks",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/open-close.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Open and close: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-open-close",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/look-parade.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Look left, look right: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-look-parade",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/bicycle.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Bicycle legs: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-bicycle",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/plie.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Pli\u00e9: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-plie",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/tendu.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Tendu: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-tendu",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/releve.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Relev\u00e9: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-releve",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/port-de-bras.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Port de bras: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-port-de-bras",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/passe.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Pass\u00e9: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-passe",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/toe-tap.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Toe tap: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-toe-tap",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/heel-drop.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Heel drop: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-heel-drop",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/stamp.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Stamp: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-stamp",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/shuffle.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Shuffle: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-shuffle",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/ball-change.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Ball change: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-ball-change",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/bounce.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Parade bounce: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-bounce",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/two-step.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Two-step: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-two-step",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/clap-cross.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Clap cross: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-clap-cross",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/point-pose.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Point pose: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-point-pose",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/box-step.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Box step: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-box-step",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/shoulder-rolls.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Shoulder rolls: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-shoulder-rolls",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/ankle-circles.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Ankle circles: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-ankle-circles",
+      "credit": "Original drawing, Circus Parade homeschool kit."
+    },
+    {
+      "file": "poses/count-in.svg",
+      "width": 240,
+      "height": 320,
+      "alt": "Eight-count in: original drawing of a costumed circus marcher in that pose",
+      "themeNotes": "Original drawing for Circus Parade. Modest costume, no clown makeup. Not a photo of a person.",
+      "slot": "pose-count-in",
+      "credit": "Original drawing, Circus Parade homeschool kit."
     }
   ]
 }

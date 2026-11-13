@@ -20,9 +20,17 @@
     voiceReady: typeof window !== "undefined" && "speechSynthesis" in window
   };
 
+  function soundOff() {
+    if (AudioEngine.quiet) return true;
+    try {
+      if (window.HS && typeof window.HS.muted === "function" && window.HS.muted()) return true;
+      if (localStorage.getItem("hs.mute") === "1") return true;
+    } catch (e) { /* storage blocked */ }
+    return false;
+  }
+
   function ensure() {
-    if (AudioEngine.quiet) return null;
-    if (window.HS && typeof HS.muted === "function" && HS.muted()) return null;
+    if (soundOff()) return null;
     const AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) return null;
     if (!AudioEngine.ctx) {
@@ -161,7 +169,7 @@
   };
 
   AudioEngine.speak = function (text) {
-    if (!text || AudioEngine.quiet || kitMuted()) return;
+    if (!text || soundOff()) return;
     if (window.HS && typeof HS.speak === "function") {
       HS.speak(text, { rate: 0.92, pitch: 1.05 });
       return;

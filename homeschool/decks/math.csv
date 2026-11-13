@@ -11,24 +11,24 @@ b-peek-2,"The latch pops. How many coins in this chest?
 ● ●",2,The latch pops. How many coins in this chest?,math baby peek
 b-rock-1,"Rock the hull. How many creaks to finish?
 ● ● ●",3,Rock the hull. How many creaks to finish?,math baby rock
-e-f-d4,4 + 4 =,8,4 + 4 =,math early facts
-e-f-d7,7 + 7 =,14,7 + 7 =,math early facts
-e-f-91,9 + 1 =,10,9 + 1 =,math early facts
-e-f-28,2 + 8 =,10,2 + 8 =,math early facts
-e-f-65,6 + 5 =,11,6 + 5 =,math early facts
-e-f-83,8 + 3 =,11,8 + 3 =,math early facts
-e-f-9m4,9 − 4 =,5,9 − 4 =,math early facts
-e-f-12m7,12 − 7 =,5,12 − 7 =,math early facts
-e-f-15m6,15 − 6 =,9,15 − 6 =,math early facts
+e-f-d4,Tap 2 rows of 4.,8,Tap 2 rows of 4.,math early facts
+e-f-d7,"Hold 7. Count on 7 more to make ten, then the rest.",14,"Hold 7. Count on 7 more to make ten, then the rest.",math early facts
+e-f-91,Hold 9. Add 1 to fill the ten.,10,Hold 9. Add 1 to fill the ten.,math early facts
+e-f-28,Hold 8. Add 2 to fill the ten.,10,Hold 8. Add 2 to fill the ten.,math early facts
+e-f-65,"Hold 6. Add 5. Fill the ten, then the extra.",11,"Hold 6. Add 5. Fill the ten, then the extra.",math early facts
+e-f-83,"Hold 8. Add 3. Fill the ten, then the extra.",11,"Hold 8. Add 3. Fill the ten, then the extra.",math early facts
+e-f-9m4,9 coins. Tap 4 to give away.,5,9 coins. Tap 4 to give away.,math early facts
+e-f-12m7,12 coins. Tap 7 to give away.,5,12 coins. Tap 7 to give away.,math early facts
+e-f-15m6,15 coins. Tap 6 to give away.,9,15 coins. Tap 6 to give away.,math early facts
 e-p-34,3 ten-crates and 4 ones. What number?,34,3 ten-crates and 4 ones. What number?,math early place
 e-p-50,5 ten-crates and 0 ones. What number?,50,5 ten-crates and 0 ones. What number?,math early place
 e-p-408,40 + 8 =,48,40 + 8 =,math early place
 e-p-27,Bundle extra ones: 2 tens and 17 ones. What number?,37,Two tens and seventeen ones. Bundle ten ones into a crate. What number?,math early place
-e-r-275,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,math early regroup
-e-r-467,46 + 7 =,53,46 + 7 =,math early regroup
-e-r-6010,60 − 10 =,50,60 − 10 =,math early regroup
-e-r-358,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,math early regroup
-e-r-29p6,29 + 6 =,35,29 + 6 =,math early regroup
+e-r-275,"27 + 5. Bring in 5 coins, then bundle a ten.",32,"27 + 5. Bring in 5 coins, then bundle a ten.",math early regroup
+e-r-467,"46 + 7. Bring in 7 coins, then bundle a ten.",53,"46 + 7. Bring in 7 coins, then bundle a ten.",math early regroup
+e-r-6010,"60 − 10. Unbundle a crate, then give away 10.",50,"60 − 10. Unbundle a crate, then give away 10.",math early regroup
+e-r-358,"35 − 8. Unbundle a crate, then give away 8.",27,"35 − 8. Unbundle a crate, then give away 8.",math early regroup
+e-r-29p6,"29 + 6. Bring in 6 coins, then bundle a ten.",35,"29 + 6. Bring in 6 coins, then bundle a ten.",math early regroup
 e-sk-2,"2, 4, 6, 8, 10. Next?",12,"2, 4, 6, 8, 10. Next?",math early skip
 e-sk-5,"5, 10, 15, 20. Next?",25,"5, 10, 15, 20. Next?",math early skip
 e-sk-10,"10, 20, 30, 40. Next?",50,"10, 20, 30, 40. Next?",math early skip
@@ -42,10 +42,10 @@ e-t-3,"Short hand on 3, long hand on 12. The hour is",3:00,"Short hand on 3, lon
 e-t-6,"Short hand on 6, long hand on 12. The hour is",6:00,"Short hand on 6, long hand on 12. The hour is",math early time
 e-t-9,The clock shows 9:00. The short hand points to,9,The clock shows 9:00. The short hand points to,math early time
 e-t-12,Both hands on 12. The hour is,12:00,Both hands on 12. The hour is,math early time
-e-me-long,A 5-inch rope and a 2-inch rope. Which is longer?,5-inch,A 5-inch rope and a 2-inch rope. Which is longer?,math early measure
-e-me-inch,12 inches make 1,foot,12 inches make 1,math early measure
-e-sh-rect,"Four sides, four square corners. Opposite sides match. This is a",rectangle,"Four sides, four square corners. Opposite sides match. This is a",math early shape
-e-sh-sides,A triangle has this many sides:,3,A triangle has this many sides:,math early shape
+e-me-long,Tap the longer rope.,5-inch,Tap the longer rope.,math early measure
+e-me-inch,12 inches make one of these. Tap it.,foot,12 inches make one of these. Tap it.,math early measure
+e-sh-rect,Tap the shape with four sides and four square corners.,rectangle,Tap the shape with four sides and four square corners.,math early shape
+e-sh-sides,Tap each side of the triangle.,3,Tap each side of the triangle.,math early shape
 e-st-18,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,15,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,math early story
 e-st-20,A chest has 12 coins. Nell spends 4. How many are left?,8,A chest has 12 coins. Nell spends 4. How many are left?,math early story
 e-st-equal,3 coils of 5 coins. How many coins in all?,15,3 coils of 5 coins. How many coins in all?,math early story
@@ -64,20 +64,21 @@ s-b64,Hold 6. Count on 4 more. How many?,10,Hold 6. Count on 4 more. How many?,m
 s-b55,Hold 5. Count on 5 more. How many?,10,Hold 5. Count on 5 more. How many?,math preschool bond
 s-b72,Hold 7. Count on 2 more. How many?,9,Hold 7. Count on 2 more. How many?,math preschool bond
 s-b19,Hold 1. Count on 9 more. How many?,10,Hold 1. Count on 9 more. How many?,math preschool bond
-s-after6,What number comes after 6?,7,What number comes after 6?,math preschool sense
-s-before10,What number comes before 10?,9,What number comes before 10?,math preschool sense
-s-big,"Which number is bigger, 4 or 9?",9,"Which number is bigger, 4 or 9?",math preschool sense
-s-small,"Which number is smaller, 8 or 3?",3,"Which number is smaller, 8 or 3?",math preschool sense
-s-sh-circle,A round porthole is a,circle,"A round porthole is a circle, square, or triangle?",math preschool shape
-s-sh-square,Four equal sides make a,square,Four equal sides make a,math preschool shape
-s-sh-tri,Three sides make a,triangle,Three sides make a,math preschool shape
+s-after6,"Six coins. Tap one more.
+● ● ● ● ● ●",7,Six coins. Tap one more.,math preschool sense
+s-before10,"Ten coins. Tap one to take away.
+● ● ● ● ● ● ● ● ● ●",9,Ten coins. Tap one to take away.,math preschool sense
+s-big,Tap the pile with more coins.,9,Tap the pile with more coins.,math preschool sense
+s-small,Tap the pile with fewer coins.,3,Tap the pile with fewer coins.,math preschool sense
+s-sh-circle,Tap the round porthole.,circle,Tap the round porthole.,math preschool shape
+s-sh-square,Tap the shape with four equal sides.,square,Tap the shape with four equal sides.,math preschool shape
+s-sh-tri,Tap the shape with three sides.,triangle,Tap the shape with three sides.,math preschool shape
 s-sk-2,"2, 4, 6, 8. What comes next?",10,"2, 4, 6, 8. What comes next?",math preschool skip
 s-sk-4,"Count by twos: 4, 6, 8. Next?",10,"Count by twos: 4, 6, 8. Next?",math preschool skip
-s-sk-pairs,"Five pairs of coins. How many coins?
-● ● ● ● ● ● ● ● ● ●",10,Five pairs of coins. How many coins in all?,math preschool skip
-m-f-86,"If 8 + 6 = 14, then 14 − 6 =",8,"If 8 + 6 = 14, then 14 − 6 =",math primary facts
-m-f-97,9 + 7 =,16,9 + 7 =,math primary facts
-m-f-13m5,13 − 5 =,8,13 − 5 =,math primary facts
+s-sk-pairs,Tap 5 pairs. Two rows of 5.,10,Five pairs of coins. Tap the grid.,math preschool skip
+m-f-86,14 coins. Tap 6 to give away.,8,14 coins. Tap 6 to give away.,math primary facts
+m-f-97,"Hold 9. Add 7. Fill the ten, then the extra.",16,"Hold 9. Add 7. Fill the ten, then the extra.",math primary facts
+m-f-13m5,13 coins. Tap 5 to give away.,8,13 coins. Tap 5 to give away.,math primary facts
 m-pl-235,"2 hundreds, 3 tens, 5 ones is",235,"2 hundreds, 3 tens, 5 ones is",math primary place
 m-pl-508,"5 hundreds, 0 tens, 8 ones is",508,"5 hundreds, 0 tens, 8 ones is",math primary place
 m-pl-10tens,10 tens make how many hundreds?,1,10 tens make how many hundreds?,math primary place
@@ -99,32 +100,32 @@ m-mo-dollar,1 dollar is how many cents?,100,1 dollar is how many cents?,math pri
 m-t-230,"Short hand past 2, long hand on 6. The time is",2:30,"Short hand past 2, long hand on 6. The time is",math primary time
 m-t-415,"Short hand a little past 4, long hand on 3. The time is",4:15,"Short hand a little past 4, long hand on 3. The time is",math primary time
 m-t-545,"Long hand on 9, short hand near 6. The time is",5:45,"Long hand on 9, short hand near 6. The time is",math primary time
-m-me-12in,12 inches = how many feet?,1,12 inches = how many feet?,math primary measure
-m-me-3ft,3 feet = how many yards?,1,3 feet = how many yards?,math primary measure
-m-me-cup,8 fluid ounces = how many cups?,1,8 fluid ounces = how many cups?,math primary measure
-m-me-pint,2 cups = how many pints?,1,2 cups = how many pints?,math primary measure
-m-sh-per,A rectangle 5 by 3. Perimeter?,16,A rectangle 5 by 3. Perimeter?,math primary shape
-m-sh-sq,A square with side 6. Perimeter?,24,A square with side 6. Perimeter?,math primary shape
+m-me-12in,12 inches = how many feet? Type it.,1,12 inches = how many feet? Type it.,math primary measure
+m-me-3ft,3 feet = how many yards? Type it.,1,3 feet = how many yards? Type it.,math primary measure
+m-me-cup,8 fluid ounces = how many cups? Type it.,1,8 fluid ounces = how many cups? Type it.,math primary measure
+m-me-pint,2 cups = how many pints? Type it.,1,2 cups = how many pints? Type it.,math primary measure
+m-sh-per,Tap each side of the 5 by 3 hatch.,16,Tap each side of the 5 by 3 hatch.,math primary shape
+m-sh-sq,Tap each side of the square with side 6.,24,Tap each side of the square with side 6.,math primary shape
 m-st-68,6 crews of 8 sailors. How many sailors?,48,6 crews of 8 sailors. How many sailors?,math primary story
 m-st-369,"36 coins in 9 pouches, equal share. How many each?",4,"36 coins in 9 pouches, equal share. How many each?",math primary story
 m-st-fam,"If 7 × 8 = 56, then 56 ÷ 8 =",7,"If 7 × 8 = 56, then 56 ÷ 8 =",math primary story
 m-mul-0x9,0 × 9 =,0,0 times 9.,math primary times
 m-mul-1x7,1 × 7 =,7,1 times 7.,math primary times
-m-div-7d1,7 ÷ 1 =,7,7 divided by 1.,math primary share
+m-div-7d1,Deal 7 coins into 1 crews.,7,7 divided by 1.,math primary share
 m-mul-2x2,2 × 2 =,4,2 times 2.,math primary times
-m-div-4d2,4 ÷ 2 =,2,4 divided by 2.,math primary share
+m-div-4d2,Deal 4 coins into 2 crews.,2,4 divided by 2.,math primary share
 m-mul-2x5,2 × 5 =,10,2 times 5.,math primary times
-m-div-10d2,10 ÷ 2 =,5,10 divided by 2.,math primary share
+m-div-10d2,Deal 10 coins into 2 crews.,5,10 divided by 2.,math primary share
 m-mul-2x10,2 × 10 =,20,2 times 10.,math primary times
-m-div-20d2,20 ÷ 2 =,10,20 divided by 2.,math primary share
+m-div-20d2,Deal 20 coins into 2 crews.,10,20 divided by 2.,math primary share
 m-mul-3x3,3 × 3 =,9,3 times 3.,math primary times
-m-div-9d3,9 ÷ 3 =,3,9 divided by 3.,math primary share
+m-div-9d3,Deal 9 coins into 3 crews.,3,9 divided by 3.,math primary share
 m-mul-3x4,3 × 4 =,12,3 times 4.,math primary times
-m-div-12d3,12 ÷ 3 =,4,12 divided by 3.,math primary share
+m-div-12d3,Deal 12 coins into 3 crews.,4,12 divided by 3.,math primary share
 m-mul-3x7,3 × 7 =,21,3 times 7.,math primary times
 m-div-21d3,21 ÷ 3 =,7,21 divided by 3.,math primary share
 m-mul-4x4,4 × 4 =,16,4 times 4.,math primary times
-m-div-16d4,16 ÷ 4 =,4,16 divided by 4.,math primary share
+m-div-16d4,Deal 16 coins into 4 crews.,4,16 divided by 4.,math primary share
 m-mul-4x6,4 × 6 =,24,4 times 6.,math primary times
 m-div-24d4,24 ÷ 4 =,6,24 divided by 4.,math primary share
 m-mul-4x9,4 × 9 =,36,4 times 9.,math primary times
@@ -177,29 +178,34 @@ t-more-41,Which pile has more coins?,4,Left pile has four. Right pile has one. W
 t-more-25,Which pile has more coins this time?,5,Left pile has two. Right pile has five. Which pile has more?,math toddler sense
 t-few-31,Which pile has fewer coins?,1,Left pile has three. Right pile has one. Which pile has fewer?,math toddler sense
 t-same-22,"Do these piles match, or is one more?",same,Two coins and two coins. Do they match?,math toddler sense
-t-next-1,One more than 1 is,2,One more than 1.,math toddler next
-t-next-3,One more than 3 is,4,One more than 3.,math toddler next
-t-next-4,One more than 4 is,5,One more than 4.,math toddler next
-t-less-5,One less than 5 is,4,One less than 5.,math toddler next
-t-less-2,One less than 2 is,1,One less than 2.,math toddler next
+t-next-1,"Tap one more coin.
+●",2,One more than 1.,math toddler next
+t-next-3,"Tap one more coin.
+● ● ●",4,One more than 3.,math toddler next
+t-next-4,"Tap one more coin.
+● ● ● ●",5,One more than 4.,math toddler next
+t-less-5,"Tap one coin to take away.
+● ● ● ● ●",4,One less than 5.,math toddler next
+t-less-2,"Tap one coin to take away.
+● ●",1,One less than 2.,math toddler next
 t-match-1,"Count, then pick the matching number.
 ●",1,"Count, then pick the matching number.",math toddler match
 t-match-3,"These coins match which number?
 ● ● ●",3,These coins match which number?,math toddler match
 t-match-5,"Stamp the number that matches this pile.
 ● ● ● ● ●",5,Stamp the number that matches this pile.,math toddler match
-u-fr-halfdec,Shade 1 of 2 equal parts. 1/2 as a decimal is,0.5,Shade 1 of 2 equal parts. 1/2 as a decimal is,math upper frac
-u-fr-25,0.25 as a fraction is,1/4,0.25 as a fraction is,math upper frac
-u-fr-50p,50% of 10 is,5,50% of 10 is,math upper frac
-u-fr-3tenth,3/10 as a decimal is,0.3,3/10 as a decimal is,math upper frac
-u-fr-like,1/5 + 2/5 =,3/5,1/5 + 2/5 =,math upper frac
-u-fr-eq,1/2 is equivalent to,2/4,1/2 is equivalent to,math upper frac
-u-fr-of,3/4 of 12 is,9,3/4 of 12 is,math upper frac
-u-fr-mixed,1 1/2 as an improper fraction is,3/2,1 1/2 as an improper fraction is,math upper frac
+u-fr-halfdec,"Fill 5 of 10 tenths. That is one half, written 0.5.",0.5,"Fill 5 of 10 tenths. That is one half, written 0.5.",math upper frac
+u-fr-25,Shade 1 of 4 equal parts. That is 0.25.,1/4,Shade 1 of 4 equal parts. That is 0.25.,math upper frac
+u-fr-50p,Tap half of these 10 coins. 50% is half.,5,Tap half of these 10 coins. 50% is half.,math upper frac
+u-fr-3tenth,Fill 3 of 10 tenths. That decimal is 0.3.,0.3,Fill 3 of 10 tenths. That decimal is 0.3.,math upper frac
+u-fr-like,"Shade 1 fifth, then 2 more. Same-size parts.",3/5,"Shade 1 fifth, then 2 more. Same-size parts.",math upper frac
+u-fr-eq,Shade 2 of 4 equal parts. That matches 1/2.,2/4,Shade 2 of 4 equal parts. That matches 1/2.,math upper frac
+u-fr-of,Tap 3 of every 4 coins. 12 coins in all.,9,Tap 3 of every 4 coins. 12 coins in all.,math upper frac
+u-fr-mixed,"Fill 3 halves. One whole is 2/2, plus 1/2.",3/2,"Fill 3 halves. One whole is 2/2, plus 1/2.",math upper frac
 u-d-add,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",1.65,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",math upper dec
-u-d-tenth,7 tenths as a decimal is,0.7,7 tenths as a decimal is,math upper dec
-u-d-hund,0.40 equals how many tenths?,4,0.40 equals how many tenths?,math upper dec
-u-d-pct,0.5 = what percent?,50%,0.5 = what percent?,math upper dec
+u-d-tenth,Fill 7 of 10 tenths.,0.7,Fill 7 of 10 tenths.,math upper dec
+u-d-hund,0.40 is four tenths. Fill them.,4,0.40 is four tenths. Fill them.,math upper dec
+u-d-pct,0.5 is five tenths. Fill them. That is 50%.,50%,0.5 is five tenths. Fill them. That is 50%.,math upper dec
 u-m-add,$1.50 + $0.25 =,$1.75,$1.50 + $0.25 =,math upper money
 u-m-cents,$2.00 is how many cents?,200,$2.00 is how many cents?,math upper money
 u-m-chg,Pay $5.00 for a $3.25 coil. Change?,$1.75,Pay $5.00 for a $3.25 coil. Change?,math upper money
@@ -222,17 +228,17 @@ u-long-145,"Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",29,"L
 u-long-23x4,"Long multiply 23 × 4. Ones, then tens.",92,"Long multiply 23 × 4. Ones, then tens.",math upper long
 u-long-36x24,"Long multiply 36 × 24. Ones row, tens row, add.",864,"Long multiply 36 × 24. Ones row, tens row, add.",math upper long
 u-long-48x6,"Long multiply 48 × 6. Ones, then tens.",288,"Long multiply 48 × 6. Ones, then tens.",math upper long
-u-law-com,4 × 6 and 6 × 4. Same product?,yes,4 × 6 and 6 × 4. Same product?,math upper laws
+u-law-com,"Fill 4 rows of 6, and 6 rows of 4.",yes,"Fill 4 rows of 6, and 6 rows of 4.",math upper laws
 u-law-id,9 × 1 =,9,9 × 1 =,math upper laws
 u-law-zero,9 × 0 =,0,9 × 0 =,math upper laws
-u-law-dist,3 × (5 + 2) = 3×5 + 3×2. That value is,21,3 × (5 + 2) = 3×5 + 3×2. That value is,math upper laws
-u-law-assoc,(2 + 3) + 4 = 2 + (3 + 4). Both equal,9,(2 + 3) + 4 = 2 + (3 + 4). Both equal,math upper laws
+u-law-dist,"3 × (5 + 2). First type 5 + 2, then times 3.",21,"3 × (5 + 2). First type 5 + 2, then times 3.",math upper laws
+u-law-assoc,"(2 + 3) + 4. Add the pair, then the 4.",9,"(2 + 3) + 4. Add the pair, then the 4.",math upper laws
 u-sk-13,"13, 26, 39. Next?",52,"13, 26, 39. Next?",math upper skip
 u-sk-14,"14, 28, 42. Next?",56,"14, 28, 42. Next?",math upper skip
 u-sk-15,"15, 30, 45. Next?",60,"15, 30, 45. Next?",math upper skip
 u-sk-sq,"Squares: 1, 4, 9, 16. Next?",25,"Squares: 1, 4, 9, 16. Next?",math upper skip
 u-sk-cu,"Cubes: 1, 8, 27. Next?",64,"Cubes: 1, 8, 27. Next?",math upper skip
-u-st-area,A sail 8 by 5 feet. Area in square feet?,40,A sail 8 by 5 feet. Area in square feet?,math upper story
-u-st-two,3 coils at $2.00 each. Total?,$6.00,3 coils at $2.00 each. Total?,math upper story
-u-mix-paren,(9 + 3) × 2 =,24,(9 + 3) × 2 =,math upper mix
-u-mix-mdas,5 + 2 × 8 =,21,5 + 2 × 8 =,math upper mix
+u-st-area,"A sail 8 by 5 feet. Tap the grid, or the keys finish it.",40,"A sail 8 by 5 feet. Tap the grid, or the keys finish it.",math upper story
+u-st-two,3 coils at $2.00 each. Type the total.,$6.00,3 coils at $2.00 each. Type the total.,math upper story
+u-mix-paren,(9 + 3) × 2. Parentheses first.,24,(9 + 3) × 2. Parentheses first.,math upper mix
+u-mix-mdas,5 + 2 × 8. Multiply before you add.,21,5 + 2 × 8. Multiply before you add.,math upper mix

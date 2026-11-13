@@ -188,7 +188,7 @@ window.BIBLE = {
       "end": 7,
       "ref": "1 Samuel 16:7",
       "kjv": "But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the LORD seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",
-      "web": "But Yahweh said to Samuel, “Don’t look on his face, or on the height of his stature, because I have rejected him; for I don’t see as man sees. For man looks at the outward appearance, but Yahweh looks at the heart.",
+      "web": "But Yahweh said to Samuel, “Don’t look on his face, or on the height of his stature, because I have rejected him; for I don’t see as man sees. For man looks at the outward appearance, but Yahweh looks at the heart.”",
       "minBand": "primary",
       "bands": [
         "primary",
@@ -522,7 +522,7 @@ window.BIBLE = {
       "end": 11,
       "ref": "Jeremiah 29:11",
       "kjv": "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
-      "web": "For I know the thoughts that I think toward you,” says Yahweh, “thoughts of peace, and not of evil, to give you hope and a future.",
+      "web": "For I know the thoughts that I think toward you, says Yahweh, thoughts of peace, and not of evil, to give you hope and a future.",
       "minBand": "primary",
       "bands": [
         "primary",
@@ -634,7 +634,7 @@ window.BIBLE = {
       "end": 9,
       "ref": "Matthew 6:9",
       "kjv": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",
-      "web": "Pray like this: ‘Our Father in heaven, may your name be kept holy.",
+      "web": "Pray like this: Our Father in heaven, may your name be kept holy.",
       "minBand": "early",
       "bands": [
         "early",
@@ -653,7 +653,7 @@ window.BIBLE = {
       "end": 13,
       "ref": "Matthew 6:9-13",
       "kjv": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come. Thy will be done in earth, as it is in heaven. Give us this day our daily bread. And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.",
-      "web": "Pray like this: ‘Our Father in heaven, may your name be kept holy. Let your Kingdom come. Let your will be done, as in heaven, so on earth. Give us today our daily bread. Forgive us our debts, as we also forgive our debtors. Bring us not into temptation, but deliver us from the evil one. For yours is the Kingdom, the power, and the glory forever. Amen.",
+      "web": "Pray like this: ‘Our Father in heaven, may your name be kept holy. Let your Kingdom come. Let your will be done, as in heaven, so on earth. Give us today our daily bread. Forgive us our debts, as we also forgive our debtors. Bring us not into temptation, but deliver us from the evil one. For yours is the Kingdom, the power, and the glory forever. Amen.’",
       "minBand": "upper",
       "bands": [
         "upper"
@@ -707,7 +707,7 @@ window.BIBLE = {
       "end": 14,
       "ref": "Matthew 19:14",
       "kjv": "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",
-      "web": "But Jesus said, “Allow the little children, and don’t forbid them to come to me; for the Kingdom of Heaven belongs to ones like these.",
+      "web": "But Jesus said, “Allow the little children, and don’t forbid them to come to me; for the Kingdom of Heaven belongs to ones like these.”",
       "minBand": "toddler",
       "bands": [
         "toddler",
@@ -728,7 +728,7 @@ window.BIBLE = {
       "end": 37,
       "ref": "Matthew 22:37",
       "kjv": "Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.",
-      "web": "Jesus said to him, “‘You shall love the Lord your God with all your heart, with all your soul, and with all your mind.",
+      "web": "Jesus said to him, “‘You shall love the Lord your God with all your heart, with all your soul, and with all your mind.’”",
       "minBand": "early",
       "bands": [
         "early",
@@ -828,7 +828,7 @@ window.BIBLE = {
       "end": 12,
       "ref": "John 8:12",
       "kjv": "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",
-      "web": "Again, therefore, Jesus spoke to them, saying, “I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.",
+      "web": "Again, therefore, Jesus spoke to them, saying, “I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.”",
       "minBand": "early",
       "bands": [
         "early",
@@ -890,7 +890,7 @@ window.BIBLE = {
       "end": 6,
       "ref": "John 14:6",
       "kjv": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
-      "web": "Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father, except through me.",
+      "web": "Jesus said to him, I am the way, the truth, and the life. No one comes to the Father, except through me.",
       "minBand": "early",
       "bands": [
         "early",
@@ -1152,7 +1152,7 @@ window.BIBLE = {
       "end": 4,
       "ref": "Philippians 4:4",
       "kjv": "Rejoice in the Lord alway: and again I say, Rejoice.",
-      "web": "Rejoice in the Lord always! Again I will say, “Rejoice!",
+      "web": "Rejoice in the Lord always! Again I will say, “Rejoice!”",
       "minBand": "baby",
       "bands": [
         "baby",

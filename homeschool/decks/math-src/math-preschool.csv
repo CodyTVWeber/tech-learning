@@ -11,14 +11,13 @@ s-b64,Hold 6. Count on 4 more. How many?,10,Hold 6. Count on 4 more. How many?,m
 s-b55,Hold 5. Count on 5 more. How many?,10,Hold 5. Count on 5 more. How many?,math preschool bond
 s-b72,Hold 7. Count on 2 more. How many?,9,Hold 7. Count on 2 more. How many?,math preschool bond
 s-b19,Hold 1. Count on 9 more. How many?,10,Hold 1. Count on 9 more. How many?,math preschool bond
-s-after6,What number comes after 6?,7,What number comes after 6?,math preschool sense
-s-before10,What number comes before 10?,9,What number comes before 10?,math preschool sense
-s-big,"Which number is bigger, 4 or 9?",9,"Which number is bigger, 4 or 9?",math preschool sense
-s-small,"Which number is smaller, 8 or 3?",3,"Which number is smaller, 8 or 3?",math preschool sense
-s-sh-circle,A round porthole is a,circle,"A round porthole is a circle, square, or triangle?",math preschool shape
-s-sh-square,Four equal sides make a,square,Four equal sides make a,math preschool shape
-s-sh-tri,Three sides make a,triangle,Three sides make a,math preschool shape
+s-after6,Six coins. Tap one more.,7,Six coins. Tap one more.,math preschool sense
+s-before10,Ten coins. Tap one to take away.,9,Ten coins. Tap one to take away.,math preschool sense
+s-big,Tap the pile with more coins.,9,Tap the pile with more coins.,math preschool sense
+s-small,Tap the pile with fewer coins.,3,Tap the pile with fewer coins.,math preschool sense
+s-sh-circle,Tap the round porthole.,circle,Tap the round porthole.,math preschool shape
+s-sh-square,Tap the shape with four equal sides.,square,Tap the shape with four equal sides.,math preschool shape
+s-sh-tri,Tap the shape with three sides.,triangle,Tap the shape with three sides.,math preschool shape
 s-sk-2,"2, 4, 6, 8. What comes next?",10,"2, 4, 6, 8. What comes next?",math preschool skip
 s-sk-4,"Count by twos: 4, 6, 8. Next?",10,"Count by twos: 4, 6, 8. Next?",math preschool skip
-s-sk-pairs,"Five pairs of coins. How many coins?
-● ● ● ● ● ● ● ● ● ●",10,Five pairs of coins. How many coins in all?,math preschool skip
+s-sk-pairs,Tap 5 pairs. Two rows of 5.,10,Five pairs of coins. Tap the grid.,math preschool skip

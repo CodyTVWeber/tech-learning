@@ -5,7 +5,7 @@
   "theme": "artist's harbor studio",
   "subject": "art",
   "version": 1,
-  "cache": "hs-art-v2",
+  "cache": "hs-art-v3",
   "files": [
     "index.html",
     "styles.css",

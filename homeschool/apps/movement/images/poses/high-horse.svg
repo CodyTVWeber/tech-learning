@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="High-step horse">
+  <title>High-step horse</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing High-step horse. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="121.0" y1="162.5" x2="83.8" y2="241.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="121.0" y1="162.5" x2="164.4" y2="272.6" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="83.8" cy="247.6" rx="14" ry="8" fill="#2a1a10"/><rect x="71.8" y="239.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="164.4" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="152.4" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="124.1" y1="73.0" x2="86.9" y2="128.1" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="124.1" y1="73.0" x2="176.8" y2="86.8" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="86.9" cy="128.1" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="176.8" cy="86.8" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M98.1 77.0 L150.1 77.0 L143.0 170.5 L99.0 170.5 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="121.0" cy="89.0" r="3" fill="#e8d48a"/><circle cx="121.0" cy="103.0" r="3" fill="#e8d48a"/><circle cx="121.0" cy="117.0" r="3" fill="#e8d48a"/>
+  <path d="M114.1 75.0 L124.1 89.0 L134.1 75.0" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="124.1" y1="73.0" x2="124.1" y2="49.0" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="124.1" cy="49.0" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="119.1" cy="47.0" r="1.6" fill="#1a1a14"/><circle cx="129.1" cy="47.0" r="1.6" fill="#1a1a14"/><path d="M119.1 55.0 Q124.1 59.0 129.1 55.0" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="110.1" y="21.0" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="104.1" y="35.0" width="40" height="5" rx="1" fill="#171e2b"/><rect x="110.1" y="31.0" width="28" height="4" fill="#c4a35a"/>
+  
+</svg>

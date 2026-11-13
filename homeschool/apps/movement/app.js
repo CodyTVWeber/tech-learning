@@ -21,7 +21,8 @@
   const state = {
     band: null,
     view: "home",
-    quiet: window.HS && typeof HS.muted === "function" ? HS.muted() : localStorage.getItem(QUIET_KEY) === "1",
+    quiet: false,
+    manifest: { images: [] },
     progress: loadProgress(),
     run: null
   };
@@ -51,6 +52,7 @@
 
   function award(opts) {
     opts = opts || {};
+    if (opts.done && state.progress.done[opts.done]) return false;
     if (opts.stars) state.progress.stars += opts.stars;
     if (opts.ribbon && state.progress.ribbons.indexOf(opts.ribbon) === -1) {
       state.progress.ribbons.push(opts.ribbon);
@@ -58,12 +60,36 @@
     if (opts.stamp && state.progress.stamps.indexOf(opts.stamp) === -1) {
       state.progress.stamps.push(opts.stamp);
     }
-    if (opts.done) {
-      state.progress.done[opts.done] = (state.progress.done[opts.done] || 0) + 1;
-    }
+    if (opts.done) state.progress.done[opts.done] = 1;
     saveProgress();
     toast(opts.msg || "Ribbon earned.");
     HSAudio.blip("star");
+    return true;
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+  }
+
+  function readQuiet() {
+    try {
+      if (localStorage.getItem("hs.mute") === "1" || localStorage.getItem(QUIET_KEY) === "1") return true;
+      if (window.HS && typeof window.HS.muted === "function") return !!window.HS.muted();
+    } catch (e) { /* ignore */ }
+    return false;
+  }
+
+  function applyQuiet(on, fromKit) {
+    state.quiet = !!on;
+    try { localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0"); } catch (e) { /* ignore */ }
+    if (!fromKit) {
+      try {
+        if (window.HS && typeof window.HS.setMuted === "function") window.HS.setMuted(state.quiet);
+        else localStorage.setItem("hs.mute", state.quiet ? "1" : "0");
+      } catch (e) { /* ignore */ }
+    }
+    if (window.HSAudio) HSAudio.setQuiet(state.quiet);
+    paintChrome();
   }
 
   function toast(msg) {
@@ -115,111 +141,30 @@
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
-  const POSE = {
-    march: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [34, 72], ra: [90, 50], ll: [40, 148], rl: [84, 122] },
-    prance: { h: [62, 18], n: [62, 32], hip: [60, 84], la: [38, 64], ra: [96, 40], ll: [36, 130], rl: [88, 148] },
-    swing: { h: [58, 28], n: [56, 42], hip: [54, 92], la: [28, 120], ra: [86, 70], ll: [40, 148], rl: [78, 148] },
-    creep: { h: [48, 70], n: [50, 82], hip: [62, 108], la: [28, 118], ra: [78, 100], ll: [48, 148], rl: [90, 148] },
-    down: { h: [28, 70], n: [40, 78], hip: [78, 78], la: [22, 108], ra: [98, 108], ll: [58, 148], rl: [100, 148] },
-    situp: { h: [60, 40], n: [60, 54], hip: [62, 102], la: [32, 28], ra: [88, 28], ll: [44, 148], rl: [80, 148] },
-    armsout: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [16, 70], ra: [104, 70], ll: [46, 148], rl: [74, 148] },
-    toss: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [28, 18], ra: [92, 18], ll: [46, 148], rl: [74, 148] },
-    baton: { h: [58, 18], n: [58, 32], hip: [58, 86], la: [40, 70], ra: [86, 8], ll: [40, 148], rl: [80, 124] },
-    pull: { h: [72, 28], n: [68, 42], hip: [58, 90], la: [28, 70], ra: [36, 78], ll: [40, 148], rl: [78, 148] },
-    twirl: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [18, 40], ra: [104, 86], ll: [46, 148], rl: [78, 148] },
-    star: { h: [60, 22], n: [60, 36], hip: [60, 86], la: [14, 78], ra: [106, 78], ll: [28, 148], rl: [92, 148] },
-    bowp: { h: [60, 48], n: [60, 60], hip: [60, 88], la: [32, 90], ra: [88, 90], ll: [48, 148], rl: [72, 148] },
-    meltp: { h: [60, 96], n: [60, 108], hip: [62, 124], la: [30, 128], ra: [90, 128], ll: [44, 148], rl: [80, 148] },
-    growp: { h: [60, 16], n: [60, 30], hip: [60, 86], la: [48, 8], ra: [72, 8], ll: [50, 148], rl: [70, 148] },
-    spinp: { h: [64, 20], n: [62, 34], hip: [58, 86], la: [24, 54], ra: [100, 54], ll: [70, 148], rl: [48, 120] },
-    skipp: { h: [58, 16], n: [58, 30], hip: [56, 82], la: [32, 58], ra: [90, 44], ll: [34, 120], rl: [86, 148] },
-    giantp: { h: [50, 20], n: [50, 34], hip: [52, 86], la: [28, 70], ra: [84, 60], ll: [24, 148], rl: [96, 148] },
-    reachp: { h: [60, 12], n: [60, 26], hip: [60, 84], la: [44, 4], ra: [76, 4], ll: [50, 148], rl: [70, 148] },
-    clapp: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [48, 64], ra: [72, 64], ll: [46, 148], rl: [74, 148] },
-    shakep: { h: [60, 22], n: [60, 36], hip: [60, 88], la: [22, 50], ra: [98, 86], ll: [40, 148], rl: [80, 148] },
-    kickp: { h: [58, 22], n: [58, 36], hip: [58, 88], la: [34, 70], ra: [86, 64], ll: [48, 148], rl: [96, 110] },
-    widep: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [10, 70], ra: [110, 70], ll: [46, 148], rl: [74, 148] },
-    lookp: { h: [48, 22], n: [54, 36], hip: [60, 88], la: [32, 70], ra: [88, 70], ll: [46, 148], rl: [74, 148] },
-    bikep: { h: [36, 86], n: [48, 90], hip: [78, 96], la: [40, 118], ra: [70, 70], ll: [96, 148], rl: [110, 120] },
-    pliep: { h: [60, 20], n: [60, 34], hip: [60, 84], la: [28, 80], ra: [92, 80], ll: [32, 148], rl: [88, 148] },
-    tendup: { h: [56, 20], n: [56, 34], hip: [56, 86], la: [30, 74], ra: [86, 70], ll: [48, 148], rl: [100, 140] },
-    relevep: { h: [60, 14], n: [60, 28], hip: [60, 80], la: [28, 64], ra: [92, 64], ll: [50, 140], rl: [70, 140] },
-    portp: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [28, 24], ra: [92, 24], ll: [46, 148], rl: [74, 148] },
-    passep: { h: [60, 18], n: [60, 32], hip: [58, 86], la: [30, 70], ra: [90, 66], ll: [50, 148], rl: [72, 110] },
-    taptoe: { h: [58, 20], n: [58, 34], hip: [58, 86], la: [34, 70], ra: [86, 66], ll: [48, 148], rl: [90, 132] },
-    stampp: { h: [60, 20], n: [60, 34], hip: [60, 86], la: [36, 70], ra: [88, 70], ll: [44, 148], rl: [78, 148] },
-    bouncep: { h: [60, 26], n: [60, 40], hip: [60, 92], la: [32, 78], ra: [88, 78], ll: [44, 140], rl: [76, 140] },
-    pointp: { h: [58, 20], n: [58, 34], hip: [58, 86], la: [20, 54], ra: [108, 48], ll: [46, 148], rl: [80, 148] },
-    boxp: { h: [54, 20], n: [56, 34], hip: [60, 86], la: [28, 70], ra: [92, 64], ll: [36, 148], rl: [86, 148] },
-    rollp: { h: [60, 20], n: [60, 36], hip: [60, 88], la: [40, 28], ra: [92, 52], ll: [46, 148], rl: [74, 148] },
-    breathp: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [40, 88], ra: [80, 88], ll: [48, 148], rl: [72, 148] }
-  };
-  const POSE_FOR = {
-    march: "march",
-    "drum-major": "baton",
-    "high-horse": "prance",
-    "elephant-swing": "swing",
-    "quiet-mouse": "creep",
-    "lion-stretch": "down",
-    "seal-clap": "situp",
-    tightrope: "armsout",
-    "juggle-toss": "toss",
-    "wagon-pull": "pull",
-    "ribbon-twirl": "twirl",
-    statue: "star",
-    bow: "bowp",
-    melt: "meltp",
-    grow: "growp",
-    "spot-spin": "spinp",
-    skip: "skipp",
-    gallop: "skipp",
-    "giant-tiny": "giantp",
-    "reach-top": "reachp",
-    "clap-stomp": "clapp",
-    wiggle: "shakep",
-    "kick-kicks": "kickp",
-    "open-close": "widep",
-    "look-parade": "lookp",
-    bicycle: "bikep",
-    plie: "pliep",
-    tendu: "tendup",
-    releve: "relevep",
-    "port-de-bras": "portp",
-    passe: "passep",
-    "toe-tap": "taptoe",
-    "heel-drop": "taptoe",
-    stamp: "stampp",
-    shuffle: "taptoe",
-    "ball-change": "skipp",
-    bounce: "bouncep",
-    "two-step": "boxp",
-    "clap-cross": "clapp",
-    "point-pose": "pointp",
-    "box-step": "boxp",
-    "shoulder-rolls": "rollp",
-    "ankle-circles": "tendup",
-    "count-in": "breathp"
-  };
+  function poseItem(id) {
+    const images = (state.manifest && state.manifest.images) || [];
+    for (let i = 0; i < images.length; i++) {
+      if (images[i].slot === "pose-" + id) return images[i];
+    }
+    return null;
+  }
 
   function poseBlock(mv) {
-    const p = POSE[POSE_FOR[mv && mv.id] || "march"] || POSE.march;
-    function L(a, b) {
-      return "M" + a[0] + " " + a[1] + "L" + b[0] + " " + b[1];
-    }
+    const id = (mv && mv.id) || "march";
+    const item = poseItem(id) || poseItem("march");
+    const file = item ? item.file : "poses/march.svg";
+    const alt = item ? item.alt : ((mv && mv.name) || "Parade pose");
     return (
-      '<div class="pose-wrap" aria-hidden="true">' +
-        '<svg class="pose-fig" viewBox="0 0 120 160">' +
-          '<circle cx="' + p.h[0] + '" cy="' + p.h[1] + '" r="13"/>' +
-          '<path d="' + [L(p.n, p.hip), L(p.n, p.la), L(p.n, p.ra), L(p.hip, p.ll), L(p.hip, p.rl)].join("") + '"/>' +
-        "</svg>" +
-      "</div>"
+      '<figure class="pose-wrap"><img class="pose-still" src="' + u("images/" + file) + '" alt="' + esc(alt) + '"></figure>'
     );
   }
 
   function stopRun() {
     HSAudio.stopBand();
-    if (state.run && state.run.interval) clearInterval(state.run.interval);
-    if (state.run && state.run.timeout) clearTimeout(state.run.timeout);
+    if (!state.run) return;
+    if (state.run.interval) clearInterval(state.run.interval);
+    if (state.run.holdTick) clearInterval(state.run.holdTick);
+    if (state.run.timeout) clearTimeout(state.run.timeout);
     state.run = null;
   }
 
@@ -320,7 +265,9 @@
         '<div class="progress-peek"><span class="stars">★ ' + state.progress.stars + "</span><span>Ribbons " + state.progress.ribbons.length + "</span></div>" +
       "</article>" +
       '<div class="grid">' + cards + "</div>" +
-      '<p class="note" style="color:var(--cream);border-color:var(--brass)">Change band: tap the ticket in the header.</p>';
+      (document.documentElement.dataset.runner
+        ? ""
+        : '<p class="note" style="color:var(--cream);border-color:var(--brass)">Change band: tap the ticket in the header.</p>');
     document.getElementById("view").querySelectorAll("[data-go]").forEach(function (btn) {
       btn.addEventListener("click", function () { go(btn.getAttribute("data-go")); });
     });
@@ -409,105 +356,183 @@
     const pool = sequenceIds().filter(function (id) {
       return ["statue", "bow"].indexOf(id) === -1;
     });
-    state.run = { round: 0, score: 0, total: state.band === "preschool" ? 6 : 8 };
+    state.run = { round: 0, score: 0, total: state.band === "preschool" ? 6 : 8, timeout: null, holdTick: null };
     const root = document.getElementById("view");
     root.innerHTML =
       '<article class="panel"><p class="kicker">Listen first</p><h1>Ringmaster Says</h1>' +
-      '<p class="lede">Move only when you hear “Ringmaster says”. Otherwise hold still.</p></article>' +
-      '<div class="move-stage" id="stage">' + poseBlock({ id: "statue", name: "Ready" }) + "<h2>Tap start</h2></div>" +
+      '<p class="lede">Tap the picture only when you hear “Ringmaster says”. A bare name is a trap — wait it out.</p></article>' +
+      '<div class="move-stage" id="stage">' + poseBlock({ id: "statue", name: "Ready" }) + "<h2>Listen</h2></div>" +
       '<div class="btn-row">' +
-        '<button type="button" class="btn btn-main" id="moved">I moved</button>' +
-        '<button type="button" class="btn" id="still">I stayed still</button>' +
+        '<button type="button" class="btn btn-main" id="did">I did the move</button>' +
         '<button type="button" class="btn btn-ghost" id="home-btn">Back</button>' +
       "</div>";
     let current = null;
+    function alive() {
+      return !!(state.run && state.view === "ringmaster" && typeof state.run.round === "number" && document.getElementById("stage"));
+    }
+    function clearCue() {
+      if (!state.run) return;
+      if (state.run.timeout) clearTimeout(state.run.timeout);
+      if (state.run.holdTick) clearInterval(state.run.holdTick);
+      state.run.timeout = null;
+      state.run.holdTick = null;
+    }
     function nextCue() {
+      if (!alive()) return;
+      clearCue();
+      const stage = document.getElementById("stage");
       if (state.run.round >= state.run.total) {
-        award({ stars: 1, ribbon: "gold", stamp: "star", done: "ringmaster", msg: "Gold ribbon!" });
-        document.getElementById("stage").innerHTML = poseBlock({ id: "bow", name: "Bow" }) + "<h2>The ring is yours</h2>";
+        const passed = state.run.score >= Math.ceil(state.run.total * 0.6);
+        stage.innerHTML = poseBlock({ id: "bow", name: "Bow" }) + "<h2>" + (passed ? "The ring is yours" : "Listen and try again") + "</h2>";
+        if (passed) award({ stars: 1, ribbon: "gold", stamp: "star", done: "ringmaster", msg: "Gold ribbon!" });
+        else toast("Move only when Ringmaster says.");
         current = null;
         return;
       }
       const mv = moveById(pool[Math.floor(Math.random() * pool.length)]);
-      const trap = state.band === "preschool" ? false : Math.random() < 0.35;
-      current = { mv: mv, trap: trap };
+      const trap = Math.random() < 0.35;
+      const waitMs = state.band === "preschool" ? 4500 : 3200;
+      current = { mv: mv, trap: trap, answered: false, left: Math.ceil(waitMs / 1000) };
       const line = trap ? mv.name : "Ringmaster says " + mv.name;
-      document.getElementById("stage").innerHTML =
+      stage.innerHTML =
         poseBlock(mv) +
-        '<p class="kicker">Cue ' + (state.run.round + 1) + "</p><h2>" + line + '</h2><p class="move-how">' + mv.how + "</p>";
+        '<p class="kicker">Cue ' + (state.run.round + 1) + "</p><h2>" + line + "</h2>" +
+        '<p class="move-how">' + mv.how + "</p>" +
+        '<p class="move-how" id="cue-clock">' + (trap ? "Trap — wait " : "Do it — ") + current.left + "</p>";
       speak(line);
+      state.run.holdTick = setInterval(function () {
+        if (!alive() || !current || current.answered) return;
+        current.left -= 1;
+        const clock = document.getElementById("cue-clock");
+        if (clock && current.left > 0) clock.textContent = (current.trap ? "Trap — wait " : "Do it — ") + current.left;
+      }, 1000);
+      state.run.timeout = setTimeout(function () {
+        if (!alive()) return;
+        state.run.timeout = null;
+        resolveCue(false);
+      }, waitMs);
     }
-    function answer(moved) {
-      if (!current) return nextCue();
+    function resolveCue(tapped) {
+      if (!alive() || !current || current.answered) return;
+      current.answered = true;
+      clearCue();
       const shouldMove = !current.trap;
-      const ok = moved === shouldMove;
+      const ok = tapped === shouldMove;
       state.run.round += 1;
       if (ok) {
         state.run.score += 1;
         HSAudio.blip("up");
-        toast(shouldMove ? "Good move." : "Good freeze.");
+        toast(shouldMove ? "You moved on the real cue." : "You waited out the trap.");
       } else {
         HSAudio.blip("down");
-        toast(shouldMove ? "That one needed a move." : "Ringmaster did not say.");
+        toast(shouldMove ? "That cue needed a move." : "Ringmaster did not say.");
       }
       current = null;
-      setTimeout(nextCue, 650);
+      state.run.timeout = setTimeout(function () {
+        if (!alive()) return;
+        state.run.timeout = null;
+        nextCue();
+      }, 700);
     }
-    document.getElementById("moved").addEventListener("click", function () { answer(true); });
-    document.getElementById("still").addEventListener("click", function () { answer(false); });
+    document.getElementById("did").addEventListener("click", function () { resolveCue(true); });
     document.getElementById("home-btn").addEventListener("click", function () { go("home"); });
     nextCue();
   }
 
   function renderFreeze() {
     const cfg = C.freeze[state.band] || C.freeze.preschool;
+    const holdFor = state.band === "toddler" ? 5 : state.band === "preschool" ? 4 : 3;
     const root = document.getElementById("view");
     root.innerHTML =
       '<figure class="hero"><img src="' + u("images/freeze-ring.jpg") + '" alt="Empty circus ring under a spotlight"><figcaption>Freeze band</figcaption></figure>' +
       '<article class="panel"><p class="kicker">Move with the drums</p><h1>Freeze Band</h1>' +
-      '<p class="lede">Dance while the calliope plays. When it stops, statue. Tap “I froze” each time.</p></article>' +
-      '<div class="move-stage" id="stage"><div class="beat-lamp" id="lamp"></div><h2>Band is still</h2></div>' +
+      '<p class="lede">Dance while the calliope plays. When it stops, hold the statue for the whole count. Tap only if you moved.</p></article>' +
+      '<div class="move-stage" id="stage">' + poseBlock({ id: "statue", name: "Statue" }) + '<div class="beat-lamp" id="lamp"></div><h2>Band is still</h2></div>' +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main" id="start">Start the band</button>' +
-        '<button type="button" class="btn btn-warn" id="froze" disabled>I froze</button>' +
+        '<button type="button" class="btn btn-warn" id="moved" disabled>I moved</button>' +
         '<button type="button" class="btn btn-ghost" id="home-btn">Back</button>' +
       "</div>";
     const stage = document.getElementById("stage");
     const lamp = document.getElementById("lamp");
-    const froze = document.getElementById("froze");
-    let freezes = 0;
+    const moved = document.getElementById("moved");
     let beatOn = false;
     const still = reducedMotion();
     state.run = {
+      holds: 0,
+      holding: false,
+      broke: false,
       interval: still ? null : setInterval(function () {
         beatOn = !beatOn;
         lamp.classList.toggle("on", beatOn && HSAudio.playing && !HSAudio.frozen);
-      }, 240)
+      }, 240),
+      holdTick: null,
+      timeout: null
     };
     if (still) lamp.classList.add("on");
+    function heading(text) {
+      const h = stage.querySelector("h2");
+      if (h) h.textContent = text;
+    }
+    function clearHold() {
+      if (state.run && state.run.holdTick) clearInterval(state.run.holdTick);
+      if (state.run) state.run.holdTick = null;
+    }
     function onWarn() {
       stage.classList.add("warn");
       stage.classList.remove("frozen");
-      const h = stage.querySelector("h2");
-      if (h) h.textContent = "Get ready…";
+      heading("Get ready…");
       speak("Get ready");
     }
     function onFreeze() {
+      if (!state.run) return;
+      clearHold();
+      state.run.holding = true;
+      state.run.broke = false;
       stage.classList.remove("warn");
       stage.classList.add("frozen");
-      stage.querySelector("h2").textContent = "FREEZE";
-      froze.disabled = false;
-      speak("Freeze!");
+      moved.disabled = false;
+      let left = holdFor;
+      heading("Hold " + left);
+      speak("Freeze");
+      state.run.holdTick = setInterval(function () {
+        if (!state.run || !state.run.holding || state.view !== "freeze") return;
+        left -= 1;
+        if (state.run.broke) {
+          state.run.holding = false;
+          clearHold();
+          moved.disabled = true;
+          heading("The statue broke");
+          toast("The statue broke");
+          return;
+        }
+        if (left <= 0) {
+          state.run.holding = false;
+          clearHold();
+          moved.disabled = true;
+          state.run.holds += 1;
+          heading("Held the statue");
+          toast("Held " + holdFor);
+          if (state.run.holds === 3) {
+            award({ stars: 1, ribbon: "gold", stamp: "drum", done: "freeze", msg: "Freeze ribbon!" });
+          }
+          return;
+        }
+        heading("Hold " + left);
+      }, 1000);
     }
     function onGo() {
       stage.classList.remove("frozen");
       stage.classList.remove("warn");
-      stage.querySelector("h2").textContent = "Parade";
-      froze.disabled = true;
-      speak("Go!");
+      if (state.run && state.run.holding) return;
+      moved.disabled = true;
+      heading("Parade");
+      speak("Go");
     }
     document.getElementById("start").addEventListener("click", function () {
       HSAudio.stopBand();
+      clearHold();
+      if (state.run) state.run.holding = false;
       HSAudio.startBand({
         bpm: cfg.bpm,
         barsMin: cfg.barsMin,
@@ -517,16 +542,13 @@
         onFreeze: onFreeze,
         onGo: onGo
       });
-      stage.querySelector("h2").textContent = "Parade";
+      heading("Parade");
       speak("March with the band.");
     });
-    froze.addEventListener("click", function () {
-      if (!HSAudio.frozen) return;
-      freezes += 1;
-      froze.disabled = true;
-      HSAudio.blip("stamp");
-      toast("Statue " + freezes);
-      if (freezes === 3) award({ stars: 1, ribbon: "gold", stamp: "drum", done: "freeze", msg: "Freeze ribbon!" });
+    moved.addEventListener("click", function () {
+      if (!state.run || !state.run.holding) return;
+      state.run.broke = true;
+      moved.disabled = true;
     });
     document.getElementById("home-btn").addEventListener("click", function () { go("home"); });
   }
@@ -534,14 +556,16 @@
   function renderCount() {
     const cfg = C.counts[state.band] || C.counts.preschool;
     const skipChoices = [].concat(cfg.skip);
-    state.run = { n: 0, target: cfg.targets[0], skip: skipChoices[0] };
+    state.run = { n: 0, target: cfg.targets[0], skip: skipChoices[0], room: false };
     const root = document.getElementById("view");
     root.innerHTML =
       '<article class="panel"><p class="kicker">Count the steps</p><h1>Step Counter</h1>' +
-      '<p class="lede">' + cfg.prompt + " Then do the same count across the room — the app only starts the count.</p></article>" +
+      '<p class="lede">' + cfg.prompt + " The taps only count. The win is doing that many across the room.</p></article>" +
       '<div class="move-stage"><p class="kicker" id="goal"></p><div class="counter" id="num">0</div><div class="beat-lamp" id="lamp"></div></div>' +
+      '<p class="lede" id="room-msg" hidden>Now do that across the room.</p>' +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main big-hit" id="step">I stepped</button>' +
+        '<button type="button" class="btn" id="room-win" hidden>I did them across the room</button>' +
         '<button type="button" class="btn" id="reset">Reset</button>' +
       "</div>" +
       '<div class="btn-row" id="targets"></div>' +
@@ -550,6 +574,9 @@
     function paint() {
       document.getElementById("num").textContent = String(state.run.n);
       document.getElementById("goal").textContent = "Count by " + state.run.skip + " to " + state.run.target;
+      document.getElementById("room-msg").hidden = !state.run.room;
+      document.getElementById("room-win").hidden = !state.run.room;
+      document.getElementById("step").disabled = !!state.run.room;
     }
     document.getElementById("targets").innerHTML = cfg.targets.map(function (t) {
       return '<button type="button" class="btn" data-t="' + t + '">To ' + t + "</button>";
@@ -560,30 +587,46 @@
       }).join("");
       document.getElementById("skips").addEventListener("click", function (e) {
         const s = e.target.getAttribute("data-s");
-        if (!s) return;
+        if (!s || !state.run) return;
         state.run.skip = Number(s);
         state.run.n = 0;
+        state.run.room = false;
         paint();
       });
     }
     document.getElementById("targets").addEventListener("click", function (e) {
       const t = e.target.getAttribute("data-t");
-      if (!t) return;
+      if (!t || !state.run) return;
       state.run.target = Number(t);
       state.run.n = 0;
+      state.run.room = false;
       paint();
     });
     document.getElementById("step").addEventListener("click", function () {
+      if (!state.run || state.run.room) return;
       state.run.n += state.run.skip;
       HSAudio.blip("stamp");
       speak(String(state.run.n));
-      paint();
-      if (state.run.n === state.run.target) {
-        award({ stars: 1, ribbon: "blue", stamp: "elephant", done: "count", msg: "Now finish that many across the room." });
+      if (state.run.n >= state.run.target) {
+        state.run.room = true;
         speak("Now do " + state.run.target + " steps across the room.");
       }
+      paint();
     });
-    document.getElementById("reset").addEventListener("click", function () { state.run.n = 0; paint(); });
+    document.getElementById("room-win").addEventListener("click", function () {
+      if (!state.run || !state.run.room) return;
+      const key = "count-" + state.run.target + "-by-" + state.run.skip;
+      award({ stars: 1, ribbon: "blue", stamp: "elephant", done: key, msg: "Room steps counted." });
+      state.run.n = 0;
+      state.run.room = false;
+      paint();
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      if (!state.run) return;
+      state.run.n = 0;
+      state.run.room = false;
+      paint();
+    });
     document.getElementById("home-btn").addEventListener("click", function () { go("home"); });
     paint();
   }
@@ -604,8 +647,7 @@
         '<p class="note">' + r.grownup + "</p></article>" +
         '<div class="move-stage"><p class="rhyme-line" id="line">' + line + '</p><div class="dots">' + dots + '</div></div>' +
         '<div class="btn-row">' +
-          '<button type="button" class="btn btn-main" id="speak-btn">Read this line</button>' +
-          '<button type="button" class="btn" id="next-line">Next line</button>' +
+          '<button type="button" class="btn btn-main" id="next-line">Next line</button>' +
         "</div>" +
         '<div class="btn-row">' +
           list.map(function (item, idx) {
@@ -613,7 +655,6 @@
           }).join("") +
         "</div>" +
         '<div class="btn-row"><button type="button" class="btn btn-ghost" id="home-btn">Back</button></div>';
-      document.getElementById("speak-btn").addEventListener("click", function () { speak(line); HSAudio.blip("toot"); });
       document.getElementById("next-line").addEventListener("click", function () {
         state.run.line += 1;
         if (state.run.line >= r.lines.length) {
@@ -637,8 +678,8 @@
 
   function renderPeek() {
     const animals = [
-      { name: "Horse", img: "images/circus-horse.jpg", say: "Peekaboo, parade horse!" },
-      { name: "Elephant", img: "images/circus-elephant.jpg", say: "Peekaboo, elephant!" },
+      { name: "Horse", img: "images/circus-horse.jpg", say: "Peekaboo, parade horse." },
+      { name: "Elephant", img: "images/circus-elephant.jpg", say: "Peekaboo, elephant." },
       { name: "Wagon", img: "images/circus-parade-hero.jpg", say: "Here comes the wagon." },
       { name: "Tent", img: "images/circus-tent.jpg", say: "The tent is open." }
     ];
@@ -646,23 +687,27 @@
     let which = 0;
     let open = false;
     const root = document.getElementById("view");
+    const first = animals[0];
     root.innerHTML =
       '<article class="panel"><p class="kicker">Grown-up play</p><h1>Wagon Watch</h1>' +
-      '<p class="lede">Hold the little one. Track the wagon with your eyes together. Tap the tent for peekaboo.</p></article>' +
-      '<div class="wagon-track"><img class="wagon" id="wagon" src="' + u("images/circus-parade-hero.jpg") + '" alt="Parade wagon"></div>' +
-      '<button type="button" class="tent-flap" id="flap">Tap the tent flap</button>' +
+      '<p class="lede">Hold the little one. Follow the big wagon. Then open the tent flap.</p></article>' +
+      '<div class="wagon-track"><img class="wagon" id="wagon" src="' + u("images/circus-parade-hero.jpg") + '" alt="Parade wagon filling the track"></div>' +
+      '<div class="peek-show">' +
+        '<img class="reveal" id="reveal" src="' + u(first.img) + '" alt="">' +
+        '<button type="button" class="tent-flap" id="flap" aria-expanded="false"><span class="flap-label">Open the tent</span></button>' +
+      "</div>" +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main" id="toot">Toot</button>' +
         '<button type="button" class="btn btn-ghost" id="home-btn">Back</button>' +
       "</div>";
     const wagon = document.getElementById("wagon");
-    wagon.style.left = "36%";
+    wagon.style.left = "8%";
     if (reducedMotion()) {
       state.run = { interval: null };
     } else {
       state.run = { interval: setInterval(function () {
-        x += 6;
-        if (x > 90) x = -20;
+        x += 8;
+        if (x > 78) x = -30;
         wagon.style.left = x + "%";
       }, 900) };
     }
@@ -671,21 +716,29 @@
       speak("Toot toot");
     });
     document.getElementById("flap").addEventListener("click", function () {
-      open = !open;
-      const a = animals[which % animals.length];
       const flap = document.getElementById("flap");
-      flap.classList.toggle("open", open);
-      if (open) {
-        flap.innerHTML = '<img src="' + u(a.img) + '" alt="' + a.name + '" style="width:70%;height:140px;object-fit:cover">';
+      const reveal = document.getElementById("reveal");
+      if (!open) {
+        const a = animals[which % animals.length];
+        reveal.src = u(a.img);
+        reveal.alt = a.name;
+        flap.classList.add("open");
+        flap.setAttribute("aria-expanded", "true");
+        flap.querySelector(".flap-label").textContent = "Close the flap";
+        open = true;
         speak(a.say);
         which += 1;
-        if (which === 4) award({ stars: 1, stamp: "wagon", ribbon: "red", done: "peek", msg: "Peekaboo stamp!" });
+        if (which === animals.length) award({ stars: 1, stamp: "wagon", ribbon: "red", done: "peek", msg: "Peekaboo stamp!" });
       } else {
-        flap.textContent = "Tap the tent flap";
+        flap.classList.remove("open");
+        flap.setAttribute("aria-expanded", "false");
+        flap.querySelector(".flap-label").textContent = "Open the tent";
+        open = false;
       }
     });
     document.getElementById("home-btn").addEventListener("click", function () { go("home"); });
   }
+
 
   function renderGlossary() {
     const rows = C.glossary.filter(function (g) {
@@ -725,7 +778,7 @@
     root.innerHTML =
       '<article class="panel"><p class="kicker">Home practice</p><h1>Practice Tent</h1>' +
       '<p class="lede">A short timer and a bag check. This is not a class video.</p></article>' +
-      '<div class="move-stage"><div class="timer" id="clock"></div></div>' +
+      '<div class="practice-clock"><div class="move-stage"><div class="timer" id="clock"></div></div></div>' +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main" id="start">Start</button>' +
         '<button type="button" class="btn" id="min5">5 min</button>' +
@@ -758,11 +811,12 @@
     }
     document.getElementById("min5").addEventListener("click", function () { setMinutes(5); });
     document.getElementById("min10").addEventListener("click", function () { setMinutes(10); });
-    let packed = 0;
     root.querySelectorAll("[data-bag]").forEach(function (box) {
       box.addEventListener("change", function () {
-        if (box.checked) packed += 1;
-        if (packed === C.bag.length) award({ stars: 1, stamp: "star", done: "bag", msg: "Bag is packed." });
+        const boxes = root.querySelectorAll("[data-bag]");
+        let n = 0;
+        boxes.forEach(function (b) { if (b.checked) n += 1; });
+        if (n === boxes.length) award({ stars: 1, stamp: "star", done: "bag", msg: "Bag is packed." });
       });
     });
     document.getElementById("home-btn").addEventListener("click", function () { go("home"); });
@@ -777,6 +831,10 @@
     state.run = { picked: [] };
     const root = document.getElementById("view");
     function paint() {
+      if (state.run && state.run.timeout) {
+        clearTimeout(state.run.timeout);
+        state.run.timeout = null;
+      }
       root.innerHTML =
         '<article class="panel"><p class="kicker">Make a short show</p><h1>Parade Builder</h1>' +
         '<p class="lede">Pick four to six moves. Play them in order. Then run the same order in the room.</p></article>' +
@@ -846,20 +904,20 @@
   }
 
   function boot() {
-    HSAudio.setQuiet(state.quiet);
+    state.quiet = readQuiet();
+    try {
+      localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0");
+      if (state.quiet) {
+        if (window.HS && typeof window.HS.setMuted === "function") window.HS.setMuted(true);
+        else localStorage.setItem("hs.mute", "1");
+      }
+    } catch (e) { /* ignore */ }
+    window.addEventListener("hs-mute", function (ev) {
+      applyQuiet(!!(ev.detail && ev.detail.muted), true);
+    });
     document.getElementById("home-btn-top").addEventListener("click", function () { go("home"); });
     document.getElementById("quiet-btn").addEventListener("click", function () {
-      if (window.HS && HS.toggleMute) {
-        HS.toggleMute();
-        return;
-      }
-      state.quiet = !state.quiet;
-      localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0");
-      paintChrome();
-    });
-    window.addEventListener("hs-mute", function () {
-      state.quiet = window.HS && HS.muted ? HS.muted() : state.quiet;
-      paintChrome();
+      applyQuiet(!readQuiet(), false);
     });
     document.getElementById("band-chip").addEventListener("click", function () {
       state.band = null;
@@ -873,14 +931,23 @@
     if (hash && hash !== "home") state.view = hash;
     paintChrome();
     render();
+    window.scrollTo(0, 0);
     if (!document.documentElement.dataset.runner && "serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js").catch(function () { /* optional */ });
     }
   }
 
+  function start() {
+    fetch(u("images.json")).then(function (r) { return r.json(); }).then(function (man) {
+      state.manifest = man || { images: [] };
+    }).catch(function () {
+      state.manifest = { images: [] };
+    }).then(boot);
+  }
+
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
+    document.addEventListener("DOMContentLoaded", start);
   } else {
-    boot();
+    start();
   }
 })();

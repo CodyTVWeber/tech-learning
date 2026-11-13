@@ -49,17 +49,26 @@
     const me = stages && (stages.stages || []).find(function (s) {
       return s.folder === learnerFolder();
     });
-    if (me && me.subjects && me.subjects[id] === "none") {
+    if (me && me.subjects && (!me.subjects[id] || me.subjects[id] === "none")) {
+      // History and geography stay on the kit page when omitted.
+      // Reading and the other none subjects stay on the quiet care page, with no app fetch.
+      const omittedKit = id === "history" || id === "geography";
       if (HS.mountChrome) {
-        HS.mountChrome({
-          title: me.displayName || "Home",
-          sub: (me.label || "") + (me.ageBand ? " · " + me.ageBand : ""),
-          homeHref: "./",
-        });
+        HS.mountChrome(
+          omittedKit
+            ? { title: "Lesson", homeHref: "./" }
+            : {
+                title: me.displayName || "Home",
+                sub: (me.label || "") + (me.ageBand ? " · " + me.ageBand : ""),
+                homeHref: "./",
+              }
+        );
       }
-      root.innerHTML = HS.notOnThisHomeHtml
-        ? HS.notOnThisHomeHtml()
-        : "<p>Not on this home.</p>";
+      root.innerHTML = omittedKit
+        ? "<p>That lesson is not on this device yet. Try again after it has been added.</p>"
+        : HS.notOnThisHomeHtml
+          ? HS.notOnThisHomeHtml()
+          : "<p>Not on this home.</p>";
       return;
     }
     const appBase = new URL("../apps/" + id + "/", global.location.href).href;

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Heel drop">
+  <title>Heel drop</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing Heel drop. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="117.9" y1="165.9" x2="102.4" y2="272.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="117.9" y1="165.9" x2="167.5" y2="245.0" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="102.4" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="90.4" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="167.5" cy="251.0" rx="14" ry="8" fill="#2a1a10"/><rect x="155.5" y="243.0" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="117.9" y1="76.5" x2="80.7" y2="138.4" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="117.9" y1="76.5" x2="161.3" y2="131.5" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="80.7" cy="138.4" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="161.3" cy="131.5" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M91.9 80.5 L143.9 80.5 L139.9 173.9 L95.9 173.9 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="117.9" cy="92.5" r="3" fill="#e8d48a"/><circle cx="117.9" cy="106.5" r="3" fill="#e8d48a"/><circle cx="117.9" cy="120.5" r="3" fill="#e8d48a"/>
+  <path d="M107.9 78.5 L117.9 92.5 L127.9 78.5" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="117.9" y1="76.5" x2="117.9" y2="52.4" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="117.9" cy="52.4" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="112.9" cy="50.4" r="1.6" fill="#1a1a14"/><circle cx="122.9" cy="50.4" r="1.6" fill="#1a1a14"/><path d="M112.9 58.4 Q117.9 62.4 122.9 58.4" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="103.9" y="24.4" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="97.9" y="38.4" width="40" height="5" rx="1" fill="#171e2b"/><rect x="103.9" y="34.4" width="28" height="4" fill="#c4a35a"/>
+  <ellipse cx="167.5" cy="257.0" rx="16" ry="4" fill="#c4a35a" opacity="0.7"/>
+</svg>

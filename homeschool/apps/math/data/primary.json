@@ -247,9 +247,9 @@
     {
       "id": "m-f-86",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "If 8 + 6 = 14, then 14 − 6 =",
-      "audioText": "If 8 + 6 = 14, then 14 − 6 =",
+      "kind": "takeaway",
+      "prompt": "14 coins. Tap 6 to give away.",
+      "audioText": "14 coins. Tap 6 to give away.",
       "answer": "8",
       "choices": [
         "8",
@@ -260,14 +260,17 @@
         "math",
         "primary",
         "facts"
-      ]
+      ],
+      "start": 14,
+      "take": 6,
+      "teach": "14 take away 6 is 8. That is the other part of 8 + 6."
     },
     {
       "id": "m-f-97",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "9 + 7 =",
-      "audioText": "9 + 7 =",
+      "kind": "maketen",
+      "prompt": "Hold 9. Add 7. Fill the ten, then the extra.",
+      "audioText": "Hold 9. Add 7. Fill the ten, then the extra.",
       "answer": "16",
       "choices": [
         "63",
@@ -278,14 +281,17 @@
         "math",
         "primary",
         "facts"
-      ]
+      ],
+      "hold": 9,
+      "add": 7,
+      "teach": "9 + 1 makes 10. 6 more makes 16."
     },
     {
       "id": "m-f-13m5",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "13 − 5 =",
-      "audioText": "13 − 5 =",
+      "kind": "takeaway",
+      "prompt": "13 coins. Tap 5 to give away.",
+      "audioText": "13 coins. Tap 5 to give away.",
       "answer": "8",
       "choices": [
         "18",
@@ -296,7 +302,10 @@
         "math",
         "primary",
         "facts"
-      ]
+      ],
+      "start": 13,
+      "take": 5,
+      "teach": "13 take away 5 leaves 8."
     },
     {
       "id": "m-pl-235",
@@ -343,7 +352,7 @@
     {
       "id": "m-pl-10tens",
       "island": "place",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "10 tens make how many hundreds?",
       "audioText": "10 tens make how many hundreds?",
       "answer": "1",
@@ -356,7 +365,8 @@
         "math",
         "primary",
         "place"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "m-sk-3",
@@ -667,7 +677,7 @@
     {
       "id": "m-mo-dollar",
       "island": "money",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "1 dollar is how many cents?",
       "audioText": "1 dollar is how many cents?",
       "answer": "100",
@@ -680,7 +690,8 @@
         "math",
         "primary",
         "money"
-      ]
+      ],
+      "teach": "The answer is 100."
     },
     {
       "id": "m-t-230",
@@ -745,9 +756,9 @@
     {
       "id": "m-me-12in",
       "island": "measure",
-      "kind": "choice",
-      "prompt": "12 inches = how many feet?",
-      "audioText": "12 inches = how many feet?",
+      "kind": "product",
+      "prompt": "12 inches = how many feet? Type it.",
+      "audioText": "12 inches = how many feet? Type it.",
       "answer": "1",
       "choices": [
         "1",
@@ -758,14 +769,15 @@
         "math",
         "primary",
         "measure"
-      ]
+      ],
+      "teach": "12 inches make 1 foot."
     },
     {
       "id": "m-me-3ft",
       "island": "measure",
-      "kind": "choice",
-      "prompt": "3 feet = how many yards?",
-      "audioText": "3 feet = how many yards?",
+      "kind": "product",
+      "prompt": "3 feet = how many yards? Type it.",
+      "audioText": "3 feet = how many yards? Type it.",
       "answer": "1",
       "choices": [
         "3",
@@ -776,14 +788,15 @@
         "math",
         "primary",
         "measure"
-      ]
+      ],
+      "teach": "3 feet make 1 yard."
     },
     {
       "id": "m-me-cup",
       "island": "measure",
-      "kind": "choice",
-      "prompt": "8 fluid ounces = how many cups?",
-      "audioText": "8 fluid ounces = how many cups?",
+      "kind": "product",
+      "prompt": "8 fluid ounces = how many cups? Type it.",
+      "audioText": "8 fluid ounces = how many cups? Type it.",
       "answer": "1",
       "choices": [
         "1",
@@ -794,14 +807,15 @@
         "math",
         "primary",
         "measure"
-      ]
+      ],
+      "teach": "8 fluid ounces make 1 cup."
     },
     {
       "id": "m-me-pint",
       "island": "measure",
-      "kind": "choice",
-      "prompt": "2 cups = how many pints?",
-      "audioText": "2 cups = how many pints?",
+      "kind": "product",
+      "prompt": "2 cups = how many pints? Type it.",
+      "audioText": "2 cups = how many pints? Type it.",
       "answer": "1",
       "choices": [
         "8",
@@ -812,14 +826,15 @@
         "math",
         "primary",
         "measure"
-      ]
+      ],
+      "teach": "2 cups make 1 pint."
     },
     {
       "id": "m-sh-per",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "A rectangle 5 by 3. Perimeter?",
-      "audioText": "A rectangle 5 by 3. Perimeter?",
+      "kind": "perimeter",
+      "prompt": "Tap each side of the 5 by 3 hatch.",
+      "audioText": "Tap each side of the 5 by 3 hatch.",
       "answer": "16",
       "choices": [
         "8",
@@ -830,14 +845,21 @@
         "math",
         "primary",
         "shape"
-      ]
+      ],
+      "sides": [
+        5,
+        3,
+        5,
+        3
+      ],
+      "teach": "5 + 3 + 5 + 3 = 16. That is the walk around."
     },
     {
       "id": "m-sh-sq",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "A square with side 6. Perimeter?",
-      "audioText": "A square with side 6. Perimeter?",
+      "kind": "perimeter",
+      "prompt": "Tap each side of the square with side 6.",
+      "audioText": "Tap each side of the square with side 6.",
       "answer": "24",
       "choices": [
         "24",
@@ -848,12 +870,19 @@
         "math",
         "primary",
         "shape"
-      ]
+      ],
+      "sides": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "teach": "6 + 6 + 6 + 6 = 24."
     },
     {
       "id": "m-st-68",
       "island": "story",
-      "kind": "word",
+      "kind": "product",
       "prompt": "6 crews of 8 sailors. How many sailors?",
       "audioText": "6 crews of 8 sailors. How many sailors?",
       "answer": "48",
@@ -866,12 +895,13 @@
         "math",
         "primary",
         "story"
-      ]
+      ],
+      "teach": "The answer is 48."
     },
     {
       "id": "m-st-369",
       "island": "story",
-      "kind": "word",
+      "kind": "product",
       "prompt": "36 coins in 9 pouches, equal share. How many each?",
       "audioText": "36 coins in 9 pouches, equal share. How many each?",
       "answer": "4",
@@ -884,12 +914,13 @@
         "math",
         "primary",
         "story"
-      ]
+      ],
+      "teach": "The answer is 4."
     },
     {
       "id": "m-st-fam",
       "island": "story",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "If 7 × 8 = 56, then 56 ÷ 8 =",
       "audioText": "If 7 × 8 = 56, then 56 ÷ 8 =",
       "answer": "7",
@@ -902,12 +933,13 @@
         "math",
         "primary",
         "story"
-      ]
+      ],
+      "teach": "The answer is 7."
     },
     {
       "id": "m-mul-0x9",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "0 × 9 =",
       "audioText": "0 times 9.",
       "answer": "0",
@@ -926,7 +958,7 @@
     {
       "id": "m-mul-1x7",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "1 × 7 =",
       "audioText": "1 times 7.",
       "answer": "7",
@@ -947,8 +979,8 @@
     {
       "id": "m-div-7d1",
       "island": "share",
-      "kind": "choice",
-      "prompt": "7 ÷ 1 =",
+      "kind": "deal",
+      "prompt": "Deal 7 coins into 1 crews.",
       "audioText": "7 divided by 1.",
       "answer": "7",
       "choices": [
@@ -960,7 +992,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 7,
+      "divisor": 1,
+      "teach": "7 shared into 1 crews is 7 each."
     },
     {
       "id": "m-mul-2x2",
@@ -986,8 +1021,8 @@
     {
       "id": "m-div-4d2",
       "island": "share",
-      "kind": "choice",
-      "prompt": "4 ÷ 2 =",
+      "kind": "deal",
+      "prompt": "Deal 4 coins into 2 crews.",
       "audioText": "4 divided by 2.",
       "answer": "2",
       "choices": [
@@ -999,7 +1034,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 4,
+      "divisor": 2,
+      "teach": "4 shared into 2 crews is 2 each."
     },
     {
       "id": "m-mul-2x5",
@@ -1026,8 +1064,8 @@
     {
       "id": "m-div-10d2",
       "island": "share",
-      "kind": "choice",
-      "prompt": "10 ÷ 2 =",
+      "kind": "deal",
+      "prompt": "Deal 10 coins into 2 crews.",
       "audioText": "10 divided by 2.",
       "answer": "5",
       "choices": [
@@ -1039,12 +1077,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 10,
+      "divisor": 2,
+      "teach": "10 shared into 2 crews is 5 each."
     },
     {
       "id": "m-mul-2x10",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "2 × 10 =",
       "audioText": "2 times 10.",
       "answer": "20",
@@ -1066,8 +1107,8 @@
     {
       "id": "m-div-20d2",
       "island": "share",
-      "kind": "choice",
-      "prompt": "20 ÷ 2 =",
+      "kind": "deal",
+      "prompt": "Deal 20 coins into 2 crews.",
       "audioText": "20 divided by 2.",
       "answer": "10",
       "choices": [
@@ -1079,7 +1120,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 20,
+      "divisor": 2,
+      "teach": "20 shared into 2 crews is 10 each."
     },
     {
       "id": "m-mul-3x3",
@@ -1105,8 +1149,8 @@
     {
       "id": "m-div-9d3",
       "island": "share",
-      "kind": "choice",
-      "prompt": "9 ÷ 3 =",
+      "kind": "deal",
+      "prompt": "Deal 9 coins into 3 crews.",
       "audioText": "9 divided by 3.",
       "answer": "3",
       "choices": [
@@ -1118,7 +1162,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 9,
+      "divisor": 3,
+      "teach": "9 shared into 3 crews is 3 each."
     },
     {
       "id": "m-mul-3x4",
@@ -1145,8 +1192,8 @@
     {
       "id": "m-div-12d3",
       "island": "share",
-      "kind": "choice",
-      "prompt": "12 ÷ 3 =",
+      "kind": "deal",
+      "prompt": "Deal 12 coins into 3 crews.",
       "audioText": "12 divided by 3.",
       "answer": "4",
       "choices": [
@@ -1158,12 +1205,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 12,
+      "divisor": 3,
+      "teach": "12 shared into 3 crews is 4 each."
     },
     {
       "id": "m-mul-3x7",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "3 × 7 =",
       "audioText": "3 times 7.",
       "answer": "21",
@@ -1185,7 +1235,7 @@
     {
       "id": "m-div-21d3",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "21 ÷ 3 =",
       "audioText": "21 divided by 3.",
       "answer": "7",
@@ -1198,7 +1248,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 21,
+      "divisor": 3,
+      "teach": "21 shared into 3 crews is 7 each."
     },
     {
       "id": "m-mul-4x4",
@@ -1225,8 +1278,8 @@
     {
       "id": "m-div-16d4",
       "island": "share",
-      "kind": "choice",
-      "prompt": "16 ÷ 4 =",
+      "kind": "deal",
+      "prompt": "Deal 16 coins into 4 crews.",
       "audioText": "16 divided by 4.",
       "answer": "4",
       "choices": [
@@ -1238,7 +1291,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 16,
+      "divisor": 4,
+      "teach": "16 shared into 4 crews is 4 each."
     },
     {
       "id": "m-mul-4x6",
@@ -1265,7 +1321,7 @@
     {
       "id": "m-div-24d4",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "24 ÷ 4 =",
       "audioText": "24 divided by 4.",
       "answer": "6",
@@ -1278,12 +1334,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 24,
+      "divisor": 4,
+      "teach": "24 shared into 4 crews is 6 each."
     },
     {
       "id": "m-mul-4x9",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "4 × 9 =",
       "audioText": "4 times 9.",
       "answer": "36",
@@ -1305,7 +1364,7 @@
     {
       "id": "m-div-36d4",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "36 ÷ 4 =",
       "audioText": "36 divided by 4.",
       "answer": "9",
@@ -1318,7 +1377,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 36,
+      "divisor": 4,
+      "teach": "36 shared into 4 crews is 9 each."
     },
     {
       "id": "m-mul-5x5",
@@ -1345,7 +1407,7 @@
     {
       "id": "m-div-25d5",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "25 ÷ 5 =",
       "audioText": "25 divided by 5.",
       "answer": "5",
@@ -1358,7 +1420,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 25,
+      "divisor": 5,
+      "teach": "25 shared into 5 crews is 5 each."
     },
     {
       "id": "m-mul-5x6",
@@ -1385,7 +1450,7 @@
     {
       "id": "m-div-30d5",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "30 ÷ 5 =",
       "audioText": "30 divided by 5.",
       "answer": "6",
@@ -1398,12 +1463,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 30,
+      "divisor": 5,
+      "teach": "30 shared into 5 crews is 6 each."
     },
     {
       "id": "m-mul-5x8",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "5 × 8 =",
       "audioText": "5 times 8.",
       "answer": "40",
@@ -1425,7 +1493,7 @@
     {
       "id": "m-div-40d5",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "40 ÷ 5 =",
       "audioText": "40 divided by 5.",
       "answer": "8",
@@ -1438,12 +1506,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 40,
+      "divisor": 5,
+      "teach": "40 shared into 5 crews is 8 each."
     },
     {
       "id": "m-mul-5x12",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "5 × 12 =",
       "audioText": "5 times 12.",
       "answer": "60",
@@ -1465,7 +1536,7 @@
     {
       "id": "m-div-60d5",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "60 ÷ 5 =",
       "audioText": "60 divided by 5.",
       "answer": "12",
@@ -1478,7 +1549,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 60,
+      "divisor": 5,
+      "teach": "60 shared into 5 crews is 12 each."
     },
     {
       "id": "m-mul-6x6",
@@ -1505,7 +1579,7 @@
     {
       "id": "m-div-36d6",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "36 ÷ 6 =",
       "audioText": "36 divided by 6.",
       "answer": "6",
@@ -1518,12 +1592,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 36,
+      "divisor": 6,
+      "teach": "36 shared into 6 crews is 6 each."
     },
     {
       "id": "m-mul-6x7",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "6 × 7 =",
       "audioText": "6 times 7.",
       "answer": "42",
@@ -1545,7 +1622,7 @@
     {
       "id": "m-div-42d6",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "42 ÷ 6 =",
       "audioText": "42 divided by 6.",
       "answer": "7",
@@ -1558,12 +1635,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 42,
+      "divisor": 6,
+      "teach": "42 shared into 6 crews is 7 each."
     },
     {
       "id": "m-mul-6x8",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "6 × 8 =",
       "audioText": "6 times 8.",
       "answer": "48",
@@ -1585,7 +1665,7 @@
     {
       "id": "m-div-48d6",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "48 ÷ 6 =",
       "audioText": "48 divided by 6.",
       "answer": "8",
@@ -1598,12 +1678,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 48,
+      "divisor": 6,
+      "teach": "48 shared into 6 crews is 8 each."
     },
     {
       "id": "m-mul-7x7",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "7 × 7 =",
       "audioText": "7 times 7.",
       "answer": "49",
@@ -1625,7 +1708,7 @@
     {
       "id": "m-div-49d7",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "49 ÷ 7 =",
       "audioText": "49 divided by 7.",
       "answer": "7",
@@ -1638,12 +1721,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 49,
+      "divisor": 7,
+      "teach": "49 shared into 7 crews is 7 each."
     },
     {
       "id": "m-mul-7x8",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "7 × 8 =",
       "audioText": "7 times 8.",
       "answer": "56",
@@ -1665,7 +1751,7 @@
     {
       "id": "m-div-56d7",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "56 ÷ 7 =",
       "audioText": "56 divided by 7.",
       "answer": "8",
@@ -1678,12 +1764,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 56,
+      "divisor": 7,
+      "teach": "56 shared into 7 crews is 8 each."
     },
     {
       "id": "m-mul-8x8",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "8 × 8 =",
       "audioText": "8 times 8.",
       "answer": "64",
@@ -1705,7 +1794,7 @@
     {
       "id": "m-div-64d8",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "64 ÷ 8 =",
       "audioText": "64 divided by 8.",
       "answer": "8",
@@ -1718,12 +1807,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 64,
+      "divisor": 8,
+      "teach": "64 shared into 8 crews is 8 each."
     },
     {
       "id": "m-mul-8x9",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "8 × 9 =",
       "audioText": "8 times 9.",
       "answer": "72",
@@ -1745,7 +1837,7 @@
     {
       "id": "m-div-72d8",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "72 ÷ 8 =",
       "audioText": "72 divided by 8.",
       "answer": "9",
@@ -1758,12 +1850,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 72,
+      "divisor": 8,
+      "teach": "72 shared into 8 crews is 9 each."
     },
     {
       "id": "m-mul-9x9",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "9 × 9 =",
       "audioText": "9 times 9.",
       "answer": "81",
@@ -1785,7 +1880,7 @@
     {
       "id": "m-div-81d9",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "81 ÷ 9 =",
       "audioText": "81 divided by 9.",
       "answer": "9",
@@ -1798,12 +1893,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 81,
+      "divisor": 9,
+      "teach": "81 shared into 9 crews is 9 each."
     },
     {
       "id": "m-mul-9x12",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "9 × 12 =",
       "audioText": "9 times 12.",
       "answer": "108",
@@ -1825,7 +1923,7 @@
     {
       "id": "m-div-108d9",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "108 ÷ 9 =",
       "audioText": "108 divided by 9.",
       "answer": "12",
@@ -1838,12 +1936,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 108,
+      "divisor": 9,
+      "teach": "108 shared into 9 crews is 12 each."
     },
     {
       "id": "m-mul-10x10",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "10 × 10 =",
       "audioText": "10 times 10.",
       "answer": "100",
@@ -1865,7 +1966,7 @@
     {
       "id": "m-div-100d10",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "100 ÷ 10 =",
       "audioText": "100 divided by 10.",
       "answer": "10",
@@ -1878,12 +1979,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 100,
+      "divisor": 10,
+      "teach": "100 shared into 10 crews is 10 each."
     },
     {
       "id": "m-mul-11x11",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "11 × 11 =",
       "audioText": "11 times 11.",
       "answer": "121",
@@ -1905,7 +2009,7 @@
     {
       "id": "m-div-121d11",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "121 ÷ 11 =",
       "audioText": "121 divided by 11.",
       "answer": "11",
@@ -1918,12 +2022,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 121,
+      "divisor": 11,
+      "teach": "121 shared into 11 crews is 11 each."
     },
     {
       "id": "m-mul-12x8",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "12 × 8 =",
       "audioText": "12 times 8.",
       "answer": "96",
@@ -1945,7 +2052,7 @@
     {
       "id": "m-div-96d12",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "96 ÷ 12 =",
       "audioText": "96 divided by 12.",
       "answer": "8",
@@ -1958,12 +2065,15 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 96,
+      "divisor": 12,
+      "teach": "96 shared into 12 crews is 8 each."
     },
     {
       "id": "m-mul-12x12",
       "island": "times",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "12 × 12 =",
       "audioText": "12 times 12.",
       "answer": "144",
@@ -1985,7 +2095,7 @@
     {
       "id": "m-div-144d12",
       "island": "share",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "144 ÷ 12 =",
       "audioText": "144 divided by 12.",
       "answer": "12",
@@ -1998,7 +2108,10 @@
         "math",
         "primary",
         "share"
-      ]
+      ],
+      "dividend": 144,
+      "divisor": 12,
+      "teach": "144 shared into 12 crews is 12 each."
     }
   ]
 }
