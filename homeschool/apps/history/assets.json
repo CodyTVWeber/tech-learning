@@ -1,0 +1,27 @@
+{
+  "id": "history",
+  "title": "Time-Travel Train",
+  "shortTitle": "History",
+  "theme": "time-travel train",
+  "version": "1",
+  "files": [
+    "index.html",
+    "css/train.css",
+    "js/audio.js",
+    "js/progress.js",
+    "js/content-stations.js",
+    "js/content-quizzes.js",
+    "js/content-extra.js",
+    "js/app.js",
+    "sw.js",
+    "assets.json",
+    "images.json",
+    "images/hero-station.jpg",
+    "images/tickets.jpg",
+    "images/stamp-album.jpg",
+    "images/wheels-steam.jpg",
+    "images/lantern.jpg",
+    "images/sailing-ship.jpg",
+    "images/civic-hall.jpg"
+  ]
+}

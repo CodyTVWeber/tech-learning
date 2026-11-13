@@ -1,0 +1,62 @@
+{
+  "app": "history",
+  "theme": "time-travel train",
+  "images": [
+    {
+      "file": "hero-station.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "A steam locomotive at a brick railway station in evening light, burgundy cars, wet rails.",
+      "themeNotes": "Hub hero. Railway dusk, brass and coal. Not a picture-book drawing.",
+      "slot": "hero"
+    },
+    {
+      "file": "tickets.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Antique cream railway tickets and a brass punch on a dark wooden counter.",
+      "themeNotes": "Ticket reward chrome.",
+      "slot": "tickets"
+    },
+    {
+      "file": "stamp-album.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Open leather stamp album with wax seals on cream pages.",
+      "themeNotes": "Stamp book.",
+      "slot": "stamps"
+    },
+    {
+      "file": "wheels-steam.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "Close-up of steam locomotive driving wheels, rods, and drifting steam.",
+      "themeNotes": "Play-car / industrial era.",
+      "slot": "wheels"
+    },
+    {
+      "file": "lantern.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "A brass railroad lantern glowing amber on a wooden platform at dusk.",
+      "themeNotes": "Lantern hotspot and night stops.",
+      "slot": "lantern"
+    },
+    {
+      "file": "sailing-ship.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "A three-masted wooden sailing ship on open water at dawn.",
+      "themeNotes": "Columbus and Pilgrims stations.",
+      "slot": "ship"
+    },
+    {
+      "file": "civic-hall.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "A red-brick eighteenth-century civic hall with a white cupola on a cobblestone square.",
+      "themeNotes": "Independence, Constitution, and civic stops.",
+      "slot": "hall"
+    }
+  ]
+}

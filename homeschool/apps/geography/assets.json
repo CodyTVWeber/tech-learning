@@ -1,0 +1,28 @@
+{
+  "id": "geography",
+  "title": "Hot-Air Balloon Expedition",
+  "shortTitle": "Geography",
+  "theme": "hot-air balloon expedition",
+  "version": "1",
+  "files": [
+    "index.html",
+    "css/balloon.css",
+    "js/audio.js",
+    "js/progress.js",
+    "js/geo-data.js",
+    "js/geo-quizzes.js",
+    "js/map.js",
+    "js/app.js",
+    "sw.js",
+    "assets.json",
+    "images.json",
+    "images/hero-balloon.jpg",
+    "images/basket-map.jpg",
+    "images/aerial-usa.jpg",
+    "images/river-aerial.jpg",
+    "images/mountains-aerial.jpg",
+    "images/desert-aerial.jpg",
+    "images/lakes-aerial.jpg",
+    "images/us-chart.svg"
+  ]
+}
