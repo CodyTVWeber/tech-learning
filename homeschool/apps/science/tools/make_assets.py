@@ -6,7 +6,6 @@ import json
 ROOT = Path(__file__).resolve().parents[1]
 
 runtime_ext = {".html", ".css", ".js", ".json", ".svg", ".png", ".webmanifest", ".mjs"}
-skip_parts = {"tools"}
 skip_names = {"INTEGRATION.md", "CREDITS.md", "offline-test.mjs", "offline-test.py"}
 
 files = []
@@ -14,7 +13,8 @@ for p in sorted(ROOT.rglob("*")):
     if not p.is_file():
         continue
     rel = p.relative_to(ROOT).as_posix()
-    if any(part in skip_parts for part in p.relative_to(ROOT).parts):
+    # Only skip the generator folder, not images/tools plates.
+    if rel.startswith("tools/"):
         continue
     if p.name in skip_names:
         continue
