@@ -110,6 +110,7 @@
   }
 
   function go(view) {
+    if (view !== "studio" && state.run) state.run.challenge = null;
     state.view = view;
     const url = new URL(location.href);
     url.hash = view === "home" ? "" : view;
@@ -183,12 +184,43 @@
   }
 
   function renderColors() {
-    const set = state.band === "baby" || state.band === "toddler"
-      ? C.colors.filter(function (c) { return ["red", "yellow", "blue", "white", "black"].indexOf(c.id) !== -1; })
-      : C.colors;
+    const baby = state.band === "baby";
+    const set = baby
+      ? C.colors.filter(function (c) { return ["red", "yellow", "blue", "white"].indexOf(c.id) !== -1; })
+      : state.band === "toddler"
+        ? C.colors.filter(function (c) { return ["red", "yellow", "blue", "white", "black"].indexOf(c.id) !== -1; })
+        : C.colors;
     let current = set[0];
     const root = document.getElementById("view");
+    function markNamed(id) {
+      if (!state.run) state.run = { named: {} };
+      state.run.named[id] = true;
+      if (Object.keys(state.run.named).length >= 4) {
+        award({ stars: 1, postcard: "buoy", stamp: "palette", done: "colors", msg: "Color postcard!" });
+        state.run.named = {};
+      }
+    }
     function paint() {
+      if (baby) {
+        root.innerHTML =
+          '<figure class="hero"><img src="' + u("images/color-boats.jpg") + '" alt="Primary-colored toy boats on harbor planks"><figcaption>Color dock</figcaption></figure>' +
+          '<article class="panel"><p class="kicker">Tap a color</p><h1>Color dock</h1>' +
+          '<p class="lede">Big patches. Hear the name. Grown-up can say it too.</p></article>' +
+          '<div class="swatch-row-huge">' + set.map(function (c) {
+            return '<button type="button" class="swatch swatch-huge" data-c="' + c.id + '" style="background:' + c.hex + '" aria-label="' + c.name + '"></button>';
+          }).join("") + "</div>" +
+          backRow();
+        root.querySelectorAll("[data-c]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            const c = set.find(function (x) { return x.id === btn.getAttribute("data-c"); });
+            speak(c.say);
+            HSAudio.blip("up");
+            markNamed(c.id);
+          });
+        });
+        bindBack();
+        return;
+      }
       root.innerHTML =
         '<figure class="hero"><img src="' + u("images/color-boats.jpg") + '" alt="Primary-colored toy boats on harbor planks"><figcaption>Color dock</figcaption></figure>' +
         '<article class="panel"><p class="kicker">Say the color</p><h1>' + current.name + "</h1>" +
@@ -204,12 +236,7 @@
           current = set.find(function (c) { return c.id === btn.getAttribute("data-c"); });
           speak(current.say);
           HSAudio.blip("up");
-          if (!state.run) state.run = { named: {} };
-          state.run.named[current.id] = true;
-          if (Object.keys(state.run.named).length >= 4) {
-            award({ stars: 1, postcard: "buoy", stamp: "palette", done: "colors", msg: "Color postcard!" });
-            state.run.named = {};
-          }
+          markNamed(current.id);
           paint();
         });
       });
@@ -217,7 +244,7 @@
       bindBack();
     }
     paint();
-    speak(current.say);
+    if (!baby) speak(current.say);
   }
 
   function renderShapes() {
@@ -280,9 +307,11 @@
             return '<button type="button" class="swatch" data-id="' + id + '" style="background:' + hex(id) + '" aria-label="' + id + '"></button>';
           }).join("") +
         "</div>" +
-        '<div style="margin:16px 0;height:120px;border:1px solid var(--harbor);background:' +
-          (result ? hex(result.out) : picked.length === 1 ? hex(picked[0]) : "#f7f1e5") +
-        '"></div>' +
+        '<div class="mix-pan" role="img" aria-label="' + (result ? result.out + " mix" : "empty mix pan") + '">' +
+          (picked[0] ? '<span class="dab dab-a" style="background:' + hex(picked[0]) + '"></span>' : "") +
+          (picked[1] ? '<span class="dab dab-b" style="background:' + hex(picked[1]) + '"></span>' : "") +
+          (result ? '<span class="dab dab-out" style="background:' + hex(result.out) + '"></span>' : "") +
+        "</div>" +
         '<p class="prompt">' + (result ? "That mix is " + result.out + ". Now mix it on paper." : (picked.length ? "Pick a second color." : "Pick a first color.")) + "</p>" +
         '<div class="btn-row"><button type="button" class="btn" id="clear">Clear pan</button></div>' +
         backRow();
@@ -560,14 +589,31 @@
     paint();
   }
 
+  function artistsForBand() {
+    return C.artists.filter(function (a) {
+      return a.works.some(function (id) {
+        const w = C.artworks.find(function (x) { return x.id === id; });
+        return w && w.bands.indexOf(state.band) !== -1;
+      });
+    });
+  }
+
   function renderArtists() {
     const root = document.getElementById("view");
+    const people = artistsForBand();
     let i = 0;
     function paint() {
-      const a = C.artists[i];
+      if (!people.length) {
+        root.innerHTML = '<article class="panel"><h1>No artist cards in this band yet.</h1></article>' + backRow();
+        bindBack();
+        return;
+      }
+      const a = people[i];
       const works = a.works.map(function (id) {
         return C.artworks.find(function (w) { return w.id === id; });
-      }).filter(Boolean);
+      }).filter(function (w) {
+        return w && w.bands.indexOf(state.band) !== -1;
+      });
       root.innerHTML =
         '<article class="panel"><p class="kicker">Public-domain facts</p><h1>' + a.name + "</h1>" +
         "<p>" + a.years + " · " + a.place + "</p>" +
@@ -584,7 +630,7 @@
         speak(a.name + ". " + a.years + ". " + a.fact);
       });
       document.getElementById("next").addEventListener("click", function () {
-        i = (i + 1) % C.artists.length;
+        i = (i + 1) % people.length;
         if (i === 0) award({ stars: 1, postcard: "wave", stamp: "master", done: "artists", msg: "Artist postcard." });
         paint();
       });
@@ -599,25 +645,341 @@
     paint();
   }
 
-  function renderStudio() {
+  function studioCanvas(root, afterDraw) {
+    const canvas = document.getElementById("studio-c");
+    const ctx = canvas.getContext("2d");
+    function pos(ev) {
+      const r = canvas.getBoundingClientRect();
+      const t = ev.touches ? ev.touches[0] : ev;
+      return { x: (t.clientX - r.left) * (canvas.width / r.width), y: (t.clientY - r.top) * (canvas.height / r.height) };
+    }
+    let drawing = false;
+    function start(ev) {
+      ev.preventDefault();
+      drawing = true;
+      const p = pos(ev);
+      ctx.beginPath();
+      ctx.moveTo(p.x, p.y);
+      ctx.lineWidth = 5;
+      ctx.strokeStyle = "#1c1814";
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      if (afterDraw) afterDraw(p, "start");
+    }
+    function move(ev) {
+      if (!drawing) return;
+      ev.preventDefault();
+      const p = pos(ev);
+      if (afterDraw) afterDraw(p, "move");
+      else {
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+      }
+    }
+    function end() { drawing = false; }
+    canvas.addEventListener("mousedown", start);
+    canvas.addEventListener("mousemove", move);
+    window.addEventListener("mouseup", end);
+    canvas.addEventListener("touchstart", start, { passive: false });
+    canvas.addEventListener("touchmove", move, { passive: false });
+    canvas.addEventListener("touchend", end);
+    return ctx;
+  }
+
+  function finishChallenge(id, msg) {
+    speak(msg);
+    award({ stars: 1, stamp: "paper", postcard: "bridge", done: "ch-" + id, msg: msg });
+  }
+
+  function renderStudioList() {
     const list = C.challenges.filter(function (ch) { return ch.bands.indexOf(state.band) !== -1; });
     const root = document.getElementById("view");
     root.innerHTML =
       '<figure class="hero"><img src="' + u("images/harbor-easel.jpg") + '" alt="Field easel on a harbor pier"><figcaption>Studio challenges</figcaption></figure>' +
-      '<article class="panel"><p class="kicker">Original studio work</p><h1>Challenges</h1>' +
-      '<p class="lede">The screen names the job. The paper is the work. Mirror, upside-down looking, abstract color, perspective, value.</p></article>' +
+      '<article class="panel"><p class="kicker">Work on the screen</p><h1>Challenges</h1>' +
+      '<p class="lede">Mirror, copy upside-down, mix shapes, mark a pier. The job happens here.</p></article>' +
       list.map(function (ch) {
         return '<article class="panel"><p class="kicker">' + ch.id + "</p><h2>" + ch.title + "</h2>" +
-          '<p>' + ch.say + '</p><p class="note">' + ch.paper + '</p>' +
-          '<button type="button" class="btn btn-main" data-ch="' + ch.id + '">I did this on paper</button></article>';
+          "<p>" + ch.say + "</p>" +
+          '<button type="button" class="btn btn-main" data-ch="' + ch.id + '">Open this studio job</button></article>';
       }).join("") + backRow();
     root.querySelectorAll("[data-ch]").forEach(function (btn) {
       btn.addEventListener("click", function () {
-        speak("Good. Keep that page.");
-        award({ stars: 1, stamp: "paper", postcard: "bridge", done: "ch-" + btn.getAttribute("data-ch"), msg: "Paper finish." });
+        state.run = { challenge: btn.getAttribute("data-ch") };
+        renderStudio();
       });
     });
     bindBack();
+  }
+
+  function renderStudioMirror() {
+    const root = document.getElementById("view");
+    root.innerHTML =
+      '<article class="panel"><p class="kicker">Mirror dock</p><h1>Draw on the fold</h1>' +
+      '<p class="lede">A faint hull sits on the left. Draw on either side — the other side copies it.</p></article>' +
+      '<div class="studio-board"><canvas id="studio-c" width="640" height="400"></canvas></div>' +
+      '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Both sides match</button>' +
+      '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
+    const canvas = document.getElementById("studio-c");
+    const ctx = canvas.getContext("2d");
+    const mid = canvas.width / 2;
+    function fold() {
+      ctx.save();
+      ctx.strokeStyle = "#cbb99a";
+      ctx.setLineDash([7, 7]);
+      ctx.beginPath();
+      ctx.moveTo(mid, 8);
+      ctx.lineTo(mid, canvas.height - 8);
+      ctx.stroke();
+      ctx.restore();
+    }
+    ctx.fillStyle = "#fbf7ee";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "rgba(36,54,60,0.28)";
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(mid - 20, 250);
+    ctx.quadraticCurveTo(mid - 120, 250, mid - 140, 210);
+    ctx.lineTo(mid - 40, 180);
+    ctx.lineTo(mid - 12, 220);
+    ctx.stroke();
+    fold();
+    let last = null;
+    studioCanvas(root, function (p, kind) {
+      if (kind === "start") last = p;
+      if (!last) return;
+      ctx.strokeStyle = "#1c1814";
+      ctx.lineWidth = 5;
+      ctx.lineCap = "round";
+      ctx.beginPath();
+      ctx.moveTo(last.x, last.y);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(mid * 2 - last.x, last.y);
+      ctx.lineTo(mid * 2 - p.x, p.y);
+      ctx.stroke();
+      last = p;
+    });
+    document.getElementById("done").addEventListener("click", function () {
+      finishChallenge("mirror", "Both sides match.");
+    });
+    document.getElementById("back-ch").addEventListener("click", function () {
+      state.run = {};
+      renderStudioList();
+    });
+  }
+
+  function renderStudioUpside() {
+    const root = document.getElementById("view");
+    root.innerHTML =
+      '<article class="panel"><p class="kicker">Upside-down lines</p><h1>Copy the edges</h1>' +
+      '<p class="lede">The vase is already flipped. Copy the outline — not “vase” — on the pad below.</p></article>' +
+      '<div class="upside-src" aria-hidden="true"><svg viewBox="0 0 80 110"><path d="M28 8h24l6 22c8 6 12 16 12 28 0 18-10 36-22 42v8H32v-8C20 94 10 76 10 58c0-12 4-22 12-28z" fill="none" stroke="#24363c" stroke-width="3"/></svg></div>' +
+      '<div class="studio-board"><canvas id="studio-c" width="640" height="400"></canvas></div>' +
+      '<div class="btn-row"><button type="button" class="btn btn-main" id="done">I copied the edges</button>' +
+      '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
+    const ctx = document.getElementById("studio-c").getContext("2d");
+    ctx.fillStyle = "#fbf7ee";
+    ctx.fillRect(0, 0, 640, 400);
+    studioCanvas(root);
+    document.getElementById("done").addEventListener("click", function () {
+      finishChallenge("upside", "Edge copy is on the pad.");
+    });
+    document.getElementById("back-ch").addEventListener("click", function () {
+      state.run = {};
+      renderStudioList();
+    });
+  }
+
+  function renderStudioAbstract() {
+    const root = document.getElementById("view");
+    const blobs = [
+      { hex: "#c45a3a", name: "apple red" },
+      { hex: "#3d6b63", name: "cloth green" },
+      { hex: "#d4a017", name: "table gold" }
+    ];
+    let color = blobs[0].hex;
+    root.innerHTML =
+      '<article class="panel"><p class="kicker">Abstract from still life</p><h1>Biggest shapes only</h1>' +
+      '<p class="lede">Look at the still life. Dab its colors. No apple outline.</p></article>' +
+      '<figure class="hero"><img src="' + u("images/harbor-still-life.jpg") + '" alt="Harbor still life on a pine table"></figure>' +
+      '<div class="studio-board"><canvas id="studio-c" width="640" height="400"></canvas></div>' +
+      '<div class="swatch-row">' + blobs.map(function (b) {
+        return '<button type="button" class="swatch" data-hex="' + b.hex + '" style="background:' + b.hex + '" aria-label="' + b.name + '"></button>';
+      }).join("") + "</div>" +
+      '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Shape study done</button>' +
+      '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
+    const canvas = document.getElementById("studio-c");
+    const ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#fbf7ee";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    studioCanvas(root, function (p, kind) {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.ellipse(p.x, p.y, 28, 22, 0, 0, Math.PI * 2);
+      ctx.fill();
+    });
+    root.querySelectorAll("[data-hex]").forEach(function (btn) {
+      btn.addEventListener("click", function () { color = btn.getAttribute("data-hex"); });
+    });
+    document.getElementById("done").addEventListener("click", function () {
+      finishChallenge("abstract", "Shape study is on the pad.");
+    });
+    document.getElementById("back-ch").addEventListener("click", function () {
+      state.run = {};
+      renderStudioList();
+    });
+  }
+
+  function renderStudioPerspective() {
+    const root = document.getElementById("view");
+    root.innerHTML =
+      '<article class="panel"><p class="kicker">Pier perspective</p><h1>Lines to one point</h1>' +
+      '<p class="lede">Tap the board. Each tap draws a plank toward the vanishing point.</p></article>' +
+      '<div class="studio-board"><canvas id="studio-c" width="640" height="400"></canvas></div>' +
+      '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Pier is drawn</button>' +
+      '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
+    const canvas = document.getElementById("studio-c");
+    const ctx = canvas.getContext("2d");
+    const vp = { x: 320, y: 90 };
+    ctx.fillStyle = "#fbf7ee";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.strokeStyle = "#8ea0a0";
+    ctx.beginPath();
+    ctx.moveTo(20, 90);
+    ctx.lineTo(620, 90);
+    ctx.stroke();
+    ctx.fillStyle = "#a65b32";
+    ctx.beginPath();
+    ctx.arc(vp.x, vp.y, 5, 0, Math.PI * 2);
+    ctx.fill();
+    canvas.addEventListener("click", function (ev) {
+      const r = canvas.getBoundingClientRect();
+      const x = (ev.clientX - r.left) * (canvas.width / r.width);
+      const y = (ev.clientY - r.top) * (canvas.height / r.height);
+      ctx.strokeStyle = "#24363c";
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      ctx.lineTo(vp.x, vp.y);
+      ctx.stroke();
+    });
+    document.getElementById("done").addEventListener("click", function () {
+      finishChallenge("perspective", "Pier runs to one point.");
+    });
+    document.getElementById("back-ch").addEventListener("click", function () {
+      state.run = {};
+      renderStudioList();
+    });
+  }
+
+  function renderStudioValue() {
+    const root = document.getElementById("view");
+    const steps = [0, 0, 0, 0, 0];
+    root.innerHTML =
+      '<article class="panel"><p class="kicker">Five values</p><h1>Light to dark</h1>' +
+      '<p class="lede">Tap each box to step it darker. Then tap the sphere’s light, mid, and shadow.</p></article>' +
+      '<div class="value-row" id="vals"></div>' +
+      '<div class="studio-board"><canvas id="studio-c" width="640" height="280"></canvas></div>' +
+      '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Value strip done</button>' +
+      '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
+    function paintVals() {
+      document.getElementById("vals").innerHTML = steps.map(function (n, i) {
+        const g = 255 - n * 50;
+        return '<button type="button" class="value-box" data-v="' + i + '" style="background:rgb(' + g + "," + g + "," + g + ')" aria-label="value ' + (i + 1) + '"></button>';
+      }).join("");
+      document.getElementById("vals").querySelectorAll("[data-v]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const i = Number(btn.getAttribute("data-v"));
+          steps[i] = Math.min(5, steps[i] + 1);
+          paintVals();
+        });
+      });
+    }
+    paintVals();
+    const canvas = document.getElementById("studio-c");
+    const ctx = canvas.getContext("2d");
+    const zones = [
+      { x: 250, fill: "#e8dcc0" },
+      { x: 320, fill: "#8a8074" },
+      { x: 390, fill: "#2a241c" }
+    ];
+    function drawSphere() {
+      ctx.fillStyle = "#fbf7ee";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.beginPath();
+      ctx.arc(320, 140, 90, 0, Math.PI * 2);
+      ctx.fillStyle = "#c8b8a0";
+      ctx.fill();
+      zones.forEach(function (z) {
+        ctx.beginPath();
+        ctx.arc(z.x, 140, 28, 0, Math.PI * 2);
+        ctx.fillStyle = z.fill;
+        ctx.fill();
+      });
+    }
+    drawSphere();
+    canvas.addEventListener("click", function (ev) {
+      const r = canvas.getBoundingClientRect();
+      const x = (ev.clientX - r.left) * (canvas.width / r.width);
+      zones.forEach(function (z) {
+        if (Math.abs(x - z.x) < 40) {
+          z.fill = z.fill === "#1c1814" ? "#e8dcc0" : "#1c1814";
+        }
+      });
+      drawSphere();
+    });
+    document.getElementById("done").addEventListener("click", function () {
+      finishChallenge("value", "Five values are marked.");
+    });
+    document.getElementById("back-ch").addEventListener("click", function () {
+      state.run = {};
+      renderStudioList();
+    });
+  }
+
+  function renderStudioThirds() {
+    const root = document.getElementById("view");
+    root.innerHTML =
+      '<article class="panel"><p class="kicker">Harbor thirds</p><h1>Set the boat on a crossing</h1>' +
+      '<p class="lede">Tap a third-line crossing — not dead center.</p></article>' +
+      '<div class="thirds-board">' +
+        '<img src="' + u("images/harbor-studio-hero.jpg") + '" alt="Harbor studio scene">' +
+        '<div class="thirds-grid"></div>' +
+        '<div class="thirds-hit" id="hits"></div>' +
+      "</div>" +
+      '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Boat is on a third</button>' +
+      '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
+    const hits = document.getElementById("hits");
+    for (let i = 0; i < 9; i++) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", "cell " + (i + 1));
+      b.addEventListener("click", function () {
+        hits.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
+        b.classList.add("on");
+      });
+      hits.appendChild(b);
+    }
+    document.getElementById("done").addEventListener("click", function () {
+      finishChallenge("thirds", "Boat sits on a third.");
+    });
+    document.getElementById("back-ch").addEventListener("click", function () {
+      state.run = {};
+      renderStudioList();
+    });
+  }
+
+  function renderStudio() {
+    const id = state.run && state.run.challenge;
+    if (id === "mirror") return renderStudioMirror();
+    if (id === "upside") return renderStudioUpside();
+    if (id === "abstract") return renderStudioAbstract();
+    if (id === "perspective") return renderStudioPerspective();
+    if (id === "value") return renderStudioValue();
+    if (id === "thirds") return renderStudioThirds();
+    renderStudioList();
   }
 
   function renderCollection() {

@@ -108,6 +108,111 @@
     HSAudio.speak(text);
   }
 
+  function reducedMotion() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  const POSE = {
+    march: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [34, 72], ra: [90, 50], ll: [40, 148], rl: [84, 122] },
+    prance: { h: [62, 18], n: [62, 32], hip: [60, 84], la: [38, 64], ra: [96, 40], ll: [36, 130], rl: [88, 148] },
+    swing: { h: [58, 28], n: [56, 42], hip: [54, 92], la: [28, 120], ra: [86, 70], ll: [40, 148], rl: [78, 148] },
+    creep: { h: [48, 70], n: [50, 82], hip: [62, 108], la: [28, 118], ra: [78, 100], ll: [48, 148], rl: [90, 148] },
+    down: { h: [28, 70], n: [40, 78], hip: [78, 78], la: [22, 108], ra: [98, 108], ll: [58, 148], rl: [100, 148] },
+    situp: { h: [60, 40], n: [60, 54], hip: [62, 102], la: [32, 28], ra: [88, 28], ll: [44, 148], rl: [80, 148] },
+    armsout: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [16, 70], ra: [104, 70], ll: [46, 148], rl: [74, 148] },
+    toss: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [28, 18], ra: [92, 18], ll: [46, 148], rl: [74, 148] },
+    baton: { h: [58, 18], n: [58, 32], hip: [58, 86], la: [40, 70], ra: [86, 8], ll: [40, 148], rl: [80, 124] },
+    pull: { h: [72, 28], n: [68, 42], hip: [58, 90], la: [28, 70], ra: [36, 78], ll: [40, 148], rl: [78, 148] },
+    twirl: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [18, 40], ra: [104, 86], ll: [46, 148], rl: [78, 148] },
+    star: { h: [60, 22], n: [60, 36], hip: [60, 86], la: [14, 78], ra: [106, 78], ll: [28, 148], rl: [92, 148] },
+    bowp: { h: [60, 48], n: [60, 60], hip: [60, 88], la: [32, 90], ra: [88, 90], ll: [48, 148], rl: [72, 148] },
+    meltp: { h: [60, 96], n: [60, 108], hip: [62, 124], la: [30, 128], ra: [90, 128], ll: [44, 148], rl: [80, 148] },
+    growp: { h: [60, 16], n: [60, 30], hip: [60, 86], la: [48, 8], ra: [72, 8], ll: [50, 148], rl: [70, 148] },
+    spinp: { h: [64, 20], n: [62, 34], hip: [58, 86], la: [24, 54], ra: [100, 54], ll: [70, 148], rl: [48, 120] },
+    skipp: { h: [58, 16], n: [58, 30], hip: [56, 82], la: [32, 58], ra: [90, 44], ll: [34, 120], rl: [86, 148] },
+    giantp: { h: [50, 20], n: [50, 34], hip: [52, 86], la: [28, 70], ra: [84, 60], ll: [24, 148], rl: [96, 148] },
+    reachp: { h: [60, 12], n: [60, 26], hip: [60, 84], la: [44, 4], ra: [76, 4], ll: [50, 148], rl: [70, 148] },
+    clapp: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [48, 64], ra: [72, 64], ll: [46, 148], rl: [74, 148] },
+    shakep: { h: [60, 22], n: [60, 36], hip: [60, 88], la: [22, 50], ra: [98, 86], ll: [40, 148], rl: [80, 148] },
+    kickp: { h: [58, 22], n: [58, 36], hip: [58, 88], la: [34, 70], ra: [86, 64], ll: [48, 148], rl: [96, 110] },
+    widep: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [10, 70], ra: [110, 70], ll: [46, 148], rl: [74, 148] },
+    lookp: { h: [48, 22], n: [54, 36], hip: [60, 88], la: [32, 70], ra: [88, 70], ll: [46, 148], rl: [74, 148] },
+    bikep: { h: [36, 86], n: [48, 90], hip: [78, 96], la: [40, 118], ra: [70, 70], ll: [96, 148], rl: [110, 120] },
+    pliep: { h: [60, 20], n: [60, 34], hip: [60, 84], la: [28, 80], ra: [92, 80], ll: [32, 148], rl: [88, 148] },
+    tendup: { h: [56, 20], n: [56, 34], hip: [56, 86], la: [30, 74], ra: [86, 70], ll: [48, 148], rl: [100, 140] },
+    relevep: { h: [60, 14], n: [60, 28], hip: [60, 80], la: [28, 64], ra: [92, 64], ll: [50, 140], rl: [70, 140] },
+    portp: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [28, 24], ra: [92, 24], ll: [46, 148], rl: [74, 148] },
+    passep: { h: [60, 18], n: [60, 32], hip: [58, 86], la: [30, 70], ra: [90, 66], ll: [50, 148], rl: [72, 110] },
+    taptoe: { h: [58, 20], n: [58, 34], hip: [58, 86], la: [34, 70], ra: [86, 66], ll: [48, 148], rl: [90, 132] },
+    stampp: { h: [60, 20], n: [60, 34], hip: [60, 86], la: [36, 70], ra: [88, 70], ll: [44, 148], rl: [78, 148] },
+    bouncep: { h: [60, 26], n: [60, 40], hip: [60, 92], la: [32, 78], ra: [88, 78], ll: [44, 140], rl: [76, 140] },
+    pointp: { h: [58, 20], n: [58, 34], hip: [58, 86], la: [20, 54], ra: [108, 48], ll: [46, 148], rl: [80, 148] },
+    boxp: { h: [54, 20], n: [56, 34], hip: [60, 86], la: [28, 70], ra: [92, 64], ll: [36, 148], rl: [86, 148] },
+    rollp: { h: [60, 20], n: [60, 36], hip: [60, 88], la: [40, 28], ra: [92, 52], ll: [46, 148], rl: [74, 148] },
+    breathp: { h: [60, 20], n: [60, 34], hip: [60, 88], la: [40, 88], ra: [80, 88], ll: [48, 148], rl: [72, 148] }
+  };
+  const POSE_FOR = {
+    march: "march",
+    "drum-major": "baton",
+    "high-horse": "prance",
+    "elephant-swing": "swing",
+    "quiet-mouse": "creep",
+    "lion-stretch": "down",
+    "seal-clap": "situp",
+    tightrope: "armsout",
+    "juggle-toss": "toss",
+    "wagon-pull": "pull",
+    "ribbon-twirl": "twirl",
+    statue: "star",
+    bow: "bowp",
+    melt: "meltp",
+    grow: "growp",
+    "spot-spin": "spinp",
+    skip: "skipp",
+    gallop: "skipp",
+    "giant-tiny": "giantp",
+    "reach-top": "reachp",
+    "clap-stomp": "clapp",
+    wiggle: "shakep",
+    "kick-kicks": "kickp",
+    "open-close": "widep",
+    "look-parade": "lookp",
+    bicycle: "bikep",
+    plie: "pliep",
+    tendu: "tendup",
+    releve: "relevep",
+    "port-de-bras": "portp",
+    passe: "passep",
+    "toe-tap": "taptoe",
+    "heel-drop": "taptoe",
+    stamp: "stampp",
+    shuffle: "taptoe",
+    "ball-change": "skipp",
+    bounce: "bouncep",
+    "two-step": "boxp",
+    "clap-cross": "clapp",
+    "point-pose": "pointp",
+    "box-step": "boxp",
+    "shoulder-rolls": "rollp",
+    "ankle-circles": "tendup",
+    "count-in": "breathp"
+  };
+
+  function poseBlock(mv) {
+    const p = POSE[POSE_FOR[mv && mv.id] || "march"] || POSE.march;
+    function L(a, b) {
+      return "M" + a[0] + " " + a[1] + "L" + b[0] + " " + b[1];
+    }
+    return (
+      '<div class="pose-wrap" aria-hidden="true">' +
+        '<svg class="pose-fig" viewBox="0 0 120 160">' +
+          '<circle cx="' + p.h[0] + '" cy="' + p.h[1] + '" r="13"/>' +
+          '<path d="' + [L(p.n, p.hip), L(p.n, p.la), L(p.n, p.ra), L(p.hip, p.ll), L(p.hip, p.rl)].join("") + '"/>' +
+        "</svg>" +
+      "</div>"
+    );
+  }
+
   function stopRun() {
     HSAudio.stopBand();
     if (state.run && state.run.interval) clearInterval(state.run.interval);
@@ -247,7 +352,7 @@
         "<h1>" + title + "</h1>" +
         '<p class="lede">Watch, hear the cue, then do the move. Modest shapes only.</p>' +
       "</article>" +
-      '<div class="move-stage" id="stage"><p class="kicker">Ready</p><h2>Tap start</h2></div>' +
+      '<div class="move-stage" id="stage">' + poseBlock({ id: "march", name: "Ready" }) + '<p class="kicker">Ready</p><h2>Tap start</h2></div>' +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main" id="go-btn">Start the parade</button>' +
         '<button type="button" class="btn" id="next-btn">Next move</button>' +
@@ -257,6 +362,7 @@
       const mv = moveById(ids[i]);
       if (!mv) return finish();
       document.getElementById("stage").innerHTML =
+        poseBlock(mv) +
         '<p class="kicker">Move ' + (i + 1) + " of " + ids.length + "</p>" +
         "<h2>" + mv.name + "</h2>" +
         '<p class="move-how">' + mv.how + "</p>";
@@ -265,7 +371,7 @@
     }
     function finish() {
       stopRun();
-      document.getElementById("stage").innerHTML = "<h2>Parade rest</h2><p>Bow to the crowd.</p>";
+      document.getElementById("stage").innerHTML = poseBlock({ id: "bow", name: "Bow" }) + "<h2>Parade rest</h2><p>Bow to the crowd.</p>";
       speak("Parade rest. Bow to the crowd.");
       award({ stars: 1, ribbon: kind === "ballet" ? "cream" : kind === "tap" ? "blue" : kind === "street" ? "green" : "red", stamp: "horse", done: "parade-" + (kind || "all"), msg: "A parade ribbon!" });
     }
@@ -303,7 +409,7 @@
     root.innerHTML =
       '<article class="panel"><p class="kicker">Listen first</p><h1>Ringmaster Says</h1>' +
       '<p class="lede">Move only when you hear “Ringmaster says”. Otherwise hold still.</p></article>' +
-      '<div class="move-stage" id="stage"><h2>Tap start</h2></div>' +
+      '<div class="move-stage" id="stage">' + poseBlock({ id: "statue", name: "Ready" }) + "<h2>Tap start</h2></div>" +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main" id="moved">I moved</button>' +
         '<button type="button" class="btn" id="still">I stayed still</button>' +
@@ -313,7 +419,7 @@
     function nextCue() {
       if (state.run.round >= state.run.total) {
         award({ stars: 1, ribbon: "gold", stamp: "star", done: "ringmaster", msg: "Gold ribbon!" });
-        document.getElementById("stage").innerHTML = "<h2>The ring is yours</h2>";
+        document.getElementById("stage").innerHTML = poseBlock({ id: "bow", name: "Bow" }) + "<h2>The ring is yours</h2>";
         current = null;
         return;
       }
@@ -322,7 +428,8 @@
       current = { mv: mv, trap: trap };
       const line = trap ? mv.name : "Ringmaster says " + mv.name;
       document.getElementById("stage").innerHTML =
-        '<p class="kicker">Cue ' + (state.run.round + 1) + '</p><h2>' + line + '</h2><p class="move-how">' + mv.how + '</p>';
+        poseBlock(mv) +
+        '<p class="kicker">Cue ' + (state.run.round + 1) + "</p><h2>" + line + '</h2><p class="move-how">' + mv.how + "</p>";
       speak(line);
     }
     function answer(moved) {
@@ -365,11 +472,23 @@
     const froze = document.getElementById("froze");
     let freezes = 0;
     let beatOn = false;
-    state.run = { interval: setInterval(function () {
-      beatOn = !beatOn;
-      lamp.classList.toggle("on", beatOn && HSAudio.playing && !HSAudio.frozen);
-    }, 240) };
+    const still = reducedMotion();
+    state.run = {
+      interval: still ? null : setInterval(function () {
+        beatOn = !beatOn;
+        lamp.classList.toggle("on", beatOn && HSAudio.playing && !HSAudio.frozen);
+      }, 240)
+    };
+    if (still) lamp.classList.add("on");
+    function onWarn() {
+      stage.classList.add("warn");
+      stage.classList.remove("frozen");
+      const h = stage.querySelector("h2");
+      if (h) h.textContent = "Get ready…";
+      speak("Get ready");
+    }
     function onFreeze() {
+      stage.classList.remove("warn");
       stage.classList.add("frozen");
       stage.querySelector("h2").textContent = "FREEZE";
       froze.disabled = false;
@@ -377,6 +496,7 @@
     }
     function onGo() {
       stage.classList.remove("frozen");
+      stage.classList.remove("warn");
       stage.querySelector("h2").textContent = "Parade";
       froze.disabled = true;
       speak("Go!");
@@ -388,6 +508,7 @@
         barsMin: cfg.barsMin,
         barsMax: cfg.barsMax,
         warn: cfg.warn,
+        onWarn: onWarn,
         onFreeze: onFreeze,
         onGo: onGo
       });
@@ -530,11 +651,16 @@
         '<button type="button" class="btn btn-ghost" id="home-btn">Back</button>' +
       "</div>";
     const wagon = document.getElementById("wagon");
-    state.run = { interval: setInterval(function () {
-      x += 6;
-      if (x > 90) x = -20;
-      wagon.style.left = x + "%";
-    }, 900) };
+    wagon.style.left = "36%";
+    if (reducedMotion()) {
+      state.run = { interval: null };
+    } else {
+      state.run = { interval: setInterval(function () {
+        x += 6;
+        if (x > 90) x = -20;
+        wagon.style.left = x + "%";
+      }, 900) };
+    }
     document.getElementById("toot").addEventListener("click", function () {
       HSAudio.blip("toot");
       speak("Toot toot");
@@ -639,7 +765,10 @@
 
   function renderBuilder() {
     const pool = ["march", "drum-major", "tightrope", "spot-spin", "statue", "bow", "box-step", "point-pose", "clap-stomp", "ribbon-twirl"];
-    const ids = pool.filter(function (id) { return C.moves[id]; });
+    const ids = pool.filter(function (id) {
+      const m = C.moves[id];
+      return m && m.bands.indexOf(state.band) !== -1;
+    });
     state.run = { picked: [] };
     const root = document.getElementById("view");
     function paint() {
@@ -651,7 +780,7 @@
           return '<button type="button" class="btn" data-m="' + id + '" aria-pressed="' + on + '">' + C.moves[id].name + "</button>";
         }).join("") + "</div>" +
         '<p class="lede" style="margin-top:12px">Order: ' + (state.run.picked.map(function (id) { return C.moves[id].name; }).join(" → ") || "none yet") + "</p>" +
-        '<div class="move-stage" id="stage"><h2>Your parade</h2></div>' +
+        '<div class="move-stage" id="stage">' + poseBlock({ id: "march", name: "Parade" }) + "<h2>Your parade</h2></div>" +
         '<div class="btn-row">' +
           '<button type="button" class="btn btn-main" id="play">Play sequence</button>' +
           '<button type="button" class="btn" id="clear">Clear</button>' +
@@ -679,7 +808,7 @@
             return;
           }
           const mv = C.moves[state.run.picked[i]];
-          document.getElementById("stage").innerHTML = "<h2>" + mv.name + "</h2><p>" + mv.how + "</p>";
+          document.getElementById("stage").innerHTML = poseBlock(mv) + "<h2>" + mv.name + "</h2><p>" + mv.how + "</p>";
           speak(mv.say);
           i += 1;
           state.run.timeout = setTimeout(step, 5000);

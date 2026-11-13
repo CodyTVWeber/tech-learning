@@ -1,4 +1,4 @@
-const CACHE = "hs-movement-v1";
+const CACHE = "hs-movement-v2";
 const BASE = new URL("./", self.location);
 
 self.addEventListener("install", function (event) {
@@ -20,7 +20,11 @@ self.addEventListener("install", function (event) {
   );
 });
 self.addEventListener("activate", function (event) {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
+    }).then(function () { return self.clients.claim(); })
+  );
 });
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;

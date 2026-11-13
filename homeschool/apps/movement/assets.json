@@ -5,7 +5,7 @@
   "theme": "circus parade",
   "subject": "movement",
   "version": 1,
-  "cache": "hs-movement-v1",
+  "cache": "hs-movement-v2",
   "files": [
     "index.html",
     "styles.css",

@@ -12,6 +12,7 @@
     timer: null,
     onFreeze: null,
     onGo: null,
+    onWarn: null,
     warn: false,
     barsMin: 2,
     barsMax: 5,
@@ -110,6 +111,16 @@
         hat(ctx, t);
         toot(ctx, t, AudioEngine.step, beat);
       }
+      if (
+        AudioEngine.warn &&
+        !AudioEngine.frozen &&
+        AudioEngine.freezeAt > 4 &&
+        AudioEngine.step === AudioEngine.freezeAt - 4
+      ) {
+        toot(ctx, t, 6, 0);
+        toot(ctx, t + 0.12, 5, 0);
+        if (AudioEngine.onWarn) AudioEngine.onWarn();
+      }
       if (AudioEngine.step >= AudioEngine.freezeAt && !AudioEngine.frozen) {
         AudioEngine.frozen = true;
         if (AudioEngine.onFreeze) AudioEngine.onFreeze();
@@ -190,6 +201,7 @@
     AudioEngine.barsMin = opts.barsMin || 2;
     AudioEngine.barsMax = opts.barsMax || 5;
     AudioEngine.warn = !!opts.warn;
+    AudioEngine.onWarn = opts.onWarn || null;
     AudioEngine.onFreeze = opts.onFreeze || null;
     AudioEngine.onGo = opts.onGo || null;
     AudioEngine.playing = true;
@@ -207,6 +219,14 @@
       AudioEngine.timer = setInterval(function () {
         beats += 1;
         AudioEngine.step = beats;
+        if (
+          AudioEngine.warn &&
+          !AudioEngine.frozen &&
+          AudioEngine.freezeAt > 4 &&
+          beats === AudioEngine.freezeAt - 4
+        ) {
+          if (AudioEngine.onWarn) AudioEngine.onWarn();
+        }
         if (!AudioEngine.frozen && beats >= AudioEngine.freezeAt) {
           AudioEngine.frozen = true;
           AudioEngine.goAt = beats + 8;
