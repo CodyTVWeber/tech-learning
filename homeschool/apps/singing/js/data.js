@@ -11,13 +11,13 @@ window.SINGING = {
     { id: "upper", label: "Upper" }
   ],
   images: {
-    forest: "img/singing-forest-hero.jpg",
-    wren: "img/singing-wren.jpg",
-    choir: "img/singing-choir.jpg",
-    nest: "img/singing-nest.jpg",
-    cardinal: "img/singing-cardinal.jpg",
-    owl: "img/singing-owl.jpg",
-    path: "img/singing-path.jpg"
+    forest: "images/forest-hero.png",
+    wren: "images/wren.png",
+    choir: "images/choir.png",
+    nest: "images/nest.png",
+    cardinal: "images/cardinal.png",
+    owl: "images/owl.png",
+    path: "images/path.png"
   },
   solfege: [
     { syl: "Do", midi: 60, hint: "home perch, rest here", hand: "Fist at the middle of the chest." },
@@ -27,7 +27,7 @@ window.SINGING = {
     { syl: "Sol", midi: 67, hint: "open to the canopy", hand: "Palm toward you, thumb out." },
     { syl: "La", midi: 69, hint: "soft light in the leaves", hand: "Drooping hand, relaxed." },
     { syl: "Ti", midi: 71, hint: "almost home again", hand: "Pointer finger points up." },
-    { syl: "Do2", midi: 72, hint: "high nest, same name", hand: "Fist, held high." }
+    { syl: "high Do", midi: 72, hint: "high nest, same name", hand: "Fist, held high." }
   ],
   rhythm: [
     { id: "ta", name: "Ta", pattern: [1], minBand: "baby", say: "ta" },
@@ -232,7 +232,7 @@ window.SINGING = {
     {
       id: "hot-cross",
       title: "Hot Cross Buns",
-      kind: "hymn",
+      kind: "tune",
       minBand: "baby",
       source: "English traditional, public domain. Used as a three-note pitch game, not a church hymn.",
       img: "wren",
@@ -247,7 +247,7 @@ window.SINGING = {
     {
       id: "are-you-sleeping",
       title: "Are You Sleeping",
-      kind: "hymn",
+      kind: "tune",
       minBand: "baby",
       source: "Frère Jacques, traditional, public domain.",
       img: "owl",

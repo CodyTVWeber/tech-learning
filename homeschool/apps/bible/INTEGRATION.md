@@ -14,7 +14,8 @@ Theme: a shepherd’s hillside. Kids gather sheep as they memorize, light lanter
 - Progress: `localStorage['hs.progress.bible']` (sheep ids, lantern count, stars, done maps, KJV/WEB toggle).
 - No grades. Rewards are sheep, lanterns, and stars.
 - No runtime network. Web Speech for read-aloud when the browser has it. WebAudio for chimes.
-- Registers `sw.js` scoped to this folder so the app can run offline on its own. If the kit already precaches `assets.json` from a root worker, that is enough; this worker is extra safety.
+- Registers `sw.js` scoped to this folder so the app can run offline on its own, unless `document.documentElement.dataset.runner === "1"` (the learner runner already controls the page).
+- Visible banner on every screen, including the band picker: “Untested, awaiting parent test.” Not screen-reader-only.
 
 Offline check (Playwright): load `index.html`, wait for the service worker, set offline, reload, pick a band, play Memory and a story. Passed.
 
@@ -28,5 +29,7 @@ Offline check (Playwright): load `index.html`, wait for the service worker, set 
 ## Do not
 
 - Do not paste Classical Conversations recitation cards or Bible-song lyrics from class.
-- Do not show child names, ages, or grades.
+- Do not show child names, ages, or grades. Do not write family last names.
 - Do not point this app at a shared CSS/JS kit; it is self-contained on purpose.
+
+Anki (`homeschool/decks/bible-src/`): fronts never contain the answer; every card is self-contained text. `.apkg` builds use a fixed timestamp and zip `date_time`. Prefer checking `cards.csv` / `catalog.json` note counts over byte-diffing archives.

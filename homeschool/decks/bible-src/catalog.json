@@ -1,0 +1,46 @@
+{
+  "decks": [
+    {
+      "id": "bible-baby",
+      "file": "bible-baby.apkg",
+      "csv": "cards.csv",
+      "band": "baby",
+      "cards": 26
+    },
+    {
+      "id": "bible-toddler",
+      "file": "bible-toddler.apkg",
+      "csv": "cards.csv",
+      "band": "toddler",
+      "cards": 56
+    },
+    {
+      "id": "bible-preschool",
+      "file": "bible-preschool.apkg",
+      "csv": "cards.csv",
+      "band": "preschool",
+      "cards": 104
+    },
+    {
+      "id": "bible-early",
+      "file": "bible-early.apkg",
+      "csv": "cards.csv",
+      "band": "early",
+      "cards": 168
+    },
+    {
+      "id": "bible-primary",
+      "file": "bible-primary.apkg",
+      "csv": "cards.csv",
+      "band": "primary",
+      "cards": 309
+    },
+    {
+      "id": "bible-upper",
+      "file": "bible-upper.apkg",
+      "csv": "cards.csv",
+      "band": "upper",
+      "cards": 331
+    }
+  ]
+}

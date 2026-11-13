@@ -1,55 +1,62 @@
 {
-  "subject": "singing",
+  "app": "singing",
   "theme": "Songbird Forest — moss, bark, cardinal, dawn gold, fern path",
-  "slots": [
+  "images": [
     {
-      "file": "img/singing-forest-hero.jpg",
-      "subject": "singing",
-      "size": "1280x720",
+      "file": "forest-hero.png",
+      "width": 1280,
+      "height": 720,
       "alt": "Dawn light through a mossy forest canopy",
-      "theme": "Home hero. Cool green, not the Bible hillside."
+      "themeNotes": "Home hero. Cool green, not the Bible hillside.",
+      "slot": "hero"
     },
     {
-      "file": "img/singing-wren.jpg",
-      "subject": "singing",
-      "size": "1024x1024",
+      "file": "wren.png",
+      "width": 1024,
+      "height": 1024,
       "alt": "Wren singing on a mossy branch",
-      "theme": "Mid pitch; mid choir bird."
+      "themeNotes": "Mid pitch; mid choir bird.",
+      "slot": "wren"
     },
     {
-      "file": "img/singing-choir.jpg",
-      "subject": "singing",
-      "size": "1024x768",
+      "file": "choir.png",
+      "width": 1024,
+      "height": 768,
       "alt": "Several wild songbirds perched together on a fallen log",
-      "theme": "Choir collectible."
+      "themeNotes": "Choir collectible.",
+      "slot": "choir"
     },
     {
-      "file": "img/singing-nest.jpg",
-      "subject": "singing",
-      "size": "1024x1024",
+      "file": "nest.png",
+      "width": 1024,
+      "height": 1024,
       "alt": "Bird nest with speckled eggs in ferns",
-      "theme": "Pitch nest; baby songs."
+      "themeNotes": "Pitch nest; baby songs.",
+      "slot": "nest"
     },
     {
-      "file": "img/singing-cardinal.jpg",
-      "subject": "singing",
-      "size": "1024x1024",
+      "file": "cardinal.png",
+      "width": 1024,
+      "height": 1024,
       "alt": "Northern cardinal singing on a wet pine branch",
-      "theme": "High pitch bird."
+      "themeNotes": "High pitch bird.",
+      "slot": "cardinal"
     },
     {
-      "file": "img/singing-owl.jpg",
-      "subject": "singing",
-      "size": "768x1024",
+      "file": "owl.png",
+      "width": 768,
+      "height": 1024,
       "alt": "Barred owl on a mossy oak limb at blue hour",
-      "theme": "Low pitch bird."
+      "themeNotes": "Low pitch bird.",
+      "slot": "owl"
     },
     {
-      "file": "img/singing-path.jpg",
-      "subject": "singing",
-      "size": "1280x720",
+      "file": "path.png",
+      "width": 1280,
+      "height": 720,
       "alt": "Sunlit forest path with ferns and pine needles",
-      "theme": "Solfege trail."
+      "themeNotes": "Solfege trail.",
+      "slot": "path"
     }
   ]
 }

@@ -1,13 +1,18 @@
 /* WebAudio chimes + Web Speech read-aloud. No audio files. */
 (function (global) {
   let ctx;
+  function muted() {
+    return (window.HS && HS.muted && HS.muted()) || localStorage.getItem("hs.mute") === "1";
+  }
   function ac() {
+    if (muted()) return null;
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
     if (ctx.state === "suspended") ctx.resume();
     return ctx;
   }
   function tone(freq, t0, dur, type, gain) {
     const c = ac();
+    if (!c) return;
     const o = c.createOscillator();
     const g = c.createGain();
     o.type = type || "sine";
@@ -23,6 +28,7 @@
   const sfx = {
     chime() {
       const c = ac();
+      if (!c) return;
       const t = c.currentTime;
       tone(523.25, t, 0.18, "triangle", 0.1);
       tone(659.25, t + 0.09, 0.22, "triangle", 0.1);
@@ -30,17 +36,20 @@
     },
     lantern() {
       const c = ac();
+      if (!c) return;
       const t = c.currentTime;
       tone(392, t, 0.4, "sine", 0.08);
       tone(588, t + 0.05, 0.5, "triangle", 0.07);
     },
     star() {
       const c = ac();
+      if (!c) return;
       const t = c.currentTime;
       [880, 1046, 1318].forEach((f, i) => tone(f, t + i * 0.07, 0.25, "sine", 0.08));
     },
     bleat() {
       const c = ac();
+      if (!c) return;
       const t = c.currentTime;
       const o = c.createOscillator();
       const g = c.createGain();
@@ -57,11 +66,12 @@
     },
     miss() {
       const c = ac();
+      if (!c) return;
       tone(196, c.currentTime, 0.18, "square", 0.04);
     },
     speak(text) {
       try {
-        if (!window.speechSynthesis) return false;
+        if (muted() || !window.speechSynthesis) return false;
         window.speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
         u.rate = 0.92;

@@ -56,12 +56,26 @@ img { max-width: 100%; display: block; }
   z-index: 2;
 }
 
+.untested-banner {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  margin: 0;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #fff8e8;
+  background: var(--cardinal);
+  border-bottom: 4px solid #1a120c;
+}
 .app {
   position: relative;
   z-index: 1;
   max-width: 720px;
   margin: 0 auto;
-  padding: 28px 12px 100px;
+  padding: 28px 12px calc(168px + env(safe-area-inset-bottom, 0px));
 }
 
 .hero {
@@ -161,10 +175,10 @@ h2 { margin: 0 0 8px; font-size: 1.3rem; color: var(--moss); }
 .dock {
   position: fixed;
   left: 0; right: 0; bottom: 0;
-  z-index: 5;
+  z-index: 25;
   display: flex;
   gap: 4px;
-  padding: 8px;
+  padding: 8px 8px calc(12px + env(safe-area-inset-bottom, 0px));
   background: #0a1812;
   border-top: 4px solid var(--leaf);
 }
@@ -302,6 +316,14 @@ h2 { margin: 0 0 8px; font-size: 1.3rem; color: var(--moss); }
   margin: 0 0 12px;
 }
 .lyrics .on { background: #c8e6a8; border-radius: 4px; }
+.lyrics span { display: block; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .tile:active, .btn:active, .choice:active, .tap-pad.pulse { transform: none; }
+}
 
 .story-art {
   width: 100%;

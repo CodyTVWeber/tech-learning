@@ -1,6 +1,10 @@
 (function (global) {
   let ctx;
+  function muted() {
+    return (window.HS && HS.muted && HS.muted()) || localStorage.getItem("hs.mute") === "1";
+  }
   function ac() {
+    if (muted()) return null;
     if (!ctx) ctx = new (window.AudioContext || window.webkitAudioContext)();
     if (ctx.state === "suspended") ctx.resume();
     return ctx;
@@ -36,20 +40,24 @@
     midiToHz,
     chirp() {
       const c = ac();
+      if (!c) return;
       const t = c.currentTime;
       voice(c, 880, t, 0.12, 0.08);
       voice(c, 1320, t + 0.08, 0.16, 0.07);
     },
     miss() {
       const c = ac();
+      if (!c) return;
       voice(c, 196, c.currentTime, 0.16, 0.05);
     },
     playNote(midi, dur) {
       const c = ac();
+      if (!c) return;
       voice(c, midiToHz(midi), c.currentTime, dur || 0.55, 0.16);
     },
     playMelody(melody, bpm, onBeat) {
       const c = ac();
+      if (!c) return 0;
       const beat = 60 / (bpm || 90);
       let t = c.currentTime + 0.05;
       let beats = 0;
@@ -68,6 +76,7 @@
     },
     click(strong) {
       const c = ac();
+      if (!c) return;
       const t = c.currentTime;
       const o = c.createOscillator();
       const g = c.createGain();
@@ -82,7 +91,7 @@
     },
     speak(text) {
       try {
-        if (!window.speechSynthesis) return false;
+        if (muted() || !window.speechSynthesis) return false;
         window.speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
         u.rate = 0.95;

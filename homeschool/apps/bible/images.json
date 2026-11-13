@@ -1,55 +1,62 @@
 {
-  "subject": "bible",
+  "app": "bible",
   "theme": "Shepherd’s Hillside — ochre pasture, olive shade, lantern gold, night stars",
-  "slots": [
+  "images": [
     {
-      "file": "img/bible-hillside-hero.jpg",
-      "subject": "bible",
-      "size": "1280x720",
+      "file": "hillside-hero.png",
+      "width": 1280,
+      "height": 720,
       "alt": "Golden-hour hillside with a flock of cream and brown sheep",
-      "theme": "Home hero. Warm pasture, no people."
+      "themeNotes": "Home hero. Warm pasture, no people.",
+      "slot": "hero"
     },
     {
-      "file": "img/bible-sheep.jpg",
-      "subject": "bible",
-      "size": "1024x1024",
+      "file": "sheep.png",
+      "width": 1024,
+      "height": 1024,
       "alt": "Close photograph of a woolly sheep in dry hillside grass",
-      "theme": "Collectible / Psalm 23 pasture."
+      "themeNotes": "Collectible / Psalm 23 pasture.",
+      "slot": "sheep"
     },
     {
-      "file": "img/bible-lantern.jpg",
-      "subject": "bible",
-      "size": "768x1024",
+      "file": "lantern.png",
+      "width": 768,
+      "height": 1024,
       "alt": "Brass oil lantern glowing on limestone at night",
-      "theme": "Lantern reward; Psalm 119:105."
+      "themeNotes": "Lantern reward; Psalm 119:105.",
+      "slot": "lantern"
     },
     {
-      "file": "img/bible-stars.jpg",
-      "subject": "bible",
-      "size": "1280x720",
+      "file": "stars.png",
+      "width": 1280,
+      "height": 720,
       "alt": "Star field over a dark hillside with a distant lantern",
-      "theme": "Star reward; creation; heavens declare."
+      "themeNotes": "Star reward; creation; heavens declare.",
+      "slot": "stars"
     },
     {
-      "file": "img/bible-waters.jpg",
-      "subject": "bible",
-      "size": "1280x720",
+      "file": "waters.png",
+      "width": 1280,
+      "height": 720,
       "alt": "Still pool on a hillside reflecting a pale gold sky",
-      "theme": "Still waters; storm and sea stories."
+      "themeNotes": "Still waters; storm and sea stories.",
+      "slot": "waters"
     },
     {
-      "file": "img/bible-olives.jpg",
-      "subject": "bible",
-      "size": "1024x768",
+      "file": "olives.png",
+      "width": 1024,
+      "height": 768,
       "alt": "Gnarled olive trees on a sunlit stone terrace",
-      "theme": "Olive shade; character; prophets."
+      "themeNotes": "Olive shade; character; prophets.",
+      "slot": "olives"
     },
     {
-      "file": "img/bible-wheat.jpg",
-      "subject": "bible",
-      "size": "1280x720",
+      "file": "wheat.png",
+      "width": 1280,
+      "height": 720,
       "alt": "Ripe wheat field on rolling hills at late afternoon",
-      "theme": "Ruth, feeding the crowd, harvest stories."
+      "themeNotes": "Ruth, feeding the crowd, harvest stories.",
+      "slot": "wheat"
     }
   ]
 }
