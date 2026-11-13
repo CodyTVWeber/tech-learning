@@ -2,7 +2,7 @@
 
 A static, self-paced drill app for working like a high-leverage engineer in the age of agentic coding tools. It assumes you already know the AI basics and that you learn by doing short, concrete drills.
 
-The app is meant to be hosted with GitHub Pages from the root of `main`. There is no build step.
+This repo is **GitHub Pages deploy-ready**: serve from branch `main` at `/` (repo Settings → Pages → Deploy from a branch → `main` / `/`). There is no build step. The drill app is `/`; homeschool is `/homeschool/`.
 
 ## Run locally
 

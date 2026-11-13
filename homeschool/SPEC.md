@@ -46,7 +46,7 @@ Default subject levels (adjustable in the app; stored in `localStorage`, include
 - **Hanna (`toddler`):** letter sounds, play-based counting, creative movement, Bible, art, singing. No Cycle 3 stated.
 - **Shiloh (`baby`):** no academic track yet; placeholder home.
 
-Official grade = unknown for every learner. Formal curriculum names = unknown except phonics-in-use: sounds-first program for Piper/Hanna (do not name a commercial product in UI unless the owner asks).
+No grades. Formal curriculum names = unknown except phonics-in-use: sounds-first program for Piper/Hanna (do not name a commercial product in UI unless the owner asks).
 
 Dance: Theo tap + hip hop; Bella ballet + tap; Piper ballet + creative movement; Hanna creative movement. Joey and Shiloh: no dance class named. Do not assign ballet to Theo.
 
