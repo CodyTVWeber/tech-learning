@@ -25,7 +25,7 @@
   function reduceMotion() {
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
-  const PITCH_START = { baby: "mid", toddler: "high", preschool: "c4", early: "g4", primary: "c5", upper: "c5" };
+  const PITCH_START = { baby: "mid", toddler: "high", preschool: "c4", early: "g4", primary: "c5", upper: "e3" };
   const RHYTHM_START = { baby: "ta", toddler: "titi", preschool: "ta-titi", early: "rest", primary: "sync", upper: "dotted" };
   function defaultPitch(b) {
     const list = pitchesFor(b);
@@ -168,45 +168,60 @@
     pitchTarget = t;
     const hz = ForestSynth.midiToHz(t.midi);
     const micOn = p.mic && PitchMic.allowed;
+    const young = b === "baby" || b === "toddler";
     const meter = micOn
       ? `<div class="pitch-meter" id="meter">
           <div class="target" style="bottom:46%"></div>
           <div class="needle" id="needle" style="bottom:8%"></div>
         </div>
         <p class="pitch-readout" id="readout">Listening · target ${Math.round(hz)} Hz</p>`
-      : `<p class="pitch-readout" id="readout">Mic off · tap High / Same / Low</p>`;
+      : `<p class="pitch-readout" id="readout">${young ? "Mic off · tap the matching bird" : "Mic off · tap High / Same / Low"}</p>`;
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
         <p class="kicker">Pitch nest</p>
         <h2>${t.label}</h2>
         <img class="story-art" src="${img(t.img)}" alt="">
-        <p class="lead">Hear the bird. Match with your voice, or tap High / Same / Low if the mic stays off.</p>
+        <p class="lead">${young ? "Hear the bird. Tap the picture of the bird that sang." : "Hear the bird. Match with your voice, or tap High / Same / Low if the mic stays off."}</p>
         ${meter}
         <div class="mic-warn">The microphone is optional. If you allow it, sound is measured here only. It is never sent anywhere.</div>
         <div class="grid">
           <button class="btn sky touchy" type="button" data-act="hearpitch">Hear the bird</button>
           <button class="btn cardinal touchy" type="button" data-act="mic">${micOn ? "Stop mic" : "Allow mic (local)"}</button>
         </div>
-        <p class="tiny">Which call matches? (works with no mic)</p>
-        <div class="grid" id="match-birds"></div>
+        <p class="tiny">${young ? "Which bird sang? (works with no mic)" : "Which call matches? (works with no mic)"}</p>
+        <div class="grid ${young ? "birds" : ""}" id="match-birds"></div>
         <div class="list" style="margin-top:10px">
           ${list.map((x) => `<button class="row ${x.id===t.id?"done":""} touchy" type="button" data-pitch="${x.id}">${x.label}</button>`).join("")}
         </div>
       </section>
     `)}</div>`;
-    const choices = [t.midi - 5, t.midi, t.midi + 7];
-    for (let i = choices.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [choices[i], choices[j]] = [choices[j], choices[i]];
-    }
     const box = $("#match-birds");
-    if (box) {
+    if (box && young) {
+      const birds = [
+        { img: "owl", name: "Owl", midi: 52 },
+        { img: "wren", name: "Wren", midi: 60 },
+        { img: "cardinal", name: "Cardinal", midi: 72 }
+      ];
+      box.innerHTML = birds.map((bird) => {
+        const midi = bird.img === t.img ? t.midi : bird.midi;
+        return `<button class="choice bird-pick touchy" type="button" data-match="${midi}" data-right="${t.midi}"><img src="${img(bird.img)}" alt="${bird.name}"></button>`;
+      }).join("");
+    } else if (box) {
+      const choices = [t.midi - 5, t.midi, t.midi + 7];
+      for (let i = choices.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [choices[i], choices[j]] = [choices[j], choices[i]];
+      }
       box.innerHTML = choices.map((m) => {
         const label = m < t.midi ? "Low" : m > t.midi ? "High" : "Same";
         return `<button class="choice touchy" type="button" data-match="${m}" data-right="${t.midi}">${label}</button>`;
       }).join("");
     }
     startMeter();
+    if (b === "baby") {
+      heardPitch = true;
+      ForestSynth.playNote(t.midi, 0.8);
+    }
   }
 
   function startMeter() {
@@ -437,7 +452,8 @@
           setProg((p) => { p.mic = true; });
         }
       } catch (err) {
-        celebrate("Mic stayed off.", "You can still tap Same / Higher / Lower.");
+        const young = band() === "baby" || band() === "toddler";
+        celebrate("Mic stayed off.", young ? "You can still tap the matching bird." : "You can still tap High, Same, or Low.");
       }
       pitchScreen();
       return;
@@ -452,7 +468,8 @@
       const midi = Number(t.dataset.match);
       ForestSynth.playNote(midi, 0.5);
       if (!heardPitch && !(prog().mic && PitchMic.allowed)) {
-        celebrate("Hear the bird first.", "Echo the call, then tap High, Same, or Low.");
+        const young = band() === "baby" || band() === "toddler";
+        celebrate("Hear the bird first.", young ? "Echo the call, then tap the matching bird." : "Echo the call, then tap High, Same, or Low.");
         return;
       }
       if (midi === Number(t.dataset.right)) {

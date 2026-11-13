@@ -84,6 +84,9 @@ img { max-width: 100%; display: block; }
   border-bottom: 4px solid var(--ochre-deep);
   box-shadow: 0 4px 0 #1a1208;
 }
+html[data-runner] .untested-banner {
+  display: none;
+}
 .app {
   position: relative;
   z-index: 1;
@@ -132,9 +135,13 @@ img { max-width: 100%; display: block; }
   background: var(--ochre);
   color: var(--soil);
   border: 2px solid #2a1c10;
-  padding: 6px 10px;
+  padding: 8px 14px;
   border-radius: 999px;
-  min-height: 40px;
+  min-height: 56px;
+  min-width: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .panel {
@@ -364,7 +371,8 @@ p.lead { margin: 0 0 12px; line-height: 1.45; }
 }
 .toggle button {
   flex: 1;
-  min-height: 48px;
+  min-height: 56px;
+  min-width: 56px;
   border: 2px solid #2a1c10;
   background: var(--cream);
   font-family: inherit;

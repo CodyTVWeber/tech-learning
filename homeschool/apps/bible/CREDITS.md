@@ -10,7 +10,7 @@
 - No Classical Conversations memory-work wording.
 
 ## Pictures
-Photorealistic stills generated for this app (Cursor image generation, 2026-11-13). Documentary landscape / wildlife look, no people, no text in frame.
+Photorealistic stills generated for this app (Cursor image generation, 2026-11-13). Documentary landscape / wildlife look, no people, no text in frame. The app shows these JPGs. `images/*.png` are kit placeholder slots the asset builder may repaint; they are not the pictures on screen.
 
 | File | What it shows |
 |---|---|

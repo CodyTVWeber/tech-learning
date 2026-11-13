@@ -227,31 +227,47 @@
   function escapeRe(word) {
     return word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   }
+  function plainWords(text) {
+    return String(text).replace(/[’‘]/g, "'");
+  }
+  function wordTokens(text) {
+    return plainWords(text).match(/[A-Za-z']{4,}/g) || [];
+  }
+  function hasWord(text, word) {
+    if (!word) return false;
+    return new RegExp("\\b" + escapeRe(word) + "\\b", "i").test(plainWords(text));
+  }
+  const BLANK_ALIASES = {
+    Saviour: ["Savior", "Saviour"],
+    charity: ["love", "charity"],
+    gospel: ["gospel", "Good"],
+    courage: ["courage", "courageous"],
+    joyful: ["joyful", "joy"],
+    soft: ["soft", "gentle"],
+    also: ["also", "exactly"],
+    care: ["care", "worries", "cares"]
+  };
   function blankWord(v, text) {
     const hint = v.blank || "";
-    const aliases = {
-      Saviour: ["Savior", "Saviour"],
-      charity: ["love", "charity"],
-      gospel: ["gospel", "Good"],
-    };
-    const tries = [hint].concat(aliases[hint] || []);
+    const tries = [hint].concat(BLANK_ALIASES[hint] || []);
     for (let i = 0; i < tries.length; i++) {
-      if (tries[i] && new RegExp("\\b" + escapeRe(tries[i]) + "\\b", "i").test(text)) return tries[i];
+      if (hasWord(text, tries[i])) return tries[i];
     }
     const stop = /^(that|this|with|from|unto|them|they|shall|thou|thee|your|have|been|into|upon)$/i;
-    const words = (text.match(/[A-Za-z']{4,}/g) || []).filter((w) => !stop.test(w));
+    const words = wordTokens(text).filter((w) => !stop.test(w.replace(/'/g, "")));
     return words[Math.min(2, words.length - 1)] || words[0] || hint || "word";
   }
   function blanked(text, word) {
+    const norm = plainWords(text);
     const re = new RegExp("\\b" + escapeRe(word) + "\\b", "i");
-    if (!re.test(text)) return text + ' <span class="blank">____</span>';
-    return text.replace(re, '<span class="blank">____</span>');
+    const m = norm.match(re);
+    if (!m) return text + ' <span class="blank">____</span>';
+    return text.slice(0, m.index) + '<span class="blank">____</span>' + text.slice(m.index + m[0].length);
   }
   function distractors(correct, pool, p) {
     const words = new Set();
     pool.forEach((v) => {
-      const src = textOf(v, p);
-      (src.match(/[A-Za-z']{4,}/g) || []).forEach((w) => {
+      wordTokens(textOf(v, p)).forEach((w) => {
         if (w.toLowerCase() !== correct.toLowerCase()) words.add(w);
       });
     });
@@ -280,7 +296,6 @@
     const v = list[memCursor];
     const t = textOf(v, p);
     const baby = b === "baby";
-    const hideTarget = b === "toddler" || b === "preschool";
     const firstLetters = b === "upper" || b === "primary";
     const word = blankWord(v, t);
     const first = t.split(/\s+/).map((w) => w[0] + w.slice(1).replace(/[A-Za-z]/g, "·")).join(" ");
@@ -288,9 +303,7 @@
       ? t
       : (firstLetters
         ? `<span class="first-letters">${first}</span>`
-        : (hideTarget
-          ? `<span class="blank">____</span>`
-          : blanked(t, word)));
+        : blanked(t, word));
     const choices = baby ? [] : distractors(word, list, p);
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
@@ -302,7 +315,7 @@
         <img class="story-art" src="${img(v.img)}" alt="">
         <p class="ref">${v.ref}</p>
         <p class="verse" id="verse-full">${verseHtml}</p>
-        ${baby ? `<p class="tiny">Tap Hear, then tap the sheep when you have listened.</p>` : `<p class="tiny">${firstLetters ? "First letters hide the words. Hear, then fill the hillside word." : hideTarget ? "Hear the verse. The missing word stays hidden until you pick it, or tap Show." : "The missing word is hidden. Hear it, then pick it."}</p>`}
+        ${baby ? `<p class="tiny">Listen. The verse is read when this pasture opens. Tap the sheep when you have heard it.</p>` : `<p class="tiny">${firstLetters ? "First letters hide the words. Hear, then fill the hillside word." : "One word is hidden. Hear the verse, then pick that word."}</p>`}
         <div class="grid ${baby ? "one" : ""}" id="choices">
           ${baby
             ? `<button class="btn lantern wide touchy" type="button" data-sheep="${v.id}">The sheep heard it</button>`
@@ -316,6 +329,7 @@
         </div>
       </section>
     `)}</div>`;
+    if (baby) HillSFX.speak(v.ref + ". " + t);
   }
 
   function stories() {
@@ -324,7 +338,7 @@
     const p = prog();
     const rows = list.map((s, i) => {
       const done = p.done.stories[s.id];
-      const n = b === "baby" || b === "toddler" ? i + 1 : s.order;
+      const n = b === "baby" || b === "toddler" || b === "preschool" ? i + 1 : s.order;
       return `<button class="row ${done ? "done" : ""} touchy" type="button" data-story="${s.id}">
         <span><span class="num">${n}</span> ${s.title}</span>
         <span class="tiny">${s.ref}</span>
@@ -336,7 +350,7 @@
         <h2>From the first light to the Lamb</h2>
         <p class="lead">Walk them in order. Original tellings; each one leans on public-domain Scripture.</p>
         <div class="list">${rows}</div>
-        ${b === "primary" || b === "upper" ? `<p style="margin-top:12px"><button class="btn primary wide touchy" type="button" data-act="storyquiz">What happened next?</button></p>` : ""}
+        ${b === "early" || b === "primary" || b === "upper" ? `<p style="margin-top:12px"><button class="btn primary wide touchy" type="button" data-act="storyquiz">What happened next?</button></p>` : ""}
       </section>
     `)}</div>`;
   }
@@ -347,9 +361,13 @@
     const v = verseById(s.verseId);
     const p = prog();
     const t = v ? textOf(v, p) : "";
+    const b = band();
+    const list = storiesFor(b);
+    const at = list.findIndex((x) => x.id === s.id);
+    const n = (b === "baby" || b === "toddler" || b === "preschool") && at >= 0 ? at + 1 : s.order;
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
-        <p class="kicker">Story ${s.order}</p>
+        <p class="kicker">Story ${n}</p>
         <img class="story-art" src="${img(s.img)}" alt="">
         <h2>${s.title}</h2>
         <p class="ref">${s.ref}</p>
