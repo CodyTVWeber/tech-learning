@@ -210,10 +210,16 @@ Subject-agent ids and themes **win** where they already chose. There is **no** s
 
 Do not reintroduce `cc-cycle3`, `maps`, or `dancing` as app ids.
 
+## Sound
+
+The runner Sound button is the only mute contract: `HS.muted()` / `hs.mute`. Apps that hide their own chrome still go quiet — WebAudio and read-aloud — and report that with `html[data-app-quiet]`. See `AGENTS.md`.
+
 ## UX checklist
 
 - [ ] Primary tap targets at least 56×56 CSS pixels
 - [ ] Immediate visual + optional sound (mute and reduced motion honored)
+- [ ] Kit Sound button is the mute contract (`HS.muted()` / `hs.mute`); the app reports quiet
+- [ ] go()/render() scrollTo(0,0)
 - [ ] Encouraging try-again; teach the path, do not shame
 - [ ] Themed progress (islands, blooms — not a generic XP bar)
 - [ ] Non-reader bands can hear the prompt

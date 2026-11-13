@@ -80,3 +80,47 @@ export async function offlineReloadToddler(page, context, appId, failed) {
   await assertNoHorizontalOverflow(page);
   await context.setOffline(false);
 }
+
+/** Click the kit Sound button and assert the app reports quiet. */
+export async function clickKitMuteExpectQuiet(page) {
+  const btn = page.locator("#hs-mute-btn");
+  await expect(btn).toBeVisible();
+  await page.evaluate(() => {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (AC) {
+      const ctx = new AC();
+      const osc = ctx.createOscillator();
+      const g = ctx.createGain();
+      osc.connect(g);
+      g.connect(ctx.destination);
+      window.__hsMuteProbe = ctx.__hsMuteGain || null;
+    }
+    if (window.HS && HS.setMuted) HS.setMuted(false);
+  });
+  await expect(page.locator("html")).toHaveAttribute("data-app-quiet", "0");
+  await expect(btn).toHaveAttribute("aria-pressed", "false");
+  const before = await page.evaluate(() => (window.HS && HS.speechSuppressed ? HS.speechSuppressed() : 0));
+  await btn.click();
+  await expect(btn).toHaveAttribute("aria-pressed", "true");
+  await expect(btn).toHaveText("Sound off");
+  await expect(page.locator("html")).toHaveAttribute("data-app-quiet", "1");
+  const quiet = await page.evaluate((prev) => {
+    const probe = window.__hsMuteProbe;
+    if (window.speechSynthesis && window.SpeechSynthesisUtterance) {
+      window.speechSynthesis.speak(new SpeechSynthesisUtterance("quiet check"));
+    }
+    if (window.HS && HS.speak) HS.speak("quiet check");
+    return {
+      muted: !!(window.HS && HS.muted && HS.muted()),
+      storage: localStorage.getItem("hs.mute"),
+      sink: probe ? probe.gain.value : null,
+      suppressed: window.HS && HS.speechSuppressed ? HS.speechSuppressed() : prev,
+      engineQuiet: window.HSAudio && "quiet" in window.HSAudio ? !!window.HSAudio.quiet : null,
+    };
+  }, before);
+  expect(quiet.muted, "HS.muted()").toBe(true);
+  expect(quiet.storage, "hs.mute").toBe("1");
+  expect(quiet.sink, "WebAudio bus after kit mute").toBe(0);
+  expect(quiet.suppressed, "speechSynthesis blocked while muted").toBeGreaterThan(before);
+  if (quiet.engineQuiet !== null) expect(quiet.engineQuiet, "app engine reports quiet").toBe(true);
+}

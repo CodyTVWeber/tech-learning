@@ -92,4 +92,9 @@
     }
   };
   global.HillSFX = sfx;
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function (on) {
+      if (on) sfx.hush();
+    });
+  }
 })(window);

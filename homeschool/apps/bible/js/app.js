@@ -27,6 +27,7 @@
   function go(screen) {
     location.hash = screen;
     render();
+    window.scrollTo(0, 0);
   }
 
   function loadProg() {
@@ -531,6 +532,7 @@
   }
 
   function render() {
+    window.scrollTo(0, 0);
     const b = band();
     if (!b) {
       picker();

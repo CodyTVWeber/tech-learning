@@ -31,6 +31,7 @@
   }
 
   function isMuted() {
+    if (global.HS && typeof global.HS.muted === "function") return !!global.HS.muted();
     return muted;
   }
 
@@ -64,7 +65,7 @@
   }
 
   function tone(freq, dur, type, peak) {
-    if (muted) return;
+    if (isMuted()) return;
     var c = audio();
     if (!c) return;
     var t = c.currentTime;
@@ -79,7 +80,7 @@
   }
 
   function noiseBurst(dur, peak, freq) {
-    if (muted) return;
+    if (isMuted()) return;
     var c = audio();
     if (!c) return;
     var n = c.createBuffer(1, Math.floor(c.sampleRate * dur), c.sampleRate);
@@ -113,7 +114,7 @@
   }
 
   function whoosh() {
-    if (muted) return;
+    if (isMuted()) return;
     var c = audio();
     if (!c) return;
     var t = c.currentTime;
@@ -129,7 +130,7 @@
   }
 
   function celebrate() {
-    if (muted) return;
+    if (isMuted()) return;
     [392, 523, 659, 784].forEach(function (f, i) {
       setTimeout(function () {
         tone(f, 0.18, "sine", 0.09);
@@ -145,7 +146,7 @@
   }
 
   function playMelody(notes) {
-    if (muted || !notes) return;
+    if (isMuted() || !notes) return;
     var t = 0;
     notes.forEach(function (n) {
       var freq = n.f;
@@ -166,7 +167,7 @@
   }
 
   function talk(text) {
-    if (muted || !text) return;
+    if (isMuted() || !text) return;
     if (global.HS && typeof global.HS.speak === "function") {
       global.HS.speak(text, { rate: 0.92 });
       return;
@@ -196,4 +197,11 @@
     stopTalk: stopTalk,
     tone: tone,
   };
+
+  if (global.HS && typeof global.HS.followMute === "function") {
+    global.HS.followMute(function (on) {
+      muted = !!on;
+      if (on) stopTalk();
+    });
+  }
 })(window);

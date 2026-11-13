@@ -144,15 +144,24 @@
     AudioEngine.freezeAt = AudioEngine.step + bars * 4;
   }
 
+  function kitMuted() {
+    return window.HS && typeof HS.muted === "function" && HS.muted();
+  }
+
+  function applyQuiet() {
+    AudioEngine.quiet = !!(AudioEngine.ownQuiet || kitMuted());
+    if (AudioEngine.master) AudioEngine.master.gain.value = AudioEngine.quiet ? 0 : 0.22;
+    if (AudioEngine.quiet && AudioEngine.voiceReady) window.speechSynthesis.cancel();
+    if (AudioEngine.quiet && window.HS && HS.silence) HS.silence();
+  }
+
   AudioEngine.setQuiet = function (q) {
-    AudioEngine.quiet = q;
-    if (q && AudioEngine.ctx) AudioEngine.master.gain.value = 0;
-    else if (AudioEngine.master) AudioEngine.master.gain.value = 0.22;
-    if (q && AudioEngine.voiceReady) window.speechSynthesis.cancel();
+    AudioEngine.ownQuiet = !!q;
+    applyQuiet();
   };
 
   AudioEngine.speak = function (text) {
-    if (!text || AudioEngine.quiet) return;
+    if (!text || AudioEngine.quiet || kitMuted()) return;
     if (window.HS && typeof HS.speak === "function") {
       HS.speak(text, { rate: 0.92, pitch: 1.05 });
       return;
@@ -287,4 +296,7 @@
   };
 
   window.HSAudio = AudioEngine;
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function () { applyQuiet(); });
+  }
 })();

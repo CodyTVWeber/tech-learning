@@ -48,6 +48,18 @@ Apps **hide their own top bar** (title, mute, band switch) and their own “Unte
 
 Route read-aloud through `HS.speak`. It already no-ops while muted. Do not skip `speechSynthesis` just because the page is inside the runner, and do not treat `HS.muted` as always-on — call `HS.muted()`.
 
+## Mute contract
+
+The kit Sound button (`#hs-mute-btn` in `#hs-chrome`) is the single mute control in the runner. It calls `HS.toggleMute()` / `HS.setMuted(on)` and stores `localStorage['hs.mute']` (`"1"` means muted). `HS.muted()` is the read. The button fires `hs-mute` with `{ muted: true|false }`.
+
+While `HS.muted()` is true the kit silences sound for every app, including apps whose own header is hidden:
+
+- WebAudio that targets the live destination goes through a kit gain held at 0, so notes already playing stop.
+- `speechSynthesis.speak` is blocked and any current utterance is canceled.
+- `HS.speak` and `HS.playCue` return immediately.
+
+Apps call `HS.followMute(function (on) { ... })` once so their own engine stops (master gain 0, cancel speech, drop queued cues) and the page reports quiet: `html[data-app-quiet="1"]` while the kit is muted, `"0"` while sound is on. Do not keep a second mute key that the runner button cannot reach. A standalone quiet button, when the kit is loaded, toggles `HS.toggleMute()` instead of a private flag.
+
 ## Parallel work
 
 Subject agents write only `homeschool/apps/<id>/` and `homeschool/decks/<id>*`. Do not touch kit, learner folders, hub, or CI. See `CONTRIBUTING.md`.

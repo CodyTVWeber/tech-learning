@@ -111,4 +111,9 @@
     }
   };
   global.ForestSynth = ForestSynth;
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function (on) {
+      if (on) ForestSynth.hush();
+    });
+  }
 })(window);

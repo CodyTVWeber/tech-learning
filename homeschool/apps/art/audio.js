@@ -37,14 +37,24 @@
     o.stop(t + dur + 0.02);
   }
 
+  function kitMuted() {
+    return window.HS && typeof HS.muted === "function" && HS.muted();
+  }
+
+  function applyQuiet() {
+    AudioEngine.quiet = !!(AudioEngine.ownQuiet || kitMuted());
+    if (AudioEngine.master) AudioEngine.master.gain.value = AudioEngine.quiet ? 0 : 0.2;
+    if (AudioEngine.quiet && AudioEngine.voiceReady) window.speechSynthesis.cancel();
+    if (AudioEngine.quiet && window.HS && HS.silence) HS.silence();
+  }
+
   AudioEngine.setQuiet = function (q) {
-    AudioEngine.quiet = q;
-    if (AudioEngine.master) AudioEngine.master.gain.value = q ? 0 : 0.2;
-    if (q && AudioEngine.voiceReady) window.speechSynthesis.cancel();
+    AudioEngine.ownQuiet = !!q;
+    applyQuiet();
   };
 
   AudioEngine.speak = function (text) {
-    if (!text || AudioEngine.quiet) return;
+    if (!text || AudioEngine.quiet || kitMuted()) return;
     if (window.HS && typeof HS.speak === "function") {
       HS.speak(text, { rate: 0.9, pitch: 0.95 });
       return;
@@ -78,4 +88,7 @@
   };
 
   window.HSAudio = AudioEngine;
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function () { applyQuiet(); });
+  }
 })();

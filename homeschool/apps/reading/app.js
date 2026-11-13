@@ -44,6 +44,12 @@
     if (hs().setMuted) hs().setMuted(on);
     else localStorage.setItem("hs.mute", on ? "1" : "0");
   }
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function (on) {
+      if (!on || !window.speechSynthesis) return;
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    });
+  }
   function inRunner() {
     return document.documentElement.dataset.runner === "1";
   }
@@ -405,6 +411,7 @@
     }
 
     function home() {
+      window.scrollTo(0, 0);
       silence();
       host.className = "garden band-" + b;
       const stamps = (progress.stamps || [])
@@ -497,6 +504,7 @@
         show();
       }
       function show() {
+        window.scrollTo(0, 0);
         const item = items[itemIndex];
         if (!item) {
           finishBed(bed);

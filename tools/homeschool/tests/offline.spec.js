@@ -1,5 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { BASE, assertNoHorizontalOverflow, offlineReloadToddler, trackErrFailed } from "./helpers.js";
+import {
+  BASE,
+  assertNoHorizontalOverflow,
+  clickKitMuteExpectQuiet,
+  offlineReloadToddler,
+  trackErrFailed,
+} from "./helpers.js";
 
 function onErrors(page, bucket) {
   page.on("pageerror", (err) => bucket.push(String(err)));
@@ -284,6 +290,17 @@ test("runner baby band does not fetch missing reading json", async ({ page }) =>
   await expect(page.locator("#app-root")).toContainText(/No garden lessons/);
   expect(babyHits, "data/baby.json should not be requested").toEqual([]);
   expect(errors.join("\n")).not.toMatch(/JSON|Unexpected token|no data/);
+});
+
+test("kit mute quiets runner apps that hide their own chrome", async ({ page }) => {
+  test.setTimeout(120000);
+  const apps = ["movement", "art", "math", "reading", "science", "bible", "singing", "history", "geography"];
+  for (const id of apps) {
+    await page.goto(BASE + "Theo/play.html?app=" + id + "&band=primary", { waitUntil: "load" });
+    await expect(page.locator("html")).toHaveAttribute("data-runner", "1");
+    await expect(page.locator("#app-root").locator("h1:visible, h2:visible, button:visible").first()).toBeVisible();
+    await clickKitMuteExpectQuiet(page);
+  }
 });
 
 test("standalone math and reading show a visible untested banner", async ({ page }) => {

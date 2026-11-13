@@ -183,4 +183,9 @@
   );
 
   global.Ship = Ship;
+  if (global.HS && typeof HS.followMute === "function") {
+    HS.followMute(function (on) {
+      if (on) Ship.hush();
+    });
+  }
 })(window);

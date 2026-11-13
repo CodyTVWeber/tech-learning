@@ -17,7 +17,7 @@
   const appEl = $("#app");
 
   function hashScreen() { return (location.hash || "#home").replace("#", "") || "home"; }
-  function go(s) { location.hash = s; render(); }
+  function go(s) { location.hash = s; render(); window.scrollTo(0, 0); }
   function load() {
     try { return JSON.parse(localStorage.getItem(progressKey()) || "{}") || {}; } catch (e) { return {}; }
   }
@@ -388,6 +388,7 @@
   }
 
   function render() {
+    window.scrollTo(0, 0);
     const b = band();
     if (!b) { picker(); return; }
     if (initedBand !== b) {

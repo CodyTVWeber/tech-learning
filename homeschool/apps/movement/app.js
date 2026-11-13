@@ -21,7 +21,7 @@
   const state = {
     band: null,
     view: "home",
-    quiet: localStorage.getItem(QUIET_KEY) === "1",
+    quiet: window.HS && typeof HS.muted === "function" ? HS.muted() : localStorage.getItem(QUIET_KEY) === "1",
     progress: loadProgress(),
     run: null
   };
@@ -246,9 +246,11 @@
     url.hash = view === "home" ? "" : view;
     history.replaceState({}, "", url);
     render();
+    window.scrollTo(0, 0);
   }
 
   function render() {
+    window.scrollTo(0, 0);
     const root = document.getElementById("view");
     if (!state.band) {
       root.innerHTML = pickerHTML();
@@ -847,8 +849,16 @@
     HSAudio.setQuiet(state.quiet);
     document.getElementById("home-btn-top").addEventListener("click", function () { go("home"); });
     document.getElementById("quiet-btn").addEventListener("click", function () {
+      if (window.HS && HS.toggleMute) {
+        HS.toggleMute();
+        return;
+      }
       state.quiet = !state.quiet;
       localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0");
+      paintChrome();
+    });
+    window.addEventListener("hs-mute", function () {
+      state.quiet = window.HS && HS.muted ? HS.muted() : state.quiet;
       paintChrome();
     });
     document.getElementById("band-chip").addEventListener("click", function () {

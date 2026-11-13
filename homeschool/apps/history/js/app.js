@@ -412,6 +412,7 @@
   }
 
   function render() {
+    window.scrollTo(0, 0);
     if (!state.band) { picker(); return; }
     document.body.className = "band-" + state.band;
     if (state.screen === "picker") { picker(); return; }

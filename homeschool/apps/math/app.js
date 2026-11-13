@@ -1655,6 +1655,7 @@
     }
 
     function render() {
+      window.scrollTo(0, 0);
       if (screen === "map") renderMap();
       else if (screen === "tables") renderTables();
       else if (screen === "lesson") renderLesson();
