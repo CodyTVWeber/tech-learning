@@ -452,7 +452,7 @@ def spec_feather():
       {''.join(f'<line x1="{180+i*12}" y1="{300-i*11}" x2="{160+i*12}" y2="{270-i*11}"/>' for i in range(18))}
       {''.join(f'<line x1="{180+i*12}" y1="{300-i*11}" x2="{210+i*12}" y2="{280-i*11}"/>' for i in range(18))}
     </g>
-    {plate_label(28, 38, "REMX  ·  FEATHER")}
+    {plate_label(28, 38, "REMEX  ·  FEATHER")}
     {plate_label(28, 372, "Shaft · vanes · light flight", True)}
     '''
     save("specimens/feather.svg", svg(600, 400, inner))
@@ -636,7 +636,113 @@ def body_hand():
     {plate_label(28, 38, "TOUCH  ·  SKIN")}
     {plate_label(28, 372, "Pressure · warmth · care", True)}
     '''
-    save("body/hand.svg", svg(600, 400, inner))
+    save("body/skin.svg", svg(600, 400, inner))
+
+
+def body_kidneys():
+    inner = f'''
+    <path d="M230 120 q -50 40 -40 110 q 10 70 50 70 q 30 0 36 -40 q 8 -50 -6 -90 q -10 -30 -40 -50 z" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>
+    <path d="M370 120 q 50 40 40 110 q -10 70 -50 70 q -30 0 -36 -40 q -8 -50 6 -90 q 10 -30 40 -50 z" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>
+    <path d="M250 250 q 20 40 50 70" fill="none" stroke="{INK}" stroke-width="4"/>
+    <path d="M350 250 q -20 40 -50 70" fill="none" stroke="{INK}" stroke-width="4"/>
+    <ellipse cx="300" cy="330" rx="36" ry="22" fill="{SKY}" stroke="{INK}" stroke-width="2"/>
+    {plate_label(28, 38, "KIDNEYS")}
+    {plate_label(28, 372, "Filter blood · ureters · bladder", True)}
+    '''
+    save("body/kidneys.svg", svg(600, 400, inner))
+
+
+def body_matter():
+    inner = f'''
+    <rect x="70" y="160" width="90" height="90" fill="{SKY}" stroke="{INK}" stroke-width="3"/>
+    <path d="M250 250 v-90 h 70 v90 z" fill="none" stroke="{INK}" stroke-width="3"/>
+    <path d="M258 240 h 54 v-50 h-54 z" fill="{SKY}" opacity="0.7"/>
+    <path d="M430 230 q 20 -40 40 -20 q 16 30 8 50 q -20 10 -36 0" fill="none" stroke="{INK}" stroke-width="2"/>
+    <path d="M470 180 q 16 -30 28 -8 q 10 24 -6 36" fill="none" stroke="{INK}" stroke-width="2"/>
+    {plate_label(28, 38, "STATES OF MATTER")}
+    {plate_label(28, 372, "Ice · liquid water · steam", True)}
+    '''
+    save("body/matter.svg", svg(600, 400, inner))
+
+
+def body_tissue():
+    inner = f'''
+    <rect x="70" y="120" width="100" height="80" fill="{CREAM}" stroke="{INK}" stroke-width="2"/>
+    <rect x="190" y="120" width="100" height="80" fill="{BONE}" stroke="{INK}" stroke-width="2"/>
+    <rect x="310" y="120" width="100" height="80" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>
+    <rect x="430" y="120" width="100" height="80" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>
+    <path d="M330 140 h 60 M330 160 h 60 M330 180 h 40" stroke="{INK}" stroke-width="2"/>
+    <circle cx="460" cy="150" r="6" fill="{INK}"/>
+    <circle cx="500" cy="170" r="6" fill="{INK}"/>
+    <path d="M450 190 q 20 -16 40 0" fill="none" stroke="{INK}" stroke-width="2"/>
+    {plate_label(28, 38, "FOUR TISSUES")}
+    {plate_label(28, 372, "Cover · support · muscle · nerve", True)}
+    '''
+    save("body/tissue.svg", svg(600, 400, inner))
+
+
+def body_muscle():
+    inner = f'''
+    <path d="M120 250 q 20 -80 40 -80 q 20 0 40 80" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>
+    <path d="M250 250 q 10 -40 20 -40 q 10 0 20 40" fill="{OCHRE}" stroke="{INK}" stroke-width="2"/>
+    <path d="M380 200 c 20 -40 50 -40 70 0 c 10 30 -10 70 -35 80 c -30 -10 -50 -40 -35 -80 z" fill="{CLAY}" stroke="{INK}" stroke-width="2"/>
+    {plate_label(28, 38, "THREE MUSCLES")}
+    {plate_label(28, 372, "Skeletal · smooth · cardiac", True)}
+    '''
+    save("body/muscle.svg", svg(600, 400, inner))
+
+
+def body_nerves():
+    inner = f'''
+    <ellipse cx="300" cy="100" rx="46" ry="36" fill="{GOLD}" stroke="{INK}" stroke-width="2"/>
+    <rect x="294" y="136" width="12" height="120" fill="{GOLD}" stroke="{INK}"/>
+    <path d="M300 180 l -70 30 M300 200 l 80 24 M300 230 l -60 40 M300 240 l 50 36" fill="none" stroke="{INK}" stroke-width="2"/>
+    <circle cx="230" cy="210" r="5" fill="{INK}"/>
+    <circle cx="380" cy="204" r="5" fill="{INK}"/>
+    {plate_label(28, 38, "NERVOUS PATH")}
+    {plate_label(28, 372, "Brain · cord · branching nerves", True)}
+    '''
+    save("body/nerves.svg", svg(600, 400, inner))
+
+
+def body_lymph():
+    inner = f'''
+    <path d="M160 120 C 220 180, 260 160, 300 220 S 400 300, 460 260" fill="none" stroke="{SKY}" stroke-width="8"/>
+    <circle cx="210" cy="168" r="16" fill="{MOSS}" stroke="{INK}"/>
+    <circle cx="300" cy="220" r="18" fill="{MOSS}" stroke="{INK}"/>
+    <circle cx="390" cy="250" r="14" fill="{MOSS}" stroke="{INK}"/>
+    <ellipse cx="180" cy="280" rx="36" ry="24" fill="{CLAY}" stroke="{INK}"/>
+    {plate_label(28, 38, "LYMPH")}
+    {plate_label(28, 372, "Fluid · vessels · nodes · spleen", True)}
+    '''
+    save("body/lymph.svg", svg(600, 400, inner))
+
+
+def body_glands():
+    inner = f'''
+    <ellipse cx="300" cy="110" rx="22" ry="16" fill="{GOLD}" stroke="{INK}"/>
+    <circle cx="200" cy="200" r="22" fill="{OCHRE}" stroke="{INK}"/>
+    <circle cx="400" cy="200" r="22" fill="{OCHRE}" stroke="{INK}"/>
+    <ellipse cx="300" cy="280" rx="28" ry="18" fill="{CLAY}" stroke="{INK}"/>
+    <path d="M300 126 v40 M222 200 h50 M378 200 h-50 M300 200 v62" fill="none" stroke="{INK}" stroke-width="1.5" opacity="0.6"/>
+    {plate_label(28, 38, "GLANDS")}
+    {plate_label(28, 372, "Hormones ride the blood", True)}
+    '''
+    save("body/glands.svg", svg(600, 400, inner))
+
+
+def body_blood():
+    inner = f'''
+    <rect x="80" y="140" width="440" height="120" rx="60" fill="{CLAY}" opacity="0.35" stroke="{INK}" stroke-width="3"/>
+    <ellipse cx="180" cy="200" rx="36" ry="22" fill="{CLAY}" stroke="{INK}"/>
+    <ellipse cx="300" cy="190" rx="36" ry="22" fill="{CLAY}" stroke="{INK}"/>
+    <ellipse cx="420" cy="210" rx="36" ry="22" fill="{CLAY}" stroke="{INK}"/>
+    <circle cx="250" cy="230" r="10" fill="{CREAM}" stroke="{INK}"/>
+    <circle cx="360" cy="170" r="8" fill="{CREAM}" stroke="{INK}"/>
+    {plate_label(28, 38, "BLOOD")}
+    {plate_label(28, 372, "Carry · defend · seal · warm", True)}
+    '''
+    save("body/blood.svg", svg(600, 400, inner))
 
 
 def body_digest():
@@ -900,6 +1006,9 @@ def main():
     spec_bee()
     spec_earthworm()
     spec_seed()
+    spec_cactus()
+    spec_pebble()
+    spec_twig()
     spec_feather()
     spec_shell()
     spec_moss()
@@ -911,6 +1020,18 @@ def main():
     body_heart()
     body_lungs()
     body_senses()
+    body_ear()
+    body_nose()
+    body_tongue()
+    body_hand()
+    body_kidneys()
+    body_matter()
+    body_tissue()
+    body_muscle()
+    body_nerves()
+    body_lymph()
+    body_glands()
+    body_blood()
     body_digest()
     body_atom()
     machines()

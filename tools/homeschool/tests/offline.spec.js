@@ -126,6 +126,45 @@ test("missing assets.json does not break a home", async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
+test("science speaks a prompt inside play.html for a young band", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.__spoken = [];
+    function note(u) {
+      window.__spoken.push(String((u && (u.text || u.utteranceText)) || ""));
+    }
+    if (typeof window.SpeechSynthesisUtterance !== "function") {
+      window.SpeechSynthesisUtterance = function SpeechSynthesisUtterance(text) {
+        this.text = String(text || "");
+      };
+    }
+    const proto = window.SpeechSynthesis && window.SpeechSynthesis.prototype;
+    if (proto && typeof proto.speak === "function") {
+      proto.speak = function (u) { note(u); };
+      proto.cancel = function () {};
+    } else {
+      window.speechSynthesis = {
+        cancel() {},
+        speak(u) { note(u); },
+        getVoices() { return []; },
+        addEventListener() {},
+        removeEventListener() {},
+      };
+    }
+  });
+  const errors = [];
+  onErrors(page, errors);
+  await page.goto(BASE + "Piper/play.html?app=science&band=preschool", { waitUntil: "load" });
+  await page.waitForFunction(
+    () => (window.__spoken || []).some((line) => String(line).length > 8),
+    null,
+    { timeout: 20000 }
+  );
+  const spoken = await page.evaluate(() => (window.__spoken || []).join(" "));
+  expect(spoken.length).toBeGreaterThan(8);
+  expect(spoken).toMatch(/Field expedition/i);
+  expect(errors).toEqual([]);
+});
+
 test("standalone math and reading show a visible untested banner", async ({ page }) => {
   for (const app of ["math", "reading"]) {
     await page.goto(BASE + "apps/" + app + "/", { waitUntil: "load" });
