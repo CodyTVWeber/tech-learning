@@ -1,0 +1,226 @@
+{
+  "band": "baby",
+  "subject": "science",
+  "items": [
+    {
+      "id": "baby-1",
+      "prompt": "What do we call the green part of a plant that catches sunlight?",
+      "answer": "A leaf",
+      "audioText": "The green part that catches sunlight.",
+      "tags": [
+        "baby",
+        "plant",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-2",
+      "prompt": "What do we call the bright light God set to rule the day?",
+      "answer": "The sun",
+      "audioText": "The bright daytime light.",
+      "tags": [
+        "baby",
+        "sky",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-3",
+      "prompt": "What falls from clouds and waters the ground?",
+      "answer": "Rain",
+      "audioText": "Water falling from clouds.",
+      "tags": [
+        "baby",
+        "weather",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-4",
+      "prompt": "What flying animal has feathers and a beak?",
+      "answer": "A bird",
+      "audioText": "Feathers and a beak.",
+      "tags": [
+        "baby",
+        "animal",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-5",
+      "prompt": "What water animal has fins and takes air with gills?",
+      "answer": "A fish",
+      "audioText": "Fins and gills.",
+      "tags": [
+        "baby",
+        "animal",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-6",
+      "prompt": "What is a plant's bright, often scented face that bees visit?",
+      "answer": "A flower",
+      "audioText": "The bright face of a plant.",
+      "tags": [
+        "baby",
+        "plant",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-7",
+      "prompt": "What small package can grow into a whole plant?",
+      "answer": "A seed",
+      "audioText": "A baby plant with lunch packed inside.",
+      "tags": [
+        "baby",
+        "plant",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-8",
+      "prompt": "What lesser light shines at night besides the stars?",
+      "answer": "The moon",
+      "audioText": "The night light.",
+      "tags": [
+        "baby",
+        "sky",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-9",
+      "prompt": "What do we call water gathered in the sky as a visible shape?",
+      "answer": "A cloud",
+      "audioText": "Water in the sky.",
+      "tags": [
+        "baby",
+        "weather",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-10",
+      "prompt": "What do we call air that is moving?",
+      "answer": "Wind",
+      "audioText": "Moving air.",
+      "tags": [
+        "baby",
+        "weather",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-11",
+      "prompt": "What tall plant has a trunk, branches, and many green catchers of light?",
+      "answer": "A tree",
+      "audioText": "Trunk, branches, and green catchers.",
+      "tags": [
+        "baby",
+        "plant",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-12",
+      "prompt": "What pond animal hops and begins life as a tadpole?",
+      "answer": "A frog",
+      "audioText": "A hopper that starts in water.",
+      "tags": [
+        "baby",
+        "animal",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-13",
+      "prompt": "What small garden visitor carries pollen from flower to flower?",
+      "answer": "A bee",
+      "audioText": "A pollen carrier.",
+      "tags": [
+        "baby",
+        "animal",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-14",
+      "prompt": "Which body part is mainly for touching?",
+      "answer": "A hand (and skin)",
+      "audioText": "Touch.",
+      "tags": [
+        "baby",
+        "body",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-15",
+      "prompt": "Which body part is mainly for seeing?",
+      "answer": "An eye",
+      "audioText": "Sight.",
+      "tags": [
+        "baby",
+        "body",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-16",
+      "prompt": "Which body part is mainly for hearing?",
+      "answer": "An ear",
+      "audioText": "Hearing.",
+      "tags": [
+        "baby",
+        "body",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-17",
+      "prompt": "Which body part is mainly for smelling?",
+      "answer": "A nose",
+      "audioText": "Smell.",
+      "tags": [
+        "baby",
+        "body",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-18",
+      "prompt": "Which body parts help a person stand and walk?",
+      "answer": "The feet",
+      "audioText": "Standing and walking.",
+      "tags": [
+        "baby",
+        "body",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-19",
+      "prompt": "What do we drink, and what also fills ponds?",
+      "answer": "Water",
+      "audioText": "A gift to drink and a home for pond life.",
+      "tags": [
+        "baby",
+        "weather",
+        "baby"
+      ]
+    },
+    {
+      "id": "baby-20",
+      "prompt": "What tiny lights shine in the night sky?",
+      "answer": "Stars",
+      "audioText": "Night lights. The heavens declare God's glory.",
+      "tags": [
+        "baby",
+        "sky",
+        "baby"
+      ]
+    }
+  ]
+}

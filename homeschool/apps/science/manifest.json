@@ -1,0 +1,16 @@
+{
+  "name": "Field Expedition · Science",
+  "short_name": "Field Expedition",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3ead3",
+  "theme_color": "#5a3824",
+  "icons": [
+    {
+      "src": "images/ui/mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

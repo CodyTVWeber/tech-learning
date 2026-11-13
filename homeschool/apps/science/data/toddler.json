@@ -1,0 +1,358 @@
+{
+  "band": "toddler",
+  "subject": "science",
+  "items": [
+    {
+      "id": "toddler-1",
+      "prompt": "Which yard bird hops on grass and tugs worms with a thin bill?",
+      "answer": "A robin",
+      "audioText": "Warm breast, thin bill.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-2",
+      "prompt": "Which pond animal hops as an adult and starts life with gills?",
+      "answer": "A frog",
+      "audioText": "Moist skin, then lungs.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-3",
+      "prompt": "Which meadow flyer has wings tiled with tiny scales?",
+      "answer": "A butterfly",
+      "audioText": "It was a caterpillar first.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-4",
+      "prompt": "Which water kind uses gills and fins, not lungs and legs?",
+      "answer": "A fish",
+      "audioText": "A water kind.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-5",
+      "prompt": "Which garden helper packs pollen on its legs?",
+      "answer": "A honeybee",
+      "audioText": "Flower and bee fit.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-6",
+      "prompt": "Which soil tiller is a long segmented animal with no legs?",
+      "answer": "An earthworm",
+      "audioText": "Tunnels let rain in.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-7",
+      "prompt": "A light shaft with zipping vanes most likely came from which kind of animal?",
+      "answer": "A bird",
+      "audioText": "A feather.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-8",
+      "prompt": "A spiral mineral house on the tide line was grown by which animal?",
+      "answer": "A snail",
+      "audioText": "Leave living ones on the shore.",
+      "tags": [
+        "toddler",
+        "animal",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-9",
+      "prompt": "What gives daylight and warmth without us making a fire?",
+      "answer": "The sun",
+      "audioText": "Do not stare at it.",
+      "tags": [
+        "toddler",
+        "weather",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-10",
+      "prompt": "What falls from clouds and waters roots?",
+      "answer": "Rain",
+      "audioText": "Drops that grew too heavy.",
+      "tags": [
+        "toddler",
+        "weather",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-11",
+      "prompt": "What is frozen water grown in six-armed crystals?",
+      "answer": "Snow",
+      "audioText": "Cold keeps the pattern.",
+      "tags": [
+        "toddler",
+        "weather",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-12",
+      "prompt": "What do we call air that moves because land and water heat unevenly?",
+      "answer": "Wind",
+      "audioText": "You can feel it.",
+      "tags": [
+        "toddler",
+        "weather",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-13",
+      "prompt": "What do we call a visible heap, sheet, or thread of water in the sky?",
+      "answer": "A cloud",
+      "audioText": "Look up, not at the sun.",
+      "tags": [
+        "toddler",
+        "weather",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-14",
+      "prompt": "Which sense uses the eyes?",
+      "answer": "Sight",
+      "audioText": "Light in.",
+      "tags": [
+        "toddler",
+        "senses",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-15",
+      "prompt": "Which sense uses the ears?",
+      "answer": "Hearing",
+      "audioText": "Sound waves.",
+      "tags": [
+        "toddler",
+        "senses",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-16",
+      "prompt": "Which sense uses the nose?",
+      "answer": "Smell",
+      "audioText": "It partners with taste.",
+      "tags": [
+        "toddler",
+        "senses",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-17",
+      "prompt": "Which sense uses the tongue?",
+      "answer": "Taste",
+      "audioText": "Sweet, sour, salty, bitter, savory.",
+      "tags": [
+        "toddler",
+        "senses",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-18",
+      "prompt": "Which sense uses the skin?",
+      "answer": "Touch",
+      "audioText": "Pressure, pain, temperature.",
+      "tags": [
+        "toddler",
+        "senses",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-19",
+      "prompt": "What pump in the chest keeps a beat?",
+      "answer": "The heart",
+      "audioText": "It moves blood.",
+      "tags": [
+        "toddler",
+        "body",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-20",
+      "prompt": "What pair of organs takes in air when you breathe?",
+      "answer": "The lungs",
+      "audioText": "Air in, air out.",
+      "tags": [
+        "toddler",
+        "body",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-21",
+      "prompt": "What hard inner frame holds a body up?",
+      "answer": "The skeleton (bones)",
+      "audioText": "They hold you up.",
+      "tags": [
+        "toddler",
+        "body",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-22",
+      "prompt": "What do we chew food with?",
+      "answer": "Teeth",
+      "audioText": "A wedge at work.",
+      "tags": [
+        "toddler",
+        "body",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-23",
+      "prompt": "An oak's broad green catcher of light often has deep rounded cuts. What is that catcher called?",
+      "answer": "A leaf (oak leaf)",
+      "audioText": "Later the tree may hold acorns.",
+      "tags": [
+        "toddler",
+        "plant",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-24",
+      "prompt": "A maple's green catcher often looks like a hand with spreading veins. What is that shape called?",
+      "answer": "A palmate (hand-like) leaf",
+      "audioText": "Veins like fingers from a palm.",
+      "tags": [
+        "toddler",
+        "plant",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-25",
+      "prompt": "What small packed lunch can wake into a bean plant?",
+      "answer": "A seed (bean)",
+      "audioText": "Baby plant plus food.",
+      "tags": [
+        "toddler",
+        "plant",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-26",
+      "prompt": "A yellow head made of many tiny blossoms later sends riders on downy plumes. What plant is that?",
+      "answer": "A dandelion",
+      "audioText": "Many tiny flowers in one head.",
+      "tags": [
+        "toddler",
+        "plant",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-27",
+      "prompt": "Which trees keep needle-shaped catchers of light all year?",
+      "answer": "Pines",
+      "audioText": "Needles lose less water.",
+      "tags": [
+        "toddler",
+        "plant",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-28",
+      "prompt": "A robin has feathers, wings, and a beak. Which living kind is it?",
+      "answer": "Bird",
+      "audioText": "Wings and feathers.",
+      "tags": [
+        "toddler",
+        "kinds",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-29",
+      "prompt": "A trout belongs to which living kind?",
+      "answer": "Fish",
+      "audioText": "Gills.",
+      "tags": [
+        "toddler",
+        "kinds",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-30",
+      "prompt": "An oak belongs to which living kind?",
+      "answer": "Plant",
+      "audioText": "Roots and green catchers of light.",
+      "tags": [
+        "toddler",
+        "kinds",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-31",
+      "prompt": "A bee flies, but it is not a bird because it has no feathers. What kind of creeping flyer is it?",
+      "answer": "An insect (creeping kind)",
+      "audioText": "After their kind.",
+      "tags": [
+        "toddler",
+        "kinds",
+        "toddler"
+      ]
+    },
+    {
+      "id": "toddler-32",
+      "prompt": "God made living things to bring forth after their what?",
+      "answer": "Kind",
+      "audioText": "Original field note, not class recitation.",
+      "tags": [
+        "toddler",
+        "kinds",
+        "toddler"
+      ]
+    }
+  ]
+}

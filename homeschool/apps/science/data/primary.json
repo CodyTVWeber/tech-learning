@@ -1,0 +1,479 @@
+{
+  "band": "primary",
+  "subject": "science",
+  "items": [
+    {
+      "id": "primary-1",
+      "prompt": "A tissue is a team of similar cells with one\u2026",
+      "answer": "Job",
+      "audioText": "Four kinds: cover, support, move, signal.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-2",
+      "prompt": "Which tissue covers and lines?",
+      "answer": "Epithelial tissue",
+      "audioText": "Skin surface and linings.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-3",
+      "prompt": "Which tissue is built to contract and move?",
+      "answer": "Muscle tissue",
+      "audioText": "Skeletal, smooth, cardiac.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-4",
+      "prompt": "Which tissue carries messages?",
+      "answer": "Nervous tissue",
+      "audioText": "Brain, cord, nerves.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-5",
+      "prompt": "The axial skeleton includes the skull, spine, ribs, and\u2026",
+      "answer": "Sternum (breastbone)",
+      "audioText": "Head and trunk frame.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-6",
+      "prompt": "Stacked backbone bones are called\u2026",
+      "answer": "Vertebrae",
+      "audioText": "They guard the spinal cord.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-7",
+      "prompt": "Which muscle kind moves when you choose to pick up a rock?",
+      "answer": "Skeletal muscle",
+      "audioText": "You decide.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-8",
+      "prompt": "Which muscle kind lives in organ walls and works without a thought?",
+      "answer": "Smooth muscle",
+      "audioText": "Stomach walls.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-9",
+      "prompt": "Which muscle kind is found only in the heart?",
+      "answer": "Cardiac muscle",
+      "audioText": "A never-resting beat.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-10",
+      "prompt": "Three nervous parts we map are the brain, the spinal cord, and the\u2026",
+      "answer": "Nerves",
+      "audioText": "Desk and message roads.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-11",
+      "prompt": "The tube that carries swallowed food to the stomach is the\u2026",
+      "answer": "Esophagus",
+      "audioText": "Not the windpipe.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-12",
+      "prompt": "Most nutrient soaking happens in the\u2026",
+      "answer": "Small intestine",
+      "audioText": "A long workshop.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-13",
+      "prompt": "Which organs filter blood and make urine?",
+      "answer": "The kidneys",
+      "audioText": "Excretory trail.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-14",
+      "prompt": "Ureters carry urine to the\u2026",
+      "answer": "Bladder",
+      "audioText": "A holding room.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-15",
+      "prompt": "The heart pumps; vessels that go away from it are\u2026",
+      "answer": "Arteries",
+      "audioText": "Veins return.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-16",
+      "prompt": "The tiniest vessels, where goods are traded, are\u2026",
+      "answer": "Capillaries",
+      "audioText": "Thin walls.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-17",
+      "prompt": "Valves in the heart and some vessels exist to keep\u2026",
+      "answer": "One-way flow",
+      "audioText": "No backward river.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-18",
+      "prompt": "Lymph nodes work like\u2026",
+      "answer": "Filter stations",
+      "audioText": "Quiet germ watch.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-19",
+      "prompt": "The windpipe's other name is the\u2026",
+      "answer": "Trachea",
+      "audioText": "Air's path, not food's.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-20",
+      "prompt": "The muscle floor under the lungs that helps you breathe is the\u2026",
+      "answer": "Diaphragm",
+      "audioText": "It moves as you inhale.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-21",
+      "prompt": "Chemical messengers sent in the blood by glands are called\u2026",
+      "answer": "Hormones",
+      "audioText": "Endocrine system.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-22",
+      "prompt": "Name three major jobs of blood.",
+      "answer": "Carry oxygen, carry food bits, carry wastes",
+      "audioText": "Also: germ fight, clot, share heat.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-23",
+      "prompt": "Which blood cells are especially for carrying oxygen?",
+      "answer": "Red cells",
+      "audioText": "A major blood purpose.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-24",
+      "prompt": "Name the five senses.",
+      "answer": "Sight, hearing, smell, taste, touch",
+      "audioText": "Designed doorways.",
+      "tags": [
+        "primary",
+        "anatomy",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-25",
+      "prompt": "A solid keeps its\u2026",
+      "answer": "Shape",
+      "audioText": "Ice, rock, wood.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-26",
+      "prompt": "A liquid takes the shape of its\u2026",
+      "answer": "Container",
+      "audioText": "Water in a jar.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-27",
+      "prompt": "A gas spreads to fill\u2026",
+      "answer": "Its space",
+      "audioText": "Air in a bag.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-28",
+      "prompt": "Ice, water, and steam are the same substance in different\u2026",
+      "answer": "States",
+      "audioText": "Heat moves it.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-29",
+      "prompt": "Lemon juice is a household example of an\u2026",
+      "answer": "Acid",
+      "audioText": "Do not taste lab jars.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-30",
+      "prompt": "Soap water leans toward being a\u2026",
+      "answer": "Base",
+      "audioText": "Slippery clue.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-31",
+      "prompt": "A vinegar and baking-soda fizz shows an acid meeting a\u2026",
+      "answer": "Base",
+      "audioText": "Carbon dioxide gas. Adult required. Open jar.",
+      "tags": [
+        "primary",
+        "matter",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-32",
+      "prompt": "A food chain starts with a plant that catches\u2026",
+      "answer": "Light",
+      "audioText": "Design in provision.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-33",
+      "prompt": "A habitat must offer food, water, shelter, and a\u2026",
+      "answer": "Fitting place",
+      "audioText": "Yard to woodland.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-34",
+      "prompt": "Buried leftovers of life in stone are called\u2026",
+      "answer": "Fossils",
+      "audioText": "Records, not toys.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-35",
+      "prompt": "Tree rings can record seasons of\u2026",
+      "answer": "Growth",
+      "audioText": "A quiet history.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-36",
+      "prompt": "The water cycle is powered largely by the\u2026",
+      "answer": "Sun",
+      "audioText": "Evaporate, condense, fall, run.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-37",
+      "prompt": "Simple machines do not make energy from nothing; they change how\u2026",
+      "answer": "Work is applied",
+      "audioText": "Direction, distance, force.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-38",
+      "prompt": "Celery tubes carrying dye are a picture of how plants\u2026",
+      "answer": "Move water",
+      "audioText": "Home lab with a grown-up.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-39",
+      "prompt": "A seed's baby plant plus packed lunch is a clue that a\u2026 already exists.",
+      "answer": "Plan",
+      "audioText": "The plan does not write itself.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-40",
+      "prompt": "Oak from oak and robin from robin is reproduction after a creature's\u2026",
+      "answer": "Kind",
+      "audioText": "Public-domain idea, original wording.",
+      "tags": [
+        "primary",
+        "creation",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-41",
+      "prompt": "Psalm 19 points a naturalist to look up and see whose glory in the sky?",
+      "answer": "God's",
+      "audioText": "KJV public domain.",
+      "tags": [
+        "primary",
+        "creation",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-42",
+      "prompt": "A good field journal records date, place, true observations, and\u2026",
+      "answer": "Questions",
+      "audioText": "No made-up grades.",
+      "tags": [
+        "primary",
+        "journal",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-43",
+      "prompt": "Under a hand lens, a leaf's edge and veins help you study\u2026",
+      "answer": "What is truly there, not what you guessed",
+      "audioText": "Draw one small square.",
+      "tags": [
+        "primary",
+        "nature",
+        "primary"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+{
+  "app": "science",
+  "theme": "naturalist's field expedition",
+  "images": [
+    {
+      "file": "body/atom.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "atom",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "body-atom"
+    },
+    {
+      "file": "body/axial-skeleton.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "axial skeleton",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "body-axial-skeleton"
+    },
+    {
+      "file": "body/digestive.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "digestive",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "body-digestive"
+    },
+    {
+      "file": "body/heart.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "heart",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "body-heart"
+    },
+    {
+      "file": "body/lungs.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "lungs",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "body-lungs"
+    },
+    {
+      "file": "body/senses.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "senses",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "body-senses"
+    },
+    {
+      "file": "creation/eye.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "eye",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "creation-eye"
+    },
+    {
+      "file": "creation/fossil.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "fossil",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "creation-fossil"
+    },
+    {
+      "file": "creation/heavens.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "heavens",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "creation-heavens"
+    },
+    {
+      "file": "creation/kinds.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "kinds",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "creation-kinds"
+    },
+    {
+      "file": "habitats/desert.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "desert",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-desert"
+    },
+    {
+      "file": "habitats/forest.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "forest",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-forest"
+    },
+    {
+      "file": "habitats/garden.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "garden",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-garden"
+    },
+    {
+      "file": "habitats/meadow.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "meadow",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-meadow"
+    },
+    {
+      "file": "habitats/mountain.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "mountain",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-mountain"
+    },
+    {
+      "file": "habitats/pond.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "pond",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-pond"
+    },
+    {
+      "file": "habitats/shore.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "shore",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-shore"
+    },
+    {
+      "file": "habitats/sky.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "sky",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-sky"
+    },
+    {
+      "file": "habitats/stream.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "stream",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-stream"
+    },
+    {
+      "file": "habitats/yard.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "yard",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "habitats-yard"
+    },
+    {
+      "file": "machines/lever.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "lever",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "machines-lever"
+    },
+    {
+      "file": "machines/pulley.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "pulley",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "machines-pulley"
+    },
+    {
+      "file": "machines/ramp.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "ramp",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "machines-ramp"
+    },
+    {
+      "file": "machines/screw.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "screw",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "machines-screw"
+    },
+    {
+      "file": "machines/wedge.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "wedge",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "machines-wedge"
+    },
+    {
+      "file": "machines/wheel.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "wheel",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "machines-wheel"
+    },
+    {
+      "file": "specimens/bean-seed.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "bean seed",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-bean-seed"
+    },
+    {
+      "file": "specimens/bee.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "bee",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-bee"
+    },
+    {
+      "file": "specimens/butterfly.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "butterfly",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-butterfly"
+    },
+    {
+      "file": "specimens/dandelion.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "dandelion",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-dandelion"
+    },
+    {
+      "file": "specimens/earthworm.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "earthworm",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-earthworm"
+    },
+    {
+      "file": "specimens/feather.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "feather",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-feather"
+    },
+    {
+      "file": "specimens/fern.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "fern",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-fern"
+    },
+    {
+      "file": "specimens/fish.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "fish",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-fish"
+    },
+    {
+      "file": "specimens/frog.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "frog",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-frog"
+    },
+    {
+      "file": "specimens/maple-leaf.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "maple leaf",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-maple-leaf"
+    },
+    {
+      "file": "specimens/moss.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "moss",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-moss"
+    },
+    {
+      "file": "specimens/oak-leaf.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "oak leaf",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-oak-leaf"
+    },
+    {
+      "file": "specimens/pine.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "pine",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-pine"
+    },
+    {
+      "file": "specimens/robin.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "robin",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-robin"
+    },
+    {
+      "file": "specimens/shell.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "shell",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "specimens-shell"
+    },
+    {
+      "file": "tools/compass.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "compass",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "tools-compass"
+    },
+    {
+      "file": "tools/journal.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "journal",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "tools-journal"
+    },
+    {
+      "file": "tools/magnifier.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "magnifier",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "tools-magnifier"
+    },
+    {
+      "file": "tools/tin.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "tin",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "tools-tin"
+    },
+    {
+      "file": "ui/baby-bird.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "baby bird",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-baby-bird"
+    },
+    {
+      "file": "ui/baby-fish.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "baby fish",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-baby-fish"
+    },
+    {
+      "file": "ui/baby-leaf.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "baby leaf",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-baby-leaf"
+    },
+    {
+      "file": "ui/baby-rain.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "baby rain",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-baby-rain"
+    },
+    {
+      "file": "ui/baby-sun.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "baby sun",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-baby-sun"
+    },
+    {
+      "file": "ui/mark.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "mark",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-mark"
+    },
+    {
+      "file": "ui/placeholder.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "Reserved plate for a later photograph wave",
+      "themeNotes": "Neutral ink frame. Do not delete this slot.",
+      "slot": "ui-placeholder"
+    },
+    {
+      "file": "ui/stamp.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "stamp",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "ui-stamp"
+    },
+    {
+      "file": "weather/cloud-cirrus.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "cloud cirrus",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-cloud-cirrus"
+    },
+    {
+      "file": "weather/cloud-cumulus.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "cloud cumulus",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-cloud-cumulus"
+    },
+    {
+      "file": "weather/cloud-stratus.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "cloud stratus",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-cloud-stratus"
+    },
+    {
+      "file": "weather/cycle.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "cycle",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-cycle"
+    },
+    {
+      "file": "weather/rain.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "rain",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-rain"
+    },
+    {
+      "file": "weather/snow.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "snow",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-snow"
+    },
+    {
+      "file": "weather/sun.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "sun",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-sun"
+    },
+    {
+      "file": "weather/wind.svg",
+      "width": 600,
+      "height": 400,
+      "alt": "wind",
+      "themeNotes": "Original linocut field plate on cream paper. Final picture wave may replace in place.",
+      "slot": "weather-wind"
+    }
+  ]
+}
