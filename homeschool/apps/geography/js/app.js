@@ -11,6 +11,11 @@
     babyFound: {},
     pinDone: {},
     quizCard: null,
+    capQueue: null,
+    capCursor: 0,
+    capQ: null,
+    capLive: "",
+    capLock: false,
   };
 
   function assetUrl(path) {
@@ -44,6 +49,34 @@
 
   function isLittle() {
     return state.band === "baby" || state.band === "toddler";
+  }
+
+  function pictureBand() {
+    return state.band === "toddler" || state.band === "preschool";
+  }
+
+  function hidesLede() {
+    return state.band === "baby" || pictureBand();
+  }
+
+  function inRunner() {
+    return document.documentElement.dataset.runner === "1";
+  }
+
+  function shuffleInPlace(arr) {
+    var n = arr.length;
+    while (n > 1) {
+      var j = Math.floor(Math.random() * n);
+      n -= 1;
+      var tmp = arr[n];
+      arr[n] = arr[j];
+      arr[j] = tmp;
+    }
+    return arr;
+  }
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/"/g, "&quot;");
   }
 
   function flightsForBand() {
@@ -82,6 +115,15 @@
     return { q: item.q, choices: pairs.map(function (p) { return p.c; }), a: a };
   }
 
+  function namedMarks(list) {
+    return (list || []).map(function (x) {
+      if (typeof x === "string") {
+        return { kind: "feature", id: x.toLowerCase().replace(/[^a-z0-9]+/g, "-"), label: x, sub: "" };
+      }
+      return { kind: "feature", id: x.id, label: x.name, sub: x.hint || "" };
+    });
+  }
+
   function flightMarks(fl) {
     if (!fl) return [];
     if (fl.states && fl.states.length) {
@@ -90,18 +132,20 @@
         return { kind: "state", id: ab, label: ab, sub: st ? st.capital : "" };
       });
     }
-    var list = fl.features || fl.rivers || [];
-    return list.map(function (x) {
-      return { kind: "feature", id: x.id, label: x.name, sub: x.hint || "" };
-    });
+    return namedMarks(fl.features || fl.rivers || fl.lakes || fl.trails || fl.canals || []);
+  }
+
+  function joinNames(list) {
+    return (list || []).map(function (x) { return typeof x === "string" ? x : x.name; }).join(" · ");
   }
 
   function flightBlurb(f) {
     if (f.states && f.states.length) return f.states.join(" · ");
-    if (f.features && f.features.length) return f.features.map(function (x) { return x.name; }).join(" · ");
-    if (f.rivers && f.rivers.length) return f.rivers.map(function (x) { return x.name; }).join(" · ");
-    if (f.trails && f.trails.length) return f.trails.join(" · ");
-    if (f.canals && f.canals.length) return f.canals.join(" · ");
+    if (f.features && f.features.length) return joinNames(f.features);
+    if (f.rivers && f.rivers.length) return joinNames(f.rivers);
+    if (f.lakes && f.lakes.length) return joinNames(f.lakes);
+    if (f.trails && f.trails.length) return joinNames(f.trails);
+    if (f.canals && f.canals.length) return joinNames(f.canals);
     if (f.regions && f.regions.length) return f.regions.join(" · ");
     return "";
   }
@@ -112,6 +156,7 @@
   });
 
   function header() {
+    if (inRunner()) return "";
     var p = HSProgress.load();
     var mute = HSAudio.isMuted();
     return (
@@ -161,9 +206,10 @@
             '<img src="' + assetUrl("images/hero-balloon.jpg") + '" alt="Hot-air balloon with terracotta, cream, and forest-green stripes over prairie">' +
             "<figcaption>Basket and burner. Each flight is a map topic. Drop pins; collect stamps.</figcaption>" +
           "</figure>" +
-          "<h1>Expedition board</h1>" +
+          '<h1 class="board-title">Expedition board</h1>' +
           (state.band === "baby" ? '<div class="actions"><button type="button" class="brass-btn touch" data-act="baby">Sky play</button></div>' : "") +
-          (isLittle() ? "" : '<p class="lede">Original flights aligned to Cycle 3 U.S. geography <em>topics</em>. Public names of states, capitals, and features. No recitation sentences.</p>') +
+          (pictureBand() ? '<div class="actions"><button type="button" class="brass-btn touch" data-act="pictures">Picture places</button></div>' : "") +
+          (hidesLede() ? "" : '<p class="lede">Original flights aligned to Cycle 3 U.S. geography <em>topics</em>. Public names of states, capitals, and features. No recitation sentences.</p>') +
           '<div class="photo-row">' +
             '<img src="' + assetUrl("images/basket-map.jpg") + '" alt="Wicker balloon basket rim with a brass compass and folded map">' +
             '<img src="' + assetUrl("images/aerial-usa.jpg") + '" alt="High-altitude aerial of North American land and water">' +
@@ -171,6 +217,7 @@
           '<div class="basket-panel"><div class="flight-list">' + list + "</div>" +
             '<div class="actions">' +
               (state.band === "baby" ? "" : '<button type="button" class="brass-btn touch" data-act="map">Open the chart</button>') +
+              (state.band === "upper" ? '<button type="button" class="brass-btn touch" data-act="capitals">All 50 capitals</button>' : "") +
               '<button type="button" class="brass-btn secondary touch" data-act="songs">Song</button>' +
             "</div></div>" +
         "</main></div>";
@@ -188,7 +235,7 @@
     if (fl.id === "great-lakes") photo = "images/lakes-aerial.jpg";
     var marks = flightMarks(fl);
     var canDrop = marks.length && !isLittle() && hsBandAtLeast(state.band, "early");
-    var canQuiz = state.band !== "baby" && quizzesFor(fl).length;
+    var canQuiz = state.band !== "baby" && state.band !== "toddler" && quizzesFor(fl).length;
     root.innerHTML =
       '<div class="app-shell">' + header() +
         '<main id="main" class="main">' +
@@ -251,18 +298,18 @@
     if (fl && marks.length) {
       pinHtml = '<div class="pin-tray" id="pin-tray">' + marks.map(function (m) {
         var extra = m.kind === "feature" ? ' data-feature="' + m.id + '"' : ' data-abbr="' + m.id + '"';
-        return '<button type="button" class="pin touch"' + extra + ">" + m.label + (m.sub ? "<br>" + m.sub : "") + "</button>";
-      }).join("") + "</div><p>Drag a pin onto its glowing mark on the chart.</p>";
+        return '<button type="button" class="pin touch"' + extra + ">" + esc(m.label) + (m.sub ? "<br>" + esc(m.sub) : "") + "</button>";
+      }).join("") + "</div><p>Drag a pin onto its glowing seat under the chart.</p>";
     }
     root.innerHTML =
       '<div class="app-shell">' + header() +
         '<main id="main" class="main">' +
           '<p><button type="button" class="brass-btn secondary touch" data-act="hub">Back</button></p>' +
           "<h1>Expedition chart</h1>" +
-          '<p class="lede">Original schematic navigator chart — not a survey plat. Drop pins on glowing states and features.</p>' +
+          '<p class="lede">Original schematic navigator chart — not a survey plat. Drop each pin on its own glowing seat.</p>' +
           pinHtml +
-          '<div class="map-wrap" id="map-host"></div>' +
           '<p class="live" id="live" aria-live="polite"></p>' +
+          '<div class="map-wrap" id="map-host"></div>' +
         "</main></div>";
     var host = document.getElementById("map-host");
     HSMap.loadChart(host).then(function () {
@@ -278,7 +325,8 @@
             pin.disabled = true;
             state.pinDone[id] = true;
             HSProgress.addStar();
-            if (live) live.textContent = (pin.textContent || id) + " is home. Stamp that pin.";
+            var pinName = (pin.innerText || id).replace(/\s+/g, " ").trim();
+            if (live) live.textContent = pinName + " is home. Stamp that pin.";
             var all = marks.every(function (m) { return state.pinDone[m.id]; });
             if (all) {
               HSProgress.addStamp(fl.id);
@@ -357,11 +405,99 @@
         "</main></div>";
   }
 
+  var PICTURE_PLACES = [
+    { id: "coast", title: "Coast", cls: "pic-coast", talk: "A coast is where the land meets the ocean." },
+    { id: "lakes", title: "Lakes", cls: "pic-lakes", talk: "Lakes are wide pools of water. The Great Lakes sit between several states." },
+    { id: "mountains", title: "Mountains", cls: "pic-mountains", talk: "Mountains are high, rocky land." },
+    { id: "desert", title: "Desert", cls: "pic-desert", talk: "A desert is dry land that gets very little rain." },
+    { id: "islands", title: "Islands", cls: "pic-islands", talk: "An island is land with water all the way around it." },
+    { id: "river", title: "River", cls: "pic-river", talk: "A river is water that runs across the land toward a bigger water." }
+  ];
+
+  function picturesView() {
+    var cards = PICTURE_PLACES.map(function (p) {
+      return '<button type="button" class="place-card touch" data-place="' + p.id + '">' +
+        '<span class="pic-swatch ' + p.cls + '"></span>' + esc(p.title) + "</button>";
+    }).join("");
+    root.innerHTML =
+      '<div class="app-shell">' + header() +
+        '<main id="main" class="main">' +
+          "<h1>Picture places</h1>" +
+          "<p>Tap a shape. Hear what that kind of place is.</p>" +
+          '<div class="place-grid">' + cards + "</div>" +
+          '<p class="live" id="live" aria-live="polite"></p>' +
+          '<div class="actions">' +
+            '<button type="button" class="brass-btn secondary touch" data-act="hub">All the flights</button>' +
+          "</div>" +
+        "</main></div>";
+  }
+
+  function capitalStates() {
+    return HS_STATES.filter(function (s) { return s.abbr !== "DC"; });
+  }
+
+  function buildCapitalQuestion() {
+    var states = capitalStates();
+    if (!state.capQueue) {
+      state.capQueue = shuffleInPlace(states.map(function (_, i) { return i; }));
+      state.capCursor = 0;
+    }
+    if (state.capCursor >= state.capQueue.length) {
+      state.capQ = null;
+      return;
+    }
+    var st = states[state.capQueue[state.capCursor]];
+    var pool = states.filter(function (s) { return s.region === st.region && s.abbr !== st.abbr; });
+    if (pool.length < 2) pool = states.filter(function (s) { return s.abbr !== st.abbr; });
+    shuffleInPlace(pool);
+    var decoys = pool.slice(0, 2);
+    var askCapital = state.capCursor % 2 === 0;
+    var choices;
+    var answer;
+    var q;
+    if (askCapital) {
+      q = "What is the capital of " + st.name + "?";
+      answer = st.capital;
+      choices = shuffleInPlace([st.capital].concat(decoys.map(function (s) { return s.capital; })));
+    } else {
+      q = st.capital + " is the capital of which state?";
+      answer = st.name;
+      choices = shuffleInPlace([st.name].concat(decoys.map(function (s) { return s.name; })));
+    }
+    state.capQ = { q: q, a: answer, choices: choices };
+  }
+
+  function capitalsView() {
+    if (!state.capQueue) buildCapitalQuestion();
+    var done = state.capQueue && state.capCursor >= state.capQueue.length;
+    if (!done && !state.capQ) buildCapitalQuestion();
+    var body;
+    if (done) {
+      body = "<h2>All 50 capitals</h2><p>You worked every state capital in this list, mixed together.</p>";
+    } else {
+      var choices = state.capQ.choices.map(function (c, i) {
+        return '<button type="button" class="choice touch" data-cap="' + i + '">' + esc(c) + "</button>";
+      }).join("");
+      body = "<h2>Capital " + (state.capCursor + 1) + " of " + state.capQueue.length + "</h2>" +
+        "<p>" + esc(state.capQ.q) + "</p>" + choices;
+    }
+    root.innerHTML =
+      '<div class="app-shell">' + header() +
+        '<main id="main" class="main">' +
+          '<p><button type="button" class="brass-btn secondary touch" data-act="hub">Back</button></p>' +
+          '<section class="basket-panel">' + body +
+            '<p class="live" id="live" aria-live="polite">' + esc(state.capLive || "") + "</p>" +
+          "</section>" +
+        "</main></div>";
+  }
+
   function render() {
     if (!state.band) { picker(); return; }
     document.body.className = "band-" + state.band;
     if (state.screen === "stamps") { stampBook(); return; }
     if (state.screen === "baby") { babyView(); return; }
+    if (state.screen === "pictures") { picturesView(); return; }
+    if (state.screen === "capitals") { capitalsView(); return; }
     if (state.screen === "songs") { songView(state.songId); return; }
     if (state.screen === "map") { mapView(false); return; }
     if (state.screen === "drop") { mapView(true); return; }
@@ -377,7 +513,7 @@
     if (t.classList.contains("pin")) return;
     if (t.dataset.band) {
       setBand(t.dataset.band);
-      state.screen = t.dataset.band === "baby" ? "baby" : "hub";
+      state.screen = t.dataset.band === "baby" ? "baby" : (t.dataset.band === "toddler" || t.dataset.band === "preschool" ? "pictures" : "hub");
       HSAudio.burner();
       render();
       return;
@@ -388,6 +524,17 @@
     if (act === "stamps") { state.screen = "stamps"; render(); return; }
     if (act === "hub") { state.screen = "hub"; HSAudio.stopTalk(); render(); return; }
     if (act === "baby") { state.screen = "baby"; render(); return; }
+    if (act === "pictures") { state.screen = "pictures"; render(); return; }
+    if (act === "capitals") {
+      state.capQueue = null;
+      state.capCursor = 0;
+      state.capQ = null;
+      state.capLive = "";
+      state.capLock = false;
+      state.screen = "capitals";
+      render();
+      return;
+    }
     if (act === "songs") { state.screen = "songs"; render(); return; }
     if (act === "map") { state.screen = "map"; render(); return; }
     if (act === "drop") { state.pinDone = {}; state.screen = "drop"; render(); return; }
@@ -435,6 +582,37 @@
       }
       return;
     }
+    if (t.dataset.place) {
+      var place;
+      for (var p = 0; p < PICTURE_PLACES.length; p++) if (PICTURE_PLACES[p].id === t.dataset.place) place = PICTURE_PLACES[p];
+      if (!place) return;
+      var liveP = document.getElementById("live");
+      if (liveP) liveP.textContent = place.talk;
+      HSAudio.talk(place.talk);
+      return;
+    }
+    if (t.dataset.cap !== undefined) {
+      if (state.capLock || !state.capQ) return;
+      var capPick = state.capQ.choices[Number(t.dataset.cap)];
+      if (capPick === state.capQ.a) {
+        state.capLive = "Matched. Next capital.";
+        HSAudio.pinDrop();
+        HSProgress.addStar();
+        state.capLock = true;
+        state.capCursor += 1;
+        state.capQ = null;
+        setTimeout(function () {
+          state.capLock = false;
+          render();
+        }, 450);
+      } else {
+        state.capLive = "That capital belongs with a different state.";
+        HSAudio.wrong();
+        var liveC = document.getElementById("live");
+        if (liveC) liveC.textContent = state.capLive;
+      }
+      return;
+    }
     if (t.dataset.hot) {
       var hot;
       for (var h = 0; h < HS_BABY_GEO.length; h++) if (HS_BABY_GEO[h].id === t.dataset.hot) hot = HS_BABY_GEO[h];
@@ -465,8 +643,9 @@
   var week = qs().get("week");
   if (state.band === "baby" && !week) {
     state.screen = "baby";
-  }
-  if (state.band && week && state.band !== "baby") {
+  } else if (pictureBand()) {
+    state.screen = "pictures";
+  } else if (state.band && week) {
     var match = HS_FLIGHTS.filter(function (f) { return String(f.week) === String(week); })[0];
     if (match && hsBandAtLeast(state.band, match.min)) {
       state.flightId = match.id;

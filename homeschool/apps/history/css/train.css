@@ -72,7 +72,12 @@ body {
   box-shadow: 0 4px 0 #0c0907;
 }
 
-html[data-runner] .untested-banner {
+html[data-runner] .untested-banner,
+html[data-runner] .topbar,
+html[data-runner] .hero,
+html[data-runner] .photo-row,
+html[data-runner] .lede,
+html[data-runner] .board-title {
   display: none;
 }
 
@@ -85,8 +90,8 @@ button {
 }
 
 .touch {
-  min-width: 48px;
-  min-height: 48px;
+  min-width: 56px;
+  min-height: 56px;
 }
 
 body.band-baby .touch,
@@ -121,10 +126,18 @@ body.band-early .touch {
 }
 
 .topbar .icon-btn.touch {
-  min-width: 44px;
-  min-height: 44px;
-  padding: 6px 10px;
-  font-size: 12px;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+body.band-baby .topbar .icon-btn.touch,
+body.band-toddler .topbar .icon-btn.touch,
+body.band-preschool .topbar .icon-btn.touch,
+body.band-early .topbar .icon-btn.touch {
+  min-width: 64px;
+  min-height: 64px;
 }
 
 .topbar-tools {
@@ -537,8 +550,38 @@ body.band-early .touch {
   .station-stop .sign {
     width: auto;
     flex: 1;
-    min-height: 48px;
+    min-height: 56px;
   }
+}
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.picture-ticket {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  background: #2a1810;
+  color: var(--cream);
+  border: 3px solid var(--brass);
+  text-align: left;
+  overflow: hidden;
+}
+
+.picture-ticket img {
+  width: 100%;
+  height: 96px;
+  object-fit: cover;
+}
+
+.picture-ticket span {
+  display: block;
+  padding: 8px;
+  font-weight: 700;
 }
 
 @media (prefers-reduced-motion: reduce) {
