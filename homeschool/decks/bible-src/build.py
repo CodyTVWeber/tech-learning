@@ -60,14 +60,16 @@ def clean_web(text: str) -> str:
     text = re.sub(r"'\s+", "'", text)
     text = re.sub(r"\s+'", "'", text)
     text = re.sub(r"\s+([;:,.!?])", r"\1", text)
-    # Drop leftover unmatched quotation marks from verse-span extraction.
-    quotes = "\"'“”‘’"
-    text = text.strip()
-    while text and text[0] in quotes and text[-1] not in quotes:
-        text = text[1:].lstrip()
-    while text and text[-1] in quotes and text[0] not in quotes:
-        text = text[:-1].rstrip()
-    text = re.sub(r"\s{2,}", " ", text)
+    text = re.sub(r"\s{2,}", " ", text).strip()
+    # Drop only an extra opener at the start or closer at the end.
+    # A quote that opens and closes inside the extract stays, including
+    # "Don't" apostrophes (those are not counted as quotation marks).
+    pairs = (("“", "”"), ("‘", "’"), ('"', '"'))
+    for op, cl in pairs:
+        while text.startswith(op) and text.count(op) > text.count(cl):
+            text = text[len(op):].lstrip()
+        while text.endswith(cl) and text.count(cl) > text.count(op):
+            text = text[:-len(cl)].rstrip()
     return text.strip()
 
 
@@ -657,7 +659,7 @@ def main():
         blank_fix = {"rom1-16": "power", "luke2-11": "born", "1cor16-14": "done"}
         for v in verses:
             v["kjv"] = clean_kjv(v.get("kjv") or "")
-            v["web"] = clean_web(v.get("web") or "")
+            v["web"] = clean_web(WEB_OVERRIDE.get(v["id"]) or v.get("web") or "")
             if v.get("id") in blank_fix:
                 v["blank"] = pick_blank(v["kjv"], blank_fix[v["id"]])
         print("rebuilding from", extracted)
@@ -678,13 +680,13 @@ def main():
         "translationNote": "Scripture: King James Version (public domain) and World English Bible (public domain).",
         "bands": [{"id": b, "label": BAND_LABELS[b]} for b in BANDS],
         "images": {
-            "hillside": "images/hillside-hero.png",
-            "sheep": "images/sheep.png",
-            "lantern": "images/lantern.png",
-            "stars": "images/stars.png",
-            "waters": "images/waters.png",
-            "olives": "images/olives.png",
-            "wheat": "images/wheat.png",
+            "hillside": "img/bible-hillside-hero.jpg",
+            "sheep": "img/bible-sheep.jpg",
+            "lantern": "img/bible-lantern.jpg",
+            "stars": "img/bible-stars.jpg",
+            "waters": "img/bible-waters.jpg",
+            "olives": "img/bible-olives.jpg",
+            "wheat": "img/bible-wheat.jpg",
         },
         "verses": verses,
         "stories": STORIES,

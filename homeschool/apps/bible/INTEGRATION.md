@@ -8,7 +8,7 @@ Theme: a shepherd’s hillside. Kids gather sheep as they memorize, light lanter
 
 - Standalone HTML/CSS/JS. Relative paths only. No CDN, no build step.
 - Precache every path in `assets.json` → `files`.
-- Pictures are listed in `images.json`.
+- Pictures are listed in `images.json`. The screen uses the photoreal JPGs in `img/` (`src` on each slot). `images/*.png` stay as kit placeholders.
 - Band from `?band=` else `localStorage['hs.band']` else an in-app picker.
   Bands: `baby`, `toddler`, `preschool`, `early`, `primary`, `upper`.
 - Progress: `localStorage['hs.progress.bible']` (sheep ids, lantern count, stars, done maps, KJV/WEB toggle).
