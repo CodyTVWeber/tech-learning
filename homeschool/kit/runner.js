@@ -110,7 +110,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     if (!document.body.classList.contains("hs-play")) return;
-    HS.registerPWA({ swUrl: "./sw.js", scope: "./" });
+    HS.registerPWA({ swUrl: "./sw.js", scope: "./", ensureApps: false });
     HS.runApp().catch(function (err) {
       console.error(err);
       const root = document.getElementById("app-root");

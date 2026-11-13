@@ -87,9 +87,13 @@ test("hub and each learner PWA work offline", async ({ page, context }) => {
         home + "play.html?app=" + encodeURIComponent(appId) + "&band=" + encodeURIComponent(stage.band);
       await page.goto(play, { waitUntil: "load" });
       await page.waitForSelector("#app-root");
+      // HS.runApp() fetches index.html and scripts after load. Shell-only apps
+      // (singing, bible) have no static text; read innerText only once they render.
+      await expect(async () => {
+        const text = (await page.locator("#app-root").innerText()).trim();
+        expect(text.length, "app " + appId + " for " + stage.folder + " rendered").toBeGreaterThan(8);
+      }).toPass();
       await expect(page.locator("#app-root")).not.toHaveText(/Could not open|not on this device/);
-      const text = (await page.locator("#app-root").innerText()).trim();
-      expect(text.length, "app " + appId + " for " + stage.folder + " rendered").toBeGreaterThan(8);
       if (appId === "reading" && (stage.band === "toddler" || stage.band === "preschool")) {
         const beds = page.locator("#go-sounds");
         if (await beds.count()) await beds.click();
