@@ -227,10 +227,28 @@
     }, 1200);
   }
 
+  function loadScript(src) {
+    return new Promise(function (resolve) {
+      const el = document.createElement("script");
+      el.src = src;
+      el.onload = resolve;
+      el.onerror = resolve;
+      document.head.appendChild(el);
+    });
+  }
+  async function loadKitStandalone() {
+    if (inRunner()) return;
+    if (hs().getBand && hs().speak && hs().playCue && hs().readProgress) return;
+    const kit = new URL("../../kit/", location.href);
+    await loadScript(new URL("audio.js", kit).href);
+    await loadScript(new URL("tts.js", kit).href);
+    await loadScript(new URL("progress.js", kit).href);
+  }
   async function boot() {
     const host = document.getElementById("reading-root");
     if (!host) return;
     if (!inRunner()) {
+      await loadKitStandalone();
       window.HS = window.HS || {};
       HS.appBase = HS.appBase || new URL("./", location.href).href;
       HS.subject = SUBJECT;
@@ -259,17 +277,25 @@
       return;
     }
 
+    const pre = window.__GARDEN_PRE;
+    const usePre = pre && pre.band === b;
     const [data, manifest, catalog] = await Promise.all([
-      fetch(url("data/" + b + ".json")).then(function (r) {
-        if (!r.ok) throw new Error("no data");
-        return r.json();
-      }),
-      fetch(url("images.json")).then(function (r) {
-        return r.json();
-      }),
-      fetch(url("data/books.json")).then(function (r) {
-        return r.json();
-      }),
+      usePre
+        ? pre.data
+        : fetch(url("data/" + b + ".json")).then(function (r) {
+            if (!r.ok) throw new Error("no data");
+            return r.json();
+          }),
+      usePre
+        ? pre.images
+        : fetch(url("images.json")).then(function (r) {
+            return r.json();
+          }),
+      usePre
+        ? pre.books
+        : fetch(url("data/books.json")).then(function (r) {
+            return r.json();
+          }),
     ]);
     const img = imgFor(manifest);
     const bookMeta = catalog.books || [];

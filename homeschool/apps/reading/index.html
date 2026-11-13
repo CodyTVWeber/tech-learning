@@ -10,7 +10,14 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <div id="reading-root" class="garden"></div>
+  <div id="reading-root" class="garden">
+    <div class="garden-intro">
+      <h1>Garden reading</h1>
+      <p>Opening the garden.</p>
+    </div>
+    <p><button type="button" id="go-sounds">Sound beds</button></p>
+    <p class="garden-letter">s</p>
+  </div>
   <div id="garden-celebrate" class="garden-celebrate" hidden>
     <div class="garden-celebrate-card">
       <p class="garden-celebrate-kicker">A bed blooms</p>
@@ -18,9 +25,24 @@
     </div>
   </div>
   <p class="untested-banner">Untested, awaiting parent test.</p>
-  <script src="../../kit/audio.js"></script>
-  <script src="../../kit/tts.js"></script>
-  <script src="../../kit/progress.js"></script>
+  <script>
+    (function () {
+      var base = document.documentElement.dataset.appBase;
+      if (!base) return;
+      var band = document.documentElement.dataset.band || "early";
+      function grab(path) {
+        return fetch(new URL(path, base).href).then(function (r) {
+          return r.json();
+        });
+      }
+      window.__GARDEN_PRE = {
+        band: band,
+        data: grab("data/" + band + ".json"),
+        images: grab("images.json"),
+        books: grab("data/books.json"),
+      };
+    })();
+  </script>
   <script src="./art.js"></script>
   <script src="./reader.js"></script>
   <script src="./app.js"></script>
