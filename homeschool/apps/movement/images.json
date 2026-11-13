@@ -1,79 +1,70 @@
 {
   "app": "movement",
-  "subject": "movement",
-  "theme": "Circus parade — join the parade, earn ribbons",
+  "theme": "circus parade",
   "images": [
     {
-      "file": "img/circus-parade-hero.jpg",
-      "subject": "movement",
-      "size": "1152x864",
-      "alt": "A red and cream circus parade wagon and a white horse on a dusty fairground",
-      "theme": "Hero: wholesome daylight circus parade, sawdust, brass harness, no scary clowns.",
-      "status": "generated-original"
+      "file": "parade-hero.png",
+      "width": 1024,
+      "height": 420,
+      "alt": "A circus parade wagon and horse on a dusty fairground",
+      "themeNotes": "Hero. Wholesome daylight circus parade, sawdust, brass harness, no scary clowns.",
+      "slot": "hero"
     },
     {
-      "file": "img/circus-tent.jpg",
-      "subject": "movement",
-      "size": "1152x864",
-      "alt": "Vintage red and cream striped circus tent with a sawdust path",
-      "theme": "Practice tent and peekaboo flap. Ticket booth with prize ribbons.",
-      "status": "generated-original"
+      "file": "tent.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Vintage red and cream striped circus tent",
+      "themeNotes": "Practice tent and peekaboo flap.",
+      "slot": "tent"
     },
     {
-      "file": "img/circus-ribbons.jpg",
-      "subject": "movement",
-      "size": "1024x1024",
-      "alt": "Prize ribbons in crimson, blue, gold, and green on navy cloth",
-      "theme": "Collectible ribbon board still life.",
-      "status": "generated-original"
+      "file": "ribbons.png",
+      "width": 256,
+      "height": 256,
+      "alt": "Prize ribbons in crimson, blue, gold, and green",
+      "themeNotes": "Collectible ribbon board.",
+      "slot": "ribbons"
     },
     {
-      "file": "img/circus-bandstand.jpg",
-      "subject": "movement",
-      "size": "1152x864",
+      "file": "bandstand.png",
+      "width": 320,
+      "height": 240,
       "alt": "Wooden circus bandstand with a snare drum and tuba",
-      "theme": "Freeze band and tap board. Empty of people.",
-      "status": "generated-original"
+      "themeNotes": "Freeze band and tap board. Empty of people.",
+      "slot": "bandstand"
     },
     {
-      "file": "img/circus-horse.jpg",
-      "subject": "movement",
-      "size": "1152x864",
-      "alt": "White parade horse in brass harness standing in sawdust",
-      "theme": "Follow-the-leader horse prance cue.",
-      "status": "generated-original"
+      "file": "horse.png",
+      "width": 320,
+      "height": 240,
+      "alt": "White parade horse in brass harness",
+      "themeNotes": "Follow-the-leader horse prance cue.",
+      "slot": "horse"
     },
     {
-      "file": "img/circus-elephant.jpg",
-      "subject": "movement",
-      "size": "1152x864",
+      "file": "elephant.png",
+      "width": 320,
+      "height": 240,
       "alt": "Calm elephant walking a sawdust circus track",
-      "theme": "Step-counter and elephant-swing move. Documentary, not cartoon.",
-      "status": "generated-original"
+      "themeNotes": "Step-counter and elephant-swing move.",
+      "slot": "elephant"
     },
     {
-      "file": "img/lap-quilt.jpg",
-      "subject": "movement",
-      "size": "1152x864",
+      "file": "quilt.png",
+      "width": 320,
+      "height": 240,
       "alt": "Cream and crimson lap quilt with wooden circus blocks",
-      "theme": "Baby and toddler lap-play. No faces.",
-      "status": "generated-original"
+      "themeNotes": "Baby and toddler lap-play. No faces.",
+      "slot": "quilt"
     },
     {
-      "file": "img/freeze-ring.jpg",
-      "subject": "movement",
-      "size": "1152x864",
+      "file": "ring.png",
+      "width": 320,
+      "height": 240,
       "alt": "Empty spotlighted circus ring of packed sawdust",
-      "theme": "Freeze band stage. Statue moment.",
-      "status": "generated-original"
-    },
-    {
-      "file": "img/noise.svg",
-      "subject": "movement",
-      "size": "120x120",
-      "alt": "Fine grain overlay",
-      "theme": "Letterpress paper tooth on the navy ground.",
-      "status": "placeholder-texture"
+      "themeNotes": "Freeze band stage.",
+      "slot": "ring"
     }
   ]
 }

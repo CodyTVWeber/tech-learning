@@ -22,7 +22,7 @@ body {
   font-family: var(--serif);
   color: var(--ink);
   background-color: var(--sail);
-  background-image: url("img/linen.svg");
+  background-image: url("images/linen.svg");
 }
 
 .skip { position: absolute; left: -999px; }

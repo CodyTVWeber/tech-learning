@@ -1,7 +1,7 @@
 # Circus Parade — credits
 
 ## Original pictures
-Photographs in `img/` were generated for this app (original stills, not stock templates):
+Photographs in `images/` were generated for this app (original stills, not stock templates):
 
 - `circus-parade-hero.jpg` — parade wagon and horse
 - `circus-tent.jpg` — tent and ticket booth
@@ -12,7 +12,7 @@ Photographs in `img/` were generated for this app (original stills, not stock te
 - `lap-quilt.jpg` — lap-play still life
 - `freeze-ring.jpg` — empty ring
 
-`img/noise.svg` is an original grain texture.
+`images/noise.svg` is an original grain texture.
 
 ## Words and music
 - Follow-the-leader cues, freeze-band copy, original rhymes (“Little parade pony”, “The tent goes up”, “Five gold ribbons”, “Soft little drum”, “Marching around the ring”), step glossary, and WebAudio calliope/drum patterns are original.

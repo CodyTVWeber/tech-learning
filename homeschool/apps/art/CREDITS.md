@@ -3,17 +3,17 @@
 ## Original pictures
 Generated for this app (working-studio photographs, not clipart):
 
-- `img/harbor-studio-hero.jpg`
-- `img/harbor-easel.jpg`
-- `img/harbor-palette.jpg`
-- `img/harbor-looking-wall.jpg`
-- `img/harbor-still-life.jpg`
-- `img/color-boats.jpg`
-- `img/harbor-shapes.jpg`
-- `img/linen.svg` — original sailcloth texture
+- `images/harbor-studio-hero.jpg`
+- `images/harbor-easel.jpg`
+- `images/harbor-palette.jpg`
+- `images/harbor-looking-wall.jpg`
+- `images/harbor-still-life.jpg`
+- `images/color-boats.jpg`
+- `images/harbor-shapes.jpg`
+- `images/linen.svg` — original sailcloth texture
 
 ## Public-domain masterpieces
-Thumbnails in `img/masters/` are Wikimedia Commons photographs of public-domain paintings. Offline copies for Looking Wall only. License: public domain. See `images.json` for per-file museum and source URL.
+Thumbnails in `images/masters/` are Wikimedia Commons photographs of public-domain paintings. Offline copies for Looking Wall only. License: public domain. See `images.json` for per-file museum and source URL.
 
 | File | Work | Artist | Museum (as credited) |
 |---|---|---|---|

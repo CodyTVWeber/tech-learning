@@ -72,6 +72,12 @@
   }
 
   function readBand() {
+    const hs = window.HS || {};
+    if (hs.band && BAND_IDS.indexOf(hs.band) !== -1) return hs.band;
+    if (typeof hs.getBand === "function") {
+      const fromHs = hs.getBand();
+      if (BAND_IDS.indexOf(fromHs) !== -1) return fromHs;
+    }
     const q = new URLSearchParams(location.search).get("band");
     if (BAND_IDS.indexOf(q) !== -1) return q;
     const stored = localStorage.getItem(BAND_KEY);
@@ -194,7 +200,7 @@
     }).join("");
     document.getElementById("view").innerHTML =
       '<figure class="hero">' +
-        '<img src="' + u("img/circus-parade-hero.jpg") + '" alt="A circus parade wagon and horse on a dusty fairground">' +
+        '<img src="' + u("images/circus-parade-hero.jpg") + '" alt="A circus parade wagon and horse on a dusty fairground">' +
         "<figcaption>Join the parade · earn ribbons</figcaption>" +
       "</figure>" +
       '<article class="panel">' +
@@ -345,7 +351,7 @@
     const cfg = C.freeze[state.band] || C.freeze.preschool;
     const root = document.getElementById("view");
     root.innerHTML =
-      '<figure class="hero"><img src="' + u("img/freeze-ring.jpg") + '" alt="Empty circus ring under a spotlight"><figcaption>Freeze band</figcaption></figure>' +
+      '<figure class="hero"><img src="' + u("images/freeze-ring.jpg") + '" alt="Empty circus ring under a spotlight"><figcaption>Freeze band</figcaption></figure>' +
       '<article class="panel"><p class="kicker">Move with the drums</p><h1>Freeze Band</h1>' +
       '<p class="lede">Dance while the calliope plays. When it stops, statue. Tap “I froze” each time.</p></article>' +
       '<div class="move-stage" id="stage"><div class="beat-lamp" id="lamp"></div><h2>Band is still</h2></div>' +
@@ -467,7 +473,7 @@
         return '<span class="dot' + (idx === state.run.line ? " on" : "") + '"></span>';
       }).join("");
       root.innerHTML =
-        '<figure class="hero"><img src="' + u("img/lap-quilt.jpg") + '" alt="Lap quilt and wooden circus blocks"><figcaption>Lap tent</figcaption></figure>' +
+        '<figure class="hero"><img src="' + u("images/lap-quilt.jpg") + '" alt="Lap quilt and wooden circus blocks"><figcaption>Lap tent</figcaption></figure>' +
         '<article class="panel"><p class="kicker">' + r.source + "</p><h1>" + r.title + "</h1>" +
         '<p class="note">' + r.grownup + "</p></article>" +
         '<div class="move-stage"><p class="rhyme-line" id="line">' + line + '</p><div class="dots">' + dots + '</div></div>' +
@@ -505,10 +511,10 @@
 
   function renderPeek() {
     const animals = [
-      { name: "Horse", img: "img/circus-horse.jpg", say: "Peekaboo, parade horse!" },
-      { name: "Elephant", img: "img/circus-elephant.jpg", say: "Peekaboo, elephant!" },
-      { name: "Wagon", img: "img/circus-parade-hero.jpg", say: "Here comes the wagon." },
-      { name: "Tent", img: "img/circus-tent.jpg", say: "The tent is open." }
+      { name: "Horse", img: "images/circus-horse.jpg", say: "Peekaboo, parade horse!" },
+      { name: "Elephant", img: "images/circus-elephant.jpg", say: "Peekaboo, elephant!" },
+      { name: "Wagon", img: "images/circus-parade-hero.jpg", say: "Here comes the wagon." },
+      { name: "Tent", img: "images/circus-tent.jpg", say: "The tent is open." }
     ];
     let x = 8;
     let which = 0;
@@ -517,7 +523,7 @@
     root.innerHTML =
       '<article class="panel"><p class="kicker">Grown-up play</p><h1>Wagon Watch</h1>' +
       '<p class="lede">Hold the little one. Track the wagon with your eyes together. Tap the tent for peekaboo.</p></article>' +
-      '<div class="wagon-track"><img class="wagon" id="wagon" src="' + u("img/circus-parade-hero.jpg") + '" alt="Parade wagon"></div>' +
+      '<div class="wagon-track"><img class="wagon" id="wagon" src="' + u("images/circus-parade-hero.jpg") + '" alt="Parade wagon"></div>' +
       '<button type="button" class="tent-flap" id="flap">Tap the tent flap</button>' +
       '<div class="btn-row">' +
         '<button type="button" class="btn btn-main" id="toot">Toot</button>' +
@@ -696,7 +702,7 @@
       return '<div class="stamp-badge' + (got ? " got" : "") + '">' + (got ? "★ " : "") + s.name + "</div>";
     }).join("");
     root.innerHTML =
-      '<figure class="hero"><img src="' + u("img/circus-ribbons.jpg") + '" alt="Prize ribbons on navy cloth"><figcaption>Prize board</figcaption></figure>' +
+      '<figure class="hero"><img src="' + u("images/circus-ribbons.jpg") + '" alt="Prize ribbons on navy cloth"><figcaption>Prize board</figcaption></figure>' +
       '<article class="panel"><p class="kicker">Collectibles, not grades</p><h1>Ribbon Board</h1>' +
       "<p>Stars collected: <strong>" + state.progress.stars + "</strong></p></article>" +
       '<article class="panel"><h2>Ribbons</h2><div class="collection">' + ribbons + "</div></article>" +
@@ -730,5 +736,9 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", boot);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();

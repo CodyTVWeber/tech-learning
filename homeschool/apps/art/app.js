@@ -68,6 +68,12 @@
   }
 
   function readBand() {
+    const hs = window.HS || {};
+    if (hs.band && BAND_IDS.indexOf(hs.band) !== -1) return hs.band;
+    if (typeof hs.getBand === "function") {
+      const fromHs = hs.getBand();
+      if (BAND_IDS.indexOf(fromHs) !== -1) return fromHs;
+    }
     const q = new URLSearchParams(location.search).get("band");
     if (BAND_IDS.indexOf(q) !== -1) return q;
     const stored = localStorage.getItem(BAND_KEY);
@@ -157,7 +163,7 @@
         '<span class="copy"><span>' + a.kicker + "</span><strong>" + a.title + "</strong></span></button>";
     }).join("");
     document.getElementById("view").innerHTML =
-      '<figure class="hero"><img src="' + u("img/harbor-studio-hero.jpg") + '" alt="Watercolor studio inside a harbor boathouse">' +
+      '<figure class="hero"><img src="' + u("images/harbor-studio-hero.jpg") + '" alt="Watercolor studio inside a harbor boathouse">' +
       "<figcaption>Harbor Studio · look, mix, then paper</figcaption></figure>" +
       '<article class="panel"><p class="kicker">' + bandMeta().label + "</p><h1>Harbor Studio</h1>" +
       '<p class="lede">' + C.parentNotes[state.band] + "</p>" +
@@ -184,7 +190,7 @@
     const root = document.getElementById("view");
     function paint() {
       root.innerHTML =
-        '<figure class="hero"><img src="' + u("img/color-boats.jpg") + '" alt="Primary-colored toy boats on harbor planks"><figcaption>Color dock</figcaption></figure>' +
+        '<figure class="hero"><img src="' + u("images/color-boats.jpg") + '" alt="Primary-colored toy boats on harbor planks"><figcaption>Color dock</figcaption></figure>' +
         '<article class="panel"><p class="kicker">Say the color</p><h1>' + current.name + "</h1>" +
         '<p class="lede">' + current.say + "</p></article>" +
         '<div class="swatch" style="width:100%;height:120px;background:' + current.hex + ';border:1px solid var(--harbor)"></div>' +
@@ -224,7 +230,7 @@
     function paint() {
       const s = list[i];
       root.innerHTML =
-        '<figure class="hero"><img src="' + u("img/harbor-shapes.jpg") + '" alt="Wooden shape blocks"><figcaption>Shape harbor</figcaption></figure>' +
+        '<figure class="hero"><img src="' + u("images/harbor-shapes.jpg") + '" alt="Wooden shape blocks"><figcaption>Shape harbor</figcaption></figure>' +
         '<article class="panel"><p class="kicker">Find this shape</p><h1>' + s.name + "</h1>" +
         '<p class="lede">' + s.say + "</p></article>" +
         '<div style="background:#fff;border:1px solid var(--harbor);padding:16px;margin-bottom:12px">' + svgPath(s.d) + "</div>" +
@@ -266,7 +272,7 @@
           ((picked[0] === m.a && picked[1] === m.b) || (picked[0] === m.b && picked[1] === m.a));
       });
       root.innerHTML =
-        '<figure class="hero"><img src="' + u("img/harbor-palette.jpg") + '" alt="Worn wooden palette"><figcaption>Mix pan</figcaption></figure>' +
+        '<figure class="hero"><img src="' + u("images/harbor-palette.jpg") + '" alt="Worn wooden palette"><figcaption>Mix pan</figcaption></figure>' +
         '<article class="panel"><p class="kicker">Two dabs</p><h1>What do they make?</h1>' +
         '<p class="lede">Tap two primaries. The pan mixes them. Then mix the same pair on paper.</p></article>' +
         '<div class="swatch-row">' +
@@ -597,7 +603,7 @@
     const list = C.challenges.filter(function (ch) { return ch.bands.indexOf(state.band) !== -1; });
     const root = document.getElementById("view");
     root.innerHTML =
-      '<figure class="hero"><img src="' + u("img/harbor-easel.jpg") + '" alt="Field easel on a harbor pier"><figcaption>Studio challenges</figcaption></figure>' +
+      '<figure class="hero"><img src="' + u("images/harbor-easel.jpg") + '" alt="Field easel on a harbor pier"><figcaption>Studio challenges</figcaption></figure>' +
       '<article class="panel"><p class="kicker">Original studio work</p><h1>Challenges</h1>' +
       '<p class="lede">The screen names the job. The paper is the work. Mirror, upside-down looking, abstract color, perspective, value.</p></article>' +
       list.map(function (ch) {
@@ -625,7 +631,7 @@
       return '<div class="stamp-badge' + (got ? " got" : "") + '">' + s.name + "</div>";
     }).join("");
     root.innerHTML =
-      '<figure class="hero"><img src="' + u("img/harbor-looking-wall.jpg") + '" alt="Studio wall of frames and study cards"><figcaption>Postcard rack</figcaption></figure>' +
+      '<figure class="hero"><img src="' + u("images/harbor-looking-wall.jpg") + '" alt="Studio wall of frames and study cards"><figcaption>Postcard rack</figcaption></figure>' +
       '<article class="panel"><p class="kicker">Collectibles, not grades</p><h1>Postcard rack</h1>' +
       "<p>Stars: <strong>" + state.progress.stars + "</strong></p></article>" +
       '<article class="panel"><h2>Postcards</h2><div class="collection">' + pcs + "</div></article>" +
@@ -659,5 +665,9 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", boot);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();

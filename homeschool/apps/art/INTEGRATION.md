@@ -14,7 +14,7 @@ Plug this folder in as subject `art`. Visual language is a **harbor studio** (sa
 - Quiet: `localStorage['hs.art.quiet']`
 - Precache: `assets.json` → `files`. Standalone `sw.js` caches that list. Do **not** register it inside the learner runner (`dataset.runner`).
 - Visible banner: “Untested, awaiting parent test.” (not screen-reader-only).
-- Images: `images.json`. Generated studio stills in `img/`. Masterpiece slots in `img/masters/` (public-domain museum photographs, credited).
+- Images: `images.json`. Generated studio stills in `images/`. Masterpiece slots in `images/masters/` (public-domain museum photographs, credited).
 
 ## Coverage
 | Band | What opens |

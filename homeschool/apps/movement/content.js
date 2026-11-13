@@ -12,19 +12,19 @@ window.HSMovement = {
     { id: "upper", label: "Upper", blurb: "Build a parade routine, lead the freeze band, counted warm-ups." }
   ],
   activities: [
-    { id: "peek", title: "Wagon Watch", kicker: "Track the parade", bands: ["baby", "toddler"], img: "img/circus-parade-hero.jpg", alt: "Parade wagon and horse on a fairground" },
-    { id: "rhymes", title: "Lap Tent Rhymes", kicker: "Bounce and pat", bands: ["baby", "toddler", "preschool"], img: "img/lap-quilt.jpg", alt: "Quilt and wooden circus blocks for lap play" },
-    { id: "parade", title: "Join the Parade", kicker: "Follow the leader", bands: ["toddler", "preschool", "early", "primary", "upper"], img: "img/circus-horse.jpg", alt: "White parade horse in brass harness" },
-    { id: "ringmaster", title: "Ringmaster Says", kicker: "Listen, then move", bands: ["preschool", "early", "primary", "upper"], img: "img/circus-tent.jpg", alt: "Red and cream circus tent" },
-    { id: "freeze", title: "Freeze Band", kicker: "Move, then statue", bands: ["toddler", "preschool", "early", "primary", "upper"], img: "img/freeze-ring.jpg", alt: "Empty spotlighted circus ring" },
-    { id: "count", title: "Step Counter", kicker: "Count the steps", bands: ["toddler", "preschool", "early", "primary", "upper"], img: "img/circus-elephant.jpg", alt: "Calm elephant on a sawdust track" },
-    { id: "ballet", title: "Tent-Pole Ballet", kicker: "Tall and smooth", bands: ["preschool", "early"], img: "img/circus-tent.jpg", alt: "Circus tent with brass pole" },
-    { id: "tap", title: "Board-Walk Tap", kicker: "Toe, heel, stamp", bands: ["early", "primary"], img: "img/circus-bandstand.jpg", alt: "Wooden bandstand with snare drum" },
-    { id: "street", title: "Street-Beat Parade", kicker: "Bounce and freeze poses", bands: ["primary"], img: "img/circus-bandstand.jpg", alt: "Circus bandstand and brass" },
-    { id: "builder", title: "Parade Builder", kicker: "Make a short show", bands: ["primary", "upper"], img: "img/circus-parade-hero.jpg", alt: "Circus parade wagon" },
-    { id: "practice", title: "Practice Tent", kicker: "Timer and bag check", bands: ["preschool", "early", "primary", "upper"], img: "img/circus-tent.jpg", alt: "Circus tent and ticket booth" },
-    { id: "glossary", title: "Step Names", kicker: "Words for moves", bands: ["early", "primary", "upper"], img: "img/circus-ribbons.jpg", alt: "Prize ribbons on navy cloth" },
-    { id: "collection", title: "Ribbon Board", kicker: "Stamps and ribbons", bands: ["baby", "toddler", "preschool", "early", "primary", "upper"], img: "img/circus-ribbons.jpg", alt: "Prize ribbons" }
+    { id: "peek", title: "Wagon Watch", kicker: "Track the parade", bands: ["baby", "toddler"], img: "images/circus-parade-hero.jpg", alt: "Parade wagon and horse on a fairground" },
+    { id: "rhymes", title: "Lap Tent Rhymes", kicker: "Bounce and pat", bands: ["baby", "toddler", "preschool"], img: "images/lap-quilt.jpg", alt: "Quilt and wooden circus blocks for lap play" },
+    { id: "parade", title: "Join the Parade", kicker: "Follow the leader", bands: ["toddler", "preschool", "early", "primary", "upper"], img: "images/circus-horse.jpg", alt: "White parade horse in brass harness" },
+    { id: "ringmaster", title: "Ringmaster Says", kicker: "Listen, then move", bands: ["preschool", "early", "primary", "upper"], img: "images/circus-tent.jpg", alt: "Red and cream circus tent" },
+    { id: "freeze", title: "Freeze Band", kicker: "Move, then statue", bands: ["toddler", "preschool", "early", "primary", "upper"], img: "images/freeze-ring.jpg", alt: "Empty spotlighted circus ring" },
+    { id: "count", title: "Step Counter", kicker: "Count the steps", bands: ["toddler", "preschool", "early", "primary", "upper"], img: "images/circus-elephant.jpg", alt: "Calm elephant on a sawdust track" },
+    { id: "ballet", title: "Tent-Pole Ballet", kicker: "Tall and smooth", bands: ["preschool", "early"], img: "images/circus-tent.jpg", alt: "Circus tent with brass pole" },
+    { id: "tap", title: "Board-Walk Tap", kicker: "Toe, heel, stamp", bands: ["early", "primary"], img: "images/circus-bandstand.jpg", alt: "Wooden bandstand with snare drum" },
+    { id: "street", title: "Street-Beat Parade", kicker: "Bounce and freeze poses", bands: ["primary"], img: "images/circus-bandstand.jpg", alt: "Circus bandstand and brass" },
+    { id: "builder", title: "Parade Builder", kicker: "Make a short show", bands: ["primary", "upper"], img: "images/circus-parade-hero.jpg", alt: "Circus parade wagon" },
+    { id: "practice", title: "Practice Tent", kicker: "Timer and bag check", bands: ["preschool", "early", "primary", "upper"], img: "images/circus-tent.jpg", alt: "Circus tent and ticket booth" },
+    { id: "glossary", title: "Step Names", kicker: "Words for moves", bands: ["early", "primary", "upper"], img: "images/circus-ribbons.jpg", alt: "Prize ribbons on navy cloth" },
+    { id: "collection", title: "Ribbon Board", kicker: "Stamps and ribbons", bands: ["baby", "toddler", "preschool", "early", "primary", "upper"], img: "images/circus-ribbons.jpg", alt: "Prize ribbons" }
   ],
   ribbons: [
     { id: "red", name: "Crimson ribbon", color: "#8e1d1a" },

@@ -14,7 +14,7 @@ Plug this folder in as subject `movement`. Do not rewrite files here unless the 
 - Quiet toggle: `localStorage['hs.movement.quiet']`
 - Precache: read `assets.json` → `files`. Standalone `sw.js` precaches that list. Do **not** register it inside the learner runner (`dataset.runner`).
 - Visible banner: “Untested, awaiting parent test.” (not screen-reader-only).
-- Images: `images.json` slots. Generated stills ship in `img/`.
+- Images: `images.json` slots. Generated stills ship in `images/`.
 
 ## Coverage
 | Band | What opens |
