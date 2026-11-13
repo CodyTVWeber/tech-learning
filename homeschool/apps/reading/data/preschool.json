@@ -1,21 +1,534 @@
 {
   "band": "preschool",
   "title": "Garden sounds",
-  "mode": "sounds",
   "intro": {
-    "audioText": "Listen for the sound. Tap the matching flower. Sounds first, not names.",
-    "body": "Same garden, more sounds. Still sounds first — never the ABC song as the first teaching."
+    "audioText": "More sounds in the garden. Still sounds first, not the ABC song. After sound beds, tap each seed in order, then blend.",
+    "body": "Same garden, more sounds. Sounds first — never letter names as the first teaching. After the sound beds, tap each seed in order, then blend. Then one short book."
   },
+  "beds": [
+    {
+      "id": "sounds",
+      "kind": "sounds",
+      "title": "Sound beds",
+      "slot": "bed-sounds",
+      "audioText": "Sound beds. Listen. Tap the flower."
+    },
+    {
+      "id": "blends",
+      "kind": "words",
+      "title": "Listen and blend",
+      "slot": "bed-cvc",
+      "requires": "sounds",
+      "audioText": "Hear each sound, then blend."
+    },
+    {
+      "id": "books",
+      "kind": "books",
+      "title": "Picture books",
+      "slot": "bed-books",
+      "requires": "sounds",
+      "audioText": "Picture books. Tap a word to hear it."
+    }
+  ],
+  "books": [
+    "sam-sat"
+  ],
   "items": [
-    { "id": "q1", "phoneme": "sss", "audioText": "sss", "answer": "s", "choices": ["s", "m", "i"] },
-    { "id": "q2", "phoneme": "mmm", "audioText": "mmm", "answer": "m", "choices": ["a", "m", "t"] },
-    { "id": "q3", "phoneme": "t", "audioText": "t", "answer": "t", "choices": ["p", "t", "s"] },
-    { "id": "q4", "phoneme": "p", "audioText": "p", "answer": "p", "choices": ["p", "m", "i"] },
-    { "id": "q5", "phoneme": "aaa", "audioText": "a", "answer": "a", "choices": ["a", "i", "s"] },
-    { "id": "q6", "phoneme": "i", "audioText": "i", "answer": "i", "choices": ["a", "i", "t"] },
-    { "id": "q7", "phoneme": "sss", "audioText": "sss", "answer": "s", "choices": ["s", "p", "i"] },
-    { "id": "q8", "phoneme": "t", "audioText": "t", "answer": "t", "choices": ["m", "t", "a"] },
-    { "id": "q9", "phoneme": "i", "audioText": "i", "answer": "i", "choices": ["i", "p", "s"] },
-    { "id": "q10", "phoneme": "mmm", "audioText": "mmm", "answer": "m", "choices": ["t", "m", "p"] }
+    {
+      "id": "p01",
+      "bed": "sounds",
+      "phoneme": "sss",
+      "audioText": "sss",
+      "answer": "s",
+      "choices": [
+        "s",
+        "m",
+        "t"
+      ]
+    },
+    {
+      "id": "p02",
+      "bed": "sounds",
+      "phoneme": "aaa",
+      "audioText": "aaa",
+      "answer": "a",
+      "choices": [
+        "a",
+        "i",
+        "o"
+      ]
+    },
+    {
+      "id": "p03",
+      "bed": "sounds",
+      "phoneme": "tuh",
+      "audioText": "tuh",
+      "answer": "t",
+      "choices": [
+        "t",
+        "p",
+        "d"
+      ]
+    },
+    {
+      "id": "p04",
+      "bed": "sounds",
+      "phoneme": "puh",
+      "audioText": "puh",
+      "answer": "p",
+      "choices": [
+        "p",
+        "b",
+        "m"
+      ]
+    },
+    {
+      "id": "p05",
+      "bed": "sounds",
+      "phoneme": "iii",
+      "audioText": "iii",
+      "answer": "i",
+      "choices": [
+        "i",
+        "a",
+        "e"
+      ]
+    },
+    {
+      "id": "p06",
+      "bed": "sounds",
+      "phoneme": "nnn",
+      "audioText": "nnn",
+      "answer": "n",
+      "choices": [
+        "n",
+        "m",
+        "d"
+      ]
+    },
+    {
+      "id": "p07",
+      "bed": "sounds",
+      "phoneme": "mmm",
+      "audioText": "mmm",
+      "answer": "m",
+      "choices": [
+        "m",
+        "n",
+        "s"
+      ]
+    },
+    {
+      "id": "p08",
+      "bed": "sounds",
+      "phoneme": "duh",
+      "audioText": "duh",
+      "answer": "d",
+      "choices": [
+        "d",
+        "t",
+        "b"
+      ]
+    },
+    {
+      "id": "p09",
+      "bed": "sounds",
+      "phoneme": "guh",
+      "audioText": "guh",
+      "answer": "g",
+      "choices": [
+        "g",
+        "c",
+        "d"
+      ]
+    },
+    {
+      "id": "p10",
+      "bed": "sounds",
+      "phoneme": "ooo",
+      "audioText": "ooo",
+      "answer": "o",
+      "choices": [
+        "o",
+        "a",
+        "u"
+      ]
+    },
+    {
+      "id": "p11",
+      "bed": "sounds",
+      "phoneme": "kuh",
+      "audioText": "kuh",
+      "answer": "c",
+      "choices": [
+        "c",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "id": "p12",
+      "bed": "sounds",
+      "phoneme": "kuh",
+      "audioText": "kuh",
+      "answer": "k",
+      "choices": [
+        "k",
+        "g",
+        "t"
+      ]
+    },
+    {
+      "id": "p13",
+      "bed": "sounds",
+      "phoneme": "eh",
+      "audioText": "eh",
+      "answer": "e",
+      "choices": [
+        "e",
+        "i",
+        "a"
+      ]
+    },
+    {
+      "id": "p14",
+      "bed": "sounds",
+      "phoneme": "uhh",
+      "audioText": "uhh",
+      "answer": "u",
+      "choices": [
+        "u",
+        "o",
+        "a"
+      ]
+    },
+    {
+      "id": "p15",
+      "bed": "sounds",
+      "phoneme": "rrr",
+      "audioText": "rrr",
+      "answer": "r",
+      "choices": [
+        "r",
+        "l",
+        "w"
+      ]
+    },
+    {
+      "id": "p16",
+      "bed": "sounds",
+      "phoneme": "huh",
+      "audioText": "huh",
+      "answer": "h",
+      "choices": [
+        "h",
+        "p",
+        "f"
+      ]
+    },
+    {
+      "id": "p17",
+      "bed": "sounds",
+      "phoneme": "buh",
+      "audioText": "buh",
+      "answer": "b",
+      "choices": [
+        "b",
+        "p",
+        "d"
+      ]
+    },
+    {
+      "id": "p18",
+      "bed": "sounds",
+      "phoneme": "fff",
+      "audioText": "fff",
+      "answer": "f",
+      "choices": [
+        "f",
+        "v",
+        "s"
+      ]
+    },
+    {
+      "id": "p19",
+      "bed": "sounds",
+      "phoneme": "lll",
+      "audioText": "lll",
+      "answer": "l",
+      "choices": [
+        "l",
+        "r",
+        "n"
+      ]
+    },
+    {
+      "id": "p20",
+      "bed": "sounds",
+      "phoneme": "juh",
+      "audioText": "juh",
+      "answer": "j",
+      "choices": [
+        "j",
+        "g",
+        "d"
+      ]
+    },
+    {
+      "id": "p21",
+      "bed": "sounds",
+      "phoneme": "vvv",
+      "audioText": "vvv",
+      "answer": "v",
+      "choices": [
+        "v",
+        "f",
+        "b"
+      ]
+    },
+    {
+      "id": "p22",
+      "bed": "sounds",
+      "phoneme": "wuh",
+      "audioText": "wuh",
+      "answer": "w",
+      "choices": [
+        "w",
+        "r",
+        "y"
+      ]
+    },
+    {
+      "id": "p23",
+      "bed": "sounds",
+      "phoneme": "ks",
+      "audioText": "ks",
+      "answer": "x",
+      "choices": [
+        "x",
+        "s",
+        "k"
+      ]
+    },
+    {
+      "id": "p24",
+      "bed": "sounds",
+      "phoneme": "yuh",
+      "audioText": "yuh",
+      "answer": "y",
+      "choices": [
+        "y",
+        "w",
+        "j"
+      ]
+    },
+    {
+      "id": "p25",
+      "bed": "sounds",
+      "phoneme": "zzz",
+      "audioText": "zzz",
+      "answer": "z",
+      "choices": [
+        "z",
+        "s",
+        "v"
+      ]
+    },
+    {
+      "id": "p26",
+      "bed": "sounds",
+      "phoneme": "kwuh",
+      "audioText": "kwuh",
+      "answer": "qu",
+      "choices": [
+        "qu",
+        "k",
+        "w"
+      ]
+    },
+    {
+      "id": "p27",
+      "bed": "sounds",
+      "phoneme": "sss",
+      "audioText": "sss",
+      "answer": "s",
+      "choices": [
+        "s",
+        "z",
+        "f"
+      ]
+    },
+    {
+      "id": "p28",
+      "bed": "sounds",
+      "phoneme": "aaa",
+      "audioText": "aaa",
+      "answer": "a",
+      "choices": [
+        "a",
+        "u",
+        "o"
+      ]
+    },
+    {
+      "id": "p29",
+      "bed": "sounds",
+      "phoneme": "mmm",
+      "audioText": "mmm",
+      "answer": "m",
+      "choices": [
+        "n",
+        "m",
+        "w"
+      ]
+    },
+    {
+      "id": "p30",
+      "bed": "sounds",
+      "phoneme": "guh",
+      "audioText": "guh",
+      "answer": "g",
+      "choices": [
+        "j",
+        "g",
+        "c"
+      ]
+    },
+    {
+      "id": "p-b1",
+      "bed": "blends",
+      "sounds": [
+        "s",
+        "a",
+        "t"
+      ],
+      "blend": "sat",
+      "audioText": "sss. aaa. tuh",
+      "answer": "sat",
+      "choices": [
+        "sat",
+        "mat",
+        "pat"
+      ]
+    },
+    {
+      "id": "p-b2",
+      "bed": "blends",
+      "sounds": [
+        "m",
+        "a",
+        "t"
+      ],
+      "blend": "mat",
+      "audioText": "mmm. aaa. tuh",
+      "answer": "mat",
+      "choices": [
+        "sat",
+        "mat",
+        "map"
+      ]
+    },
+    {
+      "id": "p-b3",
+      "bed": "blends",
+      "sounds": [
+        "p",
+        "a",
+        "n"
+      ],
+      "blend": "pan",
+      "audioText": "puh. aaa. nnn",
+      "answer": "pan",
+      "choices": [
+        "pan",
+        "pin",
+        "nap"
+      ]
+    },
+    {
+      "id": "p-b4",
+      "bed": "blends",
+      "sounds": [
+        "t",
+        "a",
+        "p"
+      ],
+      "blend": "tap",
+      "audioText": "tuh. aaa. puh",
+      "answer": "tap",
+      "choices": [
+        "tap",
+        "pat",
+        "pit"
+      ]
+    },
+    {
+      "id": "p-b5",
+      "bed": "blends",
+      "sounds": [
+        "s",
+        "i",
+        "t"
+      ],
+      "blend": "sit",
+      "audioText": "sss. iii. tuh",
+      "answer": "sit",
+      "choices": [
+        "sit",
+        "sat",
+        "sip"
+      ]
+    },
+    {
+      "id": "p-b6",
+      "bed": "blends",
+      "sounds": [
+        "m",
+        "a",
+        "p"
+      ],
+      "blend": "map",
+      "audioText": "mmm. aaa. puh",
+      "answer": "map",
+      "choices": [
+        "map",
+        "mat",
+        "nap"
+      ]
+    },
+    {
+      "id": "p-b7",
+      "bed": "blends",
+      "sounds": [
+        "n",
+        "a",
+        "p"
+      ],
+      "blend": "nap",
+      "audioText": "nnn. aaa. puh",
+      "answer": "nap",
+      "choices": [
+        "nap",
+        "tap",
+        "pan"
+      ]
+    },
+    {
+      "id": "p-b8",
+      "bed": "blends",
+      "sounds": [
+        "p",
+        "i",
+        "n"
+      ],
+      "blend": "pin",
+      "audioText": "puh. iii. nnn",
+      "answer": "pin",
+      "choices": [
+        "pin",
+        "pan",
+        "pit"
+      ]
+    }
   ]
 }

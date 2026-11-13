@@ -1,0 +1,101 @@
+{
+  "id": "the-moth",
+  "title": "The Moth",
+  "coverSlot": "the-moth-cover",
+  "level": "digraphs",
+  "graphemes": [
+    "m",
+    "o",
+    "th",
+    "i",
+    "n",
+    "p",
+    "a",
+    "s",
+    "t"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "on"
+  ],
+  "pages": [
+    {
+      "slot": "the-moth-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "moth",
+          "say": "moth"
+        }
+      ]
+    },
+    {
+      "slot": "the-moth-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "moth",
+          "say": "moth"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "thin",
+          "say": "thin"
+        }
+      ]
+    },
+    {
+      "slot": "the-moth-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "path",
+          "say": "path"
+        }
+      ]
+    },
+    {
+      "slot": "the-moth-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "moth",
+          "say": "moth"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "path",
+          "say": "path"
+        }
+      ]
+    }
+  ]
+}

@@ -7,7 +7,7 @@
       "width": 1024,
       "height": 420,
       "alt": "A kitchen garden in morning light: soil beds, leaves, a clay pot. No text.",
-      "themeNotes": "Garden home hero. Not a pirate palette.",
+      "themeNotes": "Garden home hero.",
       "slot": "hero"
     },
     {
@@ -19,10 +19,26 @@
       "slot": "bee"
     },
     {
+      "file": "icon-192.png",
+      "width": 192,
+      "height": 192,
+      "alt": "Garden leaf mark.",
+      "themeNotes": "App icon.",
+      "slot": "icon-192"
+    },
+    {
+      "file": "icon-512.png",
+      "width": 512,
+      "height": 512,
+      "alt": "Garden leaf mark.",
+      "themeNotes": "App icon.",
+      "slot": "icon-512"
+    },
+    {
       "file": "flower-s.png",
       "width": 320,
       "height": 320,
-      "alt": "A sunflower. Final wave may show /s/ without printing a letter name.",
+      "alt": "A sunflower.",
       "themeNotes": "Choice tile for /s/.",
       "slot": "flower-s"
     },
@@ -30,7 +46,7 @@
       "file": "flower-m.png",
       "width": 320,
       "height": 320,
-      "alt": "A mossy stone and mint leaves.",
+      "alt": "Mint leaves on a mossy stone.",
       "themeNotes": "Choice tile for /m/.",
       "slot": "flower-m"
     },
@@ -38,15 +54,15 @@
       "file": "flower-a.png",
       "width": 320,
       "height": 320,
-      "alt": "An apple on soil (short /a/ as in apple — the picture, not the letter name).",
-      "themeNotes": "Choice tile for short /a/.",
+      "alt": "An apple on soil (short a picture, not a letter name).",
+      "themeNotes": "Choice tile for /a/.",
       "slot": "flower-a"
     },
     {
       "file": "flower-t.png",
       "width": 320,
       "height": 320,
-      "alt": "A tap of a watering can touching soil.",
+      "alt": "A watering-can tap touching soil.",
       "themeNotes": "Choice tile for /t/.",
       "slot": "flower-t"
     },
@@ -62,32 +78,352 @@
       "file": "flower-i.png",
       "width": 320,
       "height": 320,
-      "alt": "An inchworm on a leaf (short /i/).",
-      "themeNotes": "Choice tile for short /i/.",
+      "alt": "An inchworm on a leaf (short i).",
+      "themeNotes": "Choice tile for /i/.",
       "slot": "flower-i"
+    },
+    {
+      "file": "flower-n.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A nest in a hedge.",
+      "themeNotes": "Choice tile for /n/.",
+      "slot": "flower-n"
+    },
+    {
+      "file": "flower-d.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A garden dibber in dirt.",
+      "themeNotes": "Choice tile for /d/.",
+      "slot": "flower-d"
+    },
+    {
+      "file": "flower-g.png",
+      "width": 320,
+      "height": 320,
+      "alt": "Green garden leaves.",
+      "themeNotes": "Choice tile for /g/.",
+      "slot": "flower-g"
+    },
+    {
+      "file": "flower-o.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A pot (short o).",
+      "themeNotes": "Choice tile for /o/.",
+      "slot": "flower-o"
+    },
+    {
+      "file": "flower-c.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A clay cup.",
+      "themeNotes": "Choice tile for /c/.",
+      "slot": "flower-c"
+    },
+    {
+      "file": "flower-k.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A kettle on a garden stove.",
+      "themeNotes": "Choice tile for /k/.",
+      "slot": "flower-k"
+    },
+    {
+      "file": "flower-e.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A hen (short e).",
+      "themeNotes": "Choice tile for /e/.",
+      "slot": "flower-e"
+    },
+    {
+      "file": "flower-u.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A bug on a leaf (short u).",
+      "themeNotes": "Choice tile for /u/.",
+      "slot": "flower-u"
+    },
+    {
+      "file": "flower-r.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A red rake.",
+      "themeNotes": "Choice tile for /r/.",
+      "slot": "flower-r"
+    },
+    {
+      "file": "flower-h.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A hoe.",
+      "themeNotes": "Choice tile for /h/.",
+      "slot": "flower-h"
+    },
+    {
+      "file": "flower-b.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A bee on a bloom.",
+      "themeNotes": "Choice tile for /b/.",
+      "slot": "flower-b"
+    },
+    {
+      "file": "flower-f.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A fig.",
+      "themeNotes": "Choice tile for /f/.",
+      "slot": "flower-f"
+    },
+    {
+      "file": "flower-l.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A leaf.",
+      "themeNotes": "Choice tile for /l/.",
+      "slot": "flower-l"
+    },
+    {
+      "file": "flower-j.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A jug.",
+      "themeNotes": "Choice tile for /j/.",
+      "slot": "flower-j"
+    },
+    {
+      "file": "flower-v.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A vine.",
+      "themeNotes": "Choice tile for /v/.",
+      "slot": "flower-v"
+    },
+    {
+      "file": "flower-w.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A watering can.",
+      "themeNotes": "Choice tile for /w/.",
+      "slot": "flower-w"
+    },
+    {
+      "file": "flower-x.png",
+      "width": 320,
+      "height": 320,
+      "alt": "An x-shaped trellis.",
+      "themeNotes": "Choice tile for /x/.",
+      "slot": "flower-x"
+    },
+    {
+      "file": "flower-y.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A yam.",
+      "themeNotes": "Choice tile for /y/.",
+      "slot": "flower-y"
+    },
+    {
+      "file": "flower-z.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A zucchini.",
+      "themeNotes": "Choice tile for /z/.",
+      "slot": "flower-z"
+    },
+    {
+      "file": "flower-qu.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A quince on a branch.",
+      "themeNotes": "Choice tile for /qu/.",
+      "slot": "flower-qu"
+    },
+    {
+      "file": "flower-sh.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A shed.",
+      "themeNotes": "Choice tile for /sh/.",
+      "slot": "flower-sh"
+    },
+    {
+      "file": "flower-ch.png",
+      "width": 320,
+      "height": 320,
+      "alt": "Chopped chard.",
+      "themeNotes": "Choice tile for /ch/.",
+      "slot": "flower-ch"
+    },
+    {
+      "file": "flower-th.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A thin moth.",
+      "themeNotes": "Choice tile for /th/.",
+      "slot": "flower-th"
+    },
+    {
+      "file": "flower-ck.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A duck.",
+      "themeNotes": "Choice tile for /ck/.",
+      "slot": "flower-ck"
+    },
+    {
+      "file": "flower-ng.png",
+      "width": 320,
+      "height": 320,
+      "alt": "A gong in a garden nook.",
+      "themeNotes": "Choice tile for /ng/.",
+      "slot": "flower-ng"
     },
     {
       "file": "bed-sounds.png",
       "width": 640,
       "height": 240,
       "alt": "A soil bed with seed packets.",
-      "themeNotes": "Level tile: sounds.",
+      "themeNotes": "Sounds plot.",
       "slot": "bed-sounds"
     },
     {
       "file": "bed-books.png",
       "width": 640,
       "height": 240,
-      "alt": "A soil bed with an open picture book lying on a cloth.",
-      "themeNotes": "Level tile: books.",
+      "alt": "A soil bed with an open picture book.",
+      "themeNotes": "Books plot.",
       "slot": "bed-books"
+    },
+    {
+      "file": "bed-cvc.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A short-word plot with labeled seed rows.",
+      "themeNotes": "CVC plot.",
+      "slot": "bed-cvc"
+    },
+    {
+      "file": "bed-blends.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A hedge of mixed stems.",
+      "themeNotes": "Blends hedge.",
+      "slot": "bed-blends"
+    },
+    {
+      "file": "bed-digraphs.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A trellis with paired leaves.",
+      "themeNotes": "Digraph trellis.",
+      "slot": "bed-digraphs"
+    },
+    {
+      "file": "bed-silent-e.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A vine with a trailing silent leaf.",
+      "themeNotes": "Silent-e vine.",
+      "slot": "bed-silent-e"
+    },
+    {
+      "file": "bed-teams.png",
+      "width": 640,
+      "height": 240,
+      "alt": "An orchard row.",
+      "themeNotes": "Vowel-team orchard.",
+      "slot": "bed-teams"
+    },
+    {
+      "file": "bed-rcontrolled.png",
+      "width": 640,
+      "height": 240,
+      "alt": "Rose beds.",
+      "themeNotes": "R-controlled roses.",
+      "slot": "bed-r-controlled"
+    },
+    {
+      "file": "bed-multi.png",
+      "width": 640,
+      "height": 240,
+      "alt": "Tall plants in a row.",
+      "themeNotes": "Multisyllable plants.",
+      "slot": "bed-multisyllable"
+    },
+    {
+      "file": "bed-helpers.png",
+      "width": 640,
+      "height": 240,
+      "alt": "Painted garden signs.",
+      "themeNotes": "Helper-word signs.",
+      "slot": "bed-helpers"
+    },
+    {
+      "file": "bed-timer.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A sundial in a plot.",
+      "themeNotes": "Reading timer.",
+      "slot": "bed-timer"
+    },
+    {
+      "file": "bed-vocab.png",
+      "width": 640,
+      "height": 240,
+      "alt": "Labeled seed packets.",
+      "themeNotes": "Vocabulary blooms.",
+      "slot": "bed-vocab"
+    },
+    {
+      "file": "bed-comprehend.png",
+      "width": 640,
+      "height": 240,
+      "alt": "A bench beside a story book.",
+      "themeNotes": "Story questions.",
+      "slot": "bed-comprehend"
+    },
+    {
+      "file": "passage-rainbarrel.png",
+      "width": 800,
+      "height": 420,
+      "alt": "A wooden barrel under a shed roof in rain.",
+      "themeNotes": "Upper passage picture.",
+      "slot": "passage-rainbarrel"
+    },
+    {
+      "file": "passage-wren.png",
+      "width": 800,
+      "height": 420,
+      "alt": "A dried gourd hanging from a trellis.",
+      "themeNotes": "Upper passage picture.",
+      "slot": "passage-wren"
+    },
+    {
+      "file": "passage-worms.png",
+      "width": 800,
+      "height": 420,
+      "alt": "A compost heap with a garden fork.",
+      "themeNotes": "Upper passage picture.",
+      "slot": "passage-worms"
+    },
+    {
+      "file": "passage-tomato.png",
+      "width": 800,
+      "height": 420,
+      "alt": "A last red tomato on a vine by a fence.",
+      "themeNotes": "Upper passage picture.",
+      "slot": "passage-tomato"
     },
     {
       "file": "sam-sat-cover.png",
       "width": 800,
       "height": 800,
-      "alt": "Cover: a child sitting on a garden mat in the sun. Title space for Sam Sat.",
-      "themeNotes": "Book 1 cover.",
+      "alt": "Cover: a child sitting on a garden mat in the sun.",
+      "themeNotes": "Book cover. Sam Sat",
       "slot": "sam-sat-cover"
     },
     {
@@ -95,7 +431,7 @@
       "width": 800,
       "height": 500,
       "alt": "Sam sitting on a mat in a garden.",
-      "themeNotes": "Book 1 page 1.",
+      "themeNotes": "Book page. Sam Sat",
       "slot": "sam-sat-p1"
     },
     {
@@ -103,7 +439,7 @@
       "width": 800,
       "height": 500,
       "alt": "Sam tapping the mat.",
-      "themeNotes": "Book 1 page 2.",
+      "themeNotes": "Book page. Sam Sat",
       "slot": "sam-sat-p2"
     },
     {
@@ -111,7 +447,7 @@
       "width": 800,
       "height": 500,
       "alt": "A simple drawn map on garden soil.",
-      "themeNotes": "Book 1 page 3.",
+      "themeNotes": "Book page. Sam Sat",
       "slot": "sam-sat-p3"
     },
     {
@@ -119,48 +455,1440 @@
       "width": 800,
       "height": 500,
       "alt": "Sam sitting at a garden mat with a small plant.",
-      "themeNotes": "Book 1 page 4.",
+      "themeNotes": "Book page. Sam Sat",
       "slot": "sam-sat-p4"
     },
     {
-      "file": "fig-cover.png",
+      "file": "the-fig-cover.png",
       "width": 800,
       "height": 800,
       "alt": "Cover: a fig on a branch in a garden.",
-      "themeNotes": "Book 2 cover.",
-      "slot": "fig-cover"
+      "themeNotes": "Book cover. The Fig",
+      "slot": "the-fig-cover"
     },
     {
-      "file": "fig-p1.png",
+      "file": "the-fig-p1.png",
       "width": 800,
       "height": 500,
       "alt": "A ripe fig on a low branch.",
-      "themeNotes": "Book 2 page 1.",
-      "slot": "fig-p1"
+      "themeNotes": "Book page. The Fig",
+      "slot": "the-fig-p1"
     },
     {
-      "file": "fig-p2.png",
+      "file": "the-fig-p2.png",
       "width": 800,
       "height": 500,
       "alt": "A pig near a garden fig tree.",
-      "themeNotes": "Book 2 page 2.",
-      "slot": "fig-p2"
+      "themeNotes": "Book page. The Fig",
+      "slot": "the-fig-p2"
     },
     {
-      "file": "fig-p3.png",
+      "file": "the-fig-p3.png",
       "width": 800,
       "height": 500,
       "alt": "The pig digging in soil.",
-      "themeNotes": "Book 2 page 3.",
-      "slot": "fig-p3"
+      "themeNotes": "Book page. The Fig",
+      "slot": "the-fig-p3"
     },
     {
-      "file": "fig-p4.png",
+      "file": "the-fig-p4.png",
       "width": 800,
       "height": 500,
       "alt": "A big fig in a basket.",
-      "themeNotes": "Book 2 page 4.",
-      "slot": "fig-p4"
+      "themeNotes": "Book page. The Fig",
+      "slot": "the-fig-p4"
+    },
+    {
+      "file": "a-hot-pot-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a clay pot on garden soil.",
+      "themeNotes": "Book cover. A Hot Pot",
+      "slot": "a-hot-pot-cover"
+    },
+    {
+      "file": "a-hot-pot-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A clay pot sitting in a garden bed.",
+      "themeNotes": "Book page. A Hot Pot",
+      "slot": "a-hot-pot-p1"
+    },
+    {
+      "file": "a-hot-pot-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Steam suggested over a hot pot.",
+      "themeNotes": "Book page. A Hot Pot",
+      "slot": "a-hot-pot-p2"
+    },
+    {
+      "file": "a-hot-pot-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A log beside a garden path.",
+      "themeNotes": "Book page. A Hot Pot",
+      "slot": "a-hot-pot-p3"
+    },
+    {
+      "file": "a-hot-pot-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sam tapping the side of a pot.",
+      "themeNotes": "Book page. A Hot Pot",
+      "slot": "a-hot-pot-p4"
+    },
+    {
+      "file": "the-red-bug-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a small red beetle on a leaf.",
+      "themeNotes": "Book cover. The Red Bug",
+      "slot": "the-red-bug-cover"
+    },
+    {
+      "file": "the-red-bug-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A red bug on garden soil.",
+      "themeNotes": "Book page. The Red Bug",
+      "slot": "the-red-bug-p1"
+    },
+    {
+      "file": "the-red-bug-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A bug in wet garden mud.",
+      "themeNotes": "Book page. The Red Bug",
+      "slot": "the-red-bug-p2"
+    },
+    {
+      "file": "the-red-bug-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A hen sitting near a garden bed.",
+      "themeNotes": "Book page. The Red Bug",
+      "slot": "the-red-bug-p3"
+    },
+    {
+      "file": "the-red-bug-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A hen and a bug sharing a plot.",
+      "themeNotes": "Book page. The Red Bug",
+      "slot": "the-red-bug-p4"
+    },
+    {
+      "file": "stan-stands-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a child standing in a garden path.",
+      "themeNotes": "Book cover. Stan Stands",
+      "slot": "stan-stands-cover"
+    },
+    {
+      "file": "stan-stands-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Stan sitting beside a garden bed.",
+      "themeNotes": "Book page. Stan Stands",
+      "slot": "stan-stands-p1"
+    },
+    {
+      "file": "stan-stands-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Stan standing among plants.",
+      "themeNotes": "Book page. Stan Stands",
+      "slot": "stan-stands-p2"
+    },
+    {
+      "file": "stan-stands-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "An ant on a soil clod.",
+      "themeNotes": "Book page. Stan Stands",
+      "slot": "stan-stands-p3"
+    },
+    {
+      "file": "stan-stands-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Stan watching an ant.",
+      "themeNotes": "Book page. Stan Stands",
+      "slot": "stan-stands-p4"
+    },
+    {
+      "file": "the-plum-plot-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: plums on a low garden tree.",
+      "themeNotes": "Book cover. The Plum Plot",
+      "slot": "the-plum-plot-cover"
+    },
+    {
+      "file": "the-plum-plot-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A single plum in a hand-sized still life.",
+      "themeNotes": "Book page. The Plum Plot",
+      "slot": "the-plum-plot-p1"
+    },
+    {
+      "file": "the-plum-plot-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A garden plot with plum trees.",
+      "themeNotes": "Book page. The Plum Plot",
+      "slot": "the-plum-plot-p2"
+    },
+    {
+      "file": "the-plum-plot-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child slipping on a muddy path.",
+      "themeNotes": "Book page. The Plum Plot",
+      "slot": "the-plum-plot-p3"
+    },
+    {
+      "file": "the-plum-plot-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A flat, raked garden plot.",
+      "themeNotes": "Book page. The Plum Plot",
+      "slot": "the-plum-plot-p4"
+    },
+    {
+      "file": "grant-trots-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a child trotting along a garden path.",
+      "themeNotes": "Book cover. Grant Trots",
+      "slot": "grant-trots-cover"
+    },
+    {
+      "file": "grant-trots-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Grant trotting past garden beds.",
+      "themeNotes": "Book page. Grant Trots",
+      "slot": "grant-trots-p1"
+    },
+    {
+      "file": "grant-trots-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A frog at the edge of a bed.",
+      "themeNotes": "Book page. Grant Trots",
+      "slot": "grant-trots-p2"
+    },
+    {
+      "file": "grant-trots-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A frog gripping a wet stone.",
+      "themeNotes": "Book page. Grant Trots",
+      "slot": "grant-trots-p3"
+    },
+    {
+      "file": "grant-trots-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Grant crouched near a frog.",
+      "themeNotes": "Book page. Grant Trots",
+      "slot": "grant-trots-p4"
+    },
+    {
+      "file": "the-pond-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a small garden pond.",
+      "themeNotes": "Book cover. The Pond",
+      "slot": "the-pond-cover"
+    },
+    {
+      "file": "the-pond-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A still pond among plants.",
+      "themeNotes": "Book page. The Pond",
+      "slot": "the-pond-p1"
+    },
+    {
+      "file": "the-pond-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A frog sitting at the pond edge.",
+      "themeNotes": "Book page. The Pond",
+      "slot": "the-pond-p2"
+    },
+    {
+      "file": "the-pond-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Soft mud at the pond bank.",
+      "themeNotes": "Book page. The Pond",
+      "slot": "the-pond-p3"
+    },
+    {
+      "file": "the-pond-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A still pond in evening light.",
+      "themeNotes": "Book page. The Pond",
+      "slot": "the-pond-p4"
+    },
+    {
+      "file": "the-shed-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a wooden garden shed.",
+      "themeNotes": "Book cover. The Shed",
+      "slot": "the-shed-cover"
+    },
+    {
+      "file": "the-shed-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A small shed at the end of a path.",
+      "themeNotes": "Book page. The Shed",
+      "slot": "the-shed-p1"
+    },
+    {
+      "file": "the-shed-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A dish on a shed shelf.",
+      "themeNotes": "Book page. The Shed",
+      "slot": "the-shed-p2"
+    },
+    {
+      "file": "the-shed-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child sitting in shed shade.",
+      "themeNotes": "Book page. The Shed",
+      "slot": "the-shed-p3"
+    },
+    {
+      "file": "the-shed-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A dish stored inside the shed.",
+      "themeNotes": "Book page. The Shed",
+      "slot": "the-shed-p4"
+    },
+    {
+      "file": "chop-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: chopped garden greens on a board.",
+      "themeNotes": "Book cover. Chop",
+      "slot": "chop-cover"
+    },
+    {
+      "file": "chop-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A chopping board in a garden kitchen.",
+      "themeNotes": "Book page. Chop",
+      "slot": "chop-p1"
+    },
+    {
+      "file": "chop-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pile of chopped bits.",
+      "themeNotes": "Book page. Chop",
+      "slot": "chop-p2"
+    },
+    {
+      "file": "chop-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Rich chopped herbs and bits.",
+      "themeNotes": "Book page. Chop",
+      "slot": "chop-p3"
+    },
+    {
+      "file": "chop-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Hands chopping garden bits.",
+      "themeNotes": "Book page. Chop",
+      "slot": "chop-p4"
+    },
+    {
+      "file": "the-duck-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a duck in a garden puddle.",
+      "themeNotes": "Book cover. The Duck",
+      "slot": "the-duck-cover"
+    },
+    {
+      "file": "the-duck-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A duck standing in a plot.",
+      "themeNotes": "Book page. The Duck",
+      "slot": "the-duck-p1"
+    },
+    {
+      "file": "the-duck-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The duck pecking at soil.",
+      "themeNotes": "Book page. The Duck",
+      "slot": "the-duck-p2"
+    },
+    {
+      "file": "the-duck-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A sock left on a garden path.",
+      "themeNotes": "Book page. The Duck",
+      "slot": "the-duck-p3"
+    },
+    {
+      "file": "the-duck-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A duck in wet muck.",
+      "themeNotes": "Book page. The Duck",
+      "slot": "the-duck-p4"
+    },
+    {
+      "file": "the-moth-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a moth on a garden leaf.",
+      "themeNotes": "Book cover. The Moth",
+      "slot": "the-moth-cover"
+    },
+    {
+      "file": "the-moth-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A moth resting on a leaf.",
+      "themeNotes": "Book page. The Moth",
+      "slot": "the-moth-p1"
+    },
+    {
+      "file": "the-moth-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A thin moth on a stem.",
+      "themeNotes": "Book page. The Moth",
+      "slot": "the-moth-p2"
+    },
+    {
+      "file": "the-moth-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A garden path between beds.",
+      "themeNotes": "Book page. The Moth",
+      "slot": "the-moth-p3"
+    },
+    {
+      "file": "the-moth-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A moth sitting on the path.",
+      "themeNotes": "Book page. The Moth",
+      "slot": "the-moth-p4"
+    },
+    {
+      "file": "the-cake-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a simple cake on a garden table.",
+      "themeNotes": "Book cover. The Cake",
+      "slot": "the-cake-cover"
+    },
+    {
+      "file": "the-cake-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A cake on a wooden board.",
+      "themeNotes": "Book page. The Cake",
+      "slot": "the-cake-p1"
+    },
+    {
+      "file": "the-cake-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Jane baking near a garden window.",
+      "themeNotes": "Book page. The Cake",
+      "slot": "the-cake-p2"
+    },
+    {
+      "file": "the-cake-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A rake leaning on a bed.",
+      "themeNotes": "Book page. The Cake",
+      "slot": "the-cake-p3"
+    },
+    {
+      "file": "the-cake-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A cake set in a safe shady spot.",
+      "themeNotes": "Book page. The Cake",
+      "slot": "the-cake-p4"
+    },
+    {
+      "file": "the-vine-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a grapevine on a garden trellis.",
+      "themeNotes": "Book cover. The Vine",
+      "slot": "the-vine-cover"
+    },
+    {
+      "file": "the-vine-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A vine climbing a frame.",
+      "themeNotes": "Book page. The Vine",
+      "slot": "the-vine-p1"
+    },
+    {
+      "file": "the-vine-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A ripe fig on the vine.",
+      "themeNotes": "Book page. The Vine",
+      "slot": "the-vine-p2"
+    },
+    {
+      "file": "the-vine-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Mike looking at a fig.",
+      "themeNotes": "Book page. The Vine",
+      "slot": "the-vine-p3"
+    },
+    {
+      "file": "the-vine-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A ripe fig held in a palm.",
+      "themeNotes": "Book page. The Vine",
+      "slot": "the-vine-p4"
+    },
+    {
+      "file": "the-rose-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a rose blooming in a bed.",
+      "themeNotes": "Book cover. The Rose",
+      "slot": "the-rose-cover"
+    },
+    {
+      "file": "the-rose-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A single rose in soil.",
+      "themeNotes": "Book page. The Rose",
+      "slot": "the-rose-p1"
+    },
+    {
+      "file": "the-rose-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A wooden pole in a plot.",
+      "themeNotes": "Book page. The Rose",
+      "slot": "the-rose-p2"
+    },
+    {
+      "file": "the-rose-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pale stone in the path.",
+      "themeNotes": "Book page. The Rose",
+      "slot": "the-rose-p3"
+    },
+    {
+      "file": "the-rose-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A rose lying on a stone.",
+      "themeNotes": "Book page. The Rose",
+      "slot": "the-rose-p4"
+    },
+    {
+      "file": "the-mule-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a mule beside a garden fence.",
+      "themeNotes": "Book cover. The Mule",
+      "slot": "the-mule-cover"
+    },
+    {
+      "file": "the-mule-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A mule standing near a plot.",
+      "themeNotes": "Book page. The Mule",
+      "slot": "the-mule-p1"
+    },
+    {
+      "file": "the-mule-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A small cute mule.",
+      "themeNotes": "Book page. The Mule",
+      "slot": "the-mule-p2"
+    },
+    {
+      "file": "the-mule-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A garden hose tube on soil.",
+      "themeNotes": "Book page. The Mule",
+      "slot": "the-mule-p3"
+    },
+    {
+      "file": "the-mule-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The mule looking toward a bed.",
+      "themeNotes": "Book page. The Mule",
+      "slot": "the-mule-p4"
+    },
+    {
+      "file": "the-rain-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: rain falling on a garden.",
+      "themeNotes": "Book cover. The Rain",
+      "slot": "the-rain-cover"
+    },
+    {
+      "file": "the-rain-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Rain over garden beds.",
+      "themeNotes": "Book page. The Rain",
+      "slot": "the-rain-p1"
+    },
+    {
+      "file": "the-rain-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Rain on a hay pile.",
+      "themeNotes": "Book page. The Rain",
+      "slot": "the-rain-p2"
+    },
+    {
+      "file": "the-rain-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pail catching rain.",
+      "themeNotes": "Book page. The Rain",
+      "slot": "the-rain-p3"
+    },
+    {
+      "file": "the-rain-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child staying in the shed.",
+      "themeNotes": "Book page. The Rain",
+      "slot": "the-rain-p4"
+    },
+    {
+      "file": "the-bee-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a honeybee on a blossom.",
+      "themeNotes": "Book cover. The Bee",
+      "slot": "the-bee-cover"
+    },
+    {
+      "file": "the-bee-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A bee above a flower.",
+      "themeNotes": "Book page. The Bee",
+      "slot": "the-bee-p1"
+    },
+    {
+      "file": "the-bee-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The bee feeding at a bloom.",
+      "themeNotes": "Book page. The Bee",
+      "slot": "the-bee-p2"
+    },
+    {
+      "file": "the-bee-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A green leaf in sun.",
+      "themeNotes": "Book page. The Bee",
+      "slot": "the-bee-p3"
+    },
+    {
+      "file": "the-bee-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Seeds set out as a meal for birds.",
+      "themeNotes": "Book page. The Bee",
+      "slot": "the-bee-p4"
+    },
+    {
+      "file": "the-boat-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a small boat at a garden pond.",
+      "themeNotes": "Book cover. The Boat",
+      "slot": "the-boat-cover"
+    },
+    {
+      "file": "the-boat-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A toy boat on pond water.",
+      "themeNotes": "Book page. The Boat",
+      "slot": "the-boat-p1"
+    },
+    {
+      "file": "the-boat-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A toad near the pond.",
+      "themeNotes": "Book page. The Boat",
+      "slot": "the-boat-p2"
+    },
+    {
+      "file": "the-boat-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A toad sitting in a garden road.",
+      "themeNotes": "Book page. The Boat",
+      "slot": "the-boat-p3"
+    },
+    {
+      "file": "the-boat-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A slow toad on the path.",
+      "themeNotes": "Book page. The Boat",
+      "slot": "the-boat-p4"
+    },
+    {
+      "file": "the-moon-pool-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: moonlight on a garden pool.",
+      "themeNotes": "Book cover. The Moon Pool",
+      "slot": "the-moon-pool-cover"
+    },
+    {
+      "file": "the-moon-pool-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The moon over a garden.",
+      "themeNotes": "Book page. The Moon Pool",
+      "slot": "the-moon-pool-p1"
+    },
+    {
+      "file": "the-moon-pool-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A still garden pool.",
+      "themeNotes": "Book page. The Moon Pool",
+      "slot": "the-moon-pool-p2"
+    },
+    {
+      "file": "the-moon-pool-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Cool evening light on water.",
+      "themeNotes": "Book page. The Moon Pool",
+      "slot": "the-moon-pool-p3"
+    },
+    {
+      "file": "the-moon-pool-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A garden tool beside the pool.",
+      "themeNotes": "Book page. The Moon Pool",
+      "slot": "the-moon-pool-p4"
+    },
+    {
+      "file": "the-cart-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a garden cart on a path.",
+      "themeNotes": "Book cover. The Cart",
+      "slot": "the-cart-cover"
+    },
+    {
+      "file": "the-cart-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A wooden garden cart.",
+      "themeNotes": "Book page. The Cart",
+      "slot": "the-cart-p1"
+    },
+    {
+      "file": "the-cart-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A jar of seeds.",
+      "themeNotes": "Book page. The Cart",
+      "slot": "the-cart-p2"
+    },
+    {
+      "file": "the-cart-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A small garden barn.",
+      "themeNotes": "Book page. The Cart",
+      "slot": "the-cart-p3"
+    },
+    {
+      "file": "the-cart-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Mark parking the cart by the barn.",
+      "themeNotes": "Book page. The Cart",
+      "slot": "the-cart-p4"
+    },
+    {
+      "file": "the-corn-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: corn standing in a garden row.",
+      "themeNotes": "Book cover. The Corn",
+      "slot": "the-corn-cover"
+    },
+    {
+      "file": "the-corn-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Corn stalks in a bed.",
+      "themeNotes": "Book page. The Corn",
+      "slot": "the-corn-p1"
+    },
+    {
+      "file": "the-corn-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A fork in garden soil.",
+      "themeNotes": "Book page. The Corn",
+      "slot": "the-corn-p2"
+    },
+    {
+      "file": "the-corn-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A stork near the corn.",
+      "themeNotes": "Book page. The Corn",
+      "slot": "the-corn-p3"
+    },
+    {
+      "file": "the-corn-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Corn cut for a cooking pot.",
+      "themeNotes": "Book page. The Corn",
+      "slot": "the-corn-p4"
+    },
+    {
+      "file": "the-fern-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a fern in shade.",
+      "themeNotes": "Book cover. The Fern",
+      "slot": "the-fern-cover"
+    },
+    {
+      "file": "the-fern-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A fern in a garden corner.",
+      "themeNotes": "Book page. The Fern",
+      "slot": "the-fern-p1"
+    },
+    {
+      "file": "the-fern-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A fern growing in dirt.",
+      "themeNotes": "Book page. The Fern",
+      "slot": "the-fern-p2"
+    },
+    {
+      "file": "the-fern-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A bird near the fern.",
+      "themeNotes": "Book page. The Fern",
+      "slot": "the-fern-p3"
+    },
+    {
+      "file": "the-fern-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Hands turning garden dirt.",
+      "themeNotes": "Book page. The Fern",
+      "slot": "the-fern-p4"
+    },
+    {
+      "file": "the-herd-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a small herd past a garden fence.",
+      "themeNotes": "Book cover. The Herd",
+      "slot": "the-herd-cover"
+    },
+    {
+      "file": "the-herd-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Animals in a garden-side herd.",
+      "themeNotes": "Book page. The Herd",
+      "slot": "the-herd-p1"
+    },
+    {
+      "file": "the-herd-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A bird at the barn roof.",
+      "themeNotes": "Book page. The Herd",
+      "slot": "the-herd-p2"
+    },
+    {
+      "file": "the-herd-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Corn loaded in the cart.",
+      "themeNotes": "Book page. The Herd",
+      "slot": "the-herd-p3"
+    },
+    {
+      "file": "the-herd-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A turn in the path at the barn.",
+      "themeNotes": "Book page. The Herd",
+      "slot": "the-herd-p4"
+    },
+    {
+      "file": "the-picnic-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a picnic cloth in a garden.",
+      "themeNotes": "Book cover. The Picnic",
+      "slot": "the-picnic-cover"
+    },
+    {
+      "file": "the-picnic-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A picnic set on grass.",
+      "themeNotes": "Book page. The Picnic",
+      "slot": "the-picnic-p1"
+    },
+    {
+      "file": "the-picnic-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A picnic basket.",
+      "themeNotes": "Book page. The Picnic",
+      "slot": "the-picnic-p2"
+    },
+    {
+      "file": "the-picnic-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A folded napkin.",
+      "themeNotes": "Book page. The Picnic",
+      "slot": "the-picnic-p3"
+    },
+    {
+      "file": "the-picnic-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The picnic basket packed.",
+      "themeNotes": "Book page. The Picnic",
+      "slot": "the-picnic-p4"
+    },
+    {
+      "file": "the-rabbit-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a rabbit in a garden row.",
+      "themeNotes": "Book cover. The Rabbit",
+      "slot": "the-rabbit-cover"
+    },
+    {
+      "file": "the-rabbit-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A rabbit in the plot.",
+      "themeNotes": "Book page. The Rabbit",
+      "slot": "the-rabbit-p1"
+    },
+    {
+      "file": "the-rabbit-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The rabbit sitting still.",
+      "themeNotes": "Book page. The Rabbit",
+      "slot": "the-rabbit-p2"
+    },
+    {
+      "file": "the-rabbit-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A carrot in soil.",
+      "themeNotes": "Book page. The Rabbit",
+      "slot": "the-rabbit-p3"
+    },
+    {
+      "file": "the-rabbit-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The rabbit beside a carrot.",
+      "themeNotes": "Book page. The Rabbit",
+      "slot": "the-rabbit-p4"
+    },
+    {
+      "file": "the-sunflower-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a tall sunflower in a bed.",
+      "themeNotes": "Book cover. The Sunflower",
+      "slot": "the-sunflower-cover"
+    },
+    {
+      "file": "the-sunflower-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A sunflower facing the sun.",
+      "themeNotes": "Book page. The Sunflower",
+      "slot": "the-sunflower-p1"
+    },
+    {
+      "file": "the-sunflower-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A tall sunflower above other plants.",
+      "themeNotes": "Book page. The Sunflower",
+      "slot": "the-sunflower-p2"
+    },
+    {
+      "file": "the-sunflower-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A sunflower in the garden.",
+      "themeNotes": "Book page. The Sunflower",
+      "slot": "the-sunflower-p3"
+    },
+    {
+      "file": "the-sunflower-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sunflower seeds in a dish.",
+      "themeNotes": "Book page. The Sunflower",
+      "slot": "the-sunflower-p4"
+    },
+    {
+      "file": "the-pumpkin-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a pumpkin on garden soil.",
+      "themeNotes": "Book cover. The Pumpkin",
+      "slot": "the-pumpkin-cover"
+    },
+    {
+      "file": "the-pumpkin-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pumpkin in a vine bed.",
+      "themeNotes": "Book page. The Pumpkin",
+      "slot": "the-pumpkin-p1"
+    },
+    {
+      "file": "the-pumpkin-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The pumpkin sitting in a row.",
+      "themeNotes": "Book page. The Pumpkin",
+      "slot": "the-pumpkin-p2"
+    },
+    {
+      "file": "the-pumpkin-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A big pumpkin.",
+      "themeNotes": "Book page. The Pumpkin",
+      "slot": "the-pumpkin-p3"
+    },
+    {
+      "file": "the-pumpkin-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "The pumpkin loaded in the cart.",
+      "themeNotes": "Book page. The Pumpkin",
+      "slot": "the-pumpkin-p4"
+    },
+    {
+      "file": "sun-on-the-rows-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: sun over garden rows.",
+      "themeNotes": "Book cover. Sun on the Rows",
+      "slot": "sun-on-the-rows-cover"
+    },
+    {
+      "file": "sun-on-the-rows-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sun rising over garden rows.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p1"
+    },
+    {
+      "file": "sun-on-the-rows-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child walking a garden path with a pail.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p2"
+    },
+    {
+      "file": "sun-on-the-rows-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bean plants lifting leaves toward light.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p3"
+    },
+    {
+      "file": "sun-on-the-rows-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A weed dropped into a compost heap.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p4"
+    },
+    {
+      "file": "sun-on-the-rows-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A bee on a yellow bloom.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p5"
+    },
+    {
+      "file": "sun-on-the-rows-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Warm soil under feet.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p6"
+    },
+    {
+      "file": "sun-on-the-rows-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pail at a rain barrel.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p7"
+    },
+    {
+      "file": "sun-on-the-rows-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Water running down a furrow.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p8"
+    },
+    {
+      "file": "sun-on-the-rows-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Wrens on a garden fence.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p9"
+    },
+    {
+      "file": "sun-on-the-rows-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Shining rows after morning work.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p10"
+    },
+    {
+      "file": "harvest-day-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a harvest cart in a garden.",
+      "themeNotes": "Book cover. Harvest Day",
+      "slot": "harvest-day-cover"
+    },
+    {
+      "file": "harvest-day-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A garden at dawn on harvest day.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p1"
+    },
+    {
+      "file": "harvest-day-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A wooden cart between garden beds.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p2"
+    },
+    {
+      "file": "harvest-day-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Ripe beans in a basket.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p3"
+    },
+    {
+      "file": "harvest-day-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pumpkin lifted from a vine.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p4"
+    },
+    {
+      "file": "harvest-day-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Corn stacked in shed shade.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p5"
+    },
+    {
+      "file": "harvest-day-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A neighbor at the garden gate.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p6"
+    },
+    {
+      "file": "harvest-day-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Beans placed in a neighbor's basket.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p7"
+    },
+    {
+      "file": "harvest-day-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bread and plums on a picnic cloth.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p8"
+    },
+    {
+      "file": "harvest-day-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A cart rolling as the sun lowers.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p9"
+    },
+    {
+      "file": "harvest-day-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Pantry shelves holding harvested food.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p10"
+    },
+    {
+      "file": "the-garden-gate-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a wooden garden gate.",
+      "themeNotes": "Book cover. The Garden Gate",
+      "slot": "the-garden-gate-cover"
+    },
+    {
+      "file": "the-garden-gate-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "An old garden gate on hinges.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p1"
+    },
+    {
+      "file": "the-garden-gate-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Oil on gate hinges.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p2"
+    },
+    {
+      "file": "the-garden-gate-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sweet peas planted along a fence.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p3"
+    },
+    {
+      "file": "the-garden-gate-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Vines reaching a trellis.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p4"
+    },
+    {
+      "file": "the-garden-gate-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A green curtain of peas in June.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p5"
+    },
+    {
+      "file": "the-garden-gate-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Children ducking under vines.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p6"
+    },
+    {
+      "file": "the-garden-gate-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A wren nest in a gourd.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p7"
+    },
+    {
+      "file": "the-garden-gate-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A gate left to swing gently.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p8"
+    },
+    {
+      "file": "the-garden-gate-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Dried peas rattling in late summer.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p9"
+    },
+    {
+      "file": "the-garden-gate-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "An open gate on a tended path.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p10"
+    },
+    {
+      "file": "under-the-trellis-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: grapes hanging under a trellis.",
+      "themeNotes": "Book cover. Under the Trellis",
+      "slot": "under-the-trellis-cover"
+    },
+    {
+      "file": "under-the-trellis-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Grape clusters under a wooden trellis.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p1"
+    },
+    {
+      "file": "under-the-trellis-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Cool shade under the trellis.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p2"
+    },
+    {
+      "file": "under-the-trellis-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child reading under the trellis.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p3"
+    },
+    {
+      "file": "under-the-trellis-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Watering roots under dusty leaves.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p4"
+    },
+    {
+      "file": "under-the-trellis-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bees on tiny spring flowers.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p5"
+    },
+    {
+      "file": "under-the-trellis-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Dark sweet fruit in fall.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p6"
+    },
+    {
+      "file": "under-the-trellis-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A basket of grapes, plenty left for birds.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p7"
+    },
+    {
+      "file": "under-the-trellis-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Rain tapping trellis boards.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p8"
+    },
+    {
+      "file": "under-the-trellis-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bare winter slats making shade.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p9"
+    },
+    {
+      "file": "under-the-trellis-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Spring vines climbing the trellis again.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p10"
     }
   ]
 }

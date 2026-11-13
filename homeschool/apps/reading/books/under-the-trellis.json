@@ -1,0 +1,404 @@
+{
+  "id": "under-the-trellis",
+  "title": "Under the Trellis",
+  "coverSlot": "under-the-trellis-cover",
+  "level": "volume",
+  "graphemes": [],
+  "sightWords": [],
+  "pages": [
+    {
+      "slot": "under-the-trellis-p1",
+      "words": [
+        {
+          "t": "Grapes",
+          "say": "grapes"
+        },
+        {
+          "t": "hung",
+          "say": "hung"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "clusters",
+          "say": "clusters"
+        },
+        {
+          "t": "under",
+          "say": "under"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "wooden",
+          "say": "wooden"
+        },
+        {
+          "t": "trellis.",
+          "say": "trellis"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p2",
+      "words": [
+        {
+          "t": "Shade",
+          "say": "shade"
+        },
+        {
+          "t": "made",
+          "say": "made"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "cool",
+          "say": "cool"
+        },
+        {
+          "t": "room",
+          "say": "room"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "hot",
+          "say": "hot"
+        },
+        {
+          "t": "afternoons.",
+          "say": "afternoons"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p3",
+      "words": [
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "read",
+          "say": "read"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "book",
+          "say": "book"
+        },
+        {
+          "t": "with",
+          "say": "with"
+        },
+        {
+          "t": "his",
+          "say": "his"
+        },
+        {
+          "t": "back",
+          "say": "back"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "post.",
+          "say": "post"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p4",
+      "words": [
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "watered",
+          "say": "watered"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "roots",
+          "say": "roots"
+        },
+        {
+          "t": "when",
+          "say": "when"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "leaves",
+          "say": "leaves"
+        },
+        {
+          "t": "looked",
+          "say": "looked"
+        },
+        {
+          "t": "dusty.",
+          "say": "dusty"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p5",
+      "words": [
+        {
+          "t": "Bees",
+          "say": "bees"
+        },
+        {
+          "t": "worked",
+          "say": "worked"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "tiny",
+          "say": "tiny"
+        },
+        {
+          "t": "flowers",
+          "say": "flowers"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "spring.",
+          "say": "spring"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p6",
+      "words": [
+        {
+          "t": "By",
+          "say": "by"
+        },
+        {
+          "t": "fall",
+          "say": "fall"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "fruit",
+          "say": "fruit"
+        },
+        {
+          "t": "turned",
+          "say": "turned"
+        },
+        {
+          "t": "dark",
+          "say": "dark"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "sweet.",
+          "say": "sweet"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p7",
+      "words": [
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "picked",
+          "say": "picked"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "basket",
+          "say": "basket"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "left",
+          "say": "left"
+        },
+        {
+          "t": "plenty",
+          "say": "plenty"
+        },
+        {
+          "t": "for",
+          "say": "for"
+        },
+        {
+          "t": "birds.",
+          "say": "birds"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p8",
+      "words": [
+        {
+          "t": "Rain",
+          "say": "rain"
+        },
+        {
+          "t": "tapped",
+          "say": "tapped"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "boards",
+          "say": "boards"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "ran",
+          "say": "ran"
+        },
+        {
+          "t": "into",
+          "say": "into"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "barrel.",
+          "say": "barrel"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p9",
+      "words": [
+        {
+          "t": "In",
+          "say": "in"
+        },
+        {
+          "t": "winter",
+          "say": "winter"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bare",
+          "say": "bare"
+        },
+        {
+          "t": "slats",
+          "say": "slats"
+        },
+        {
+          "t": "still",
+          "say": "still"
+        },
+        {
+          "t": "made",
+          "say": "made"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "path",
+          "say": "path"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "shade.",
+          "say": "shade"
+        }
+      ]
+    },
+    {
+      "slot": "under-the-trellis-p10",
+      "words": [
+        {
+          "t": "Spring",
+          "say": "spring"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "climb",
+          "say": "climb"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "trellis",
+          "say": "trellis"
+        },
+        {
+          "t": "once",
+          "say": "once"
+        },
+        {
+          "t": "more.",
+          "say": "more"
+        }
+      ]
+    }
+  ]
+}

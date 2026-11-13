@@ -1,29 +1,187 @@
 id,prompt,answer,audio_text,tags
-b1,s · a · t,sat,"s, a, t",reading early
-b2,m · a · t,mat,"m, a, t",reading early
-b3,p · a · t,pat,"p, a, t",reading early
-b4,t · a · p,tap,"t, a, p",reading early
-b5,s · i · t,sit,"s, i, t",reading early
-b6,p · i · g,pig,"p, i, g",reading early
-b7,f · i · g,fig,"f, i, g",reading early
-b8,b · i · g,big,"b, i, g",reading early
-b9,d · i · g,dig,"d, i, g",reading early
-b10,n · a · p,nap,"n, a, p",reading early
-q1,sss,s,sss,reading preschool
-q2,mmm,m,mmm,reading preschool
-q3,t,t,t,reading preschool
-q4,p,p,p,reading preschool
-q5,aaa,a,a,reading preschool
-q6,i,i,i,reading preschool
-q7,sss,s,sss,reading preschool
-q8,t,t,t,reading preschool
-q9,i,i,i,reading preschool
-q10,mmm,m,mmm,reading preschool
-s1,sss,s,sss,reading toddler
-s2,mmm,m,mmm,reading toddler
-s3,t,t,t,reading toddler
-s4,p,p,p,reading toddler
-s5,aaa,a,a,reading toddler
-s6,sss,s,sss,reading toddler
-s7,mmm,m,mmm,reading toddler
-s8,p,p,p,reading toddler
+e-c1,s · a · t,sat,"s, a, t",reading early
+e-c2,m · a · t,mat,"m, a, t",reading early
+e-c3,p · a · t,pat,"p, a, t",reading early
+e-c4,t · a · p,tap,"t, a, p",reading early
+e-c5,s · i · t,sit,"s, i, t",reading early
+e-c6,p · i · g,pig,"p, i, g",reading early
+e-c7,f · i · g,fig,"f, i, g",reading early
+e-c8,h · o · t,hot,"h, o, t",reading early
+e-c9,p · o · t,pot,"p, o, t",reading early
+e-c10,h · e · n,hen,"h, e, n",reading early
+e-c11,r · e · d,red,"r, e, d",reading early
+e-c12,b · u · g,bug,"b, u, g",reading early
+e-h1,Look and say. This helper is not sounded out letter by letter.,the,the,reading early
+e-h2,Look and say. This helper is not sounded out letter by letter.,is,is,reading early
+e-h3,Look and say. This helper is not sounded out letter by letter.,a,a,reading early
+e-h4,Look and say. This helper is not sounded out letter by letter.,and,and,reading early
+e-h5,Look and say. This helper is not sounded out letter by letter.,I,I,reading early
+e-h6,Look and say. This helper is not sounded out letter by letter.,to,to,reading early
+e-bl1,s · t · a · n,stan,"s, t, a, n",reading early
+e-bl2,p · l · u · m,plum,"p, l, u, m",reading early
+e-bl3,s · l · i · p,slip,"s, l, i, p",reading early
+e-bl4,f · l · a · t,flat,"f, l, a, t",reading early
+e-bl5,f · r · o · g,frog,"f, r, o, g",reading early
+e-bl6,t · r · o · t,trot,"t, r, o, t",reading early
+e-bl7,p · o · n · d,pond,"p, o, n, d",reading early
+e-bl8,s · o · f · t,soft,"s, o, f, t",reading early
+e-bl9,n · e · s · t,nest,"n, e, s, t",reading early
+e-bl10,s · t · i · ll,still,"s, t, i, ll",reading early
+e-d1,sh · e · d,shed,"sh, e, d",reading early
+e-d2,d · i · sh,dish,"d, i, sh",reading early
+e-d3,ch · o · p,chop,"ch, o, p",reading early
+e-d4,ch · i · p,chip,"ch, i, p",reading early
+e-d5,r · i · ch,rich,"r, i, ch",reading early
+e-d6,d · u · ck,duck,"d, u, ck",reading early
+e-d7,s · o · ck,sock,"s, o, ck",reading early
+e-d8,m · o · th,moth,"m, o, th",reading early
+e-d9,th · i · n,thin,"th, i, n",reading early
+e-d10,p · a · th,path,"p, a, th",reading early
+e-d11,s · o · ng,song,"s, o, ng",reading early
+e-d12,l · o · ng,long,"l, o, ng",reading early
+e-se1,c · a_e · k,cake,"c, a_e, k",reading early
+e-se2,r · a_e · k,rake,"r, a_e, k",reading early
+e-se3,b · a_e · k,bake,"b, a_e, k",reading early
+e-se4,v · i_e · n,vine,"v, i_e, n",reading early
+e-se5,r · i_e · p,ripe,"r, i_e, p",reading early
+e-se6,m · i_e · n,mine,"m, i_e, n",reading early
+e-se7,r · o_e · s,rose,"r, o_e, s",reading early
+e-se8,p · o_e · l,pole,"p, o_e, l",reading early
+e-se9,m · u_e · l,mule,"m, u_e, l",reading early
+e-se10,c · u_e · t,cute,"c, u_e, t",reading early
+e-t1,r · ai · n,rain,"r, ai, n",reading early
+e-t2,h · ay,hay,"h, ay",reading early
+e-t3,p · ai · l,pail,"p, ai, l",reading early
+e-t4,s · t · ay,stay,"s, t, ay",reading early
+e-t5,b · ee,bee,"b, ee",reading early
+e-t6,s · ee · d,seed,"s, ee, d",reading early
+e-t7,l · ea · f,leaf,"l, ea, f",reading early
+e-t8,b · oa · t,boat,"b, oa, t",reading early
+e-t9,t · oa · d,toad,"t, oa, d",reading early
+e-t10,s · l · ow,slow,"s, l, ow",reading early
+e-t11,m · oo · n,moon,"m, oo, n",reading early
+e-t12,p · oo · l,pool,"p, oo, l",reading early
+p01,sss,s,sss,reading preschool
+p02,aaa,a,aaa,reading preschool
+p03,tuh,t,tuh,reading preschool
+p04,puh,p,puh,reading preschool
+p05,iii,i,iii,reading preschool
+p06,nnn,n,nnn,reading preschool
+p07,mmm,m,mmm,reading preschool
+p08,duh,d,duh,reading preschool
+p09,guh,g,guh,reading preschool
+p10,ooo,o,ooo,reading preschool
+p11,kuh,c,kuh,reading preschool
+p12,kuh,k,kuh,reading preschool
+p13,eh,e,eh,reading preschool
+p14,uhh,u,uhh,reading preschool
+p15,rrr,r,rrr,reading preschool
+p16,huh,h,huh,reading preschool
+p17,buh,b,buh,reading preschool
+p18,fff,f,fff,reading preschool
+p19,lll,l,lll,reading preschool
+p20,juh,j,juh,reading preschool
+p21,vvv,v,vvv,reading preschool
+p22,wuh,w,wuh,reading preschool
+p23,ks,x,ks,reading preschool
+p24,yuh,y,yuh,reading preschool
+p25,zzz,z,zzz,reading preschool
+p26,kwuh,qu,kwuh,reading preschool
+p27,sss,s,sss,reading preschool
+p28,aaa,a,aaa,reading preschool
+p29,mmm,m,mmm,reading preschool
+p30,guh,g,guh,reading preschool
+p-b1,s · a · t,sat,"s, a, t",reading preschool
+p-b2,m · a · t,mat,"m, a, t",reading preschool
+p-b3,p · a · n,pan,"p, a, n",reading preschool
+p-b4,t · a · p,tap,"t, a, p",reading preschool
+p-b5,s · i · t,sit,"s, i, t",reading preschool
+p-b6,m · a · p,map,"m, a, p",reading preschool
+p-b7,n · a · p,nap,"n, a, p",reading preschool
+p-b8,p · i · n,pin,"p, i, n",reading preschool
+r-t1,r · ai · n,rain,"r, ai, n",reading primary
+r-t2,h · ay,hay,"h, ay",reading primary
+r-t3,p · ai · l,pail,"p, ai, l",reading primary
+r-t4,s · t · ay,stay,"s, t, ay",reading primary
+r-t5,b · ee,bee,"b, ee",reading primary
+r-t6,s · ee · d,seed,"s, ee, d",reading primary
+r-t7,l · ea · f,leaf,"l, ea, f",reading primary
+r-t8,b · oa · t,boat,"b, oa, t",reading primary
+r-t9,t · oa · d,toad,"t, oa, d",reading primary
+r-t10,s · l · ow,slow,"s, l, ow",reading primary
+r-t11,m · oo · n,moon,"m, oo, n",reading primary
+r-t12,p · oo · l,pool,"p, oo, l",reading primary
+r-r1,c · ar · t,cart,"c, ar, t",reading primary
+r-r2,j · ar,jar,"j, ar",reading primary
+r-r3,b · ar · n,barn,"b, ar, n",reading primary
+r-r4,c · or · n,corn,"c, or, n",reading primary
+r-r5,f · or · k,fork,"f, or, k",reading primary
+r-r6,f · er · n,fern,"f, er, n",reading primary
+r-r7,b · ir · d,bird,"b, ir, d",reading primary
+r-r8,d · ir · t,dirt,"d, ir, t",reading primary
+r-r9,t · ur · n,turn,"t, ur, n",reading primary
+r-r10,h · er · d,herd,"h, er, d",reading primary
+r-m1,pic · nic,picnic,"pic, nic",reading primary
+r-m2,bas · ket,basket,"bas, ket",reading primary
+r-m3,nap · kin,napkin,"nap, kin",reading primary
+r-m4,rab · bit,rabbit,"rab, bit",reading primary
+r-m5,car · rot,carrot,"car, rot",reading primary
+r-m6,sun · flow · er,sunflower,"sun, flow, er",reading primary
+r-m7,pump · kin,pumpkin,"pump, kin",reading primary
+r-m8,gar · den,garden,"gar, den",reading primary
+r-h1,Look and say. This helper is not sounded out letter by letter.,said,said,reading primary
+r-h2,Look and say. This helper is not sounded out letter by letter.,of,of,reading primary
+r-h3,Look and say. This helper is not sounded out letter by letter.,you,you,reading primary
+r-h4,Look and say. This helper is not sounded out letter by letter.,was,was,reading primary
+r-h5,Look and say. This helper is not sounded out letter by letter.,are,are,reading primary
+r-h6,Look and say. This helper is not sounded out letter by letter.,they,they,reading primary
+r-v1,What does garden mean here?,A place to plant,garden,reading primary
+r-v2,What does soil mean here?,The ground plants grow in,soil,reading primary
+r-v3,What does harvest mean here?,Gathering the crop,harvest,reading primary
+r-v4,What does trellis mean here?,A frame plants climb,trellis,reading primary
+r-v5,What does plot mean here?,A small piece of garden,plot,reading primary
+r-v6,What does compost mean here?,Rotted scraps that feed soil,compost,reading primary
+t01,sss,s,sss,reading toddler
+t02,mmm,m,mmm,reading toddler
+t03,tuh,t,tuh,reading toddler
+t04,puh,p,puh,reading toddler
+t05,aaa,a,aaa,reading toddler
+t06,sss,s,sss,reading toddler
+t07,mmm,m,mmm,reading toddler
+t08,tuh,t,tuh,reading toddler
+t09,puh,p,puh,reading toddler
+t10,aaa,a,aaa,reading toddler
+t11,iii,i,iii,reading toddler
+t12,nnn,n,nnn,reading toddler
+t13,sss,s,sss,reading toddler
+t14,mmm,m,mmm,reading toddler
+t15,nnn,n,nnn,reading toddler
+t16,iii,i,iii,reading toddler
+u-v1,What does trellis mean here?,A frame that plants climb,trellis,reading upper
+u-v2,What does compost mean here?,Rotted scraps that feed the soil,compost,reading upper
+u-v3,What does furrow mean here?,A long groove cut for planting,furrow,reading upper
+u-v4,What does perennial mean here?,A plant that returns each year,perennial,reading upper
+u-v5,What does yield mean here?,The amount a plot produces,yield,reading upper
+u-v6,What does drought mean here?,A long time with too little rain,drought,reading upper
+u-v7,What does mulch mean here?,A cover of leaves or straw on soil,mulch,reading upper
+u-v8,What does tend mean here?,To care for plants,tend,reading upper
+u-v9,What does plot mean here?,"A small piece of garden, or the events in a story",plot,reading upper
+u-v10,What does narrator mean here?,The voice that tells a story,narrator,reading upper
+u-v11,What does setting mean here?,Where and when a story happens,setting,reading upper
+u-v12,What does illustrate mean here?,To show meaning with a picture,illustrate,reading upper
+u-q1,Why did Sam roll the barrel under the shed roof?,To catch the coming rain,Why did Sam roll the barrel under the shed roof?,reading upper
+u-q2,Which plants did Sam water first?,The young beans,Which plants did Sam water first?,reading upper
+u-q3,What does the last sentence say saving rain is like?,Quiet work you prepare before the storm,What does the last sentence say saving rain is like?,reading upper
+u-q4,What word best names the barrel's job?,To store rain for later,What word best names the barrel's job?,reading upper
+u-q5,Where did the wren build?,Inside a dried gourd,Where did the wren build?,reading upper
+u-q6,Why did Sam keep still?,So he would not disturb the nest,Why did Sam keep still?,reading upper
+u-q7,What did the wren bring to the nest?,Moths and beetles,What did the wren bring to the nest?,reading upper
+u-q8,What idea does the last line teach?,A garden can feed birds as well as people,What idea does the last line teach?,reading upper
+u-q9,What did Jane use to turn the heap?,A fork,What did Jane use to turn the heap?,reading upper
+u-q10,Why did she turn the pile?,So air could reach the middle,Why did she turn the pile?,reading upper
+u-q11,When did she spread the finished compost?,In autumn,When did she spread the finished compost?,reading upper
+u-q12,How does the garden 'pay' the worms?,With softer ground and stronger roots,How does the garden pay the worms?,reading upper
+u-q13,What was still hanging on the vine?,One tomato,What was still hanging on the vine?,reading upper
+u-q14,Why might Mark have wanted to keep it?,He had planned it for supper,Why might Mark have wanted to keep it?,reading upper
+u-q15,What had the neighbor given Mark in spring?,Extra bean starts,What had the neighbor given Mark in spring?,reading upper
+u-q16,What does the last line say harvest includes?,What you pass along,What does the last line say harvest includes?,reading upper

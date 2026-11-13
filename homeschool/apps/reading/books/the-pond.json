@@ -1,0 +1,95 @@
+{
+  "id": "the-pond",
+  "title": "The Pond",
+  "coverSlot": "the-pond-cover",
+  "level": "blends",
+  "graphemes": [
+    "p",
+    "o",
+    "n",
+    "d",
+    "f",
+    "r",
+    "g",
+    "s",
+    "i",
+    "t",
+    "m",
+    "u",
+    "l",
+    "nd",
+    "ft",
+    "st"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is"
+  ],
+  "pages": [
+    {
+      "slot": "the-pond-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "pond",
+          "say": "pond"
+        }
+      ]
+    },
+    {
+      "slot": "the-pond-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "frog",
+          "say": "frog"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
+      ]
+    },
+    {
+      "slot": "the-pond-p3",
+      "words": [
+        {
+          "t": "Soft",
+          "say": "soft"
+        },
+        {
+          "t": "mud",
+          "say": "mud"
+        }
+      ]
+    },
+    {
+      "slot": "the-pond-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "pond",
+          "say": "pond"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "still",
+          "say": "still"
+        }
+      ]
+    }
+  ]
+}

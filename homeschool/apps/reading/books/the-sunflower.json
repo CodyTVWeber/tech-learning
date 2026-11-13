@@ -1,0 +1,100 @@
+{
+  "id": "the-sunflower",
+  "title": "The Sunflower",
+  "coverSlot": "the-sunflower-cover",
+  "level": "multisyllable",
+  "graphemes": [
+    "s",
+    "u",
+    "n",
+    "f",
+    "l",
+    "ow",
+    "er",
+    "t",
+    "a",
+    "i",
+    "g",
+    "d"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "in"
+  ],
+  "pages": [
+    {
+      "slot": "the-sunflower-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "sunflower",
+          "say": "sunflower"
+        }
+      ]
+    },
+    {
+      "slot": "the-sunflower-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "sunflower",
+          "say": "sunflower"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "tall",
+          "say": "tall"
+        }
+      ]
+    },
+    {
+      "slot": "the-sunflower-p3",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "sunflower",
+          "say": "sunflower"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "garden",
+          "say": "garden"
+        }
+      ]
+    },
+    {
+      "slot": "the-sunflower-p4",
+      "words": [
+        {
+          "t": "Seeds",
+          "say": "seeds"
+        }
+      ]
+    }
+  ]
+}

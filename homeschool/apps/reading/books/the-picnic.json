@@ -1,0 +1,80 @@
+{
+  "id": "the-picnic",
+  "title": "The Picnic",
+  "coverSlot": "the-picnic-cover",
+  "level": "multisyllable",
+  "graphemes": [
+    "p",
+    "i",
+    "c",
+    "n",
+    "b",
+    "a",
+    "s",
+    "k",
+    "e",
+    "t"
+  ],
+  "sightWords": [
+    "a",
+    "the"
+  ],
+  "pages": [
+    {
+      "slot": "the-picnic-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "picnic",
+          "say": "picnic"
+        }
+      ]
+    },
+    {
+      "slot": "the-picnic-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "basket",
+          "say": "basket"
+        }
+      ]
+    },
+    {
+      "slot": "the-picnic-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "napkin",
+          "say": "napkin"
+        }
+      ]
+    },
+    {
+      "slot": "the-picnic-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "picnic",
+          "say": "picnic"
+        },
+        {
+          "t": "basket",
+          "say": "basket"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": "the-moon-pool",
+  "title": "The Moon Pool",
+  "coverSlot": "the-moon-pool-cover",
+  "level": "teams",
+  "graphemes": [
+    "m",
+    "oo",
+    "n",
+    "p",
+    "l",
+    "c",
+    "t"
+  ],
+  "sightWords": [
+    "the",
+    "a"
+  ],
+  "pages": [
+    {
+      "slot": "the-moon-pool-p1",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "moon",
+          "say": "moon"
+        }
+      ]
+    },
+    {
+      "slot": "the-moon-pool-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "pool",
+          "say": "pool"
+        }
+      ]
+    },
+    {
+      "slot": "the-moon-pool-p3",
+      "words": [
+        {
+          "t": "Cool",
+          "say": "cool"
+        }
+      ]
+    },
+    {
+      "slot": "the-moon-pool-p4",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "tool",
+          "say": "tool"
+        }
+      ]
+    }
+  ]
+}

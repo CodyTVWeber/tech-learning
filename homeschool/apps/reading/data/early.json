@@ -1,25 +1,1126 @@
 {
   "band": "early",
-  "title": "Blends in the garden",
-  "mode": "blends",
+  "title": "Blends and teams in the garden",
   "intro": {
-    "audioText": "Say each sound, then blend. sss aaa t. Sat.",
-    "body": "Tap each seed in order, then blend. Books unlock after a few blends."
+    "audioText": "Walk the garden path. Short words, blends, silent e, then vowel teams. Books unlock in order.",
+    "body": "Walk the path. Finish a plot to unlock its books. After silent e, tend the vowel orchard. Each book uses only sounds taught so far."
   },
-  "items": [
-    { "id": "b1", "sounds": ["s", "a", "t"], "blend": "sat", "audioText": "s, a, t", "choices": ["sat", "mat", "pat"] },
-    { "id": "b2", "sounds": ["m", "a", "t"], "blend": "mat", "audioText": "m, a, t", "choices": ["sat", "mat", "map"] },
-    { "id": "b3", "sounds": ["p", "a", "t"], "blend": "pat", "audioText": "p, a, t", "choices": ["pat", "pit", "tap"] },
-    { "id": "b4", "sounds": ["t", "a", "p"], "blend": "tap", "audioText": "t, a, p", "choices": ["tap", "pat", "pit"] },
-    { "id": "b5", "sounds": ["s", "i", "t"], "blend": "sit", "audioText": "s, i, t", "choices": ["sat", "sit", "pit"] },
-    { "id": "b6", "sounds": ["p", "i", "g"], "blend": "pig", "audioText": "p, i, g", "choices": ["pig", "pit", "fig"] },
-    { "id": "b7", "sounds": ["f", "i", "g"], "blend": "fig", "audioText": "f, i, g", "choices": ["fig", "pig", "big"] },
-    { "id": "b8", "sounds": ["b", "i", "g"], "blend": "big", "audioText": "b, i, g", "choices": ["big", "dig", "pig"] },
-    { "id": "b9", "sounds": ["d", "i", "g"], "blend": "dig", "audioText": "d, i, g", "choices": ["dig", "fig", "big"] },
-    { "id": "b10", "sounds": ["n", "a", "p"], "blend": "nap", "audioText": "n, a, p", "choices": ["nap", "tap", "map"] },
-    { "id": "w1", "kind": "sight", "prompt": "Helper word. Look and say. Not sounded out letter by letter.", "answer": "the", "audioText": "the", "choices": ["the", "a", "is"] },
-    { "id": "w2", "kind": "sight", "prompt": "Helper word. Look and say. Not sounded out letter by letter.", "answer": "is", "audioText": "is", "choices": ["a", "is", "the"] }
+  "beds": [
+    {
+      "id": "cvc",
+      "kind": "words",
+      "title": "Short word plot",
+      "slot": "bed-cvc",
+      "audioText": "Short vowel words. Hear the sounds, then blend."
+    },
+    {
+      "id": "helpers",
+      "kind": "helpers",
+      "title": "Helper signs",
+      "slot": "bed-helpers",
+      "requires": "cvc",
+      "audioText": "Helper words. Look and say. Not sounded out letter by letter."
+    },
+    {
+      "id": "blends",
+      "kind": "words",
+      "title": "Blend hedge",
+      "slot": "bed-blends",
+      "requires": "cvc",
+      "audioText": "Blend hedge. Two consonants, then the vowel."
+    },
+    {
+      "id": "digraphs",
+      "kind": "words",
+      "title": "Trellis teams",
+      "slot": "bed-digraphs",
+      "requires": "blends",
+      "audioText": "Two letters, one sound. sh, ch, th, ck, ng."
+    },
+    {
+      "id": "silent-e",
+      "kind": "words",
+      "title": "Silent e vine",
+      "slot": "bed-silent-e",
+      "requires": "digraphs",
+      "audioText": "Silent e. The vowel says its long sound."
+    },
+    {
+      "id": "teams",
+      "kind": "words",
+      "title": "Vowel orchard",
+      "slot": "bed-teams",
+      "requires": "silent-e",
+      "audioText": "Vowel teams. Two letters, one long sound."
+    },
+    {
+      "id": "books",
+      "kind": "books",
+      "title": "Picture books",
+      "slot": "bed-books",
+      "audioText": "Garden books. Tap a word to hear it. The sun follows as it reads."
+    }
   ],
-  "books": ["sam-sat", "the-fig"],
-  "bookGate": { "the-fig": "sam-sat" }
+  "books": [
+    "sam-sat",
+    "the-fig",
+    "a-hot-pot",
+    "the-red-bug",
+    "stan-stands",
+    "the-plum-plot",
+    "grant-trots",
+    "the-pond",
+    "the-shed",
+    "chop",
+    "the-duck",
+    "the-moth",
+    "the-cake",
+    "the-vine",
+    "the-rose",
+    "the-mule",
+    "the-rain",
+    "the-bee",
+    "the-boat",
+    "the-moon-pool"
+  ],
+  "items": [
+    {
+      "id": "e-c1",
+      "bed": "cvc",
+      "sounds": [
+        "s",
+        "a",
+        "t"
+      ],
+      "blend": "sat",
+      "audioText": "sss. aaa. tuh",
+      "answer": "sat",
+      "choices": [
+        "sat",
+        "mat",
+        "pat"
+      ]
+    },
+    {
+      "id": "e-c2",
+      "bed": "cvc",
+      "sounds": [
+        "m",
+        "a",
+        "t"
+      ],
+      "blend": "mat",
+      "audioText": "mmm. aaa. tuh",
+      "answer": "mat",
+      "choices": [
+        "sat",
+        "mat",
+        "map"
+      ]
+    },
+    {
+      "id": "e-c3",
+      "bed": "cvc",
+      "sounds": [
+        "p",
+        "a",
+        "t"
+      ],
+      "blend": "pat",
+      "audioText": "puh. aaa. tuh",
+      "answer": "pat",
+      "choices": [
+        "pat",
+        "pit",
+        "tap"
+      ]
+    },
+    {
+      "id": "e-c4",
+      "bed": "cvc",
+      "sounds": [
+        "t",
+        "a",
+        "p"
+      ],
+      "blend": "tap",
+      "audioText": "tuh. aaa. puh",
+      "answer": "tap",
+      "choices": [
+        "tap",
+        "pat",
+        "top"
+      ]
+    },
+    {
+      "id": "e-c5",
+      "bed": "cvc",
+      "sounds": [
+        "s",
+        "i",
+        "t"
+      ],
+      "blend": "sit",
+      "audioText": "sss. iii. tuh",
+      "answer": "sit",
+      "choices": [
+        "sat",
+        "sit",
+        "set"
+      ]
+    },
+    {
+      "id": "e-c6",
+      "bed": "cvc",
+      "sounds": [
+        "p",
+        "i",
+        "g"
+      ],
+      "blend": "pig",
+      "audioText": "puh. iii. guh",
+      "answer": "pig",
+      "choices": [
+        "pig",
+        "pit",
+        "fig"
+      ]
+    },
+    {
+      "id": "e-c7",
+      "bed": "cvc",
+      "sounds": [
+        "f",
+        "i",
+        "g"
+      ],
+      "blend": "fig",
+      "audioText": "fff. iii. guh",
+      "answer": "fig",
+      "choices": [
+        "fig",
+        "pig",
+        "big"
+      ]
+    },
+    {
+      "id": "e-c8",
+      "bed": "cvc",
+      "sounds": [
+        "h",
+        "o",
+        "t"
+      ],
+      "blend": "hot",
+      "audioText": "huh. ooo. tuh",
+      "answer": "hot",
+      "choices": [
+        "hot",
+        "hat",
+        "pot"
+      ]
+    },
+    {
+      "id": "e-c9",
+      "bed": "cvc",
+      "sounds": [
+        "p",
+        "o",
+        "t"
+      ],
+      "blend": "pot",
+      "audioText": "puh. ooo. tuh",
+      "answer": "pot",
+      "choices": [
+        "pot",
+        "pat",
+        "pit"
+      ]
+    },
+    {
+      "id": "e-c10",
+      "bed": "cvc",
+      "sounds": [
+        "h",
+        "e",
+        "n"
+      ],
+      "blend": "hen",
+      "audioText": "huh. eh. nnn",
+      "answer": "hen",
+      "choices": [
+        "hen",
+        "pen",
+        "sun"
+      ]
+    },
+    {
+      "id": "e-c11",
+      "bed": "cvc",
+      "sounds": [
+        "r",
+        "e",
+        "d"
+      ],
+      "blend": "red",
+      "audioText": "rrr. eh. duh",
+      "answer": "red",
+      "choices": [
+        "red",
+        "rid",
+        "bed"
+      ]
+    },
+    {
+      "id": "e-c12",
+      "bed": "cvc",
+      "sounds": [
+        "b",
+        "u",
+        "g"
+      ],
+      "blend": "bug",
+      "audioText": "buh. uhh. guh",
+      "answer": "bug",
+      "choices": [
+        "bug",
+        "bag",
+        "big"
+      ]
+    },
+    {
+      "id": "e-h1",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "the",
+      "audioText": "the",
+      "choices": [
+        "the",
+        "a",
+        "is"
+      ]
+    },
+    {
+      "id": "e-h2",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "is",
+      "audioText": "is",
+      "choices": [
+        "a",
+        "is",
+        "the"
+      ]
+    },
+    {
+      "id": "e-h3",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "a",
+      "audioText": "a",
+      "choices": [
+        "a",
+        "the",
+        "I"
+      ]
+    },
+    {
+      "id": "e-h4",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "and",
+      "audioText": "and",
+      "choices": [
+        "and",
+        "the",
+        "said"
+      ]
+    },
+    {
+      "id": "e-h5",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "I",
+      "audioText": "I",
+      "choices": [
+        "I",
+        "a",
+        "is"
+      ]
+    },
+    {
+      "id": "e-h6",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "to",
+      "audioText": "to",
+      "choices": [
+        "to",
+        "the",
+        "do"
+      ]
+    },
+    {
+      "id": "e-bl1",
+      "bed": "blends",
+      "sounds": [
+        "s",
+        "t",
+        "a",
+        "n"
+      ],
+      "blend": "stan",
+      "audioText": "sss. tuh. aaa. nnn",
+      "answer": "stan",
+      "choices": [
+        "stan",
+        "sand",
+        "tans"
+      ]
+    },
+    {
+      "id": "e-bl2",
+      "bed": "blends",
+      "sounds": [
+        "p",
+        "l",
+        "u",
+        "m"
+      ],
+      "blend": "plum",
+      "audioText": "puh. lll. uhh. mmm",
+      "answer": "plum",
+      "choices": [
+        "plum",
+        "lump",
+        "palm"
+      ]
+    },
+    {
+      "id": "e-bl3",
+      "bed": "blends",
+      "sounds": [
+        "s",
+        "l",
+        "i",
+        "p"
+      ],
+      "blend": "slip",
+      "audioText": "sss. lll. iii. puh",
+      "answer": "slip",
+      "choices": [
+        "slip",
+        "lisp",
+        "spit"
+      ]
+    },
+    {
+      "id": "e-bl4",
+      "bed": "blends",
+      "sounds": [
+        "f",
+        "l",
+        "a",
+        "t"
+      ],
+      "blend": "flat",
+      "audioText": "fff. lll. aaa. tuh",
+      "answer": "flat",
+      "choices": [
+        "flat",
+        "felt",
+        "lift"
+      ]
+    },
+    {
+      "id": "e-bl5",
+      "bed": "blends",
+      "sounds": [
+        "f",
+        "r",
+        "o",
+        "g"
+      ],
+      "blend": "frog",
+      "audioText": "fff. rrr. ooo. guh",
+      "answer": "frog",
+      "choices": [
+        "frog",
+        "golf",
+        "fort"
+      ]
+    },
+    {
+      "id": "e-bl6",
+      "bed": "blends",
+      "sounds": [
+        "t",
+        "r",
+        "o",
+        "t"
+      ],
+      "blend": "trot",
+      "audioText": "tuh. rrr. ooo. tuh",
+      "answer": "trot",
+      "choices": [
+        "trot",
+        "tort",
+        "port"
+      ]
+    },
+    {
+      "id": "e-bl7",
+      "bed": "blends",
+      "sounds": [
+        "p",
+        "o",
+        "n",
+        "d"
+      ],
+      "blend": "pond",
+      "audioText": "puh. ooo. nnn. duh",
+      "answer": "pond",
+      "choices": [
+        "pond",
+        "ponds",
+        "drop"
+      ]
+    },
+    {
+      "id": "e-bl8",
+      "bed": "blends",
+      "sounds": [
+        "s",
+        "o",
+        "f",
+        "t"
+      ],
+      "blend": "soft",
+      "audioText": "sss. ooo. fff. tuh",
+      "answer": "soft",
+      "choices": [
+        "soft",
+        "fast",
+        "stop"
+      ]
+    },
+    {
+      "id": "e-bl9",
+      "bed": "blends",
+      "sounds": [
+        "n",
+        "e",
+        "s",
+        "t"
+      ],
+      "blend": "nest",
+      "audioText": "nnn. eh. sss. tuh",
+      "answer": "nest",
+      "choices": [
+        "nest",
+        "sent",
+        "nets"
+      ]
+    },
+    {
+      "id": "e-bl10",
+      "bed": "blends",
+      "sounds": [
+        "s",
+        "t",
+        "i",
+        "ll"
+      ],
+      "blend": "still",
+      "audioText": "sss. tuh. iii. lll",
+      "answer": "still",
+      "choices": [
+        "still",
+        "silt",
+        "list"
+      ]
+    },
+    {
+      "id": "e-d1",
+      "bed": "digraphs",
+      "sounds": [
+        "sh",
+        "e",
+        "d"
+      ],
+      "blend": "shed",
+      "audioText": "shh. eh. duh",
+      "answer": "shed",
+      "choices": [
+        "shed",
+        "dish",
+        "mesh"
+      ]
+    },
+    {
+      "id": "e-d2",
+      "bed": "digraphs",
+      "sounds": [
+        "d",
+        "i",
+        "sh"
+      ],
+      "blend": "dish",
+      "audioText": "duh. iii. shh",
+      "answer": "dish",
+      "choices": [
+        "dish",
+        "shed",
+        "dash"
+      ]
+    },
+    {
+      "id": "e-d3",
+      "bed": "digraphs",
+      "sounds": [
+        "ch",
+        "o",
+        "p"
+      ],
+      "blend": "chop",
+      "audioText": "chuh. ooo. puh",
+      "answer": "chop",
+      "choices": [
+        "chop",
+        "chip",
+        "shop"
+      ]
+    },
+    {
+      "id": "e-d4",
+      "bed": "digraphs",
+      "sounds": [
+        "ch",
+        "i",
+        "p"
+      ],
+      "blend": "chip",
+      "audioText": "chuh. iii. puh",
+      "answer": "chip",
+      "choices": [
+        "chip",
+        "chop",
+        "rich"
+      ]
+    },
+    {
+      "id": "e-d5",
+      "bed": "digraphs",
+      "sounds": [
+        "r",
+        "i",
+        "ch"
+      ],
+      "blend": "rich",
+      "audioText": "rrr. iii. chuh",
+      "answer": "rich",
+      "choices": [
+        "rich",
+        "chip",
+        "chin"
+      ]
+    },
+    {
+      "id": "e-d6",
+      "bed": "digraphs",
+      "sounds": [
+        "d",
+        "u",
+        "ck"
+      ],
+      "blend": "duck",
+      "audioText": "duh. uhh. kuh",
+      "answer": "duck",
+      "choices": [
+        "duck",
+        "dock",
+        "cuff"
+      ]
+    },
+    {
+      "id": "e-d7",
+      "bed": "digraphs",
+      "sounds": [
+        "s",
+        "o",
+        "ck"
+      ],
+      "blend": "sock",
+      "audioText": "sss. ooo. kuh",
+      "answer": "sock",
+      "choices": [
+        "sock",
+        "sack",
+        "sick"
+      ]
+    },
+    {
+      "id": "e-d8",
+      "bed": "digraphs",
+      "sounds": [
+        "m",
+        "o",
+        "th"
+      ],
+      "blend": "moth",
+      "audioText": "mmm. ooo. thhh",
+      "answer": "moth",
+      "choices": [
+        "moth",
+        "math",
+        "thin"
+      ]
+    },
+    {
+      "id": "e-d9",
+      "bed": "digraphs",
+      "sounds": [
+        "th",
+        "i",
+        "n"
+      ],
+      "blend": "thin",
+      "audioText": "thhh. iii. nnn",
+      "answer": "thin",
+      "choices": [
+        "thin",
+        "this",
+        "path"
+      ]
+    },
+    {
+      "id": "e-d10",
+      "bed": "digraphs",
+      "sounds": [
+        "p",
+        "a",
+        "th"
+      ],
+      "blend": "path",
+      "audioText": "puh. aaa. thhh",
+      "answer": "path",
+      "choices": [
+        "path",
+        "that",
+        "tap"
+      ]
+    },
+    {
+      "id": "e-d11",
+      "bed": "digraphs",
+      "sounds": [
+        "s",
+        "o",
+        "ng"
+      ],
+      "blend": "song",
+      "audioText": "sss. ooo. ing",
+      "answer": "song",
+      "choices": [
+        "song",
+        "sing",
+        "gong"
+      ]
+    },
+    {
+      "id": "e-d12",
+      "bed": "digraphs",
+      "sounds": [
+        "l",
+        "o",
+        "ng"
+      ],
+      "blend": "long",
+      "audioText": "lll. ooo. ing",
+      "answer": "long",
+      "choices": [
+        "long",
+        "song",
+        "log"
+      ]
+    },
+    {
+      "id": "e-se1",
+      "bed": "silent-e",
+      "sounds": [
+        "c",
+        "a_e",
+        "k"
+      ],
+      "blend": "cake",
+      "audioText": "kuh. ay. kuh",
+      "answer": "cake",
+      "choices": [
+        "cake",
+        "cape",
+        "lake"
+      ]
+    },
+    {
+      "id": "e-se2",
+      "bed": "silent-e",
+      "sounds": [
+        "r",
+        "a_e",
+        "k"
+      ],
+      "blend": "rake",
+      "audioText": "rrr. ay. kuh",
+      "answer": "rake",
+      "choices": [
+        "rake",
+        "cake",
+        "rate"
+      ]
+    },
+    {
+      "id": "e-se3",
+      "bed": "silent-e",
+      "sounds": [
+        "b",
+        "a_e",
+        "k"
+      ],
+      "blend": "bake",
+      "audioText": "buh. ay. kuh",
+      "answer": "bake",
+      "choices": [
+        "bake",
+        "bike",
+        "back"
+      ]
+    },
+    {
+      "id": "e-se4",
+      "bed": "silent-e",
+      "sounds": [
+        "v",
+        "i_e",
+        "n"
+      ],
+      "blend": "vine",
+      "audioText": "vvv. eye. nnn",
+      "answer": "vine",
+      "choices": [
+        "vine",
+        "van",
+        "fine"
+      ]
+    },
+    {
+      "id": "e-se5",
+      "bed": "silent-e",
+      "sounds": [
+        "r",
+        "i_e",
+        "p"
+      ],
+      "blend": "ripe",
+      "audioText": "rrr. eye. puh",
+      "answer": "ripe",
+      "choices": [
+        "ripe",
+        "rip",
+        "ride"
+      ]
+    },
+    {
+      "id": "e-se6",
+      "bed": "silent-e",
+      "sounds": [
+        "m",
+        "i_e",
+        "n"
+      ],
+      "blend": "mine",
+      "audioText": "mmm. eye. nnn",
+      "answer": "mine",
+      "choices": [
+        "mine",
+        "mane",
+        "pin"
+      ]
+    },
+    {
+      "id": "e-se7",
+      "bed": "silent-e",
+      "sounds": [
+        "r",
+        "o_e",
+        "s"
+      ],
+      "blend": "rose",
+      "audioText": "rrr. oh. sss",
+      "answer": "rose",
+      "choices": [
+        "rose",
+        "rise",
+        "rode"
+      ]
+    },
+    {
+      "id": "e-se8",
+      "bed": "silent-e",
+      "sounds": [
+        "p",
+        "o_e",
+        "l"
+      ],
+      "blend": "pole",
+      "audioText": "puh. oh. lll",
+      "answer": "pole",
+      "choices": [
+        "pole",
+        "pale",
+        "poll"
+      ]
+    },
+    {
+      "id": "e-se9",
+      "bed": "silent-e",
+      "sounds": [
+        "m",
+        "u_e",
+        "l"
+      ],
+      "blend": "mule",
+      "audioText": "mmm. yoo. lll",
+      "answer": "mule",
+      "choices": [
+        "mule",
+        "male",
+        "mole"
+      ]
+    },
+    {
+      "id": "e-se10",
+      "bed": "silent-e",
+      "sounds": [
+        "c",
+        "u_e",
+        "t"
+      ],
+      "blend": "cute",
+      "audioText": "kuh. yoo. tuh",
+      "answer": "cute",
+      "choices": [
+        "cute",
+        "cut",
+        "cube"
+      ]
+    },
+    {
+      "id": "e-t1",
+      "bed": "teams",
+      "sounds": [
+        "r",
+        "ai",
+        "n"
+      ],
+      "blend": "rain",
+      "audioText": "rrr. ay. nnn",
+      "answer": "rain",
+      "choices": [
+        "rain",
+        "ran",
+        "raid"
+      ]
+    },
+    {
+      "id": "e-t2",
+      "bed": "teams",
+      "sounds": [
+        "h",
+        "ay"
+      ],
+      "blend": "hay",
+      "audioText": "huh. ay",
+      "answer": "hay",
+      "choices": [
+        "hay",
+        "hat",
+        "had"
+      ]
+    },
+    {
+      "id": "e-t3",
+      "bed": "teams",
+      "sounds": [
+        "p",
+        "ai",
+        "l"
+      ],
+      "blend": "pail",
+      "audioText": "puh. ay. lll",
+      "answer": "pail",
+      "choices": [
+        "pail",
+        "pal",
+        "pale"
+      ]
+    },
+    {
+      "id": "e-t4",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "t",
+        "ay"
+      ],
+      "blend": "stay",
+      "audioText": "sss. tuh. ay",
+      "answer": "stay",
+      "choices": [
+        "stay",
+        "sat",
+        "say"
+      ]
+    },
+    {
+      "id": "e-t5",
+      "bed": "teams",
+      "sounds": [
+        "b",
+        "ee"
+      ],
+      "blend": "bee",
+      "audioText": "buh. eee",
+      "answer": "bee",
+      "choices": [
+        "bee",
+        "be",
+        "bed"
+      ]
+    },
+    {
+      "id": "e-t6",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "ee",
+        "d"
+      ],
+      "blend": "seed",
+      "audioText": "sss. eee. duh",
+      "answer": "seed",
+      "choices": [
+        "seed",
+        "sad",
+        "said"
+      ]
+    },
+    {
+      "id": "e-t7",
+      "bed": "teams",
+      "sounds": [
+        "l",
+        "ea",
+        "f"
+      ],
+      "blend": "leaf",
+      "audioText": "lll. eee. fff",
+      "answer": "leaf",
+      "choices": [
+        "leaf",
+        "loaf",
+        "left"
+      ]
+    },
+    {
+      "id": "e-t8",
+      "bed": "teams",
+      "sounds": [
+        "b",
+        "oa",
+        "t"
+      ],
+      "blend": "boat",
+      "audioText": "buh. oh. tuh",
+      "answer": "boat",
+      "choices": [
+        "boat",
+        "boot",
+        "bat"
+      ]
+    },
+    {
+      "id": "e-t9",
+      "bed": "teams",
+      "sounds": [
+        "t",
+        "oa",
+        "d"
+      ],
+      "blend": "toad",
+      "audioText": "tuh. oh. duh",
+      "answer": "toad",
+      "choices": [
+        "toad",
+        "tod",
+        "tide"
+      ]
+    },
+    {
+      "id": "e-t10",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "l",
+        "ow"
+      ],
+      "blend": "slow",
+      "audioText": "sss. lll. oh",
+      "answer": "slow",
+      "choices": [
+        "slow",
+        "slew",
+        "slot"
+      ]
+    },
+    {
+      "id": "e-t11",
+      "bed": "teams",
+      "sounds": [
+        "m",
+        "oo",
+        "n"
+      ],
+      "blend": "moon",
+      "audioText": "mmm. ooo. nnn",
+      "answer": "moon",
+      "choices": [
+        "moon",
+        "man",
+        "moan"
+      ]
+    },
+    {
+      "id": "e-t12",
+      "bed": "teams",
+      "sounds": [
+        "p",
+        "oo",
+        "l"
+      ],
+      "blend": "pool",
+      "audioText": "puh. ooo. lll",
+      "answer": "pool",
+      "choices": [
+        "pool",
+        "pole",
+        "poll"
+      ]
+    }
+  ]
 }

@@ -1,0 +1,82 @@
+{
+  "id": "stan-stands",
+  "title": "Stan Stands",
+  "coverSlot": "stan-stands-cover",
+  "level": "blends",
+  "graphemes": [
+    "s",
+    "t",
+    "a",
+    "n",
+    "d",
+    "st",
+    "nd"
+  ],
+  "sightWords": [
+    "the",
+    "a",
+    "and"
+  ],
+  "pages": [
+    {
+      "slot": "stan-stands-p1",
+      "words": [
+        {
+          "t": "Stan",
+          "say": "Stan"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
+      ]
+    },
+    {
+      "slot": "stan-stands-p2",
+      "words": [
+        {
+          "t": "Stan",
+          "say": "Stan"
+        },
+        {
+          "t": "stands",
+          "say": "stands"
+        }
+      ]
+    },
+    {
+      "slot": "stan-stands-p3",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "ant",
+          "say": "ant"
+        }
+      ]
+    },
+    {
+      "slot": "stan-stands-p4",
+      "words": [
+        {
+          "t": "Stan",
+          "say": "Stan"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "ant",
+          "say": "ant"
+        }
+      ]
+    }
+  ]
+}

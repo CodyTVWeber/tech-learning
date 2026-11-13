@@ -1,40 +1,93 @@
 {
   "id": "the-fig",
   "title": "The Fig",
-  "coverSlot": "fig-cover",
-  "graphemes": ["s", "a", "t", "p", "m", "i", "g", "f", "b", "d", "n"],
-  "sightWords": ["the", "a", "is"],
+  "coverSlot": "the-fig-cover",
+  "level": "cvc",
+  "graphemes": [
+    "s",
+    "a",
+    "t",
+    "p",
+    "m",
+    "i",
+    "g",
+    "f",
+    "b",
+    "d",
+    "n"
+  ],
+  "sightWords": [
+    "the",
+    "a",
+    "is"
+  ],
   "pages": [
     {
-      "slot": "fig-p1",
+      "slot": "the-fig-p1",
       "words": [
-        { "t": "A", "say": "a" },
-        { "t": "fig", "say": "fig" }
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "fig",
+          "say": "fig"
+        }
       ]
     },
     {
-      "slot": "fig-p2",
+      "slot": "the-fig-p2",
       "words": [
-        { "t": "A", "say": "a" },
-        { "t": "pig", "say": "pig" },
-        { "t": "sits", "say": "sits" }
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "pig",
+          "say": "pig"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
       ]
     },
     {
-      "slot": "fig-p3",
+      "slot": "the-fig-p3",
       "words": [
-        { "t": "The", "say": "the" },
-        { "t": "pig", "say": "pig" },
-        { "t": "digs", "say": "digs" }
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "pig",
+          "say": "pig"
+        },
+        {
+          "t": "digs",
+          "say": "digs"
+        }
       ]
     },
     {
-      "slot": "fig-p4",
+      "slot": "the-fig-p4",
       "words": [
-        { "t": "The", "say": "the" },
-        { "t": "fig", "say": "fig" },
-        { "t": "is", "say": "is" },
-        { "t": "big", "say": "big" }
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "fig",
+          "say": "fig"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "big",
+          "say": "big"
+        }
       ]
     }
   ]

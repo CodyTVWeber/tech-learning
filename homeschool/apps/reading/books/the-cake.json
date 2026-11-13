@@ -1,0 +1,84 @@
+{
+  "id": "the-cake",
+  "title": "The Cake",
+  "coverSlot": "the-cake-cover",
+  "level": "silent-e",
+  "graphemes": [
+    "c",
+    "a_e",
+    "k",
+    "j",
+    "n",
+    "b",
+    "s",
+    "r",
+    "f"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is"
+  ],
+  "pages": [
+    {
+      "slot": "the-cake-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "cake",
+          "say": "cake"
+        }
+      ]
+    },
+    {
+      "slot": "the-cake-p2",
+      "words": [
+        {
+          "t": "Jane",
+          "say": "Jane"
+        },
+        {
+          "t": "bakes",
+          "say": "bakes"
+        }
+      ]
+    },
+    {
+      "slot": "the-cake-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "rake",
+          "say": "rake"
+        }
+      ]
+    },
+    {
+      "slot": "the-cake-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "cake",
+          "say": "cake"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "safe",
+          "say": "safe"
+        }
+      ]
+    }
+  ]
+}

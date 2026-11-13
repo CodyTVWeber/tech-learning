@@ -1,0 +1,95 @@
+{
+  "id": "the-boat",
+  "title": "The Boat",
+  "coverSlot": "the-boat-cover",
+  "level": "teams",
+  "graphemes": [
+    "b",
+    "oa",
+    "t",
+    "d",
+    "r",
+    "i",
+    "n",
+    "e",
+    "s",
+    "l",
+    "ow"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "in"
+  ],
+  "pages": [
+    {
+      "slot": "the-boat-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "boat",
+          "say": "boat"
+        }
+      ]
+    },
+    {
+      "slot": "the-boat-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "toad",
+          "say": "toad"
+        }
+      ]
+    },
+    {
+      "slot": "the-boat-p3",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "toad",
+          "say": "toad"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "road",
+          "say": "road"
+        }
+      ]
+    },
+    {
+      "slot": "the-boat-p4",
+      "words": [
+        {
+          "t": "Slow",
+          "say": "slow"
+        },
+        {
+          "t": "toad",
+          "say": "toad"
+        }
+      ]
+    }
+  ]
+}

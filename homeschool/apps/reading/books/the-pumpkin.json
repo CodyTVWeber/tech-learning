@@ -1,0 +1,104 @@
+{
+  "id": "the-pumpkin",
+  "title": "The Pumpkin",
+  "coverSlot": "the-pumpkin-cover",
+  "level": "multisyllable",
+  "graphemes": [
+    "p",
+    "u",
+    "m",
+    "k",
+    "i",
+    "n",
+    "s",
+    "t",
+    "b",
+    "g",
+    "c",
+    "ar"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "in"
+  ],
+  "pages": [
+    {
+      "slot": "the-pumpkin-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "pumpkin",
+          "say": "pumpkin"
+        }
+      ]
+    },
+    {
+      "slot": "the-pumpkin-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "pumpkin",
+          "say": "pumpkin"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
+      ]
+    },
+    {
+      "slot": "the-pumpkin-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "big",
+          "say": "big"
+        },
+        {
+          "t": "pumpkin",
+          "say": "pumpkin"
+        }
+      ]
+    },
+    {
+      "slot": "the-pumpkin-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "pumpkin",
+          "say": "pumpkin"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "cart",
+          "say": "cart"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "id": "the-mule",
+  "title": "The Mule",
+  "coverSlot": "the-mule-cover",
+  "level": "silent-e",
+  "graphemes": [
+    "m",
+    "u_e",
+    "l",
+    "c",
+    "t",
+    "b"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is"
+  ],
+  "pages": [
+    {
+      "slot": "the-mule-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "mule",
+          "say": "mule"
+        }
+      ]
+    },
+    {
+      "slot": "the-mule-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "cute",
+          "say": "cute"
+        },
+        {
+          "t": "mule",
+          "say": "mule"
+        }
+      ]
+    },
+    {
+      "slot": "the-mule-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "tube",
+          "say": "tube"
+        }
+      ]
+    },
+    {
+      "slot": "the-mule-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "mule",
+          "say": "mule"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "cute",
+          "say": "cute"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "id": "the-plum-plot",
+  "title": "The Plum Plot",
+  "coverSlot": "the-plum-plot-cover",
+  "level": "blends",
+  "graphemes": [
+    "p",
+    "l",
+    "u",
+    "m",
+    "o",
+    "t",
+    "s",
+    "i",
+    "f",
+    "a",
+    "pl",
+    "sl",
+    "fl"
+  ],
+  "sightWords": [
+    "a",
+    "the"
+  ],
+  "pages": [
+    {
+      "slot": "the-plum-plot-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "plum",
+          "say": "plum"
+        }
+      ]
+    },
+    {
+      "slot": "the-plum-plot-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "plum",
+          "say": "plum"
+        },
+        {
+          "t": "plot",
+          "say": "plot"
+        }
+      ]
+    },
+    {
+      "slot": "the-plum-plot-p3",
+      "words": [
+        {
+          "t": "Slim",
+          "say": "Slim"
+        },
+        {
+          "t": "slips",
+          "say": "slips"
+        }
+      ]
+    },
+    {
+      "slot": "the-plum-plot-p4",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "flat",
+          "say": "flat"
+        },
+        {
+          "t": "plot",
+          "say": "plot"
+        }
+      ]
+    }
+  ]
+}

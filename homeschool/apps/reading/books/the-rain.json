@@ -1,0 +1,91 @@
+{
+  "id": "the-rain",
+  "title": "The Rain",
+  "coverSlot": "the-rain-cover",
+  "level": "teams",
+  "graphemes": [
+    "r",
+    "ai",
+    "n",
+    "o",
+    "h",
+    "ay",
+    "p",
+    "l",
+    "st",
+    "sh",
+    "e",
+    "d"
+  ],
+  "sightWords": [
+    "the",
+    "a",
+    "in"
+  ],
+  "pages": [
+    {
+      "slot": "the-rain-p1",
+      "words": [
+        {
+          "t": "Rain",
+          "say": "rain"
+        }
+      ]
+    },
+    {
+      "slot": "the-rain-p2",
+      "words": [
+        {
+          "t": "Rain",
+          "say": "rain"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "hay",
+          "say": "hay"
+        }
+      ]
+    },
+    {
+      "slot": "the-rain-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        }
+      ]
+    },
+    {
+      "slot": "the-rain-p4",
+      "words": [
+        {
+          "t": "Stay",
+          "say": "stay"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shed",
+          "say": "shed"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "id": "the-rabbit",
+  "title": "The Rabbit",
+  "coverSlot": "the-rabbit-cover",
+  "level": "multisyllable",
+  "graphemes": [
+    "r",
+    "a",
+    "b",
+    "i",
+    "t",
+    "c",
+    "o"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "and"
+  ],
+  "pages": [
+    {
+      "slot": "the-rabbit-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "rabbit",
+          "say": "rabbit"
+        }
+      ]
+    },
+    {
+      "slot": "the-rabbit-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "rabbit",
+          "say": "rabbit"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
+      ]
+    },
+    {
+      "slot": "the-rabbit-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "carrot",
+          "say": "carrot"
+        }
+      ]
+    },
+    {
+      "slot": "the-rabbit-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "rabbit",
+          "say": "rabbit"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "carrot",
+          "say": "carrot"
+        }
+      ]
+    }
+  ]
+}

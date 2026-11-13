@@ -1,0 +1,117 @@
+{
+  "id": "the-red-bug",
+  "title": "The Red Bug",
+  "coverSlot": "the-red-bug-cover",
+  "level": "cvc",
+  "graphemes": [
+    "s",
+    "a",
+    "t",
+    "p",
+    "m",
+    "i",
+    "g",
+    "f",
+    "b",
+    "d",
+    "n",
+    "o",
+    "h",
+    "l",
+    "e",
+    "u",
+    "r"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "and"
+  ],
+  "pages": [
+    {
+      "slot": "the-red-bug-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "red",
+          "say": "red"
+        },
+        {
+          "t": "bug",
+          "say": "bug"
+        }
+      ]
+    },
+    {
+      "slot": "the-red-bug-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "bug",
+          "say": "bug"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "mud",
+          "say": "mud"
+        }
+      ]
+    },
+    {
+      "slot": "the-red-bug-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "hen",
+          "say": "hen"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
+      ]
+    },
+    {
+      "slot": "the-red-bug-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "hen",
+          "say": "hen"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bug",
+          "say": "bug"
+        }
+      ]
+    }
+  ]
+}

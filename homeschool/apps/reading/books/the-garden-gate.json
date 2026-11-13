@@ -1,0 +1,380 @@
+{
+  "id": "the-garden-gate",
+  "title": "The Garden Gate",
+  "coverSlot": "the-garden-gate-cover",
+  "level": "volume",
+  "graphemes": [],
+  "sightWords": [],
+  "pages": [
+    {
+      "slot": "the-garden-gate-p1",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "old",
+          "say": "old"
+        },
+        {
+          "t": "garden",
+          "say": "garden"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "hung",
+          "say": "hung"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "two",
+          "say": "two"
+        },
+        {
+          "t": "rusted",
+          "say": "rusted"
+        },
+        {
+          "t": "hinges.",
+          "say": "hinges"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p2",
+      "words": [
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "oiled",
+          "say": "oiled"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "hinges",
+          "say": "hinges"
+        },
+        {
+          "t": "so",
+          "say": "so"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "swing.",
+          "say": "swing"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p3",
+      "words": [
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "planted",
+          "say": "planted"
+        },
+        {
+          "t": "sweet",
+          "say": "sweet"
+        },
+        {
+          "t": "peas",
+          "say": "peas"
+        },
+        {
+          "t": "along",
+          "say": "along"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "fence.",
+          "say": "fence"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p4",
+      "words": [
+        {
+          "t": "Tendrils",
+          "say": "tendrils"
+        },
+        {
+          "t": "reached",
+          "say": "reached"
+        },
+        {
+          "t": "for",
+          "say": "for"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "trellis.",
+          "say": "trellis"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p5",
+      "words": [
+        {
+          "t": "In",
+          "say": "in"
+        },
+        {
+          "t": "June",
+          "say": "june"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "peas",
+          "say": "peas"
+        },
+        {
+          "t": "made",
+          "say": "made"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "green",
+          "say": "green"
+        },
+        {
+          "t": "curtain.",
+          "say": "curtain"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p6",
+      "words": [
+        {
+          "t": "Children",
+          "say": "children"
+        },
+        {
+          "t": "ducked",
+          "say": "ducked"
+        },
+        {
+          "t": "under",
+          "say": "under"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "vines",
+          "say": "vines"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "enter.",
+          "say": "enter"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p7",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "wren",
+          "say": "wren"
+        },
+        {
+          "t": "nested",
+          "say": "nested"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gourd",
+          "say": "gourd"
+        },
+        {
+          "t": "by",
+          "say": "by"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "post.",
+          "say": "post"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p8",
+      "words": [
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "did",
+          "say": "did"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "slam",
+          "say": "slam"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "after",
+          "say": "after"
+        },
+        {
+          "t": "that.",
+          "say": "that"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p9",
+      "words": [
+        {
+          "t": "Late",
+          "say": "late"
+        },
+        {
+          "t": "summer,",
+          "say": "summer"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "peas",
+          "say": "peas"
+        },
+        {
+          "t": "dried",
+          "say": "dried"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "rattled.",
+          "say": "rattled"
+        }
+      ]
+    },
+    {
+      "slot": "the-garden-gate-p10",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "still",
+          "say": "still"
+        },
+        {
+          "t": "opened",
+          "say": "opened"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "tended",
+          "say": "tended"
+        },
+        {
+          "t": "path.",
+          "say": "path"
+        }
+      ]
+    }
+  ]
+}
