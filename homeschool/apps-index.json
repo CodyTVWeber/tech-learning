@@ -1,6 +1,8 @@
 {
   "apps": [
     "bible",
+    "geography",
+    "history",
     "math",
     "reading",
     "singing"

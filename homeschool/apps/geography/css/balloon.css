@@ -60,6 +60,10 @@ body {
   box-shadow: 0 6px 0 rgba(47, 93, 80, 0.35);
 }
 
+html[data-runner] .untested-banner {
+  display: none;
+}
+
 img { max-width: 100%; display: block; }
 button { font: inherit; cursor: pointer; border: 0; }
 

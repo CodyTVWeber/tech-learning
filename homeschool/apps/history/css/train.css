@@ -72,6 +72,10 @@ body {
   box-shadow: 0 4px 0 #0c0907;
 }
 
+html[data-runner] .untested-banner {
+  display: none;
+}
+
 img { max-width: 100%; display: block; }
 button, select { font: inherit; }
 
