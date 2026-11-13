@@ -1,0 +1,35 @@
+id,prompt,answer,audio_text,tags
+montpelier,What is the capital of Vermont?,Montpelier,What is the capital of Vermont?,geography primary
+trenton,What is the capital of New Jersey?,Trenton,What is the capital of New Jersey?,geography primary
+charleston-wv,What is the capital of West Virginia?,Charleston,What is the capital of West Virginia?,geography primary
+montgomery,What is the capital of Alabama?,Montgomery,What is the capital of Alabama?,geography primary
+frankfort,What is the capital of Kentucky?,Frankfort,What is the capital of Kentucky?,geography primary
+madison,What is the capital of Wisconsin?,Madison,What is the capital of Wisconsin?,geography primary
+jefferson-city,What is the capital of Missouri?,Jefferson City,What is the capital of Missouri?,geography primary
+bismarck,What is the capital of North Dakota?,Bismarck,What is the capital of North Dakota?,geography primary
+pierre,What is the capital of South Dakota?,Pierre,What is the capital of South Dakota?,geography primary
+cheyenne,What is the capital of Wyoming?,Cheyenne,What is the capital of Wyoming?,geography primary
+topeka,What is the capital of Kansas?,Topeka,What is the capital of Kansas?,geography primary
+santa-fe,What is the capital of New Mexico?,Santa Fe,What is the capital of New Mexico?,geography primary
+phoenix,What is the capital of Arizona?,Phoenix,What is the capital of Arizona?,geography primary
+helena,What is the capital of Montana?,Helena,What is the capital of Montana?,geography primary
+boise,What is the capital of Idaho?,Boise,What is the capital of Idaho?,geography primary
+homes,Name the five Great Lakes.,"Huron, Ontario, Michigan, Erie, Superior",Name the five Great Lakes.,geography primary lakes
+mitchell,Mount Mitchell is the highest peak in which half of the United States?,the East,Mount Mitchell is the highest peak in which half of the United States?,geography primary mountains
+whitney,Mount Whitney is the highest peak in which group of states?,the contiguous 48,Mount Whitney is the highest peak in which group of states?,geography primary mountains
+denali,"Denali, the highest peak in North America, is in which state?",Alaska,"Denali, the highest peak in North America, is in which state?",geography primary mountains
+rainier,Mount Rainier is in which state?,Washington,Mount Rainier is in which state?,geography primary mountains
+chesapeake,Chesapeake Bay lies by Maryland and which other state?,Virginia,Chesapeake Bay lies by Maryland and which other state?,geography primary bays
+puget,Puget Sound is in which state?,Washington,Puget Sound is in which state?,geography primary bays
+st-lawrence,The St. Lawrence carries Great Lakes water toward which ocean?,the Atlantic,The St. Lawrence carries Great Lakes water toward which ocean?,geography primary rivers
+rio-grande,The Rio Grande forms part of the U.S. border with which country?,Mexico,The Rio Grande forms part of the U.S. border with which country?,geography primary rivers
+great-salt,The Great Salt Lake is in which state?,Utah,The Great Salt Lake is in which state?,geography primary rivers
+oregon-trail,Which historic wagon route headed to the Pacific Northwest?,the Oregon Trail,Which historic wagon route headed to the Pacific Northwest?,geography primary trails
+santa-fe-trail,The Santa Fe Trail linked Missouri toward which present-day state?,New Mexico,The Santa Fe Trail linked Missouri toward which present-day state?,geography primary trails
+mojave,The Mojave Desert is chiefly in which state?,California,The Mojave Desert is chiefly in which state?,geography primary deserts
+sonoran,The Sonoran Desert includes much of which U.S. state?,Arizona,The Sonoran Desert includes much of which U.S. state?,geography primary deserts
+niagara,Niagara Falls sits on the border of New York and which country?,Canada,Niagara Falls sits on the border of New York and which country?,geography primary features
+black-hills,The Black Hills are in which state?,South Dakota,The Black Hills are in which state?,geography primary features
+mammoth,Mammoth Cave is in which state?,Kentucky,Mammoth Cave is in which state?,geography primary features
+san-andreas,The San Andreas Fault is in which state?,California,The San Andreas Fault is in which state?,geography primary features
+woodlands,Eastern Woodlands names forest country of which side of the continent?,the East,Eastern Woodlands names forest country of which side of the continent?,geography primary regions

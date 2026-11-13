@@ -1,0 +1,21 @@
+id,prompt,answer,audio_text,tags
+concord,What is the capital of New Hampshire?,Concord,What is the capital of New Hampshire?,geography early
+boston,What is the capital of Massachusetts?,Boston,What is the capital of Massachusetts?,geography early
+hartford,What is the capital of Connecticut?,Hartford,What is the capital of Connecticut?,geography early
+harrisburg,What is the capital of Pennsylvania?,Harrisburg,What is the capital of Pennsylvania?,geography early
+annapolis,What is the capital of Maryland?,Annapolis,What is the capital of Maryland?,geography early
+raleigh,What is the capital of North Carolina?,Raleigh,What is the capital of North Carolina?,geography early
+tallahassee,What is the capital of Florida?,Tallahassee,What is the capital of Florida?,geography early
+baton-rouge,What is the capital of Louisiana?,Baton Rouge,What is the capital of Louisiana?,geography early
+lansing,What is the capital of Michigan?,Lansing,What is the capital of Michigan?,geography early
+nashville,What is the capital of Tennessee?,Nashville,What is the capital of Tennessee?,geography early
+springfield,What is the capital of Illinois?,Springfield,What is the capital of Illinois?,geography early
+austin,What is the capital of Texas?,Austin,What is the capital of Texas?,geography early
+sacramento,What is the capital of California?,Sacramento,What is the capital of California?,geography early
+honolulu,What is the capital of Hawaii?,Honolulu,What is the capital of Hawaii?,geography early
+juneau,What is the capital of Alaska?,Juneau,What is the capital of Alaska?,geography early
+salem,What is the capital of Oregon?,Salem,What is the capital of Oregon?,geography early
+adirondack,The Adirondack Mountains are in which state?,New York,The Adirondack Mountains are in which state?,geography early
+ohio-joins,The Ohio River joins which larger river?,the Mississippi River,The Ohio River joins which larger river?,geography early
+columbia-ocean,The Columbia River reaches which ocean?,the Pacific Ocean,The Columbia River reaches which ocean?,geography early
+erie-state,The Erie Canal is in which state?,New York,The Erie Canal is in which state?,geography early

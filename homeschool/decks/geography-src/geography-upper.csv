@@ -1,0 +1,115 @@
+id,prompt,answer,audio_text,tags
+cap-me,What is the capital of Maine?,Augusta,What is the capital of Maine?,geography upper capitals
+st-me,Which state’s capital is Augusta?,Maine,Which state’s capital is Augusta?,geography upper capitals
+cap-nh,What is the capital of New Hampshire?,Concord,What is the capital of New Hampshire?,geography upper capitals
+st-nh,Which state’s capital is Concord?,New Hampshire,Which state’s capital is Concord?,geography upper capitals
+cap-ma,What is the capital of Massachusetts?,Boston,What is the capital of Massachusetts?,geography upper capitals
+st-ma,Which state’s capital is Boston?,Massachusetts,Which state’s capital is Boston?,geography upper capitals
+cap-ri,What is the capital of Rhode Island?,Providence,What is the capital of Rhode Island?,geography upper capitals
+st-ri,Which state’s capital is Providence?,Rhode Island,Which state’s capital is Providence?,geography upper capitals
+cap-ct,What is the capital of Connecticut?,Hartford,What is the capital of Connecticut?,geography upper capitals
+st-ct,Which state’s capital is Hartford?,Connecticut,Which state’s capital is Hartford?,geography upper capitals
+cap-vt,What is the capital of Vermont?,Montpelier,What is the capital of Vermont?,geography upper capitals
+st-vt,Which state’s capital is Montpelier?,Vermont,Which state’s capital is Montpelier?,geography upper capitals
+cap-ny,What is the capital of New York?,Albany,What is the capital of New York?,geography upper capitals
+st-ny,Which state’s capital is Albany?,New York,Which state’s capital is Albany?,geography upper capitals
+cap-nj,What is the capital of New Jersey?,Trenton,What is the capital of New Jersey?,geography upper capitals
+st-nj,Which state’s capital is Trenton?,New Jersey,Which state’s capital is Trenton?,geography upper capitals
+cap-pa,What is the capital of Pennsylvania?,Harrisburg,What is the capital of Pennsylvania?,geography upper capitals
+st-pa,Which state’s capital is Harrisburg?,Pennsylvania,Which state’s capital is Harrisburg?,geography upper capitals
+cap-de,What is the capital of Delaware?,Dover,What is the capital of Delaware?,geography upper capitals
+st-de,Which state’s capital is Dover?,Delaware,Which state’s capital is Dover?,geography upper capitals
+cap-md,What is the capital of Maryland?,Annapolis,What is the capital of Maryland?,geography upper capitals
+st-md,Which state’s capital is Annapolis?,Maryland,Which state’s capital is Annapolis?,geography upper capitals
+cap-va,What is the capital of Virginia?,Richmond,What is the capital of Virginia?,geography upper capitals
+st-va,Which state’s capital is Richmond?,Virginia,Which state’s capital is Richmond?,geography upper capitals
+cap-wv,What is the capital of West Virginia?,Charleston,What is the capital of West Virginia?,geography upper capitals
+st-wv,Which state’s capital is Charleston?,West Virginia,Which state’s capital is Charleston?,geography upper capitals
+cap-nc,What is the capital of North Carolina?,Raleigh,What is the capital of North Carolina?,geography upper capitals
+st-nc,Which state’s capital is Raleigh?,North Carolina,Which state’s capital is Raleigh?,geography upper capitals
+cap-sc,What is the capital of South Carolina?,Columbia,What is the capital of South Carolina?,geography upper capitals
+st-sc,Which state’s capital is Columbia?,South Carolina,Which state’s capital is Columbia?,geography upper capitals
+cap-ga,What is the capital of Georgia?,Atlanta,What is the capital of Georgia?,geography upper capitals
+st-ga,Which state’s capital is Atlanta?,Georgia,Which state’s capital is Atlanta?,geography upper capitals
+cap-fl,What is the capital of Florida?,Tallahassee,What is the capital of Florida?,geography upper capitals
+st-fl,Which state’s capital is Tallahassee?,Florida,Which state’s capital is Tallahassee?,geography upper capitals
+cap-al,What is the capital of Alabama?,Montgomery,What is the capital of Alabama?,geography upper capitals
+st-al,Which state’s capital is Montgomery?,Alabama,Which state’s capital is Montgomery?,geography upper capitals
+cap-ms,What is the capital of Mississippi?,Jackson,What is the capital of Mississippi?,geography upper capitals
+st-ms,Which state’s capital is Jackson?,Mississippi,Which state’s capital is Jackson?,geography upper capitals
+cap-la,What is the capital of Louisiana?,Baton Rouge,What is the capital of Louisiana?,geography upper capitals
+st-la,Which state’s capital is Baton Rouge?,Louisiana,Which state’s capital is Baton Rouge?,geography upper capitals
+cap-mi,What is the capital of Michigan?,Lansing,What is the capital of Michigan?,geography upper capitals
+st-mi,Which state’s capital is Lansing?,Michigan,Which state’s capital is Lansing?,geography upper capitals
+cap-oh,What is the capital of Ohio?,Columbus,What is the capital of Ohio?,geography upper capitals
+st-oh,Which state’s capital is Columbus?,Ohio,Which state’s capital is Columbus?,geography upper capitals
+cap-in,What is the capital of Indiana?,Indianapolis,What is the capital of Indiana?,geography upper capitals
+cap-ky,What is the capital of Kentucky?,Frankfort,What is the capital of Kentucky?,geography upper capitals
+st-ky,Which state’s capital is Frankfort?,Kentucky,Which state’s capital is Frankfort?,geography upper capitals
+cap-tn,What is the capital of Tennessee?,Nashville,What is the capital of Tennessee?,geography upper capitals
+st-tn,Which state’s capital is Nashville?,Tennessee,Which state’s capital is Nashville?,geography upper capitals
+cap-wi,What is the capital of Wisconsin?,Madison,What is the capital of Wisconsin?,geography upper capitals
+st-wi,Which state’s capital is Madison?,Wisconsin,Which state’s capital is Madison?,geography upper capitals
+cap-il,What is the capital of Illinois?,Springfield,What is the capital of Illinois?,geography upper capitals
+st-il,Which state’s capital is Springfield?,Illinois,Which state’s capital is Springfield?,geography upper capitals
+cap-ia,What is the capital of Iowa?,Des Moines,What is the capital of Iowa?,geography upper capitals
+st-ia,Which state’s capital is Des Moines?,Iowa,Which state’s capital is Des Moines?,geography upper capitals
+cap-mo,What is the capital of Missouri?,Jefferson City,What is the capital of Missouri?,geography upper capitals
+st-mo,Which state’s capital is Jefferson City?,Missouri,Which state’s capital is Jefferson City?,geography upper capitals
+cap-ar,What is the capital of Arkansas?,Little Rock,What is the capital of Arkansas?,geography upper capitals
+st-ar,Which state’s capital is Little Rock?,Arkansas,Which state’s capital is Little Rock?,geography upper capitals
+cap-mn,What is the capital of Minnesota?,St. Paul,What is the capital of Minnesota?,geography upper capitals
+st-mn,Which state’s capital is St. Paul?,Minnesota,Which state’s capital is St. Paul?,geography upper capitals
+cap-nd,What is the capital of North Dakota?,Bismarck,What is the capital of North Dakota?,geography upper capitals
+st-nd,Which state’s capital is Bismarck?,North Dakota,Which state’s capital is Bismarck?,geography upper capitals
+cap-sd,What is the capital of South Dakota?,Pierre,What is the capital of South Dakota?,geography upper capitals
+st-sd,Which state’s capital is Pierre?,South Dakota,Which state’s capital is Pierre?,geography upper capitals
+cap-wy,What is the capital of Wyoming?,Cheyenne,What is the capital of Wyoming?,geography upper capitals
+st-wy,Which state’s capital is Cheyenne?,Wyoming,Which state’s capital is Cheyenne?,geography upper capitals
+cap-ne,What is the capital of Nebraska?,Lincoln,What is the capital of Nebraska?,geography upper capitals
+st-ne,Which state’s capital is Lincoln?,Nebraska,Which state’s capital is Lincoln?,geography upper capitals
+cap-ks,What is the capital of Kansas?,Topeka,What is the capital of Kansas?,geography upper capitals
+st-ks,Which state’s capital is Topeka?,Kansas,Which state’s capital is Topeka?,geography upper capitals
+cap-ok,What is the capital of Oklahoma?,Oklahoma City,What is the capital of Oklahoma?,geography upper capitals
+cap-tx,What is the capital of Texas?,Austin,What is the capital of Texas?,geography upper capitals
+st-tx,Which state’s capital is Austin?,Texas,Which state’s capital is Austin?,geography upper capitals
+cap-co,What is the capital of Colorado?,Denver,What is the capital of Colorado?,geography upper capitals
+st-co,Which state’s capital is Denver?,Colorado,Which state’s capital is Denver?,geography upper capitals
+cap-nm,What is the capital of New Mexico?,Santa Fe,What is the capital of New Mexico?,geography upper capitals
+st-nm,Which state’s capital is Santa Fe?,New Mexico,Which state’s capital is Santa Fe?,geography upper capitals
+cap-ut,What is the capital of Utah?,Salt Lake City,What is the capital of Utah?,geography upper capitals
+st-ut,Which state’s capital is Salt Lake City?,Utah,Which state’s capital is Salt Lake City?,geography upper capitals
+cap-az,What is the capital of Arizona?,Phoenix,What is the capital of Arizona?,geography upper capitals
+st-az,Which state’s capital is Phoenix?,Arizona,Which state’s capital is Phoenix?,geography upper capitals
+cap-nv,What is the capital of Nevada?,Carson City,What is the capital of Nevada?,geography upper capitals
+st-nv,Which state’s capital is Carson City?,Nevada,Which state’s capital is Carson City?,geography upper capitals
+cap-ca,What is the capital of California?,Sacramento,What is the capital of California?,geography upper capitals
+st-ca,Which state’s capital is Sacramento?,California,Which state’s capital is Sacramento?,geography upper capitals
+cap-hi,What is the capital of Hawaii?,Honolulu,What is the capital of Hawaii?,geography upper capitals
+st-hi,Which state’s capital is Honolulu?,Hawaii,Which state’s capital is Honolulu?,geography upper capitals
+cap-mt,What is the capital of Montana?,Helena,What is the capital of Montana?,geography upper capitals
+st-mt,Which state’s capital is Helena?,Montana,Which state’s capital is Helena?,geography upper capitals
+cap-id,What is the capital of Idaho?,Boise,What is the capital of Idaho?,geography upper capitals
+st-id,Which state’s capital is Boise?,Idaho,Which state’s capital is Boise?,geography upper capitals
+cap-wa,What is the capital of Washington?,Olympia,What is the capital of Washington?,geography upper capitals
+st-wa,Which state’s capital is Olympia?,Washington,Which state’s capital is Olympia?,geography upper capitals
+cap-or,What is the capital of Oregon?,Salem,What is the capital of Oregon?,geography upper capitals
+st-or,Which state’s capital is Salem?,Oregon,Which state’s capital is Salem?,geography upper capitals
+cap-ak,What is the capital of Alaska?,Juneau,What is the capital of Alaska?,geography upper capitals
+st-ak,Which state’s capital is Juneau?,Alaska,Which state’s capital is Juneau?,geography upper capitals
+dc-nation,What city is the capital of the United States?,"Washington, D.C.",What city is the capital of the United States?,geography upper
+superior,Which Great Lake is largest by area and farthest west?,Superior,Which Great Lake is largest by area and farthest west?,geography upper lakes
+ontario-east,Which Great Lake is farthest east?,Ontario,Which Great Lake is farthest east?,geography upper lakes
+whitney-name,What is the highest peak in the contiguous 48 states?,Mount Whitney,What is the highest peak in the contiguous 48 states?,geography upper mountains
+elbert,"Mount Elbert is a high summit of which western range, in Colorado?",the Rockies,"Mount Elbert is a high summit of which western range, in Colorado?",geography upper mountains
+cascades,Mount Rainier belongs to which Pacific Northwest range?,the Cascades,Mount Rainier belongs to which Pacific Northwest range?,geography upper mountains
+seven-trails,Name the seven historic routes in the week-19 set (Road plus six Trails).,"Cumberland Road, Santa Fe, Mormon, Gila, Old Spanish, California, Oregon",Name the seven historic routes in the week-19 set (Road plus six Trails).,geography upper trails
+five-canals,Name the five canals in the week-20 set.,Erie; Pennsylvania; Chesapeake and Ohio; Ohio and Erie; Miami and Erie,Name the five canals in the week-20 set.,geography upper canals
+seven-regions,Name the seven Native geographic culture areas in the week-21 set.,"Eastern Woodlands, Plains, Plateau, Northwest Coast, California, Great Basin, Southwest",Name the seven Native geographic culture areas in the week-21 set.,geography upper regions
+five-deserts,Name the five deserts in the week-22 set.,"Mojave, Sonoran, Colorado, Painted, Great Salt Lake Desert",Name the five deserts in the week-22 set.,geography upper deserts
+delta,The Mississippi River Delta is chiefly in which state?,Louisiana,The Mississippi River Delta is chiefly in which state?,geography upper features
+death-valley,Death Valley is in which state?,California,Death Valley is in which state?,geography upper features
+gulf,The Gulf of Mexico lies south of which U.S. coast?,the Gulf Coast,The Gulf of Mexico lies south of which U.S. coast?,geography upper features
+okefenokee,Okefenokee Swamp is in Georgia and which other state?,Florida,Okefenokee Swamp is in Georgia and which other state?,geography upper features
+ozark,The Ozark Highlands are in Missouri and which other state?,Arkansas,The Ozark Highlands are in Missouri and which other state?,geography upper features
+olympic,Olympic rain forests are in which state?,Washington,Olympic rain forests are in which state?,geography upper features

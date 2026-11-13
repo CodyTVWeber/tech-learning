@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" role="img" aria-label="United States expedition chart">
+<defs>
+<pattern id="parch" width="8" height="8" patternUnits="userSpaceOnUse">
+<rect width="8" height="8" fill="#efe4c6"/>
+<path d="M0 8L8 0" stroke="#e4d6ae" stroke-width="0.6"/>
+</pattern>
+<filter id="paper" x="-2%" y="-2%" width="104%" height="104%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" result="n"/>
+<feColorMatrix in="n" type="saturate" values="0"/>
+<feComponentTransfer><feFuncA type="table" tableValues="0 0.07"/></feComponentTransfer>
+</filter>
+</defs>
+<rect width="1100" height="720" fill="url(#parch)"/>
+<rect width="1100" height="720" filter="url(#paper)"/>
+<path fill="#d7ecf2" stroke="#7aa3b0" stroke-width="1.2" d="M70 40 C 90 20 980 10 1020 90 C 1040 160 1000 500 920 560 C 820 620 520 640 360 600 C 240 570 80 420 70 260 Z"/>
+<path fill="#cbb98a" stroke="#6a5a38" stroke-width="2" d="M130 70 L 210 55 L 360 48 L 520 58 L 640 70 L 760 90 L 860 70 L 930 50 L 970 90 L 955 130 L 900 150 L 880 175 L 895 200 L 860 230 L 850 255 L 800 250 L 790 300 L 820 330 L 800 370 L 760 390 L 780 430 L 820 500 L 760 530 L 700 470 L 640 500 L 600 470 L 560 500 L 500 470 L 470 520 L 420 500 L 360 470 L 300 430 L 250 380 L 200 360 L 170 300 L 150 230 L 125 170 L 130 110 Z"/>
+<path fill="#cbb98a" stroke="#6a5a38" stroke-width="1.6" d="M70 500 L 150 490 L 230 510 L 250 560 L 200 610 L 90 600 L 60 540 Z"/>
+<ellipse cx="300" cy="560" rx="18" ry="10" fill="#cbb98a" stroke="#6a5a38"/>
+<ellipse cx="328" cy="572" rx="22" ry="12" fill="#cbb98a" stroke="#6a5a38"/>
+<ellipse cx="358" cy="586" rx="14" ry="8" fill="#cbb98a" stroke="#6a5a38"/>
+<ellipse cx="378" cy="598" rx="10" ry="6" fill="#cbb98a" stroke="#6a5a38"/>
+<text x="70" y="488" font-size="11" fill="#5c4a2a" font-family="Trebuchet MS, sans-serif">Alaska inset</text>
+<text x="250" y="540" font-size="11" fill="#5c4a2a" font-family="Trebuchet MS, sans-serif">Hawaii inset</text>
+<ellipse cx="640" cy="150" rx="34" ry="18" fill="#8fb9c9" stroke="#4d7a8a"/>
+<ellipse cx="690" cy="158" rx="22" ry="14" fill="#8fb9c9" stroke="#4d7a8a"/>
+<ellipse cx="600" cy="168" rx="28" ry="12" fill="#8fb9c9" stroke="#4d7a8a"/>
+<ellipse cx="720" cy="175" rx="18" ry="10" fill="#8fb9c9" stroke="#4d7a8a"/>
+<ellipse cx="670" cy="188" rx="20" ry="9" fill="#8fb9c9" stroke="#4d7a8a"/>
+<g fill="none" stroke="#3d6d82" stroke-width="3" stroke-linecap="round" opacity="0.85">
+<path id="river-mississippi" data-feature="mississippi" d="M500 90 C 505 160 510 240 515 300 C 518 360 525 410 520 455"/>
+<path id="river-missouri" data-feature="missouri" d="M280 90 C 340 140 400 200 508 268"/>
+<path id="river-ohio" data-feature="ohio" d="M748 210 C 700 250 660 280 520 300"/>
+<path id="river-arkansas" data-feature="arkansas-river" d="M318 248 C 380 280 450 320 518 348"/>
+<path id="river-stlawrence" data-feature="st-lawrence" d="M690 150 C 760 130 840 120 920 90"/>
+<path id="river-colorado" data-feature="colorado" d="M228 228 C 210 270 200 310 190 350"/>
+<path id="river-rio-grande" data-feature="rio-grande" d="M288 328 C 320 380 350 430 370 470"/>
+<path id="river-columbia" data-feature="columbia" d="M118 78 C 140 100 160 120 118 148"/>
+<path id="river-red" data-feature="red" d="M398 408 C 450 380 500 360 518 348"/>
+</g>
+<ellipse id="feat-great-salt-lake" data-feature="great-salt-lake" cx="228" cy="210" rx="16" ry="10" fill="#9ec3c8" stroke="#4d7a8a"/>
+<g fill="#5c4a2a" stroke="#3a2e1c" stroke-width="1">
+<path id="mtn-white" data-feature="white-mountains" d="M878 100 l12 -22 12 22 z"/>
+<path id="mtn-green" data-feature="green-mountains" d="M848 90 l11 -20 11 20 z"/>
+<path id="mtn-adirondack" data-feature="adirondack" d="M798 120 l12 -22 12 22 z"/>
+<path id="mtn-allegheny" data-feature="allegheny" d="M728 190 l12 -20 12 20 z"/>
+<path id="mtn-blue-ridge" data-feature="blue-ridge" d="M748 330 l14 -24 14 24 z"/>
+<path id="mtn-smoky" data-feature="great-smoky" d="M678 340 l14 -24 14 24 z"/>
+<path id="mtn-mitchell" data-feature="mt-mitchell" d="M758 320 l10 -26 10 26 z"/>
+<path id="mtn-cumberland" data-feature="cumberland" d="M658 310 l12 -18 12 18 z"/>
+<path id="mtn-rockies" data-feature="rockies" d="M278 70 l18 -34 18 34 z"/>
+<path id="mtn-pikes" data-feature="pikes-peak" d="M318 220 l12 -28 12 28 z"/>
+<path id="mtn-elbert" data-feature="mt-elbert" d="M300 210 l12 -30 12 30 z"/>
+<path id="mtn-sierra" data-feature="sierra-nevada" d="M130 230 l16 -32 16 32 z"/>
+<path id="mtn-whitney" data-feature="mt-whitney" d="M118 250 l10 -28 10 28 z"/>
+<path id="mtn-cascades" data-feature="cascades" d="M118 90 l14 -30 14 30 z"/>
+<path id="mtn-rainier" data-feature="mt-rainier" d="M130 70 l10 -26 10 26 z"/>
+<path id="mtn-sthelens" data-feature="mt-st-helens" d="M125 100 l10 -22 10 22 z"/>
+<path id="mtn-denali" data-feature="denali" d="M150 520 l16 -36 16 36 z"/>
+</g>
+<g fill="#d2a46a" fill-opacity="0.45" stroke="#8a6230" stroke-dasharray="3 2">
+<ellipse id="desert-mojave" data-feature="mojave" cx="150" cy="300" rx="28" ry="16"/>
+<ellipse id="desert-sonoran" data-feature="sonoran" cx="190" cy="340" rx="30" ry="16"/>
+<ellipse id="desert-colorado" data-feature="colorado-desert" cx="160" cy="330" rx="18" ry="12"/>
+<ellipse id="desert-painted" data-feature="painted-desert" cx="220" cy="300" rx="22" ry="12"/>
+<ellipse id="desert-gsl" data-feature="great-salt-lake-desert" cx="200" cy="210" rx="24" ry="12"/>
+</g>
+<g transform="translate(1020,80)">
+<circle r="36" fill="#f7edd0" stroke="#8a6230" stroke-width="2"/>
+<path d="M0 -28 L8 0 L0 10 L-8 0 Z" fill="#b33a3a"/>
+<path d="M0 28 L8 0 L0 -10 L-8 0 Z" fill="#2f5d50"/>
+<text y="-40" text-anchor="middle" font-size="12" fill="#5c4a2a" font-family="Trebuchet MS, sans-serif">N</text>
+</g>
+<text x="40" y="36" font-size="18" fill="#5c4a2a" font-family="Palatino, serif" font-weight="700">Expedition Chart of the United States</text>
+<text x="40" y="56" font-size="12" fill="#7a6848" font-family="Trebuchet MS, sans-serif">Schematic navigator chart — original drawing, not a survey map</text>
+<g class="state" id="state-wa" data-abbr="WA" data-name="Washington" data-capital="Olympia" data-region="pacific" transform="translate(118,78)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">WA</text>
+</g>
+<g class="state" id="state-or" data-abbr="OR" data-name="Oregon" data-capital="Salem" data-region="pacific" transform="translate(118,148)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">OR</text>
+</g>
+<g class="state" id="state-ca" data-abbr="CA" data-name="California" data-capital="Sacramento" data-region="pacific" transform="translate(108,268)">
+<ellipse class="state-hit" cx="0" cy="0" rx="50" ry="48" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">CA</text>
+</g>
+<g class="state" id="state-nv" data-abbr="NV" data-name="Nevada" data-capital="Carson City" data-region="mountain" transform="translate(168,228)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NV</text>
+</g>
+<g class="state" id="state-id" data-abbr="ID" data-name="Idaho" data-capital="Boise" data-region="mountain" transform="translate(188,128)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">ID</text>
+</g>
+<g class="state" id="state-mt" data-abbr="MT" data-name="Montana" data-capital="Helena" data-region="mountain" transform="translate(278,78)">
+<ellipse class="state-hit" cx="0" cy="0" rx="48" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MT</text>
+</g>
+<g class="state" id="state-wy" data-abbr="WY" data-name="Wyoming" data-capital="Cheyenne" data-region="mountain" transform="translate(288,168)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">WY</text>
+</g>
+<g class="state" id="state-ut" data-abbr="UT" data-name="Utah" data-capital="Salt Lake City" data-region="mountain" transform="translate(228,228)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">UT</text>
+</g>
+<g class="state" id="state-az" data-abbr="AZ" data-name="Arizona" data-capital="Phoenix" data-region="southwest" transform="translate(208,318)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">AZ</text>
+</g>
+<g class="state" id="state-co" data-abbr="CO" data-name="Colorado" data-capital="Denver" data-region="mountain" transform="translate(318,248)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">CO</text>
+</g>
+<g class="state" id="state-nm" data-abbr="NM" data-name="New Mexico" data-capital="Santa Fe" data-region="southwest" transform="translate(288,328)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NM</text>
+</g>
+<g class="state" id="state-nd" data-abbr="ND" data-name="North Dakota" data-capital="Bismarck" data-region="plains" transform="translate(398,78)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">ND</text>
+</g>
+<g class="state" id="state-sd" data-abbr="SD" data-name="South Dakota" data-capital="Pierre" data-region="plains" transform="translate(398,148)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">SD</text>
+</g>
+<g class="state" id="state-ne" data-abbr="NE" data-name="Nebraska" data-capital="Lincoln" data-region="plains" transform="translate(408,208)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NE</text>
+</g>
+<g class="state" id="state-ks" data-abbr="KS" data-name="Kansas" data-capital="Topeka" data-region="plains" transform="translate(428,268)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">KS</text>
+</g>
+<g class="state" id="state-ok" data-abbr="OK" data-name="Oklahoma" data-capital="Oklahoma City" data-region="south-central" transform="translate(448,328)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">OK</text>
+</g>
+<g class="state" id="state-tx" data-abbr="TX" data-name="Texas" data-capital="Austin" data-region="south-central" transform="translate(398,408)">
+<ellipse class="state-hit" cx="0" cy="0" rx="58" ry="40" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">TX</text>
+</g>
+<g class="state" id="state-mn" data-abbr="MN" data-name="Minnesota" data-capital="St. Paul" data-region="midwest" transform="translate(498,98)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MN</text>
+</g>
+<g class="state" id="state-ia" data-abbr="IA" data-name="Iowa" data-capital="Des Moines" data-region="midwest" transform="translate(498,188)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">IA</text>
+</g>
+<g class="state" id="state-mo" data-abbr="MO" data-name="Missouri" data-capital="Jefferson City" data-region="midwest" transform="translate(508,268)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MO</text>
+</g>
+<g class="state" id="state-ar" data-abbr="AR" data-name="Arkansas" data-capital="Little Rock" data-region="south-central" transform="translate(518,348)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">AR</text>
+</g>
+<g class="state" id="state-la" data-abbr="LA" data-name="Louisiana" data-capital="Baton Rouge" data-region="south-central" transform="translate(518,428)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">LA</text>
+</g>
+<g class="state" id="state-wi" data-abbr="WI" data-name="Wisconsin" data-capital="Madison" data-region="midwest" transform="translate(558,128)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">WI</text>
+</g>
+<g class="state" id="state-il" data-abbr="IL" data-name="Illinois" data-capital="Springfield" data-region="midwest" transform="translate(568,228)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">IL</text>
+</g>
+<g class="state" id="state-ms" data-abbr="MS" data-name="Mississippi" data-capital="Jackson" data-region="southeast" transform="translate(568,398)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MS</text>
+</g>
+<g class="state" id="state-mi" data-abbr="MI" data-name="Michigan" data-capital="Lansing" data-region="midwest" transform="translate(628,128)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MI</text>
+</g>
+<g class="state" id="state-in" data-abbr="IN" data-name="Indiana" data-capital="Indianapolis" data-region="midwest" transform="translate(628,218)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">IN</text>
+</g>
+<g class="state" id="state-ky" data-abbr="KY" data-name="Kentucky" data-capital="Frankfort" data-region="ohio-valley" transform="translate(658,278)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="18" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">KY</text>
+</g>
+<g class="state" id="state-tn" data-abbr="TN" data-name="Tennessee" data-capital="Nashville" data-region="southeast" transform="translate(638,328)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="18" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">TN</text>
+</g>
+<g class="state" id="state-al" data-abbr="AL" data-name="Alabama" data-capital="Montgomery" data-region="southeast" transform="translate(628,398)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">AL</text>
+</g>
+<g class="state" id="state-oh" data-abbr="OH" data-name="Ohio" data-capital="Columbus" data-region="ohio-valley" transform="translate(688,218)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">OH</text>
+</g>
+<g class="state" id="state-ga" data-abbr="GA" data-name="Georgia" data-capital="Atlanta" data-region="southeast" transform="translate(688,398)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">GA</text>
+</g>
+<g class="state" id="state-fl" data-abbr="FL" data-name="Florida" data-capital="Tallahassee" data-region="southeast" transform="translate(748,478)">
+<ellipse class="state-hit" cx="0" cy="0" rx="46" ry="28" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">FL</text>
+</g>
+<g class="state" id="state-wv" data-abbr="WV" data-name="West Virginia" data-capital="Charleston" data-region="appalachia" transform="translate(728,268)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">WV</text>
+</g>
+<g class="state" id="state-va" data-abbr="VA" data-name="Virginia" data-capital="Richmond" data-region="mid-atlantic" transform="translate(778,288)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">VA</text>
+</g>
+<g class="state" id="state-nc" data-abbr="NC" data-name="North Carolina" data-capital="Raleigh" data-region="southeast" transform="translate(778,348)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NC</text>
+</g>
+<g class="state" id="state-sc" data-abbr="SC" data-name="South Carolina" data-capital="Columbia" data-region="southeast" transform="translate(748,388)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">SC</text>
+</g>
+<g class="state" id="state-pa" data-abbr="PA" data-name="Pennsylvania" data-capital="Harrisburg" data-region="mid-atlantic" transform="translate(748,208)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">PA</text>
+</g>
+<g class="state" id="state-ny" data-abbr="NY" data-name="New York" data-capital="Albany" data-region="mid-atlantic" transform="translate(798,148)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NY</text>
+</g>
+<g class="state" id="state-vt" data-abbr="VT" data-name="Vermont" data-capital="Montpelier" data-region="new-england" transform="translate(848,108)">
+<ellipse class="state-hit" cx="0" cy="0" rx="32" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">VT</text>
+</g>
+<g class="state" id="state-nh" data-abbr="NH" data-name="New Hampshire" data-capital="Concord" data-region="new-england" transform="translate(878,118)">
+<ellipse class="state-hit" cx="0" cy="0" rx="32" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NH</text>
+</g>
+<g class="state" id="state-me" data-abbr="ME" data-name="Maine" data-capital="Augusta" data-region="new-england" transform="translate(918,78)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">ME</text>
+</g>
+<g class="state" id="state-ma" data-abbr="MA" data-name="Massachusetts" data-capital="Boston" data-region="new-england" transform="translate(888,158)">
+<ellipse class="state-hit" cx="0" cy="0" rx="36" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MA</text>
+</g>
+<g class="state" id="state-ri" data-abbr="RI" data-name="Rhode Island" data-capital="Providence" data-region="new-england" transform="translate(908,178)">
+<ellipse class="state-hit" cx="0" cy="0" rx="28" ry="18" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">RI</text>
+</g>
+<g class="state" id="state-ct" data-abbr="CT" data-name="Connecticut" data-capital="Hartford" data-region="new-england" transform="translate(868,178)">
+<ellipse class="state-hit" cx="0" cy="0" rx="32" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">CT</text>
+</g>
+<g class="state" id="state-nj" data-abbr="NJ" data-name="New Jersey" data-capital="Trenton" data-region="mid-atlantic" transform="translate(828,208)">
+<ellipse class="state-hit" cx="0" cy="0" rx="32" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">NJ</text>
+</g>
+<g class="state" id="state-de" data-abbr="DE" data-name="Delaware" data-capital="Dover" data-region="mid-atlantic" transform="translate(818,238)">
+<ellipse class="state-hit" cx="0" cy="0" rx="28" ry="18" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">DE</text>
+</g>
+<g class="state" id="state-md" data-abbr="MD" data-name="Maryland" data-capital="Annapolis" data-region="mid-atlantic" transform="translate(798,248)">
+<ellipse class="state-hit" cx="0" cy="0" rx="34" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">MD</text>
+</g>
+<g class="state" id="state-dc" data-abbr="DC" data-name="Washington, D.C." data-capital="Washington" data-region="mid-atlantic" transform="translate(788,268)">
+<ellipse class="state-hit" cx="0" cy="0" rx="30" ry="18" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">DC</text>
+</g>
+<g class="state" id="state-ak" data-abbr="AK" data-name="Alaska" data-capital="Juneau" data-region="pacific" transform="translate(158,548)">
+<ellipse class="state-hit" cx="0" cy="0" rx="54" ry="32" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">AK</text>
+</g>
+<g class="state" id="state-hi" data-abbr="HI" data-name="Hawaii" data-capital="Honolulu" data-region="pacific" transform="translate(318,578)">
+<ellipse class="state-hit" cx="0" cy="0" rx="40" ry="22" fill="#f3e6c4" fill-opacity="0.35" stroke="#6a5a38" stroke-width="1.4"/>
+<text text-anchor="middle" dy="4" font-size="11" font-family="Trebuchet MS, sans-serif" fill="#3a2e1c" font-weight="700">HI</text>
+</g>
+<g id="feature-dots" fill="#b33a3a">
+<g id="feat-grand-canyon" data-feature="grand-canyon" data-label="Grand Canyon" transform="translate(200,300)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-black-hills" data-feature="black-hills" data-label="Black Hills" transform="translate(398,130)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-ozark" data-feature="ozark" data-label="Ozark Highlands" transform="translate(508,310)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-okefenokee" data-feature="okefenokee" data-label="Okefenokee" transform="translate(708,430)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-olympic" data-feature="olympic" data-label="Olympic" transform="translate(100,70)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-niagara" data-feature="niagara" data-label="Niagara Falls" transform="translate(760,150)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-ms-delta" data-feature="ms-delta" data-label="Mississippi Delta" transform="translate(518,455)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-mammoth-cave" data-feature="mammoth-cave" data-label="Mammoth Cave" transform="translate(648,300)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-san-andreas" data-feature="san-andreas" data-label="San Andreas" transform="translate(108,300)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-gulf" data-feature="gulf" data-label="Gulf of Mexico" transform="translate(470,500)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-death-valley" data-feature="death-valley" data-label="Death Valley" transform="translate(140,280)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-chesapeake" data-feature="chesapeake" data-label="Chesapeake Bay" transform="translate(808,268)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-hudson-bay-ny" data-feature="hudson-bay-ny" data-label="Hudson" transform="translate(808,160)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-sf-bay" data-feature="sf-bay" data-label="San Francisco Bay" transform="translate(90,250)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-puget" data-feature="puget" data-label="Puget Sound" transform="translate(118,60)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+<g id="feat-pamlico" data-feature="pamlico" data-label="Pamlico Sound" transform="translate(808,360)"><circle r="5"/><circle r="9" fill="none" stroke="#b33a3a" stroke-width="1"/></g>
+</g>
+</svg>

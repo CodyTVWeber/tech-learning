@@ -1,0 +1,9 @@
+id,prompt,answer,audio_text,tags
+train-rails,What kind of vehicle runs on rails in these notes?,a train,What kind of vehicle runs on rails in these notes?,history baby train
+ticket,What paper does a conductor punch on a railway ride?,a ticket,What paper does a conductor punch on a railway ride?,history baby train
+whistle,What does a locomotive use to make a loud warning sound?,a whistle,What does a locomotive use to make a loud warning sound?,history baby train
+lantern,What light can sit on a dark railway platform?,a lantern,What light can sit on a dark railway platform?,history baby train
+ship,What kind of craft crossed the ocean in the 1492 story?,a wooden ship,What kind of craft crossed the ocean in the 1492 story?,history baby crossing
+rocket,What do astronauts ride into the sky?,a rocket,What do astronauts ride into the sky?,history baby space
+stamp,What do you collect in the railway stamp book?,stamps,What do you collect in the railway stamp book?,history baby reward
+wheels,Which part of a locomotive turns on the rails?,the wheels,Which part of a locomotive turns on the rails?,history baby train

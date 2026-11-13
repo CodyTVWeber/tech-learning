@@ -1,0 +1,10 @@
+id,prompt,answer,audio_text,tags
+boston-ne,Boston is a capital in which U.S. region?,New England,Boston is a capital in which U.S. region?,geography toddler
+albany,What is the capital of New York?,Albany,What is the capital of New York?,geography toddler
+dc,What city is the capital of the United States?,"Washington, D.C.",What city is the capital of the United States?,geography toddler
+florida-water,Florida’s peninsula sticks out into which kind of water?,ocean,Florida’s peninsula sticks out into which kind of water?,geography toddler
+columbus-oh,What is the capital of Ohio?,Columbus,What is the capital of Ohio?,geography toddler
+hawaii-islands,Hawaii is a state made of what?,islands,Hawaii is a state made of what?,geography toddler
+lakes-water,The Great Lakes are huge bodies of what kind of water?,fresh water,The Great Lakes are huge bodies of what kind of water?,geography toddler
+canyon,A canyon is a deep cut in what?,the land,A canyon is a deep cut in what?,geography toddler
+river-move,A river is made of moving what?,water,A river is made of moving what?,geography toddler

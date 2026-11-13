@@ -1,0 +1,40 @@
+{
+  "decks": [
+    {
+      "id": "geography-baby",
+      "file": "geography-baby.apkg",
+      "csv": "geography-baby.csv",
+      "cards": 8
+    },
+    {
+      "id": "geography-toddler",
+      "file": "geography-toddler.apkg",
+      "csv": "geography-toddler.csv",
+      "cards": 9
+    },
+    {
+      "id": "geography-preschool",
+      "file": "geography-preschool.apkg",
+      "csv": "geography-preschool.csv",
+      "cards": 12
+    },
+    {
+      "id": "geography-early",
+      "file": "geography-early.apkg",
+      "csv": "geography-early.csv",
+      "cards": 20
+    },
+    {
+      "id": "geography-primary",
+      "file": "geography-primary.apkg",
+      "csv": "geography-primary.csv",
+      "cards": 34
+    },
+    {
+      "id": "geography-upper",
+      "file": "geography-upper.apkg",
+      "csv": "geography-upper.csv",
+      "cards": 114
+    }
+  ]
+}

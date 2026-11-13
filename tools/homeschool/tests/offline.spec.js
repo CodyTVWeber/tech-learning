@@ -116,7 +116,7 @@ test("missing assets.json does not break a home", async ({ page }) => {
   expect(missingAssets, "home must not GET assets.json for unbuilt apps").toEqual([]);
   expect(errors).toEqual([]);
 
-  await page.goto(BASE + "Joey/play.html?app=history&band=upper", { waitUntil: "load" });
+  await page.goto(BASE + "Joey/play.html?app=presentation&band=upper", { waitUntil: "load" });
   await expect(page.locator("#app-root")).toContainText("not on this device yet");
   expect(missingAssets).toEqual([]);
   expect(errors).toEqual([]);

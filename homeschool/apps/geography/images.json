@@ -1,0 +1,70 @@
+{
+  "app": "geography",
+  "theme": "hot-air balloon expedition",
+  "slots": [
+    {
+      "file": "hero-balloon.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "A hot-air balloon with terracotta, cream, and forest-green stripes over sunlit prairie.",
+      "themeNotes": "Hub hero. Expedition sky, not a cartoon balloon.",
+      "slot": "hero"
+    },
+    {
+      "file": "basket-map.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "View from a wicker balloon basket with a brass compass and folded parchment map on the rim.",
+      "themeNotes": "Basket chrome.",
+      "slot": "basket"
+    },
+    {
+      "file": "aerial-usa.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "High-altitude aerial photograph of continental land, rivers, and coastlines. No labels.",
+      "themeNotes": "Chart companion photo.",
+      "slot": "aerial"
+    },
+    {
+      "file": "river-aerial.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "Aerial view of a wide American river with oxbow bends through farmland.",
+      "themeNotes": "River flights.",
+      "slot": "river"
+    },
+    {
+      "file": "mountains-aerial.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "Aerial view of a snow-capped mountain range and forested valleys.",
+      "themeNotes": "Mountain flights.",
+      "slot": "mountains"
+    },
+    {
+      "file": "desert-aerial.jpg",
+      "width": 1600,
+      "height": 900,
+      "alt": "Aerial view of red-rock desert mesas and dry washes.",
+      "themeNotes": "Desert and canyon flights.",
+      "slot": "desert"
+    },
+    {
+      "file": "lakes-aerial.jpg",
+      "width": 1200,
+      "height": 900,
+      "alt": "Aerial view of large freshwater lakes with forested shores.",
+      "themeNotes": "Great Lakes flight.",
+      "slot": "lakes"
+    },
+    {
+      "file": "us-chart.svg",
+      "width": 1100,
+      "height": 720,
+      "alt": "Original schematic expedition chart of the United States with state marks, rivers, and a compass.",
+      "themeNotes": "Interactive pin chart. Original drawing, not a survey plat.",
+      "slot": "chart"
+    }
+  ]
+}

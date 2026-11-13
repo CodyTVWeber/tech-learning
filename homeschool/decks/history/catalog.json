@@ -1,0 +1,40 @@
+{
+  "decks": [
+    {
+      "id": "history-baby",
+      "file": "history-baby.apkg",
+      "csv": "history-baby.csv",
+      "cards": 8
+    },
+    {
+      "id": "history-toddler",
+      "file": "history-toddler.apkg",
+      "csv": "history-toddler.csv",
+      "cards": 9
+    },
+    {
+      "id": "history-preschool",
+      "file": "history-preschool.apkg",
+      "csv": "history-preschool.csv",
+      "cards": 11
+    },
+    {
+      "id": "history-early",
+      "file": "history-early.apkg",
+      "csv": "history-early.csv",
+      "cards": 22
+    },
+    {
+      "id": "history-primary",
+      "file": "history-primary.apkg",
+      "csv": "history-primary.csv",
+      "cards": 25
+    },
+    {
+      "id": "history-upper",
+      "file": "history-upper.apkg",
+      "csv": "history-upper.csv",
+      "cards": 23
+    }
+  ]
+}
