@@ -11,7 +11,7 @@
   }
 
   function muted() {
-    if (w.HS && typeof w.HS.muted === "function" && w.HS.muted()) return true;
+    if (w.HS && typeof w.HS.muted === "function") return !!w.HS.muted();
     try { if (localStorage.getItem("hs.mute") === "1") return true; } catch (e) { /* ignore */ }
     return false;
   }

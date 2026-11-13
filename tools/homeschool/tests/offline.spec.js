@@ -118,18 +118,22 @@ test("subject marked none shows the quiet home page and prefetches nothing", asy
   });
   await page.goto(BASE + "Shiloh/", { waitUntil: "load" });
   await waitPrecache(page);
-  await expect(page.locator(".hs-empty")).toContainText("Not on this home");
+  await expect(page.locator("h1")).toContainText("Shiloh");
   appHits.length = 0;
   errors.length = 0;
   await page.goto(BASE + "Shiloh/play.html?app=reading&band=baby", { waitUntil: "load" });
-  await expect(page.locator(".hs-empty")).toContainText("Not on this home");
+  await expect(page.locator(".hs-empty")).toContainText(
+    "Not on this home. This is a quiet page for care time."
+  );
   await expect(page.locator("#hs-chrome .hs-banner")).toBeVisible();
   expect(appHits, "reading must not be fetched when the level is none").toEqual([]);
   expect(errors).toEqual([]);
 
   appHits.length = 0;
   await page.goto(BASE + "Joey/play.html?app=movement", { waitUntil: "load" });
-  await expect(page.locator(".hs-empty")).toContainText("Not on this home");
+  await expect(page.locator(".hs-empty")).toContainText(
+    "Not on this home. This is a quiet page for care time."
+  );
   expect(appHits, "movement must not be fetched when the level is none").toEqual([]);
   expect(errors).toEqual([]);
 });
@@ -168,6 +172,45 @@ test("missing assets.json does not break a home", async ({ page }) => {
   await page.goto(BASE + "Joey/play.html?app=presentation&band=upper", { waitUntil: "load" });
   await expect(page.locator("#app-root")).toContainText("not on this device yet");
   expect(missingAssets).toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test("science speaks a prompt inside play.html for a young band", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.__spoken = [];
+    function note(u) {
+      window.__spoken.push(String((u && (u.text || u.utteranceText)) || ""));
+    }
+    if (typeof window.SpeechSynthesisUtterance !== "function") {
+      window.SpeechSynthesisUtterance = function SpeechSynthesisUtterance(text) {
+        this.text = String(text || "");
+      };
+    }
+    const proto = window.SpeechSynthesis && window.SpeechSynthesis.prototype;
+    if (proto && typeof proto.speak === "function") {
+      proto.speak = function (u) { note(u); };
+      proto.cancel = function () {};
+    } else {
+      window.speechSynthesis = {
+        cancel() {},
+        speak(u) { note(u); },
+        getVoices() { return []; },
+        addEventListener() {},
+        removeEventListener() {},
+      };
+    }
+  });
+  const errors = [];
+  onErrors(page, errors);
+  await page.goto(BASE + "Piper/play.html?app=science&band=preschool", { waitUntil: "load" });
+  await page.waitForFunction(
+    () => (window.__spoken || []).some((line) => String(line).length > 8),
+    null,
+    { timeout: 20000 }
+  );
+  const spoken = await page.evaluate(() => (window.__spoken || []).join(" "));
+  expect(spoken.length).toBeGreaterThan(8);
+  expect(spoken).toMatch(/Field expedition/i);
   expect(errors).toEqual([]);
 });
 

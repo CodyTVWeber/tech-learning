@@ -21,7 +21,7 @@ Visible banner (not screen-reader-only): **Untested, awaiting parent test.**
 
 ## Sounds
 
-WebAudio only (page turn, stamp, chirp, drop). Mute honors `hs.mute` and `HS.muted`. Read-aloud uses `speechSynthesis` when present.
+WebAudio only (page turn, stamp, chirp, drop). Mute honors `hs.mute` and `HS.muted()`. Read-aloud uses `HS.speak` inside the learner runner and `speechSynthesis` when the kit speaker is absent. Nest, Meadow, and Garden Path start with read-aloud on. Never cancel speech just to dodge runner layout.
 
 ## Printables (letter, toner-light)
 
@@ -43,7 +43,7 @@ Parent-run Anki. Do not attach any private Cycle 3 recitation pack.
 
 ## Coverage
 
-Cycle 3 science **topic titles** (anatomy/physiology markers 1–12, chemistry 13–19, creation-science 20–24) with original notes and quizzes. Broader sweep: habitats, animals, plants, weather, five senses, simple machines, body. Faith-friendly (God's design). Scripture: KJV only.
+Cycle 3 science **topic titles** (anatomy/physiology markers 1–12, chemistry 13–19, creation-science 20–24) with original notes and quizzes. States of matter is an extra labeled warm-up and is not a week number; atomic number stays week 13. Broader sweep: habitats, animals, plants, weather, five senses, simple machines, body. Faith-friendly (God's design). Scripture: KJV only.
 
 ## Do not
 
