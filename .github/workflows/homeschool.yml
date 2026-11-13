@@ -54,6 +54,7 @@ jobs:
       - name: Privacy scan
         run: python3 tools/homeschool/check_privacy.py
         env:
+          # Optional extra blocked terms. check_privacy.py skips that extra check when unset.
           HS_PRIVACY_TERMS: ${{ secrets.HS_PRIVACY_TERMS }}
       - uses: actions/setup-node@v4
         with:

@@ -1,6 +1,6 @@
 # Homeschool
 
-Static, offline-first learning homes for a Christian family. Served from GitHub Pages at `/tech-learning/homeschool/`.
+Static, offline-first learning homes for a Christian family. GitHub Pages serves this repo from `main` at `/`; this tree is `/homeschool/`.
 
 **Untested, awaiting parent test.**
 
