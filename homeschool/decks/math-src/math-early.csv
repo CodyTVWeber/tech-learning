@@ -1,0 +1,222 @@
+id,prompt,answer,audio_text,tags
+e-f-d4,4 + 4 =,8,4 + 4 =,math early facts
+e-f-d7,7 + 7 =,14,7 + 7 =,math early facts
+e-f-91,9 + 1 =,10,9 + 1 =,math early facts
+e-f-28,2 + 8 =,10,2 + 8 =,math early facts
+e-f-65,6 + 5 =,11,6 + 5 =,math early facts
+e-f-83,8 + 3 =,11,8 + 3 =,math early facts
+e-f-9m4,9 − 4 =,5,9 − 4 =,math early facts
+e-f-12m7,12 − 7 =,5,12 − 7 =,math early facts
+e-f-15m6,15 − 6 =,9,15 − 6 =,math early facts
+e-p-34,What number is 3 tens and 4 ones?,34,What number is 3 tens and 4 ones?,math early place
+e-p-50,What number is 5 tens and 0 ones?,50,What number is 5 tens and 0 ones?,math early place
+e-p-408,40 + 8 =,48,40 + 8 =,math early place
+e-p-27,2 tens and 17 ones bundles to,37,Two tens and seventeen ones. Bundle the extra ten. What number?,math early place
+e-r-275,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,math early regroup
+e-r-467,46 + 7 =,53,46 + 7 =,math early regroup
+e-r-6010,60 − 10 =,50,60 − 10 =,math early regroup
+e-r-358,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,math early regroup
+e-r-29p6,29 + 6 =,35,29 + 6 =,math early regroup
+e-sk-2,"2, 4, 6, 8, 10. Next?",12,"2, 4, 6, 8, 10. Next?",math early skip
+e-sk-5,"5, 10, 15, 20. Next?",25,"5, 10, 15, 20. Next?",math early skip
+e-sk-10,"10, 20, 30, 40. Next?",50,"10, 20, 30, 40. Next?",math early skip
+e-sk-2from14,"Skip by 2s: 14, 16, 18. Next?",20,"Skip by 2s: 14, 16, 18. Next?",math early skip
+e-m-3p,3 pennies are how many cents?,3,3 pennies are how many cents?,math early money
+e-m-nickel,1 nickel is how many cents?,5,1 nickel is how many cents?,math early money
+e-m-dime,1 dime is how many cents?,10,1 dime is how many cents?,math early money
+e-m-2d1n,2 dimes and 1 nickel. How many cents?,25,2 dimes and 1 nickel. How many cents?,math early money
+e-m-4p1n,1 nickel and 4 pennies. How many cents?,9,1 nickel and 4 pennies. How many cents?,math early money
+e-t-3,"Short hand on 3, long hand on 12. The hour is",3:00,"Short hand on 3, long hand on 12. The hour is",math early time
+e-t-6,"Short hand on 6, long hand on 12. The hour is",6:00,"Short hand on 6, long hand on 12. The hour is",math early time
+e-t-9,The clock shows 9:00. The short hand points to,9,The clock shows 9:00. The short hand points to,math early time
+e-t-12,Both hands on 12. The hour is,12:00,Both hands on 12. The hour is,math early time
+e-me-long,A 5-inch rope and a 2-inch rope. Which is longer?,5-inch,A 5-inch rope and a 2-inch rope. Which is longer?,math early measure
+e-me-inch,12 inches make 1,foot,12 inches make 1,math early measure
+e-sh-rect,"Four sides, four square corners. Opposite sides match. This is a",rectangle,"Four sides, four square corners. Opposite sides match. This is a",math early shape
+e-sh-sides,A triangle has this many sides:,3,A triangle has this many sides:,math early shape
+e-st-18,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,15,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,math early story
+e-st-20,A chest has 12 coins. Nell spends 4. How many are left?,8,A chest has 12 coins. Nell spends 4. How many are left?,math early story
+e-st-equal,3 coils of 5 coins. How many coins in all?,15,3 coils of 5 coins. How many coins in all?,math early story
+e-row-34,3 rows of 4 coins. How many?,12,3 rows of 4 coins. How many?,math early rows
+e-row-444,4 + 4 + 4 =,12,4 + 4 + 4 =,math early rows
+e-row-25,2 rows of 5 coins. How many?,10,2 rows of 5 coins. How many?,math early rows
+add-0+0,0 + 0 =,0,0 plus 0.,math early add
+sub-0-0,0 − 0 =,0,0 minus 0.,math early sub
+add-0+1,0 + 1 =,1,0 plus 1.,math early add
+add-0+2,0 + 2 =,2,0 plus 2.,math early add
+add-0+3,0 + 3 =,3,0 plus 3.,math early add
+add-0+4,0 + 4 =,4,0 plus 4.,math early add
+add-0+5,0 + 5 =,5,0 plus 5.,math early add
+add-0+6,0 + 6 =,6,0 plus 6.,math early add
+add-0+7,0 + 7 =,7,0 plus 7.,math early add
+add-0+8,0 + 8 =,8,0 plus 8.,math early add
+add-0+9,0 + 9 =,9,0 plus 9.,math early add
+add-0+10,0 + 10 =,10,0 plus 10.,math early add
+add-1+0,1 + 0 =,1,1 plus 0.,math early add
+sub-1-0,1 − 0 =,1,1 minus 0.,math early sub
+add-1+1,1 + 1 =,2,1 plus 1.,math early add
+sub-1-1,1 − 1 =,0,1 minus 1.,math early sub
+add-1+2,1 + 2 =,3,1 plus 2.,math early add
+add-1+3,1 + 3 =,4,1 plus 3.,math early add
+add-1+4,1 + 4 =,5,1 plus 4.,math early add
+add-1+5,1 + 5 =,6,1 plus 5.,math early add
+add-1+6,1 + 6 =,7,1 plus 6.,math early add
+add-1+7,1 + 7 =,8,1 plus 7.,math early add
+add-1+8,1 + 8 =,9,1 plus 8.,math early add
+add-1+9,1 + 9 =,10,1 plus 9.,math early add
+add-1+10,1 + 10 =,11,1 plus 10.,math early add
+add-2+0,2 + 0 =,2,2 plus 0.,math early add
+sub-2-0,2 − 0 =,2,2 minus 0.,math early sub
+add-2+1,2 + 1 =,3,2 plus 1.,math early add
+sub-2-1,2 − 1 =,1,2 minus 1.,math early sub
+add-2+2,2 + 2 =,4,2 plus 2.,math early add
+sub-2-2,2 − 2 =,0,2 minus 2.,math early sub
+add-2+3,2 + 3 =,5,2 plus 3.,math early add
+add-2+4,2 + 4 =,6,2 plus 4.,math early add
+add-2+5,2 + 5 =,7,2 plus 5.,math early add
+add-2+6,2 + 6 =,8,2 plus 6.,math early add
+add-2+7,2 + 7 =,9,2 plus 7.,math early add
+add-2+9,2 + 9 =,11,2 plus 9.,math early add
+add-2+10,2 + 10 =,12,2 plus 10.,math early add
+add-3+0,3 + 0 =,3,3 plus 0.,math early add
+sub-3-0,3 − 0 =,3,3 minus 0.,math early sub
+add-3+1,3 + 1 =,4,3 plus 1.,math early add
+sub-3-1,3 − 1 =,2,3 minus 1.,math early sub
+add-3+2,3 + 2 =,5,3 plus 2.,math early add
+sub-3-2,3 − 2 =,1,3 minus 2.,math early sub
+add-3+3,3 + 3 =,6,3 plus 3.,math early add
+sub-3-3,3 − 3 =,0,3 minus 3.,math early sub
+add-3+4,3 + 4 =,7,3 plus 4.,math early add
+add-3+5,3 + 5 =,8,3 plus 5.,math early add
+add-3+6,3 + 6 =,9,3 plus 6.,math early add
+add-3+7,3 + 7 =,10,3 plus 7.,math early add
+add-3+8,3 + 8 =,11,3 plus 8.,math early add
+add-3+9,3 + 9 =,12,3 plus 9.,math early add
+add-3+10,3 + 10 =,13,3 plus 10.,math early add
+add-4+0,4 + 0 =,4,4 plus 0.,math early add
+sub-4-0,4 − 0 =,4,4 minus 0.,math early sub
+add-4+1,4 + 1 =,5,4 plus 1.,math early add
+sub-4-1,4 − 1 =,3,4 minus 1.,math early sub
+add-4+2,4 + 2 =,6,4 plus 2.,math early add
+sub-4-2,4 − 2 =,2,4 minus 2.,math early sub
+add-4+3,4 + 3 =,7,4 plus 3.,math early add
+sub-4-3,4 − 3 =,1,4 minus 3.,math early sub
+sub-4-4,4 − 4 =,0,4 minus 4.,math early sub
+add-4+5,4 + 5 =,9,4 plus 5.,math early add
+add-4+6,4 + 6 =,10,4 plus 6.,math early add
+add-4+7,4 + 7 =,11,4 plus 7.,math early add
+add-4+8,4 + 8 =,12,4 plus 8.,math early add
+add-4+9,4 + 9 =,13,4 plus 9.,math early add
+add-4+10,4 + 10 =,14,4 plus 10.,math early add
+add-5+0,5 + 0 =,5,5 plus 0.,math early add
+sub-5-0,5 − 0 =,5,5 minus 0.,math early sub
+add-5+1,5 + 1 =,6,5 plus 1.,math early add
+sub-5-1,5 − 1 =,4,5 minus 1.,math early sub
+add-5+2,5 + 2 =,7,5 plus 2.,math early add
+sub-5-2,5 − 2 =,3,5 minus 2.,math early sub
+add-5+3,5 + 3 =,8,5 plus 3.,math early add
+sub-5-3,5 − 3 =,2,5 minus 3.,math early sub
+add-5+4,5 + 4 =,9,5 plus 4.,math early add
+sub-5-4,5 − 4 =,1,5 minus 4.,math early sub
+add-5+5,5 + 5 =,10,5 plus 5.,math early add
+sub-5-5,5 − 5 =,0,5 minus 5.,math early sub
+add-5+6,5 + 6 =,11,5 plus 6.,math early add
+add-5+7,5 + 7 =,12,5 plus 7.,math early add
+add-5+8,5 + 8 =,13,5 plus 8.,math early add
+add-5+9,5 + 9 =,14,5 plus 9.,math early add
+add-5+10,5 + 10 =,15,5 plus 10.,math early add
+add-6+0,6 + 0 =,6,6 plus 0.,math early add
+sub-6-0,6 − 0 =,6,6 minus 0.,math early sub
+add-6+1,6 + 1 =,7,6 plus 1.,math early add
+sub-6-1,6 − 1 =,5,6 minus 1.,math early sub
+add-6+2,6 + 2 =,8,6 plus 2.,math early add
+sub-6-2,6 − 2 =,4,6 minus 2.,math early sub
+add-6+3,6 + 3 =,9,6 plus 3.,math early add
+sub-6-3,6 − 3 =,3,6 minus 3.,math early sub
+add-6+4,6 + 4 =,10,6 plus 4.,math early add
+sub-6-4,6 − 4 =,2,6 minus 4.,math early sub
+sub-6-5,6 − 5 =,1,6 minus 5.,math early sub
+add-6+6,6 + 6 =,12,6 plus 6.,math early add
+sub-6-6,6 − 6 =,0,6 minus 6.,math early sub
+add-6+7,6 + 7 =,13,6 plus 7.,math early add
+add-6+8,6 + 8 =,14,6 plus 8.,math early add
+add-6+9,6 + 9 =,15,6 plus 9.,math early add
+add-6+10,6 + 10 =,16,6 plus 10.,math early add
+add-7+0,7 + 0 =,7,7 plus 0.,math early add
+sub-7-0,7 − 0 =,7,7 minus 0.,math early sub
+add-7+1,7 + 1 =,8,7 plus 1.,math early add
+sub-7-1,7 − 1 =,6,7 minus 1.,math early sub
+add-7+2,7 + 2 =,9,7 plus 2.,math early add
+sub-7-2,7 − 2 =,5,7 minus 2.,math early sub
+add-7+3,7 + 3 =,10,7 plus 3.,math early add
+sub-7-3,7 − 3 =,4,7 minus 3.,math early sub
+add-7+4,7 + 4 =,11,7 plus 4.,math early add
+sub-7-4,7 − 4 =,3,7 minus 4.,math early sub
+add-7+5,7 + 5 =,12,7 plus 5.,math early add
+sub-7-5,7 − 5 =,2,7 minus 5.,math early sub
+add-7+6,7 + 6 =,13,7 plus 6.,math early add
+sub-7-6,7 − 6 =,1,7 minus 6.,math early sub
+sub-7-7,7 − 7 =,0,7 minus 7.,math early sub
+add-7+8,7 + 8 =,15,7 plus 8.,math early add
+add-7+9,7 + 9 =,16,7 plus 9.,math early add
+add-7+10,7 + 10 =,17,7 plus 10.,math early add
+add-8+0,8 + 0 =,8,8 plus 0.,math early add
+sub-8-0,8 − 0 =,8,8 minus 0.,math early sub
+add-8+1,8 + 1 =,9,8 plus 1.,math early add
+sub-8-1,8 − 1 =,7,8 minus 1.,math early sub
+add-8+2,8 + 2 =,10,8 plus 2.,math early add
+sub-8-2,8 − 2 =,6,8 minus 2.,math early sub
+sub-8-3,8 − 3 =,5,8 minus 3.,math early sub
+add-8+4,8 + 4 =,12,8 plus 4.,math early add
+sub-8-4,8 − 4 =,4,8 minus 4.,math early sub
+add-8+5,8 + 5 =,13,8 plus 5.,math early add
+sub-8-5,8 − 5 =,3,8 minus 5.,math early sub
+add-8+6,8 + 6 =,14,8 plus 6.,math early add
+sub-8-6,8 − 6 =,2,8 minus 6.,math early sub
+add-8+7,8 + 7 =,15,8 plus 7.,math early add
+sub-8-7,8 − 7 =,1,8 minus 7.,math early sub
+add-8+8,8 + 8 =,16,8 plus 8.,math early add
+sub-8-8,8 − 8 =,0,8 minus 8.,math early sub
+add-8+9,8 + 9 =,17,8 plus 9.,math early add
+add-8+10,8 + 10 =,18,8 plus 10.,math early add
+add-9+0,9 + 0 =,9,9 plus 0.,math early add
+sub-9-0,9 − 0 =,9,9 minus 0.,math early sub
+sub-9-1,9 − 1 =,8,9 minus 1.,math early sub
+add-9+2,9 + 2 =,11,9 plus 2.,math early add
+sub-9-2,9 − 2 =,7,9 minus 2.,math early sub
+add-9+3,9 + 3 =,12,9 plus 3.,math early add
+sub-9-3,9 − 3 =,6,9 minus 3.,math early sub
+add-9+4,9 + 4 =,13,9 plus 4.,math early add
+add-9+5,9 + 5 =,14,9 plus 5.,math early add
+sub-9-5,9 − 5 =,4,9 minus 5.,math early sub
+add-9+6,9 + 6 =,15,9 plus 6.,math early add
+sub-9-6,9 − 6 =,3,9 minus 6.,math early sub
+add-9+7,9 + 7 =,16,9 plus 7.,math early add
+sub-9-7,9 − 7 =,2,9 minus 7.,math early sub
+add-9+8,9 + 8 =,17,9 plus 8.,math early add
+sub-9-8,9 − 8 =,1,9 minus 8.,math early sub
+add-9+9,9 + 9 =,18,9 plus 9.,math early add
+sub-9-9,9 − 9 =,0,9 minus 9.,math early sub
+add-9+10,9 + 10 =,19,9 plus 10.,math early add
+add-10+0,10 + 0 =,10,10 plus 0.,math early add
+sub-10-0,10 − 0 =,10,10 minus 0.,math early sub
+add-10+1,10 + 1 =,11,10 plus 1.,math early add
+sub-10-1,10 − 1 =,9,10 minus 1.,math early sub
+add-10+2,10 + 2 =,12,10 plus 2.,math early add
+sub-10-2,10 − 2 =,8,10 minus 2.,math early sub
+add-10+3,10 + 3 =,13,10 plus 3.,math early add
+sub-10-3,10 − 3 =,7,10 minus 3.,math early sub
+add-10+4,10 + 4 =,14,10 plus 4.,math early add
+sub-10-4,10 − 4 =,6,10 minus 4.,math early sub
+add-10+5,10 + 5 =,15,10 plus 5.,math early add
+sub-10-5,10 − 5 =,5,10 minus 5.,math early sub
+add-10+6,10 + 6 =,16,10 plus 6.,math early add
+sub-10-6,10 − 6 =,4,10 minus 6.,math early sub
+add-10+7,10 + 7 =,17,10 plus 7.,math early add
+sub-10-7,10 − 7 =,3,10 minus 7.,math early sub
+add-10+8,10 + 8 =,18,10 plus 8.,math early add
+sub-10-8,10 − 8 =,2,10 minus 8.,math early sub
+add-10+9,10 + 9 =,19,10 plus 9.,math early add
+sub-10-9,10 − 9 =,1,10 minus 9.,math early sub
+add-10+10,10 + 10 =,20,10 plus 10.,math early add
+sub-10-10,10 − 10 =,0,10 minus 10.,math early sub

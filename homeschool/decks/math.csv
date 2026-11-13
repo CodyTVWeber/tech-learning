@@ -1,52 +1,242 @@
 id,prompt,answer,audio_text,tags
-e1,What number is 3 tens and 4 ones?,34,What number is 3 tens and 4 ones?,math early
-e2,What number is 5 tens and 0 ones?,50,What number is 5 tens and 0 ones?,math early
-e3,40 + 8 =,48,40 plus 8.,math early
-e4,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 plus 5. Ones are 12. Bundle a ten. What is the sum?,math early
-e5,46 + 7 =,53,46 plus 7.,math early
-e6,60 − 10 =,50,60 minus 10.,math early
-e7,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 minus 8. Unbundle a ten. What is the difference?,math early
-e8,4 + 4 + 4 =,12,4 plus 4 plus 4.,math early
-p1,"How many coins?
-● ● ● ● ● ●",6,How many coins?,math preschool
-p2,"How many coins?
-● ● ● ● ● ● ● ●",8,How many coins?,math preschool
-p3,"How many coins?
-● ● ● ● ● ● ● ● ● ●",10,How many coins?,math preschool
-p4,3 coins and 2 more. How many?,5,3 coins and 2 more. How many?,math preschool
-p5,4 coins and 3 more. How many?,7,4 coins and 3 more. How many?,math preschool
-p6,6 coins and 4 more. How many?,10,6 coins and 4 more. How many?,math preschool
-p7,5 coins and 5 more. How many?,10,5 coins and 5 more. How many?,math preschool
-p8,7 coins and 2 more. How many?,9,7 coins and 2 more. How many?,math preschool
-m1,3 rows of 4 coins. How many?,12,3 rows of 4 coins. How many?,math primary
-m2,2 rows of 5 coins. How many?,10,2 rows of 5 coins. How many?,math primary
-m3,4 × 6 =,24,4 times 6.,math primary
-m4,5 × 5 =,25,5 times 5.,math primary
-m5,12 coins in crews of 4. How many crews?,3,12 coins in crews of 4. How many crews?,math primary
-m6,18 ÷ 3 =,6,18 divided by 3.,math primary
-m7,"If 7 × 8 = 56, then 56 ÷ 8 =",7,"If 7 times 8 is 56, then 56 divided by 8.",math primary
-m8,9 × 0 =,0,9 times 0.,math primary
-t1,"How many coins?
-●",1,How many coins?,math toddler
-t2,"How many coins?
-● ●",2,How many coins?,math toddler
-t3,"How many coins?
-● ● ●",3,How many coins?,math toddler
-t4,"How many coins?
-● ● ● ●",4,How many coins?,math toddler
-t5,"How many coins?
-● ● ● ● ●",5,How many coins?,math toddler
-t6,"How many coins?
-● ●",2,How many coins?,math toddler
-t7,"How many coins?
-● ● ●",3,How many coins?,math toddler
-t8,"How many coins?
-● ● ● ●",4,How many coins?,math toddler
-u1,1/2 as a decimal is,0.5,One half as a decimal.,math upper
-u2,0.25 as a fraction is,1/4,0.25 as a fraction.,math upper
-u3,50% of 10 is,5,50 percent of 10.,math upper
-u4,3/10 as a decimal is,0.3,3 tenths as a decimal.,math upper
-u5,Line up 1.2 + 0.45. The sum is,1.65,1.2 plus 0.45.,math upper
-u6,Long divide 84 ÷ 4. First: how many 4s in 8?,2,84 divided by 4. How many 4s in 8?,math upper
-u7,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",1,Bring down 4. 4 divided by 4.,math upper
-u8,So 84 ÷ 4 =,21,So 84 divided by 4 equals.,math upper
+b-tide-1,"Tap the coin. How many?
+●",1,Tap the coin. How many?,math baby tide
+b-tide-2,"Tap each coin. How many now?
+● ●",2,Tap each coin. How many now?,math baby tide
+b-tide-3,"Three taps. How many coins?
+● ● ●",3,Three taps. How many coins?,math baby tide
+b-peek-1,"Open the chest. How many coins inside?
+●",1,Open the chest. How many coins inside?,math baby peek
+b-peek-2,"The latch pops. How many coins in this chest?
+● ●",2,The latch pops. How many coins in this chest?,math baby peek
+b-rock-1,"Rock the hull. How many creaks to finish?
+● ● ●",3,Rock the hull. How many creaks to finish?,math baby rock
+e-f-d4,4 + 4 =,8,4 + 4 =,math early facts
+e-f-d7,7 + 7 =,14,7 + 7 =,math early facts
+e-f-91,9 + 1 =,10,9 + 1 =,math early facts
+e-f-28,2 + 8 =,10,2 + 8 =,math early facts
+e-f-65,6 + 5 =,11,6 + 5 =,math early facts
+e-f-83,8 + 3 =,11,8 + 3 =,math early facts
+e-f-9m4,9 − 4 =,5,9 − 4 =,math early facts
+e-f-12m7,12 − 7 =,5,12 − 7 =,math early facts
+e-f-15m6,15 − 6 =,9,15 − 6 =,math early facts
+e-p-34,What number is 3 tens and 4 ones?,34,What number is 3 tens and 4 ones?,math early place
+e-p-50,What number is 5 tens and 0 ones?,50,What number is 5 tens and 0 ones?,math early place
+e-p-408,40 + 8 =,48,40 + 8 =,math early place
+e-p-27,2 tens and 17 ones bundles to,37,Two tens and seventeen ones. Bundle the extra ten. What number?,math early place
+e-r-275,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,math early regroup
+e-r-467,46 + 7 =,53,46 + 7 =,math early regroup
+e-r-6010,60 − 10 =,50,60 − 10 =,math early regroup
+e-r-358,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,math early regroup
+e-r-29p6,29 + 6 =,35,29 + 6 =,math early regroup
+e-sk-2,"2, 4, 6, 8, 10. Next?",12,"2, 4, 6, 8, 10. Next?",math early skip
+e-sk-5,"5, 10, 15, 20. Next?",25,"5, 10, 15, 20. Next?",math early skip
+e-sk-10,"10, 20, 30, 40. Next?",50,"10, 20, 30, 40. Next?",math early skip
+e-sk-2from14,"Skip by 2s: 14, 16, 18. Next?",20,"Skip by 2s: 14, 16, 18. Next?",math early skip
+e-m-3p,3 pennies are how many cents?,3,3 pennies are how many cents?,math early money
+e-m-nickel,1 nickel is how many cents?,5,1 nickel is how many cents?,math early money
+e-m-dime,1 dime is how many cents?,10,1 dime is how many cents?,math early money
+e-m-2d1n,2 dimes and 1 nickel. How many cents?,25,2 dimes and 1 nickel. How many cents?,math early money
+e-m-4p1n,1 nickel and 4 pennies. How many cents?,9,1 nickel and 4 pennies. How many cents?,math early money
+e-t-3,"Short hand on 3, long hand on 12. The hour is",3:00,"Short hand on 3, long hand on 12. The hour is",math early time
+e-t-6,"Short hand on 6, long hand on 12. The hour is",6:00,"Short hand on 6, long hand on 12. The hour is",math early time
+e-t-9,The clock shows 9:00. The short hand points to,9,The clock shows 9:00. The short hand points to,math early time
+e-t-12,Both hands on 12. The hour is,12:00,Both hands on 12. The hour is,math early time
+e-me-long,A 5-inch rope and a 2-inch rope. Which is longer?,5-inch,A 5-inch rope and a 2-inch rope. Which is longer?,math early measure
+e-me-inch,12 inches make 1,foot,12 inches make 1,math early measure
+e-sh-rect,"Four sides, four square corners. Opposite sides match. This is a",rectangle,"Four sides, four square corners. Opposite sides match. This is a",math early shape
+e-sh-sides,A triangle has this many sides:,3,A triangle has this many sides:,math early shape
+e-st-18,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,15,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,math early story
+e-st-20,A chest has 12 coins. Nell spends 4. How many are left?,8,A chest has 12 coins. Nell spends 4. How many are left?,math early story
+e-st-equal,3 coils of 5 coins. How many coins in all?,15,3 coils of 5 coins. How many coins in all?,math early story
+e-row-34,3 rows of 4 coins. How many?,12,3 rows of 4 coins. How many?,math early rows
+e-row-444,4 + 4 + 4 =,12,4 + 4 + 4 =,math early rows
+e-row-25,2 rows of 5 coins. How many?,10,2 rows of 5 coins. How many?,math early rows
+s-c6,"How many coins?
+● ● ● ● ● ●",6,How many coins?,math preschool count
+s-c7,"Count this crate. How many?
+● ● ● ● ● ● ●",7,Count this crate. How many?,math preschool count
+s-c8,"How many coins on this dock?
+● ● ● ● ● ● ● ●",8,How many coins on this dock?,math preschool count
+s-c9,"Nine coins. Which number?
+● ● ● ● ● ● ● ● ●",9,Nine coins. Which number?,math preschool count
+s-c10,"A full ten crate. How many?
+● ● ● ● ● ● ● ● ● ●",10,A full ten crate. How many?,math preschool count
+s-b32,3 coins and 2 more. How many?,5,3 coins and 2 more. How many?,math preschool bond
+s-b43,4 coins and 3 more. How many?,7,4 coins and 3 more. How many?,math preschool bond
+s-b64,6 coins and 4 more. How many?,10,6 coins and 4 more. How many?,math preschool bond
+s-b55,5 coins and 5 more. How many?,10,5 coins and 5 more. How many?,math preschool bond
+s-b72,7 coins and 2 more. How many?,9,7 coins and 2 more. How many?,math preschool bond
+s-b19,1 coin and 9 more. How many?,10,1 coin and 9 more. How many?,math preschool bond
+s-after6,What number comes after 6?,7,What number comes after 6?,math preschool sense
+s-before10,What number comes before 10?,9,What number comes before 10?,math preschool sense
+s-big,"Which number is bigger, 4 or 9?",9,"Which number is bigger, 4 or 9?",math preschool sense
+s-small,"Which number is smaller, 8 or 3?",3,"Which number is smaller, 8 or 3?",math preschool sense
+s-sh-circle,A round porthole is a,circle,"A round porthole is a circle, square, or triangle?",math preschool shape
+s-sh-square,Four equal sides make a,square,Four equal sides make a,math preschool shape
+s-sh-tri,Three sides make a,triangle,Three sides make a,math preschool shape
+s-sk-2,"2, 4, 6, 8. What comes next?",10,"2, 4, 6, 8. What comes next?",math preschool skip
+s-sk-4,"Count by twos: 4, 6, 8. Next?",10,"Count by twos: 4, 6, 8. Next?",math preschool skip
+s-sk-pairs,"Five pairs of coins. How many coins?
+● ● ● ● ● ● ● ● ● ●",10,Five pairs of coins. How many coins in all?,math preschool skip
+m-f-86,"If 8 + 6 = 14, then 14 − 6 =",8,"If 8 + 6 = 14, then 14 − 6 =",math primary facts
+m-f-97,9 + 7 =,16,9 + 7 =,math primary facts
+m-f-13m5,13 − 5 =,8,13 − 5 =,math primary facts
+m-pl-235,"2 hundreds, 3 tens, 5 ones is",235,"2 hundreds, 3 tens, 5 ones is",math primary place
+m-pl-508,"5 hundreds, 0 tens, 8 ones is",508,"5 hundreds, 0 tens, 8 ones is",math primary place
+m-pl-10tens,10 tens make how many hundreds?,1,10 tens make how many hundreds?,math primary place
+m-sk-3,"3, 6, 9, 12. Next?",15,"3, 6, 9, 12. Next?",math primary skip
+m-sk-4,"4, 8, 12, 16. Next?",20,"4, 8, 12, 16. Next?",math primary skip
+m-sk-6,"6, 12, 18, 24. Next?",30,"6, 12, 18, 24. Next?",math primary skip
+m-sk-7,"7, 14, 21, 28. Next?",35,"7, 14, 21, 28. Next?",math primary skip
+m-sk-8,"8, 16, 24, 32. Next?",40,"8, 16, 24, 32. Next?",math primary skip
+m-sk-9,"9, 18, 27, 36. Next?",45,"9, 18, 27, 36. Next?",math primary skip
+m-sk-11,"11, 22, 33, 44. Next?",55,"11, 22, 33, 44. Next?",math primary skip
+m-fr-half,1 of 2 equal shares of a chest is,1/2,1 of 2 equal shares of a chest is,math primary frac
+m-fr-third,1 of 3 equal shares is,1/3,1 of 3 equal shares is,math primary frac
+m-fr-fourth,1 of 4 equal shares is,1/4,1 of 4 equal shares is,math primary frac
+m-fr-2fourths,2 of 4 equal shares is the same as,1/2,2 of 4 equal shares is the same as,math primary frac
+m-mo-q,1 quarter is how many cents?,25,1 quarter is how many cents?,math primary money
+m-mo-4q,4 quarters make how many cents?,100,4 quarters make how many cents?,math primary money
+m-mo-3q1d,3 quarters and 1 dime. How many cents?,85,3 quarters and 1 dime. How many cents?,math primary money
+m-mo-dollar,1 dollar is how many cents?,100,1 dollar is how many cents?,math primary money
+m-t-230,"Short hand past 2, long hand on 6. The time is",2:30,"Short hand past 2, long hand on 6. The time is",math primary time
+m-t-415,"Short hand a little past 4, long hand on 3. The time is",4:15,"Short hand a little past 4, long hand on 3. The time is",math primary time
+m-t-545,"Long hand on 9, short hand near 6. The time is",5:45,"Long hand on 9, short hand near 6. The time is",math primary time
+m-me-12in,12 inches = how many feet?,1,12 inches = how many feet?,math primary measure
+m-me-3ft,3 feet = how many yards?,1,3 feet = how many yards?,math primary measure
+m-me-cup,8 fluid ounces = how many cups?,1,8 fluid ounces = how many cups?,math primary measure
+m-me-pint,2 cups = how many pints?,1,2 cups = how many pints?,math primary measure
+m-sh-per,A rectangle 5 by 3. Perimeter?,16,A rectangle 5 by 3. Perimeter?,math primary shape
+m-sh-sq,A square with side 6. Perimeter?,24,A square with side 6. Perimeter?,math primary shape
+m-st-68,6 crews of 8 sailors. How many sailors?,48,6 crews of 8 sailors. How many sailors?,math primary story
+m-st-369,"36 coins in 9 pouches, equal share. How many each?",4,"36 coins in 9 pouches, equal share. How many each?",math primary story
+m-st-fam,"If 7 × 8 = 56, then 56 ÷ 8 =",7,"If 7 × 8 = 56, then 56 ÷ 8 =",math primary story
+m-mul-0x9,0 × 9 =,0,0 times 9.,math primary times
+m-mul-1x7,1 × 7 =,7,1 times 7.,math primary times
+m-div-7d1,7 ÷ 1 =,7,7 divided by 1.,math primary share
+m-mul-2x2,2 × 2 =,4,2 times 2.,math primary times
+m-div-4d2,4 ÷ 2 =,2,4 divided by 2.,math primary share
+m-mul-2x5,2 × 5 =,10,2 times 5.,math primary times
+m-div-10d2,10 ÷ 2 =,5,10 divided by 2.,math primary share
+m-mul-2x10,2 × 10 =,20,2 times 10.,math primary times
+m-div-20d2,20 ÷ 2 =,10,20 divided by 2.,math primary share
+m-mul-3x3,3 × 3 =,9,3 times 3.,math primary times
+m-div-9d3,9 ÷ 3 =,3,9 divided by 3.,math primary share
+m-mul-3x4,3 × 4 =,12,3 times 4.,math primary times
+m-div-12d3,12 ÷ 3 =,4,12 divided by 3.,math primary share
+m-mul-3x7,3 × 7 =,21,3 times 7.,math primary times
+m-div-21d3,21 ÷ 3 =,7,21 divided by 3.,math primary share
+m-mul-4x4,4 × 4 =,16,4 times 4.,math primary times
+m-div-16d4,16 ÷ 4 =,4,16 divided by 4.,math primary share
+m-mul-4x6,4 × 6 =,24,4 times 6.,math primary times
+m-div-24d4,24 ÷ 4 =,6,24 divided by 4.,math primary share
+m-mul-4x9,4 × 9 =,36,4 times 9.,math primary times
+m-div-36d4,36 ÷ 4 =,9,36 divided by 4.,math primary share
+m-mul-5x5,5 × 5 =,25,5 times 5.,math primary times
+m-div-25d5,25 ÷ 5 =,5,25 divided by 5.,math primary share
+m-mul-5x6,5 × 6 =,30,5 times 6.,math primary times
+m-div-30d5,30 ÷ 5 =,6,30 divided by 5.,math primary share
+m-mul-5x8,5 × 8 =,40,5 times 8.,math primary times
+m-div-40d5,40 ÷ 5 =,8,40 divided by 5.,math primary share
+m-mul-5x12,5 × 12 =,60,5 times 12.,math primary times
+m-div-60d5,60 ÷ 5 =,12,60 divided by 5.,math primary share
+m-mul-6x6,6 × 6 =,36,6 times 6.,math primary times
+m-div-36d6,36 ÷ 6 =,6,36 divided by 6.,math primary share
+m-mul-6x7,6 × 7 =,42,6 times 7.,math primary times
+m-div-42d6,42 ÷ 6 =,7,42 divided by 6.,math primary share
+m-mul-6x8,6 × 8 =,48,6 times 8.,math primary times
+m-div-48d6,48 ÷ 6 =,8,48 divided by 6.,math primary share
+m-mul-7x7,7 × 7 =,49,7 times 7.,math primary times
+m-div-49d7,49 ÷ 7 =,7,49 divided by 7.,math primary share
+m-mul-7x8,7 × 8 =,56,7 times 8.,math primary times
+m-div-56d7,56 ÷ 7 =,8,56 divided by 7.,math primary share
+m-mul-8x8,8 × 8 =,64,8 times 8.,math primary times
+m-div-64d8,64 ÷ 8 =,8,64 divided by 8.,math primary share
+m-mul-8x9,8 × 9 =,72,8 times 9.,math primary times
+m-div-72d8,72 ÷ 8 =,9,72 divided by 8.,math primary share
+m-mul-9x9,9 × 9 =,81,9 times 9.,math primary times
+m-div-81d9,81 ÷ 9 =,9,81 divided by 9.,math primary share
+m-mul-9x12,9 × 12 =,108,9 times 12.,math primary times
+m-div-108d9,108 ÷ 9 =,12,108 divided by 9.,math primary share
+m-mul-10x10,10 × 10 =,100,10 times 10.,math primary times
+m-div-100d10,100 ÷ 10 =,10,100 divided by 10.,math primary share
+m-mul-11x11,11 × 11 =,121,11 times 11.,math primary times
+m-div-121d11,121 ÷ 11 =,11,121 divided by 11.,math primary share
+m-mul-12x8,12 × 8 =,96,12 times 8.,math primary times
+m-div-96d12,96 ÷ 12 =,8,96 divided by 12.,math primary share
+m-mul-12x12,12 × 12 =,144,12 times 12.,math primary times
+m-div-144d12,144 ÷ 12 =,12,144 divided by 12.,math primary share
+t-c1,"How many coins?
+●",1,How many coins?,math toddler count
+t-c2,"How many coins?
+● ●",2,How many coins?,math toddler count
+t-c3,"How many coins?
+● ● ●",3,How many coins?,math toddler count
+t-c4,"How many coins?
+● ● ● ●",4,How many coins?,math toddler count
+t-c5,"How many coins?
+● ● ● ● ●",5,How many coins?,math toddler count
+t-more-41,Which pile has more coins?,4,Left pile has four. Right pile has one. Which pile has more?,math toddler sense
+t-more-25,Which pile has more coins this time?,5,Left pile has two. Right pile has five. Which pile has more?,math toddler sense
+t-few-31,Which pile has fewer coins?,1,Left pile has three. Right pile has one. Which pile has fewer?,math toddler sense
+t-same-22,"Do these piles match, or is one more?",same,Two coins and two coins. Do they match?,math toddler sense
+t-next-1,One more than 1 is,2,One more than 1.,math toddler next
+t-next-3,One more than 3 is,4,One more than 3.,math toddler next
+t-next-4,One more than 4 is,5,One more than 4.,math toddler next
+t-less-5,One less than 5 is,4,One less than 5.,math toddler next
+t-less-2,One less than 2 is,1,One less than 2.,math toddler next
+t-match-1,"Count, then pick the matching number.
+●",1,"Count, then pick the matching number.",math toddler match
+t-match-3,"These coins match which number?
+● ● ●",3,These coins match which number?,math toddler match
+t-match-5,"Stamp the number that matches this pile.
+● ● ● ● ●",5,Stamp the number that matches this pile.,math toddler match
+u-fr-halfdec,1/2 as a decimal is,0.5,1/2 as a decimal is,math upper frac
+u-fr-25,0.25 as a fraction is,1/4,0.25 as a fraction is,math upper frac
+u-fr-50p,50% of 10 is,5,50% of 10 is,math upper frac
+u-fr-3tenth,3/10 as a decimal is,0.3,3/10 as a decimal is,math upper frac
+u-fr-like,1/5 + 2/5 =,3/5,1/5 + 2/5 =,math upper frac
+u-fr-eq,1/2 is equivalent to,2/4,1/2 is equivalent to,math upper frac
+u-fr-of,3/4 of 12 is,9,3/4 of 12 is,math upper frac
+u-fr-mixed,1 1/2 as an improper fraction is,3/2,1 1/2 as an improper fraction is,math upper frac
+u-d-add,Line up 1.2 + 0.45. The sum is,1.65,Line up 1.2 + 0.45. The sum is,math upper dec
+u-d-tenth,7 tenths as a decimal is,0.7,7 tenths as a decimal is,math upper dec
+u-d-hund,0.40 equals how many tenths?,4,0.40 equals how many tenths?,math upper dec
+u-d-pct,0.5 = what percent?,50%,0.5 = what percent?,math upper dec
+u-m-add,$1.50 + $0.25 =,$1.75,$1.50 + $0.25 =,math upper money
+u-m-cents,$2.00 is how many cents?,200,$2.00 is how many cents?,math upper money
+u-m-chg,Pay $5.00 for a $3.25 coil. Change?,$1.75,Pay $5.00 for a $3.25 coil. Change?,math upper money
+u-t-elapse,From 2:00 to 2:45 is how many minutes?,45,From 2:00 to 2:45 is how many minutes?,math upper time
+u-t-hourmin,From 1:10 to 3:10 is how many hours?,2,From 1:10 to 3:10 is how many hours?,math upper time
+u-t-bundle,75 minutes is 1 hour and how many minutes?,15,75 minutes is 1 hour and how many minutes?,math upper time
+u-me-tsp,3 teaspoons = how many tablespoons?,1,3 teaspoons = how many tablespoons?,math upper measure
+u-me-tbsp,2 tablespoons = how many fluid ounces?,1,2 tablespoons = how many fluid ounces?,math upper measure
+u-me-gal,4 quarts = how many gallons?,1,4 quarts = how many gallons?,math upper measure
+u-me-cm,100 centimeters = how many meters?,1,100 centimeters = how many meters?,math upper measure
+u-me-km,1000 meters = how many kilometers?,1,1000 meters = how many kilometers?,math upper measure
+u-me-in,36 inches = how many yards?,1,36 inches = how many yards?,math upper measure
+u-sh-rect,Rectangle 7 by 3. Area?,21,Rectangle 7 by 3. Area?,math upper shape
+u-sh-sq,Square side 5. Area?,25,Square side 5. Area?,math upper shape
+u-sh-tri,"Triangle base 8, height 5. Area?",20,"Triangle base 8, height 5. Area?",math upper shape
+u-sh-circA,Circle r = 2. Area ≈ (π = 3.14),12.56,Circle r = 2. Area ≈ (π = 3.14),math upper shape
+u-sh-circC,Circle r = 2. Circumference ≈ (π = 3.14),12.56,Circle r = 2. Circumference ≈ (π = 3.14),math upper shape
+u-long-howmany,Long divide 84 ÷ 4. First: how many 4s in 8?,2,Long divide 84 ÷ 4. First: how many 4s in 8?,math upper long
+u-long-bring,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",1,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",math upper long
+u-long-84,So 84 ÷ 4 =,21,So 84 ÷ 4 =,math upper long
+u-long-23x4,"23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",9,"23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",math upper long
+u-long-92,So 23 × 4 =,92,So 23 × 4 =,math upper long
+u-law-com,4 × 6 and 6 × 4. Same product?,yes,4 × 6 and 6 × 4. Same product?,math upper laws
+u-law-id,9 × 1 =,9,9 × 1 =,math upper laws
+u-law-zero,9 × 0 =,0,9 × 0 =,math upper laws
+u-law-dist,3 × (5 + 2) = 3×5 + 3×2. That value is,21,3 × (5 + 2) = 3×5 + 3×2. That value is,math upper laws
+u-law-assoc,(2 + 3) + 4 = 2 + (3 + 4). Both equal,9,(2 + 3) + 4 = 2 + (3 + 4). Both equal,math upper laws
+u-sk-13,"13, 26, 39. Next?",52,"13, 26, 39. Next?",math upper skip
+u-sk-14,"14, 28, 42. Next?",56,"14, 28, 42. Next?",math upper skip
+u-sk-15,"15, 30, 45. Next?",60,"15, 30, 45. Next?",math upper skip
+u-sk-sq,"Squares: 1, 4, 9, 16. Next?",25,"Squares: 1, 4, 9, 16. Next?",math upper skip
+u-sk-cu,"Cubes: 1, 8, 27. Next?",64,"Cubes: 1, 8, 27. Next?",math upper skip
+u-st-area,A sail 8 by 5 feet. Area in square feet?,40,A sail 8 by 5 feet. Area in square feet?,math upper story
+u-st-two,3 coils at $2.00 each. Total?,$6.00,3 coils at $2.00 each. Total?,math upper story
+u-mix-paren,(9 + 3) × 2 =,24,(9 + 3) × 2 =,math upper mix
+u-mix-mdas,5 + 2 × 8 =,21,5 + 2 × 8 =,math upper mix

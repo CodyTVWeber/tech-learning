@@ -1,28 +1,522 @@
 {
   "band": "preschool",
   "title": "Make ten",
-  "technique": {
-    "title": "Count on",
-    "audioText": "Hold the bigger number in your head. Count on for each extra coin.",
-    "body": "Hold the bigger number in your head. Count on one for each extra coin. Stop when you have counted them all."
+  "intro": {
+    "body": "Fill crates to ten, count on, and spot shapes. Then finish on paper.",
+    "audioText": "Hold the bigger number. Count on for each extra coin. Ten fills a crate."
   },
   "islands": [
-    { "id": "count", "slot": "island-count", "label": "Coin cay" },
-    { "id": "add", "slot": "island-add", "label": "Add dock" }
+    {
+      "id": "count",
+      "slot": "island-count",
+      "label": "Ten-Coin Cay",
+      "crew": "pip",
+      "chest": "A ten-frame crate",
+      "technique": {
+        "title": "Count to ten",
+        "body": "Point to each coin through ten. Ten fills a crate.",
+        "audioText": "Point to each coin through ten. Ten fills a crate."
+      },
+      "paper": [
+        {
+          "prompt": "Draw a ten-frame. Fill 8. How many empty?"
+        },
+        {
+          "prompt": "Write 6, 7, 8, 9, 10 and draw coins."
+        }
+      ]
+    },
+    {
+      "id": "bond",
+      "slot": "island-add",
+      "label": "Bond Bay",
+      "crew": "reed",
+      "chest": "A pair of dock ropes",
+      "technique": {
+        "title": "Count on",
+        "body": "Hold the bigger number in your head. Count on one for each extra coin.",
+        "audioText": "Hold the bigger number in your head. Count on for each extra coin."
+      },
+      "paper": [
+        {
+          "prompt": "7 + 3 =     (count on from 7)"
+        },
+        {
+          "prompt": "4 + 6 ="
+        },
+        {
+          "prompt": "Draw 5 + 5 as two piles."
+        }
+      ]
+    },
+    {
+      "id": "sense",
+      "slot": "island-sense",
+      "label": "Before-After Spit",
+      "crew": "moss",
+      "chest": "A numbered flag",
+      "technique": {
+        "title": "Before, after, bigger",
+        "body": "After a number is one more. Before is one less. Bigger means farther along the count.",
+        "audioText": "After a number is one more. Before is one less."
+      },
+      "paper": [
+        {
+          "prompt": "Write the number before 8 and the number after 8."
+        },
+        {
+          "prompt": "Circle the bigger number: 6 or 9."
+        }
+      ]
+    },
+    {
+      "id": "shape",
+      "slot": "island-shape",
+      "label": "Shape Atoll",
+      "crew": "cal",
+      "chest": "A round porthole lid",
+      "technique": {
+        "title": "Name the outline",
+        "body": "A circle is round. A square has four equal sides. A triangle has three sides.",
+        "audioText": "A circle is round. A square has four equal sides. A triangle has three sides."
+      },
+      "paper": [
+        {
+          "prompt": "Draw a circle, a square, and a triangle. Label each."
+        }
+      ]
+    },
+    {
+      "id": "skip",
+      "slot": "island-skip",
+      "label": "Pair Wake",
+      "crew": "nell",
+      "chest": "Two coins on a string",
+      "technique": {
+        "title": "Count by twos",
+        "body": "Pair the coins. Skip 2, 4, 6, 8, 10.",
+        "audioText": "Pair the coins. Count by twos: 2, 4, 6, 8, 10."
+      },
+      "paper": [
+        {
+          "prompt": "Write 2, 4, 6, 8, 10. Draw pairs under each."
+        }
+      ]
+    }
   ],
   "items": [
-    { "id": "p1", "prompt": "How many coins?", "audioText": "How many coins?", "count": 6, "answer": "6", "choices": ["5", "6", "7"] },
-    { "id": "p2", "prompt": "How many coins?", "audioText": "How many coins?", "count": 8, "answer": "8", "choices": ["7", "8", "9"] },
-    { "id": "p3", "prompt": "How many coins?", "audioText": "How many coins?", "count": 10, "answer": "10", "choices": ["8", "9", "10"] },
-    { "id": "p4", "prompt": "3 coins and 2 more. How many?", "audioText": "3 coins and 2 more. How many?", "count": 5, "answer": "5", "choices": ["4", "5", "6"], "left": 3, "right": 2 },
-    { "id": "p5", "prompt": "4 coins and 3 more. How many?", "audioText": "4 coins and 3 more. How many?", "count": 7, "answer": "7", "choices": ["6", "7", "8"], "left": 4, "right": 3 },
-    { "id": "p6", "prompt": "6 coins and 4 more. How many?", "audioText": "6 coins and 4 more. How many?", "count": 10, "answer": "10", "choices": ["9", "10", "11"], "left": 6, "right": 4 },
-    { "id": "p7", "prompt": "5 coins and 5 more. How many?", "audioText": "5 coins and 5 more. How many?", "count": 10, "answer": "10", "choices": ["8", "10", "12"], "left": 5, "right": 5 },
-    { "id": "p8", "prompt": "7 coins and 2 more. How many?", "audioText": "7 coins and 2 more. How many?", "count": 9, "answer": "9", "choices": ["8", "9", "10"], "left": 7, "right": 2 }
-  ],
-  "paper": [
-    { "prompt": "7 + 3 =     (count on from 7)" },
-    { "prompt": "Draw a ten-frame. Fill 8. How many empty?" },
-    { "prompt": "4 + 6 =" }
+    {
+      "id": "s-c6",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins?",
+      "audioText": "How many coins?",
+      "answer": "6",
+      "choices": [
+        "6",
+        "5",
+        "7"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "count"
+      ],
+      "count": 6
+    },
+    {
+      "id": "s-c7",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "Count this crate. How many?",
+      "audioText": "Count this crate. How many?",
+      "answer": "7",
+      "choices": [
+        "7",
+        "8",
+        "6"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "count"
+      ],
+      "count": 7
+    },
+    {
+      "id": "s-c8",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins on this dock?",
+      "audioText": "How many coins on this dock?",
+      "answer": "8",
+      "choices": [
+        "8",
+        "7",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "count"
+      ],
+      "count": 8
+    },
+    {
+      "id": "s-c9",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "Nine coins. Which number?",
+      "audioText": "Nine coins. Which number?",
+      "answer": "9",
+      "choices": [
+        "9",
+        "10",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "count"
+      ],
+      "count": 9
+    },
+    {
+      "id": "s-c10",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "A full ten crate. How many?",
+      "audioText": "A full ten crate. How many?",
+      "answer": "10",
+      "choices": [
+        "9",
+        "8",
+        "10"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "count"
+      ],
+      "count": 10
+    },
+    {
+      "id": "s-b32",
+      "island": "bond",
+      "kind": "choice",
+      "prompt": "3 coins and 2 more. How many?",
+      "audioText": "3 coins and 2 more. How many?",
+      "answer": "5",
+      "choices": [
+        "6",
+        "4",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "bond"
+      ],
+      "count": 5,
+      "left": 3,
+      "right": 2
+    },
+    {
+      "id": "s-b43",
+      "island": "bond",
+      "kind": "choice",
+      "prompt": "4 coins and 3 more. How many?",
+      "audioText": "4 coins and 3 more. How many?",
+      "answer": "7",
+      "choices": [
+        "6",
+        "7",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "bond"
+      ],
+      "count": 7,
+      "left": 4,
+      "right": 3
+    },
+    {
+      "id": "s-b64",
+      "island": "bond",
+      "kind": "choice",
+      "prompt": "6 coins and 4 more. How many?",
+      "audioText": "6 coins and 4 more. How many?",
+      "answer": "10",
+      "choices": [
+        "10",
+        "9",
+        "11"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "bond"
+      ],
+      "count": 10,
+      "left": 6,
+      "right": 4
+    },
+    {
+      "id": "s-b55",
+      "island": "bond",
+      "kind": "choice",
+      "prompt": "5 coins and 5 more. How many?",
+      "audioText": "5 coins and 5 more. How many?",
+      "answer": "10",
+      "choices": [
+        "10",
+        "12",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "bond"
+      ],
+      "count": 10,
+      "left": 5,
+      "right": 5
+    },
+    {
+      "id": "s-b72",
+      "island": "bond",
+      "kind": "choice",
+      "prompt": "7 coins and 2 more. How many?",
+      "audioText": "7 coins and 2 more. How many?",
+      "answer": "9",
+      "choices": [
+        "10",
+        "9",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "bond"
+      ],
+      "count": 9,
+      "left": 7,
+      "right": 2
+    },
+    {
+      "id": "s-b19",
+      "island": "bond",
+      "kind": "choice",
+      "prompt": "1 coin and 9 more. How many?",
+      "audioText": "1 coin and 9 more. How many?",
+      "answer": "10",
+      "choices": [
+        "10",
+        "9",
+        "11"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "bond"
+      ],
+      "count": 10,
+      "left": 1,
+      "right": 9
+    },
+    {
+      "id": "s-after6",
+      "island": "sense",
+      "kind": "choice",
+      "prompt": "What number comes after 6?",
+      "audioText": "What number comes after 6?",
+      "answer": "7",
+      "choices": [
+        "7",
+        "8",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "sense"
+      ]
+    },
+    {
+      "id": "s-before10",
+      "island": "sense",
+      "kind": "choice",
+      "prompt": "What number comes before 10?",
+      "audioText": "What number comes before 10?",
+      "answer": "9",
+      "choices": [
+        "8",
+        "9",
+        "11"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "sense"
+      ]
+    },
+    {
+      "id": "s-big",
+      "island": "sense",
+      "kind": "choice",
+      "prompt": "Which number is bigger, 4 or 9?",
+      "audioText": "Which number is bigger, 4 or 9?",
+      "answer": "9",
+      "choices": [
+        "9",
+        "5",
+        "4"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "sense"
+      ]
+    },
+    {
+      "id": "s-small",
+      "island": "sense",
+      "kind": "choice",
+      "prompt": "Which number is smaller, 8 or 3?",
+      "audioText": "Which number is smaller, 8 or 3?",
+      "answer": "3",
+      "choices": [
+        "3",
+        "5",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "sense"
+      ]
+    },
+    {
+      "id": "s-sh-circle",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "A round porthole is a",
+      "audioText": "A round porthole is a circle, square, or triangle?",
+      "answer": "circle",
+      "choices": [
+        "circle",
+        "triangle",
+        "square"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "shape"
+      ]
+    },
+    {
+      "id": "s-sh-square",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Four equal sides make a",
+      "audioText": "Four equal sides make a",
+      "answer": "square",
+      "choices": [
+        "square",
+        "circle",
+        "triangle"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "shape"
+      ]
+    },
+    {
+      "id": "s-sh-tri",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Three sides make a",
+      "audioText": "Three sides make a",
+      "answer": "triangle",
+      "choices": [
+        "triangle",
+        "circle",
+        "square"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "shape"
+      ]
+    },
+    {
+      "id": "s-sk-2",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "2, 4, 6, 8. What comes next?",
+      "audioText": "2, 4, 6, 8. What comes next?",
+      "answer": "10",
+      "choices": [
+        "9",
+        "10",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "skip"
+      ],
+      "seq": [
+        2,
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "s-sk-4",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "Count by twos: 4, 6, 8. Next?",
+      "audioText": "Count by twos: 4, 6, 8. Next?",
+      "answer": "10",
+      "choices": [
+        "9",
+        "10",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "skip"
+      ],
+      "seq": [
+        4,
+        6,
+        8
+      ]
+    },
+    {
+      "id": "s-sk-pairs",
+      "island": "skip",
+      "kind": "choice",
+      "prompt": "Five pairs of coins. How many coins?",
+      "audioText": "Five pairs of coins. How many coins in all?",
+      "answer": "10",
+      "choices": [
+        "10",
+        "8",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "preschool",
+        "skip"
+      ],
+      "count": 10
+    }
   ]
 }

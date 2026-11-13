@@ -1,24 +1,420 @@
 {
   "band": "toddler",
   "title": "Count the coins",
-  "technique": {
-    "title": "Point and say",
-    "audioText": "Point to each coin. Say one number for each. The last number you say is how many.",
-    "body": "Point to each coin. Say one number for each. The last number you say is how many."
+  "intro": {
+    "body": "Sail Coin Cay, then More Shoal. Point, say, and match. Untested, awaiting parent test.",
+    "audioText": "Point to each coin. The last number you say is how many."
   },
-  "islands": [{ "id": "count", "slot": "island-count", "label": "Coin cay" }],
-  "items": [
-    { "id": "t1", "prompt": "How many coins?", "audioText": "How many coins?", "count": 1, "answer": "1", "choices": ["1", "2", "3"] },
-    { "id": "t2", "prompt": "How many coins?", "audioText": "How many coins?", "count": 2, "answer": "2", "choices": ["1", "2", "3"] },
-    { "id": "t3", "prompt": "How many coins?", "audioText": "How many coins?", "count": 3, "answer": "3", "choices": ["2", "3", "4"] },
-    { "id": "t4", "prompt": "How many coins?", "audioText": "How many coins?", "count": 4, "answer": "4", "choices": ["3", "4", "5"] },
-    { "id": "t5", "prompt": "How many coins?", "audioText": "How many coins?", "count": 5, "answer": "5", "choices": ["3", "4", "5"] },
-    { "id": "t6", "prompt": "How many coins?", "audioText": "How many coins?", "count": 2, "answer": "2", "choices": ["2", "4", "5"] },
-    { "id": "t7", "prompt": "How many coins?", "audioText": "How many coins?", "count": 3, "answer": "3", "choices": ["1", "3", "5"] },
-    { "id": "t8", "prompt": "How many coins?", "audioText": "How many coins?", "count": 4, "answer": "4", "choices": ["2", "4", "5"] }
+  "islands": [
+    {
+      "id": "count",
+      "slot": "island-count",
+      "label": "Coin Cay",
+      "crew": "pip",
+      "chest": "Five stamped coins",
+      "technique": {
+        "title": "Point and say",
+        "body": "Point to each coin. Say one number for each. The last number you say is how many.",
+        "audioText": "Point to each coin. Say one number for each. The last number you say is how many."
+      },
+      "paper": [
+        {
+          "prompt": "Draw 3 coins. Write the number."
+        },
+        {
+          "prompt": "Draw 5 coins. Write the number."
+        }
+      ]
+    },
+    {
+      "id": "sense",
+      "slot": "island-sense",
+      "label": "More Shoal",
+      "crew": "reed",
+      "chest": "A heavier pouch",
+      "technique": {
+        "title": "Look which pile is more",
+        "body": "Look at both piles. The pile with more coins is the bigger group. Same means they match.",
+        "audioText": "Look at both piles. Which has more coins? Same means they match."
+      },
+      "paper": [
+        {
+          "prompt": "Draw 4 coins and 2 coins. Circle the pile that has more."
+        },
+        {
+          "prompt": "Draw two piles of 3. Write same."
+        }
+      ]
+    },
+    {
+      "id": "next",
+      "slot": "island-add",
+      "label": "One-More Reef",
+      "crew": "moss",
+      "chest": "A spare coil of rope",
+      "technique": {
+        "title": "One more, one less",
+        "body": "One more means add one coin. One less means take one coin away.",
+        "audioText": "One more means add one coin. One less means take one coin away."
+      },
+      "paper": [
+        {
+          "prompt": "Draw 4 coins. Draw one more. Write the new number."
+        },
+        {
+          "prompt": "Draw 3 coins. Cross one out. Write how many are left."
+        }
+      ]
+    },
+    {
+      "id": "match",
+      "slot": "island-place",
+      "label": "Match Key",
+      "crew": "nell",
+      "chest": "A number stamp",
+      "technique": {
+        "title": "Match the number to the coins",
+        "body": "Count the coins. Find the number that matches that count.",
+        "audioText": "Count the coins. Find the number that matches."
+      },
+      "paper": [
+        {
+          "prompt": "Write 1, 2, 3, 4, 5. Draw that many coins under each."
+        }
+      ]
+    }
   ],
-  "paper": [
-    { "prompt": "Draw 3 coins. Write the number." },
-    { "prompt": "Draw 5 coins. Write the number." }
+  "items": [
+    {
+      "id": "t-c1",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins?",
+      "audioText": "How many coins?",
+      "answer": "1",
+      "choices": [
+        "3",
+        "2",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "count"
+      ],
+      "count": 1
+    },
+    {
+      "id": "t-c2",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins?",
+      "audioText": "How many coins?",
+      "answer": "2",
+      "choices": [
+        "2",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "count"
+      ],
+      "count": 2
+    },
+    {
+      "id": "t-c3",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins?",
+      "audioText": "How many coins?",
+      "answer": "3",
+      "choices": [
+        "4",
+        "2",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "count"
+      ],
+      "count": 3
+    },
+    {
+      "id": "t-c4",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins?",
+      "audioText": "How many coins?",
+      "answer": "4",
+      "choices": [
+        "3",
+        "4",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "count"
+      ],
+      "count": 4
+    },
+    {
+      "id": "t-c5",
+      "island": "count",
+      "kind": "choice",
+      "prompt": "How many coins?",
+      "audioText": "How many coins?",
+      "answer": "5",
+      "choices": [
+        "5",
+        "4",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "count"
+      ],
+      "count": 5
+    },
+    {
+      "id": "t-more-41",
+      "island": "sense",
+      "kind": "piles",
+      "prompt": "Which pile has more coins?",
+      "audioText": "Left pile has four. Right pile has one. Which pile has more?",
+      "answer": "4",
+      "choices": [
+        "4",
+        "2",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "sense"
+      ],
+      "left": 4,
+      "right": 1,
+      "ask": "more"
+    },
+    {
+      "id": "t-more-25",
+      "island": "sense",
+      "kind": "piles",
+      "prompt": "Which pile has more coins this time?",
+      "audioText": "Left pile has two. Right pile has five. Which pile has more?",
+      "answer": "5",
+      "choices": [
+        "2",
+        "5",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "sense"
+      ],
+      "left": 2,
+      "right": 5,
+      "ask": "more"
+    },
+    {
+      "id": "t-few-31",
+      "island": "sense",
+      "kind": "piles",
+      "prompt": "Which pile has fewer coins?",
+      "audioText": "Left pile has three. Right pile has one. Which pile has fewer?",
+      "answer": "1",
+      "choices": [
+        "3",
+        "1",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "sense"
+      ],
+      "left": 3,
+      "right": 1,
+      "ask": "fewer"
+    },
+    {
+      "id": "t-same-22",
+      "island": "sense",
+      "kind": "piles",
+      "prompt": "Do these piles match, or is one more?",
+      "audioText": "Two coins and two coins. Do they match?",
+      "answer": "same",
+      "choices": [
+        "more",
+        "same",
+        "fewer"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "sense"
+      ],
+      "left": 2,
+      "right": 2,
+      "ask": "same"
+    },
+    {
+      "id": "t-next-1",
+      "island": "next",
+      "kind": "choice",
+      "prompt": "One more than 1 is",
+      "audioText": "One more than 1.",
+      "answer": "2",
+      "choices": [
+        "1",
+        "3",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "next"
+      ],
+      "count": 1
+    },
+    {
+      "id": "t-next-3",
+      "island": "next",
+      "kind": "choice",
+      "prompt": "One more than 3 is",
+      "audioText": "One more than 3.",
+      "answer": "4",
+      "choices": [
+        "5",
+        "4",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "next"
+      ],
+      "count": 3
+    },
+    {
+      "id": "t-next-4",
+      "island": "next",
+      "kind": "choice",
+      "prompt": "One more than 4 is",
+      "audioText": "One more than 4.",
+      "answer": "5",
+      "choices": [
+        "4",
+        "5",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "next"
+      ],
+      "count": 4
+    },
+    {
+      "id": "t-less-5",
+      "island": "next",
+      "kind": "choice",
+      "prompt": "One less than 5 is",
+      "audioText": "One less than 5.",
+      "answer": "4",
+      "choices": [
+        "3",
+        "4",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "next"
+      ],
+      "count": 5
+    },
+    {
+      "id": "t-less-2",
+      "island": "next",
+      "kind": "choice",
+      "prompt": "One less than 2 is",
+      "audioText": "One less than 2.",
+      "answer": "1",
+      "choices": [
+        "2",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "next"
+      ],
+      "count": 2
+    },
+    {
+      "id": "t-match-1",
+      "island": "match",
+      "kind": "choice",
+      "prompt": "Count, then pick the matching number.",
+      "audioText": "Count, then pick the matching number.",
+      "answer": "1",
+      "choices": [
+        "4",
+        "2",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "match"
+      ],
+      "count": 1
+    },
+    {
+      "id": "t-match-3",
+      "island": "match",
+      "kind": "choice",
+      "prompt": "These coins match which number?",
+      "audioText": "These coins match which number?",
+      "answer": "3",
+      "choices": [
+        "3",
+        "2",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "match"
+      ],
+      "count": 3
+    },
+    {
+      "id": "t-match-5",
+      "island": "match",
+      "kind": "choice",
+      "prompt": "Stamp the number that matches this pile.",
+      "audioText": "Stamp the number that matches this pile.",
+      "answer": "5",
+      "choices": [
+        "5",
+        "4",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "toddler",
+        "match"
+      ],
+      "count": 5
+    }
   ]
 }

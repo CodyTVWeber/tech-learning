@@ -1,0 +1,13 @@
+id,prompt,answer,audio_text,tags
+b-tide-1,"Tap the coin. How many?
+●",1,Tap the coin. How many?,math baby tide
+b-tide-2,"Tap each coin. How many now?
+● ●",2,Tap each coin. How many now?,math baby tide
+b-tide-3,"Three taps. How many coins?
+● ● ●",3,Three taps. How many coins?,math baby tide
+b-peek-1,"Open the chest. How many coins inside?
+●",1,Open the chest. How many coins inside?,math baby peek
+b-peek-2,"The latch pops. How many coins in this chest?
+● ●",2,The latch pops. How many coins in this chest?,math baby peek
+b-rock-1,"Rock the hull. How many creaks to finish?
+● ● ●",3,Rock the hull. How many creaks to finish?,math baby rock

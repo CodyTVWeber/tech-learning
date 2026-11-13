@@ -51,12 +51,84 @@
       "slot": "island-share"
     },
     {
+      "file": "island-skip.png",
+      "width": 320,
+      "height": 240,
+      "alt": "A wake of evenly spaced buoys leading to an island.",
+      "themeNotes": "Skip counting.",
+      "slot": "island-skip"
+    },
+    {
+      "file": "island-money.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An island dock with a brass-bound coin purse.",
+      "themeNotes": "Money and cents.",
+      "slot": "island-money"
+    },
+    {
+      "file": "island-time.png",
+      "width": 320,
+      "height": 240,
+      "alt": "A reef with a brass ship clock on a post.",
+      "themeNotes": "Telling time.",
+      "slot": "island-time"
+    },
+    {
+      "file": "island-measure.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An island with a coiled measured rope and a cup.",
+      "themeNotes": "Measurement.",
+      "slot": "island-measure"
+    },
+    {
+      "file": "island-shape.png",
+      "width": 320,
+      "height": 240,
+      "alt": "An atoll whose sandbars form a triangle, square, and circle.",
+      "themeNotes": "Geometry.",
+      "slot": "island-shape"
+    },
+    {
+      "file": "island-story.png",
+      "width": 320,
+      "height": 240,
+      "alt": "A quiet inlet with a ship log open on a crate.",
+      "themeNotes": "Word problems.",
+      "slot": "island-story"
+    },
+    {
+      "file": "island-long.png",
+      "width": 320,
+      "height": 240,
+      "alt": "A harbor desk with columns of figures on paper.",
+      "themeNotes": "Long multiplication and division.",
+      "slot": "island-long"
+    },
+    {
+      "file": "island-sense.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Two sand spits, one with more crates than the other.",
+      "themeNotes": "Number sense, more and fewer.",
+      "slot": "island-sense"
+    },
+    {
       "file": "chest.png",
       "width": 400,
       "height": 300,
       "alt": "A closed wooden treasure chest with brass bands.",
       "themeNotes": "Reward. Opens conceptually via CSS; file is the closed chest.",
       "slot": "chest"
+    },
+    {
+      "file": "chest-open.png",
+      "width": 400,
+      "height": 300,
+      "alt": "An open wooden chest showing stacked brass coins. No skulls.",
+      "themeNotes": "Opened chest after an island is finished.",
+      "slot": "chest-open"
     },
     {
       "file": "coin.png",
@@ -81,6 +153,118 @@
       "alt": "A ship desk with blank paper, pencil, and a brass ruler.",
       "themeNotes": "Now-do-this-on-paper screen.",
       "slot": "paper"
+    },
+    {
+      "file": "compass.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A brass compass on weathered wood.",
+      "themeNotes": "Chart decoration.",
+      "slot": "compass"
+    },
+    {
+      "file": "flag.png",
+      "width": 320,
+      "height": 200,
+      "alt": "A plain canvas ship flag with a brass sun stamp. No skulls.",
+      "themeNotes": "Pennant for skip sequences.",
+      "slot": "flag"
+    },
+    {
+      "file": "map-chart.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A nautical chart of islands and a dotted wake. No writing of copyrighted maps.",
+      "themeNotes": "Optional chart texture.",
+      "slot": "map-chart"
+    },
+    {
+      "file": "crew-pip.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A young lookout in a canvas hat, daylight portrait. No skulls.",
+      "themeNotes": "Crew porthole: Pip.",
+      "slot": "crew-pip"
+    },
+    {
+      "file": "crew-reed.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A bosun with a coil of rope over one shoulder.",
+      "themeNotes": "Crew porthole: Reed.",
+      "slot": "crew-reed"
+    },
+    {
+      "file": "crew-moss.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A ship cook beside a brass kettle.",
+      "themeNotes": "Crew porthole: Moss.",
+      "slot": "crew-moss"
+    },
+    {
+      "file": "crew-cal.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A chart-keeper with a brass ruler.",
+      "themeNotes": "Crew porthole: Cal.",
+      "slot": "crew-cal"
+    },
+    {
+      "file": "crew-nell.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A purse-keeper with a small coin bag.",
+      "themeNotes": "Crew porthole: Nell.",
+      "slot": "crew-nell"
+    },
+    {
+      "file": "crew-kit.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A cabin hand holding a lantern.",
+      "themeNotes": "Crew porthole: Kit.",
+      "slot": "crew-kit"
+    },
+    {
+      "file": "crew-bram.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A rigger beside taut lines.",
+      "themeNotes": "Crew porthole: Bram.",
+      "slot": "crew-bram"
+    },
+    {
+      "file": "crew-oat.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A carpenter with a wooden hatch square.",
+      "themeNotes": "Crew porthole: Oat.",
+      "slot": "crew-oat"
+    },
+    {
+      "file": "crew-wren.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A helms-hand at a wooden wheel.",
+      "themeNotes": "Crew porthole: Wren.",
+      "slot": "crew-wren"
+    },
+    {
+      "file": "crew-sol.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A navigator with a brass compass.",
+      "themeNotes": "Crew porthole: Sol.",
+      "slot": "crew-sol"
+    },
+    {
+      "file": "crew-pike.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A quartermaster beside stacked crates.",
+      "themeNotes": "Crew porthole: Pike.",
+      "slot": "crew-pike"
     }
   ]
 }
