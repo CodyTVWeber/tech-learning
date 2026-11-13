@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img">
+<defs>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse">
+    <path d="M0 6 L6 0" stroke="#241c12" stroke-width="0.45" opacity="0.18"/>
+  </pattern>
+  <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+    <circle cx="3" cy="7" r="0.6" fill="#241c12" opacity="0.08"/>
+    <circle cx="22" cy="18" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="37" cy="9" r="0.7" fill="#241c12" opacity="0.06"/>
+    <circle cx="11" cy="33" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="41" cy="39" r="0.6" fill="#241c12" opacity="0.08"/>
+  </pattern>
+  <pattern id="rule" width="100" height="28" patternUnits="userSpaceOnUse">
+    <path d="M0 27 H100" stroke="#241c12" stroke-width="0.4" opacity="0.12"/>
+  </pattern>
+</defs>
+<rect width="600" height="400" fill="#f4ead4"/>
+<rect width="600" height="400" fill="url(#grain)"/>
+
+    <ellipse cx="300" cy="260" rx="180" ry="50" fill="#3d5a3a" opacity="0.35"/>
+    <path d="M140 260 q 6 -44 0 -72 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M152 260 q 6 -56 0 -84 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M164 260 q 6 -51 0 -73 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M176 260 q 6 -46 0 -85 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M188 260 q 6 -41 0 -74 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M200 260 q 6 -53 0 -86 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M212 260 q 6 -48 0 -75 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M224 260 q 6 -43 0 -87 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M236 260 q 6 -55 0 -76 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M248 260 q 6 -50 0 -88 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M260 260 q 6 -45 0 -77 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M272 260 q 6 -40 0 -89 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M284 260 q 6 -52 0 -78 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M296 260 q 6 -47 0 -90 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M308 260 q 6 -42 0 -79 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M320 260 q 6 -54 0 -91 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M332 260 q 6 -49 0 -80 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M344 260 q 6 -44 0 -92 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M356 260 q 6 -56 0 -81 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M368 260 q 6 -51 0 -70 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M380 260 q 6 -46 0 -82 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M392 260 q 6 -41 0 -71 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M404 260 q 6 -53 0 -83 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M416 260 q 6 -48 0 -72 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M428 260 q 6 -43 0 -84 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M440 260 q 6 -55 0 -73 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/><path d="M452 260 q 6 -50 0 -85 q 8 10 2 30" fill="none" stroke="#3d5a3a" stroke-width="2"/>
+    <text x="28" y="38" font-family="Georgia, serif" font-size="15" letter-spacing="2.4" fill="#241c12">BRYOPHYTA  ·  MOSS</text>
+    <text x="28" y="372" font-family="Georgia, serif" font-size="11" letter-spacing="2.4" fill="#241c12">No true roots · damp stone</text>
+    
+<rect x="8" y="8" width="584" height="384" fill="none" stroke="#241c12" stroke-width="2.2"/>
+<rect x="14" y="14" width="572" height="372" fill="none" stroke="#241c12" stroke-width="0.6" opacity="0.5"/>
+</svg>

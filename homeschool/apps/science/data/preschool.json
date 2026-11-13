@@ -1,0 +1,391 @@
+{
+  "band": "preschool",
+  "subject": "science",
+  "items": [
+    {
+      "id": "preschool-1",
+      "prompt": "Stacked trees, shade, and a creek terrace make which habitat?",
+      "answer": "A woodland / forest",
+      "audioText": "Homes in layers.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-2",
+      "prompt": "Open grass and wild bloom make which habitat?",
+      "answer": "A meadow",
+      "audioText": "Bees at work.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-3",
+      "prompt": "Still water, lily pads, and hopping amphibians make which habitat?",
+      "answer": "A pond",
+      "audioText": "Tadpoles here.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-4",
+      "prompt": "Beds, bean poles, and a kitchen path make which habitat?",
+      "answer": "A garden",
+      "audioText": "We plant; the seed already holds a plan.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-5",
+      "prompt": "Tide line, empty spiral houses, and gulls make which habitat?",
+      "answer": "A shore",
+      "audioText": "Land and water trade places.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-6",
+      "prompt": "A doorstep, shade tree, and feeder make which habitat?",
+      "answer": "A yard",
+      "audioText": "A small expedition.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-7",
+      "prompt": "Moving water over stones is which habitat?",
+      "answer": "A stream",
+      "audioText": "Some animals are built for current.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-8",
+      "prompt": "Heaped white piles and swallows belong to which habitat?",
+      "answer": "The open sky",
+      "audioText": "A weather workshop.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-9",
+      "prompt": "Which plant part drinks from the soil and also anchors?",
+      "answer": "The root",
+      "audioText": "Drinks and holds.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-10",
+      "prompt": "Which plant part catches light to make food?",
+      "answer": "The leaf",
+      "audioText": "A living light-catcher.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-11",
+      "prompt": "Which plant part often invites a bee?",
+      "answer": "The flower",
+      "audioText": "Lock and key with pollinators.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-12",
+      "prompt": "Which plant part holds a baby plant and its lunch?",
+      "answer": "The seed",
+      "audioText": "The plan is already in it.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-13",
+      "prompt": "A stem's main jobs are to hold the plant up and to\u2026",
+      "answer": "Carry water (and food)",
+      "audioText": "Tubes inside.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-14",
+      "prompt": "A green cushion on a damp stone, with no true tree-roots, is often\u2026",
+      "answer": "Moss",
+      "audioText": "It drinks through its body.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-15",
+      "prompt": "Ferns make no blossoms. They raise dust-like\u2026",
+      "answer": "Spores",
+      "audioText": "On the underside of a frond.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-16",
+      "prompt": "A see-saw is which simple machine?",
+      "answer": "A lever",
+      "audioText": "Bar plus fulcrum.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-17",
+      "prompt": "A slide is which simple machine?",
+      "answer": "An inclined plane (ramp)",
+      "audioText": "Work spread over a longer path.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-18",
+      "prompt": "A rolling wagon uses which simple machine pair?",
+      "answer": "Wheel and axle",
+      "audioText": "When the wheel turns, the axle turns.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-19",
+      "prompt": "An axe head is which simple machine?",
+      "answer": "A wedge",
+      "audioText": "Two ramps back to back.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-20",
+      "prompt": "A jar lid that holds tight with a twist is which simple machine?",
+      "answer": "A screw",
+      "audioText": "A ramp wrapped around a post.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-21",
+      "prompt": "A flag that rises when you pull down uses which simple machine?",
+      "answer": "A pulley",
+      "audioText": "A wheel that holds a rope.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-22",
+      "prompt": "Your jaw lifting a bite works like which simple machine?",
+      "answer": "A lever",
+      "audioText": "Teeth are the load.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-23",
+      "prompt": "A front tooth cutting food is which simple machine?",
+      "answer": "A wedge",
+      "audioText": "Design in the body.",
+      "tags": [
+        "preschool",
+        "machine",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-24",
+      "prompt": "A dense pebble in a bowl of water usually does what?",
+      "answer": "Sinks",
+      "audioText": "Guess first, then try with a grown-up.",
+      "tags": [
+        "preschool",
+        "matter",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-25",
+      "prompt": "A dry twig in a bowl of water often does what?",
+      "answer": "Floats",
+      "audioText": "Shape and trapped air matter.",
+      "tags": [
+        "preschool",
+        "matter",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-26",
+      "prompt": "Name the five senses.",
+      "answer": "Sight, hearing, smell, taste, and touch",
+      "audioText": "Doorways to the world God made.",
+      "tags": [
+        "preschool",
+        "senses",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-27",
+      "prompt": "A habitat is a living place that offers food, water, shelter, and a\u2026",
+      "answer": "Fitting home for its creatures",
+      "audioText": "Yard to woodland.",
+      "tags": [
+        "preschool",
+        "habitat",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-28",
+      "prompt": "Where should a live frog stay after you look?",
+      "answer": "At the pond",
+      "audioText": "Draw it; don't pocket it.",
+      "tags": [
+        "preschool",
+        "kinds",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-29",
+      "prompt": "A naturalist writes the date, the place, and what else?",
+      "answer": "What was truly seen",
+      "audioText": "True things, not guesses.",
+      "tags": [
+        "preschool",
+        "journal",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-30",
+      "prompt": "Heaped fair-weather piles with flat bases are which cloud type?",
+      "answer": "Cumulus",
+      "audioText": "Piles, not sheets.",
+      "tags": [
+        "preschool",
+        "weather",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-31",
+      "prompt": "Rain starts when cloud drops grow too\u2026",
+      "answer": "Heavy",
+      "audioText": "Then they fall.",
+      "tags": [
+        "preschool",
+        "weather",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-32",
+      "prompt": "Bees help many plants by moving what dust from flower to flower?",
+      "answer": "Pollen",
+      "audioText": "Fruit may follow.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-33",
+      "prompt": "A seed wakes with warmth and\u2026",
+      "answer": "Water",
+      "audioText": "The plan was already there.",
+      "tags": [
+        "preschool",
+        "plant",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-34",
+      "prompt": "Birds, fish, and beasts bring forth after their\u2026",
+      "answer": "Kind",
+      "audioText": "Public-domain idea from Genesis wording.",
+      "tags": [
+        "preschool",
+        "kinds",
+        "preschool"
+      ]
+    },
+    {
+      "id": "preschool-35",
+      "prompt": "The same great light that warms a meadow also drives which water story?",
+      "answer": "The water cycle",
+      "audioText": "Heat lifts vapor.",
+      "tags": [
+        "preschool",
+        "weather",
+        "preschool"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "app": "science",
+  "theme": "naturalist's field expedition",
+  "images": [
+    {
+      "file": "hero.png",
+      "width": 1024,
+      "height": 420,
+      "alt": "Open field journal on a stump with a brass hand lens and a pressed oak leaf. No people.",
+      "themeNotes": "Home hero. Cream paper, ink plate, daylight woods.",
+      "slot": "hero"
+    },
+    {
+      "file": "habitat-forest.png",
+      "width": 600,
+      "height": 400,
+      "alt": "Layered woodland: tall trunks, fern floor, a creek terrace.",
+      "themeNotes": "Habitat marker for woodland walks.",
+      "slot": "habitat-forest"
+    },
+    {
+      "file": "habitat-pond.png",
+      "width": 600,
+      "height": 400,
+      "alt": "Still pond with lily pads and a reed edge.",
+      "themeNotes": "Habitat marker for pond life.",
+      "slot": "habitat-pond"
+    },
+    {
+      "file": "habitat-meadow.png",
+      "width": 600,
+      "height": 400,
+      "alt": "Sunny meadow with grass and a few wild blooms.",
+      "themeNotes": "Habitat marker for open field.",
+      "slot": "habitat-meadow"
+    },
+    {
+      "file": "specimen-oak.png",
+      "width": 400,
+      "height": 400,
+      "alt": "A lobed oak leaf on cream paper.",
+      "themeNotes": "Specimen plate stand-in.",
+      "slot": "specimen-oak"
+    },
+    {
+      "file": "specimen-robin.png",
+      "width": 400,
+      "height": 400,
+      "alt": "A small bird with a round breast, side view, no cartoon face.",
+      "themeNotes": "Specimen plate stand-in.",
+      "slot": "specimen-robin"
+    },
+    {
+      "file": "body-heart.png",
+      "width": 400,
+      "height": 400,
+      "alt": "Simple anatomical heart outline, not a valentine.",
+      "themeNotes": "Body-systems plate stand-in.",
+      "slot": "body-heart"
+    },
+    {
+      "file": "weather-cloud.png",
+      "width": 400,
+      "height": 400,
+      "alt": "A heaped fair-weather cloud over a flat horizon.",
+      "themeNotes": "Weather plate stand-in.",
+      "slot": "weather-cloud"
+    },
+    {
+      "file": "tools-magnifier.png",
+      "width": 320,
+      "height": 320,
+      "alt": "Brass hand lens with a round glass.",
+      "themeNotes": "Field tool token.",
+      "slot": "tools-magnifier"
+    },
+    {
+      "file": "lab-bench.png",
+      "width": 800,
+      "height": 400,
+      "alt": "A kitchen table set for a safe home lab: bowl, spoon, paper.",
+      "themeNotes": "Lab post background.",
+      "slot": "lab-bench"
+    },
+    {
+      "file": "icon-192.png",
+      "width": 192,
+      "height": 192,
+      "alt": "Field-journal mark, square icon.",
+      "themeNotes": "PWA icon 192.",
+      "slot": "icon-192"
+    },
+    {
+      "file": "icon-512.png",
+      "width": 512,
+      "height": 512,
+      "alt": "Field-journal mark, large square icon.",
+      "themeNotes": "PWA icon 512.",
+      "slot": "icon-512"
+    }
+  ]
+}

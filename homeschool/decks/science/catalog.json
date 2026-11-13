@@ -1,0 +1,47 @@
+{
+  "decks": [
+    {
+      "id": "science-baby",
+      "file": "science-baby.apkg",
+      "csv": "csv/baby.csv",
+      "cards": 20
+    },
+    {
+      "id": "science-toddler",
+      "file": "science-toddler.apkg",
+      "csv": "csv/toddler.csv",
+      "cards": 32
+    },
+    {
+      "id": "science-preschool",
+      "file": "science-preschool.apkg",
+      "csv": "csv/preschool.csv",
+      "cards": 35
+    },
+    {
+      "id": "science-early",
+      "file": "science-early.apkg",
+      "csv": "csv/early.csv",
+      "cards": 38
+    },
+    {
+      "id": "science-primary",
+      "file": "science-primary.apkg",
+      "csv": "csv/primary.csv",
+      "cards": 43
+    },
+    {
+      "id": "science-upper",
+      "file": "science-upper.apkg",
+      "csv": "csv/upper.csv",
+      "cards": 58
+    },
+    {
+      "id": "science-all",
+      "file": "science-all.apkg",
+      "csv": "csv/all.csv",
+      "cards": 226
+    }
+  ],
+  "apkgTimestamp": 1700000000.0
+}

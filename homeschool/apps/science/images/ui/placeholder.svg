@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img">
+<defs>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse">
+    <path d="M0 6 L6 0" stroke="#241c12" stroke-width="0.45" opacity="0.18"/>
+  </pattern>
+  <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+    <circle cx="3" cy="7" r="0.6" fill="#241c12" opacity="0.08"/>
+    <circle cx="22" cy="18" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="37" cy="9" r="0.7" fill="#241c12" opacity="0.06"/>
+    <circle cx="11" cy="33" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="41" cy="39" r="0.6" fill="#241c12" opacity="0.08"/>
+  </pattern>
+  <pattern id="rule" width="100" height="28" patternUnits="userSpaceOnUse">
+    <path d="M0 27 H100" stroke="#241c12" stroke-width="0.4" opacity="0.12"/>
+  </pattern>
+</defs>
+<rect width="600" height="400" fill="#f4ead4"/>
+<rect width="600" height="400" fill="url(#grain)"/>
+
+    <rect width="600" height="400" fill="#f4ead4"/>
+    <path d="M40 40 L560 40 L560 360 L40 360 Z" fill="none" stroke="#241c12" stroke-width="4"/>
+    <path d="M80 80 h440 M80 120 h440 M80 160 h300" stroke="#241c12" opacity="0.25"/>
+    <text x="80" y="320" font-family="Georgia, serif" font-size="18" fill="#241c12">Image plate reserved</text>
+    
+<rect x="8" y="8" width="584" height="384" fill="none" stroke="#241c12" stroke-width="2.2"/>
+<rect x="14" y="14" width="572" height="372" fill="none" stroke="#241c12" stroke-width="0.6" opacity="0.5"/>
+</svg>

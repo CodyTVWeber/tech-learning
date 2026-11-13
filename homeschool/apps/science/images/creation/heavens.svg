@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img">
+<defs>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse">
+    <path d="M0 6 L6 0" stroke="#241c12" stroke-width="0.45" opacity="0.18"/>
+  </pattern>
+  <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+    <circle cx="3" cy="7" r="0.6" fill="#241c12" opacity="0.08"/>
+    <circle cx="22" cy="18" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="37" cy="9" r="0.7" fill="#241c12" opacity="0.06"/>
+    <circle cx="11" cy="33" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="41" cy="39" r="0.6" fill="#241c12" opacity="0.08"/>
+  </pattern>
+  <pattern id="rule" width="100" height="28" patternUnits="userSpaceOnUse">
+    <path d="M0 27 H100" stroke="#241c12" stroke-width="0.4" opacity="0.12"/>
+  </pattern>
+</defs>
+<rect width="600" height="400" fill="#1b2830"/>
+<rect width="600" height="400" fill="url(#grain)"/>
+
+    <rect x="24" y="44" width="552" height="320" fill="#1b2830"/>
+    <circle cx="40" cy="70" r="1.2" fill="#f7f1e1"/><circle cx="137" cy="123" r="2.2" fill="#f7f1e1"/><circle cx="234" cy="176" r="3.2" fill="#f7f1e1"/><circle cx="331" cy="229" r="1.2" fill="#f7f1e1"/><circle cx="428" cy="282" r="2.2" fill="#f7f1e1"/><circle cx="525" cy="75" r="3.2" fill="#f7f1e1"/><circle cx="102" cy="128" r="1.2" fill="#f7f1e1"/><circle cx="199" cy="181" r="2.2" fill="#f7f1e1"/><circle cx="296" cy="234" r="3.2" fill="#f7f1e1"/><circle cx="393" cy="287" r="1.2" fill="#f7f1e1"/><circle cx="490" cy="80" r="2.2" fill="#f7f1e1"/><circle cx="67" cy="133" r="3.2" fill="#f7f1e1"/><circle cx="164" cy="186" r="1.2" fill="#f7f1e1"/><circle cx="261" cy="239" r="2.2" fill="#f7f1e1"/><circle cx="358" cy="292" r="3.2" fill="#f7f1e1"/><circle cx="455" cy="85" r="1.2" fill="#f7f1e1"/><circle cx="552" cy="138" r="2.2" fill="#f7f1e1"/><circle cx="129" cy="191" r="3.2" fill="#f7f1e1"/><circle cx="226" cy="244" r="1.2" fill="#f7f1e1"/><circle cx="323" cy="297" r="2.2" fill="#f7f1e1"/><circle cx="420" cy="90" r="3.2" fill="#f7f1e1"/><circle cx="517" cy="143" r="1.2" fill="#f7f1e1"/><circle cx="94" cy="196" r="2.2" fill="#f7f1e1"/><circle cx="191" cy="249" r="3.2" fill="#f7f1e1"/><circle cx="288" cy="302" r="1.2" fill="#f7f1e1"/><circle cx="385" cy="95" r="2.2" fill="#f7f1e1"/><circle cx="482" cy="148" r="3.2" fill="#f7f1e1"/><circle cx="59" cy="201" r="1.2" fill="#f7f1e1"/><circle cx="156" cy="254" r="2.2" fill="#f7f1e1"/><circle cx="253" cy="307" r="3.2" fill="#f7f1e1"/><circle cx="350" cy="100" r="1.2" fill="#f7f1e1"/><circle cx="447" cy="153" r="2.2" fill="#f7f1e1"/><circle cx="544" cy="206" r="3.2" fill="#f7f1e1"/><circle cx="121" cy="259" r="1.2" fill="#f7f1e1"/><circle cx="218" cy="312" r="2.2" fill="#f7f1e1"/><circle cx="315" cy="105" r="3.2" fill="#f7f1e1"/><circle cx="412" cy="158" r="1.2" fill="#f7f1e1"/><circle cx="509" cy="211" r="2.2" fill="#f7f1e1"/><circle cx="86" cy="264" r="3.2" fill="#f7f1e1"/><circle cx="183" cy="317" r="1.2" fill="#f7f1e1"/>
+    <ellipse cx="300" cy="210" rx="70" ry="18" fill="none" stroke="#c9a24a" stroke-width="2" opacity="0.7"/>
+    <text x="28" y="38" font-family="Georgia, serif" font-size="15" letter-spacing="2.4" fill="#241c12">THE HEAVENS</text>
+    <text x="28" y="372" font-family="Georgia, serif" font-size="11" letter-spacing="1.2" fill="#f7f1e1">Psalm 19:1  ·  The heavens declare the glory of God</text>
+    
+<rect x="8" y="8" width="584" height="384" fill="none" stroke="#241c12" stroke-width="2.2"/>
+<rect x="14" y="14" width="572" height="372" fill="none" stroke="#241c12" stroke-width="0.6" opacity="0.5"/>
+</svg>

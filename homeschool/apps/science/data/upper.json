@@ -1,0 +1,644 @@
+{
+  "band": "upper",
+  "subject": "science",
+  "items": [
+    {
+      "id": "upper-1",
+      "prompt": "Atomic number counts which particles in the nucleus?",
+      "answer": "Protons",
+      "audioText": "That count names the element.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-2",
+      "prompt": "What is the name and symbol of the element with atomic number 1?",
+      "answer": "Hydrogen (H)",
+      "audioText": "Mass about 1.008. Lightest element.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-3",
+      "prompt": "What is the name and symbol of the element with atomic number 2?",
+      "answer": "Helium (He)",
+      "audioText": "Mass about 4.003.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-4",
+      "prompt": "What is the name and symbol of the element with atomic number 3?",
+      "answer": "Lithium (Li)",
+      "audioText": "Mass about 6.94.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-5",
+      "prompt": "What is the name and symbol of the element with atomic number 4?",
+      "answer": "Beryllium (Be)",
+      "audioText": "Mass about 9.012.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-6",
+      "prompt": "What is the name and symbol of the element with atomic number 5?",
+      "answer": "Boron (B)",
+      "audioText": "Mass about 10.81.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-7",
+      "prompt": "What is the name and symbol of the element with atomic number 6?",
+      "answer": "Carbon (C)",
+      "audioText": "Mass about 12.011. Skeleton of living chemistry.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-8",
+      "prompt": "What is the name and symbol of the element with atomic number 7?",
+      "answer": "Nitrogen (N)",
+      "audioText": "Mass about 14.007.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-9",
+      "prompt": "What is the name and symbol of the element with atomic number 8?",
+      "answer": "Oxygen (O)",
+      "audioText": "Mass about 15.999. Breath gas.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-10",
+      "prompt": "What is the name and symbol of the element with atomic number 9?",
+      "answer": "Fluorine (F)",
+      "audioText": "Mass about 18.998.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-11",
+      "prompt": "What is the name and symbol of the element with atomic number 10?",
+      "answer": "Neon (Ne)",
+      "audioText": "Mass about 20.180.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-12",
+      "prompt": "What is the name and symbol of the element with atomic number 11?",
+      "answer": "Sodium (Na)",
+      "audioText": "Na remembers an older name, natrium. Mass about 22.990.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-13",
+      "prompt": "What is the name and symbol of the element with atomic number 12?",
+      "answer": "Magnesium (Mg)",
+      "audioText": "Mass about 24.305.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-14",
+      "prompt": "An element is a substance made of only one kind of\u2026",
+      "answer": "Atom",
+      "audioText": "Gold is only gold atoms.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-15",
+      "prompt": "Water is not an element because it joins hydrogen with\u2026",
+      "answer": "Oxygen",
+      "audioText": "A compound.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-16",
+      "prompt": "The chart that lists elements by proton count is the\u2026",
+      "answer": "Periodic table",
+      "audioText": "Public chart facts.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-17",
+      "prompt": "Protons live in the atom's\u2026",
+      "answer": "Nucleus",
+      "audioText": "Plus charge.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-18",
+      "prompt": "Neutrons have what electric charge?",
+      "answer": "None (zero)",
+      "audioText": "Nucleus partners.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-19",
+      "prompt": "Electrons have what kind of electric charge?",
+      "answer": "Minus (negative)",
+      "audioText": "Outer region of the atom.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-20",
+      "prompt": "Most of an atom's mass sits in the tiny\u2026",
+      "answer": "Nucleus",
+      "audioText": "The outer region is mostly empty.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-21",
+      "prompt": "If an atom has eight protons, which element is it?",
+      "answer": "Oxygen",
+      "audioText": "Atomic number eight.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-22",
+      "prompt": "Changing the proton count means you have a different\u2026",
+      "answer": "Element",
+      "audioText": "Not just a weather change.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-23",
+      "prompt": "Acids donate hydrogen ions. Safe foods in that family often taste\u2026",
+      "answer": "Sour",
+      "audioText": "Lemon. Never taste lab chemicals.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-24",
+      "prompt": "Bases accept hydrogen ions. Household soap water often feels\u2026",
+      "answer": "Slippery",
+      "audioText": "Adult labs only.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-25",
+      "prompt": "A pH near seven is close to\u2026",
+      "answer": "Water (neither strong acid nor strong base)",
+      "audioText": "Scale of acidity.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-26",
+      "prompt": "Vinegar plus baking soda makes which gas?",
+      "answer": "Carbon dioxide",
+      "audioText": "Open jar, tray, grown-up.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-27",
+      "prompt": "Sodium's symbol is Na because of the older name\u2026",
+      "answer": "Natrium",
+      "audioText": "Public history of the table.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-28",
+      "prompt": "Carbon's special place in living chemistry is that it forms the\u2026 of many life molecules.",
+      "answer": "Backbone (chain)",
+      "audioText": "Element six.",
+      "tags": [
+        "upper",
+        "chemistry",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-29",
+      "prompt": "Name the four tissue types.",
+      "answer": "Epithelial, connective, muscle, nervous",
+      "audioText": "Cover, support, move, signal.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-30",
+      "prompt": "Connective tissue's broad job is to support and\u2026",
+      "answer": "Connect",
+      "audioText": "Bone and blood sit in this family.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-31",
+      "prompt": "Arms and legs belong to which skeleton division, not the midline frame?",
+      "answer": "Appendicular",
+      "audioText": "Axial is skull, spine, ribs, sternum.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-32",
+      "prompt": "The breastbone's other name is the\u2026",
+      "answer": "Sternum",
+      "audioText": "Ribs meet it.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-33",
+      "prompt": "Name the three kinds of muscle.",
+      "answer": "Skeletal, smooth, cardiac",
+      "audioText": "Choose / organ / heart.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-34",
+      "prompt": "Brain and spinal cord together are the central\u2026 of the nervous system.",
+      "answer": "Desk (center)",
+      "audioText": "Nerves are the roads.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-35",
+      "prompt": "After the stomach, food's path is the small intestine, then the\u2026",
+      "answer": "Large intestine",
+      "audioText": "Helpers: liver, pancreas, gallbladder.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-36",
+      "prompt": "Name the four urinary parts we map.",
+      "answer": "Kidneys, ureters, bladder, urethra",
+      "audioText": "Filter, pipes, room, exit.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-37",
+      "prompt": "Name six circulatory field parts we map.",
+      "answer": "Heart, arteries, veins, capillaries, blood, valves",
+      "audioText": "Original list, not class recitation.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-38",
+      "prompt": "Name four lymph parts we map.",
+      "answer": "Lymph fluid, vessels, nodes, spleen",
+      "audioText": "Return and filter.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-39",
+      "prompt": "Nose or mouth, throat, voice box, windpipe, then bronchi: the path ends in which pair of organs?",
+      "answer": "The lungs",
+      "audioText": "The diaphragm helps.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-40",
+      "prompt": "Endocrine glands send chemical messengers called\u2026",
+      "answer": "Hormones",
+      "audioText": "The pituitary in the head is a chief messenger gland.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-41",
+      "prompt": "Name three major purposes of blood.",
+      "answer": "Carry oxygen, carry nutrients, carry wastes",
+      "audioText": "Also germ fight, clot, heat.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-42",
+      "prompt": "The back wall of the eye where a picture lands is the\u2026",
+      "answer": "Retina",
+      "audioText": "Design for seeing.",
+      "tags": [
+        "upper",
+        "anatomy",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-43",
+      "prompt": "Psalm 19:1 KJV: The heavens declare the glory of God; and the firmament sheweth his\u2026",
+      "answer": "Handywork",
+      "audioText": "Verse only \u2014 no class commentary.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-44",
+      "prompt": "As a story of origins, evolution-without-a-designer relies on unguided natural steps making new\u2026",
+      "answer": "Kinds of life",
+      "audioText": "Field variation is not the same proof.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-45",
+      "prompt": "We do observe that living things vary, and that some traits help them\u2026",
+      "answer": "Live",
+      "audioText": "Keep observations and confession both.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-46",
+      "prompt": "Observing variation is not the same as proving that all life\u2026",
+      "answer": "Made itself",
+      "audioText": "Original careful wording.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-47",
+      "prompt": "Intelligent design, in these notes, is the claim that fitted purpose points to a\u2026",
+      "answer": "Mind (God the Maker)",
+      "audioText": "Eye, wing, seed information.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-48",
+      "prompt": "A seed carrying a plan is a clue of\u2026",
+      "answer": "Design (information)",
+      "audioText": "The plan does not write itself.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-49",
+      "prompt": "Name four ways earth's history is preserved.",
+      "answer": "Fossils, tree rings, ice layers, stacked rock (also written records)",
+      "audioText": "Study with care beside Scripture.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-50",
+      "prompt": "A fossil typically records that real plants or animals were\u2026",
+      "answer": "Buried",
+      "audioText": "A gift to look at.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-51",
+      "prompt": "Natural selection describes how traits already in a kind may become more\u2026 if they fit a place.",
+      "answer": "Common",
+      "audioText": "Beetle shells, not oak-from-fish.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-52",
+      "prompt": "Selection by itself does not write a brand-new\u2026 from scratch.",
+      "answer": "Kind",
+      "audioText": "Bounce within a kind.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-53",
+      "prompt": "Adaptation within a kind is part of the living world's built-in\u2026",
+      "answer": "Bounce (variation God allowed)",
+      "audioText": "God made living things able to vary.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-54",
+      "prompt": "Genesis 1:21 KJV says God created water creatures and birds after their\u2026",
+      "answer": "Kind",
+      "audioText": "Public-domain Scripture.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-55",
+      "prompt": "Job 12:9 KJV: Who knoweth not in all these that the hand of the LORD hath\u2026",
+      "answer": "Wrought this",
+      "audioText": "Ask the beasts; they teach.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-56",
+      "prompt": "A naturalist's posture in this expedition is to look carefully, write truly, and\u2026",
+      "answer": "Give thanks",
+      "audioText": "Stars are stamps, not grades.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-57",
+      "prompt": "Timescale debates among Christians are real; the records themselves are\u2026",
+      "answer": "Gifts to study",
+      "audioText": "Fossils, ice, rings, words.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    },
+    {
+      "id": "upper-58",
+      "prompt": "An eye's parts fit a purpose. That purpose is\u2026",
+      "answer": "Seeing",
+      "audioText": "Lookout notes.",
+      "tags": [
+        "upper",
+        "creation",
+        "upper"
+      ]
+    }
+  ]
+}

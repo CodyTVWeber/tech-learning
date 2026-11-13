@@ -1,0 +1,424 @@
+{
+  "band": "early",
+  "subject": "science",
+  "items": [
+    {
+      "id": "early-1",
+      "prompt": "Eyes gather light so a person can\u2026",
+      "answer": "See",
+      "audioText": "A lens bends light onto the retina.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-2",
+      "prompt": "Ears catch what kind of waves?",
+      "answer": "Sound waves",
+      "audioText": "Tiny bones pass the shake.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-3",
+      "prompt": "Smell and taste often work how?",
+      "answer": "Together",
+      "audioText": "Hold your nose during a safe food test with a grown-up.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-4",
+      "prompt": "Besides sweet, sour, salty, and bitter, taste buds notice\u2026",
+      "answer": "Savory",
+      "audioText": "Much of 'flavor' is actually smell.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-5",
+      "prompt": "Where do most touch sensors live?",
+      "answer": "In the skin",
+      "audioText": "A designed covering.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-6",
+      "prompt": "The organ of sight is the\u2026",
+      "answer": "Eye",
+      "audioText": "Parts fitted for seeing.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-7",
+      "prompt": "The organ of hearing is the\u2026",
+      "answer": "Ear",
+      "audioText": "Outer, middle, inner.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-8",
+      "prompt": "Skin helps by covering the body and sensing\u2026",
+      "answer": "Temperature (and pressure and pain)",
+      "audioText": "A boundary.",
+      "tags": [
+        "early",
+        "senses",
+        "early"
+      ]
+    },
+    {
+      "id": "early-9",
+      "prompt": "The heart's job is to\u2026",
+      "answer": "Pump blood",
+      "audioText": "A pump with rooms.",
+      "tags": [
+        "early",
+        "body",
+        "early"
+      ]
+    },
+    {
+      "id": "early-10",
+      "prompt": "Lungs are packed with air sacs so gases can\u2026",
+      "answer": "Trade with the blood",
+      "audioText": "Oxygen in.",
+      "tags": [
+        "early",
+        "body",
+        "early"
+      ]
+    },
+    {
+      "id": "early-11",
+      "prompt": "Bones of the head and trunk make the midline\u2026",
+      "answer": "Frame (axial skeleton)",
+      "audioText": "Skull, spine, ribs.",
+      "tags": [
+        "early",
+        "body",
+        "early"
+      ]
+    },
+    {
+      "id": "early-12",
+      "prompt": "You choose to move arm muscles. The heart's own muscle is called\u2026",
+      "answer": "Cardiac muscle",
+      "audioText": "It keeps a beat.",
+      "tags": [
+        "early",
+        "body",
+        "early"
+      ]
+    },
+    {
+      "id": "early-13",
+      "prompt": "Swallowed food travels down a tube to the\u2026",
+      "answer": "Stomach",
+      "audioText": "Then to the intestines.",
+      "tags": [
+        "early",
+        "body",
+        "early"
+      ]
+    },
+    {
+      "id": "early-14",
+      "prompt": "A pulse is the heartbeat felt in an\u2026",
+      "answer": "Artery",
+      "audioText": "Walk-lab curiosity, not a medical test.",
+      "tags": [
+        "early",
+        "body",
+        "early"
+      ]
+    },
+    {
+      "id": "early-15",
+      "prompt": "Name the water cycle in four field words.",
+      "answer": "Evaporate, travel (condense), fall, run",
+      "audioText": "Bag-on-window lab.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-16",
+      "prompt": "Evaporation is liquid water becoming\u2026",
+      "answer": "Vapor",
+      "audioText": "Heat helps.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-17",
+      "prompt": "Condensation is vapor becoming\u2026",
+      "answer": "Liquid drops",
+      "audioText": "Cloud beads.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-18",
+      "prompt": "A stream carries water which way?",
+      "answer": "Downhill toward larger water",
+      "audioText": "Gravity as a gift of order.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-19",
+      "prompt": "Heaped piles of cloud are called\u2026",
+      "answer": "Cumulus",
+      "audioText": "Flat bases often.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-20",
+      "prompt": "A low gray sheet of cloud is called\u2026",
+      "answer": "Stratus",
+      "audioText": "May drizzle.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-21",
+      "prompt": "High ice threads of cloud are called\u2026",
+      "answer": "Cirrus",
+      "audioText": "A change may be coming.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-22",
+      "prompt": "When you mark a stick's shade, you must not stare at the\u2026",
+      "answer": "Sun",
+      "audioText": "Mark the tip, wait, mark again.",
+      "tags": [
+        "early",
+        "weather",
+        "early"
+      ]
+    },
+    {
+      "id": "early-23",
+      "prompt": "A lever needs a bar and a\u2026",
+      "answer": "Fulcrum",
+      "audioText": "Load versus effort.",
+      "tags": [
+        "early",
+        "machine",
+        "early"
+      ]
+    },
+    {
+      "id": "early-24",
+      "prompt": "An inclined plane spreads lifting work over a\u2026",
+      "answer": "Longer path",
+      "audioText": "Ramp, hill, slide.",
+      "tags": [
+        "early",
+        "machine",
+        "early"
+      ]
+    },
+    {
+      "id": "early-25",
+      "prompt": "A pulley can change the\u2026",
+      "answer": "Direction of a pull",
+      "audioText": "Pull down, load goes up.",
+      "tags": [
+        "early",
+        "machine",
+        "early"
+      ]
+    },
+    {
+      "id": "early-26",
+      "prompt": "A screw is an inclined plane that has been\u2026",
+      "answer": "Wrapped around a post",
+      "audioText": "Jar lid, wood screw.",
+      "tags": [
+        "early",
+        "machine",
+        "early"
+      ]
+    },
+    {
+      "id": "early-27",
+      "prompt": "A wedge is two ramps\u2026",
+      "answer": "Back to back",
+      "audioText": "Axe, doorstop, front tooth.",
+      "tags": [
+        "early",
+        "machine",
+        "early"
+      ]
+    },
+    {
+      "id": "early-28",
+      "prompt": "In a wheel and axle, when the wheel turns, the axle\u2026",
+      "answer": "Turns with it",
+      "audioText": "Doorknob.",
+      "tags": [
+        "early",
+        "machine",
+        "early"
+      ]
+    },
+    {
+      "id": "early-29",
+      "prompt": "Psalm 19:1 (KJV) says the heavens declare the glory of whom?",
+      "answer": "God",
+      "audioText": "Public-domain verse. Look up and give thanks.",
+      "tags": [
+        "early",
+        "creation",
+        "early"
+      ]
+    },
+    {
+      "id": "early-30",
+      "prompt": "Living things bring forth after their\u2026",
+      "answer": "Kind",
+      "audioText": "Birds, fish, beasts, creeping things, plants.",
+      "tags": [
+        "early",
+        "creation",
+        "early"
+      ]
+    },
+    {
+      "id": "early-31",
+      "prompt": "A seed is a clue of design because it already carries\u2026",
+      "answer": "A plan / information for a plant",
+      "audioText": "The plan does not write itself.",
+      "tags": [
+        "early",
+        "creation",
+        "early"
+      ]
+    },
+    {
+      "id": "early-32",
+      "prompt": "A naturalist thanks God for what kind of noticing?",
+      "answer": "What is truly seen in the world He made",
+      "audioText": "Journal prompt.",
+      "tags": [
+        "early",
+        "creation",
+        "early"
+      ]
+    },
+    {
+      "id": "early-33",
+      "prompt": "After you watch a live frog, where should it remain?",
+      "answer": "At the pond",
+      "audioText": "Draw it.",
+      "tags": [
+        "early",
+        "creation",
+        "early"
+      ]
+    },
+    {
+      "id": "early-34",
+      "prompt": "Job 12 (KJV) says to ask the beasts, and they shall\u2026",
+      "answer": "Teach thee",
+      "audioText": "Public-domain Scripture.",
+      "tags": [
+        "early",
+        "creation",
+        "early"
+      ]
+    },
+    {
+      "id": "early-35",
+      "prompt": "Inside a bean you can find a baby plant and\u2026",
+      "answer": "Stored food",
+      "audioText": "Bag-seed lab.",
+      "tags": [
+        "early",
+        "plant",
+        "early"
+      ]
+    },
+    {
+      "id": "early-36",
+      "prompt": "Colored tubes in celery show how a plant\u2026",
+      "answer": "Moves water (drinks)",
+      "audioText": "Dye-climb lab with a grown-up.",
+      "tags": [
+        "early",
+        "plant",
+        "early"
+      ]
+    },
+    {
+      "id": "early-37",
+      "prompt": "A leaf's veins are roads for water and\u2026",
+      "answer": "Sugar (food)",
+      "audioText": "Look under a hand lens.",
+      "tags": [
+        "early",
+        "plant",
+        "early"
+      ]
+    },
+    {
+      "id": "early-38",
+      "prompt": "Needle-shaped catchers of light lose less of what than broad catchers?",
+      "answer": "Water",
+      "audioText": "Pine design for poor, cold soils.",
+      "tags": [
+        "early",
+        "plant",
+        "early"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#5a3824">
+  <meta name="description" content="Naturalist's Field Expedition — original science walks, specimen cards, and safe home labs.">
+  <title>Field Expedition · Science</title>
+  <link rel="icon" href="images/ui/mark.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/field.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to trail</a>
+  <div class="app" id="app">
+    <div class="spine" aria-hidden="true"><div class="holes"><span></span><span></span><span></span><span></span></div></div>
+    <p class="untested-banner" role="status">Untested, awaiting parent test.</p>
+    <header class="mast">
+      <img class="mark" src="images/ui/mark.svg" alt="">
+      <div>
+        <h1>Field Expedition</h1>
+        <p>Science · God's design</p>
+      </div>
+      <div class="mast-actions">
+        <span class="chip" id="band-pill">Trail</span>
+        <button type="button" class="quiet" id="btn-speak" aria-pressed="false" title="Read aloud">Read aloud</button>
+        <button type="button" class="quiet" id="btn-camp" data-act="nav" data-id="camp">Camp</button>
+        <button type="button" class="quiet" data-act="nav" data-id="picker">Trail</button>
+      </div>
+    </header>
+    <nav class="tabs" aria-label="Field posts">
+      <button type="button" data-act="nav" data-view="camp" data-id="camp">Map</button>
+      <button type="button" data-act="nav" data-view="habitats" data-id="habitats">Habitats</button>
+      <button type="button" data-act="nav" data-view="tin" data-id="tin">Tin</button>
+      <button type="button" data-act="nav" data-view="lab" data-id="lab">Lab</button>
+      <button type="button" data-act="nav" data-view="body" data-id="body">Body</button>
+      <button type="button" data-act="nav" data-view="journal" data-id="journal">Journal</button>
+    </nav>
+    <main id="main">
+      <section class="view" id="view-picker">
+        <p class="kicker">Choose a trail</p>
+        <h2>Which expedition?</h2>
+        <p class="lede">Pick the walk that fits the explorer. You can change trails later. No grades — only stamps, plates, and journal pages.</p>
+        <div class="band-grid" id="band-grid"></div>
+      </section>
+
+      <section class="view" id="view-baby">
+        <p class="kicker">Nest</p>
+        <h2>Big shapes</h2>
+        <p class="lede">Tap a plate. Hear a short word. Soft sounds. A grown-up stays near.</p>
+        <div class="grid" id="baby-grid"></div>
+        <p><button type="button" data-act="nav" data-id="picker">Change trail</button></p>
+      </section>
+
+      <section class="view" id="view-camp">
+        <p class="kicker" id="camp-kicker">Base camp</p>
+        <h2>Naturalist's map</h2>
+        <p class="lede" id="camp-lede"></p>
+        <div class="stats">
+          <div class="stat">Pressed leaves <strong data-stat="stamps">0</strong></div>
+          <div class="stat">Specimen plates <strong data-stat="specimens">0</strong></div>
+          <div class="stat">Field stars <strong data-stat="stars">0</strong></div>
+        </div>
+        <div class="progress-leaves" id="camp-leaves" aria-hidden="true"></div>
+        <div class="grid wide" id="camp-grid"></div>
+      </section>
+
+      <section class="view" id="view-habitats">
+        <p class="kicker">Habitats</p>
+        <h2>Walk a place</h2>
+        <p class="lede">Every habitat is a stack of homes. Look, then stamp a find.</p>
+        <div class="grid wide" id="habitat-grid"></div>
+      </section>
+
+      <section class="view" id="view-habitat">
+        <p><button type="button" data-act="nav" data-id="habitats">← Habitats</button></p>
+        <div id="habitat-detail"></div>
+      </section>
+
+      <section class="view" id="view-tin">
+        <p class="kicker">Specimen tin</p>
+        <h2>Collected plates</h2>
+        <p class="lede" id="tin-lede"></p>
+        <div class="grid" id="tin-grid"></div>
+      </section>
+
+      <section class="view" id="view-specimen">
+        <p><button type="button" data-act="nav" data-id="tin">← Tin</button></p>
+        <div id="specimen-detail"></div>
+      </section>
+
+      <section class="view" id="view-magnify">
+        <p class="kicker">Hand lens</p>
+        <h2>Look closer</h2>
+        <p class="lede">Drag a finger across the plate. The brass ring enlarges the ink.</p>
+        <div class="magnify-wrap" id="mag-wrap">
+          <img id="mag-pic" class="hero-plate" src="images/specimens/oak-leaf.svg" alt="Plate under a hand lens">
+          <div class="lens" id="lens" aria-hidden="true"></div>
+        </div>
+        <p>Choose a plate</p>
+        <div class="row" id="mag-picks"></div>
+      </section>
+
+      <section class="view" id="view-lab">
+        <p class="kicker">Lab tent</p>
+        <h2>Safe home experiments</h2>
+        <p class="lede">Print the steps. Ask a grown-up when the card says so. Toner-light sheets live in the printables folder.</p>
+        <p><a class="btn" href="printables/experiments.html">Open all printable labs</a></p>
+        <div class="grid wide" id="lab-grid"></div>
+      </section>
+
+      <section class="view" id="view-exp">
+        <p><button type="button" data-act="nav" data-id="lab">← Lab tent</button></p>
+        <div id="exp-detail"></div>
+      </section>
+
+      <section class="view" id="view-body">
+        <p class="kicker">Body station</p>
+        <h2>Senses and inner workings</h2>
+        <p class="lede">The body is a designed workshop. Tap a sense. Older trails open the systems.</p>
+        <h3>Five senses</h3>
+        <div class="grid" id="body-senses"></div>
+        <h3>System trails</h3>
+        <div class="grid wide" id="body-systems"></div>
+      </section>
+
+      <section class="view" id="view-machines">
+        <p class="kicker">Machine shed</p>
+        <h2>Six simple machines</h2>
+        <p class="lede">Levers in jaws. Ramps on hills. God filled the world with work-savers; people noticed and copied them.</p>
+        <div class="grid" id="machine-grid"></div>
+      </section>
+
+      <section class="view" id="view-machine">
+        <p><button type="button" data-act="nav" data-id="machines">← Shed</button></p>
+        <div id="machine-detail"></div>
+      </section>
+
+      <section class="view" id="view-weather">
+        <p class="kicker">Weather hill</p>
+        <h2>Sky notes</h2>
+        <p class="lede">Sun, wind, water on the move. Name the cloud. Watch a cycle in a bag.</p>
+        <div class="grid" id="weather-grid"></div>
+      </section>
+
+      <section class="view" id="view-weather-item">
+        <p><button type="button" data-act="nav" data-id="weather">← Hill</button></p>
+        <div id="weather-detail"></div>
+      </section>
+
+      <section class="view" id="view-creation">
+        <p class="kicker">Lookout</p>
+        <h2>Creation field notes</h2>
+        <p class="lede">Public-domain Scripture and original notes. We look at kinds, records, design, and the sky.</p>
+        <div id="creation-verses"></div>
+        <div class="grid wide" id="creation-grid"></div>
+      </section>
+
+      <section class="view" id="view-trails">
+        <p class="kicker">Topic trails</p>
+        <h2>Anatomy and chemistry markers</h2>
+        <p class="lede" id="trail-note"></p>
+        <div class="grid wide" id="trail-grid"></div>
+      </section>
+
+      <section class="view" id="view-trail">
+        <p><button type="button" data-act="nav" data-id="trails">← Markers</button></p>
+        <div id="trail-detail"></div>
+      </section>
+
+      <section class="view" id="view-sorts">
+        <p class="kicker">Sort table</p>
+        <h2>Kinds, parts, pairs</h2>
+        <div class="grid" id="sort-grid"></div>
+      </section>
+
+      <section class="view" id="view-sort">
+        <p><button type="button" data-act="nav" data-id="sorts">← Table</button></p>
+        <div id="sort-detail"></div>
+      </section>
+
+      <section class="view" id="view-journal">
+        <p class="kicker">Field journal</p>
+        <h2>Write what you saw</h2>
+        <p class="lede">Date, place, three true things. Pages stay on this device. No names required.</p>
+        <p><a class="btn" href="printables/journal.html">Print a blank journal page</a>
+           <a class="btn" href="printables/specimen-cards.html">Print specimen cards</a></p>
+        <h3>Prompts</h3>
+        <div class="grid" id="journal-prompts"></div>
+        <h3>Kept pages</h3>
+        <div class="grid" id="journal-list"></div>
+      </section>
+
+      <section class="view" id="view-journal-edit">
+        <p><button type="button" data-act="nav" data-id="journal">← Journal</button></p>
+        <div id="journal-editor"></div>
+      </section>
+    </main>
+    <footer class="colophon">
+      Original field notes. Scripture: KJV (public domain). Stars are stamps, not grades. Untested, awaiting parent test.
+      <a href="CREDITS.md">Credits</a> ·
+      <a href="printables/experiments.html">Print labs</a>
+    </footer>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="js/storage.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/speech.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
