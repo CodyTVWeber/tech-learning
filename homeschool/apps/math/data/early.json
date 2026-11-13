@@ -37,8 +37,8 @@
       "chest": "A crate stamped 10",
       "technique": {
         "title": "Tens and ones",
-        "body": "Ten ones bundle into one ten-crate. 3 tens and 4 ones is 34, not 43.",
-        "audioText": "Ten ones bundle into one ten crate. Three tens and four ones is thirty-four."
+        "body": "Tap ten loose coins, then bundle them into a ten-crate. 3 tens and 4 ones is 34, not 43.",
+        "audioText": "Tap ten loose coins, then bundle them into a ten crate. Three tens and four ones is thirty-four."
       },
       "paper": [
         {
@@ -197,8 +197,8 @@
       "chest": "Three equal coils",
       "technique": {
         "title": "Equal groups",
-        "body": "3 rows of 4 is 4 + 4 + 4. That is the start of multiplication: equal groups.",
-        "audioText": "Three rows of four is four plus four plus four. That is equal groups."
+        "body": "Tap coins into a real grid: 3 rows of 4 stay 3 by 4, not a wrapped pile. 3 rows of 4 is 4 + 4 + 4.",
+        "audioText": "Tap coins into three rows of four. That is four plus four plus four. Equal groups."
       },
       "paper": [
         {
@@ -377,8 +377,8 @@
       "id": "e-p-34",
       "island": "place",
       "kind": "place",
-      "prompt": "What number is 3 tens and 4 ones?",
-      "audioText": "What number is 3 tens and 4 ones?",
+      "prompt": "3 ten-crates and 4 ones. What number?",
+      "audioText": "3 ten-crates and 4 ones. What number?",
       "answer": "34",
       "choices": [
         "304",
@@ -391,14 +391,15 @@
         "place"
       ],
       "tens": 3,
-      "ones": 4
+      "ones": 4,
+      "teach": "3 tens is 30. 30 and 4 ones is 34, not 43."
     },
     {
       "id": "e-p-50",
       "island": "place",
       "kind": "place",
-      "prompt": "What number is 5 tens and 0 ones?",
-      "audioText": "What number is 5 tens and 0 ones?",
+      "prompt": "5 ten-crates and 0 ones. What number?",
+      "audioText": "5 ten-crates and 0 ones. What number?",
       "answer": "50",
       "choices": [
         "50",
@@ -411,7 +412,8 @@
         "place"
       ],
       "tens": 5,
-      "ones": 0
+      "ones": 0,
+      "teach": "5 tens is 50. No extra ones."
     },
     {
       "id": "e-p-408",
@@ -429,14 +431,15 @@
         "math",
         "early",
         "place"
-      ]
+      ],
+      "teach": "4 tens and 8 ones is 48, not 408."
     },
     {
       "id": "e-p-27",
       "island": "place",
-      "kind": "place",
-      "prompt": "2 tens and 17 ones bundles to",
-      "audioText": "Two tens and seventeen ones. Bundle the extra ten. What number?",
+      "kind": "bundle",
+      "prompt": "Bundle extra ones: 2 tens and 17 ones. What number?",
+      "audioText": "Two tens and seventeen ones. Bundle ten ones into a crate. What number?",
       "answer": "37",
       "choices": [
         "27",
@@ -449,7 +452,8 @@
         "place"
       ],
       "tens": 2,
-      "ones": 17
+      "ones": 17,
+      "teach": "Ten ones make a crate. 17 ones become 1 crate and 7 ones. 2+1 tens and 7 ones is 37."
     },
     {
       "id": "e-r-275",
@@ -944,8 +948,8 @@
       "id": "e-row-34",
       "island": "rows",
       "kind": "array",
-      "prompt": "3 rows of 4 coins. How many?",
-      "audioText": "3 rows of 4 coins. How many?",
+      "prompt": "Tap coins into 3 rows of 4. How many?",
+      "audioText": "Tap coins into 3 rows of 4. How many?",
       "answer": "12",
       "choices": [
         "12",
@@ -958,7 +962,8 @@
         "rows"
       ],
       "rows": 3,
-      "cols": 4
+      "cols": 4,
+      "teach": "3 rows of 4 is 4 + 4 + 4 = 12. The grid stays 3 by 4."
     },
     {
       "id": "e-row-444",
@@ -976,14 +981,15 @@
         "math",
         "early",
         "rows"
-      ]
+      ],
+      "teach": "Three fours. 4 + 4 + 4 = 12, which is 3 × 4."
     },
     {
       "id": "e-row-25",
       "island": "rows",
       "kind": "array",
-      "prompt": "2 rows of 5 coins. How many?",
-      "audioText": "2 rows of 5 coins. How many?",
+      "prompt": "Tap coins into 2 rows of 5. How many?",
+      "audioText": "Tap coins into 2 rows of 5. How many?",
       "answer": "10",
       "choices": [
         "25",
@@ -996,7 +1002,8 @@
         "rows"
       ],
       "rows": 2,
-      "cols": 5
+      "cols": 5,
+      "teach": "2 rows of 5 is 5 + 5 = 10."
     }
   ]
 }

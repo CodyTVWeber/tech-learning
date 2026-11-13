@@ -1,4 +1,4 @@
-/* Treasure Voyage — nautical chart, rope, brass. Not a card-grid template. */
+/* Treasure Voyage — nautical chart, rope, brass. Original CSS/SVG art. */
 *,
 *::before,
 *::after {
@@ -25,6 +25,8 @@ body {
   --ink: #1a120c;
   --foam: #d7eef2;
   --rope: #8a5a2b;
+  --copper: #b87333;
+  --silver: #c5c8ce;
   color: var(--ink);
   background:
     radial-gradient(ellipse at 20% 0, #165566 0, transparent 42%),
@@ -77,13 +79,20 @@ html[data-math-band="toddler"] .voyage button {
   flex: 1;
 }
 
-.voyage-hero {
+.voyage-hero-art {
   display: block;
   width: 100%;
-  height: 120px;
-  object-fit: cover;
+  height: 132px;
+  overflow: hidden;
   border-bottom: 6px solid var(--brass);
-  background: var(--sea);
+  background:
+    linear-gradient(#7ec8d4 0 38%, #165566 38% 62%, #0e4a57 62%);
+}
+
+.voyage-hero-art svg {
+  display: block;
+  width: 100%;
+  height: 132px;
 }
 
 .voyage-map {
@@ -140,10 +149,11 @@ html[data-math-band="toddler"] .voyage button {
   width: 56px;
   height: 56px;
   margin: 0 auto 4px;
-  object-fit: cover;
   border: 4px solid var(--brass);
   border-radius: 50%;
   background: var(--sea);
+  overflow: hidden;
+  position: relative;
 }
 
 .voyage-porthole-lg {
@@ -152,13 +162,63 @@ html[data-math-band="toddler"] .voyage button {
   margin: 12px auto;
 }
 
+.voyage-crew-face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.voyage-crew-face .hat {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 6%;
+  height: 28%;
+  background: var(--hat, var(--brass));
+  border-radius: 6px 6px 2px 2px;
+  border: 2px solid var(--ink);
+}
+
+.voyage-crew-face .head {
+  position: absolute;
+  left: 28%;
+  right: 28%;
+  top: 26%;
+  height: 42%;
+  background: #e6c39a;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+}
+
+.voyage-crew-face .scarf {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  bottom: 8%;
+  height: 22%;
+  background: var(--scarf, var(--sail));
+  border-radius: 0 0 40% 40%;
+  border: 2px solid var(--ink);
+}
+
 .voyage-chart {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 8px 22px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 14px;
+  position: relative;
+}
+
+.voyage-chart::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  bottom: 18px;
+  width: 0;
+  border-left: 4px dashed var(--brass);
 }
 
 .voyage-island-btn {
@@ -169,23 +229,276 @@ html[data-math-band="toddler"] .voyage button {
   text-align: left;
   background: var(--sail);
   box-shadow: 4px 4px 0 var(--ink);
+  position: relative;
 }
 
 .voyage-island-btn.is-stowed {
   background: #d7c07a;
 }
 
+.voyage-island-btn.is-now {
+  background: #f7e6b8;
+  box-shadow:
+    0 0 0 4px var(--brass),
+    6px 6px 0 var(--ink);
+}
+
+.voyage-now-tag {
+  display: block;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--wood);
+}
+
 .voyage-island-pic {
-  width: 72px;
-  height: 56px;
-  object-fit: cover;
+  width: 88px;
+  height: 72px;
+  flex: 0 0 88px;
+  position: relative;
+  overflow: hidden;
   border: 3px solid var(--wood);
-  background: var(--sea);
-  flex: 0 0 72px;
+  background: #165566;
+}
+
+.voyage-isle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#7ec8d4 0 42%, #0e4a57 42%);
+}
+
+.voyage-isle .isle-sea {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: 0;
+  height: 38%;
+  background: radial-gradient(ellipse at 50% 0, #3aa0b5, #0e4a57 70%);
+}
+
+.voyage-isle .isle-land {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 18%;
+  height: 42%;
+  background: #e2c48a;
+  border: 2px solid #c49a3c;
+  border-radius: 50% 48% 40% 42%;
+}
+
+.voyage-isle .isle-palm {
+  position: absolute;
+  left: 46%;
+  bottom: 40%;
+  width: 4px;
+  height: 28px;
+  background: #6b3a1f;
+}
+
+.voyage-isle .isle-palm::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: -6px;
+  width: 24px;
+  height: 14px;
+  background: #3d6b4f;
+  border-radius: 50% 0 50% 0;
+}
+
+.voyage-isle .isle-crate,
+.voyage-isle .isle-crate.is-2 {
+  position: absolute;
+  bottom: 28%;
+  left: 22%;
+  width: 14px;
+  height: 12px;
+  background: #6b3a1f;
+  border: 2px solid #1a120c;
+  box-shadow: inset 0 0 0 1px #c49a3c;
+}
+
+.voyage-isle .isle-crate.is-2 {
+  left: 40%;
+  height: 16px;
+}
+
+.voyage-isle .isle-pier,
+.voyage-isle .isle-pier.is-2 {
+  position: absolute;
+  bottom: 22%;
+  left: 18%;
+  width: 28%;
+  height: 6px;
+  background: #8a5a2b;
+  transform: rotate(-12deg);
+}
+
+.voyage-isle .isle-pier.is-2 {
+  left: auto;
+  right: 16%;
+  transform: rotate(14deg);
+}
+
+.voyage-isle .isle-stack {
+  position: absolute;
+  bottom: 28%;
+  left: 30%;
+  width: 18px;
+  height: 22px;
+  background: repeating-linear-gradient(#6b3a1f 0 6px, #c49a3c 6px 8px);
+  border: 2px solid #1a120c;
+}
+
+.voyage-isle .isle-bags {
+  position: absolute;
+  bottom: 30%;
+  left: 24%;
+  width: 10px;
+  height: 12px;
+  background: #c49a3c;
+  border-radius: 50% 50% 40% 40%;
+  box-shadow: 14px 0 0 #c49a3c, 7px 10px 0 #c49a3c;
+}
+
+.voyage-isle .isle-split {
+  position: absolute;
+  bottom: 26%;
+  left: 32%;
+  width: 28px;
+  height: 18px;
+  background: linear-gradient(90deg, #6b3a1f 50%, #c49a3c 50%);
+  border: 2px solid #1a120c;
+  border-radius: 2px 2px 6px 6px;
+}
+
+.voyage-isle .isle-buoy,
+.voyage-isle .isle-buoy.is-2,
+.voyage-isle .isle-buoy.is-3 {
+  position: absolute;
+  bottom: 20%;
+  left: 18%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c49a3c;
+  border: 2px solid #1a120c;
+}
+
+.voyage-isle .isle-buoy.is-2 {
+  left: 42%;
+  bottom: 28%;
+}
+
+.voyage-isle .isle-buoy.is-3 {
+  left: 66%;
+  bottom: 22%;
+}
+
+.voyage-isle .isle-purse {
+  position: absolute;
+  bottom: 28%;
+  left: 38%;
+  width: 18px;
+  height: 16px;
+  background: #6b3a1f;
+  border-radius: 40% 40% 30% 30%;
+  border: 2px solid #c49a3c;
+}
+
+.voyage-isle .isle-clock {
+  position: absolute;
+  bottom: 30%;
+  left: 40%;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f7f1dc;
+  border: 3px solid #6b3a1f;
+}
+
+.voyage-isle .isle-rope {
+  position: absolute;
+  bottom: 26%;
+  left: 22%;
+  right: 22%;
+  height: 8px;
+  border-radius: 8px;
+  background: repeating-linear-gradient(90deg, #8a5a2b 0 6px, #c49a3c 6px 8px);
+}
+
+.voyage-isle .isle-tri {
+  position: absolute;
+  bottom: 30%;
+  left: 36%;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 16px solid #3d6b4f;
+}
+
+.voyage-isle .isle-book {
+  position: absolute;
+  bottom: 28%;
+  left: 34%;
+  width: 22px;
+  height: 14px;
+  background: #f7f1dc;
+  border: 2px solid #6b3a1f;
+  box-shadow: 3px 3px 0 #c49a3c;
+}
+
+.voyage-isle .isle-desk {
+  position: absolute;
+  bottom: 24%;
+  left: 22%;
+  right: 22%;
+  height: 16px;
+  background: #6b3a1f;
+  border: 2px solid #1a120c;
+}
+
+.voyage-isle .isle-spit,
+.voyage-isle .isle-spit.is-2 {
+  position: absolute;
+  bottom: 22%;
+  left: 16%;
+  width: 28%;
+  height: 14px;
+  background: #e2c48a;
+  border-radius: 40%;
+}
+
+.voyage-isle .isle-spit.is-2 {
+  left: auto;
+  right: 14%;
+  width: 18%;
+  height: 10px;
 }
 
 .voyage-island-label {
   font-size: 1.05rem;
+}
+
+.voyage-diff {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 14px;
+}
+
+.voyage-diff button {
+  background: var(--foam);
+  min-height: 56px;
+  font-size: 0.9rem;
+}
+
+.voyage-diff button.is-on {
+  background: var(--brass);
 }
 
 .voyage-cabin {
@@ -215,24 +528,88 @@ html[data-math-band="toddler"] .voyage button {
   margin-bottom: 12px;
 }
 
-.voyage-coins {
+.voyage-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 12px 0;
+  flex-direction: column;
+  gap: 16px;
+  margin: 18px 0;
 }
 
-.voyage-coins img {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
+.voyage-actions button,
+.voyage-hear,
+.voyage-cabin #math-start,
+.voyage-cabin #math-stow,
+.voyage-cabin #math-again,
+.voyage-cabin #math-chart,
+.voyage-cabin #math-back {
+  background: var(--foam);
+  width: 100%;
+  margin: 0;
+}
+
+.voyage-cabin #math-start,
+.voyage-cabin #math-stow,
+.voyage-cabin #math-chart {
+  background: var(--brass);
+}
+
+.voyage-coin-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.voyage-coin-svg .c-rim {
+  fill: #d4a54a;
+  stroke: #6b3a1f;
+  stroke-width: 3;
+}
+
+.voyage-coin-svg .c-inner {
+  fill: none;
+  stroke: #f3e2c4;
+  stroke-width: 2;
+}
+
+.voyage-coin-svg .c-hull {
+  fill: #6b3a1f;
+}
+
+.voyage-coin-svg .c-mast {
+  stroke: #1a120c;
+  stroke-width: 2;
+  fill: none;
+}
+
+.voyage-coin-svg .c-sail {
+  fill: #f3e2c4;
+  stroke: #1a120c;
+  stroke-width: 1;
+}
+
+.voyage-coins {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin: 12px 0;
+  max-width: 320px;
+}
+
+.voyage-coin-wrap,
+.voyage-coin-btn {
+  aspect-ratio: 1;
+  min-width: 0;
+  min-height: 0;
+  padding: 4px;
+  background: transparent;
+  border: 0;
+  display: block;
 }
 
 .voyage-coin-btn {
-  padding: 4px;
+  border: 3px solid var(--ink);
   background: var(--sail);
-  min-width: 72px;
-  min-height: 72px;
+  min-height: 64px;
 }
 
 .voyage-coin-btn.is-tapped {
@@ -247,6 +624,11 @@ html[data-math-band="toddler"] .voyage button {
   gap: 10px;
 }
 
+.voyage-choices[data-n="1"],
+.voyage-choices[data-n="3"] {
+  grid-template-columns: 1fr;
+}
+
 .voyage-tables {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -254,6 +636,7 @@ html[data-math-band="toddler"] .voyage button {
 .voyage-choices button,
 .voyage-tables button {
   font-size: 1.35rem;
+  width: 100%;
 }
 
 .voyage-choices button.is-wrong {
@@ -269,6 +652,19 @@ html[data-math-band="toddler"] .voyage button {
   min-height: 1.4em;
   margin: 10px 0 0;
   font-weight: 700;
+}
+
+.voyage-teach {
+  background: #f7f1dc;
+  border-left: 8px solid var(--brass);
+  padding: 10px 12px;
+  margin-top: 8px;
+}
+
+.voyage-teach-eq {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 1.15rem;
+  margin: 8px 0;
 }
 
 .voyage-doubloons {
@@ -287,30 +683,6 @@ html[data-math-band="toddler"] .voyage button {
 .voyage-paper li {
   margin: 12px 0;
   font-size: 1.15rem;
-}
-
-.voyage-hear,
-.voyage-cabin #math-start,
-.voyage-cabin #math-stow,
-.voyage-cabin #math-again,
-.voyage-cabin #math-chart,
-.voyage-cabin #math-back {
-  background: var(--foam);
-  margin-bottom: 10px;
-  width: 100%;
-}
-
-.voyage-cabin #math-start,
-.voyage-cabin #math-stow,
-.voyage-cabin #math-chart {
-  background: var(--brass);
-}
-
-.voyage img.slot {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  background: #9aa7a3;
 }
 
 .voyage-clock {
@@ -355,27 +727,85 @@ html[data-math-band="toddler"] .voyage button {
   border: 3px solid var(--ink);
 }
 
-.voyage-frac span {
+.voyage-frac span,
+.voyage-frac button {
   background: #ecd6b0;
+  min-height: 40px;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  border-right: 2px solid var(--ink);
 }
 
-.voyage-frac span.is-filled {
+.voyage-frac span.is-filled,
+.voyage-frac button.is-filled {
   background: var(--brass);
 }
 
-.voyage-place .voyage-crate {
-  display: inline-block;
+.voyage-tenths {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 2px;
+  height: 28px;
+  margin: 8px 0 12px;
+  border: 2px solid var(--ink);
+}
+
+.voyage-tenths i {
+  background: #ecd6b0;
+  display: block;
+}
+
+.voyage-tenths i.is-on {
+  background: var(--brass);
+}
+
+.voyage-place .voyage-crate,
+.voyage-crate-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 6px 6px 6px 0;
-  padding: 12px;
+  padding: 8px;
   min-height: 64px;
-  background: var(--wood);
+  min-width: 64px;
+  background: linear-gradient(#8a5a2b, #6b3a1f);
   color: var(--sail);
   border: 3px solid var(--ink);
+  box-shadow: inset 0 0 0 3px var(--brass);
   font-family: "Trebuchet MS", sans-serif;
 }
 
-.voyage-place .voyage-crate.hun {
-  background: #4a2414;
+.voyage-place .voyage-crate.hun,
+.voyage-crate-box.hun {
+  background: linear-gradient(#4a2414, #2a140c);
+}
+
+.voyage-bundle-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.voyage-ones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0;
+}
+
+.voyage-ones button {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 4px;
+  background: var(--sail);
+}
+
+.voyage-ones button.is-sel {
+  background: #e8c56a;
 }
 
 .voyage-piles {
@@ -418,20 +848,203 @@ html[data-math-band="toddler"] .voyage button {
   background: var(--wood);
 }
 
-.voyage-board {
+.voyage-board,
+.voyage-longboard {
   font-family: "Trebuchet MS", monospace;
   font-size: 1.2rem;
   background: #f7f1dc;
   border: 3px dashed var(--wood);
   padding: 12px;
   overflow-x: auto;
+  white-space: pre;
+  line-height: 1.35;
+}
+
+.voyage-longboard .is-hot {
+  background: #e8c56a;
 }
 
 .voyage-array {
   display: grid;
   gap: 6px;
-  justify-content: start;
+  width: 100%;
+  max-width: 100%;
   margin: 12px 0;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+}
+
+.voyage-array .voyage-cell {
+  aspect-ratio: 1;
+  min-width: 0;
+  min-height: 0;
+  max-width: 72px;
+  width: 100%;
+  padding: 4px;
+  background: rgba(14, 74, 87, 0.1);
+  border: 2px dashed var(--rope);
+}
+
+.voyage-array .voyage-cell.is-on {
+  background: var(--sail);
+  border-style: solid;
+  border-color: var(--ink);
+}
+
+html[data-math-band="baby"] .voyage-array .voyage-cell,
+html[data-math-band="toddler"] .voyage-array .voyage-cell {
+  min-height: 64px;
+}
+
+.voyage-tenframe {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 6px;
+  max-width: 300px;
+  border: 6px solid var(--wood);
+  background: #f7f1dc;
+  padding: 8px;
+  margin: 12px 0;
+}
+
+.voyage-tenframe button {
+  aspect-ratio: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 4px;
+  background: #ecd6b0;
+}
+
+.voyage-tenframe button.is-on {
+  background: var(--sail);
+}
+
+.voyage-dec {
+  display: grid;
+  grid-template-columns: auto repeat(var(--dcols, 5), minmax(36px, 1fr));
+  gap: 4px;
+  align-items: center;
+  font-family: "Trebuchet MS", monospace;
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 12px 0;
+  overflow-x: auto;
+}
+
+.voyage-dec span {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid transparent;
+}
+
+.voyage-dec .pt {
+  color: var(--wood);
+  font-weight: 900;
+}
+
+.voyage-dec .is-hot {
+  border-bottom-color: var(--brass);
+  background: #e8c56a;
+}
+
+.voyage-dec .sum-line {
+  border-top: 3px solid var(--ink);
+}
+
+.voyage-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.voyage-pad button {
+  font-size: 1.3rem;
+}
+
+.voyage-entry {
+  min-height: 48px;
+  font-family: "Trebuchet MS", monospace;
+  font-size: 1.4rem;
+  background: #f7f1dc;
+  border: 3px solid var(--wood);
+  padding: 8px;
+  margin: 8px 0 0;
+}
+
+.voyage-hold {
+  font-size: 1.4rem;
+  margin: 8px 0;
+}
+
+.voyage-shape {
+  width: 120px;
+  height: 120px;
+  margin: 12px auto;
+}
+
+.voyage-shape.is-circle {
+  border-radius: 50%;
+  background: var(--brass);
+  border: 6px solid var(--ink);
+}
+
+.voyage-shape.is-square {
+  background: var(--sail);
+  border: 6px solid var(--ink);
+}
+
+.voyage-shape.is-triangle {
+  width: 0;
+  height: 0;
+  background: transparent;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 110px solid var(--wood);
+}
+
+.voyage-money-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.voyage-money-coin {
+  width: 64px;
+  height: 64px;
+  position: relative;
+}
+
+.voyage-money-coin.is-penny .c-rim {
+  fill: #b87333;
+}
+
+.voyage-money-coin.is-nickel .c-rim {
+  fill: #c5c8ce;
+}
+
+.voyage-money-coin.is-dime {
+  width: 52px;
+  height: 52px;
+}
+
+.voyage-money-coin.is-dime .c-rim {
+  fill: #c5c8ce;
+}
+
+.voyage-money-coin.is-quarter {
+  width: 72px;
+  height: 72px;
+}
+
+.voyage-money-coin small {
+  display: block;
+  text-align: center;
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 0.7rem;
 }
 
 .voyage-peek,
@@ -443,15 +1056,42 @@ html[data-math-band="toddler"] .voyage button {
   align-items: center;
 }
 
-.voyage-chest,
+.voyage-chest-art,
 .voyage-ship-tilt {
   width: 100%;
   height: 140px;
-  object-fit: cover;
 }
 
 .voyage-rock.is-tilt .voyage-ship-tilt {
   transform: rotate(-6deg);
+}
+
+.voyage-chest-box {
+  width: 140px;
+  height: 90px;
+  margin: 16px auto;
+  background: linear-gradient(#8a5a2b, #6b3a1f);
+  border: 4px solid var(--ink);
+  border-radius: 4px 4px 10px 10px;
+  box-shadow: inset 0 0 0 4px var(--brass);
+  position: relative;
+}
+
+.voyage-chest-box::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: -18px;
+  height: 22px;
+  background: #6b3a1f;
+  border: 4px solid var(--ink);
+  border-bottom: 0;
+  border-radius: 40% 40% 0 0;
+}
+
+.voyage-chest-box.is-open {
+  background: linear-gradient(#c49a3c 30%, #6b3a1f 30%);
 }
 
 .voyage-hint {

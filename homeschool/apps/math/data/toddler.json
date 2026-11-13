@@ -88,9 +88,9 @@
     {
       "id": "t-c1",
       "island": "count",
-      "kind": "choice",
-      "prompt": "How many coins?",
-      "audioText": "How many coins?",
+      "kind": "tap",
+      "prompt": "Tap the coin. How many?",
+      "audioText": "Tap the coin. How many?",
       "answer": "1",
       "choices": [
         "3",
@@ -102,14 +102,15 @@
         "toddler",
         "count"
       ],
-      "count": 1
+      "count": 1,
+      "teach": "Tap the coin. Hear one. One coin."
     },
     {
       "id": "t-c2",
       "island": "count",
-      "kind": "choice",
-      "prompt": "How many coins?",
-      "audioText": "How many coins?",
+      "kind": "tap",
+      "prompt": "Tap each coin. How many?",
+      "audioText": "Tap each coin. How many?",
       "answer": "2",
       "choices": [
         "2",
@@ -121,14 +122,15 @@
         "toddler",
         "count"
       ],
-      "count": 2
+      "count": 2,
+      "teach": "Tap each coin. Two coins."
     },
     {
       "id": "t-c3",
       "island": "count",
-      "kind": "choice",
-      "prompt": "How many coins?",
-      "audioText": "How many coins?",
+      "kind": "tap",
+      "prompt": "Tap each coin. How many now?",
+      "audioText": "Tap each coin. How many now?",
       "answer": "3",
       "choices": [
         "4",
@@ -140,14 +142,15 @@
         "toddler",
         "count"
       ],
-      "count": 3
+      "count": 3,
+      "teach": "Three taps, three coins."
     },
     {
       "id": "t-c4",
       "island": "count",
-      "kind": "choice",
-      "prompt": "How many coins?",
-      "audioText": "How many coins?",
+      "kind": "tap",
+      "prompt": "Tap every coin in this pile. How many?",
+      "audioText": "Tap every coin in this pile. How many?",
       "answer": "4",
       "choices": [
         "3",
@@ -159,14 +162,15 @@
         "toddler",
         "count"
       ],
-      "count": 4
+      "count": 4,
+      "teach": "Four coins. The last number you say is 4."
     },
     {
       "id": "t-c5",
       "island": "count",
-      "kind": "choice",
-      "prompt": "How many coins?",
-      "audioText": "How many coins?",
+      "kind": "tap",
+      "prompt": "Tap all five coins. How many?",
+      "audioText": "Tap all five coins. How many?",
       "answer": "5",
       "choices": [
         "5",
@@ -178,7 +182,8 @@
         "toddler",
         "count"
       ],
-      "count": 5
+      "count": 5,
+      "teach": "Five coins. One for each tap."
     },
     {
       "id": "t-more-41",
@@ -362,7 +367,7 @@
     {
       "id": "t-match-1",
       "island": "match",
-      "kind": "choice",
+      "kind": "tap",
       "prompt": "Count, then pick the matching number.",
       "audioText": "Count, then pick the matching number.",
       "answer": "1",
@@ -376,12 +381,13 @@
         "toddler",
         "match"
       ],
-      "count": 1
+      "count": 1,
+      "teach": "One coin matches the number 1."
     },
     {
       "id": "t-match-3",
       "island": "match",
-      "kind": "choice",
+      "kind": "tap",
       "prompt": "These coins match which number?",
       "audioText": "These coins match which number?",
       "answer": "3",
@@ -395,12 +401,13 @@
         "toddler",
         "match"
       ],
-      "count": 3
+      "count": 3,
+      "teach": "Three coins. The matching number is 3."
     },
     {
       "id": "t-match-5",
       "island": "match",
-      "kind": "choice",
+      "kind": "tap",
       "prompt": "Stamp the number that matches this pile.",
       "audioText": "Stamp the number that matches this pile.",
       "answer": "5",
@@ -414,7 +421,8 @@
         "toddler",
         "match"
       ],
-      "count": 5
+      "count": 5,
+      "teach": "Five coins. The matching number is 5."
     }
   ]
 }

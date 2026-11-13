@@ -20,10 +20,10 @@ e-f-83,8 + 3 =,11,8 + 3 =,math early facts
 e-f-9m4,9 − 4 =,5,9 − 4 =,math early facts
 e-f-12m7,12 − 7 =,5,12 − 7 =,math early facts
 e-f-15m6,15 − 6 =,9,15 − 6 =,math early facts
-e-p-34,What number is 3 tens and 4 ones?,34,What number is 3 tens and 4 ones?,math early place
-e-p-50,What number is 5 tens and 0 ones?,50,What number is 5 tens and 0 ones?,math early place
+e-p-34,3 ten-crates and 4 ones. What number?,34,3 ten-crates and 4 ones. What number?,math early place
+e-p-50,5 ten-crates and 0 ones. What number?,50,5 ten-crates and 0 ones. What number?,math early place
 e-p-408,40 + 8 =,48,40 + 8 =,math early place
-e-p-27,2 tens and 17 ones bundles to,37,Two tens and seventeen ones. Bundle the extra ten. What number?,math early place
+e-p-27,Bundle extra ones: 2 tens and 17 ones. What number?,37,Two tens and seventeen ones. Bundle ten ones into a crate. What number?,math early place
 e-r-275,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,math early regroup
 e-r-467,46 + 7 =,53,46 + 7 =,math early regroup
 e-r-6010,60 − 10 =,50,60 − 10 =,math early regroup
@@ -49,25 +49,21 @@ e-sh-sides,A triangle has this many sides:,3,A triangle has this many sides:,mat
 e-st-18,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,15,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,math early story
 e-st-20,A chest has 12 coins. Nell spends 4. How many are left?,8,A chest has 12 coins. Nell spends 4. How many are left?,math early story
 e-st-equal,3 coils of 5 coins. How many coins in all?,15,3 coils of 5 coins. How many coins in all?,math early story
-e-row-34,3 rows of 4 coins. How many?,12,3 rows of 4 coins. How many?,math early rows
+e-row-34,Tap coins into 3 rows of 4. How many?,12,Tap coins into 3 rows of 4. How many?,math early rows
 e-row-444,4 + 4 + 4 =,12,4 + 4 + 4 =,math early rows
-e-row-25,2 rows of 5 coins. How many?,10,2 rows of 5 coins. How many?,math early rows
-s-c6,"How many coins?
-● ● ● ● ● ●",6,How many coins?,math preschool count
-s-c7,"Count this crate. How many?
-● ● ● ● ● ● ●",7,Count this crate. How many?,math preschool count
-s-c8,"How many coins on this dock?
-● ● ● ● ● ● ● ●",8,How many coins on this dock?,math preschool count
-s-c9,"Nine coins. Which number?
-● ● ● ● ● ● ● ● ●",9,Nine coins. Which number?,math preschool count
-s-c10,"A full ten crate. How many?
-● ● ● ● ● ● ● ● ● ●",10,A full ten crate. How many?,math preschool count
-s-b32,3 coins and 2 more. How many?,5,3 coins and 2 more. How many?,math preschool bond
-s-b43,4 coins and 3 more. How many?,7,4 coins and 3 more. How many?,math preschool bond
-s-b64,6 coins and 4 more. How many?,10,6 coins and 4 more. How many?,math preschool bond
-s-b55,5 coins and 5 more. How many?,10,5 coins and 5 more. How many?,math preschool bond
-s-b72,7 coins and 2 more. How many?,9,7 coins and 2 more. How many?,math preschool bond
-s-b19,1 coin and 9 more. How many?,10,1 coin and 9 more. How many?,math preschool bond
+e-row-25,Tap coins into 2 rows of 5. How many?,10,Tap coins into 2 rows of 5. How many?,math early rows
+s-c6,Drop 6 coins in the ten-frame. How many are filled?,6,Drop 6 coins in the ten-frame. How many are filled?,math preschool count
+s-c7,Drop 7 coins in the ten-frame. How many are filled?,7,Drop 7 coins in the ten-frame. How many are filled?,math preschool count
+s-c8,Fill the ten-frame with 8 coins. How many empty?,2,Fill the ten-frame with 8 coins. How many empty?,math preschool count
+s-c9,Fill the ten-frame with 9 coins. How many empty?,1,Fill the ten-frame with 9 coins. How many empty?,math preschool count
+s-c10,"Fill every cell. How many coins in a full ten-frame?
+● ● ● ● ● ● ● ● ● ●",10,Fill every cell. How many coins in a full ten-frame?,math preschool count
+s-b32,Hold 3. Count on 2 more. How many?,5,Hold 3. Count on 2 more. How many?,math preschool bond
+s-b43,Hold 4. Count on 3 more. How many?,7,Hold 4. Count on 3 more. How many?,math preschool bond
+s-b64,Hold 6. Count on 4 more. How many?,10,Hold 6. Count on 4 more. How many?,math preschool bond
+s-b55,Hold 5. Count on 5 more. How many?,10,Hold 5. Count on 5 more. How many?,math preschool bond
+s-b72,Hold 7. Count on 2 more. How many?,9,Hold 7. Count on 2 more. How many?,math preschool bond
+s-b19,Hold 1. Count on 9 more. How many?,10,Hold 1. Count on 9 more. How many?,math preschool bond
 s-after6,What number comes after 6?,7,What number comes after 6?,math preschool sense
 s-before10,What number comes before 10?,9,What number comes before 10?,math preschool sense
 s-big,"Which number is bigger, 4 or 9?",9,"Which number is bigger, 4 or 9?",math preschool sense
@@ -167,16 +163,16 @@ m-mul-12x8,12 × 8 =,96,12 times 8.,math primary times
 m-div-96d12,96 ÷ 12 =,8,96 divided by 12.,math primary share
 m-mul-12x12,12 × 12 =,144,12 times 12.,math primary times
 m-div-144d12,144 ÷ 12 =,12,144 divided by 12.,math primary share
-t-c1,"How many coins?
-●",1,How many coins?,math toddler count
-t-c2,"How many coins?
-● ●",2,How many coins?,math toddler count
-t-c3,"How many coins?
-● ● ●",3,How many coins?,math toddler count
-t-c4,"How many coins?
-● ● ● ●",4,How many coins?,math toddler count
-t-c5,"How many coins?
-● ● ● ● ●",5,How many coins?,math toddler count
+t-c1,"Tap the coin. How many?
+●",1,Tap the coin. How many?,math toddler count
+t-c2,"Tap each coin. How many?
+● ●",2,Tap each coin. How many?,math toddler count
+t-c3,"Tap each coin. How many now?
+● ● ●",3,Tap each coin. How many now?,math toddler count
+t-c4,"Tap every coin in this pile. How many?
+● ● ● ●",4,Tap every coin in this pile. How many?,math toddler count
+t-c5,"Tap all five coins. How many?
+● ● ● ● ●",5,Tap all five coins. How many?,math toddler count
 t-more-41,Which pile has more coins?,4,Left pile has four. Right pile has one. Which pile has more?,math toddler sense
 t-more-25,Which pile has more coins this time?,5,Left pile has two. Right pile has five. Which pile has more?,math toddler sense
 t-few-31,Which pile has fewer coins?,1,Left pile has three. Right pile has one. Which pile has fewer?,math toddler sense
@@ -192,7 +188,7 @@ t-match-3,"These coins match which number?
 ● ● ●",3,These coins match which number?,math toddler match
 t-match-5,"Stamp the number that matches this pile.
 ● ● ● ● ●",5,Stamp the number that matches this pile.,math toddler match
-u-fr-halfdec,1/2 as a decimal is,0.5,1/2 as a decimal is,math upper frac
+u-fr-halfdec,Shade 1 of 2 equal parts. 1/2 as a decimal is,0.5,Shade 1 of 2 equal parts. 1/2 as a decimal is,math upper frac
 u-fr-25,0.25 as a fraction is,1/4,0.25 as a fraction is,math upper frac
 u-fr-50p,50% of 10 is,5,50% of 10 is,math upper frac
 u-fr-3tenth,3/10 as a decimal is,0.3,3/10 as a decimal is,math upper frac
@@ -200,7 +196,7 @@ u-fr-like,1/5 + 2/5 =,3/5,1/5 + 2/5 =,math upper frac
 u-fr-eq,1/2 is equivalent to,2/4,1/2 is equivalent to,math upper frac
 u-fr-of,3/4 of 12 is,9,3/4 of 12 is,math upper frac
 u-fr-mixed,1 1/2 as an improper fraction is,3/2,1 1/2 as an improper fraction is,math upper frac
-u-d-add,Line up 1.2 + 0.45. The sum is,1.65,Line up 1.2 + 0.45. The sum is,math upper dec
+u-d-add,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",1.65,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",math upper dec
 u-d-tenth,7 tenths as a decimal is,0.7,7 tenths as a decimal is,math upper dec
 u-d-hund,0.40 equals how many tenths?,4,0.40 equals how many tenths?,math upper dec
 u-d-pct,0.5 = what percent?,50%,0.5 = what percent?,math upper dec
@@ -221,11 +217,11 @@ u-sh-sq,Square side 5. Area?,25,Square side 5. Area?,math upper shape
 u-sh-tri,"Triangle base 8, height 5. Area?",20,"Triangle base 8, height 5. Area?",math upper shape
 u-sh-circA,Circle r = 2. Area ≈ (π = 3.14),12.56,Circle r = 2. Area ≈ (π = 3.14),math upper shape
 u-sh-circC,Circle r = 2. Circumference ≈ (π = 3.14),12.56,Circle r = 2. Circumference ≈ (π = 3.14),math upper shape
-u-long-howmany,Long divide 84 ÷ 4. First: how many 4s in 8?,2,Long divide 84 ÷ 4. First: how many 4s in 8?,math upper long
-u-long-bring,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",1,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",math upper long
-u-long-84,So 84 ÷ 4 =,21,So 84 ÷ 4 =,math upper long
-u-long-23x4,"23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",9,"23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",math upper long
-u-long-92,So 23 × 4 =,92,So 23 × 4 =,math upper long
+u-long-84,"Long divide 84 ÷ 4. Divide, multiply, subtract, bring down.",21,"Long divide 84 ÷ 4. Divide, multiply, subtract, bring down.",math upper long
+u-long-145,"Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",29,"Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",math upper long
+u-long-23x4,"Long multiply 23 × 4. Ones, then tens.",92,"Long multiply 23 × 4. Ones, then tens.",math upper long
+u-long-36x24,"Long multiply 36 × 24. Ones row, tens row, add.",864,"Long multiply 36 × 24. Ones row, tens row, add.",math upper long
+u-long-48x6,"Long multiply 48 × 6. Ones, then tens.",288,"Long multiply 48 × 6. Ones, then tens.",math upper long
 u-law-com,4 × 6 and 6 × 4. Same product?,yes,4 × 6 and 6 × 4. Same product?,math upper laws
 u-law-id,9 × 1 =,9,9 × 1 =,math upper laws
 u-law-zero,9 × 0 =,0,9 × 0 =,math upper laws
