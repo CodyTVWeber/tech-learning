@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Reach the tent top">
+  <title>Reach the tent top</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing Reach the tent top. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="121.0" y1="162.5" x2="105.5" y2="272.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="121.0" y1="162.5" x2="136.5" y2="272.6" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="105.5" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="93.5" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="136.5" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="124.5" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="121.0" y1="62.7" x2="96.2" y2="24.9" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="121.0" y1="62.7" x2="145.8" y2="24.9" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="96.2" cy="24.9" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="145.8" cy="24.9" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M95.0 66.7 L147.0 66.7 L143.0 170.5 L99.0 170.5 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="121.0" cy="78.7" r="3" fill="#e8d48a"/><circle cx="121.0" cy="92.7" r="3" fill="#e8d48a"/><circle cx="121.0" cy="106.7" r="3" fill="#e8d48a"/>
+  <path d="M111.0 64.7 L121.0 78.7 L131.0 64.7" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="121.0" y1="62.7" x2="121.0" y2="38.6" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="121.0" cy="38.6" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="116.0" cy="36.6" r="1.6" fill="#1a1a14"/><circle cx="126.0" cy="36.6" r="1.6" fill="#1a1a14"/><path d="M116.0 44.6 Q121.0 48.6 126.0 44.6" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="107.0" y="10.6" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="101.0" y="24.6" width="40" height="5" rx="1" fill="#171e2b"/><rect x="107.0" y="20.6" width="28" height="4" fill="#c4a35a"/>
+  
+</svg>

@@ -62,9 +62,27 @@ body {
   color: var(--navy);
   border-bottom: 3px solid var(--navy);
 }
-html[data-runner] .untested-banner,
+html[data-runner] .untested-banner { display: none; }
 html[data-runner] header.top {
-  display: none;
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  top: auto;
+  left: auto;
+  width: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  z-index: 40;
+  gap: 0;
+}
+html[data-runner] header.top .brand,
+html[data-runner] header.top #home-btn-top,
+html[data-runner] header.top #band-chip,
+html[data-runner] header.top #star-count { display: none; }
+html[data-runner] #quiet-btn {
+  background: var(--navy);
+  box-shadow: var(--shadow);
 }
 .brand {
   display: flex;
@@ -235,22 +253,15 @@ html[data-runner] header.top {
 }
 .move-stage h2 { font-size: 2rem; margin: 0 0 8px; }
 .pose-wrap {
-  width: min(168px, 55vw);
-  height: 200px;
+  width: min(220px, 72vw);
   margin: 0 auto 8px;
 }
-.pose-fig {
+.pose-still {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
-}
-.pose-fig circle { fill: var(--cream); }
-.pose-fig path {
-  fill: none;
-  stroke: var(--cream);
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+  border: 2px solid var(--brass);
+  background: var(--navy-2);
 }
 .move-how { max-width: 28em; margin: 0 auto; color: var(--cream); }
 .beat-lamp {
@@ -286,35 +297,75 @@ html[data-runner] header.top {
 
 .wagon-track {
   position: relative;
-  height: 140px;
+  height: 34vh;
+  min-height: 210px;
   overflow: hidden;
-  background: #2a2418;
+  background: #1a140e;
   border: 2px solid var(--brass);
   margin-bottom: 12px;
 }
 .wagon {
   position: absolute;
-  bottom: 18px;
-  width: 120px;
+  top: 0;
+  height: 100%;
+  width: 130%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
   transition: left 0.9s linear;
 }
 @media (prefers-reduced-motion: reduce) {
-  .wagon { transition: none; }
+  .wagon, .tent-flap { transition: none; }
   .beat-lamp.on { box-shadow: none; }
 }
-.wagon img { width: 120px; height: 80px; object-fit: cover; border: 2px solid var(--brass); }
 
-.tent-flap {
-  min-height: 180px;
-  background: var(--crimson);
+.peek-show {
+  position: relative;
+  min-height: 38vh;
+  height: 38vh;
+  overflow: hidden;
   border: 4px solid var(--brass);
+  background: #1a140e;
+  margin-bottom: 12px;
+}
+.peek-show .reveal {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.tent-flap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  min-height: 0;
+  border: 0;
+  margin: 0;
   display: grid;
   place-items: center;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
+  color: var(--cream);
   cursor: pointer;
+  background: repeating-linear-gradient(90deg, #8e1d1a 0 28px, #f3e6c4 28px 42px);
+  transform-origin: left center;
+  transition: transform 0.35s ease;
 }
-.tent-flap.open { background: var(--navy-2); }
+.tent-flap.open { transform: translateX(-94%); }
+.flap-label {
+  background: var(--navy);
+  color: var(--cream);
+  border: 3px solid var(--brass);
+  padding: 12px 16px;
+}
 
+.practice-clock {
+  position: sticky;
+  top: 132px;
+  z-index: 4;
+  background: var(--navy);
+  padding: 8px 0 4px;
+}
+html[data-runner] .practice-clock { top: 8px; }
 .timer {
   font-family: var(--ticket);
   font-size: 3rem;
@@ -383,7 +434,7 @@ html[data-runner] header.top {
   pointer-events: none;
 }
 html:not([data-runner]) .toast {
-  top: 78px;
+  top: 140px;
 }
 
 .progress-peek {

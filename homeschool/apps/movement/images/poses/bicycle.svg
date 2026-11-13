@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Bicycle legs">
+  <title>Bicycle legs</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing Bicycle legs. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="148.9" y1="183.1" x2="176.8" y2="272.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="148.9" y1="183.1" x2="198.5" y2="224.4" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="176.8" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="164.8" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="198.5" cy="230.4" rx="14" ry="8" fill="#2a1a10"/><rect x="186.5" y="222.4" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="102.4" y1="172.8" x2="90.0" y2="221.0" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="102.4" y1="172.8" x2="136.5" y2="138.4" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="90.0" cy="221.0" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="136.5" cy="138.4" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M76.4 176.8 L128.4 176.8 L170.9 191.1 L126.9 191.1 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="148.9" cy="188.8" r="3" fill="#e8d48a"/><circle cx="148.9" cy="202.8" r="3" fill="#e8d48a"/><circle cx="148.9" cy="216.8" r="3" fill="#e8d48a"/>
+  <path d="M92.4 174.8 L102.4 188.8 L112.4 174.8" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="102.4" y1="172.8" x2="83.8" y2="165.9" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="83.8" cy="165.9" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="78.8" cy="163.9" r="1.6" fill="#1a1a14"/><circle cx="88.8" cy="163.9" r="1.6" fill="#1a1a14"/><path d="M78.8 171.9 Q83.8 175.9 88.8 171.9" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="69.8" y="137.9" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="63.8" y="151.9" width="40" height="5" rx="1" fill="#171e2b"/><rect x="69.8" y="147.9" width="28" height="4" fill="#c4a35a"/>
+  
+</svg>

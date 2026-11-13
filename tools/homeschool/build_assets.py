@@ -54,6 +54,10 @@ def gen_placeholders(app_dir: Path) -> None:
         man = json.loads(man_path.read_text())
         for img in man.get("images", []):
             dest = app_dir / "images" / img["file"]
+            # Original stills (svg, jpg, and any non-png) stay as authored.
+            # Flat swatches are only for missing png slots.
+            if dest.suffix.lower() != ".png":
+                continue
             w, h = int(img.get("width", 256)), int(img.get("height", 256))
             write_png(dest, w, h, slot_tint(app_dir.name, img["file"]))
     assets = json.loads((app_dir / "assets.json").read_text())

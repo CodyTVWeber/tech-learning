@@ -7,8 +7,17 @@
     voiceReady: typeof window !== "undefined" && "speechSynthesis" in window
   };
 
+  function soundOff() {
+    if (AudioEngine.quiet) return true;
+    try {
+      if (window.HS && typeof window.HS.muted === "function" && window.HS.muted()) return true;
+      if (localStorage.getItem("hs.mute") === "1") return true;
+    } catch (e) { /* storage blocked */ }
+    return false;
+  }
+
   function ensure() {
-    if (AudioEngine.quiet) return null;
+    if (soundOff()) return null;
     const AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) return null;
     if (!AudioEngine.ctx) {
@@ -43,7 +52,7 @@
   };
 
   AudioEngine.speak = function (text) {
-    if (!text || AudioEngine.quiet || !AudioEngine.voiceReady) return;
+    if (!text || soundOff() || !AudioEngine.voiceReady) return;
     try {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);
