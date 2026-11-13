@@ -1,0 +1,46 @@
+{
+  "decks": [
+    {
+      "id": "singing-baby",
+      "file": "singing-baby.apkg",
+      "csv": "cards.csv",
+      "band": "baby",
+      "cards": 15
+    },
+    {
+      "id": "singing-toddler",
+      "file": "singing-toddler.apkg",
+      "csv": "cards.csv",
+      "band": "toddler",
+      "cards": 26
+    },
+    {
+      "id": "singing-preschool",
+      "file": "singing-preschool.apkg",
+      "csv": "cards.csv",
+      "band": "preschool",
+      "cards": 36
+    },
+    {
+      "id": "singing-early",
+      "file": "singing-early.apkg",
+      "csv": "cards.csv",
+      "band": "early",
+      "cards": 44
+    },
+    {
+      "id": "singing-primary",
+      "file": "singing-primary.apkg",
+      "csv": "cards.csv",
+      "band": "primary",
+      "cards": 67
+    },
+    {
+      "id": "singing-upper",
+      "file": "singing-upper.apkg",
+      "csv": "cards.csv",
+      "band": "upper",
+      "cards": 74
+    }
+  ]
+}

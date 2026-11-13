@@ -69,6 +69,22 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 
+.untested-banner {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  margin: 0;
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--soil);
+  background: var(--lantern);
+  border-bottom: 4px solid var(--ochre-deep);
+  box-shadow: 0 4px 0 #1a1208;
+}
+
 .app {
   position: relative;
   z-index: 1;
