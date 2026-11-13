@@ -1,0 +1,381 @@
+/* Shepherd's Hillside — linen, ochre, olive, lantern gold. Not purple. Not glass. */
+:root {
+  --soil: #3d2a14;
+  --bark: #5c3b1e;
+  --ochre: #c4a35a;
+  --ochre-deep: #9a7a38;
+  --linen: #f3ead6;
+  --cream: #fbf6ea;
+  --olive: #6b7c4a;
+  --olive-deep: #3f4c2c;
+  --terracotta: #a45a32;
+  --lantern: #e8b86d;
+  --night: #1a2744;
+  --star: #f4e6b3;
+  --sheep: #efe6d4;
+  --ink: #2a1c10;
+  --mist: rgba(243, 234, 214, 0.92);
+  --touch: 64px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  color: var(--ink);
+  background: var(--soil);
+  background-image:
+    radial-gradient(ellipse at 20% 0%, #7a5a2e 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 10%, #4a3420 0%, transparent 45%),
+    linear-gradient(180deg, #5a4024 0%, #3d2a14 38%, #2a1c10 100%);
+  min-height: 100dvh;
+}
+
+body.band-baby .touchy,
+body.band-toddler .touchy,
+body.band-preschool .touchy,
+body.band-early .touchy {
+  min-height: var(--touch);
+  min-width: var(--touch);
+}
+
+img { max-width: 100%; display: block; }
+
+.sky {
+  position: relative;
+  overflow: hidden;
+  min-height: 100dvh;
+}
+.sky::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 42%;
+  background:
+    radial-gradient(120% 80% at 10% 100%, #6b7c4a 0%, transparent 55%),
+    radial-gradient(90% 70% at 70% 100%, #8a9a5c 0%, transparent 50%),
+    radial-gradient(70% 60% at 40% 110%, #4e5d32 0%, transparent 50%);
+  pointer-events: none;
+}
+.sky::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255,255,255,0.015) 0 1px,
+    transparent 1px 3px
+  );
+  pointer-events: none;
+}
+
+.app {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 12px 12px 96px;
+}
+
+.hero {
+  position: relative;
+  border-radius: 28px 28px 8px 8px;
+  overflow: hidden;
+  border: 3px solid #2a1c10;
+  box-shadow: 0 10px 0 #1a1208;
+  margin-bottom: 14px;
+}
+.hero img { width: 100%; height: 168px; object-fit: cover; filter: saturate(0.92) contrast(1.05); }
+.hero .caption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 10px 14px;
+  background: linear-gradient(transparent, rgba(26, 18, 8, 0.78));
+  color: var(--linen);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mast {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 4px 10px;
+  color: var(--linen);
+}
+.mast h1 {
+  margin: 0;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 0 #1a1208;
+}
+.mast .band-chip {
+  font-size: 0.85rem;
+  background: var(--ochre);
+  color: var(--soil);
+  border: 2px solid #2a1c10;
+  padding: 6px 10px;
+  border-radius: 999px;
+  min-height: 40px;
+}
+
+.panel {
+  background: var(--linen);
+  background-image:
+    repeating-linear-gradient(90deg, rgba(92,59,30,0.04) 0 2px, transparent 2px 7px),
+    repeating-linear-gradient(0deg, rgba(92,59,30,0.03) 0 1px, transparent 1px 8px);
+  border: 3px solid #2a1c10;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 8px 8px 0 #1a1208;
+  margin-bottom: 14px;
+}
+
+.kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--olive-deep);
+  margin: 0 0 6px;
+}
+h2 { margin: 0 0 10px; font-size: 1.35rem; color: var(--soil); }
+p.lead { margin: 0 0 12px; line-height: 1.45; }
+
+.verse {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: var(--soil);
+  margin: 0 0 8px;
+}
+.ref {
+  color: var(--terracotta);
+  font-style: italic;
+  margin: 0 0 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.grid.one { grid-template-columns: 1fr; }
+@media (min-width: 540px) {
+  .grid.four { grid-template-columns: 1fr 1fr; }
+}
+
+.tile, .btn, .choice {
+  font-family: inherit;
+  color: var(--soil);
+  background: var(--cream);
+  border: 3px solid #2a1c10;
+  border-radius: 16px;
+  padding: 12px 14px;
+  min-height: var(--touch);
+  cursor: pointer;
+  text-align: left;
+  box-shadow: 0 4px 0 #7a5a2e;
+  -webkit-tap-highlight-color: transparent;
+}
+.tile:active, .btn:active, .choice:active { transform: translateY(3px); box-shadow: 0 1px 0 #7a5a2e; }
+.btn.primary { background: var(--ochre); }
+.btn.lantern { background: var(--lantern); }
+.btn.olive { background: #c5d0a8; }
+.btn.wide { width: 100%; }
+.choice.right { background: #cfe0a8; }
+.choice.wrong { background: #e8c0a8; }
+.tile .ico { display: block; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--olive-deep); }
+.tile strong { display: block; font-size: 1.15rem; }
+
+.dock {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 5;
+  display: flex;
+  gap: 6px;
+  padding: 8px;
+  background: #2a1c10;
+  border-top: 3px solid var(--ochre);
+}
+.dock button {
+  flex: 1;
+  min-height: var(--touch);
+  border-radius: 14px;
+  border: 2px solid #1a1208;
+  background: var(--linen);
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--soil);
+}
+.dock button.on { background: var(--ochre); }
+
+.flock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 72px;
+  align-items: end;
+  padding: 8px 0;
+}
+.sheep {
+  width: 56px;
+  height: 40px;
+  position: relative;
+  flex: 0 0 auto;
+}
+.sheep .wool {
+  position: absolute;
+  inset: 6px 4px 8px 8px;
+  background: var(--sheep);
+  border: 2px solid #2a1c10;
+  border-radius: 40% 40% 36% 36%;
+}
+.sheep .head {
+  position: absolute;
+  right: 2px; top: 10px;
+  width: 16px; height: 18px;
+  background: #cbb89a;
+  border: 2px solid #2a1c10;
+  border-radius: 40%;
+}
+.sheep .leg {
+  position: absolute;
+  bottom: 0;
+  width: 5px; height: 10px;
+  background: #2a1c10;
+}
+.sheep .leg.a { left: 14px; }
+.sheep .leg.b { left: 28px; }
+
+.stars {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.star, .lamp {
+  width: 36px; height: 36px;
+  border: 2px solid #2a1c10;
+}
+.star {
+  background: var(--star);
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.lamp {
+  background: var(--lantern);
+  border-radius: 6px 6px 10px 10px;
+  box-shadow: 0 0 12px rgba(232, 184, 109, 0.7);
+}
+
+.blank {
+  display: inline-block;
+  min-width: 4.5ch;
+  border-bottom: 3px solid var(--terracotta);
+  color: var(--terracotta);
+  font-weight: 700;
+}
+
+.celebrate {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(26, 18, 8, 0.55);
+  z-index: 20;
+}
+.celebrate.show { display: grid; }
+.celebrate .card {
+  background: var(--linen);
+  border: 4px solid #2a1c10;
+  border-radius: 20px;
+  padding: 22px;
+  text-align: center;
+  max-width: 320px;
+  box-shadow: 0 0 0 8px rgba(196, 163, 90, 0.35);
+}
+.celebrate h3 { margin: 8px 0; }
+
+.story-art {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border: 3px solid #2a1c10;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  background: var(--cream);
+  border: 2px solid #2a1c10;
+  border-radius: 12px;
+  padding: 10px 12px;
+  min-height: 56px;
+}
+.row.done { background: #dce6c4; }
+.num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px; height: 36px;
+  background: var(--olive);
+  color: var(--cream);
+  border-radius: 50%;
+  border: 2px solid #2a1c10;
+  font-weight: 700;
+}
+
+.toggle {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.toggle button {
+  flex: 1;
+  min-height: 48px;
+  border: 2px solid #2a1c10;
+  background: var(--cream);
+  font-family: inherit;
+}
+.toggle button.on { background: var(--ochre); }
+
+.tiny { font-size: 0.85rem; color: var(--bark); }
+.hidden { display: none !important; }
+.center { text-align: center; }
+
+.picker {
+  display: grid;
+  gap: 10px;
+}
+.picker button {
+  min-height: 72px;
+  font-size: 1.15rem;
+  font-family: inherit;
+  background: var(--linen);
+  border: 3px solid #2a1c10;
+  border-radius: 16px;
+  box-shadow: 4px 4px 0 #1a1208;
+  text-align: left;
+  padding: 12px 16px;
+}
+.picker button span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--olive-deep);
+}
+
+.first-letters {
+  letter-spacing: 0.18em;
+  font-size: 1.25rem;
+  line-height: 1.7;
+}

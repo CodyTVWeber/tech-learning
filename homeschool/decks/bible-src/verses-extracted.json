@@ -1,0 +1,1435 @@
+[
+  {
+    "id": "gen1-1",
+    "book": "Genesis",
+    "chapter": 1,
+    "start": 1,
+    "end": 1,
+    "ref": "Genesis 1:1",
+    "kjv": "In the beginning God created the heaven and the earth.",
+    "web": "In the beginning, God created the heavens and the earth.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "beginning",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "gen1-3",
+    "book": "Genesis",
+    "chapter": 1,
+    "start": 3,
+    "end": 3,
+    "ref": "Genesis 1:3",
+    "kjv": "And God said, Let there be light: and there was light.",
+    "web": "God said, “Let there be light,” and there was light.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "light",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "gen1-27",
+    "book": "Genesis",
+    "chapter": 1,
+    "start": 27,
+    "end": 27,
+    "ref": "Genesis 1:27",
+    "kjv": "So God created man in his own image, in the image of God created he him; male and female created he them.",
+    "web": "God created man in his own image. In God’s image he created him; male and female he created them.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "image",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "ex20-12",
+    "book": "Exodus",
+    "chapter": 20,
+    "start": 12,
+    "end": 12,
+    "ref": "Exodus 20:12",
+    "kjv": "Honour thy father and thy mother: that thy days may be long upon the land which the LORD thy God giveth thee.",
+    "web": "“Honor your father and your mother, that your days may be long in the land which Yahweh your God gives you.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "father",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "num6-24",
+    "book": "Numbers",
+    "chapter": 6,
+    "start": 24,
+    "end": 24,
+    "ref": "Numbers 6:24",
+    "kjv": "The LORD bless thee, and keep thee:",
+    "web": "‘Yahweh bless you, and keep you.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "bless",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "deut6-5",
+    "book": "Deuteronomy",
+    "chapter": 6,
+    "start": 5,
+    "end": 5,
+    "ref": "Deuteronomy 6:5",
+    "kjv": "And thou shalt love the LORD thy God with all thine heart, and with all thy soul, and with all thy might.",
+    "web": "You shall love Yahweh your God with all your heart, with all your soul, and with all your might.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "heart",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "josh1-9",
+    "book": "Joshua",
+    "chapter": 1,
+    "start": 9,
+    "end": 9,
+    "ref": "Joshua 1:9",
+    "kjv": "Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.",
+    "web": "Haven’t I commanded you? Be strong and courageous. Don’t be afraid. Don’t be dismayed, for Yahweh your God is with you wherever you go.”",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "courage",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "1sam16-7",
+    "book": "1 Samuel",
+    "chapter": 16,
+    "start": 7,
+    "end": 7,
+    "ref": "1 Samuel 16:7",
+    "kjv": "But the LORD said unto Samuel, Look not on his countenance, or on the height of his stature; because I have refused him: for the Lord seeth not as man seeth; for man looketh on the outward appearance, but the LORD looketh on the heart.",
+    "web": "But Yahweh said to Samuel, “Don’t look on his face, or on the height of his stature, because I have rejected him; for I don’t see as man sees. For man looks at the outward appearance, but Yahweh looks at the heart.”",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "heart",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "ps19-1",
+    "book": "Psalms",
+    "chapter": 19,
+    "start": 1,
+    "end": 1,
+    "ref": "Psalms 19:1",
+    "kjv": "The heavens declare the glory of God; and the firmament sheweth his handywork.",
+    "web": "The heavens declare the glory of God. The expanse shows his handiwork.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "heavens",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "ps23-1",
+    "book": "Psalms",
+    "chapter": 23,
+    "start": 1,
+    "end": 1,
+    "ref": "Psalms 23:1",
+    "kjv": "The LORD is my shepherd; I shall not want.",
+    "web": "Yahweh is my shepherd: I shall lack nothing.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "shepherd",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "ps23-2",
+    "book": "Psalms",
+    "chapter": 23,
+    "start": 2,
+    "end": 2,
+    "ref": "Psalms 23:2",
+    "kjv": "He maketh me to lie down in green pastures: he leadeth me beside the still waters.",
+    "web": "He makes me lie down in green pastures. He leads me beside still waters.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "waters",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "ps23-4",
+    "book": "Psalms",
+    "chapter": 23,
+    "start": 4,
+    "end": 4,
+    "ref": "Psalms 23:4",
+    "kjv": "Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me.",
+    "web": "Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me. Your rod and your staff, they comfort me.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "fear",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "ps23-full",
+    "book": "Psalms",
+    "chapter": 23,
+    "start": 1,
+    "end": 6,
+    "ref": "Psalms 23:1-6",
+    "kjv": "The LORD is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul: he leadeth me in the paths of righteousness for his name’s sake. Yea, though I walk through the valley of the shadow of death, I will fear no evil: for thou art with me; thy rod and thy staff they comfort me. Thou preparest a table before me in the presence of mine enemies: thou anointest my head with oil; my cup runneth over. Surely goodness and mercy shall follow me all the days of my life: and I will dwell in the house of the LORD for ever.",
+    "web": "Yahweh is my shepherd: I shall lack nothing. He makes me lie down in green pastures. He leads me beside still waters. He restores my soul. He guides me in the paths of righteousness for his name’s sake. Even though I walk through the valley of the shadow of death, I will fear no evil, for you are with me. Your rod and your staff, they comfort me. You prepare a table before me in the presence of my enemies. You anoint my head with oil. My cup runs over. Surely goodness and loving kindness shall follow me all the days of my life, and I will dwell in Yahweh’s house forever.",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "shepherd",
+    "img": "waters",
+    "passage": true
+  },
+  {
+    "id": "ps56-3",
+    "book": "Psalms",
+    "chapter": 56,
+    "start": 3,
+    "end": 3,
+    "ref": "Psalms 56:3",
+    "kjv": "What time I am afraid, I will trust in thee.",
+    "web": "When I am afraid, I will put my trust in you.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "afraid",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "ps100-1",
+    "book": "Psalms",
+    "chapter": 100,
+    "start": 1,
+    "end": 1,
+    "ref": "Psalms 100:1",
+    "kjv": "Make a joyful noise unto the LORD , all ye lands.",
+    "web": "Shout for joy to Yahweh, all you lands!",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "joyful",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "ps119-11",
+    "book": "Psalms",
+    "chapter": 119,
+    "start": 11,
+    "end": 11,
+    "ref": "Psalms 119:11",
+    "kjv": "Thy word have I hid in mine heart, that I might not sin against thee.",
+    "web": "I have hidden your word in my heart, that I might not sin against you.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "heart",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "ps119-105",
+    "book": "Psalms",
+    "chapter": 119,
+    "start": 105,
+    "end": 105,
+    "ref": "Psalms 119:105",
+    "kjv": "Thy word is a lamp unto my feet, and a light unto my path.",
+    "web": "Your word is a lamp to my feet, and a light for my path.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "lamp",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "ps136-1",
+    "book": "Psalms",
+    "chapter": 136,
+    "start": 1,
+    "end": 1,
+    "ref": "Psalms 136:1",
+    "kjv": "O give thanks unto the LORD ; for he is good: for his mercy endureth for ever.",
+    "web": "Give thanks to Yahweh, for he is good; for his loving kindness endures forever.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "thanks",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "ps139-14",
+    "book": "Psalms",
+    "chapter": 139,
+    "start": 14,
+    "end": 14,
+    "ref": "Psalms 139:14",
+    "kjv": "I will praise thee; for I am fearfully and wonderfully made: marvellous are thy works; and that my soul knoweth right well.",
+    "web": "I will give thanks to you, for I am fearfully and wonderfully made. Your works are wonderful. My soul knows that very well.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "wonderfully",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "prov3-5",
+    "book": "Proverbs",
+    "chapter": 3,
+    "start": 5,
+    "end": 5,
+    "ref": "Proverbs 3:5",
+    "kjv": "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+    "web": "Trust in Yahweh with all your heart, and don’t lean on your own understanding.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "Trust",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "prov3-6",
+    "book": "Proverbs",
+    "chapter": 3,
+    "start": 6,
+    "end": 6,
+    "ref": "Proverbs 3:6",
+    "kjv": "In all thy ways acknowledge him, and he shall direct thy paths.",
+    "web": "In all your ways acknowledge him, and he will make your paths straight.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "paths",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "prov15-1",
+    "book": "Proverbs",
+    "chapter": 15,
+    "start": 1,
+    "end": 1,
+    "ref": "Proverbs 15:1",
+    "kjv": "A soft answer turneth away wrath: but grievous words stir up anger.",
+    "web": "A gentle answer turns away wrath, but a harsh word stirs up anger.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "soft",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "isa9-6",
+    "book": "Isaiah",
+    "chapter": 9,
+    "start": 6,
+    "end": 6,
+    "ref": "Isaiah 9:6",
+    "kjv": "For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace.",
+    "web": "For to us a child is born. To us a son is given; and the government will be on his shoulders. His name will be called Wonderful, Counselor, Mighty God, Everlasting Father, Prince of Peace.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "child",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "isa40-31",
+    "book": "Isaiah",
+    "chapter": 40,
+    "start": 31,
+    "end": 31,
+    "ref": "Isaiah 40:31",
+    "kjv": "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles; they shall run, and not be weary; and they shall walk, and not faint.",
+    "web": "But those who wait for Yahweh will renew their strength. They will mount up with wings like eagles. They will run, and not be weary. They will walk, and not faint.",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "eagles",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "jer29-11",
+    "book": "Jeremiah",
+    "chapter": 29,
+    "start": 11,
+    "end": 11,
+    "ref": "Jeremiah 29:11",
+    "kjv": "For I know the thoughts that I think toward you, saith the LORD , thoughts of peace, and not of evil, to give you an expected end.",
+    "web": "For I know the thoughts that I think toward you,” says Yahweh, “thoughts of peace, and not of evil, to give you hope and a future.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "thoughts",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "jonah1-17",
+    "book": "Jonah",
+    "chapter": 1,
+    "start": 17,
+    "end": 17,
+    "ref": "Jonah 1:17",
+    "kjv": "Now the LORD had prepared a great fish to swallow up Jonah. And Jonah was in the belly of the fish three days and three nights.",
+    "web": "Yahweh prepared a great fish to swallow up Jonah, and Jonah was in the belly of the fish three days and three nights.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "fish",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "mic6-8",
+    "book": "Micah",
+    "chapter": 6,
+    "start": 8,
+    "end": 8,
+    "ref": "Micah 6:8",
+    "kjv": "He hath shewed thee, O man, what is good; and what doth the LORD require of thee, but to do justly, and to love mercy, and to walk humbly with thy God?",
+    "web": "He has shown you, O man, what is good. What does Yahweh require of you, but to act justly, to love mercy, and to walk humbly with your God?",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "mercy",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "rom1-16",
+    "book": "Romans",
+    "chapter": 1,
+    "start": 16,
+    "end": 16,
+    "ref": "Romans 1:16",
+    "kjv": "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth; to the Jew first, and also to the Greek.",
+    "web": "For I am not ashamed of the Good News of Christ, because it is the power of God for salvation for everyone who believes; for the Jew first, and also for the Greek.",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "gospel",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "matt5-9",
+    "book": "Matthew",
+    "chapter": 5,
+    "start": 9,
+    "end": 9,
+    "ref": "Matthew 5:9",
+    "kjv": "Blessed are the peacemakers: for they shall be called the children of God.",
+    "web": "Blessed are the peacemakers, for they shall be called children of God.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "peacemakers",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "matt5-14",
+    "book": "Matthew",
+    "chapter": 5,
+    "start": 14,
+    "end": 14,
+    "ref": "Matthew 5:14",
+    "kjv": "Ye are the light of the world. A city that is set on an hill cannot be hid.",
+    "web": "You are the light of the world. A city located on a hill can’t be hidden.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "light",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "matt6-9",
+    "book": "Matthew",
+    "chapter": 6,
+    "start": 9,
+    "end": 9,
+    "ref": "Matthew 6:9",
+    "kjv": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",
+    "web": "Pray like this: ‘Our Father in heaven, may your name be kept holy.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "Father",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "matt6-9-13",
+    "book": "Matthew",
+    "chapter": 6,
+    "start": 9,
+    "end": 13,
+    "ref": "Matthew 6:9-13",
+    "kjv": "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name. Thy kingdom come. Thy will be done in earth, as it is in heaven. Give us this day our daily bread. And forgive us our debts, as we forgive our debtors. And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.",
+    "web": "Pray like this: ‘Our Father in heaven, may your name be kept holy. Let your Kingdom come. Let your will be done, as in heaven, so on earth. Give us today our daily bread. Forgive us our debts, as we also forgive our debtors. Bring us not into temptation, but deliver us from the evil one. For yours is the Kingdom, the power, and the glory forever. Amen.’",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "Father",
+    "img": "stars",
+    "passage": true
+  },
+  {
+    "id": "matt7-12",
+    "book": "Matthew",
+    "chapter": 7,
+    "start": 12,
+    "end": 12,
+    "ref": "Matthew 7:12",
+    "kjv": "Therefore all things whatsoever ye would that men should do to you, do ye even so to them: for this is the law and the prophets.",
+    "web": "Therefore whatever you desire for men to do to you, you shall also do to them; for this is the law and the prophets.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "men",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "matt11-28",
+    "book": "Matthew",
+    "chapter": 11,
+    "start": 28,
+    "end": 28,
+    "ref": "Matthew 11:28",
+    "kjv": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+    "web": "“Come to me, all you who labor and are heavily burdened, and I will give you rest.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "rest",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "matt19-14",
+    "book": "Matthew",
+    "chapter": 19,
+    "start": 14,
+    "end": 14,
+    "ref": "Matthew 19:14",
+    "kjv": "But Jesus said, Suffer little children, and forbid them not, to come unto me: for of such is the kingdom of heaven.",
+    "web": "But Jesus said, “Allow the little children, and don’t forbid them to come to me; for the Kingdom of Heaven belongs to ones like these.”",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "children",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "matt22-37",
+    "book": "Matthew",
+    "chapter": 22,
+    "start": 37,
+    "end": 37,
+    "ref": "Matthew 22:37",
+    "kjv": "Jesus said unto him, Thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind.",
+    "web": "Jesus said to him, “‘You shall love the Lord your God with all your heart, with all your soul, and with all your mind.’",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "heart",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "matt28-6",
+    "book": "Matthew",
+    "chapter": 28,
+    "start": 6,
+    "end": 6,
+    "ref": "Matthew 28:6",
+    "kjv": "He is not here: for he is risen, as he said. Come, see the place where the Lord lay.",
+    "web": "He is not here, for he has risen, just like he said. Come, see the place where the Lord was lying.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "risen",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "luke2-11",
+    "book": "Luke",
+    "chapter": 2,
+    "start": 11,
+    "end": 11,
+    "ref": "Luke 2:11",
+    "kjv": "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+    "web": "For there is born to you today, in David’s city, a Savior, who is Christ the Lord.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "Saviour",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "luke6-31",
+    "book": "Luke",
+    "chapter": 6,
+    "start": 31,
+    "end": 31,
+    "ref": "Luke 6:31",
+    "kjv": "And as ye would that men should do to you, do ye also to them likewise.",
+    "web": "“As you would like people to do to you, do exactly so to them.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "also",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "john3-16",
+    "book": "John",
+    "chapter": 3,
+    "start": 16,
+    "end": 16,
+    "ref": "John 3:16",
+    "kjv": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+    "web": "For God so loved the world, that he gave his one and only Son, that whoever believes in him should not perish, but have eternal life.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "loved",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "john8-12",
+    "book": "John",
+    "chapter": 8,
+    "start": 12,
+    "end": 12,
+    "ref": "John 8:12",
+    "kjv": "Then spake Jesus again unto them, saying, I am the light of the world: he that followeth me shall not walk in darkness, but shall have the light of life.",
+    "web": "Again, therefore, Jesus spoke to them, saying, “I am the light of the world. He who follows me will not walk in the darkness, but will have the light of life.”",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "light",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "john10-11",
+    "book": "John",
+    "chapter": 10,
+    "start": 11,
+    "end": 11,
+    "ref": "John 10:11",
+    "kjv": "I am the good shepherd: the good shepherd giveth his life for the sheep.",
+    "web": "I am the good shepherd. The good shepherd lays down his life for the sheep.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "shepherd",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "john11-35",
+    "book": "John",
+    "chapter": 11,
+    "start": 35,
+    "end": 35,
+    "ref": "John 11:35",
+    "kjv": "Jesus wept.",
+    "web": "Jesus wept.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "wept",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "john14-6",
+    "book": "John",
+    "chapter": 14,
+    "start": 6,
+    "end": 6,
+    "ref": "John 14:6",
+    "kjv": "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+    "web": "Jesus said to him, “I am the way, the truth, and the life. No one comes to the Father, except through me.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "way",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "john14-15",
+    "book": "John",
+    "chapter": 14,
+    "start": 15,
+    "end": 15,
+    "ref": "John 14:15",
+    "kjv": "If ye love me, keep my commandments.",
+    "web": "If you love me, keep my commandments.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "commandments",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "acts1-8",
+    "book": "Acts",
+    "chapter": 1,
+    "start": 8,
+    "end": 8,
+    "ref": "Acts 1:8",
+    "kjv": "But ye shall receive power, after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judæa, and in Samaria, and unto the uttermost part of the earth.",
+    "web": "But you will receive power when the Holy Spirit has come upon you. You will be witnesses to me in Jerusalem, in all Judea and Samaria, and to the uttermost parts of the earth.”",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "witnesses",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "rom3-23",
+    "book": "Romans",
+    "chapter": 3,
+    "start": 23,
+    "end": 23,
+    "ref": "Romans 3:23",
+    "kjv": "For all have sinned, and come short of the glory of God;",
+    "web": "for all have sinned, and fall short of the glory of God;",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "sinned",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "rom6-23",
+    "book": "Romans",
+    "chapter": 6,
+    "start": 23,
+    "end": 23,
+    "ref": "Romans 6:23",
+    "kjv": "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
+    "web": "For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "gift",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "rom8-28",
+    "book": "Romans",
+    "chapter": 8,
+    "start": 28,
+    "end": 28,
+    "ref": "Romans 8:28",
+    "kjv": "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+    "web": "We know that all things work together for good for those who love God, to those who are called according to his purpose.",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "good",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "rom12-21",
+    "book": "Romans",
+    "chapter": 12,
+    "start": 21,
+    "end": 21,
+    "ref": "Romans 12:21",
+    "kjv": "Be not overcome of evil, but overcome evil with good.",
+    "web": "Don’t be overcome by evil, but overcome evil with good.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "overcome",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "1cor10-31",
+    "book": "1 Corinthians",
+    "chapter": 10,
+    "start": 31,
+    "end": 31,
+    "ref": "1 Corinthians 10:31",
+    "kjv": "Whether therefore ye eat, or drink, or whatsoever ye do, do all to the glory of God.",
+    "web": "Whether therefore you eat, or drink, or whatever you do, do all to the glory of God.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "glory",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "1cor13-4",
+    "book": "1 Corinthians",
+    "chapter": 13,
+    "start": 4,
+    "end": 4,
+    "ref": "1 Corinthians 13:4",
+    "kjv": "Charity suffereth long, and is kind; charity envieth not; charity vaunteth not itself, is not puffed up,",
+    "web": "Love is patient and is kind; love doesn’t envy. Love doesn’t brag, is not proud,",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "kind",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "1cor16-14",
+    "book": "1 Corinthians",
+    "chapter": 16,
+    "start": 14,
+    "end": 14,
+    "ref": "1 Corinthians 16:14",
+    "kjv": "Let all your things be done with charity.",
+    "web": "Let all that you do be done in love.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "charity",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "gal5-22-23",
+    "book": "Galatians",
+    "chapter": 5,
+    "start": 22,
+    "end": 23,
+    "ref": "Galatians 5:22-23",
+    "kjv": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith, Meekness, temperance: against such there is no law.",
+    "web": "But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faith, gentleness, and self-control. Against such things there is no law.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "fruit",
+    "img": "wheat",
+    "passage": true
+  },
+  {
+    "id": "eph2-8",
+    "book": "Ephesians",
+    "chapter": 2,
+    "start": 8,
+    "end": 8,
+    "ref": "Ephesians 2:8",
+    "kjv": "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God:",
+    "web": "for by grace you have been saved through faith, and that not of yourselves; it is the gift of God,",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "grace",
+    "img": "stars",
+    "passage": false
+  },
+  {
+    "id": "eph4-32",
+    "book": "Ephesians",
+    "chapter": 4,
+    "start": 32,
+    "end": 32,
+    "ref": "Ephesians 4:32",
+    "kjv": "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ’s sake hath forgiven you.",
+    "web": "And be kind to one another, tender hearted, forgiving each other, just as God also in Christ forgave you.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "kind",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "eph6-1",
+    "book": "Ephesians",
+    "chapter": 6,
+    "start": 1,
+    "end": 1,
+    "ref": "Ephesians 6:1",
+    "kjv": "Children, obey your parents in the Lord: for this is right.",
+    "web": "Children, obey your parents in the Lord, for this is right.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "obey",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "phil4-4",
+    "book": "Philippians",
+    "chapter": 4,
+    "start": 4,
+    "end": 4,
+    "ref": "Philippians 4:4",
+    "kjv": "Rejoice in the Lord alway: and again I say, Rejoice.",
+    "web": "Rejoice in the Lord always! Again I will say, “Rejoice!”",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "Rejoice",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "phil4-6",
+    "book": "Philippians",
+    "chapter": 4,
+    "start": 6,
+    "end": 6,
+    "ref": "Philippians 4:6",
+    "kjv": "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+    "web": "In nothing be anxious, but in everything, by prayer and petition with thanksgiving, let your requests be made known to God.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "prayer",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "phil4-13",
+    "book": "Philippians",
+    "chapter": 4,
+    "start": 13,
+    "end": 13,
+    "ref": "Philippians 4:13",
+    "kjv": "I can do all things through Christ which strengtheneth me.",
+    "web": "I can do all things through Christ, who strengthens me.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "Christ",
+    "img": "hillside",
+    "passage": false
+  },
+  {
+    "id": "col3-23",
+    "book": "Colossians",
+    "chapter": 3,
+    "start": 23,
+    "end": 23,
+    "ref": "Colossians 3:23",
+    "kjv": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men;",
+    "web": "And whatever you do, work heartily, as for the Lord, and not for men,",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "heartily",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "1th5-16-18",
+    "book": "1 Thessalonians",
+    "chapter": 5,
+    "start": 16,
+    "end": 18,
+    "ref": "1 Thessalonians 5:16-18",
+    "kjv": "Rejoice evermore. Pray without ceasing. In every thing give thanks: for this is the will of God in Christ Jesus concerning you.",
+    "web": "Rejoice always. Pray without ceasing. In everything give thanks, for this is the will of God in Christ Jesus toward you.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "thanks",
+    "img": "wheat",
+    "passage": true
+  },
+  {
+    "id": "1th5-17",
+    "book": "1 Thessalonians",
+    "chapter": 5,
+    "start": 17,
+    "end": 17,
+    "ref": "1 Thessalonians 5:17",
+    "kjv": "Pray without ceasing.",
+    "web": "Pray without ceasing.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "Pray",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "2tim1-7",
+    "book": "2 Timothy",
+    "chapter": 1,
+    "start": 7,
+    "end": 7,
+    "ref": "2 Timothy 1:7",
+    "kjv": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+    "web": "For God didn’t give us a spirit of fear, but of power, love, and self-control.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "fear",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "2tim3-16",
+    "book": "2 Timothy",
+    "chapter": 3,
+    "start": 16,
+    "end": 16,
+    "ref": "2 Timothy 3:16",
+    "kjv": "All scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction, for instruction in righteousness:",
+    "web": "Every Scripture is God-breathed and profitable for teaching, for reproof, for correction, and for instruction in righteousness,",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "scripture",
+    "img": "lantern",
+    "passage": false
+  },
+  {
+    "id": "heb13-8",
+    "book": "Hebrews",
+    "chapter": 13,
+    "start": 8,
+    "end": 8,
+    "ref": "Hebrews 13:8",
+    "kjv": "Jesus Christ the same yesterday, and to day, and for ever.",
+    "web": "Jesus Christ is the same yesterday, today, and forever.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "same",
+    "img": "olives",
+    "passage": false
+  },
+  {
+    "id": "jas1-19",
+    "book": "James",
+    "chapter": 1,
+    "start": 19,
+    "end": 19,
+    "ref": "James 1:19",
+    "kjv": "Wherefore, my beloved brethren, let every man be swift to hear, slow to speak, slow to wrath:",
+    "web": "So, then, my beloved brothers, let every man be swift to hear, slow to speak, and slow to anger;",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "slow",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "jas1-22",
+    "book": "James",
+    "chapter": 1,
+    "start": 22,
+    "end": 22,
+    "ref": "James 1:22",
+    "kjv": "But be ye doers of the word, and not hearers only, deceiving your own selves.",
+    "web": "But be doers of the word, and not only hearers, deluding your own selves.",
+    "minBand": "primary",
+    "bands": [
+      "primary",
+      "upper"
+    ],
+    "blank": "doers",
+    "img": "wheat",
+    "passage": false
+  },
+  {
+    "id": "1pet5-7",
+    "book": "1 Peter",
+    "chapter": 5,
+    "start": 7,
+    "end": 7,
+    "ref": "1 Peter 5:7",
+    "kjv": "Casting all your care upon him; for he careth for you.",
+    "web": "casting all your worries on him, because he cares for you.",
+    "minBand": "preschool",
+    "bands": [
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "care",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "1jn1-9",
+    "book": "1 John",
+    "chapter": 1,
+    "start": 9,
+    "end": 9,
+    "ref": "1 John 1:9",
+    "kjv": "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+    "web": "If we confess our sins, he is faithful and righteous to forgive us the sins, and to cleanse us from all unrighteousness.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "forgive",
+    "img": "waters",
+    "passage": false
+  },
+  {
+    "id": "1jn4-7",
+    "book": "1 John",
+    "chapter": 4,
+    "start": 7,
+    "end": 7,
+    "ref": "1 John 4:7",
+    "kjv": "Beloved, let us love one another: for love is of God; and every one that loveth is born of God, and knoweth God.",
+    "web": "Beloved, let us love one another, for love is of God; and everyone who loves has been born of God, and knows God.",
+    "minBand": "early",
+    "bands": [
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "love",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "1jn4-8",
+    "book": "1 John",
+    "chapter": 4,
+    "start": 8,
+    "end": 8,
+    "ref": "1 John 4:8",
+    "kjv": "He that loveth not knoweth not God; for God is love.",
+    "web": "He who doesn’t love doesn’t know God, for God is love.",
+    "minBand": "baby",
+    "bands": [
+      "baby",
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "love",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "1jn4-19",
+    "book": "1 John",
+    "chapter": 4,
+    "start": 19,
+    "end": 19,
+    "ref": "1 John 4:19",
+    "kjv": "We love him, because he first loved us.",
+    "web": "We love him, because he first loved us.",
+    "minBand": "toddler",
+    "bands": [
+      "toddler",
+      "preschool",
+      "early",
+      "primary",
+      "upper"
+    ],
+    "blank": "first",
+    "img": "sheep",
+    "passage": false
+  },
+  {
+    "id": "rev4-11",
+    "book": "Revelation",
+    "chapter": 4,
+    "start": 11,
+    "end": 11,
+    "ref": "Revelation 4:11",
+    "kjv": "Thou art worthy, O Lord, to receive glory and honour and power: for thou hast created all things, and for thy pleasure they are and were created.",
+    "web": "“Worthy are you, our Lord and God, the Holy One, to receive the glory, the honor, and the power, for you created all things, and because of your desire they existed, and were created!”",
+    "minBand": "upper",
+    "bands": [
+      "upper"
+    ],
+    "blank": "worthy",
+    "img": "stars",
+    "passage": false
+  }
+]

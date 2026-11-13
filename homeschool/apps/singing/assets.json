@@ -1,0 +1,23 @@
+{
+  "subject": "singing",
+  "title": "Songbird Forest",
+  "files": [
+    "./",
+    "index.html",
+    "css/forest.css",
+    "js/data.js",
+    "js/synth.js",
+    "js/pitch.js",
+    "js/app.js",
+    "sw.js",
+    "assets.json",
+    "images.json",
+    "img/singing-forest-hero.jpg",
+    "img/singing-wren.jpg",
+    "img/singing-choir.jpg",
+    "img/singing-nest.jpg",
+    "img/singing-cardinal.jpg",
+    "img/singing-owl.jpg",
+    "img/singing-path.jpg"
+  ]
+}
