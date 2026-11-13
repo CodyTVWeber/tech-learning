@@ -1,0 +1,74 @@
+{
+  "id": "chop",
+  "title": "Chop",
+  "coverSlot": "chop-cover",
+  "level": "digraphs",
+  "graphemes": [
+    "ch",
+    "o",
+    "p",
+    "r",
+    "i",
+    "b",
+    "t",
+    "s"
+  ],
+  "sightWords": [
+    "a",
+    "the"
+  ],
+  "pages": [
+    {
+      "slot": "chop-p1",
+      "words": [
+        {
+          "t": "Chop",
+          "say": "chop"
+        }
+      ]
+    },
+    {
+      "slot": "chop-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "chop",
+          "say": "chop"
+        }
+      ]
+    },
+    {
+      "slot": "chop-p3",
+      "words": [
+        {
+          "t": "Rich",
+          "say": "rich"
+        },
+        {
+          "t": "bits",
+          "say": "bits"
+        }
+      ]
+    },
+    {
+      "slot": "chop-p4",
+      "words": [
+        {
+          "t": "Chop",
+          "say": "chop"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bits",
+          "say": "bits"
+        }
+      ]
+    }
+  ]
+}

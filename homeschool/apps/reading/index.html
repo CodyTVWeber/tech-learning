@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#2c5a32">
   <title>Garden reading</title>
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./images/icon-192.png">
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
   <div id="reading-root" class="garden"></div>
+  <div id="garden-celebrate" class="garden-celebrate" hidden>
+    <div class="garden-celebrate-card">
+      <p class="garden-celebrate-kicker">A bed blooms</p>
+      <p id="garden-celebrate-msg">That plot is tended.</p>
+    </div>
+  </div>
   <p class="untested-banner">Untested, awaiting parent test.</p>
   <script src="./reader.js"></script>
   <script src="./app.js"></script>

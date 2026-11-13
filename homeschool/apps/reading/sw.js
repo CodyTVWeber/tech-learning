@@ -1,4 +1,4 @@
-const CACHE = "hs-reading-v1";
+const CACHE = "hs-reading-v2";
 const BASE = new URL("./", self.location);
 self.addEventListener("install", function (event) {
   event.waitUntil(

@@ -2,38 +2,80 @@
   "id": "sam-sat",
   "title": "Sam Sat",
   "coverSlot": "sam-sat-cover",
-  "graphemes": ["s", "a", "t", "p", "m"],
-  "sightWords": ["a"],
+  "level": "cvc",
+  "graphemes": [
+    "s",
+    "a",
+    "t",
+    "p",
+    "m"
+  ],
+  "sightWords": [
+    "a"
+  ],
   "pages": [
     {
       "slot": "sam-sat-p1",
       "words": [
-        { "t": "Sam", "say": "Sam" },
-        { "t": "sat", "say": "sat" }
+        {
+          "t": "Sam",
+          "say": "Sam"
+        },
+        {
+          "t": "sat",
+          "say": "sat"
+        }
       ]
     },
     {
       "slot": "sam-sat-p2",
       "words": [
-        { "t": "Sam", "say": "Sam" },
-        { "t": "taps", "say": "taps" }
+        {
+          "t": "Sam",
+          "say": "Sam"
+        },
+        {
+          "t": "taps",
+          "say": "taps"
+        }
       ]
     },
     {
       "slot": "sam-sat-p3",
       "words": [
-        { "t": "A", "say": "a" },
-        { "t": "map", "say": "map" }
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "map",
+          "say": "map"
+        }
       ]
     },
     {
       "slot": "sam-sat-p4",
       "words": [
-        { "t": "Sam", "say": "Sam" },
-        { "t": "sat", "say": "sat" },
-        { "t": "at", "say": "at" },
-        { "t": "a", "say": "a" },
-        { "t": "mat", "say": "mat" }
+        {
+          "t": "Sam",
+          "say": "Sam"
+        },
+        {
+          "t": "sat",
+          "say": "sat"
+        },
+        {
+          "t": "at",
+          "say": "at"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "mat",
+          "say": "mat"
+        }
       ]
     }
   ]

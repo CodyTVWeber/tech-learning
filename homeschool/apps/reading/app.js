@@ -1,7 +1,19 @@
 (function () {
   const SUBJECT = "reading";
+  const BANDS = ["baby", "toddler", "preschool", "early", "primary", "upper"];
+  const BAND_BLURB = {
+    baby: "Care time. No garden lessons yet.",
+    toddler: "Letter sounds first — not names.",
+    preschool: "More sounds, then listen-and-blend.",
+    early: "Short words, blends, teams, silent e.",
+    primary: "Vowel teams, roses, tall plants, sundial.",
+    upper: "Volume reading, words, and stories.",
+  };
   const CUES = {
-    bee: [{ f: 620, t: 0, d: 0.05, type: "sawtooth", g: 0.03 }, { f: 740, t: 0.06, d: 0.08, type: "sawtooth", g: 0.03 }],
+    bee: [
+      { f: 620, t: 0, d: 0.05, type: "sawtooth", g: 0.03 },
+      { f: 740, t: 0.06, d: 0.08, type: "sawtooth", g: 0.03 },
+    ],
     rustle: [{ f: 140, t: 0, d: 0.12, type: "triangle", g: 0.05 }],
     bloom: [
       { f: 523, t: 0, d: 0.1, type: "sine", g: 0.05 },
@@ -9,6 +21,8 @@
     ],
     page: [{ f: 240, t: 0, d: 0.06, type: "square", g: 0.03 }],
   };
+
+  let audioCtx = null;
 
   function hs() {
     return window.HS || {};
@@ -18,14 +32,94 @@
     const base = document.documentElement.dataset.appBase || "./";
     return new URL(path, base).href;
   }
+  function muted() {
+    if (hs().muted) return hs().muted();
+    try {
+      return localStorage.getItem("hs.mute") === "1";
+    } catch (e) {
+      return false;
+    }
+  }
+  function setMuted(on) {
+    if (hs().setMuted) hs().setMuted(on);
+    else localStorage.setItem("hs.mute", on ? "1" : "0");
+  }
+  function inRunner() {
+    return document.documentElement.dataset.runner === "1";
+  }
+  function validBand(b) {
+    return BANDS.indexOf(b) !== -1;
+  }
   function band() {
-    return (hs().getBand && hs().getBand()) || "early";
+    const q = new URLSearchParams(location.search).get("band");
+    if (validBand(q)) return q;
+    if (hs().getBand) {
+      const g = hs().getBand();
+      if (validBand(g)) return g;
+    }
+    try {
+      const stored = localStorage.getItem("hs.band");
+      if (validBand(stored)) return stored;
+    } catch (e) {}
+    if (inRunner()) return "early";
+    return null;
+  }
+  function setBand(b) {
+    if (!validBand(b)) return;
+    if (hs().setBand) hs().setBand(b);
+    else localStorage.setItem("hs.band", b);
+    const next = new URL(location.href);
+    next.searchParams.set("band", b);
+    history.replaceState({}, "", next);
+  }
+  function playCueLocal(recipe) {
+    if (muted() || !recipe || !recipe.length) return;
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return;
+    if (!audioCtx) audioCtx = new AC();
+    if (audioCtx.state === "suspended") audioCtx.resume();
+    const t0 = audioCtx.currentTime;
+    recipe.forEach(function (n) {
+      const o = audioCtx.createOscillator();
+      const g = audioCtx.createGain();
+      o.type = n.type || "sine";
+      o.frequency.setValueAtTime(n.f, t0 + (n.t || 0));
+      g.gain.setValueAtTime(0.0001, t0 + (n.t || 0));
+      g.gain.exponentialRampToValueAtTime(n.g || 0.08, t0 + (n.t || 0) + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0001, t0 + (n.t || 0) + (n.d || 0.18));
+      o.connect(g);
+      g.connect(audioCtx.destination);
+      o.start(t0 + (n.t || 0));
+      o.stop(t0 + (n.t || 0) + (n.d || 0.18) + 0.02);
+    });
   }
   function cue(name) {
     if (hs().playCue) hs().playCue(CUES[name]);
+    else playCueLocal(CUES[name]);
   }
   function speak(t, opts) {
-    if (hs().speak) hs().speak(t, opts || { rate: 0.8 });
+    if (!t || muted()) return;
+    if (hs().speak) {
+      hs().speak(t, opts || { rate: 0.8 });
+      return;
+    }
+    const synth = window.speechSynthesis;
+    if (!synth) return;
+    synth.cancel();
+    const u = new SpeechSynthesisUtterance(String(t));
+    u.rate = (opts && opts.rate) || 0.8;
+    u.lang = "en-US";
+    synth.speak(u);
+  }
+  function silence() {
+    if (hs().silence) hs().silence();
+    else if (window.speechSynthesis) window.speechSynthesis.cancel();
+  }
+  function esc(s) {
+    return String(s || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/"/g, "&quot;");
   }
   function imgFor(manifest) {
     return function (slot, cls) {
@@ -39,16 +133,31 @@
         '" src="' +
         url("images/" + item.file) +
         '" alt="' +
-        item.alt.replace(/"/g, "") +
+        esc(item.alt) +
         '">'
       );
     };
+  }
+  function wait() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? 220
+      : 700;
+  }
+  function celebrate(msg) {
+    const el = document.getElementById("garden-celebrate");
+    const p = document.getElementById("garden-celebrate-msg");
+    if (!el || !p) return;
+    p.textContent = msg || "That plot is tended.";
+    el.hidden = false;
+    setTimeout(function () {
+      el.hidden = true;
+    }, 1200);
   }
 
   async function boot() {
     const host = document.getElementById("reading-root");
     if (!host) return;
-    if (!document.documentElement.dataset.runner) {
+    if (!inRunner()) {
       window.HS = window.HS || {};
       HS.appBase = HS.appBase || new URL("./", location.href).href;
       HS.subject = SUBJECT;
@@ -57,169 +166,306 @@
     }
 
     const b = band();
+    if (!b) {
+      showPicker(host);
+      return;
+    }
     if (b === "baby") {
-      host.innerHTML = "<p style=\"padding:16px\">No garden lessons for this band yet.</p>";
+      host.className = "garden band-baby";
+      host.innerHTML =
+        '<div class="garden-intro"><h1>Garden rest</h1><p>No garden lessons for this band yet. Open another home, or switch the plot.</p></div>' +
+        (inRunner() ? "" : '<p style="padding:12px"><button type="button" id="switch-plot">Switch plot</button></p>');
+      const sw = document.getElementById("switch-plot");
+      if (sw)
+        sw.onclick = function () {
+          try {
+            localStorage.removeItem("hs.band");
+          } catch (e) {}
+          showPicker(host);
+        };
       return;
     }
 
-    const [data, manifest] = await Promise.all([
+    const [data, manifest, catalog] = await Promise.all([
       fetch(url("data/" + b + ".json")).then(function (r) {
+        if (!r.ok) throw new Error("no data");
         return r.json();
       }),
       fetch(url("images.json")).then(function (r) {
         return r.json();
       }),
+      fetch(url("data/books.json")).then(function (r) {
+        return r.json();
+      }),
     ]);
     const img = imgFor(manifest);
-    const progress = (hs().readProgress && hs().readProgress(SUBJECT)) || { blooms: 0 };
+    const bookMeta = catalog.books || [];
+    const progress = (hs().readProgress && hs().readProgress(SUBJECT)) || readProgressLocal();
     progress.band = b;
     progress.blooms = progress.blooms || 0;
+    progress.stamps = progress.stamps || [];
+    progress.bedsDone = progress.bedsDone || {};
+    progress.booksRead = progress.booksRead || [];
+    progress.totalMinutes = progress.totalMinutes || 0;
+    if (progress.soundsDone) progress.bedsDone.sounds = true;
 
     function save() {
+      progress.updatedAt = new Date().toISOString();
       if (hs().writeProgress) hs().writeProgress(SUBJECT, progress);
+      else {
+        try {
+          localStorage.setItem("hs.progress." + SUBJECT, JSON.stringify(progress));
+        } catch (e) {}
+      }
+    }
+    function readProgressLocal() {
+      try {
+        return JSON.parse(localStorage.getItem("hs.progress." + SUBJECT) || "{}");
+      } catch (e) {
+        return {};
+      }
+    }
+    function bedById(id) {
+      return (data.beds || []).find(function (x) {
+        return x.id === id;
+      });
+    }
+    function titleOfBook(id) {
+      const m = bookMeta.find(function (x) {
+        return x.id === id;
+      });
+      return m ? m.title : id;
+    }
+    function bedLocked(bed) {
+      if (!bed || !bed.requires) return null;
+      if (progress.bedsDone[bed.requires]) return null;
+      const need = bedById(bed.requires);
+      return "Finish " + ((need && need.title) || bed.requires) + " first";
+    }
+    function bookLocked(id) {
+      const meta = bookMeta.find(function (x) {
+        return x.id === id;
+      });
+      if (!meta) return "Missing book";
+      if (data.unlockAllBooks) return null;
+      const free = data.unlockLevels || [];
+      if (free.indexOf(meta.level) !== -1) return null;
+      const bedNeed = meta.requiresBed;
+      if (bedNeed && bedById(bedNeed) && !progress.bedsDone[bedNeed]) {
+        const bd = bedById(bedNeed);
+        return "Finish " + ((bd && bd.title) || bedNeed) + " first";
+      }
+      if (meta.requires && progress.booksRead.indexOf(meta.requires) === -1) {
+        const prev = bookMeta.find(function (x) {
+          return x.id === meta.requires;
+        });
+        if (prev && free.indexOf(prev.level) !== -1) return null;
+        if (prev && (data.books || []).indexOf(prev.id) === -1) return null;
+        return "Read " + titleOfBook(meta.requires) + " first";
+      }
+      return null;
+    }
+    function addStamp(id) {
+      if (progress.stamps.indexOf(id) === -1) progress.stamps.push(id);
+    }
+    function finishBed(bed) {
+      progress.bedsDone[bed.id] = true;
+      if (bed.id === "sounds") progress.soundsDone = true;
+      progress.blooms += 1;
+      addStamp(bed.id);
+      save();
+      cue("bloom");
+      celebrate((bed.title || "That plot") + " blooms.");
+      setTimeout(home, wait() + 400);
+    }
+    function itemsFor(bed) {
+      return (data.items || []).filter(function (it) {
+        return (it.bed || "sounds") === bed.id;
+      });
+    }
+    function muteBtn() {
+      if (inRunner()) return "";
+      return (
+        '<button type="button" class="garden-mute" id="mute-btn">' +
+        (muted() ? "Sound off" : "Sound on") +
+        "</button>"
+      );
+    }
+    function bindMute() {
+      const btn = document.getElementById("mute-btn");
+      if (!btn) return;
+      btn.onclick = function () {
+        setMuted(!muted());
+        home();
+      };
     }
 
     function home() {
-      host.className = "garden";
-      let beds = "";
-      if (data.mode === "sounds" || data.mode === "blends") {
-        beds +=
-          '<div class="garden-bed">' +
-          img("bed-sounds") +
-          '<button type="button" id="go-sounds">Sound beds</button></div>';
-      }
-      if (data.books) {
-        beds +=
-          '<div class="garden-bed">' +
-          img("bed-books") +
-          '<button type="button" id="go-books">Picture books</button></div>';
-      }
-      if (data.mode === "volume") {
-        beds +=
-          '<div class="garden-bed"><button type="button" id="go-timer">Reading timer</button></div>';
-      }
+      silence();
+      host.className = "garden band-" + b;
+      const stamps = (progress.stamps || [])
+        .slice(-12)
+        .map(function (s) {
+          return '<span class="garden-stamp">' + esc(s) + "</span>";
+        })
+        .join("");
+      let plots = "";
+      (data.beds || []).forEach(function (bed) {
+        const lock = bedLocked(bed);
+        const bid = bed.id === "sounds" ? "go-sounds" : "go-" + bed.id;
+        plots +=
+          '<div class="garden-plot' +
+          (lock ? " is-locked" : "") +
+          '">' +
+          img(bed.slot) +
+          '<button type="button" id="' +
+          bid +
+          '"' +
+          (lock ? " disabled" : "") +
+          ">" +
+          esc(bed.title) +
+          (lock ? " — " + esc(lock) : "") +
+          "</button></div>";
+      });
       host.innerHTML =
+        muteBtn() +
         img("hero", "garden-hero") +
         '<div class="garden-intro"><h1>' +
-        data.title +
+        esc(data.title) +
         "</h1><p>" +
-        data.intro.body +
-        "</p><p>" +
+        esc(data.intro.body) +
+        '</p><p class="garden-blooms">' +
         progress.blooms +
-        " blooms</p></div>" +
-        '<div class="garden-beds">' +
-        beds +
-        "</div>";
-      const gs = document.getElementById("go-sounds");
-      if (gs) gs.onclick = function () {
-        startItems();
-      };
-      const gb = document.getElementById("go-books");
-      if (gb) gb.onclick = function () {
-        listBooks();
-      };
-      const gt = document.getElementById("go-timer");
-      if (gt) gt.onclick = function () {
-        timer();
-      };
+        " blooms · " +
+        (progress.stamps.length || 0) +
+        " stamps" +
+        (progress.totalMinutes ? " · " + progress.totalMinutes + " min in the sundial" : "") +
+        "</p><div class=\"garden-stamps\">" +
+        stamps +
+        "</div></div>" +
+        '<div class="garden-path">' +
+        plots +
+        "</div>" +
+        (inRunner()
+          ? ""
+          : '<p style="padding:12px"><button type="button" id="switch-plot">Switch plot</button></p>');
+      bindMute();
+      (data.beds || []).forEach(function (bed) {
+        const bid = bed.id === "sounds" ? "go-sounds" : "go-" + bed.id;
+        const btn = document.getElementById(bid);
+        if (!btn || btn.disabled) return;
+        btn.onclick = function () {
+          speak(bed.audioText || bed.title);
+          if (bed.kind === "books") listBooks();
+          else if (bed.kind === "timer") timer(bed);
+          else if (bed.kind === "comprehend") startComprehend();
+          else startItems(bed);
+        };
+      });
+      const sw = document.getElementById("switch-plot");
+      if (sw)
+        sw.onclick = function () {
+          try {
+            localStorage.removeItem("hs.band");
+          } catch (e) {}
+          showPicker(host);
+        };
       speak(data.intro.audioText);
     }
 
-    function startItems() {
+    function startItems(bed) {
+      const items = itemsFor(bed);
       let i = 0;
       function show() {
-        const item = data.items[i];
+        const item = items[i];
         if (!item) {
-          progress.blooms += 1;
-          progress.soundsDone = true;
-          save();
-          cue("bloom");
-          if (data.books) listBooks();
-          else home();
+          finishBed(bed);
           return;
         }
-        if (data.mode === "sounds") {
-          host.innerHTML =
-            img("hero", "garden-hero") +
-            '<div class="garden-prompt">' +
+        const expect = item.answer || item.blend;
+        const choices = item.choices || [];
+        let promptHtml = "";
+        let autoSpeak = item.audioText || "";
+        let rate = 0.75;
+        if (bed.kind === "sounds" || (!item.kind && item.phoneme)) {
+          promptHtml =
             img("bee", "garden-bee") +
             "<h2>Find the sound</h2>" +
             "<p>The bee says a sound — not a letter name.</p>" +
-            '<button type="button" id="hear">Hear the sound</button>' +
-            "</div>" +
-            '<div class="garden-flowers" id="choices">' +
-            item.choices
-              .map(function (c) {
-                return (
-                  '<button type="button" data-v="' +
-                  c +
-                  '">' +
-                  img("flower-" + c) +
-                  '<span class="garden-letter">' +
-                  c +
-                  "</span></button>"
-                );
-              })
-              .join("") +
-            '</div><p class="garden-status" id="st"></p>';
-          document.getElementById("hear").onclick = function () {
-            cue("bee");
-            speak(item.audioText, { rate: 0.7 });
-          };
-          cue("bee");
-          speak(item.audioText, { rate: 0.7 });
-        } else if (item.kind === "sight") {
-          host.innerHTML =
-            '<div class="garden-prompt"><h2>Helper word</h2><p>' +
-            (item.prompt || "Look and say. This word is not sounded out letter by letter.") +
-            '</p><button type="button" id="hear">Hear it</button></div>' +
-            '<div class="garden-flowers" id="choices">' +
-            item.choices
-              .map(function (c) {
-                return '<button type="button" data-v="' + c + '">' + c + "</button>";
-              })
-              .join("") +
-            '</div><p class="garden-status" id="st"></p>';
-          document.getElementById("hear").onclick = function () {
-            speak(item.audioText, { rate: 0.75 });
-          };
-          speak(item.audioText, { rate: 0.75 });
+            '<button type="button" id="hear">Hear the sound</button>';
+          autoSpeak = item.audioText;
+          rate = 0.7;
+        } else if (item.kind === "helper" || item.kind === "sight") {
+          promptHtml =
+            "<h2>Helper word</h2><p>" +
+            esc(item.prompt || "Look and say. This word is not sounded out letter by letter.") +
+            '</p><button type="button" id="hear">Hear it</button>';
+          autoSpeak = item.audioText || expect;
+        } else if (item.kind === "vocab") {
+          promptHtml =
+            "<h2>" +
+            esc(item.word || "Word bloom") +
+            "</h2><p>" +
+            esc(item.prompt || "What does this garden word mean?") +
+            '</p><button type="button" id="hear">Hear the word</button>';
+          autoSpeak = item.audioText || item.word;
         } else {
-          host.innerHTML =
-            '<div class="garden-prompt"><h2>Blend</h2><p>' +
-            (item.sounds || []).join(" · ") +
-            '</p><button type="button" id="hear">Hear the sounds</button></div>' +
-            '<div class="garden-flowers" id="choices">' +
-            item.choices
-              .map(function (c) {
-                return '<button type="button" data-v="' + c + '">' + c + "</button>";
-              })
-              .join("") +
-            '</div><p class="garden-status" id="st"></p>';
-          document.getElementById("hear").onclick = function () {
-            speak((item.sounds || []).join(", ") || item.audioText);
-          };
-          speak((item.sounds || []).join(", ") || item.audioText);
+          promptHtml =
+            "<h2>Blend</h2><p>" +
+            esc((item.sounds || []).join(" · ")) +
+            '</p><button type="button" id="hear">Hear the sounds</button>';
+          autoSpeak = (item.sounds || []).join(", ") || item.audioText;
         }
+        const choiceHtml = choices
+          .map(function (c) {
+            const flower = img("flower-" + c);
+            const letter =
+              bed.kind === "sounds" || item.phoneme
+                ? '<span class="garden-letter">' + esc(c) + "</span>"
+                : esc(c);
+            return '<button type="button" data-v="' + esc(c) + '">' + flower + letter + "</button>";
+          })
+          .join("");
+        host.className = "garden band-" + b;
+        host.innerHTML =
+          img("hero", "garden-hero") +
+          '<div class="garden-prompt">' +
+          promptHtml +
+          "</div>" +
+          '<div class="garden-flowers' +
+          (choices.length > 2 ? " cols-3" : "") +
+          '" id="choices">' +
+          choiceHtml +
+          '</div><p class="garden-status" id="st"></p>' +
+          '<div class="garden-toolbar"><button type="button" id="back-home">Garden</button></div>';
+        const hear = document.getElementById("hear");
+        if (hear)
+          hear.onclick = function () {
+            cue("bee");
+            speak(autoSpeak, { rate: rate });
+          };
+        document.getElementById("back-home").onclick = home;
+        cue("bee");
+        speak(autoSpeak, { rate: rate });
         document.getElementById("choices").onclick = function (ev) {
           const btn = ev.target.closest("button[data-v]");
           if (!btn) return;
           const st = document.getElementById("st");
-          const expect = item.answer || item.blend;
           if (btn.getAttribute("data-v") === expect) {
             btn.classList.add("is-right");
             cue("bloom");
             st.textContent = "That bed blooms.";
             if (item.blend) speak(item.blend, { rate: 0.85 });
+            else if (item.kind === "vocab") speak(expect, { rate: 0.9 });
             setTimeout(function () {
               i += 1;
               show();
-            }, 700);
+            }, wait());
           } else {
             btn.classList.add("is-wrong");
             cue("rustle");
             st.textContent = "Try another flower. Listen again.";
-            speak(item.audioText, { rate: 0.7 });
+            speak(item.audioText || autoSpeak, { rate: 0.7 });
           }
         };
       }
@@ -227,36 +473,45 @@
     }
 
     function listBooks() {
-      host.className = "garden";
+      host.className = "garden band-" + b;
+      const ids = data.books || [];
+      let plots = "";
+      ids.forEach(function (id) {
+        const meta = bookMeta.find(function (x) {
+          return x.id === id;
+        }) || { title: id, coverSlot: id + "-cover", level: "" };
+        const lock = bookLocked(id);
+        const lv = (catalog.levels || []).find(function (x) {
+          return x.id === meta.level;
+        });
+        const levelLabel = lv ? lv.title : "";
+        plots +=
+          '<div class="garden-plot' +
+          (lock ? " is-locked" : "") +
+          '">' +
+          img(meta.coverSlot) +
+          '<button type="button"' +
+          (lock ? " disabled" : "") +
+          " data-book=\"" +
+          esc(id) +
+          '">' +
+          esc(meta.title) +
+          (levelLabel ? " · " + esc(levelLabel) : "") +
+          (lock ? " — " + esc(lock) : "") +
+          "</button></div>";
+      });
       host.innerHTML =
         img("hero", "garden-hero") +
-        '<div class="garden-intro"><h1>Garden books</h1><p>Original decodable text. Tap a word to hear it.</p></div>' +
-        '<div class="garden-beds" id="book-list"></div>' +
+        '<div class="garden-intro"><h1>Garden books</h1><p>Original decodable text. Each book uses only sounds taught so far. Tap a word to hear it.</p></div>' +
+        '<div class="garden-path" id="book-list">' +
+        plots +
+        "</div>" +
         '<p style="padding:12px"><button type="button" id="back-home">Back to garden</button></p>';
-      const list = document.getElementById("book-list");
-      const titles = { "sam-sat": "Sam Sat", "the-fig": "The Fig" };
-      const gate = data.bookGate || {};
-      (data.books || []).forEach(function (id) {
-        const b = document.createElement("div");
-        b.className = "garden-bed";
-        const slot = id === "sam-sat" ? "sam-sat-cover" : "fig-cover";
-        const need = gate[id];
-        const read = progress.booksRead || [];
-        const locked =
-          (need && read.indexOf(need) === -1) ||
-          (id === "the-fig" && data.mode === "blends" && !progress.soundsDone);
-        const label = titles[id] || id;
-        const btnLabel = locked
-          ? label + (need ? " — read " + (titles[need] || need) + " first" : " — finish the sound beds first")
-          : label;
-        b.innerHTML = img(slot) + '<button type="button"' + (locked ? " disabled" : "") + ">" + btnLabel + "</button>";
-        if (!locked) {
-          b.querySelector("button").onclick = function () {
-            openBook(id);
-          };
-        }
-        list.appendChild(b);
-      });
+      document.getElementById("book-list").onclick = function (ev) {
+        const btn = ev.target.closest("button[data-book]");
+        if (!btn || btn.disabled) return;
+        openBook(btn.getAttribute("data-book"));
+      };
       document.getElementById("back-home").onclick = home;
     }
 
@@ -267,37 +522,45 @@
         speak: speak,
         cue: cue,
         imgFor: img,
+        onClose: listBooks,
         onDone: function () {
           progress.blooms += 1;
-          progress.booksRead = progress.booksRead || [];
           if (progress.booksRead.indexOf(id) === -1) progress.booksRead.push(id);
+          addStamp(id);
           save();
-          listBooks();
+          cue("bloom");
+          celebrate(titleOfBook(id) + " is tended.");
+          setTimeout(listBooks, 900);
         },
       });
     }
 
-    function timer() {
-      let left = (data.minutes || 20) * 60;
+    function timer(bed) {
+      let left = (bed.minutes || data.minutes || 20) * 60;
+      const startLeft = left;
       let tick = null;
-      function paint() {
+      function paint(running) {
         const m = Math.floor(left / 60);
         const s = String(left % 60).padStart(2, "0");
+        host.className = "garden band-" + b;
         host.innerHTML =
           img("hero", "garden-hero") +
-          '<div class="garden-intro"><h1>Reading time</h1><p class="garden-timer">' +
+          '<div class="garden-intro"><h1>Sundial reading</h1><p class="garden-timer">' +
           m +
           ":" +
           s +
-          "</p><p>Paper book beside you is fine. This is only a timer.</p>" +
-          '<button type="button" id="t-toggle">Start</button> ' +
-          '<button type="button" id="t-books">Books</button> ' +
-          '<button type="button" id="t-home">Garden</button></div>';
+          "</p><p>A paper book beside you is fine. This sundial is not a test.</p>" +
+          '<div class="garden-toolbar">' +
+          '<button type="button" id="t-toggle">' +
+          (running ? "Pause" : "Start") +
+          "</button>" +
+          '<button type="button" id="t-books">Books</button>' +
+          '<button type="button" id="t-home">Garden</button></div></div>';
         document.getElementById("t-toggle").onclick = function () {
           if (tick) {
             clearInterval(tick);
             tick = null;
-            paint();
+            paint(false);
             return;
           }
           tick = setInterval(function () {
@@ -305,12 +568,21 @@
             if (left === 0) {
               clearInterval(tick);
               tick = null;
+              const spent = Math.max(1, Math.round(startLeft / 60));
+              progress.totalMinutes += spent;
+              progress.blooms += 1;
+              addStamp("sundial");
+              save();
               cue("bloom");
+              celebrate("The sundial is done.");
+              left = startLeft;
             }
             const tm = Math.floor(left / 60);
             const ts = String(left % 60).padStart(2, "0");
             const el = host.querySelector(".garden-timer");
             if (el) el.textContent = tm + ":" + ts;
+            const tg = document.getElementById("t-toggle");
+            if (tg && left === 0) tg.textContent = "Start";
           }, 1000);
           document.getElementById("t-toggle").textContent = "Pause";
         };
@@ -323,11 +595,123 @@
           home();
         };
       }
-      paint();
+      paint(false);
     }
 
-    if (data.mode === "volume") home();
-    else home();
+    function startComprehend() {
+      const passages = data.passages || [];
+      let p = 0;
+      function showPassage() {
+        const pas = passages[p];
+        if (!pas) {
+          finishBed({ id: "comprehend", title: "Story bench" });
+          return;
+        }
+        host.className = "garden band-" + b;
+        host.innerHTML =
+          '<div class="garden-passage">' +
+          img(pas.slot) +
+          "<h2>" +
+          esc(pas.title) +
+          "</h2><p>" +
+          esc(pas.text) +
+          "</p></div>" +
+          '<div class="garden-toolbar">' +
+          '<button type="button" id="hear">Hear the story</button>' +
+          '<button type="button" id="go-q">Questions</button>' +
+          '<button type="button" id="back-home">Garden</button></div>';
+        document.getElementById("hear").onclick = function () {
+          speak(pas.text, { rate: 0.92 });
+        };
+        document.getElementById("go-q").onclick = function () {
+          showQs(pas, 0);
+        };
+        document.getElementById("back-home").onclick = home;
+        speak(pas.title + ". " + pas.text, { rate: 0.92 });
+      }
+      function showQs(pas, qi) {
+        const qs = (data.items || []).filter(function (it) {
+          return it.passageId === pas.id;
+        });
+        const item = qs[qi];
+        if (!item) {
+          progress.blooms += 1;
+          addStamp(pas.id);
+          save();
+          cue("bloom");
+          p += 1;
+          showPassage();
+          return;
+        }
+        host.innerHTML =
+          '<div class="garden-prompt"><h2>' +
+          esc(pas.title) +
+          "</h2><p>" +
+          esc(item.prompt) +
+          '</p><button type="button" id="hear">Hear the question</button></div>' +
+          '<div class="garden-flowers" id="choices">' +
+          (item.choices || [])
+            .map(function (c) {
+              return '<button type="button" data-v="' + esc(c) + '">' + esc(c) + "</button>";
+            })
+            .join("") +
+          '</div><p class="garden-status" id="st"></p>' +
+          '<div class="garden-toolbar"><button type="button" id="back-home">Garden</button></div>';
+        document.getElementById("hear").onclick = function () {
+          speak(item.audioText || item.prompt);
+        };
+        document.getElementById("back-home").onclick = home;
+        speak(item.audioText || item.prompt);
+        document.getElementById("choices").onclick = function (ev) {
+          const btn = ev.target.closest("button[data-v]");
+          if (!btn) return;
+          const st = document.getElementById("st");
+          if (btn.getAttribute("data-v") === item.answer) {
+            btn.classList.add("is-right");
+            cue("bloom");
+            st.textContent = "That bed blooms.";
+            setTimeout(function () {
+              showQs(pas, qi + 1);
+            }, wait());
+          } else {
+            btn.classList.add("is-wrong");
+            cue("rustle");
+            st.textContent = "Listen again. Try another.";
+            speak(item.audioText || item.prompt);
+          }
+        };
+      }
+      showPassage();
+    }
+
+    home();
+  }
+
+  function showPicker(host) {
+    host.className = "garden";
+    host.innerHTML =
+      '<div class="garden-intro"><h1>Pick a garden plot</h1><p>Plots use bands, not grades. Untested, awaiting parent test.</p></div>' +
+      '<div class="garden-picker">' +
+      BANDS.map(function (id) {
+        return (
+          '<button type="button" data-band="' +
+          id +
+          '"><strong>' +
+          id +
+          "</strong><span>" +
+          esc(BAND_BLURB[id]) +
+          "</span></button>"
+        );
+      }).join("") +
+      "</div>";
+    host.querySelector(".garden-picker").onclick = function (ev) {
+      const btn = ev.target.closest("button[data-band]");
+      if (!btn) return;
+      setBand(btn.getAttribute("data-band"));
+      boot().catch(function (e) {
+        console.error(e);
+      });
+    };
   }
 
   if (document.readyState === "loading") {

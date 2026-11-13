@@ -1,0 +1,102 @@
+{
+  "id": "the-vine",
+  "title": "The Vine",
+  "coverSlot": "the-vine-cover",
+  "level": "silent-e",
+  "graphemes": [
+    "v",
+    "i_e",
+    "n",
+    "r",
+    "p",
+    "f",
+    "g",
+    "m",
+    "k",
+    "l",
+    "s"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is"
+  ],
+  "pages": [
+    {
+      "slot": "the-vine-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "vine",
+          "say": "vine"
+        }
+      ]
+    },
+    {
+      "slot": "the-vine-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "ripe",
+          "say": "ripe"
+        },
+        {
+          "t": "fig",
+          "say": "fig"
+        }
+      ]
+    },
+    {
+      "slot": "the-vine-p3",
+      "words": [
+        {
+          "t": "Mike",
+          "say": "Mike"
+        },
+        {
+          "t": "likes",
+          "say": "likes"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "fig",
+          "say": "fig"
+        }
+      ]
+    },
+    {
+      "slot": "the-vine-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "ripe",
+          "say": "ripe"
+        },
+        {
+          "t": "fig",
+          "say": "fig"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "mine",
+          "say": "mine"
+        }
+      ]
+    }
+  ]
+}

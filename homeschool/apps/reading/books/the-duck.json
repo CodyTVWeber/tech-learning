@@ -1,0 +1,97 @@
+{
+  "id": "the-duck",
+  "title": "The Duck",
+  "coverSlot": "the-duck-cover",
+  "level": "digraphs",
+  "graphemes": [
+    "d",
+    "u",
+    "ck",
+    "e",
+    "p",
+    "s",
+    "o",
+    "m",
+    "i",
+    "n"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is"
+  ],
+  "pages": [
+    {
+      "slot": "the-duck-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "duck",
+          "say": "duck"
+        }
+      ]
+    },
+    {
+      "slot": "the-duck-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "duck",
+          "say": "duck"
+        },
+        {
+          "t": "pecks",
+          "say": "pecks"
+        }
+      ]
+    },
+    {
+      "slot": "the-duck-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "sock",
+          "say": "sock"
+        }
+      ]
+    },
+    {
+      "slot": "the-duck-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "duck",
+          "say": "duck"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "muck",
+          "say": "muck"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "id": "the-bee",
+  "title": "The Bee",
+  "coverSlot": "the-bee-cover",
+  "level": "teams",
+  "graphemes": [
+    "b",
+    "ee",
+    "f",
+    "d",
+    "s",
+    "g",
+    "r",
+    "n",
+    "l",
+    "ea",
+    "m"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "and"
+  ],
+  "pages": [
+    {
+      "slot": "the-bee-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "bee",
+          "say": "bee"
+        }
+      ]
+    },
+    {
+      "slot": "the-bee-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "bee",
+          "say": "bee"
+        },
+        {
+          "t": "feeds",
+          "say": "feeds"
+        }
+      ]
+    },
+    {
+      "slot": "the-bee-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "green",
+          "say": "green"
+        },
+        {
+          "t": "leaf",
+          "say": "leaf"
+        }
+      ]
+    },
+    {
+      "slot": "the-bee-p4",
+      "words": [
+        {
+          "t": "Seeds",
+          "say": "seeds"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "meal",
+          "say": "meal"
+        }
+      ]
+    }
+  ]
+}

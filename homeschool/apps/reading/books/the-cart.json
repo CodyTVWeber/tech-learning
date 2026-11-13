@@ -1,0 +1,84 @@
+{
+  "id": "the-cart",
+  "title": "The Cart",
+  "coverSlot": "the-cart-cover",
+  "level": "r-controlled",
+  "graphemes": [
+    "c",
+    "ar",
+    "t",
+    "j",
+    "b",
+    "n",
+    "m",
+    "k",
+    "p",
+    "s"
+  ],
+  "sightWords": [
+    "a",
+    "the"
+  ],
+  "pages": [
+    {
+      "slot": "the-cart-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "cart",
+          "say": "cart"
+        }
+      ]
+    },
+    {
+      "slot": "the-cart-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "jar",
+          "say": "jar"
+        }
+      ]
+    },
+    {
+      "slot": "the-cart-p3",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "barn",
+          "say": "barn"
+        }
+      ]
+    },
+    {
+      "slot": "the-cart-p4",
+      "words": [
+        {
+          "t": "Mark",
+          "say": "Mark"
+        },
+        {
+          "t": "parks",
+          "say": "parks"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "cart",
+          "say": "cart"
+        }
+      ]
+    }
+  ]
+}

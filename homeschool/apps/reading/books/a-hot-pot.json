@@ -1,0 +1,101 @@
+{
+  "id": "a-hot-pot",
+  "title": "A Hot Pot",
+  "coverSlot": "a-hot-pot-cover",
+  "level": "cvc",
+  "graphemes": [
+    "s",
+    "a",
+    "t",
+    "p",
+    "m",
+    "i",
+    "g",
+    "f",
+    "b",
+    "d",
+    "n",
+    "o",
+    "h",
+    "l"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is"
+  ],
+  "pages": [
+    {
+      "slot": "a-hot-pot-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "hot",
+          "say": "hot"
+        },
+        {
+          "t": "pot",
+          "say": "pot"
+        }
+      ]
+    },
+    {
+      "slot": "a-hot-pot-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "pot",
+          "say": "pot"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "hot",
+          "say": "hot"
+        }
+      ]
+    },
+    {
+      "slot": "a-hot-pot-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "log",
+          "say": "log"
+        }
+      ]
+    },
+    {
+      "slot": "a-hot-pot-p4",
+      "words": [
+        {
+          "t": "Sam",
+          "say": "Sam"
+        },
+        {
+          "t": "taps",
+          "say": "taps"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pot",
+          "say": "pot"
+        }
+      ]
+    }
+  ]
+}

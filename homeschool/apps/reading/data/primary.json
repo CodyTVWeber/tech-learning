@@ -1,16 +1,763 @@
 {
   "band": "primary",
   "title": "Garden reading time",
-  "mode": "volume",
   "intro": {
-    "audioText": "Read in the garden. Use the timer, then open a book.",
-    "body": "Quiet reading time. The timer is a sundial, not a test. Books are original decodables."
+    "audioText": "Read in the garden. Use the sundial, tend new plots, then open a book.",
+    "body": "Volume reading lives on paper and in these garden books. New plots: vowel teams, r-controlled roses, tall plants. Earlier books are open as a warm-up."
   },
   "minutes": 20,
-  "books": ["sam-sat", "the-fig"],
-  "bookGate": { "the-fig": "sam-sat" },
-  "vocab": [
-    { "id": "v1", "word": "garden", "audioText": "garden", "hint": "A place to plant." },
-    { "id": "v2", "word": "soil", "audioText": "soil", "hint": "The ground plants grow in." }
+  "unlockLevels": [
+    "cvc",
+    "blends",
+    "digraphs",
+    "silent-e"
+  ],
+  "beds": [
+    {
+      "id": "timer",
+      "kind": "timer",
+      "title": "Sundial reading",
+      "slot": "bed-timer",
+      "minutes": 20,
+      "audioText": "Reading time. A paper book beside you is fine."
+    },
+    {
+      "id": "teams",
+      "kind": "words",
+      "title": "Vowel orchard",
+      "slot": "bed-teams",
+      "audioText": "Vowel teams. Two letters, one long sound."
+    },
+    {
+      "id": "r-controlled",
+      "kind": "words",
+      "title": "Rose beds",
+      "slot": "bed-r-controlled",
+      "requires": "teams",
+      "audioText": "The r changes the vowel. ar, or, er, ir, ur."
+    },
+    {
+      "id": "multisyllable",
+      "kind": "words",
+      "title": "Tall plants",
+      "slot": "bed-multisyllable",
+      "requires": "r-controlled",
+      "audioText": "Break a long word into parts."
+    },
+    {
+      "id": "helpers",
+      "kind": "helpers",
+      "title": "Helper signs",
+      "slot": "bed-helpers",
+      "audioText": "More helper words. Look and say."
+    },
+    {
+      "id": "vocab",
+      "kind": "vocab",
+      "title": "Word blooms",
+      "slot": "bed-vocab",
+      "audioText": "Garden words. Hear the word, tap the meaning."
+    },
+    {
+      "id": "books",
+      "kind": "books",
+      "title": "Picture books",
+      "slot": "bed-books",
+      "audioText": "All garden books. Earlier plots are a warm-up."
+    }
+  ],
+  "books": [
+    "sam-sat",
+    "the-fig",
+    "a-hot-pot",
+    "the-red-bug",
+    "stan-stands",
+    "the-plum-plot",
+    "grant-trots",
+    "the-pond",
+    "the-shed",
+    "chop",
+    "the-duck",
+    "the-moth",
+    "the-cake",
+    "the-vine",
+    "the-rose",
+    "the-mule",
+    "the-rain",
+    "the-bee",
+    "the-boat",
+    "the-moon-pool",
+    "the-cart",
+    "the-corn",
+    "the-fern",
+    "the-herd",
+    "the-picnic",
+    "the-rabbit",
+    "the-sunflower",
+    "the-pumpkin"
+  ],
+  "items": [
+    {
+      "id": "r-t1",
+      "bed": "teams",
+      "sounds": [
+        "r",
+        "ai",
+        "n"
+      ],
+      "blend": "rain",
+      "audioText": "r, ai, n",
+      "answer": "rain",
+      "choices": [
+        "rain",
+        "ran",
+        "raid"
+      ]
+    },
+    {
+      "id": "r-t2",
+      "bed": "teams",
+      "sounds": [
+        "h",
+        "ay"
+      ],
+      "blend": "hay",
+      "audioText": "h, ay",
+      "answer": "hay",
+      "choices": [
+        "hay",
+        "hat",
+        "had"
+      ]
+    },
+    {
+      "id": "r-t3",
+      "bed": "teams",
+      "sounds": [
+        "p",
+        "ai",
+        "l"
+      ],
+      "blend": "pail",
+      "audioText": "p, ai, l",
+      "answer": "pail",
+      "choices": [
+        "pail",
+        "pal",
+        "pale"
+      ]
+    },
+    {
+      "id": "r-t4",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "t",
+        "ay"
+      ],
+      "blend": "stay",
+      "audioText": "s, t, ay",
+      "answer": "stay",
+      "choices": [
+        "stay",
+        "sat",
+        "say"
+      ]
+    },
+    {
+      "id": "r-t5",
+      "bed": "teams",
+      "sounds": [
+        "b",
+        "ee"
+      ],
+      "blend": "bee",
+      "audioText": "b, ee",
+      "answer": "bee",
+      "choices": [
+        "bee",
+        "be",
+        "bed"
+      ]
+    },
+    {
+      "id": "r-t6",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "ee",
+        "d"
+      ],
+      "blend": "seed",
+      "audioText": "s, ee, d",
+      "answer": "seed",
+      "choices": [
+        "seed",
+        "sad",
+        "said"
+      ]
+    },
+    {
+      "id": "r-t7",
+      "bed": "teams",
+      "sounds": [
+        "l",
+        "ea",
+        "f"
+      ],
+      "blend": "leaf",
+      "audioText": "l, ea, f",
+      "answer": "leaf",
+      "choices": [
+        "leaf",
+        "loaf",
+        "left"
+      ]
+    },
+    {
+      "id": "r-t8",
+      "bed": "teams",
+      "sounds": [
+        "b",
+        "oa",
+        "t"
+      ],
+      "blend": "boat",
+      "audioText": "b, oa, t",
+      "answer": "boat",
+      "choices": [
+        "boat",
+        "boot",
+        "bat"
+      ]
+    },
+    {
+      "id": "r-t9",
+      "bed": "teams",
+      "sounds": [
+        "t",
+        "oa",
+        "d"
+      ],
+      "blend": "toad",
+      "audioText": "t, oa, d",
+      "answer": "toad",
+      "choices": [
+        "toad",
+        "tod",
+        "tide"
+      ]
+    },
+    {
+      "id": "r-t10",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "l",
+        "ow"
+      ],
+      "blend": "slow",
+      "audioText": "s, l, ow",
+      "answer": "slow",
+      "choices": [
+        "slow",
+        "slew",
+        "slot"
+      ]
+    },
+    {
+      "id": "r-t11",
+      "bed": "teams",
+      "sounds": [
+        "m",
+        "oo",
+        "n"
+      ],
+      "blend": "moon",
+      "audioText": "m, oo, n",
+      "answer": "moon",
+      "choices": [
+        "moon",
+        "man",
+        "moan"
+      ]
+    },
+    {
+      "id": "r-t12",
+      "bed": "teams",
+      "sounds": [
+        "p",
+        "oo",
+        "l"
+      ],
+      "blend": "pool",
+      "audioText": "p, oo, l",
+      "answer": "pool",
+      "choices": [
+        "pool",
+        "pole",
+        "poll"
+      ]
+    },
+    {
+      "id": "r-r1",
+      "bed": "r-controlled",
+      "sounds": [
+        "c",
+        "ar",
+        "t"
+      ],
+      "blend": "cart",
+      "audioText": "c, ar, t",
+      "answer": "cart",
+      "choices": [
+        "cart",
+        "cat",
+        "card"
+      ]
+    },
+    {
+      "id": "r-r2",
+      "bed": "r-controlled",
+      "sounds": [
+        "j",
+        "ar"
+      ],
+      "blend": "jar",
+      "audioText": "j, ar",
+      "answer": "jar",
+      "choices": [
+        "jar",
+        "jam",
+        "jaw"
+      ]
+    },
+    {
+      "id": "r-r3",
+      "bed": "r-controlled",
+      "sounds": [
+        "b",
+        "ar",
+        "n"
+      ],
+      "blend": "barn",
+      "audioText": "b, ar, n",
+      "answer": "barn",
+      "choices": [
+        "barn",
+        "bran",
+        "born"
+      ]
+    },
+    {
+      "id": "r-r4",
+      "bed": "r-controlled",
+      "sounds": [
+        "c",
+        "or",
+        "n"
+      ],
+      "blend": "corn",
+      "audioText": "c, or, n",
+      "answer": "corn",
+      "choices": [
+        "corn",
+        "cone",
+        "core"
+      ]
+    },
+    {
+      "id": "r-r5",
+      "bed": "r-controlled",
+      "sounds": [
+        "f",
+        "or",
+        "k"
+      ],
+      "blend": "fork",
+      "audioText": "f, or, k",
+      "answer": "fork",
+      "choices": [
+        "fork",
+        "fort",
+        "folk"
+      ]
+    },
+    {
+      "id": "r-r6",
+      "bed": "r-controlled",
+      "sounds": [
+        "f",
+        "er",
+        "n"
+      ],
+      "blend": "fern",
+      "audioText": "f, er, n",
+      "answer": "fern",
+      "choices": [
+        "fern",
+        "fan",
+        "fine"
+      ]
+    },
+    {
+      "id": "r-r7",
+      "bed": "r-controlled",
+      "sounds": [
+        "b",
+        "ir",
+        "d"
+      ],
+      "blend": "bird",
+      "audioText": "b, ir, d",
+      "answer": "bird",
+      "choices": [
+        "bird",
+        "bid",
+        "bard"
+      ]
+    },
+    {
+      "id": "r-r8",
+      "bed": "r-controlled",
+      "sounds": [
+        "d",
+        "ir",
+        "t"
+      ],
+      "blend": "dirt",
+      "audioText": "d, ir, t",
+      "answer": "dirt",
+      "choices": [
+        "dirt",
+        "dart",
+        "diet"
+      ]
+    },
+    {
+      "id": "r-r9",
+      "bed": "r-controlled",
+      "sounds": [
+        "t",
+        "ur",
+        "n"
+      ],
+      "blend": "turn",
+      "audioText": "t, ur, n",
+      "answer": "turn",
+      "choices": [
+        "turn",
+        "torn",
+        "tune"
+      ]
+    },
+    {
+      "id": "r-r10",
+      "bed": "r-controlled",
+      "sounds": [
+        "h",
+        "er",
+        "d"
+      ],
+      "blend": "herd",
+      "audioText": "h, er, d",
+      "answer": "herd",
+      "choices": [
+        "herd",
+        "hard",
+        "heard"
+      ]
+    },
+    {
+      "id": "r-m1",
+      "bed": "multisyllable",
+      "sounds": [
+        "pic",
+        "nic"
+      ],
+      "blend": "picnic",
+      "audioText": "pic, nic",
+      "answer": "picnic",
+      "choices": [
+        "picnic",
+        "panic",
+        "nickel"
+      ]
+    },
+    {
+      "id": "r-m2",
+      "bed": "multisyllable",
+      "sounds": [
+        "bas",
+        "ket"
+      ],
+      "blend": "basket",
+      "audioText": "bas, ket",
+      "answer": "basket",
+      "choices": [
+        "basket",
+        "biscuit",
+        "bucket"
+      ]
+    },
+    {
+      "id": "r-m3",
+      "bed": "multisyllable",
+      "sounds": [
+        "nap",
+        "kin"
+      ],
+      "blend": "napkin",
+      "audioText": "nap, kin",
+      "answer": "napkin",
+      "choices": [
+        "napkin",
+        "nap",
+        "pumpkin"
+      ]
+    },
+    {
+      "id": "r-m4",
+      "bed": "multisyllable",
+      "sounds": [
+        "rab",
+        "bit"
+      ],
+      "blend": "rabbit",
+      "audioText": "rab, bit",
+      "answer": "rabbit",
+      "choices": [
+        "rabbit",
+        "radish",
+        "ribbon"
+      ]
+    },
+    {
+      "id": "r-m5",
+      "bed": "multisyllable",
+      "sounds": [
+        "car",
+        "rot"
+      ],
+      "blend": "carrot",
+      "audioText": "car, rot",
+      "answer": "carrot",
+      "choices": [
+        "carrot",
+        "cart",
+        "parrot"
+      ]
+    },
+    {
+      "id": "r-m6",
+      "bed": "multisyllable",
+      "sounds": [
+        "sun",
+        "flow",
+        "er"
+      ],
+      "blend": "sunflower",
+      "audioText": "sun, flow, er",
+      "answer": "sunflower",
+      "choices": [
+        "sunflower",
+        "sunset",
+        "flower"
+      ]
+    },
+    {
+      "id": "r-m7",
+      "bed": "multisyllable",
+      "sounds": [
+        "pump",
+        "kin"
+      ],
+      "blend": "pumpkin",
+      "audioText": "pump, kin",
+      "answer": "pumpkin",
+      "choices": [
+        "pumpkin",
+        "piping",
+        "bumpkin"
+      ]
+    },
+    {
+      "id": "r-m8",
+      "bed": "multisyllable",
+      "sounds": [
+        "gar",
+        "den"
+      ],
+      "blend": "garden",
+      "audioText": "gar, den",
+      "answer": "garden",
+      "choices": [
+        "garden",
+        "pardon",
+        "harden"
+      ]
+    },
+    {
+      "id": "r-h1",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "said",
+      "audioText": "said",
+      "choices": [
+        "said",
+        "sad",
+        "and"
+      ]
+    },
+    {
+      "id": "r-h2",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "of",
+      "audioText": "of",
+      "choices": [
+        "of",
+        "off",
+        "if"
+      ]
+    },
+    {
+      "id": "r-h3",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "you",
+      "audioText": "you",
+      "choices": [
+        "you",
+        "yes",
+        "your"
+      ]
+    },
+    {
+      "id": "r-h4",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "was",
+      "audioText": "was",
+      "choices": [
+        "was",
+        "saw",
+        "has"
+      ]
+    },
+    {
+      "id": "r-h5",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "are",
+      "audioText": "are",
+      "choices": [
+        "are",
+        "our",
+        "or"
+      ]
+    },
+    {
+      "id": "r-h6",
+      "bed": "helpers",
+      "kind": "helper",
+      "prompt": "Look and say. This helper is not sounded out letter by letter.",
+      "answer": "they",
+      "audioText": "they",
+      "choices": [
+        "they",
+        "the",
+        "then"
+      ]
+    },
+    {
+      "id": "r-v1",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "garden",
+      "prompt": "What does garden mean here?",
+      "answer": "A place to plant",
+      "audioText": "garden",
+      "choices": [
+        "A place to plant",
+        "A kind of boat",
+        "A loud bell"
+      ]
+    },
+    {
+      "id": "r-v2",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "soil",
+      "prompt": "What does soil mean here?",
+      "answer": "The ground plants grow in",
+      "audioText": "soil",
+      "choices": [
+        "The ground plants grow in",
+        "A rain cloud",
+        "A baked cake"
+      ]
+    },
+    {
+      "id": "r-v3",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "harvest",
+      "prompt": "What does harvest mean here?",
+      "answer": "Gathering the crop",
+      "audioText": "harvest",
+      "choices": [
+        "Gathering the crop",
+        "A kind of insect",
+        "A night sky"
+      ]
+    },
+    {
+      "id": "r-v4",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "trellis",
+      "prompt": "What does trellis mean here?",
+      "answer": "A frame plants climb",
+      "audioText": "trellis",
+      "choices": [
+        "A frame plants climb",
+        "A watering can",
+        "A garden cart"
+      ]
+    },
+    {
+      "id": "r-v5",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "plot",
+      "prompt": "What does plot mean here?",
+      "answer": "A small piece of garden",
+      "audioText": "plot",
+      "choices": [
+        "A small piece of garden",
+        "A kind of bee",
+        "A metal rake"
+      ]
+    },
+    {
+      "id": "r-v6",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "compost",
+      "prompt": "What does compost mean here?",
+      "answer": "Rotted scraps that feed soil",
+      "audioText": "compost",
+      "choices": [
+        "Rotted scraps that feed soil",
+        "A sweet fruit",
+        "A stone path"
+      ]
+    }
   ]
 }

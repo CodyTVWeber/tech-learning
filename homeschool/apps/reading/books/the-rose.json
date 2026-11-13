@@ -1,0 +1,92 @@
+{
+  "id": "the-rose",
+  "title": "The Rose",
+  "coverSlot": "the-rose-cover",
+  "level": "silent-e",
+  "graphemes": [
+    "r",
+    "o_e",
+    "s",
+    "p",
+    "l",
+    "t",
+    "n",
+    "the"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "on"
+  ],
+  "pages": [
+    {
+      "slot": "the-rose-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "rose",
+          "say": "rose"
+        }
+      ]
+    },
+    {
+      "slot": "the-rose-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "pole",
+          "say": "pole"
+        }
+      ]
+    },
+    {
+      "slot": "the-rose-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "stone",
+          "say": "stone"
+        }
+      ]
+    },
+    {
+      "slot": "the-rose-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "rose",
+          "say": "rose"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "stone",
+          "say": "stone"
+        }
+      ]
+    }
+  ]
+}

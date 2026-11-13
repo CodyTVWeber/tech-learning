@@ -1,0 +1,293 @@
+{
+  "levels": [
+    {
+      "id": "cvc",
+      "title": "Short words",
+      "audioText": "Short vowel words in the garden."
+    },
+    {
+      "id": "blends",
+      "title": "Blend hedge",
+      "audioText": "Blends in the hedge."
+    },
+    {
+      "id": "digraphs",
+      "title": "Letter teams on the trellis",
+      "audioText": "Two letters, one sound."
+    },
+    {
+      "id": "silent-e",
+      "title": "Silent e vine",
+      "audioText": "The silent e makes the vowel say its long sound."
+    },
+    {
+      "id": "teams",
+      "title": "Vowel orchard",
+      "audioText": "Vowel teams in the orchard."
+    },
+    {
+      "id": "r-controlled",
+      "title": "Rose beds",
+      "audioText": "The r changes the vowel."
+    },
+    {
+      "id": "multisyllable",
+      "title": "Tall plants",
+      "audioText": "Words with more than one part."
+    }
+  ],
+  "books": [
+    {
+      "id": "sam-sat",
+      "title": "Sam Sat",
+      "level": "cvc",
+      "coverSlot": "sam-sat-cover",
+      "requires": null,
+      "requiresBed": "cvc",
+      "pages": 4
+    },
+    {
+      "id": "the-fig",
+      "title": "The Fig",
+      "level": "cvc",
+      "coverSlot": "the-fig-cover",
+      "requires": "sam-sat",
+      "requiresBed": "cvc",
+      "pages": 4
+    },
+    {
+      "id": "a-hot-pot",
+      "title": "A Hot Pot",
+      "level": "cvc",
+      "coverSlot": "a-hot-pot-cover",
+      "requires": "the-fig",
+      "requiresBed": "cvc",
+      "pages": 4
+    },
+    {
+      "id": "the-red-bug",
+      "title": "The Red Bug",
+      "level": "cvc",
+      "coverSlot": "the-red-bug-cover",
+      "requires": "a-hot-pot",
+      "requiresBed": "cvc",
+      "pages": 4
+    },
+    {
+      "id": "stan-stands",
+      "title": "Stan Stands",
+      "level": "blends",
+      "coverSlot": "stan-stands-cover",
+      "requires": "the-red-bug",
+      "requiresBed": "blends",
+      "pages": 4
+    },
+    {
+      "id": "the-plum-plot",
+      "title": "The Plum Plot",
+      "level": "blends",
+      "coverSlot": "the-plum-plot-cover",
+      "requires": "stan-stands",
+      "requiresBed": "blends",
+      "pages": 4
+    },
+    {
+      "id": "grant-trots",
+      "title": "Grant Trots",
+      "level": "blends",
+      "coverSlot": "grant-trots-cover",
+      "requires": "the-plum-plot",
+      "requiresBed": "blends",
+      "pages": 4
+    },
+    {
+      "id": "the-pond",
+      "title": "The Pond",
+      "level": "blends",
+      "coverSlot": "the-pond-cover",
+      "requires": "grant-trots",
+      "requiresBed": "blends",
+      "pages": 4
+    },
+    {
+      "id": "the-shed",
+      "title": "The Shed",
+      "level": "digraphs",
+      "coverSlot": "the-shed-cover",
+      "requires": "the-pond",
+      "requiresBed": "digraphs",
+      "pages": 4
+    },
+    {
+      "id": "chop",
+      "title": "Chop",
+      "level": "digraphs",
+      "coverSlot": "chop-cover",
+      "requires": "the-shed",
+      "requiresBed": "digraphs",
+      "pages": 4
+    },
+    {
+      "id": "the-duck",
+      "title": "The Duck",
+      "level": "digraphs",
+      "coverSlot": "the-duck-cover",
+      "requires": "chop",
+      "requiresBed": "digraphs",
+      "pages": 4
+    },
+    {
+      "id": "the-moth",
+      "title": "The Moth",
+      "level": "digraphs",
+      "coverSlot": "the-moth-cover",
+      "requires": "the-duck",
+      "requiresBed": "digraphs",
+      "pages": 4
+    },
+    {
+      "id": "the-cake",
+      "title": "The Cake",
+      "level": "silent-e",
+      "coverSlot": "the-cake-cover",
+      "requires": "the-moth",
+      "requiresBed": "silent-e",
+      "pages": 4
+    },
+    {
+      "id": "the-vine",
+      "title": "The Vine",
+      "level": "silent-e",
+      "coverSlot": "the-vine-cover",
+      "requires": "the-cake",
+      "requiresBed": "silent-e",
+      "pages": 4
+    },
+    {
+      "id": "the-rose",
+      "title": "The Rose",
+      "level": "silent-e",
+      "coverSlot": "the-rose-cover",
+      "requires": "the-vine",
+      "requiresBed": "silent-e",
+      "pages": 4
+    },
+    {
+      "id": "the-mule",
+      "title": "The Mule",
+      "level": "silent-e",
+      "coverSlot": "the-mule-cover",
+      "requires": "the-rose",
+      "requiresBed": "silent-e",
+      "pages": 4
+    },
+    {
+      "id": "the-rain",
+      "title": "The Rain",
+      "level": "teams",
+      "coverSlot": "the-rain-cover",
+      "requires": "the-mule",
+      "requiresBed": "teams",
+      "pages": 4
+    },
+    {
+      "id": "the-bee",
+      "title": "The Bee",
+      "level": "teams",
+      "coverSlot": "the-bee-cover",
+      "requires": "the-rain",
+      "requiresBed": "teams",
+      "pages": 4
+    },
+    {
+      "id": "the-boat",
+      "title": "The Boat",
+      "level": "teams",
+      "coverSlot": "the-boat-cover",
+      "requires": "the-bee",
+      "requiresBed": "teams",
+      "pages": 4
+    },
+    {
+      "id": "the-moon-pool",
+      "title": "The Moon Pool",
+      "level": "teams",
+      "coverSlot": "the-moon-pool-cover",
+      "requires": "the-boat",
+      "requiresBed": "teams",
+      "pages": 4
+    },
+    {
+      "id": "the-cart",
+      "title": "The Cart",
+      "level": "r-controlled",
+      "coverSlot": "the-cart-cover",
+      "requires": "the-moon-pool",
+      "requiresBed": "r-controlled",
+      "pages": 4
+    },
+    {
+      "id": "the-corn",
+      "title": "The Corn",
+      "level": "r-controlled",
+      "coverSlot": "the-corn-cover",
+      "requires": "the-cart",
+      "requiresBed": "r-controlled",
+      "pages": 4
+    },
+    {
+      "id": "the-fern",
+      "title": "The Fern",
+      "level": "r-controlled",
+      "coverSlot": "the-fern-cover",
+      "requires": "the-corn",
+      "requiresBed": "r-controlled",
+      "pages": 4
+    },
+    {
+      "id": "the-herd",
+      "title": "The Herd",
+      "level": "r-controlled",
+      "coverSlot": "the-herd-cover",
+      "requires": "the-fern",
+      "requiresBed": "r-controlled",
+      "pages": 4
+    },
+    {
+      "id": "the-picnic",
+      "title": "The Picnic",
+      "level": "multisyllable",
+      "coverSlot": "the-picnic-cover",
+      "requires": "the-herd",
+      "requiresBed": "multisyllable",
+      "pages": 4
+    },
+    {
+      "id": "the-rabbit",
+      "title": "The Rabbit",
+      "level": "multisyllable",
+      "coverSlot": "the-rabbit-cover",
+      "requires": "the-picnic",
+      "requiresBed": "multisyllable",
+      "pages": 4
+    },
+    {
+      "id": "the-sunflower",
+      "title": "The Sunflower",
+      "level": "multisyllable",
+      "coverSlot": "the-sunflower-cover",
+      "requires": "the-rabbit",
+      "requiresBed": "multisyllable",
+      "pages": 4
+    },
+    {
+      "id": "the-pumpkin",
+      "title": "The Pumpkin",
+      "level": "multisyllable",
+      "coverSlot": "the-pumpkin-cover",
+      "requires": "the-sunflower",
+      "requiresBed": "multisyllable",
+      "pages": 4
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "id": "the-fern",
+  "title": "The Fern",
+  "coverSlot": "the-fern-cover",
+  "level": "r-controlled",
+  "graphemes": [
+    "f",
+    "er",
+    "n",
+    "d",
+    "i",
+    "t",
+    "b",
+    "ur"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "is",
+    "in"
+  ],
+  "pages": [
+    {
+      "slot": "the-fern-p1",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "fern",
+          "say": "fern"
+        }
+      ]
+    },
+    {
+      "slot": "the-fern-p2",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "fern",
+          "say": "fern"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "dirt",
+          "say": "dirt"
+        }
+      ]
+    },
+    {
+      "slot": "the-fern-p3",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "bird",
+          "say": "bird"
+        }
+      ]
+    },
+    {
+      "slot": "the-fern-p4",
+      "words": [
+        {
+          "t": "Turn",
+          "say": "turn"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "dirt",
+          "say": "dirt"
+        }
+      ]
+    }
+  ]
+}

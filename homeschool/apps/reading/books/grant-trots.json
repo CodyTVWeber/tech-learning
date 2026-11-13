@@ -1,0 +1,92 @@
+{
+  "id": "grant-trots",
+  "title": "Grant Trots",
+  "coverSlot": "grant-trots-cover",
+  "level": "blends",
+  "graphemes": [
+    "g",
+    "r",
+    "a",
+    "n",
+    "t",
+    "o",
+    "s",
+    "f",
+    "i",
+    "p",
+    "gr",
+    "tr",
+    "fr"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "and"
+  ],
+  "pages": [
+    {
+      "slot": "grant-trots-p1",
+      "words": [
+        {
+          "t": "Grant",
+          "say": "Grant"
+        },
+        {
+          "t": "trots",
+          "say": "trots"
+        }
+      ]
+    },
+    {
+      "slot": "grant-trots-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "frog",
+          "say": "frog"
+        }
+      ]
+    },
+    {
+      "slot": "grant-trots-p3",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "frog",
+          "say": "frog"
+        },
+        {
+          "t": "grips",
+          "say": "grips"
+        }
+      ]
+    },
+    {
+      "slot": "grant-trots-p4",
+      "words": [
+        {
+          "t": "Grant",
+          "say": "Grant"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "frog",
+          "say": "frog"
+        }
+      ]
+    }
+  ]
+}

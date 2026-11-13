@@ -1,16 +1,675 @@
 {
   "band": "upper",
   "title": "Garden reading time",
-  "mode": "volume",
   "intro": {
-    "audioText": "Read. Use the timer. The sample books are short; add your own paper book beside them.",
-    "body": "Volume reading lives mostly on paper. The garden timer keeps time. Sample books are for younger siblings or a quick warm-up."
+    "audioText": "Read. Use the sundial. Tend vocabulary blooms and story questions. Short books are a warm-up.",
+    "body": "Volume reading lives mostly on paper. The sundial keeps time. Vocabulary and story questions grow this plot. Decodable books are a warm-up, not the whole garden."
   },
-  "minutes": 20,
-  "books": ["sam-sat", "the-fig"],
-  "bookGate": { "the-fig": "sam-sat" },
-  "vocab": [
-    { "id": "v1", "word": "voyage", "audioText": "voyage", "hint": "A long trip. (Not today’s garden word — skip if you like.)" },
-    { "id": "v2", "word": "plot", "audioText": "plot", "hint": "A small piece of garden, or the events in a story." }
+  "minutes": 25,
+  "unlockAllBooks": true,
+  "beds": [
+    {
+      "id": "timer",
+      "kind": "timer",
+      "title": "Sundial reading",
+      "slot": "bed-timer",
+      "minutes": 25,
+      "audioText": "Reading time. Bring a paper book if you like."
+    },
+    {
+      "id": "vocab",
+      "kind": "vocab",
+      "title": "Word blooms",
+      "slot": "bed-vocab",
+      "audioText": "Garden and story words. Hear the word, tap the meaning."
+    },
+    {
+      "id": "comprehend",
+      "kind": "comprehend",
+      "title": "Story bench",
+      "slot": "bed-comprehend",
+      "audioText": "Read the garden story. Then answer."
+    },
+    {
+      "id": "books",
+      "kind": "books",
+      "title": "Picture books",
+      "slot": "bed-books",
+      "audioText": "Decodable warm-up books. Tap a word to hear it."
+    }
+  ],
+  "books": [
+    "sam-sat",
+    "the-fig",
+    "a-hot-pot",
+    "the-red-bug",
+    "stan-stands",
+    "the-plum-plot",
+    "grant-trots",
+    "the-pond",
+    "the-shed",
+    "chop",
+    "the-duck",
+    "the-moth",
+    "the-cake",
+    "the-vine",
+    "the-rose",
+    "the-mule",
+    "the-rain",
+    "the-bee",
+    "the-boat",
+    "the-moon-pool",
+    "the-cart",
+    "the-corn",
+    "the-fern",
+    "the-herd",
+    "the-picnic",
+    "the-rabbit",
+    "the-sunflower",
+    "the-pumpkin"
+  ],
+  "passages": [
+    {
+      "id": "rain-barrel",
+      "title": "The Rain Barrel",
+      "slot": "passage-rainbarrel",
+      "text": "After a dry week, the garden soil turned pale and dusty. Sam rolled a wooden barrel under the shed roof just as clouds piled up in the west. Rain struck the barrel lid, then the path, then the thirsty beds. In the morning the barrel was heavy. Sam dipped a pail and watered the young beans first, then the tomatoes along the fence. The plants lifted their leaves. Sam learned that saving rain is a quiet kind of work: you prepare before the storm, and the garden drinks later.",
+      "questions": [
+        {
+          "id": "u-q1",
+          "prompt": "Why did Sam roll the barrel under the shed roof?",
+          "audioText": "Why did Sam roll the barrel under the shed roof?",
+          "answer": "To catch the coming rain",
+          "choices": [
+            "To catch the coming rain",
+            "To hide from a hen",
+            "To store dry beans"
+          ]
+        },
+        {
+          "id": "u-q2",
+          "prompt": "Which plants did Sam water first?",
+          "audioText": "Which plants did Sam water first?",
+          "answer": "The young beans",
+          "choices": [
+            "The young beans",
+            "The old fig tree",
+            "The grass on the path"
+          ]
+        },
+        {
+          "id": "u-q3",
+          "prompt": "What does the last sentence say saving rain is like?",
+          "audioText": "What does the last sentence say saving rain is like?",
+          "answer": "Quiet work you prepare before the storm",
+          "choices": [
+            "Quiet work you prepare before the storm",
+            "A race against the sun",
+            "A way to skip watering forever"
+          ]
+        },
+        {
+          "id": "u-q4",
+          "prompt": "What word best names the barrel's job?",
+          "audioText": "What word best names the barrel's job?",
+          "answer": "To store rain for later",
+          "choices": [
+            "To store rain for later",
+            "To scare rabbits",
+            "To hold compost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wren-gourd",
+      "title": "The Wren in the Gourd",
+      "slot": "passage-wren",
+      "text": "A dried gourd hung from the trellis, hollow and pale. In April a tiny wren slipped inside with a beak full of moss. Day after day she wove a nest no bigger than a fist. Sam did not tap the gourd. He sat on the path and watched from a distance. When four thin mouths opened in the dark opening, the wren brought moths and beetles from the compost heap. The garden was not only food for people. It was a kitchen for a bird family, too.",
+      "questions": [
+        {
+          "id": "u-q5",
+          "prompt": "Where did the wren build?",
+          "audioText": "Where did the wren build?",
+          "answer": "Inside a dried gourd",
+          "choices": [
+            "Inside a dried gourd",
+            "Under a rain barrel",
+            "In the corn cart"
+          ]
+        },
+        {
+          "id": "u-q6",
+          "prompt": "Why did Sam keep still?",
+          "audioText": "Why did Sam keep still?",
+          "answer": "So he would not disturb the nest",
+          "choices": [
+            "So he would not disturb the nest",
+            "Because the path was muddy",
+            "To hide from the sun"
+          ]
+        },
+        {
+          "id": "u-q7",
+          "prompt": "What did the wren bring to the nest?",
+          "audioText": "What did the wren bring to the nest?",
+          "answer": "Moths and beetles",
+          "choices": [
+            "Moths and beetles",
+            "Seeds and cake",
+            "Figs and plums"
+          ]
+        },
+        {
+          "id": "u-q8",
+          "prompt": "What idea does the last line teach?",
+          "audioText": "What idea does the last line teach?",
+          "answer": "A garden can feed birds as well as people",
+          "choices": [
+            "A garden can feed birds as well as people",
+            "Gourds should be picked early",
+            "Wrens do not like trellises"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compost-worms",
+      "title": "Workers in the Heap",
+      "slot": "passage-worms",
+      "text": "The compost heap looked like a pile of scraps: apple cores, bean vines, and last week's grass. Under the top layer the heap was warm. Red worms pulled bits of leaf into dark tunnels. Jane turned the pile with a fork once a week so air could reach the middle. In autumn she spread the finished compost along the furrows. The soil smelled sweet, not rotten. Jane told her brother that worms do not need thanks, but the garden pays them anyway with softer ground and stronger roots.",
+      "questions": [
+        {
+          "id": "u-q9",
+          "prompt": "What did Jane use to turn the heap?",
+          "audioText": "What did Jane use to turn the heap?",
+          "answer": "A fork",
+          "choices": [
+            "A fork",
+            "A pail",
+            "A rake"
+          ]
+        },
+        {
+          "id": "u-q10",
+          "prompt": "Why did she turn the pile?",
+          "audioText": "Why did she turn the pile?",
+          "answer": "So air could reach the middle",
+          "choices": [
+            "So air could reach the middle",
+            "To find lost seeds",
+            "To scare the wren"
+          ]
+        },
+        {
+          "id": "u-q11",
+          "prompt": "When did she spread the finished compost?",
+          "audioText": "When did she spread the finished compost?",
+          "answer": "In autumn",
+          "choices": [
+            "In autumn",
+            "During a drought",
+            "On the first frost night"
+          ]
+        },
+        {
+          "id": "u-q12",
+          "prompt": "How does the garden 'pay' the worms?",
+          "audioText": "How does the garden pay the worms?",
+          "answer": "With softer ground and stronger roots",
+          "choices": [
+            "With softer ground and stronger roots",
+            "With a picnic of cake",
+            "By keeping the heap dry"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "last-tomato",
+      "title": "The Last Tomato",
+      "slot": "passage-tomato",
+      "text": "By late season only one tomato still hung on the vine, heavy and red. Mark had planned to carry it home for supper. Then he saw a neighbor pause at the fence with an empty basket. The neighbor had given Mark extra bean starts in spring. Mark picked the tomato, wiped the dust on his sleeve, and set it in the basket. Supper that night was beans and bread, not tomato, but the table felt full. In a garden, harvest is not only what you keep. It is also what you pass along.",
+      "questions": [
+        {
+          "id": "u-q13",
+          "prompt": "What was still hanging on the vine?",
+          "audioText": "What was still hanging on the vine?",
+          "answer": "One tomato",
+          "choices": [
+            "One tomato",
+            "A pumpkin",
+            "A bunch of grapes"
+          ]
+        },
+        {
+          "id": "u-q14",
+          "prompt": "Why might Mark have wanted to keep it?",
+          "audioText": "Why might Mark have wanted to keep it?",
+          "answer": "He had planned it for supper",
+          "choices": [
+            "He had planned it for supper",
+            "It was still green",
+            "The vine was sick"
+          ]
+        },
+        {
+          "id": "u-q15",
+          "prompt": "What had the neighbor given Mark in spring?",
+          "audioText": "What had the neighbor given Mark in spring?",
+          "answer": "Extra bean starts",
+          "choices": [
+            "Extra bean starts",
+            "A rain barrel",
+            "A mule"
+          ]
+        },
+        {
+          "id": "u-q16",
+          "prompt": "What does the last line say harvest includes?",
+          "audioText": "What does the last line say harvest includes?",
+          "answer": "What you pass along",
+          "choices": [
+            "What you pass along",
+            "Only what you store in jars",
+            "Counting every seed"
+          ]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "u-v1",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "trellis",
+      "prompt": "What does trellis mean here?",
+      "answer": "A frame that plants climb",
+      "audioText": "trellis",
+      "choices": [
+        "A frame that plants climb",
+        "A kind of beetle",
+        "A rain barrel lid"
+      ]
+    },
+    {
+      "id": "u-v2",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "compost",
+      "prompt": "What does compost mean here?",
+      "answer": "Rotted scraps that feed the soil",
+      "audioText": "compost",
+      "choices": [
+        "Rotted scraps that feed the soil",
+        "A sweet glaze for cake",
+        "A type of fence post"
+      ]
+    },
+    {
+      "id": "u-v3",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "furrow",
+      "prompt": "What does furrow mean here?",
+      "answer": "A long groove cut for planting",
+      "audioText": "furrow",
+      "choices": [
+        "A long groove cut for planting",
+        "A climbing vine",
+        "A harvest basket"
+      ]
+    },
+    {
+      "id": "u-v4",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "perennial",
+      "prompt": "What does perennial mean here?",
+      "answer": "A plant that returns each year",
+      "audioText": "perennial",
+      "choices": [
+        "A plant that returns each year",
+        "A plant that lives one season",
+        "A tool for pruning"
+      ]
+    },
+    {
+      "id": "u-v5",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "yield",
+      "prompt": "What does yield mean here?",
+      "answer": "The amount a plot produces",
+      "audioText": "yield",
+      "choices": [
+        "The amount a plot produces",
+        "The shade under a tree",
+        "A stone used as a border"
+      ]
+    },
+    {
+      "id": "u-v6",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "drought",
+      "prompt": "What does drought mean here?",
+      "answer": "A long time with too little rain",
+      "audioText": "drought",
+      "choices": [
+        "A long time with too little rain",
+        "A sudden frost",
+        "A night full of moths"
+      ]
+    },
+    {
+      "id": "u-v7",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "mulch",
+      "prompt": "What does mulch mean here?",
+      "answer": "A cover of leaves or straw on soil",
+      "audioText": "mulch",
+      "choices": [
+        "A cover of leaves or straw on soil",
+        "A kind of melon",
+        "A wooden trellis peg"
+      ]
+    },
+    {
+      "id": "u-v8",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "tend",
+      "prompt": "What does tend mean here?",
+      "answer": "To care for plants",
+      "audioText": "tend",
+      "choices": [
+        "To care for plants",
+        "To harvest too early",
+        "To scare a rabbit"
+      ]
+    },
+    {
+      "id": "u-v9",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "plot",
+      "prompt": "What does plot mean here?",
+      "answer": "A small piece of garden, or the events in a story",
+      "audioText": "plot",
+      "choices": [
+        "A small piece of garden, or the events in a story",
+        "Only a cooking pot",
+        "A type of seed packet"
+      ]
+    },
+    {
+      "id": "u-v10",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "narrator",
+      "prompt": "What does narrator mean here?",
+      "answer": "The voice that tells a story",
+      "audioText": "narrator",
+      "choices": [
+        "The voice that tells a story",
+        "The last page of a book",
+        "A garden scarecrow"
+      ]
+    },
+    {
+      "id": "u-v11",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "setting",
+      "prompt": "What does setting mean here?",
+      "answer": "Where and when a story happens",
+      "audioText": "setting",
+      "choices": [
+        "Where and when a story happens",
+        "The moral of a fable",
+        "A list of characters"
+      ]
+    },
+    {
+      "id": "u-v12",
+      "bed": "vocab",
+      "kind": "vocab",
+      "word": "illustrate",
+      "prompt": "What does illustrate mean here?",
+      "answer": "To show meaning with a picture",
+      "audioText": "illustrate",
+      "choices": [
+        "To show meaning with a picture",
+        "To skip a chapter",
+        "To plant in rows"
+      ]
+    },
+    {
+      "id": "u-q1",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "rain-barrel",
+      "prompt": "Why did Sam roll the barrel under the shed roof?",
+      "audioText": "Why did Sam roll the barrel under the shed roof?",
+      "answer": "To catch the coming rain",
+      "choices": [
+        "To catch the coming rain",
+        "To hide from a hen",
+        "To store dry beans"
+      ]
+    },
+    {
+      "id": "u-q2",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "rain-barrel",
+      "prompt": "Which plants did Sam water first?",
+      "audioText": "Which plants did Sam water first?",
+      "answer": "The young beans",
+      "choices": [
+        "The young beans",
+        "The old fig tree",
+        "The grass on the path"
+      ]
+    },
+    {
+      "id": "u-q3",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "rain-barrel",
+      "prompt": "What does the last sentence say saving rain is like?",
+      "audioText": "What does the last sentence say saving rain is like?",
+      "answer": "Quiet work you prepare before the storm",
+      "choices": [
+        "Quiet work you prepare before the storm",
+        "A race against the sun",
+        "A way to skip watering forever"
+      ]
+    },
+    {
+      "id": "u-q4",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "rain-barrel",
+      "prompt": "What word best names the barrel's job?",
+      "audioText": "What word best names the barrel's job?",
+      "answer": "To store rain for later",
+      "choices": [
+        "To store rain for later",
+        "To scare rabbits",
+        "To hold compost"
+      ]
+    },
+    {
+      "id": "u-q5",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "wren-gourd",
+      "prompt": "Where did the wren build?",
+      "audioText": "Where did the wren build?",
+      "answer": "Inside a dried gourd",
+      "choices": [
+        "Inside a dried gourd",
+        "Under a rain barrel",
+        "In the corn cart"
+      ]
+    },
+    {
+      "id": "u-q6",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "wren-gourd",
+      "prompt": "Why did Sam keep still?",
+      "audioText": "Why did Sam keep still?",
+      "answer": "So he would not disturb the nest",
+      "choices": [
+        "So he would not disturb the nest",
+        "Because the path was muddy",
+        "To hide from the sun"
+      ]
+    },
+    {
+      "id": "u-q7",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "wren-gourd",
+      "prompt": "What did the wren bring to the nest?",
+      "audioText": "What did the wren bring to the nest?",
+      "answer": "Moths and beetles",
+      "choices": [
+        "Moths and beetles",
+        "Seeds and cake",
+        "Figs and plums"
+      ]
+    },
+    {
+      "id": "u-q8",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "wren-gourd",
+      "prompt": "What idea does the last line teach?",
+      "audioText": "What idea does the last line teach?",
+      "answer": "A garden can feed birds as well as people",
+      "choices": [
+        "A garden can feed birds as well as people",
+        "Gourds should be picked early",
+        "Wrens do not like trellises"
+      ]
+    },
+    {
+      "id": "u-q9",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "compost-worms",
+      "prompt": "What did Jane use to turn the heap?",
+      "audioText": "What did Jane use to turn the heap?",
+      "answer": "A fork",
+      "choices": [
+        "A fork",
+        "A pail",
+        "A rake"
+      ]
+    },
+    {
+      "id": "u-q10",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "compost-worms",
+      "prompt": "Why did she turn the pile?",
+      "audioText": "Why did she turn the pile?",
+      "answer": "So air could reach the middle",
+      "choices": [
+        "So air could reach the middle",
+        "To find lost seeds",
+        "To scare the wren"
+      ]
+    },
+    {
+      "id": "u-q11",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "compost-worms",
+      "prompt": "When did she spread the finished compost?",
+      "audioText": "When did she spread the finished compost?",
+      "answer": "In autumn",
+      "choices": [
+        "In autumn",
+        "During a drought",
+        "On the first frost night"
+      ]
+    },
+    {
+      "id": "u-q12",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "compost-worms",
+      "prompt": "How does the garden 'pay' the worms?",
+      "audioText": "How does the garden pay the worms?",
+      "answer": "With softer ground and stronger roots",
+      "choices": [
+        "With softer ground and stronger roots",
+        "With a picnic of cake",
+        "By keeping the heap dry"
+      ]
+    },
+    {
+      "id": "u-q13",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "last-tomato",
+      "prompt": "What was still hanging on the vine?",
+      "audioText": "What was still hanging on the vine?",
+      "answer": "One tomato",
+      "choices": [
+        "One tomato",
+        "A pumpkin",
+        "A bunch of grapes"
+      ]
+    },
+    {
+      "id": "u-q14",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "last-tomato",
+      "prompt": "Why might Mark have wanted to keep it?",
+      "audioText": "Why might Mark have wanted to keep it?",
+      "answer": "He had planned it for supper",
+      "choices": [
+        "He had planned it for supper",
+        "It was still green",
+        "The vine was sick"
+      ]
+    },
+    {
+      "id": "u-q15",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "last-tomato",
+      "prompt": "What had the neighbor given Mark in spring?",
+      "audioText": "What had the neighbor given Mark in spring?",
+      "answer": "Extra bean starts",
+      "choices": [
+        "Extra bean starts",
+        "A rain barrel",
+        "A mule"
+      ]
+    },
+    {
+      "id": "u-q16",
+      "bed": "comprehend",
+      "kind": "comprehend",
+      "passageId": "last-tomato",
+      "prompt": "What does the last line say harvest includes?",
+      "audioText": "What does the last line say harvest includes?",
+      "answer": "What you pass along",
+      "choices": [
+        "What you pass along",
+        "Only what you store in jars",
+        "Counting every seed"
+      ]
+    }
   ]
 }

@@ -1,0 +1,91 @@
+{
+  "id": "the-shed",
+  "title": "The Shed",
+  "coverSlot": "the-shed-cover",
+  "level": "digraphs",
+  "graphemes": [
+    "sh",
+    "e",
+    "d",
+    "i",
+    "s",
+    "t",
+    "n"
+  ],
+  "sightWords": [
+    "the",
+    "a",
+    "is",
+    "she"
+  ],
+  "pages": [
+    {
+      "slot": "the-shed-p1",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "shed",
+          "say": "shed"
+        }
+      ]
+    },
+    {
+      "slot": "the-shed-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "dish",
+          "say": "dish"
+        }
+      ]
+    },
+    {
+      "slot": "the-shed-p3",
+      "words": [
+        {
+          "t": "She",
+          "say": "she"
+        },
+        {
+          "t": "sits",
+          "say": "sits"
+        }
+      ]
+    },
+    {
+      "slot": "the-shed-p4",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "dish",
+          "say": "dish"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shed",
+          "say": "shed"
+        }
+      ]
+    }
+  ]
+}

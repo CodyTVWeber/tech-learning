@@ -1,0 +1,79 @@
+{
+  "id": "the-corn",
+  "title": "The Corn",
+  "coverSlot": "the-corn-cover",
+  "level": "r-controlled",
+  "graphemes": [
+    "c",
+    "or",
+    "n",
+    "f",
+    "k",
+    "s",
+    "t",
+    "p"
+  ],
+  "sightWords": [
+    "a",
+    "the",
+    "for"
+  ],
+  "pages": [
+    {
+      "slot": "the-corn-p1",
+      "words": [
+        {
+          "t": "Corn",
+          "say": "corn"
+        }
+      ]
+    },
+    {
+      "slot": "the-corn-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "fork",
+          "say": "fork"
+        }
+      ]
+    },
+    {
+      "slot": "the-corn-p3",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "stork",
+          "say": "stork"
+        }
+      ]
+    },
+    {
+      "slot": "the-corn-p4",
+      "words": [
+        {
+          "t": "Corn",
+          "say": "corn"
+        },
+        {
+          "t": "for",
+          "say": "for"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pot",
+          "say": "pot"
+        }
+      ]
+    }
+  ]
+}

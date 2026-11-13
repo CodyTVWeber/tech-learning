@@ -1,0 +1,107 @@
+{
+  "id": "the-herd",
+  "title": "The Herd",
+  "coverSlot": "the-herd-cover",
+  "level": "r-controlled",
+  "graphemes": [
+    "h",
+    "er",
+    "d",
+    "b",
+    "ir",
+    "a",
+    "n",
+    "c",
+    "or",
+    "t",
+    "ur"
+  ],
+  "sightWords": [
+    "the",
+    "a",
+    "at",
+    "in"
+  ],
+  "pages": [
+    {
+      "slot": "the-herd-p1",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "herd",
+          "say": "herd"
+        }
+      ]
+    },
+    {
+      "slot": "the-herd-p2",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "bird",
+          "say": "bird"
+        },
+        {
+          "t": "at",
+          "say": "at"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "barn",
+          "say": "barn"
+        }
+      ]
+    },
+    {
+      "slot": "the-herd-p3",
+      "words": [
+        {
+          "t": "Corn",
+          "say": "corn"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "cart",
+          "say": "cart"
+        }
+      ]
+    },
+    {
+      "slot": "the-herd-p4",
+      "words": [
+        {
+          "t": "Turn",
+          "say": "turn"
+        },
+        {
+          "t": "at",
+          "say": "at"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "barn",
+          "say": "barn"
+        }
+      ]
+    }
+  ]
+}
