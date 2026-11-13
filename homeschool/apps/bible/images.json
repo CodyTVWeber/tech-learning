@@ -3,7 +3,7 @@
   "theme": "Shepherd’s Hillside — ochre pasture, olive shade, lantern gold, night stars",
   "images": [
     {
-      "file": "hillside-hero.png",
+      "file": "img/bible-hillside-hero.jpg",
       "width": 1280,
       "height": 720,
       "alt": "Golden-hour hillside with a flock of cream and brown sheep",
@@ -11,7 +11,7 @@
       "slot": "hero"
     },
     {
-      "file": "sheep.png",
+      "file": "img/bible-sheep.jpg",
       "width": 1024,
       "height": 1024,
       "alt": "Close photograph of a woolly sheep in dry hillside grass",
@@ -19,7 +19,7 @@
       "slot": "sheep"
     },
     {
-      "file": "lantern.png",
+      "file": "img/bible-lantern.jpg",
       "width": 768,
       "height": 1024,
       "alt": "Brass oil lantern glowing on limestone at night",
@@ -27,7 +27,7 @@
       "slot": "lantern"
     },
     {
-      "file": "stars.png",
+      "file": "img/bible-stars.jpg",
       "width": 1280,
       "height": 720,
       "alt": "Star field over a dark hillside with a distant lantern",
@@ -35,7 +35,7 @@
       "slot": "stars"
     },
     {
-      "file": "waters.png",
+      "file": "img/bible-waters.jpg",
       "width": 1280,
       "height": 720,
       "alt": "Still pool on a hillside reflecting a pale gold sky",
@@ -43,7 +43,7 @@
       "slot": "waters"
     },
     {
-      "file": "olives.png",
+      "file": "img/bible-olives.jpg",
       "width": 1024,
       "height": 768,
       "alt": "Gnarled olive trees on a sunlit stone terrace",
@@ -51,7 +51,7 @@
       "slot": "olives"
     },
     {
-      "file": "wheat.png",
+      "file": "img/bible-wheat.jpg",
       "width": 1280,
       "height": 720,
       "alt": "Ripe wheat field on rolling hills at late afternoon",

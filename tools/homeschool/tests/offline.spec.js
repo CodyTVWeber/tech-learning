@@ -119,6 +119,10 @@ test("subject marked none shows the quiet home page and prefetches nothing", asy
   await page.goto(BASE + "Shiloh/", { waitUntil: "load" });
   await waitPrecache(page);
   await expect(page.locator("h1")).toContainText("Shiloh");
+  const homeLinks = await page.locator("#home-root a").evaluateAll((els) =>
+    els.map((a) => a.getAttribute("href") || "")
+  );
+  expect(homeLinks.join("\n"), "none subjects stay off the home").not.toMatch(/app=reading/);
   appHits.length = 0;
   errors.length = 0;
   await page.goto(BASE + "Shiloh/play.html?app=reading&band=baby", { waitUntil: "load" });
@@ -212,6 +216,28 @@ test("science speaks a prompt inside play.html for a young band", async ({ page 
   expect(spoken.length).toBeGreaterThan(8);
   expect(spoken).toMatch(/Field expedition/i);
   expect(errors).toEqual([]);
+});
+
+test("index.html is the learner home and progress keys include the folder", async ({ page }) => {
+  await page.goto(BASE + "Joey/index.html", { waitUntil: "load" });
+  await expect(page.locator("h1")).toContainText("Joey");
+  await expect(page.locator("#home-root")).not.toContainText("Unknown home");
+  const joey = await page.evaluate(() => HS.progressKey("bible"));
+  expect(joey).toBe("hs.progress.Joey.bible");
+
+  await page.evaluate(() => {
+    localStorage.setItem(HS.progressKey("bible"), JSON.stringify({ sheep: ["joey-flock"] }));
+  });
+  await page.goto(BASE + "Bella/", { waitUntil: "load" });
+  await expect(page.locator("h1")).toContainText("Bella");
+  const split = await page.evaluate(() => ({
+    bella: HS.progressKey("bible"),
+    bellaFlock: localStorage.getItem(HS.progressKey("bible")),
+    joeyFlock: localStorage.getItem("hs.progress.Joey.bible"),
+  }));
+  expect(split.bella).toBe("hs.progress.Bella.bible");
+  expect(split.bellaFlock || "").not.toContain("joey-flock");
+  expect(split.joeyFlock).toContain("joey-flock");
 });
 
 test("standalone math and reading show a visible untested banner", async ({ page }) => {

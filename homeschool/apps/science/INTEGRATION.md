@@ -4,7 +4,7 @@ Theme: naturalist's field expedition (ink plates, kraft journal, specimen tin, h
 
 Band via `?band=` or `hs.band`. If neither is set, a trail picker. Allowed: `baby | toddler | preschool | early | primary | upper`. No grade labels, no exact ages, no family names.
 
-Progress: `localStorage['hs.progress.science']`
+Progress: `HS.progressKey('science')` (`hs.progress.<folder>.science`)
 Shape: `{ band, stars, stamps[], specimens[], experiments[], trails{}, journal[], babyPlates[], updated, updatedAt }`. Stars and stamps are collectibles, not grades.
 
 ## Runner

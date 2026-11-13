@@ -89,8 +89,8 @@ The runner sets `?band=` from `stages.json` (or a per-learner override) and also
 
 ### Progress
 
-- Key: `localStorage['hs.progress.<id>']` where `<id>` is the app id (`math`, `reading`, …)
-- Value: JSON object the app owns. Include `updatedAt` (ISO string) if you can.
+- Key: `HS.progressKey(id)` which is `localStorage['hs.progress.<folder>.<id>']`. `<folder>` is the learner folder from the home URL, or `standalone` when the app is opened under `/apps/`. `<id>` is the app id (`math`, `reading`, …). Do not use a single origin-wide `hs.progress.<id>` key.
+- Value: JSON object the app owns. Include `updatedAt` (ISO string) if you can. The key stores no age and no surname.
 - Learner homes export/import **all** `hs.*` keys. Do not store last names, birth dates, photos, addresses, or medical details.
 
 ### How the runner loads an app (scope)

@@ -3,7 +3,13 @@
 
   function folderFromPath() {
     const parts = global.location.pathname.split("/").filter(Boolean);
-    return parts[parts.length - 1] || "";
+    if (parts.length && parts[parts.length - 1].toLowerCase() === "index.html") parts.pop();
+    const folder = parts[parts.length - 1] || "";
+    try {
+      return decodeURIComponent(folder);
+    } catch (e) {
+      return folder;
+    }
   }
 
   HS.loadStages = async function loadStages() {

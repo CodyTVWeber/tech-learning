@@ -30,13 +30,13 @@ window.BIBLE = {
     }
   ],
   "images": {
-    "hillside": "images/hillside-hero.png",
-    "sheep": "images/sheep.png",
-    "lantern": "images/lantern.png",
-    "stars": "images/stars.png",
-    "waters": "images/waters.png",
-    "olives": "images/olives.png",
-    "wheat": "images/wheat.png"
+    "hillside": "img/bible-hillside-hero.jpg",
+    "sheep": "img/bible-sheep.jpg",
+    "lantern": "img/bible-lantern.jpg",
+    "stars": "img/bible-stars.jpg",
+    "waters": "img/bible-waters.jpg",
+    "olives": "img/bible-olives.jpg",
+    "wheat": "img/bible-wheat.jpg"
   },
   "verses": [
     {

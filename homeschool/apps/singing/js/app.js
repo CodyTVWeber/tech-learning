@@ -9,18 +9,21 @@
     upper: "Cents-close matching, dotted rhythms, full hymn lines."
   };
   const KEY_BAND = "hs.band";
-  const KEY_PROG = "hs.progress.singing";
+  function progressKey() {
+    if (window.HS && typeof HS.progressKey === "function") return HS.progressKey("singing");
+    return "hs.progress.standalone.singing";
+  }
   const $ = (s, el) => (el || document).querySelector(s);
   const appEl = $("#app");
 
   function hashScreen() { return (location.hash || "#home").replace("#", "") || "home"; }
   function go(s) { location.hash = s; render(); }
   function load() {
-    try { return JSON.parse(localStorage.getItem(KEY_PROG) || "{}") || {}; } catch (e) { return {}; }
+    try { return JSON.parse(localStorage.getItem(progressKey()) || "{}") || {}; } catch (e) { return {}; }
   }
   function save(p) {
     p.updatedAt = Date.now();
-    localStorage.setItem(KEY_PROG, JSON.stringify(p));
+    localStorage.setItem(progressKey(), JSON.stringify(p));
   }
   function reduceMotion() {
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

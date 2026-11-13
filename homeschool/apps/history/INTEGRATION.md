@@ -7,7 +7,7 @@ Theme: a railway of American eras. Each stop is a Cycle 3 *history topic*. Kids 
 - Folder id: `history`
 - Band: `?band=` else `localStorage['hs.band']` else a picker (runner always sets `?band=`)
 - Optional: `?week=1`–`24` opens that station
-- Progress: `localStorage['hs.progress.history']` (stamps, tickets, stars, `updatedAt`)
+- Progress: `HS.progressKey('history')` (`hs.progress.<folder>.history`) (stamps, tickets, stars, `updatedAt`)
 - Mute: `hs.mute` (`1` = muted), same key as the kit
 - Do **not** register `sw.js` when `document.documentElement.dataset.runner === "1"`
 - Resolve files with `HS.url(...)` / `dataset.appBase` so the learner runner stays in scope

@@ -11,7 +11,7 @@ Theme: a shepherd’s hillside. Kids gather sheep as they memorize, light lanter
 - Pictures are listed in `images.json`.
 - Band from `?band=` else `localStorage['hs.band']` else an in-app picker.
   Bands: `baby`, `toddler`, `preschool`, `early`, `primary`, `upper`.
-- Progress: `localStorage['hs.progress.bible']` (sheep ids, lantern count, stars, done maps, KJV/WEB toggle).
+- Progress: `HS.progressKey('bible')` (`hs.progress.<folder>.bible`) (sheep ids, lantern count, stars, done maps, KJV/WEB toggle).
 - No grades. Rewards are sheep, lanterns, and stars.
 - No runtime network. Web Speech for read-aloud when the browser has it. WebAudio for chimes.
 - Registers `sw.js` scoped to this folder so the app can run offline on its own, unless `document.documentElement.dataset.runner === "1"` (the learner runner already controls the page).

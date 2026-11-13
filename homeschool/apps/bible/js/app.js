@@ -9,7 +9,10 @@
     upper: "Passages, story order, and the whole hillside."
   };
   const KEY_BAND = "hs.band";
-  const KEY_PROG = "hs.progress.bible";
+  function progressKey() {
+    if (window.HS && typeof HS.progressKey === "function") return HS.progressKey("bible");
+    return "hs.progress.standalone.bible";
+  }
 
   const $ = (sel, el) => (el || document).querySelector(sel);
   const appEl = $("#app");
@@ -28,14 +31,14 @@
 
   function loadProg() {
     try {
-      return JSON.parse(localStorage.getItem(KEY_PROG) || "{}") || {};
+      return JSON.parse(localStorage.getItem(progressKey()) || "{}") || {};
     } catch (e) {
       return {};
     }
   }
   function saveProg(p) {
     p.updatedAt = Date.now();
-    localStorage.setItem(KEY_PROG, JSON.stringify(p));
+    localStorage.setItem(progressKey(), JSON.stringify(p));
   }
   function reduceMotion() {
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;

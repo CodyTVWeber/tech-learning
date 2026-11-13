@@ -11,13 +11,13 @@ window.SINGING = {
     { id: "upper", label: "Upper" }
   ],
   images: {
-    forest: "images/forest-hero.png",
-    wren: "images/wren.png",
-    choir: "images/choir.png",
-    nest: "images/nest.png",
-    cardinal: "images/cardinal.png",
-    owl: "images/owl.png",
-    path: "images/path.png"
+    forest: "img/singing-forest-hero.jpg",
+    wren: "img/singing-wren.jpg",
+    choir: "img/singing-choir.jpg",
+    nest: "img/singing-nest.jpg",
+    cardinal: "img/singing-cardinal.jpg",
+    owl: "img/singing-owl.jpg",
+    path: "img/singing-path.jpg"
   },
   solfege: [
     { syl: "Do", midi: 60, hint: "home perch, rest here", hand: "Fist at the middle of the chest." },

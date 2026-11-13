@@ -50,37 +50,22 @@ export async function offlineReloadToddler(page, context, appId, failed) {
         })
     );
   }, appId);
-  // Wait until THIS app's worker is active before navigating again.
-  // A reload that starts while install is still running is not controlled,
-  // and clients.claim() can miss the document that appears in that gap.
+  const controlledByApp = (id) => {
+    const c = navigator.serviceWorker && navigator.serviceWorker.controller;
+    return !!(c && c.scriptURL.indexOf("/apps/" + id + "/") !== -1);
+  };
+  // clients.claim() attaches the worker without another navigation. Reloading
+  // while install is still running drops that claim and leaves controller null.
   try {
-    await page.waitForFunction(
-      (id) =>
-        navigator.serviceWorker.getRegistrations().then(function (regs) {
-          return regs.some(function (r) {
-            return r.scope.indexOf("/apps/" + id + "/") !== -1 && !!r.active;
-          });
-        }),
-      appId,
-      { timeout: 20000 }
-    );
+    await page.waitForFunction(controlledByApp, appId, { timeout: 20000 });
   } catch (err) {
-    const info = await swInfo(page);
-    throw new Error(appId + " sw not active " + JSON.stringify(info) + " " + err);
-  }
-  await page.reload({ waitUntil: "load" });
-  try {
-    await page.waitForFunction(
-      (id) => {
-        const c = navigator.serviceWorker && navigator.serviceWorker.controller;
-        return !!(c && c.scriptURL.indexOf("/apps/" + id + "/") !== -1);
-      },
-      appId,
-      { timeout: 10000 }
-    );
-  } catch (err) {
-    const info = await swInfo(page);
-    throw new Error(appId + " sw not controlling " + JSON.stringify(info) + " " + err);
+    await page.reload({ waitUntil: "load" });
+    try {
+      await page.waitForFunction(controlledByApp, appId, { timeout: 10000 });
+    } catch (err2) {
+      const info = await swInfo(page);
+      throw new Error(appId + " sw not controlling " + JSON.stringify(info) + " " + err2);
+    }
   }
   failed.length = 0;
   await context.setOffline(true);

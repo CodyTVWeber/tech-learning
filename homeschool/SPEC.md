@@ -20,7 +20,7 @@ Checked into this public repo at the maintainer’s request. It is a builder bri
   - Site may use *topic titles* (e.g. “Week 11 History: Civil War”), public-domain facts (states/capitals, presidents, formulas, geography feature names), and original games/quizzes.
   - No copyrighted song lyrics; no CC audio/video.
   - Note: “deck TSVs / apkg exist privately; share with the family on request,” not as a public download of the 532-card pack.
-- **App contract:** `DESIGN.md`. Each app: `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`. Band from `?band=` else `localStorage['hs.band']`. Progress `localStorage['hs.progress.<subject>']`. Subject folder ids: `math`, `reading`, `history`, `geography`, `science`, `bible`, `singing`, `movement`, `art`, `essentials-points`, `presentation`. There is no separate `cc-cycle3` app (history covers Cycle 3 history review). `geography` replaced `maps`. `movement` replaced `dancing`.
+- **App contract:** `DESIGN.md`. Each app: `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`. Band from `?band=` else `localStorage['hs.band']`. Progress `localStorage['hs.progress.<folder>.<subject>']` (`HS.progressKey`). Subject folder ids: `math`, `reading`, `history`, `geography`, `science`, `bible`, `singing`, `movement`, `art`, `essentials-points`, `presentation`. There is no separate `cc-cycle3` app (history covers Cycle 3 history review). `geography` replaced `maps`. `movement` replaced `dancing`.
 
 ---
 

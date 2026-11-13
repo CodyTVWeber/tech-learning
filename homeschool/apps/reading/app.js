@@ -313,13 +313,15 @@
       if (hs().writeProgress) hs().writeProgress(SUBJECT, progress);
       else {
         try {
-          localStorage.setItem("hs.progress." + SUBJECT, JSON.stringify(progress));
+          const key = hs().progressKey ? hs().progressKey(SUBJECT) : "hs.progress.standalone." + SUBJECT;
+          localStorage.setItem(key, JSON.stringify(progress));
         } catch (e) {}
       }
     }
     function readProgressLocal() {
       try {
-        return JSON.parse(localStorage.getItem("hs.progress." + SUBJECT) || "{}");
+        const key = hs().progressKey ? hs().progressKey(SUBJECT) : "hs.progress.standalone." + SUBJECT;
+        return JSON.parse(localStorage.getItem(key) || "{}");
       } catch (e) {
         return {};
       }

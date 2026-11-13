@@ -1,7 +1,10 @@
 (function (global) {
   "use strict";
 
-  var KEY = "hs.progress.history";
+  function progressKey() {
+    if (global.HS && typeof global.HS.progressKey === "function") return global.HS.progressKey("history");
+    return "hs.progress.standalone.history";
+  }
 
   function blank() {
     return {
@@ -15,7 +18,7 @@
 
   function load() {
     try {
-      var raw = localStorage.getItem(KEY);
+      var raw = localStorage.getItem(progressKey());
       if (!raw) return blank();
       var data = JSON.parse(raw);
       if (!data || typeof data !== "object") return blank();
@@ -34,7 +37,7 @@
   function save(data) {
     try {
       data.updatedAt = new Date().toISOString();
-      localStorage.setItem(KEY, JSON.stringify(data));
+      localStorage.setItem(progressKey(), JSON.stringify(data));
     } catch (e) {}
   }
 
@@ -82,7 +85,7 @@
   }
 
   global.HSProgress = {
-    key: KEY,
+    get key() { return progressKey(); },
     load: load,
     save: save,
     mark: mark,

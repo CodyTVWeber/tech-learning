@@ -6,7 +6,10 @@
   }
   const BAND_KEY = "hs.band";
   const QUIET_KEY = "hs.movement.quiet";
-  const PROGRESS_KEY = "hs.progress.movement";
+  function progressKey() {
+    if (window.HS && typeof HS.progressKey === "function") return HS.progressKey("movement");
+    return "hs.progress.standalone.movement";
+  }
   const BAND_IDS = C.bands.map(function (b) { return b.id; });
 
   const icon = {
@@ -25,7 +28,7 @@
 
   function loadProgress() {
     try {
-      const raw = localStorage.getItem(PROGRESS_KEY);
+      const raw = localStorage.getItem(progressKey());
       if (raw) {
         const p = JSON.parse(raw);
         if (p && typeof p === "object") {
@@ -42,7 +45,7 @@
 
   function saveProgress() {
     state.progress.updated = new Date().toISOString();
-    localStorage.setItem(PROGRESS_KEY, JSON.stringify(state.progress));
+    localStorage.setItem(progressKey(), JSON.stringify(state.progress));
     paintChrome();
   }
 

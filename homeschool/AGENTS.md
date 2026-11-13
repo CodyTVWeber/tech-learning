@@ -15,7 +15,7 @@ Hard rules are also summarized in `SPEC.md` §1 and `DESIGN.md`.
 - Math is original practice aligned to CC Math Map **skills**, not a copy of the Map. Teach technique, then **now do this on paper**.
 - `toddler` and `preschool` phonics: letter **sounds** first, not letter names.
 - Never write “kid-friendly” or “kid-tested.” Mark UI **Untested, awaiting parent test.**
-- Progress: `localStorage['hs.progress.<subject>']`, plus other `hs.*` keys. Export/import JSON from the homes.
+- Progress: `localStorage['hs.progress.<folder>.<subject>']` via `HS.progressKey(subject)`. `<folder>` is the learner folder (`Joey`) or `standalone` under `/apps/`. Never store an age or a surname in the key. Other `hs.*` keys are still exported.
 
 ## Layout
 
@@ -31,10 +31,10 @@ Documented in `DESIGN.md`. Short version:
 
 - `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`
 - Band: `HS.getBand()` reads `?band=` else `localStorage['hs.band']`. If both are unset it returns `""` — **not** `early`. Standalone apps show a band picker. The runner always sets `?band=` from the learner before the app starts.
-- Progress: `localStorage['hs.progress.<id>']`
+- Progress: `HS.readProgress(id)` / `HS.writeProgress(id)` (`hs.progress.<folder>.<id>`)
 - Learner SW and CI **consume `assets.json`**. New apps plug in without kit edits.
 - Runner: `play.html?app=<id>&band=<band>` loads the app **inside** the learner scope. Never navigate to `../apps/`.
-- If that learner’s `stages.json` level for the subject is `"none"`, the runner shows the same quiet page as an empty home (`Not on this home. This is a quiet page for care time.`) and does **not** fetch the app (no `assets.json`, no `data/<band>.json`).
+- If that learner’s `stages.json` level for the subject is `"none"`, the home does not link it, and `play.html?app=` shows the same quiet page as an empty home (`Not on this home. This is a quiet page for care time.`) without fetching the app (no `assets.json`, no `data/<band>.json`). Do not write a shared `hs.progress.<id>` key. Two learners on one origin must not share a flock.
 
 ## Runner chrome and speech
 
