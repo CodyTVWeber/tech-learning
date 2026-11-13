@@ -2,16 +2,16 @@
 
 Theme: garden (soil beds, clay pots, seed-packet marks, a bee that speaks **sounds**). Letter **sounds** first for `toddler` and `preschool` (never letter names as the first prompt). Picture-book reader for every band that has books.
 
-Band via `?band=` else `hs.band` else `early` (same as `HS.getBand`). Standalone loads kit `audio.js`, `tts.js`, and `progress.js` so TTS, cues, and progress match the runner. The plot picker is only via Switch plot. Progress: `hs.progress.reading`.
+Band via `?band=` else, in the runner, `HS.getBand`, else `hs.band`. Standalone with neither shows a band picker (no ages). Standalone loads kit `audio.js`, `tts.js`, and `progress.js` so TTS, cues, and progress match the runner. The service worker matches `?band=` with `ignoreSearch` and falls back to `index.html` when offline. Progress: `hs.progress.reading`.
 
 ## Bands
 
 | Band | What happens |
 | --- | --- |
 | baby | Not linked. Calm “no garden lessons” if opened. |
-| toddler | Sound beds only. SATPIN + a few more. The bee speaks phonemes (`sss`, `tuh`, not “ess” or “tee”). Visible graphemes on flowers. |
-| preschool | Full letter-sound set, then gated listen-and-blend (tap seeds in order, then blend), then *Sam Sat*. Still sounds first. |
-| early | CVC → helper signs → blends → digraphs → silent e → vowel teams. Four original books per plot, gated in order. |
+| toddler | Sound beds only. SATPIN + a few more. The bee speaks phonemes (`sss`, `tuh`, not “ess” or “tee”). Tap a picture of the sound. The grapheme shows after a correct tap. |
+| preschool | Eight sticky picture-sounds, then one tap-seed blend, then *Sam Sat*. Still sounds first. |
+| early | CVC → helper signs → blends → digraphs → silent e → vowel teams. The book path shows the next open book and the next action, not a wall of locked covers. |
 | primary | Longer garden books and vocabulary blooms first. Then vowel teams, r-controlled roses, multisyllable plants, helpers. Sundial last for paper reading. |
 | upper | Longer garden books and vocabulary blooms first, then story questions. Sundial last. All books unlocked. |
 
@@ -28,7 +28,7 @@ Band via `?band=` else `hs.band` else `early` (same as `HS.getBand`). Standalone
 | Vowel teams | *The Rain*, *The Bee*, *The Boat*, *The Moon Pool* |
 | R-controlled | *The Cart*, *The Corn*, *The Fern*, *The Herd* |
 | Multisyllable | *The Picnic*, *The Rabbit*, *The Sunflower*, *The Pumpkin* |
-| Volume | *Sun on the Rows*, *Harvest Day*, *The Garden Gate*, *Under the Trellis* |
+| Volume | *Sun on the Rows*, *Harvest Day*, *The Garden Gate*, *Under the Trellis* — about 60 sentences each, for a long sitting |
 
 ## Progress shape
 
