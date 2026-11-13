@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Short, hands-on drills for high-leverage engineering with agentic coding tools.">
+  <title>Tech Learning</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%230f3d34'/%3E%3Cpath d='M4 11.5V4.5h2.1c1.7 0 2.6.8 2.6 2.1 0 .9-.5 1.6-1.3 1.9l1.6 3h-1.7l-1.4-2.7H5.5V11.5H4zm1.5-4h.6c.8 0 1.2-.4 1.2-1s-.4-1-1.2-1h-.6v2z' fill='%23e8f0ed'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <div class="brand">
+        <p class="eyebrow">Practice loop</p>
+        <h1>Tech Learning</h1>
+        <p class="tagline" id="tagline"></p>
+      </div>
+      <nav class="app-nav" aria-label="App">
+        <a href="#today">Today's drill</a>
+        <a href="#modules">Modules</a>
+        <a href="#tools">CLI comparison</a>
+      </nav>
+    </div>
+    <div class="progress-panel">
+      <div class="progress-meta">
+        <span id="progress-label">Loading progress</span>
+        <span id="progress-pct" class="progress-pct"></span>
+      </div>
+      <div
+        class="progress"
+        id="progress-bar"
+        role="progressbar"
+        aria-valuemin="0"
+        aria-valuemax="0"
+        aria-valuenow="0"
+        aria-labelledby="progress-label"
+      >
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+    <div class="toolbar">
+      <button type="button" class="btn" id="theme-toggle" aria-pressed="false">Theme: system</button>
+      <button type="button" class="btn" id="export-btn">Export progress</button>
+      <button type="button" class="btn" id="import-btn">Import progress</button>
+      <input type="file" id="import-file" accept="application/json,.json" hidden>
+      <button type="button" class="btn btn-danger" id="reset-btn">Reset progress</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <noscript>
+      <p class="banner">This app needs JavaScript to load lessons and save progress.</p>
+    </noscript>
+    <p class="intro" id="intro"></p>
+
+    <section id="today" class="today" aria-labelledby="today-heading">
+      <h2 id="today-heading">Today's drill</h2>
+      <div id="today-card"></div>
+    </section>
+
+    <section id="modules" class="modules" aria-labelledby="modules-heading">
+      <h2 id="modules-heading">Modules</h2>
+      <ol class="module-list" id="module-list"></ol>
+    </section>
+
+    <section id="tools" class="tools" aria-labelledby="tools-heading">
+      <h2 id="tools-heading">CLI comparison</h2>
+      <p id="tools-intro"></p>
+      <div class="table-wrap">
+        <table id="tools-table">
+          <caption class="visually-hidden">Documented facts about agentic coding CLIs</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tool</th>
+              <th scope="col">Maker</th>
+              <th scope="col">Command</th>
+              <th scope="col">Interfaces</th>
+              <th scope="col">Notes</th>
+              <th scope="col">Docs</th>
+            </tr>
+          </thead>
+          <tbody id="tools-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Static app. Progress stays in this browser unless you export it. MIT License.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
