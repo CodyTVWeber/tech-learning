@@ -31,7 +31,7 @@ window.HSScienceData = (function () {
     { id: "oak-leaf", name: "Oak leaf", latin: "Quercus", img: "images/specimens/oak-leaf.svg", kind: "plant", habitat: "forest", bands: KID, fact: "Oak leaves have deep lobes. The tree holds acorns, each a seed with food packed around a baby oak.", design: "A leaf is a solar panel and a rain hat at once." },
     { id: "maple-leaf", name: "Maple leaf", latin: "Acer", img: "images/specimens/maple-leaf.svg", kind: "plant", habitat: "yard", bands: KID, fact: "Maple leaves show palmate veins, like fingers from a palm. In fall the green fades and other colors show.", design: "Veins are roads for water and sugar." },
     { id: "pine", name: "Pine", latin: "Pinus", img: "images/specimens/pine.svg", kind: "plant", habitat: "mountain", bands: KID, fact: "Pines keep needle leaves all year. Needles lose less water than broad leaves.", design: "Winter green is not a trick; it is a design for poor, cold soils and thin air." },
-    { id: "cactus", name: "Cactus", latin: "Cactaceae", img: "images/habitats/desert.svg", kind: "plant", habitat: "desert", bands: SCHOOL, fact: "A cactus stores water in thick stems and wears spines instead of broad leaves.", design: "The shape fits a dry wash: hold water, spend little, rest in the heat." },
+    { id: "cactus", name: "Cactus", latin: "Cactaceae", img: "images/specimens/cactus.svg", kind: "plant", habitat: "desert", bands: SCHOOL, fact: "A cactus stores water in thick stems and wears spines instead of broad leaves.", design: "The shape fits a dry wash: hold water, spend little, rest in the heat." },
     { id: "dandelion", name: "Dandelion", latin: "Taraxacum", img: "images/specimens/dandelion.svg", kind: "plant", habitat: "meadow", bands: KID, fact: "The yellow head is many tiny flowers packed together. The seed rides a plume of down.", design: "One plant can feed a bee and later sail a seed on the wind." },
     { id: "fern", name: "Fern", latin: "Pteridophyta", img: "images/specimens/fern.svg", kind: "plant", habitat: "forest", bands: SCHOOL, fact: "Ferns make no flowers. They raise dust-like spores on the undersides of fronds.", design: "Even plants without petals follow an orderly life cycle." },
     { id: "moss", name: "Moss", latin: "Bryophyta", img: "images/specimens/moss.svg", kind: "plant", habitat: "forest", bands: SCHOOL, fact: "Moss drinks through its body. It has no true roots or tubes like a tree.", design: "A green cushion on a stone is a whole tiny forest." },
@@ -68,14 +68,14 @@ window.HSScienceData = (function () {
 
   const senses = [
     { id: "sight", name: "Sight", organ: "eyes", img: "images/creation/eye.svg", bands: KID, fact: "Eyes gather light. Lenses bend it so a picture lands on the back wall, the retina." },
-    { id: "hearing", name: "Hearing", organ: "ears", img: "images/weather/wind.svg", bands: KID, fact: "Ears catch sound waves. Tiny bones pass the shake to a coiled inner ear." },
-    { id: "smell", name: "Smell", organ: "nose", img: "images/specimens/dandelion.svg", bands: KID, fact: "The nose reads chemicals in air. Smell and taste work as partners." },
-    { id: "taste", name: "Taste", organ: "tongue", img: "images/body/digestive.svg", bands: KID, fact: "Taste buds notice sweet, sour, salty, bitter, and savory. The rest is smell." },
-    { id: "touch", name: "Touch", organ: "skin", img: "images/specimens/moss.svg", bands: KID, fact: "Skin is a covering full of sensors for pressure, pain, and temperature." }
+    { id: "hearing", name: "Hearing", organ: "ears", img: "images/body/ear.svg", bands: KID, fact: "Ears catch sound waves. Tiny bones pass the shake to a coiled inner ear." },
+    { id: "smell", name: "Smell", organ: "nose", img: "images/body/nose.svg", bands: KID, fact: "The nose reads chemicals in air. Smell and taste work as partners." },
+    { id: "taste", name: "Taste", organ: "tongue", img: "images/body/tongue.svg", bands: KID, fact: "Taste buds notice sweet, sour, salty, bitter, and savory. The rest is smell." },
+    { id: "touch", name: "Touch", organ: "skin", img: "images/body/skin.svg", bands: KID, fact: "Skin is a covering full of sensors for pressure, pain, and temperature." }
   ];
 
   const topics = [
-    { id: "tissue", marker: 1, title: "Four types of tissue", bands: MID, img: "images/body/senses.svg", notes: "The body is built of four tissue kinds: covering tissue (epithelial), supporting tissue (connective), moving tissue (muscle), and signaling tissue (nervous). A tissue is a team of similar cells with one job.", quiz: [
+    { id: "tissue", marker: 1, title: "Four types of tissue", bands: MID, img: "images/body/tissue.svg", notes: "The body is built of four tissue kinds: covering tissue (epithelial), supporting tissue (connective), moving tissue (muscle), and signaling tissue (nervous). A tissue is a team of similar cells with one job.", quiz: [
       { q: "What is a tissue?", a: ["A team of similar cells with one job", "A whole organ", "A kind of bone only", "A drop of blood"], ok: 0 },
       { q: "Which tissue covers and lines?", a: ["Epithelial", "Muscle", "Nervous", "Blood only"], ok: 0 },
       { q: "Which tissue is built to contract and move?", a: ["Muscle", "Epithelial", "Fat only", "Enamel"], ok: 0 },
@@ -87,13 +87,13 @@ window.HSScienceData = (function () {
       { q: "The backbone is a stack of bones called…", a: ["Vertebrae", "Tarsals", "Phalanges", "Carpals"], ok: 0 },
       { q: "The sternum is the…", a: ["Breastbone", "Kneecap", "Jaw hinge", "Heel"], ok: 0 }
     ]},
-    { id: "muscle", marker: 3, title: "Three kinds of muscle", bands: MID, img: "images/body/heart.svg", notes: "Skeletal muscle moves bones when you choose. Smooth muscle lives in organs and works without a thought. Cardiac muscle is the heart's own never-resting muscle.", quiz: [
+    { id: "muscle", marker: 3, title: "Three kinds of muscle", bands: MID, img: "images/body/muscle.svg", notes: "Skeletal muscle moves bones when you choose. Smooth muscle lives in organs and works without a thought. Cardiac muscle is the heart's own never-resting muscle.", quiz: [
       { q: "Which muscle kind do you use to pick up a rock?", a: ["Skeletal", "Cardiac", "Smooth only", "None"], ok: 0 },
       { q: "Which muscle kind is only in the heart?", a: ["Cardiac", "Skeletal", "Smooth", "Epithelial"], ok: 0 },
       { q: "Stomach walls use…", a: ["Smooth muscle", "Skeletal muscle", "Cardiac muscle", "Cartilage"], ok: 0 },
       { q: "A mark of cardiac muscle is that it…", a: ["Keeps a beat without you asking", "Only works in fingers", "Turns to bone", "Tastes food"], ok: 0 }
     ]},
-    { id: "nervous", marker: 4, title: "Three parts of the nervous system", bands: MID, img: "images/body/axial-skeleton.svg", notes: "A simple field split: the brain, the spinal cord, and the nerves that branch into the body. Brain and spinal cord are the central desk. Nerves are the message roads.", quiz: [
+    { id: "nervous", marker: 4, title: "Three parts of the nervous system", bands: MID, img: "images/body/nerves.svg", notes: "A simple field split: the brain, the spinal cord, and the nerves that branch into the body. Brain and spinal cord are the central desk. Nerves are the message roads.", quiz: [
       { q: "The three parts we map here are…", a: ["Brain, spinal cord, and nerves", "Heart, lung, and liver", "Skin, hair, and nails", "Bone, fat, and tooth"], ok: 0 },
       { q: "The spinal cord is…", a: ["A cable of nerves guarded by vertebrae", "A muscle in the arm", "A kind of blood", "A sense of smell"], ok: 0 },
       { q: "Nerves that run out into arms and legs belong to the…", a: ["Body's message roads", "Stomach acid", "Tooth enamel", "Tear ducts only"], ok: 0 },
@@ -111,10 +111,10 @@ window.HSScienceData = (function () {
       { q: "The stomach's job is to…", a: ["Churn and start breaking food", "Pump blood", "Store urine", "Make tears"], ok: 0 },
       { q: "The liver, among other jobs, helps with…", a: ["Handling food chemicals", "Hearing", "Balance only", "Growing hair"], ok: 0 }
     ]},
-    { id: "excretory", marker: 7, title: "Excretory system", bands: MID, img: "images/body/digestive.svg", notes: "Four parts of the urinary trail: kidneys, ureters, bladder, urethra. Kidneys filter blood. Ureters are the pipes down. The bladder is a holding room. The urethra is the exit path.", quiz: [
+    { id: "excretory", marker: 7, title: "Excretory system", bands: MID, img: "images/body/kidneys.svg", notes: "Four parts of the urinary trail: kidneys, ureters, bladder, urethra. Kidneys filter blood. Ureters are the pipes down. The bladder is a holding room. The urethra is the exit path.", quiz: [
       { q: "Which organs filter blood and make urine?", a: ["Kidneys", "Lungs only", "Ears", "Eyelids"], ok: 0 },
       { q: "Ureters carry urine from kidneys to the…", a: ["Bladder", "Heart", "Brain", "Stomach"], ok: 0 },
-      { q: "The bladder is mainly a…", a: ["Holding room", "Pump", "Lens", "Feather"], ok: 0 },
+      { q: "The bladder is mainly a…", a: ["Holding room", "Pump", "Lens", "Filter"], ok: 0 },
       { q: "The urethra is the…", a: ["Exit path", "Voice box", "Collarbone", "Eardrum"], ok: 0 }
     ]},
     { id: "circulatory", marker: 8, title: "Circulatory system", bands: MID, img: "images/body/heart.svg", notes: "Six field parts: heart, arteries, veins, capillaries, blood, and valves. The heart pumps. Arteries go out. Veins return. Capillaries are the thin meeting rooms. Valves keep one-way flow.", quiz: [
@@ -123,11 +123,11 @@ window.HSScienceData = (function () {
       { q: "The tiniest vessels, where goods are traded, are…", a: ["Capillaries", "Bones", "Nails", "Horns"], ok: 0 },
       { q: "Valves are there to…", a: ["Keep blood from flowing backward", "Taste food", "Bend light", "Store fat only"], ok: 0 }
     ]},
-    { id: "lymph", marker: 9, title: "Lymph system", bands: MID, img: "images/body/heart.svg", notes: "Four parts: lymph fluid, lymph vessels, lymph nodes, and the spleen. This quiet system returns fluid, filters it, and helps the body notice germs.", quiz: [
+    { id: "lymph", marker: 9, title: "Lymph system", bands: MID, img: "images/body/lymph.svg", notes: "Four parts: lymph fluid, lymph vessels, lymph nodes, and the spleen. This quiet system returns fluid, filters it, and helps the body notice germs.", quiz: [
       { q: "Lymph is mostly…", a: ["Clear fluid from around cells", "Solid bone", "Tooth enamel", "Hair oil only"], ok: 0 },
       { q: "Lymph nodes are like…", a: ["Filter stations", "Pumps like the heart", "Lenses", "Eardrums"], ok: 0 },
       { q: "The spleen, among other jobs, helps with…", a: ["Blood and germ watch", "Hearing high notes", "Growing nails", "Blinking"], ok: 0 },
-      { q: "Lymph vessels are…", a: ["Tubes that carry lymph", "Bones of the face", "Parts of a feather", "Cloud types"], ok: 0 }
+      { q: "Lymph vessels are…", a: ["Tubes that carry lymph", "Bones of the face", "Air sacs in the lung", "Chambers of the heart"], ok: 0 }
     ]},
     { id: "respiratory", marker: 10, title: "Respiratory system parts", bands: MID, img: "images/body/lungs.svg", notes: "Air's path: nose (or mouth), throat, voice box, windpipe (trachea), bronchi, lungs. The diaphragm is the muscle floor that helps you breathe.", quiz: [
       { q: "The windpipe's other name is the…", a: ["Trachea", "Esophagus", "Ureter", "Aorta"], ok: 0 },
@@ -135,97 +135,205 @@ window.HSScienceData = (function () {
       { q: "The diaphragm is a…", a: ["Breathing muscle under the lungs", "Tiny bone in the ear", "Taste bud", "Eyelash"], ok: 0 },
       { q: "Lungs are packed with tiny air sacs so that…", a: ["Gases can trade with blood", "Food can be stored", "Sound can be tasted", "Hair can grow"], ok: 0 }
     ]},
-    { id: "endocrine", marker: 11, title: "Endocrine system", bands: MID, img: "images/body/heart.svg", notes: "Glands send chemical messengers called hormones through the blood. The pituitary in the head is a chief messenger gland. Other glands help with growth, sugar use, and the body's pace.", quiz: [
-      { q: "Hormones are…", a: ["Chemical messengers in the blood", "Tiny bones", "Kinds of teeth", "Clouds"], ok: 0 },
-      { q: "The endocrine system works mainly by…", a: ["Glands", "Feathers", "Bark", "Pollen"], ok: 0 },
+    { id: "endocrine", marker: 11, title: "Endocrine system", bands: MID, img: "images/body/glands.svg", notes: "Glands send chemical messengers called hormones through the blood. The pituitary in the head is a chief messenger gland. Other glands help with growth, sugar use, and the body's pace.", quiz: [
+      { q: "Hormones are…", a: ["Chemical messengers in the blood", "Tiny bones", "Kinds of teeth", "Air sacs"], ok: 0 },
+      { q: "The endocrine system works mainly by…", a: ["Glands", "Air tubes", "Bones of the skull only", "Taste buds"], ok: 0 },
       { q: "The pituitary gland sits in the…", a: ["Head", "Heel", "Thumb", "Earlobe only"], ok: 0 },
       { q: "Compared with a nerve zap, a hormone message is often…", a: ["Slower and longer lasting", "A sound you hear", "A color you see", "A kind of rock"], ok: 0 }
     ]},
-    { id: "blood", marker: 12, title: "Major purposes of blood", bands: MID, img: "images/body/heart.svg", notes: "Blood carries oxygen, carries food bits, hauls wastes, helps fight germs, helps seal cuts, and spreads heat. One river, many jobs.", quiz: [
+    { id: "blood", marker: 12, title: "Major purposes of blood", bands: MID, img: "images/body/blood.svg", notes: "Blood carries oxygen, carries food bits, hauls wastes, helps fight germs, helps seal cuts, and spreads heat. One river, many jobs.", quiz: [
       { q: "Blood carries oxygen mainly with the help of…", a: ["Red cells", "Hair", "Nails", "Enamel"], ok: 0 },
-      { q: "A purpose of blood is to…", a: ["Carry wastes away from cells", "Write memories in stone", "Make thunder", "Hold up a tree"], ok: 0 },
-      { q: "When you cut a finger, blood helps by…", a: ["Clotting to seal the cut", "Turning into bone", "Becoming lymph nodes", "Tasting the air"], ok: 0 },
-      { q: "Blood also helps the body…", a: ["Share heat", "Grow feathers", "Make pine cones", "Form clouds"], ok: 0 }
+      { q: "A purpose of blood is to…", a: ["Carry wastes away from cells", "Store long-term memories", "Digest starch in the stomach", "Hold the skeleton upright"], ok: 0 },
+      { q: "When you cut a finger, blood helps by…", a: ["Clotting to seal the cut", "Turning into bone", "Becoming lymph nodes", "Filtering the air"], ok: 0 },
+      { q: "Blood also helps the body…", a: ["Share heat", "Replace the skeleton", "Make digestive enzymes only", "Filter urine"], ok: 0 }
     ]},
-    { id: "matter", marker: 13, title: "States of matter", bands: MID, img: "images/body/atom.svg", notes: "Ridge chemistry begins in the field: stuff is solid, liquid, or gas. A rock keeps its shape. Creek water takes the cup. The air you breathe fills the space. Heat can melt ice. Cold can freeze a puddle.", quiz: [
-      { q: "A solid keeps its…", a: ["Shape", "Song", "Cloud", "Pulse"], ok: 0 },
-      { q: "A liquid takes the shape of its…", a: ["Container", "Bone", "Star", "Feather"], ok: 0 },
-      { q: "A gas spreads to fill…", a: ["Its space", "Only a leaf", "A skeleton", "A nest cup"], ok: 0 },
-      { q: "Ice, water, and steam are the same substance in different…", a: ["States", "Kinds of bird", "Muscle types", "Planets"], ok: 0 }
+    { id: "matter", warmUp: true, title: "States of matter", bands: MID, img: "images/body/matter.svg", notes: "Warm-up, not a week number. Ridge chemistry begins in the field: stuff is solid, liquid, or gas. Ice keeps its shape. Liquid water takes the cup. Steam fills the space above. Heat can melt ice. Cold can freeze a puddle.", quiz: [
+      { q: "A solid keeps its…", a: ["Shape", "Container only", "Whatever space it enters", "No volume"], ok: 0 },
+      { q: "A liquid takes the shape of its…", a: ["Container", "Own rigid edges", "Crystal lattice", "Atomic number"], ok: 0 },
+      { q: "A gas spreads to fill…", a: ["The space it is in", "Only the bottom of a cup", "A fixed cube", "A single droplet"], ok: 0 },
+      { q: "Ice, water, and steam are the same substance in different…", a: ["States", "Elements", "Atomic numbers", "Tissues"], ok: 0 }
     ]},
-    { id: "atomic-number", marker: 14, title: "Atomic number", bands: MID, img: "images/body/atom.svg", notes: "Atomic number is the count of protons in an atom's nucleus. That count names the element. Hydrogen is 1. Carbon is 6. Oxygen is 8.", quiz: [
-      { q: "Atomic number counts…", a: ["Protons in the nucleus", "Leaves on a tree", "Bones in a foot", "Clouds in a week"], ok: 0 },
+    { id: "atomic-number", marker: 13, title: "Atomic number", bands: MID, img: "images/body/atom.svg", notes: "Atomic number is the count of protons in an atom's nucleus. That count names the element. Hydrogen is 1. Carbon is 6. Oxygen is 8.", quiz: [
+      { q: "Atomic number counts…", a: ["Protons in the nucleus", "Electrons only", "Neutrons only", "Bonds in a molecule"], ok: 0 },
       { q: "If an atom has 8 protons, it is…", a: ["Oxygen", "Gold", "Helium", "Sodium"], ok: 0 },
-      { q: "Changing the proton count would mean…", a: ["A different element", "The same element always", "A kind of weather", "A muscle type"], ok: 0 },
+      { q: "Changing the proton count would mean…", a: ["A different element", "The same element always", "Only a new ion", "Only a new isotope"], ok: 0 },
       { q: "Hydrogen's atomic number is…", a: ["1", "12", "26", "79"], ok: 0 }
     ]},
-    { id: "element", marker: 15, title: "What is an element", bands: MID, img: "images/body/atom.svg", notes: "An element is a substance made of only one kind of atom. Gold is gold atoms. Oxygen gas is oxygen atoms. Elements are the alphabet of materials.", quiz: [
+    { id: "element", marker: 14, title: "What is an element", bands: MID, img: "images/body/atom.svg", notes: "An element is a substance made of only one kind of atom. Gold is gold atoms. Oxygen gas is oxygen atoms. Elements are the alphabet of materials.", quiz: [
       { q: "An element is made of…", a: ["Only one kind of atom", "Many kinds of plants", "Only water", "Only light"], ok: 0 },
-      { q: "Water is not an element because it is…", a: ["Hydrogen and oxygen joined", "A single atom type", "A muscle", "A cloud type"], ok: 0 },
+      { q: "Water is not an element because it is…", a: ["Hydrogen and oxygen joined", "A single atom type", "A pure metal", "One kind of nucleus"], ok: 0 },
       { q: "The chart that lists elements is the…", a: ["Periodic table", "Water cycle", "Food chain", "Skeleton"], ok: 0 },
       { q: "Carbon as an element means…", a: ["Atoms with 6 protons", "Any black rock", "A kind of bird", "A simple machine"], ok: 0 }
     ]},
-    { id: "atom-parts", marker: 16, title: "Parts of an atom", bands: MID, img: "images/body/atom.svg", notes: "Nucleus in the middle: protons (plus charge) and neutrons (no charge). Electrons (minus charge) move in the outer space. Almost all the mass sits in the tiny nucleus.", quiz: [
-      { q: "Protons live in the…", a: ["Nucleus", "Cloud of rain", "Stomach", "Leaf vein"], ok: 0 },
+    { id: "atom-parts", marker: 15, title: "Parts of an atom", bands: MID, img: "images/body/atom.svg", notes: "Nucleus in the middle: protons (plus charge) and neutrons (no charge). Electrons (minus charge) move in the outer space. Almost all the mass sits in the tiny nucleus.", quiz: [
+      { q: "Protons live in the…", a: ["Nucleus", "Electron shells", "The space between atoms", "A molecule's bond only"], ok: 0 },
       { q: "Electrons have a…", a: ["Minus charge", "Plus charge", "No mass ever", "Green color always"], ok: 0 },
-      { q: "Neutrons have…", a: ["No electric charge", "A minus charge", "A plus charge", "Wings"], ok: 0 },
-      { q: "Most of an atom's mass is in the…", a: ["Nucleus", "Empty outer space", "Skin of a fruit", "Feather vane"], ok: 0 }
+      { q: "Neutrons have…", a: ["No electric charge", "A minus charge", "A plus charge", "A charge that flips every second"], ok: 0 },
+      { q: "Most of an atom's mass is in the…", a: ["Nucleus", "Empty outer space", "The electron shells", "The bonds around it"], ok: 0 }
     ]},
-    { id: "elements-1-4", marker: 17, title: "Elements 1–4", bands: UP, img: "images/body/atom.svg", notes: "1 Hydrogen H, about 1.008. 2 Helium He, about 4.003. 3 Lithium Li, about 6.94. 4 Beryllium Be, about 9.012. Number, name, symbol, mass — public table facts.", quiz: [
+    { id: "elements-1-4", marker: 16, title: "Elements 1–4", bands: UP, img: "images/body/atom.svg", notes: "1 Hydrogen H, about 1.008. 2 Helium He, about 4.003. 3 Lithium Li, about 6.94. 4 Beryllium Be, about 9.012. Number, name, symbol, mass — public table facts.", quiz: [
       { q: "Element 1 is…", a: ["Hydrogen, H", "Helium, He", "Carbon, C", "Oxygen, O"], ok: 0 },
       { q: "Helium's symbol is…", a: ["He", "H", "Li", "Be"], ok: 0 },
       { q: "Lithium's atomic number is…", a: ["3", "1", "8", "11"], ok: 0 },
       { q: "Beryllium's symbol is…", a: ["Be", "B", "Br", "Ba"], ok: 0 }
     ]},
-    { id: "elements-5-8", marker: 18, title: "Elements 5–8", bands: UP, img: "images/body/atom.svg", notes: "5 Boron B, about 10.81. 6 Carbon C, about 12.011. 7 Nitrogen N, about 14.007. 8 Oxygen O, about 15.999. Carbon is the skeleton of living chemistry. Oxygen is the breath gas.", quiz: [
+    { id: "elements-5-8", marker: 17, title: "Elements 5–8", bands: UP, img: "images/body/atom.svg", notes: "5 Boron B, about 10.81. 6 Carbon C, about 12.011. 7 Nitrogen N, about 14.007. 8 Oxygen O, about 15.999. Carbon is the skeleton of living chemistry. Oxygen is the breath gas.", quiz: [
       { q: "Carbon's symbol is…", a: ["C", "Ca", "Co", "Cl"], ok: 0 },
       { q: "Oxygen's atomic number is…", a: ["8", "1", "2", "6"], ok: 0 },
       { q: "Nitrogen's symbol is…", a: ["N", "Ni", "Na", "Ne"], ok: 0 },
       { q: "Boron is element…", a: ["5", "15", "50", "2"], ok: 0 }
     ]},
-    { id: "elements-9-12", marker: 19, title: "Elements 9–12", bands: UP, img: "images/body/atom.svg", notes: "9 Fluorine F, about 18.998. 10 Neon Ne, about 20.180. 11 Sodium Na, about 22.990. 12 Magnesium Mg, about 24.305. Sodium's symbol Na remembers an older name, natrium.", quiz: [
+    { id: "elements-9-12", marker: 18, title: "Elements 9–12", bands: UP, img: "images/body/atom.svg", notes: "9 Fluorine F, about 18.998. 10 Neon Ne, about 20.180. 11 Sodium Na, about 22.990. 12 Magnesium Mg, about 24.305. Sodium's symbol Na remembers an older name, natrium.", quiz: [
       { q: "Sodium's symbol is…", a: ["Na", "S", "So", "Sd"], ok: 0 },
       { q: "Neon is element…", a: ["10", "2", "7", "18"], ok: 0 },
       { q: "Magnesium's symbol is…", a: ["Mg", "Mn", "Ma", "M"], ok: 0 },
       { q: "Fluorine's symbol is…", a: ["F", "Fl", "Fn", "Fe"], ok: 0 }
     ]},
-    { id: "acid-base", marker: 20, title: "Acid vs base", bands: UP, img: "images/body/atom.svg", notes: "Acids donate hydrogen ions and often taste sour (lemon). Bases accept them and often feel slippery (soap). pH 7 is near water. Below 7 leans acid. Above 7 leans base. Never taste lab chemicals — food-safe demos only, with a grown-up.", quiz: [
+    { id: "acid-base", marker: 19, title: "Acid vs base", bands: UP, img: "images/body/atom.svg", notes: "Acids donate hydrogen ions and often taste sour (lemon). Bases accept them and often feel slippery (soap). pH 7 is near water. Below 7 leans acid. Above 7 leans base. Never taste lab chemicals — food-safe demos only, with a grown-up.", quiz: [
       { q: "Lemon juice is a household…", a: ["Acid", "Base", "Element 10", "Bone"], ok: 0 },
       { q: "Soap water is a household…", a: ["Base", "Acid", "Noble gas", "Tendon"], ok: 0 },
-      { q: "pH near 7 is…", a: ["Close to water", "The hottest fire", "A kind of muscle", "A cloud"], ok: 0 },
+      { q: "pH near 7 is…", a: ["Close to water", "A strong acid", "A strong base", "A dry solid"], ok: 0 },
       { q: "A vinegar and baking-soda fizz is…", a: ["Acid meeting a base", "A pulley at work", "A fossil forming", "A nerve firing"], ok: 0 }
     ]},
-    { id: "heavens", marker: 21, title: "The heavens declare", bands: ["early", "primary", "upper"], img: "images/creation/heavens.svg", notes: "Psalm 19:1 (KJV): \"The heavens declare the glory of God; and the firmament sheweth his handywork.\" Night sky, sun path, and ordered lights are a public witness. We add no extra commentary from any class script — the verse stands, and we look up.", quiz: [
+    { id: "heavens", marker: 20, title: "The heavens declare", bands: ["early", "primary", "upper"], img: "images/creation/heavens.svg", notes: "Psalm 19:1 (KJV): \"The heavens declare the glory of God; and the firmament sheweth his handywork.\" Night sky, sun path, and ordered lights are a public witness. We add no extra commentary from any class script — the verse stands, and we look up.", quiz: [
       { q: "Psalm 19 says the heavens declare the…", a: ["Glory of God", "Names of clouds only", "Types of muscle", "Periodic table"], ok: 0 },
       { q: "\"Firmament\" in this verse points us to the…", a: ["Sky God spread out", "Stomach", "Inner ear", "Acorn cup"], ok: 0 },
       { q: "A field use of this verse is to…", a: ["Look up and give thanks", "Skip the stars", "Taste chemicals", "Name a bone"], ok: 0 },
       { q: "Handywork here means…", a: ["What God has made", "A human factory only", "A pulley", "A lymph node"], ok: 0 }
     ]},
-    { id: "evolution-relies", marker: 22, title: "What the theory of evolution relies on", bands: UP, img: "images/creation/kinds.svg", notes: "As a story of origins, the theory of evolution relies on the idea that living things arose and changed into new kinds by natural steps alone, without a designer. We do observe variation, and we do observe that some traits help a creature live. Those field facts are not the same as proving that all life made itself. Our journal keeps the observations, and it also keeps the confession that God made living things.", quiz: [
+    { id: "evolution-relies", marker: 21, title: "What the theory of evolution relies on", bands: UP, img: "images/creation/kinds.svg", notes: "As a story of origins, the theory of evolution relies on the idea that living things arose and changed into new kinds by natural steps alone, without a designer. We do observe variation, and we do observe that some traits help a creature live. Those field facts are not the same as proving that all life made itself. Our journal keeps the observations, and it also keeps the confession that God made living things.", quiz: [
       { q: "Origins-evolution, as a story, relies on…", a: ["Unguided natural steps without a designer", "Only the five senses", "Only levers", "Only weather"], ok: 0 },
-      { q: "A thing we truly observe in the field is…", a: ["Living things vary", "Rocks singing", "Leaves writing books", "Stars tasting salt"], ok: 0 },
+      { q: "A thing we truly observe in the field is…", a: ["Living things vary", "No creature differs from its parents", "Only fossils can vary", "Traits cannot be inherited"], ok: 0 },
       { q: "Observing variation is…", a: ["Not the same as proving life made itself", "Proof that God is absent", "A kind of bone", "An element symbol"], ok: 0 },
       { q: "This expedition's framing is that…", a: ["God made living things", "Nothing was made", "Machines invented plants", "Rain invented eyes"], ok: 0 }
     ]},
-    { id: "design", marker: 23, title: "Intelligent design", bands: UP, img: "images/creation/eye.svg", notes: "Living things have parts fitted to a purpose: an eye for seeing, a wing for flying, information in a seed for becoming a plant. Intelligent design is the claim that this kind of order points to a mind. Our field journal names that mind: God, the Maker.", quiz: [
-      { q: "An eye is a clue of design because its parts…", a: ["Fit a purpose: seeing", "Are random junk", "Are clouds", "Are levers only"], ok: 0 },
+    { id: "design", marker: 22, title: "Intelligent design", bands: UP, img: "images/creation/eye.svg", notes: "Living things have parts fitted to a purpose: an eye for seeing, a wing for flying, information in a seed for becoming a plant. Intelligent design is the claim that this kind of order points to a mind. Our field journal names that mind: God, the Maker.", quiz: [
+      { q: "An eye is a clue of design because its parts…", a: ["Fit a purpose: seeing", "Are random junk", "Do no job", "Are levers only"], ok: 0 },
       { q: "A seed carries…", a: ["Information for a plant", "A tiny pulley only", "A storm", "A planet"], ok: 0 },
-      { q: "Intelligent design, in these notes, points to…", a: ["A mind — God the Maker", "A cloud type", "Element 2", "A hinge only"], ok: 0 },
+      { q: "Intelligent design, in these notes, points to…", a: ["A mind — God the Maker", "Chance with no mind", "Element 2", "A hinge only"], ok: 0 },
       { q: "Purpose in living parts is…", a: ["What we mean by design", "A kind of rain", "A lymph fluid", "A pH number"], ok: 0 }
     ]},
-    { id: "records", marker: 24, title: "Ways earth's history is preserved", bands: UP, img: "images/creation/fossil.svg", notes: "The world keeps records: fossils in stone, rings in trees, layers of ice, stacked rock, and words people wrote. Fossils show that real plants and animals were buried. Christians study the records with care and read them alongside Scripture. Timescale debates are real; the records themselves are gifts to look at.", quiz: [
-      { q: "A fossil is often…", a: ["A buried leftover of life in stone", "A living bee", "A cloud", "A doorknob"], ok: 0 },
+    { id: "records", marker: 23, title: "Ways earth's history is preserved", bands: UP, img: "images/creation/fossil.svg", notes: "The world keeps records: fossils in stone, rings in trees, layers of ice, stacked rock, and words people wrote. Fossils show that real plants and animals were buried. Christians study the records with care and read them alongside Scripture. Timescale debates are real; the records themselves are gifts to look at.", quiz: [
+      { q: "A fossil is often…", a: ["A buried leftover of life in stone", "A living bee", "A still-growing tree", "A doorknob"], ok: 0 },
       { q: "Tree rings can preserve a record of…", a: ["Seasons of growth", "The periodic table", "Muscle kinds", "pH of soap"], ok: 0 },
       { q: "Ice layers can trap…", a: ["Old air and dust", "Living oak trees", "Pumping hearts", "Taste buds"], ok: 0 },
       { q: "Written history is also a…", a: ["Record people kept", "Kind of atom", "Simple machine", "Tissue type"], ok: 0 }
     ]},
-    { id: "selection", marker: 25, title: "Natural selection", bands: UP, img: "images/creation/kinds.svg", notes: "Natural selection describes how, in a place, creatures with traits that fit that place may live and have more babies. The trait was already in the kind. Selection can shift a flock toward darker shells; it does not write a new kind from scratch. Adaptation within a kind is part of the living world's built-in bounce.", quiz: [
-      { q: "Natural selection works on traits that are…", a: ["Already in the kind", "Invented by rain", "Brought by the moon", "Made of clouds"], ok: 0 },
-      { q: "A fair field example is…", a: ["Beetles with better camouflage leaving more young", "A fish becoming an oak", "A rock becoming a robin", "A star becoming a kidney"], ok: 0 },
+    { id: "selection", marker: 24, title: "Natural selection", bands: UP, img: "images/creation/kinds.svg", notes: "Natural selection describes how, in a place, creatures with traits that fit that place may live and have more babies. The trait was already in the kind. Selection can shift a flock toward darker shells; it does not write a new kind from scratch. Adaptation within a kind is part of the living world's built-in bounce.", quiz: [
+      { q: "Natural selection works on traits that are…", a: ["Already in the kind", "Added from outside the kind", "Written onto rocks", "The same in every individual"], ok: 0 },
+      { q: "A fair field example is…", a: ["Beetles whose color fits the place leaving more young", "Every beetle becoming a different kind", "Selection inventing a trait the kind never had", "Selection acting on rocks the same way as on beetles"], ok: 0 },
       { q: "Selection by itself does not…", a: ["Write a brand-new kind from scratch", "Ever change a flock's mix of traits", "Happen in real places", "Matter to farmers"], ok: 0 },
       { q: "In these notes, living things were first…", a: ["Made by God, able to vary within their kinds", "Made by machines", "Made by weather only", "Not made"], ok: 0 }
     ]}
   ];
+
+  const upperQuiz = {
+    tissue: [
+      { q: "A tissue is one cell team. An organ is…", a: ["Several tissues working as one part", "A single cell type only", "Always one tissue", "A lone atom"], ok: 0 },
+      { q: "Blood is grouped with which tissue family?", a: ["Connective", "Epithelial", "Nervous", "Skeletal muscle"], ok: 0 },
+      { q: "Epithelial tissue is mainly found…", a: ["Covering surfaces and lining organs", "Only inside the marrow", "Only as heart muscle", "Only in the lens"], ok: 0 },
+      { q: "Which tissue is built to carry signals?", a: ["Nervous", "Epithelial", "Adipose only", "Cartilage"], ok: 0 }
+    ],
+    axial: [
+      { q: "Arms and legs belong to the…", a: ["Appendicular skeleton", "Axial skeleton", "Lymph vessels", "Dermis only"], ok: 0 },
+      { q: "The breastbone's other name is the…", a: ["Sternum", "Femur", "Patella", "Scapula"], ok: 0 },
+      { q: "Ribs and sternum mainly guard the…", a: ["Chest organs", "Knee joint", "Ear bones", "Toes"], ok: 0 },
+      { q: "Vertebrae stack to form the…", a: ["Backbone", "Windpipe", "Ureter", "Aorta"], ok: 0 }
+    ],
+    muscle: [
+      { q: "Cardiac muscle is found only in the…", a: ["Heart", "Biceps", "Stomach wall", "Iris"], ok: 0 },
+      { q: "Smooth muscle is typical of the…", a: ["Gut wall", "Muscles you choose to flex", "Heart chambers only", "Tendons"], ok: 0 },
+      { q: "A tendon attaches…", a: ["Muscle to bone", "Bone to bone only", "Nerve to gland", "Lung to rib"], ok: 0 },
+      { q: "Skeletal muscle cells look…", a: ["Striped and usually voluntary", "Like red blood cells", "Like fat only", "Like enamel"], ok: 0 }
+    ],
+    nervous: [
+      { q: "Brain and spinal cord together are the…", a: ["Central nervous system", "Peripheral nerves only", "Endocrine glands", "Lymph nodes"], ok: 0 },
+      { q: "A nerve impulse travels along a…", a: ["Neuron", "Red cell", "Nephron", "Alveolus"], ok: 0 },
+      { q: "Sensory nerves carry messages…", a: ["Toward the central desk", "Only away from the brain", "Through the ureters", "Inside arteries only"], ok: 0 },
+      { q: "The spinal cord is protected by the…", a: ["Vertebrae", "Ribs only", "Skull only", "Patella"], ok: 0 }
+    ],
+    senses: [
+      { q: "The retina is the light-sensitive layer of the…", a: ["Eye", "Ear", "Tongue", "Skin"], ok: 0 },
+      { q: "The cochlea is the coiled organ of the…", a: ["Inner ear", "Nose", "Eye", "Skin"], ok: 0 },
+      { q: "Most of what people call flavor also uses…", a: ["Smell", "Balance only", "The lens", "Bone conduction"], ok: 0 },
+      { q: "Skin sensors report pressure, pain, and…", a: ["Temperature", "Pitch", "Color", "pH of blood"], ok: 0 }
+    ],
+    digestive: [
+      { q: "The esophagus connects the mouth to the…", a: ["Stomach", "Bladder", "Larynx", "Heart"], ok: 0 },
+      { q: "Most food is absorbed in the…", a: ["Small intestine", "Stomach only", "Esophagus", "Large intestine only"], ok: 0 },
+      { q: "Bile, which helps with fats, is made by the…", a: ["Liver", "Kidney", "Spleen", "Thyroid"], ok: 0 },
+      { q: "The pancreas adds juices that…", a: ["Help break food down", "Filter urine", "Pump blood", "Carry air"], ok: 0 }
+    ],
+    excretory: [
+      { q: "A nephron is the filter unit of the…", a: ["Kidney", "Lung", "Liver", "Spleen"], ok: 0 },
+      { q: "Urine leaves the bladder through the…", a: ["Urethra", "Ureter", "Aorta", "Trachea"], ok: 0 },
+      { q: "Ureters run from each kidney to the…", a: ["Bladder", "Heart", "Stomach", "Lung"], ok: 0 },
+      { q: "Kidneys also help balance…", a: ["Water and salts in the blood", "The pitch of the voice", "Light in the eye", "Air in the alveoli"], ok: 0 }
+    ],
+    circulatory: [
+      { q: "Veins return blood toward the…", a: ["Heart", "Capillary beds only", "Kidneys only", "Lungs only"], ok: 0 },
+      { q: "Capillaries are where blood…", a: ["Trades gases and food with cells", "Is stored for months", "Becomes lymph", "Leaves the body"], ok: 0 },
+      { q: "A valve's job in the heart is to…", a: ["Keep flow one way", "Make new red cells", "Sense light", "Warm the skin"], ok: 0 },
+      { q: "Arteries leaving the heart carry blood…", a: ["Out to the body or lungs", "Only back from the feet", "Only inside bones", "Only through the ureters"], ok: 0 }
+    ],
+    lymph: [
+      { q: "Lymph nodes cluster where vessels…", a: ["Can be checked for germs", "Pump like a heart", "Make urine", "Exchange oxygen"], ok: 0 },
+      { q: "The spleen sits in the abdomen and helps watch…", a: ["Blood", "Sound", "Taste", "Balance"], ok: 0 },
+      { q: "Lymph fluid begins as…", a: ["Fluid that leaked out around cells", "Air from the lungs", "Bile from the liver", "Marrow turned solid"], ok: 0 },
+      { q: "Lymph returns fluid that has left the…", a: ["Blood capillaries", "Alveoli", "Nephrons", "Taste buds"], ok: 0 }
+    ],
+    respiratory: [
+      { q: "The trachea splits into two…", a: ["Bronchi", "Ureters", "Ventricles", "Esophagi"], ok: 0 },
+      { q: "Alveoli are the tiny sacs where…", a: ["Oxygen and carbon dioxide trade", "Food is stored", "Urine is held", "Hormones are made"], ok: 0 },
+      { q: "The diaphragm contracts to help you…", a: ["Breathe in", "Pump blood", "Swallow only", "Blink"], ok: 0 },
+      { q: "The voice box sits above the…", a: ["Trachea", "Stomach", "Bladder", "Aorta"], ok: 0 }
+    ],
+    endocrine: [
+      { q: "A hormone travels mainly by…", a: ["The blood", "A single nerve wire", "The ureters", "The windpipe"], ok: 0 },
+      { q: "The pituitary is called a chief gland because it…", a: ["Signals other glands", "Filters urine", "Pumps blood", "Focuses light"], ok: 0 },
+      { q: "Compared with a nerve signal, a hormone is often…", a: ["Slower and longer lasting", "Faster than any nerve", "Heard as sound", "Seen as color"], ok: 0 },
+      { q: "Insulin, a hormone, helps the body…", a: ["Use blood sugar", "Bend the knee", "Hear pitch", "Clot a cut"], ok: 0 }
+    ],
+    blood: [
+      { q: "Red cells are specialized to carry…", a: ["Oxygen", "Nerve signals", "Urine", "Bile"], ok: 0 },
+      { q: "Platelets help the blood…", a: ["Clot", "Taste", "Focus light", "Store fat"], ok: 0 },
+      { q: "White cells are a main part of…", a: ["Defense against germs", "The lens", "The skeleton", "The enamel"], ok: 0 },
+      { q: "Plasma is the…", a: ["Liquid that carries the cells", "Solid clot only", "Wall of an artery", "Air in a lung"], ok: 0 }
+    ],
+    matter: [
+      { q: "Melting turns a solid into a…", a: ["Liquid", "Gas with no in-between", "New element", "Mixture of two elements"], ok: 0 },
+      { q: "Boiling turns a liquid into a…", a: ["Gas", "Solid", "New atomic number", "Crystal"], ok: 0 },
+      { q: "Ice, liquid water, and steam share the same…", a: ["Molecules, in different states", "Atomic number of gold", "Crystal shape", "Container"], ok: 0 },
+      { q: "A gas differs from a liquid because a gas…", a: ["Fills whatever space it is given", "Keeps a flat top in an open cup", "Has a fixed shape", "Cannot be compressed at all"], ok: 0 }
+    ],
+    "atomic-number": [
+      { q: "Two atoms of the same element must share the same…", a: ["Proton count", "Neutron count", "Mass number", "Electron count in every ion"], ok: 0 },
+      { q: "Carbon is element 6 because it has…", a: ["6 protons", "6 neutrons only", "6 electrons and no protons", "6 bonds and no nucleus"], ok: 0 },
+      { q: "An isotope of an element changes the…", a: ["Neutron count, not the atomic number", "Proton count", "Element name", "Periodic group by itself"], ok: 0 },
+      { q: "On the periodic table, atomic number…", a: ["Orders the elements", "Is the same as mass for every atom", "Counts only electrons", "Is always even"], ok: 0 }
+    ],
+    element: [
+      { q: "A compound such as water is…", a: ["Two or more elements bonded", "A single element", "An atom with no nucleus", "A mixture that is always an element"], ok: 0 },
+      { q: "Gold stays gold because every gold atom has…", a: ["79 protons", "The same neutrons as hydrogen", "No nucleus", "Six protons"], ok: 0 },
+      { q: "Oxygen gas in the air is…", a: ["An element", "A compound of gold and carbon", "A kind of tissue", "A state, not a substance"], ok: 0 },
+      { q: "The periodic table is a chart of…", a: ["Elements", "Body systems", "Simple machines", "Habitats"], ok: 0 }
+    ],
+    "atom-parts": [
+      { q: "A proton's charge is…", a: ["Positive", "Negative", "Zero", "Positive only in a metal"], ok: 0 },
+      { q: "An electron's charge is…", a: ["Negative", "Positive", "Zero", "Twice a proton"], ok: 0 },
+      { q: "Adding a neutron changes the…", a: ["Mass, not the element", "Element", "Proton charge", "Atomic number"], ok: 0 },
+      { q: "The nucleus is small but holds almost all the…", a: ["Mass", "Volume of the atom", "Electrons", "Chemical bonds"], ok: 0 }
+    ],
+    heavens: [
+      { q: "Psalm 19:1 names the one the heavens declare as…", a: ["God", "A single planet", "The periodic table", "A human observer"], ok: 0 },
+      { q: "The firmament in that verse is the…", a: ["Sky spread out", "Inner ear", "Stomach", "Soil layer"], ok: 0 },
+      { q: "Handywork means the sky is…", a: ["Made, not an accident of the verse", "A blank", "A machine we built", "Only a weather chart"], ok: 0 },
+      { q: "A field use of the verse is to…", a: ["Look up and give thanks", "Ignore the night sky", "Replace the verse with a lab note", "Count protons"], ok: 0 }
+    ]
+  };
+  topics.forEach(function (t) {
+    if (upperQuiz[t.id]) t.quizUpper = upperQuiz[t.id];
+  });
 
   const experiments = [
     { id: "leaf-lens", title: "Leaf under a lens", bands: KID, need: "A fallen leaf, a hand lens or a drop of water on clear plastic, paper, pencil.", safety: "Use a found fallen leaf. Do not peel living bark. Adult nearby for little hands.", img: "images/tools/magnifier.svg", steps: ["Sit at a table with good light.", "Lay the leaf flat in your journal.", "Look with a lens (or a water-drop lens) at the edge and a vein.", "Draw one small square of what you truly see, not what you guess.", "Stamp the date."] },
@@ -280,12 +388,12 @@ window.HSScienceData = (function () {
       { id: "pine", name: "Pine", bin: "plant", img: "images/specimens/pine.svg" },
       { id: "feather", name: "Feather", bin: "bird", img: "images/specimens/feather.svg" }
     ]},
-    { id: "sink-sort", title: "Sink or float", bands: ["toddler", "preschool", "early"], prompt: "Guess as a naturalist, then sort.", img: "images/habitats/pond.svg", bins: [
+    { id: "sink-sort", title: "Sink or float", bands: ["toddler", "preschool", "early"], prompt: "Guess, then sort. Trapped air helps a light or hollow thing float.", img: "images/habitats/pond.svg", bins: [
       { id: "sink", name: "Sinks" }, { id: "float", name: "Floats" }
     ], items: [
-      { id: "pebble", name: "Pebble", bin: "sink", img: "images/habitats/mountain.svg" },
-      { id: "twig", name: "Twig", bin: "float", img: "images/specimens/pine.svg" },
-      { id: "shell", name: "Thick shell", bin: "sink", img: "images/specimens/shell.svg" },
+      { id: "pebble", name: "Pebble", bin: "sink", img: "images/specimens/pebble.svg" },
+      { id: "twig", name: "Twig", bin: "float", img: "images/specimens/twig.svg" },
+      { id: "shell", name: "Empty shell", bin: "float", img: "images/specimens/shell.svg" },
       { id: "feather", name: "Feather", bin: "float", img: "images/specimens/feather.svg" },
       { id: "puff", name: "Seed puff", bin: "float", img: "images/specimens/dandelion.svg" }
     ]},
@@ -318,10 +426,10 @@ window.HSScienceData = (function () {
     ]},
     { id: "sense-match", title: "Sense to organ", bands: ["toddler", "preschool", "early", "primary"], img: "images/creation/eye.svg", pairs: [
       { l: "Sight", r: "Eyes", lImg: "images/creation/eye.svg", rImg: "images/creation/eye.svg" },
-      { l: "Hearing", r: "Ears", lImg: "images/weather/wind.svg", rImg: "images/weather/wind.svg" },
-      { l: "Smell", r: "Nose", lImg: "images/specimens/dandelion.svg", rImg: "images/specimens/dandelion.svg" },
-      { l: "Taste", r: "Tongue", lImg: "images/body/digestive.svg", rImg: "images/body/digestive.svg" },
-      { l: "Touch", r: "Skin", lImg: "images/specimens/moss.svg", rImg: "images/specimens/moss.svg" }
+      { l: "Hearing", r: "Ears", lImg: "images/body/ear.svg", rImg: "images/body/ear.svg" },
+      { l: "Smell", r: "Nose", lImg: "images/body/nose.svg", rImg: "images/body/nose.svg" },
+      { l: "Taste", r: "Tongue", lImg: "images/body/tongue.svg", rImg: "images/body/tongue.svg" },
+      { l: "Touch", r: "Skin", lImg: "images/body/skin.svg", rImg: "images/body/skin.svg" }
     ]}
   ];
 

@@ -508,7 +508,7 @@ footer.colophon {
 }
 
 @media (max-width: 430px) {
-  :root { --margin: 0; --target: 48px; }
+  :root { --margin: 0; --target: 56px; }
   .spine { display: none; }
   .untested-banner {
     padding: 6px 8px;
@@ -532,8 +532,8 @@ footer.colophon {
   #band-pill { display: none; }
   .mast-actions { gap: 4px; flex-wrap: nowrap; }
   header.mast button.quiet {
-    min-height: 40px;
-    min-width: 44px;
+    min-height: 56px;
+    min-width: 56px;
     padding: 4px 8px;
     font-size: 0.75rem;
   }
@@ -541,13 +541,13 @@ footer.colophon {
     padding-left: 0;
     overflow-x: hidden;
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .tabs button {
     min-width: 0;
-    min-height: 44px;
-    font-size: 0.58rem;
-    padding: 4px 1px;
+    min-height: 56px;
+    font-size: 0.72rem;
+    padding: 4px 2px;
     letter-spacing: 0;
     text-transform: uppercase;
   }
@@ -633,6 +633,18 @@ footer.colophon {
   .baby-mode header.mast h1 { font-size: 0.78rem; }
   .baby-plate { min-height: calc(100vh - 150px); }
   .baby-plate img.hero-plate { min-height: 68vh; }
+}
+
+/* Learner runner already shows kit chrome and one untested banner. */
+html[data-runner="1"] .untested-banner,
+html[data-runner="1"] header.mast { display: none; }
+html[data-runner="1"] .baby-stage,
+html[data-runner="1"] .baby-plate { min-height: 0; }
+html[data-runner="1"] .baby-mode #main img.hero-plate,
+html[data-runner="1"] .baby-plate img.hero-plate {
+  flex: 0 1 auto;
+  min-height: 0;
+  max-height: 34vh;
 }
 
 .speak-on { box-shadow: inset 0 0 0 3px var(--brass); }

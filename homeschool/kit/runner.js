@@ -55,7 +55,9 @@
       const stages = await HS.fetchJson(new URL("../stages.json", global.location.href));
       const me = stages && (stages.stages || []).find(function (s) { return s.folder === learnerFolder; });
       const level = me && me.subjects ? me.subjects[id] : null;
-      if (me && (!level || level === "none")) {
+      // Reading keeps its own empty-track page when the subject is none.
+      // History, geography, and the other omitted lessons stay on the kit page.
+      if (me && id !== "reading" && (!level || level === "none")) {
         if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
         root.innerHTML =
           "<p>That lesson is not on this device yet. Try again after it has been added.</p>";

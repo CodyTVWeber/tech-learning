@@ -8,6 +8,7 @@
   "pages": [
     {
       "slot": "sun-on-the-rows-p1",
+      "alt": "Sun low over the garden rows",
       "words": [
         {
           "t": "The",
@@ -38,21 +39,12 @@
           "say": "garden"
         },
         {
-          "t": "rows.",
+          "t": "rows",
           "say": "rows"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p2",
-      "words": [
-        {
-          "t": "Sam",
-          "say": "sam"
         },
         {
-          "t": "walked",
-          "say": "walked"
+          "t": "while",
+          "say": "while"
         },
         {
           "t": "the",
@@ -67,8 +59,24 @@
           "say": "path"
         },
         {
-          "t": "with",
-          "say": "with"
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "still",
+          "say": "still"
+        },
+        {
+          "t": "cool.",
+          "say": "cool"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "carried",
+          "say": "carried"
         },
         {
           "t": "a",
@@ -79,78 +87,100 @@
           "say": "tin"
         },
         {
-          "t": "pail.",
+          "t": "pail",
           "say": "pail"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p3",
-      "words": [
-        {
-          "t": "Beans",
-          "say": "beans"
-        },
-        {
-          "t": "lifted",
-          "say": "lifted"
-        },
-        {
-          "t": "their",
-          "say": "their"
-        },
-        {
-          "t": "leaves",
-          "say": "leaves"
-        },
-        {
-          "t": "toward",
-          "say": "toward"
-        },
-        {
-          "t": "the",
-          "say": "the"
-        },
-        {
-          "t": "warm",
-          "say": "warm"
-        },
-        {
-          "t": "light.",
-          "say": "light"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p4",
-      "words": [
-        {
-          "t": "Jane",
-          "say": "jane"
-        },
-        {
-          "t": "pulled",
-          "say": "pulled"
-        },
-        {
-          "t": "a",
-          "say": "a"
-        },
-        {
-          "t": "weed",
-          "say": "weed"
         },
         {
           "t": "and",
           "say": "and"
         },
         {
-          "t": "dropped",
-          "say": "dropped"
+          "t": "walked",
+          "say": "walked"
         },
         {
-          "t": "it",
-          "say": "it"
+          "t": "between",
+          "say": "between"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "beans",
+          "say": "beans"
+        },
+        {
+          "t": "without",
+          "say": "without"
+        },
+        {
+          "t": "rushing.",
+          "say": "rushing"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "already",
+          "say": "already"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "her",
+          "say": "her"
+        },
+        {
+          "t": "knees,",
+          "say": "knees"
+        },
+        {
+          "t": "loosening",
+          "say": "loosening"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "soil",
+          "say": "soil"
+        },
+        {
+          "t": "with",
+          "say": "with"
+        },
+        {
+          "t": "her",
+          "say": "her"
+        },
+        {
+          "t": "fingers.",
+          "say": "fingers"
+        },
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "thin",
+          "say": "thin"
+        },
+        {
+          "t": "mist",
+          "say": "mist"
+        },
+        {
+          "t": "sat",
+          "say": "sat"
         },
         {
           "t": "in",
@@ -161,222 +191,60 @@
           "say": "the"
         },
         {
-          "t": "compost.",
-          "say": "compost"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p5",
-      "words": [
-        {
-          "t": "A",
-          "say": "a"
+          "t": "furrows",
+          "say": "furrows"
         },
         {
-          "t": "bee",
-          "say": "bee"
+          "t": "and",
+          "say": "and"
         },
         {
-          "t": "hummed",
-          "say": "hummed"
+          "t": "then",
+          "say": "then"
         },
         {
-          "t": "from",
-          "say": "from"
+          "t": "lifted",
+          "say": "lifted"
         },
         {
-          "t": "one",
-          "say": "one"
-        },
-        {
-          "t": "yellow",
-          "say": "yellow"
-        },
-        {
-          "t": "bloom",
-          "say": "bloom"
-        },
-        {
-          "t": "to",
-          "say": "to"
+          "t": "as",
+          "say": "as"
         },
         {
           "t": "the",
           "say": "the"
         },
         {
-          "t": "next.",
-          "say": "next"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p6",
-      "words": [
-        {
-          "t": "The",
-          "say": "the"
+          "t": "light",
+          "say": "light"
         },
         {
-          "t": "soil",
-          "say": "soil"
+          "t": "grew.",
+          "say": "grew"
         },
-        {
-          "t": "felt",
-          "say": "felt"
-        },
-        {
-          "t": "warm",
-          "say": "warm"
-        },
-        {
-          "t": "under",
-          "say": "under"
-        },
-        {
-          "t": "their",
-          "say": "their"
-        },
-        {
-          "t": "bare",
-          "say": "bare"
-        },
-        {
-          "t": "feet.",
-          "say": "feet"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p7",
-      "words": [
         {
           "t": "They",
           "say": "they"
         },
         {
-          "t": "filled",
-          "say": "filled"
+          "t": "had",
+          "say": "had"
         },
         {
-          "t": "the",
-          "say": "the"
+          "t": "planned",
+          "say": "planned"
         },
         {
-          "t": "pail",
-          "say": "pail"
+          "t": "a",
+          "say": "a"
         },
         {
-          "t": "at",
-          "say": "at"
+          "t": "long",
+          "say": "long"
         },
         {
-          "t": "the",
-          "say": "the"
-        },
-        {
-          "t": "rain",
-          "say": "rain"
-        },
-        {
-          "t": "barrel.",
-          "say": "barrel"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p8",
-      "words": [
-        {
-          "t": "Water",
-          "say": "water"
-        },
-        {
-          "t": "ran",
-          "say": "ran"
-        },
-        {
-          "t": "down",
-          "say": "down"
-        },
-        {
-          "t": "the",
-          "say": "the"
-        },
-        {
-          "t": "furrow",
-          "say": "furrow"
-        },
-        {
-          "t": "to",
-          "say": "to"
-        },
-        {
-          "t": "the",
-          "say": "the"
-        },
-        {
-          "t": "young",
-          "say": "young"
-        },
-        {
-          "t": "plants.",
-          "say": "plants"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p9",
-      "words": [
-        {
-          "t": "Wrens",
-          "say": "wrens"
-        },
-        {
-          "t": "sang",
-          "say": "sang"
-        },
-        {
-          "t": "from",
-          "say": "from"
-        },
-        {
-          "t": "the",
-          "say": "the"
-        },
-        {
-          "t": "fence",
-          "say": "fence"
-        },
-        {
-          "t": "by",
-          "say": "by"
-        },
-        {
-          "t": "the",
-          "say": "the"
-        },
-        {
-          "t": "shed.",
-          "say": "shed"
-        }
-      ]
-    },
-    {
-      "slot": "sun-on-the-rows-p10",
-      "words": [
-        {
-          "t": "The",
-          "say": "the"
-        },
-        {
-          "t": "rows",
-          "say": "rows"
-        },
-        {
-          "t": "shone,",
-          "say": "shone"
+          "t": "morning,",
+          "say": "morning"
         },
         {
           "t": "and",
@@ -391,16 +259,2654 @@
           "say": "garden"
         },
         {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "ready",
+          "say": "ready"
+        },
+        {
+          "t": "for",
+          "say": "for"
+        },
+        {
+          "t": "them.",
+          "say": "them"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "set",
+          "say": "set"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        },
+        {
+          "t": "down",
+          "say": "down"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "looked",
+          "say": "looked"
+        },
+        {
+          "t": "along",
+          "say": "along"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "rows",
+          "say": "rows"
+        },
+        {
+          "t": "from",
+          "say": "from"
+        },
+        {
+          "t": "end",
+          "say": "end"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "end.",
+          "say": "end"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p2",
+      "alt": "A child with a pail on the path",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "path",
+          "say": "path"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "packed",
+          "say": "packed"
+        },
+        {
+          "t": "hard",
+          "say": "hard"
+        },
+        {
+          "t": "where",
+          "say": "where"
+        },
+        {
+          "t": "feet",
+          "say": "feet"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "walked",
+          "say": "walked"
+        },
+        {
+          "t": "all",
+          "say": "all"
+        },
+        {
+          "t": "spring.",
+          "say": "spring"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "stepped",
+          "say": "stepped"
+        },
+        {
+          "t": "over",
+          "say": "over"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "root",
+          "say": "root"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "kept",
+          "say": "kept"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        },
+        {
+          "t": "from",
+          "say": "from"
+        },
+        {
+          "t": "knocking",
+          "say": "knocking"
+        },
+        {
+          "t": "his",
+          "say": "his"
+        },
+        {
+          "t": "knee.",
+          "say": "knee"
+        },
+        {
+          "t": "He",
+          "say": "he"
+        },
+        {
+          "t": "could",
+          "say": "could"
+        },
+        {
+          "t": "hear",
+          "say": "hear"
+        },
+        {
+          "t": "water",
+          "say": "water"
+        },
+        {
+          "t": "shifting",
+          "say": "shifting"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "rain",
+          "say": "rain"
+        },
+        {
+          "t": "barrel",
+          "say": "barrel"
+        },
+        {
+          "t": "by",
+          "say": "by"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shed.",
+          "say": "shed"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "called",
+          "say": "called"
+        },
+        {
+          "t": "that",
+          "say": "that"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "near",
+          "say": "near"
+        },
+        {
+          "t": "row",
+          "say": "row"
+        },
+        {
+          "t": "needed",
+          "say": "needed"
+        },
+        {
+          "t": "water",
+          "say": "water"
+        },
+        {
+          "t": "before",
+          "say": "before"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "far",
+          "say": "far"
+        },
+        {
+          "t": "one.",
+          "say": "one"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "nodded",
+          "say": "nodded"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "counted",
+          "say": "counted"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "beds",
+          "say": "beds"
+        },
+        {
+          "t": "so",
+          "say": "so"
+        },
+        {
+          "t": "he",
+          "say": "he"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "skip",
+          "say": "skip"
+        },
+        {
+          "t": "one.",
+          "say": "one"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
           "t": "work",
           "say": "work"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "ordinary,",
+          "say": "ordinary"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "that",
+          "say": "that"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "what",
+          "say": "what"
+        },
+        {
+          "t": "made",
+          "say": "made"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "good.",
+          "say": "good"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p3",
+      "alt": "Tall bean plants in a row",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "bean",
+          "say": "bean"
+        },
+        {
+          "t": "plants",
+          "say": "plants"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "climbed",
+          "say": "climbed"
+        },
+        {
+          "t": "their",
+          "say": "their"
+        },
+        {
+          "t": "poles",
+          "say": "poles"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "were",
+          "say": "were"
+        },
+        {
+          "t": "holding",
+          "say": "holding"
+        },
+        {
+          "t": "on.",
+          "say": "on"
+        },
+        {
+          "t": "Leaves",
+          "say": "leaves"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "size",
+          "say": "size"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "hand",
+          "say": "hand"
+        },
+        {
+          "t": "turned",
+          "say": "turned"
+        },
+        {
+          "t": "toward",
+          "say": "toward"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "warming",
+          "say": "warming"
+        },
+        {
+          "t": "air.",
+          "say": "air"
+        },
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "few",
+          "say": "few"
+        },
+        {
+          "t": "pale",
+          "say": "pale"
+        },
+        {
+          "t": "flowers",
+          "say": "flowers"
+        },
+        {
+          "t": "showed",
+          "say": "showed"
+        },
+        {
+          "t": "where",
+          "say": "where"
+        },
+        {
+          "t": "pods",
+          "say": "pods"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "hang",
+          "say": "hang"
+        },
+        {
+          "t": "later.",
+          "say": "later"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "checked",
+          "say": "checked"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "stem",
+          "say": "stem"
+        },
+        {
+          "t": "for",
+          "say": "for"
+        },
+        {
+          "t": "aphids",
+          "say": "aphids"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "found",
+          "say": "found"
+        },
+        {
+          "t": "only",
+          "say": "only"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "clean",
+          "say": "clean"
+        },
+        {
+          "t": "leaf.",
+          "say": "leaf"
+        },
+        {
+          "t": "She",
+          "say": "she"
+        },
+        {
+          "t": "told",
+          "say": "told"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "plants",
+          "say": "plants"
+        },
+        {
+          "t": "were",
+          "say": "were"
+        },
+        {
+          "t": "strong",
+          "say": "strong"
+        },
+        {
+          "t": "because",
+          "say": "because"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "soil",
+          "say": "soil"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "been",
+          "say": "been"
+        },
+        {
+          "t": "fed.",
+          "say": "fed"
+        },
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "left",
+          "say": "left"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "flowers",
+          "say": "flowers"
+        },
+        {
+          "t": "alone",
+          "say": "alone"
+        },
+        {
+          "t": "so",
+          "say": "so"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bees",
+          "say": "bees"
+        },
+        {
+          "t": "could",
+          "say": "could"
+        },
+        {
+          "t": "finish",
+          "say": "finish"
+        },
+        {
+          "t": "their",
+          "say": "their"
+        },
+        {
+          "t": "visits.",
+          "say": "visits"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p4",
+      "alt": "A weed pulled into the compost",
+      "words": [
+        {
+          "t": "One",
+          "say": "one"
+        },
+        {
+          "t": "pale",
+          "say": "pale"
+        },
+        {
+          "t": "weed",
+          "say": "weed"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "pushed",
+          "say": "pushed"
+        },
+        {
+          "t": "up",
+          "say": "up"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "middle",
+          "say": "middle"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "row.",
+          "say": "row"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "pulled",
+          "say": "pulled"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "slowly",
+          "say": "slowly"
+        },
+        {
+          "t": "so",
+          "say": "so"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "root",
+          "say": "root"
+        },
+        {
+          "t": "came",
+          "say": "came"
+        },
+        {
+          "t": "out",
+          "say": "out"
+        },
+        {
+          "t": "instead",
+          "say": "instead"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "snapping.",
+          "say": "snapping"
+        },
+        {
+          "t": "She",
+          "say": "she"
+        },
+        {
+          "t": "shook",
+          "say": "shook"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "soil",
+          "say": "soil"
+        },
+        {
+          "t": "back",
+          "say": "back"
+        },
+        {
+          "t": "onto",
+          "say": "onto"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bed",
+          "say": "bed"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "kept",
+          "say": "kept"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "weed.",
+          "say": "weed"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "compost",
+          "say": "compost"
+        },
+        {
+          "t": "heap",
+          "say": "heap"
+        },
+        {
+          "t": "by",
+          "say": "by"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shed",
+          "say": "shed"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "warm",
+          "say": "warm"
+        },
+        {
+          "t": "under",
+          "say": "under"
+        },
+        {
+          "t": "its",
+          "say": "its"
+        },
+        {
+          "t": "top",
+          "say": "top"
+        },
+        {
+          "t": "layer.",
+          "say": "layer"
+        },
+        {
+          "t": "She",
+          "say": "she"
+        },
+        {
+          "t": "dropped",
+          "say": "dropped"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "weed",
+          "say": "weed"
+        },
+        {
+          "t": "there",
+          "say": "there"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "covered",
+          "say": "covered"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "with",
+          "say": "with"
+        },
+        {
+          "t": "last",
+          "say": "last"
+        },
+        {
+          "t": "week's",
+          "say": "week's"
+        },
+        {
+          "t": "grass.",
+          "say": "grass"
+        },
+        {
+          "t": "Nothing",
+          "say": "nothing"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "garden",
+          "say": "garden"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "wasted",
+          "say": "wasted"
+        },
+        {
+          "t": "if",
+          "say": "if"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "could",
+          "say": "could"
+        },
+        {
+          "t": "go",
+          "say": "go"
+        },
+        {
+          "t": "back",
+          "say": "back"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "ground.",
+          "say": "ground"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p5",
+      "alt": "A bee close on a yellow bloom",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "bee",
+          "say": "bee"
+        },
+        {
+          "t": "worked",
+          "say": "worked"
+        },
+        {
+          "t": "one",
+          "say": "one"
+        },
+        {
+          "t": "yellow",
+          "say": "yellow"
+        },
+        {
+          "t": "bloom",
+          "say": "bloom"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "then",
+          "say": "then"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "next.",
+          "say": "next"
+        },
+        {
+          "t": "It",
+          "say": "it"
+        },
+        {
+          "t": "did",
+          "say": "did"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "mind",
+          "say": "mind"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "people",
+          "say": "people"
+        },
+        {
+          "t": "if",
+          "say": "if"
+        },
+        {
+          "t": "they",
+          "say": "they"
+        },
+        {
+          "t": "moved",
+          "say": "moved"
+        },
+        {
+          "t": "without",
+          "say": "without"
+        },
+        {
+          "t": "swatting.",
+          "say": "swatting"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "stood",
+          "say": "stood"
+        },
+        {
+          "t": "still",
+          "say": "still"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "watched",
+          "say": "watched"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pollen",
+          "say": "pollen"
+        },
+        {
+          "t": "dust",
+          "say": "dust"
+        },
+        {
+          "t": "its",
+          "say": "its"
+        },
+        {
+          "t": "legs.",
+          "say": "legs"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "said",
+          "say": "said"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bee",
+          "say": "bee"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "paid",
+          "say": "paid"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "flowers",
+          "say": "flowers"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "garden",
+          "say": "garden"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "paid",
+          "say": "paid"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "fruit.",
+          "say": "fruit"
+        },
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "gave",
+          "say": "gave"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bloom",
+          "say": "bloom"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "wide",
+          "say": "wide"
+        },
+        {
+          "t": "step",
+          "say": "step"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "went",
+          "say": "went"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "down",
+          "say": "down"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "row.",
+          "say": "row"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "hum",
+          "say": "hum"
+        },
+        {
+          "t": "stayed",
+          "say": "stayed"
+        },
+        {
+          "t": "behind",
+          "say": "behind"
+        },
+        {
+          "t": "them",
+          "say": "them"
+        },
+        {
+          "t": "like",
+          "say": "like"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "small",
+          "say": "small"
+        },
+        {
+          "t": "engine",
+          "say": "engine"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "leaves.",
+          "say": "leaves"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p6",
+      "alt": "Warm soil under bare feet",
+      "words": [
+        {
+          "t": "By",
+          "say": "by"
+        },
+        {
+          "t": "midmorning",
+          "say": "midmorning"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "soil",
+          "say": "soil"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "path",
+          "say": "path"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "warm",
+          "say": "warm"
+        },
+        {
+          "t": "underfoot.",
+          "say": "underfoot"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "left",
+          "say": "left"
+        },
+        {
+          "t": "his",
+          "say": "his"
+        },
+        {
+          "t": "shoes",
+          "say": "shoes"
+        },
+        {
+          "t": "by",
+          "say": "by"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "did",
+          "say": "did"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "miss",
+          "say": "miss"
+        },
+        {
+          "t": "them.",
+          "say": "them"
+        },
+        {
+          "t": "He",
+          "say": "he"
+        },
+        {
+          "t": "pressed",
+          "say": "pressed"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "heel",
+          "say": "heel"
+        },
+        {
+          "t": "into",
+          "say": "into"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "dirt",
+          "say": "dirt"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "saw",
+          "say": "saw"
+        },
+        {
+          "t": "how",
+          "say": "how"
+        },
+        {
+          "t": "dry",
+          "say": "dry"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "top",
+          "say": "top"
+        },
+        {
+          "t": "was.",
+          "say": "was"
+        },
+        {
+          "t": "Under",
+          "say": "under"
+        },
+        {
+          "t": "that",
+          "say": "that"
+        },
+        {
+          "t": "crust",
+          "say": "crust"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "ground",
+          "say": "ground"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "darker",
+          "say": "darker"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "held",
+          "say": "held"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "night's",
+          "say": "night's"
+        },
+        {
+          "t": "cool.",
+          "say": "cool"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "pinched",
+          "say": "pinched"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "crumb",
+          "say": "crumb"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "soil",
+          "say": "soil"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "said",
+          "say": "said"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "ready",
+          "say": "ready"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "drink.",
+          "say": "drink"
+        },
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "turned",
+          "say": "turned"
+        },
+        {
+          "t": "back",
+          "say": "back"
+        },
+        {
+          "t": "toward",
+          "say": "toward"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "barrel",
+          "say": "barrel"
+        },
+        {
+          "t": "before",
+          "say": "before"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "heat",
+          "say": "heat"
+        },
+        {
+          "t": "settled",
+          "say": "settled"
+        },
+        {
+          "t": "in.",
+          "say": "in"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p7",
+      "alt": "A pail beside the rain barrel",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "rain",
+          "say": "rain"
+        },
+        {
+          "t": "barrel",
+          "say": "barrel"
+        },
+        {
+          "t": "stood",
+          "say": "stood"
+        },
+        {
+          "t": "under",
+          "say": "under"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shed",
+          "say": "shed"
+        },
+        {
+          "t": "roof,",
+          "say": "roof"
+        },
+        {
+          "t": "dark",
+          "say": "dark"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "heavy.",
+          "say": "heavy"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "dipped",
+          "say": "dipped"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        },
+        {
+          "t": "and",
+          "say": "and"
         },
         {
           "t": "felt",
           "say": "felt"
         },
         {
-          "t": "light.",
-          "say": "light"
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "handle",
+          "say": "handle"
+        },
+        {
+          "t": "bite",
+          "say": "bite"
+        },
+        {
+          "t": "his",
+          "say": "his"
+        },
+        {
+          "t": "fingers.",
+          "say": "fingers"
+        },
+        {
+          "t": "Water",
+          "say": "water"
+        },
+        {
+          "t": "from",
+          "say": "from"
+        },
+        {
+          "t": "last",
+          "say": "last"
+        },
+        {
+          "t": "week's",
+          "say": "week's"
+        },
+        {
+          "t": "storm",
+          "say": "storm"
+        },
+        {
+          "t": "smelled",
+          "say": "smelled"
+        },
+        {
+          "t": "like",
+          "say": "like"
+        },
+        {
+          "t": "wet",
+          "say": "wet"
+        },
+        {
+          "t": "wood",
+          "say": "wood"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "leaves.",
+          "say": "leaves"
+        },
+        {
+          "t": "He",
+          "say": "he"
+        },
+        {
+          "t": "did",
+          "say": "did"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "fill",
+          "say": "fill"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "brim,",
+          "say": "brim"
+        },
+        {
+          "t": "so",
+          "say": "so"
+        },
+        {
+          "t": "he",
+          "say": "he"
+        },
+        {
+          "t": "could",
+          "say": "could"
+        },
+        {
+          "t": "carry",
+          "say": "carry"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "straight.",
+          "say": "straight"
+        },
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "little",
+          "say": "little"
+        },
+        {
+          "t": "spilled",
+          "say": "spilled"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "his",
+          "say": "his"
+        },
+        {
+          "t": "foot",
+          "say": "foot"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "felt",
+          "say": "felt"
+        },
+        {
+          "t": "colder",
+          "say": "colder"
+        },
+        {
+          "t": "than",
+          "say": "than"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "air.",
+          "say": "air"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "held",
+          "say": "held"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "lid",
+          "say": "lid"
+        },
+        {
+          "t": "so",
+          "say": "so"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "fall",
+          "say": "fall"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "after",
+          "say": "after"
+        },
+        {
+          "t": "him.",
+          "say": "him"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p8",
+      "alt": "Water running down a furrow",
+      "words": [
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "poured",
+          "say": "poured"
+        },
+        {
+          "t": "slowly",
+          "say": "slowly"
+        },
+        {
+          "t": "at",
+          "say": "at"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "head",
+          "say": "head"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "first",
+          "say": "first"
+        },
+        {
+          "t": "furrow.",
+          "say": "furrow"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "water",
+          "say": "water"
+        },
+        {
+          "t": "found",
+          "say": "found"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "low",
+          "say": "low"
+        },
+        {
+          "t": "line",
+          "say": "line"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "ran",
+          "say": "ran"
+        },
+        {
+          "t": "along",
+          "say": "along"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "like",
+          "say": "like"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "thread.",
+          "say": "thread"
+        },
+        {
+          "t": "It",
+          "say": "it"
+        },
+        {
+          "t": "darkened",
+          "say": "darkened"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "soil",
+          "say": "soil"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "then",
+          "say": "then"
+        },
+        {
+          "t": "sank",
+          "say": "sank"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "beside",
+          "say": "beside"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "bean",
+          "say": "bean"
+        },
+        {
+          "t": "roots.",
+          "say": "roots"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "moved",
+          "say": "moved"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        },
+        {
+          "t": "before",
+          "say": "before"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "water",
+          "say": "water"
+        },
+        {
+          "t": "could",
+          "say": "could"
+        },
+        {
+          "t": "jump",
+          "say": "jump"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "ridge.",
+          "say": "ridge"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "smoothed",
+          "say": "smoothed"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "break",
+          "say": "break"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "ridge",
+          "say": "ridge"
+        },
+        {
+          "t": "with",
+          "say": "with"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "side",
+          "say": "side"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "her",
+          "say": "her"
+        },
+        {
+          "t": "hand.",
+          "say": "hand"
+        },
+        {
+          "t": "Row",
+          "say": "row"
+        },
+        {
+          "t": "by",
+          "say": "by"
+        },
+        {
+          "t": "row,",
+          "say": "row"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "beds",
+          "say": "beds"
+        },
+        {
+          "t": "drank",
+          "say": "drank"
+        },
+        {
+          "t": "what",
+          "say": "what"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "sky",
+          "say": "sky"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "saved.",
+          "say": "saved"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p9",
+      "alt": "Wrens on the garden fence",
+      "words": [
+        {
+          "t": "Two",
+          "say": "two"
+        },
+        {
+          "t": "wrens",
+          "say": "wrens"
+        },
+        {
+          "t": "landed",
+          "say": "landed"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "fence",
+          "say": "fence"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "scolded",
+          "say": "scolded"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "workers.",
+          "say": "workers"
+        },
+        {
+          "t": "Their",
+          "say": "their"
+        },
+        {
+          "t": "nest",
+          "say": "nest"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gourd",
+          "say": "gourd"
+        },
+        {
+          "t": "that",
+          "say": "that"
+        },
+        {
+          "t": "hung",
+          "say": "hung"
+        },
+        {
+          "t": "by",
+          "say": "by"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "post.",
+          "say": "post"
+        },
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "did",
+          "say": "did"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "go",
+          "say": "go"
+        },
+        {
+          "t": "closer,",
+          "say": "closer"
+        },
+        {
+          "t": "even",
+          "say": "even"
+        },
+        {
+          "t": "though",
+          "say": "though"
+        },
+        {
+          "t": "he",
+          "say": "he"
+        },
+        {
+          "t": "wanted",
+          "say": "wanted"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "look.",
+          "say": "look"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "said",
+          "say": "said"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "watched",
+          "say": "watched"
+        },
+        {
+          "t": "nest",
+          "say": "nest"
+        },
+        {
+          "t": "is",
+          "say": "is"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "worried",
+          "say": "worried"
+        },
+        {
+          "t": "nest.",
+          "say": "nest"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "birds",
+          "say": "birds"
+        },
+        {
+          "t": "flicked",
+          "say": "flicked"
+        },
+        {
+          "t": "their",
+          "say": "their"
+        },
+        {
+          "t": "tails",
+          "say": "tails"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "then",
+          "say": "then"
+        },
+        {
+          "t": "went",
+          "say": "went"
+        },
+        {
+          "t": "back",
+          "say": "back"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "hunting.",
+          "say": "hunting"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "garden",
+          "say": "garden"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "feeding",
+          "say": "feeding"
+        },
+        {
+          "t": "more",
+          "say": "more"
+        },
+        {
+          "t": "than",
+          "say": "than"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "people",
+          "say": "people"
+        },
+        {
+          "t": "who",
+          "say": "who"
+        },
+        {
+          "t": "tended",
+          "say": "tended"
+        },
+        {
+          "t": "it.",
+          "say": "it"
+        }
+      ]
+    },
+    {
+      "slot": "sun-on-the-rows-p10",
+      "alt": "Rows shining at the end of the work",
+      "words": [
+        {
+          "t": "When",
+          "say": "when"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "last",
+          "say": "last"
+        },
+        {
+          "t": "row",
+          "say": "row"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "wet,",
+          "say": "wet"
+        },
+        {
+          "t": "they",
+          "say": "they"
+        },
+        {
+          "t": "stood",
+          "say": "stood"
+        },
+        {
+          "t": "at",
+          "say": "at"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "looked",
+          "say": "looked"
+        },
+        {
+          "t": "back.",
+          "say": "back"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "leaves",
+          "say": "leaves"
+        },
+        {
+          "t": "had",
+          "say": "had"
+        },
+        {
+          "t": "lifted,",
+          "say": "lifted"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "path",
+          "say": "path"
+        },
+        {
+          "t": "showed",
+          "say": "showed"
+        },
+        {
+          "t": "every",
+          "say": "every"
+        },
+        {
+          "t": "footprint.",
+          "say": "footprint"
+        },
+        {
+          "t": "Sam's",
+          "say": "sam's"
+        },
+        {
+          "t": "arms",
+          "say": "arms"
+        },
+        {
+          "t": "were",
+          "say": "were"
+        },
+        {
+          "t": "tired",
+          "say": "tired"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "way",
+          "say": "way"
+        },
+        {
+          "t": "that",
+          "say": "that"
+        },
+        {
+          "t": "felt",
+          "say": "felt"
+        },
+        {
+          "t": "finished,",
+          "say": "finished"
+        },
+        {
+          "t": "not",
+          "say": "not"
+        },
+        {
+          "t": "failed.",
+          "say": "failed"
+        },
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "rinsed",
+          "say": "rinsed"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "pail",
+          "say": "pail"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "set",
+          "say": "set"
+        },
+        {
+          "t": "it",
+          "say": "it"
+        },
+        {
+          "t": "upside",
+          "say": "upside"
+        },
+        {
+          "t": "down",
+          "say": "down"
+        },
+        {
+          "t": "to",
+          "say": "to"
+        },
+        {
+          "t": "dry.",
+          "say": "dry"
+        },
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "come",
+          "say": "come"
+        },
+        {
+          "t": "again",
+          "say": "again"
+        },
+        {
+          "t": "tomorrow,",
+          "say": "tomorrow"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "rows",
+          "say": "rows"
+        },
+        {
+          "t": "would",
+          "say": "would"
+        },
+        {
+          "t": "be",
+          "say": "be"
+        },
+        {
+          "t": "here.",
+          "say": "here"
+        },
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "sun",
+          "say": "sun"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "high,",
+          "say": "high"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "morning's",
+          "say": "morning's"
+        },
+        {
+          "t": "work",
+          "say": "work"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "done.",
+          "say": "done"
         }
       ]
     }

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img">
+<defs>
+  <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse">
+    <path d="M0 6 L6 0" stroke="#241c12" stroke-width="0.45" opacity="0.18"/>
+  </pattern>
+  <pattern id="grain" width="48" height="48" patternUnits="userSpaceOnUse">
+    <circle cx="3" cy="7" r="0.6" fill="#241c12" opacity="0.08"/>
+    <circle cx="22" cy="18" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="37" cy="9" r="0.7" fill="#241c12" opacity="0.06"/>
+    <circle cx="11" cy="33" r="0.5" fill="#241c12" opacity="0.07"/>
+    <circle cx="41" cy="39" r="0.6" fill="#241c12" opacity="0.08"/>
+  </pattern>
+  <pattern id="rule" width="100" height="28" patternUnits="userSpaceOnUse">
+    <path d="M0 27 H100" stroke="#241c12" stroke-width="0.4" opacity="0.12"/>
+  </pattern>
+</defs>
+<rect width="600" height="400" fill="#f4ead4"/>
+<rect width="600" height="400" fill="url(#grain)"/>
+
+    <rect x="70" y="160" width="90" height="90" fill="#6e8ea3" stroke="#241c12" stroke-width="3"/>
+    <path d="M250 250 v-90 h 70 v90 z" fill="none" stroke="#241c12" stroke-width="3"/>
+    <path d="M258 240 h 54 v-50 h-54 z" fill="#6e8ea3" opacity="0.7"/>
+    <path d="M430 230 q 20 -40 40 -20 q 16 30 8 50 q -20 10 -36 0" fill="none" stroke="#241c12" stroke-width="2"/>
+    <path d="M470 180 q 16 -30 28 -8 q 10 24 -6 36" fill="none" stroke="#241c12" stroke-width="2"/>
+    <text x="28" y="38" font-family="Georgia, serif" font-size="15" letter-spacing="2.4" fill="#241c12">STATES OF MATTER</text>
+    <text x="28" y="372" font-family="Georgia, serif" font-size="11" letter-spacing="2.4" fill="#241c12">Ice · liquid water · steam</text>
+    
+<rect x="8" y="8" width="584" height="384" fill="none" stroke="#241c12" stroke-width="2.2"/>
+<rect x="14" y="14" width="572" height="372" fill="none" stroke="#241c12" stroke-width="0.6" opacity="0.5"/>
+</svg>

@@ -95,9 +95,11 @@ test("hub and each learner PWA work offline", async ({ page, context }) => {
       }).toPass();
       await expect(page.locator("#app-root")).not.toHaveText(/Could not open|not on this device/);
       if (appId === "reading" && (stage.band === "toddler" || stage.band === "preschool")) {
-        const beds = page.locator("#go-sounds");
-        if (await beds.count()) await beds.click();
-        await expect(page.locator(".garden-letter").first()).toBeVisible();
+        await expect(page.locator("#go-sounds")).toBeVisible();
+        await page.locator("#go-sounds").click();
+        await expect(page.locator(".garden-sound").first()).toBeVisible();
+        await expect(page.locator(".garden-flowers button.is-right")).toHaveCount(0);
+        await expect(page.locator(".garden-flowers .garden-letter").first()).toBeHidden();
       }
       await assertControlling(page);
       expect(errors, "offline play " + stage.folder + " " + appId).toEqual([]);
@@ -188,7 +190,7 @@ test("toddler and preschool open on pictures, and omitted subjects stay closed",
   await expect(page.locator(".lede")).toHaveCount(0);
 
   await page.goto(BASE + "Bella/play.html?app=history&band=toddler", { waitUntil: "load" });
-  expect(await page.locator(".picture-ticket").count()).toBeGreaterThan(2);
+  await expect(page.locator(".picture-ticket").nth(2)).toBeVisible();
 
   await page.goto(BASE + "Bella/play.html?app=geography&band=toddler", { waitUntil: "load" });
   await expect(page.locator(".place-card")).toHaveCount(6);
@@ -213,6 +215,89 @@ test("upper geography drills all 50 capitals and history presidents use the full
   await expect(page.locator("#main")).toContainText(/of 47/);
   await expect(page.locator("#main")).toContainText(/president number|What number was/);
   await expect(page.locator(".choice")).toHaveCount(3);
+});
+
+test("science speaks a prompt inside play.html for a young band", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.__spoken = [];
+    function note(u) {
+      window.__spoken.push(String((u && (u.text || u.utteranceText)) || ""));
+    }
+    if (typeof window.SpeechSynthesisUtterance !== "function") {
+      window.SpeechSynthesisUtterance = function SpeechSynthesisUtterance(text) {
+        this.text = String(text || "");
+      };
+    }
+    const proto = window.SpeechSynthesis && window.SpeechSynthesis.prototype;
+    if (proto && typeof proto.speak === "function") {
+      proto.speak = function (u) { note(u); };
+      proto.cancel = function () {};
+    } else {
+      window.speechSynthesis = {
+        cancel() {},
+        speak(u) { note(u); },
+        getVoices() { return []; },
+        addEventListener() {},
+        removeEventListener() {},
+      };
+    }
+  });
+  const errors = [];
+  onErrors(page, errors);
+  await page.goto(BASE + "Piper/play.html?app=science&band=preschool", { waitUntil: "load" });
+  await page.waitForFunction(
+    () => (window.__spoken || []).some((line) => String(line).length > 8),
+    null,
+    { timeout: 20000 }
+  );
+  const spoken = await page.evaluate(() => (window.__spoken || []).join(" "));
+  expect(spoken.length).toBeGreaterThan(8);
+  expect(spoken).toMatch(/Field expedition/i);
+  expect(errors).toEqual([]);
+});
+
+test("standalone reading reloads offline with band query", async ({ page, context }) => {
+  const failed = [];
+  page.on("requestfailed", (req) => {
+    const err = req.failure();
+    failed.push((err && err.errorText) || req.url());
+  });
+  await page.goto(BASE + "apps/reading/index.html?band=toddler", { waitUntil: "load" });
+  await expect(page.locator("h1")).toContainText(/Garden sounds/);
+  await page.waitForFunction(() => !!(navigator.serviceWorker && navigator.serviceWorker.controller));
+  await context.setOffline(true);
+  let navError = "";
+  try {
+    await page.reload({ waitUntil: "load" });
+  } catch (e) {
+    navError = String(e);
+  }
+  expect(navError, "offline reload of ?band=toddler").not.toMatch(/ERR_FAILED|net::/);
+  await expect(page.locator("h1")).toContainText(/Garden sounds/);
+  await page.locator("#go-sounds").click();
+  await expect(page.locator(".garden-sound").first()).toBeVisible();
+  expect(failed.filter((text) => /ERR_FAILED/.test(text))).toEqual([]);
+});
+
+test("standalone reading without a band shows the picker", async ({ page }) => {
+  await page.goto(BASE + "apps/reading/index.html", { waitUntil: "load" });
+  await page.evaluate(() => localStorage.removeItem("hs.band"));
+  await page.goto(BASE + "apps/reading/index.html", { waitUntil: "load" });
+  await expect(page.locator("h1")).toContainText(/Pick a band/);
+  await expect(page.locator("h1")).not.toContainText(/Blends and teams/);
+});
+
+test("runner baby band does not fetch missing reading json", async ({ page }) => {
+  const babyHits = [];
+  const errors = [];
+  page.on("response", (res) => {
+    if (res.url().includes("/apps/reading/data/baby.json")) babyHits.push(res.status());
+  });
+  page.on("pageerror", (err) => errors.push(String(err)));
+  await page.goto(BASE + "Shiloh/play.html?app=reading&band=baby", { waitUntil: "load" });
+  await expect(page.locator("#app-root")).toContainText(/No garden lessons/);
+  expect(babyHits, "data/baby.json should not be requested").toEqual([]);
+  expect(errors.join("\n")).not.toMatch(/JSON|Unexpected token|no data/);
 });
 
 test("standalone math and reading show a visible untested banner", async ({ page }) => {
