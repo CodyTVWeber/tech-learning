@@ -74,8 +74,25 @@
         synth.speak(u);
       }
 
-      function picture(slot, cls) {
-        return art(slot, cls, book.title);
+      function picture(slot, cls, label) {
+        return art(slot, cls, label || book.title);
+      }
+
+      function esc(s) {
+        return String(s || "")
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+
+      function wordsHtml(words) {
+        const flow = words.length > 14;
+        let html = "";
+        words.forEach(function (w, idx) {
+          html += '<button type="button" data-i="' + idx + '">' + esc(w.t) + "</button>";
+          if (flow && /[.!?]["']?$/.test(w.t)) html += '<span class="book-break"></span>';
+        });
+        return { html: html, flow: flow };
       }
 
       function renderCover() {
@@ -122,10 +139,11 @@
           return;
         }
         const p = book.pages[page];
-        host.className = "book";
+        const words = wordsHtml(p.words);
+        host.className = "book" + (words.flow ? " book-long" : "");
         host.innerHTML =
           '<div class="book-spread">' +
-          picture(p.slot, "book-art") +
+          picture(p.slot, "book-art", p.alt || book.title) +
           '<p class="sr-only">' +
           book.title +
           ", page " +
@@ -134,12 +152,10 @@
           book.pages.length +
           "</p>" +
           dots() +
-          '<div class="book-words" id="book-words">' +
-          p.words
-            .map(function (w, idx) {
-              return '<button type="button" data-i="' + idx + '">' + w.t + "</button>";
-            })
-            .join("") +
+          '<div class="book-words' +
+          (words.flow ? " book-words-flow" : "") +
+          '" id="book-words">' +
+          words.html +
           "</div>" +
           '<div class="book-nav">' +
           '<button type="button" id="book-prev"' +

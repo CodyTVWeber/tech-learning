@@ -120,9 +120,12 @@
     return String(g || "").replace(/_/g, "-");
   }
   function band() {
-    if (hs().getBand) return hs().getBand();
     const q = new URLSearchParams(location.search).get("band");
     if (validBand(q)) return q;
+    if (inRunner() && hs().getBand) {
+      const g = hs().getBand();
+      if (validBand(g)) return g;
+    }
     try {
       const stored = localStorage.getItem("hs.band");
       if (validBand(stored)) return stored;
@@ -569,7 +572,12 @@
           promptHtml =
             img("bee", "garden-bee") +
             "<h2>Find the sound</h2>" +
-            "<p>The bee says a sound — not a letter name.</p>";
+            "<p>The bee says a sound — not a letter name. Tap the picture.</p>" +
+            '<p class="garden-count">Sound ' +
+            (itemIndex + 1) +
+            " of " +
+            items.length +
+            "</p>";
           autoSpeak = item.audioText || item.phoneme || phonemeOf(expect);
           rate = 0.65;
           hearLabel = "Hear the sound";
@@ -595,11 +603,11 @@
         }
         const choiceHtml = choices
           .map(function (c) {
-            const flower = isSound ? img("flower-" + c) : "";
+            const flower = isSound ? img("flower-" + c, "garden-sound") : "";
             const letter = isSound
               ? '<span class="garden-letter">' + esc(c) + "</span>"
               : esc(c);
-            return '<button type="button" data-v="' + esc(c) + '">' + flower + letter + "</button>";
+            return '<button type="button" class="garden-sound" data-v="' + esc(c) + '">' + flower + letter + "</button>";
           })
           .join("");
         host.innerHTML =
@@ -628,7 +636,7 @@
           if (btn.getAttribute("data-v") === expect) {
             btn.classList.add("is-right");
             cue("bloom");
-            st.textContent = "That bed blooms.";
+            st.textContent = isSound ? "That picture is " + expect + "." : "That bed blooms.";
             if (item.kind === "vocab") speak(expect, { rate: 0.9 });
             setTimeout(nextItem, wait());
           } else {
@@ -642,47 +650,146 @@
       show();
     }
 
-    function listBooks() {
+    function metaOfBook(id) {
+      return (
+        bookMeta.find(function (x) {
+          return x.id === id;
+        }) || { id: id, title: id, coverSlot: id + "-cover", level: "" }
+      );
+    }
+    function levelTitle(level) {
+      const lv = (catalog.levels || []).find(function (x) {
+        return x.id === level;
+      });
+      return lv ? lv.title : "";
+    }
+    function gateFor(id) {
+      const meta = metaOfBook(id);
+      if (meta.requiresBed && bedById(meta.requiresBed) && !progress.bedsDone[meta.requiresBed]) {
+        const bd = bedById(meta.requiresBed);
+        return { bed: meta.requiresBed, bedTitle: (bd && bd.title) || meta.requiresBed };
+      }
+      return null;
+    }
+    function listBooks(showWarm) {
       host.className = "garden band-" + b;
       const ids = data.books || [];
-      let plots = "";
-      ids.forEach(function (id) {
-        const meta = bookMeta.find(function (x) {
-          return x.id === id;
-        }) || { title: id, coverSlot: id + "-cover", level: "" };
-        const lock = bookLocked(id);
-        const lv = (catalog.levels || []).find(function (x) {
-          return x.id === meta.level;
-        });
-        const levelLabel = lv ? lv.title : "";
-        plots +=
-          '<div class="garden-plot' +
-          (lock ? " is-locked" : "") +
-          '">' +
-          img(meta.coverSlot) +
-          '<button type="button"' +
-          (lock ? " disabled" : "") +
-          " data-book=\"" +
-          esc(id) +
-          '">' +
-          esc(meta.title) +
-          (levelLabel ? " · " + esc(levelLabel) : "") +
-          (lock ? " — " + esc(lock) : "") +
-          "</button></div>";
+      const read = progress.booksRead || [];
+      const unreadOpen = ids.filter(function (id) {
+        return !bookLocked(id) && read.indexOf(id) === -1;
       });
+      const readIds = ids.filter(function (id) {
+        return read.indexOf(id) !== -1;
+      });
+      let openIds = unreadOpen;
+      let warmNote = "";
+      if (!showWarm && unreadOpen.length) {
+        const level = metaOfBook(unreadOpen[0]).level;
+        openIds = unreadOpen.filter(function (id) {
+          return metaOfBook(id).level === level;
+        });
+        const rest = unreadOpen.length - openIds.length;
+        if (rest > 0) warmNote = rest + (rest === 1 ? " warm-up book is" : " warm-up books are") + " also open.";
+      }
+      let plots = "";
+      let nextLine = "";
+      if (!openIds.length) {
+        const lockedIds = ids.filter(function (id) {
+          return bookLocked(id) && read.indexOf(id) === -1;
+        });
+        const lockedId = lockedIds[0];
+        if (lockedId) {
+          const meta = metaOfBook(lockedId);
+          const gate = gateFor(lockedId);
+          const waiting = Math.max(0, lockedIds.length - 1);
+          plots =
+            '<div class="garden-plot garden-next">' +
+            img(meta.coverSlot) +
+            "<h2>" +
+            esc(meta.title) +
+            "</h2><p>" +
+            esc(bookLocked(lockedId)) +
+            "</p>" +
+            (gate
+              ? '<button type="button" id="go-gate">Tend ' + esc(gate.bedTitle) + "</button>"
+              : "") +
+            (waiting
+              ? "<p>" + waiting + " more books wait. They stay off this path until this one opens.</p>"
+              : "") +
+            "</div>";
+          if (gate) {
+            plots += "";
+          }
+        } else {
+          plots = "<p>Every garden book on this path is already read.</p>";
+        }
+      } else {
+        openIds.forEach(function (id) {
+          const meta = metaOfBook(id);
+          const levelLabel = levelTitle(meta.level);
+          plots +=
+            '<div class="garden-plot">' +
+            img(meta.coverSlot) +
+            '<button type="button" data-book="' +
+            esc(id) +
+            '">' +
+            esc(meta.title) +
+            (levelLabel ? " · " + esc(levelLabel) : "") +
+            "</button></div>";
+        });
+        const nextLocked = ids.find(function (id) {
+          return bookLocked(id) && read.indexOf(id) === -1;
+        });
+        if (nextLocked) {
+          nextLine = "Next: " + metaOfBook(nextLocked).title + ". " + bookLocked(nextLocked) + ".";
+        }
+      }
+      const readLine = readIds.length
+        ? '<p class="garden-read">Already read: ' +
+          readIds
+            .map(function (id) {
+              return esc(metaOfBook(id).title);
+            })
+            .join(", ") +
+          "</p>"
+        : "";
       host.innerHTML =
         '<div class="garden-toolbar garden-toolbar-top"><button type="button" id="back-home">Garden</button></div>' +
         img("hero", "garden-hero") +
-        '<div class="garden-intro"><h1>Garden books</h1><p>Original stories. Tap a word to hear it. The sun follows as the page is read.</p></div>' +
+        '<div class="garden-intro"><h1>Garden books</h1><p>The next book is on the path. Tap a word to hear it.</p></div>' +
         '<div class="garden-path" id="book-list">' +
         plots +
-        "</div>";
-      document.getElementById("book-list").onclick = function (ev) {
-        const btn = ev.target.closest("button[data-book]");
-        if (!btn || btn.disabled) return;
-        openBook(btn.getAttribute("data-book"));
-      };
+        "</div>" +
+        (nextLine ? '<p class="garden-next-line">' + esc(nextLine) + "</p>" : "") +
+        (warmNote
+          ? '<p class="garden-next-line"><button type="button" id="show-warm">' + esc(warmNote) + "</button></p>"
+          : "") +
+        readLine;
+      const list = document.getElementById("book-list");
+      if (list)
+        list.onclick = function (ev) {
+          const btn = ev.target.closest("button[data-book]");
+          if (!btn || btn.disabled) return;
+          openBook(btn.getAttribute("data-book"));
+        };
       document.getElementById("back-home").onclick = home;
+      const gateBtn = document.getElementById("go-gate");
+      if (gateBtn) {
+        const lockedId = ids.filter(function (id) {
+          return bookLocked(id) && read.indexOf(id) === -1;
+        })[0];
+        const gate = lockedId ? gateFor(lockedId) : null;
+        gateBtn.onclick = function () {
+          const bed = gate && bedById(gate.bed);
+          if (bed) startItems(bed);
+          else home();
+        };
+      }
+      const warm = document.getElementById("show-warm");
+      if (warm)
+        warm.onclick = function () {
+          listBooks(true);
+        };
     }
 
     function openBook(id) {
@@ -864,7 +971,7 @@
   function showPicker(host) {
     host.className = "garden";
     host.innerHTML =
-      '<div class="garden-intro"><h1>Pick a garden plot</h1><p>Plots use bands, not grades. Untested, awaiting parent test.</p></div>' +
+      '<div class="garden-intro"><h1>Pick a band</h1><p>Pick a band. Names and ages stay off this page.</p></div>' +
       '<div class="garden-picker">' +
       BANDS.map(function (id) {
         return (

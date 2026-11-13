@@ -203,6 +203,38 @@ body {
   font-weight: 800;
 }
 
+.garden-flowers .garden-letter {
+  display: none;
+}
+
+.garden-flowers button.is-right .garden-letter {
+  display: block;
+}
+
+.garden-count {
+  font-weight: 800;
+  color: var(--soil);
+}
+
+.garden-next h2 {
+  margin: 8px 12px 0;
+  color: var(--cream);
+}
+
+.garden-next p {
+  margin: 8px 12px;
+  color: var(--path);
+}
+
+.garden-next-line {
+  padding: 0 16px 12px;
+  font-weight: 700;
+}
+
+.garden-read {
+  padding: 0 16px 16px;
+}
+
 .garden-flowers img,
 .garden-flowers .garden-art {
   width: 100%;
@@ -396,6 +428,35 @@ body {
 .book-words button.is-on {
   border-color: #e6b33a;
   background: #fff6cc;
+}
+
+.book-long .book-art,
+.book-long .book-art svg {
+  height: 150px;
+}
+
+.book-words-flow {
+  display: block;
+  text-align: left;
+  padding: 8px 14px 16px;
+}
+
+.book .book-words-flow button {
+  display: inline;
+  min-width: 0;
+  min-height: 0;
+  font-size: 1.2rem;
+  line-height: 1.55;
+  padding: 2px 3px;
+  margin: 0 1px 2px 0;
+  border-width: 0 0 3px;
+  border-radius: 0;
+  background: transparent;
+}
+
+.book-break {
+  display: block;
+  height: 0.65rem;
 }
 
 .book-nav {
