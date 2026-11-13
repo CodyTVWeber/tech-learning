@@ -39,7 +39,11 @@
         });
         return navigator.serviceWorker.ready.then(function () {
           const ctl = navigator.serviceWorker.controller;
-          if (!ctl) {
+          // Play pages must not kick off another full cache:reload of every
+          // linked app; that work races HS.runApp() and, once several large
+          // apps exist, leaves empty shells (singing) unrendered for the
+          // offline smoke. Home/hub still pass ensureApps (default true).
+          if (!ctl || opts.ensureApps === false) {
             global.__HS_PRECACHE_READY = true;
             return reg;
           }
