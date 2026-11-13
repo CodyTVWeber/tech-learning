@@ -28,7 +28,7 @@
       "id": "science-primary",
       "file": "science-primary.apkg",
       "csv": "csv/primary.csv",
-      "cards": 43
+      "cards": 47
     },
     {
       "id": "science-upper",
@@ -40,7 +40,7 @@
       "id": "science-all",
       "file": "science-all.apkg",
       "csv": "csv/all.csv",
-      "cards": 226
+      "cards": 230
     }
   ],
   "apkgTimestamp": 1700000000.0

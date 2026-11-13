@@ -20,7 +20,7 @@ window.HSScienceData = (function () {
     { id: "pond", name: "Pond", img: "images/habitats/pond.svg", bands: KID, blurb: "Still water, lily pads, and a frog's leap.", finds: ["frog", "fish"], read: "A pond holds still water. Frogs start as tadpoles. Fish take oxygen from water with gills." },
     { id: "garden", name: "Garden", img: "images/habitats/garden.svg", bands: KID, blurb: "Beds, bean poles, and kitchen paths.", finds: ["bean-seed", "bee", "earthworm"], read: "A garden is a partnership. We plant. God designed the seed to know the plant it should become." },
     { id: "shore", name: "Shore", img: "images/habitats/shore.svg", bands: KID, blurb: "Tide line, shells, and gulls.", finds: ["shell", "feather", "fish"], read: "The shore is where land and water trade places. Shells are houses left behind." },
-    { id: "desert", name: "Desert", img: "images/habitats/desert.svg", bands: SCHOOL, blurb: "Dry wash, cactus, stored water.", finds: ["pine"], read: "A desert is not empty. Plants here store water and rest in the heat. Design fits the place." },
+    { id: "desert", name: "Desert", img: "images/habitats/desert.svg", bands: SCHOOL, blurb: "Dry wash, cactus, stored water.", finds: ["cactus"], read: "A desert is not empty. Plants here store water and rest in the heat. Design fits the place." },
     { id: "mountain", name: "High country", img: "images/habitats/mountain.svg", bands: SCHOOL, blurb: "Ridges, thin air, snow line.", finds: ["pine", "moss"], read: "Mountains change as you climb: trees shorten, air cools, snow may stay." },
     { id: "sky", name: "Open sky", img: "images/habitats/sky.svg", bands: KID, blurb: "Sun, heaped cloud, a swallow stoop.", finds: ["feather"], read: "The sky is a weather workshop. The same sun that warms a meadow also drives the water cycle." },
     { id: "stream", name: "Stream", img: "images/habitats/stream.svg", bands: KID, blurb: "Riffles, stones, alder shade.", finds: ["fish", "moss", "fern"], read: "Moving water carries grit and cools the banks. Some animals are built for current." },
@@ -31,6 +31,7 @@ window.HSScienceData = (function () {
     { id: "oak-leaf", name: "Oak leaf", latin: "Quercus", img: "images/specimens/oak-leaf.svg", kind: "plant", habitat: "forest", bands: KID, fact: "Oak leaves have deep lobes. The tree holds acorns, each a seed with food packed around a baby oak.", design: "A leaf is a solar panel and a rain hat at once." },
     { id: "maple-leaf", name: "Maple leaf", latin: "Acer", img: "images/specimens/maple-leaf.svg", kind: "plant", habitat: "yard", bands: KID, fact: "Maple leaves show palmate veins, like fingers from a palm. In fall the green fades and other colors show.", design: "Veins are roads for water and sugar." },
     { id: "pine", name: "Pine", latin: "Pinus", img: "images/specimens/pine.svg", kind: "plant", habitat: "mountain", bands: KID, fact: "Pines keep needle leaves all year. Needles lose less water than broad leaves.", design: "Winter green is not a trick; it is a design for poor, cold soils and thin air." },
+    { id: "cactus", name: "Cactus", latin: "Cactaceae", img: "images/habitats/desert.svg", kind: "plant", habitat: "desert", bands: SCHOOL, fact: "A cactus stores water in thick stems and wears spines instead of broad leaves.", design: "The shape fits a dry wash: hold water, spend little, rest in the heat." },
     { id: "dandelion", name: "Dandelion", latin: "Taraxacum", img: "images/specimens/dandelion.svg", kind: "plant", habitat: "meadow", bands: KID, fact: "The yellow head is many tiny flowers packed together. The seed rides a plume of down.", design: "One plant can feed a bee and later sail a seed on the wind." },
     { id: "fern", name: "Fern", latin: "Pteridophyta", img: "images/specimens/fern.svg", kind: "plant", habitat: "forest", bands: SCHOOL, fact: "Ferns make no flowers. They raise dust-like spores on the undersides of fronds.", design: "Even plants without petals follow an orderly life cycle." },
     { id: "moss", name: "Moss", latin: "Bryophyta", img: "images/specimens/moss.svg", kind: "plant", habitat: "forest", bands: SCHOOL, fact: "Moss drinks through its body. It has no true roots or tubes like a tree.", design: "A green cushion on a stone is a whole tiny forest." },
@@ -67,10 +68,10 @@ window.HSScienceData = (function () {
 
   const senses = [
     { id: "sight", name: "Sight", organ: "eyes", img: "images/creation/eye.svg", bands: KID, fact: "Eyes gather light. Lenses bend it so a picture lands on the back wall, the retina." },
-    { id: "hearing", name: "Hearing", organ: "ears", img: "images/body/senses.svg", bands: KID, fact: "Ears catch sound waves. Tiny bones pass the shake to a coiled inner ear." },
-    { id: "smell", name: "Smell", organ: "nose", img: "images/body/senses.svg", bands: KID, fact: "The nose reads chemicals in air. Smell and taste work as partners." },
-    { id: "taste", name: "Taste", organ: "tongue", img: "images/body/senses.svg", bands: KID, fact: "Taste buds notice sweet, sour, salty, bitter, and savory. The rest is smell." },
-    { id: "touch", name: "Touch", organ: "skin", img: "images/body/senses.svg", bands: KID, fact: "Skin is a covering full of sensors for pressure, pain, and temperature." }
+    { id: "hearing", name: "Hearing", organ: "ears", img: "images/weather/wind.svg", bands: KID, fact: "Ears catch sound waves. Tiny bones pass the shake to a coiled inner ear." },
+    { id: "smell", name: "Smell", organ: "nose", img: "images/specimens/dandelion.svg", bands: KID, fact: "The nose reads chemicals in air. Smell and taste work as partners." },
+    { id: "taste", name: "Taste", organ: "tongue", img: "images/body/digestive.svg", bands: KID, fact: "Taste buds notice sweet, sour, salty, bitter, and savory. The rest is smell." },
+    { id: "touch", name: "Touch", organ: "skin", img: "images/specimens/moss.svg", bands: KID, fact: "Skin is a covering full of sensors for pressure, pain, and temperature." }
   ];
 
   const topics = [
@@ -146,73 +147,79 @@ window.HSScienceData = (function () {
       { q: "When you cut a finger, blood helps by…", a: ["Clotting to seal the cut", "Turning into bone", "Becoming lymph nodes", "Tasting the air"], ok: 0 },
       { q: "Blood also helps the body…", a: ["Share heat", "Grow feathers", "Make pine cones", "Form clouds"], ok: 0 }
     ]},
-    { id: "atomic-number", marker: 13, title: "Atomic number", bands: UP, img: "images/body/atom.svg", notes: "Atomic number is the count of protons in an atom's nucleus. That count names the element. Hydrogen is 1. Carbon is 6. Oxygen is 8.", quiz: [
+    { id: "matter", marker: 13, title: "States of matter", bands: MID, img: "images/body/atom.svg", notes: "Ridge chemistry begins in the field: stuff is solid, liquid, or gas. A rock keeps its shape. Creek water takes the cup. The air you breathe fills the space. Heat can melt ice. Cold can freeze a puddle.", quiz: [
+      { q: "A solid keeps its…", a: ["Shape", "Song", "Cloud", "Pulse"], ok: 0 },
+      { q: "A liquid takes the shape of its…", a: ["Container", "Bone", "Star", "Feather"], ok: 0 },
+      { q: "A gas spreads to fill…", a: ["Its space", "Only a leaf", "A skeleton", "A nest cup"], ok: 0 },
+      { q: "Ice, water, and steam are the same substance in different…", a: ["States", "Kinds of bird", "Muscle types", "Planets"], ok: 0 }
+    ]},
+    { id: "atomic-number", marker: 14, title: "Atomic number", bands: MID, img: "images/body/atom.svg", notes: "Atomic number is the count of protons in an atom's nucleus. That count names the element. Hydrogen is 1. Carbon is 6. Oxygen is 8.", quiz: [
       { q: "Atomic number counts…", a: ["Protons in the nucleus", "Leaves on a tree", "Bones in a foot", "Clouds in a week"], ok: 0 },
       { q: "If an atom has 8 protons, it is…", a: ["Oxygen", "Gold", "Helium", "Sodium"], ok: 0 },
       { q: "Changing the proton count would mean…", a: ["A different element", "The same element always", "A kind of weather", "A muscle type"], ok: 0 },
       { q: "Hydrogen's atomic number is…", a: ["1", "12", "26", "79"], ok: 0 }
     ]},
-    { id: "element", marker: 14, title: "What is an element", bands: UP, img: "images/body/atom.svg", notes: "An element is a substance made of only one kind of atom. Gold is gold atoms. Oxygen gas is oxygen atoms. Elements are the alphabet of materials.", quiz: [
+    { id: "element", marker: 15, title: "What is an element", bands: MID, img: "images/body/atom.svg", notes: "An element is a substance made of only one kind of atom. Gold is gold atoms. Oxygen gas is oxygen atoms. Elements are the alphabet of materials.", quiz: [
       { q: "An element is made of…", a: ["Only one kind of atom", "Many kinds of plants", "Only water", "Only light"], ok: 0 },
       { q: "Water is not an element because it is…", a: ["Hydrogen and oxygen joined", "A single atom type", "A muscle", "A cloud type"], ok: 0 },
       { q: "The chart that lists elements is the…", a: ["Periodic table", "Water cycle", "Food chain", "Skeleton"], ok: 0 },
       { q: "Carbon as an element means…", a: ["Atoms with 6 protons", "Any black rock", "A kind of bird", "A simple machine"], ok: 0 }
     ]},
-    { id: "atom-parts", marker: 15, title: "Parts of an atom", bands: UP, img: "images/body/atom.svg", notes: "Nucleus in the middle: protons (plus charge) and neutrons (no charge). Electrons (minus charge) move in the outer space. Almost all the mass sits in the tiny nucleus.", quiz: [
+    { id: "atom-parts", marker: 16, title: "Parts of an atom", bands: MID, img: "images/body/atom.svg", notes: "Nucleus in the middle: protons (plus charge) and neutrons (no charge). Electrons (minus charge) move in the outer space. Almost all the mass sits in the tiny nucleus.", quiz: [
       { q: "Protons live in the…", a: ["Nucleus", "Cloud of rain", "Stomach", "Leaf vein"], ok: 0 },
       { q: "Electrons have a…", a: ["Minus charge", "Plus charge", "No mass ever", "Green color always"], ok: 0 },
       { q: "Neutrons have…", a: ["No electric charge", "A minus charge", "A plus charge", "Wings"], ok: 0 },
       { q: "Most of an atom's mass is in the…", a: ["Nucleus", "Empty outer space", "Skin of a fruit", "Feather vane"], ok: 0 }
     ]},
-    { id: "elements-1-4", marker: 16, title: "Elements 1–4", bands: UP, img: "images/body/atom.svg", notes: "1 Hydrogen H, about 1.008. 2 Helium He, about 4.003. 3 Lithium Li, about 6.94. 4 Beryllium Be, about 9.012. Number, name, symbol, mass — public table facts.", quiz: [
+    { id: "elements-1-4", marker: 17, title: "Elements 1–4", bands: UP, img: "images/body/atom.svg", notes: "1 Hydrogen H, about 1.008. 2 Helium He, about 4.003. 3 Lithium Li, about 6.94. 4 Beryllium Be, about 9.012. Number, name, symbol, mass — public table facts.", quiz: [
       { q: "Element 1 is…", a: ["Hydrogen, H", "Helium, He", "Carbon, C", "Oxygen, O"], ok: 0 },
       { q: "Helium's symbol is…", a: ["He", "H", "Li", "Be"], ok: 0 },
       { q: "Lithium's atomic number is…", a: ["3", "1", "8", "11"], ok: 0 },
       { q: "Beryllium's symbol is…", a: ["Be", "B", "Br", "Ba"], ok: 0 }
     ]},
-    { id: "elements-5-8", marker: 17, title: "Elements 5–8", bands: UP, img: "images/body/atom.svg", notes: "5 Boron B, about 10.81. 6 Carbon C, about 12.011. 7 Nitrogen N, about 14.007. 8 Oxygen O, about 15.999. Carbon is the skeleton of living chemistry. Oxygen is the breath gas.", quiz: [
+    { id: "elements-5-8", marker: 18, title: "Elements 5–8", bands: UP, img: "images/body/atom.svg", notes: "5 Boron B, about 10.81. 6 Carbon C, about 12.011. 7 Nitrogen N, about 14.007. 8 Oxygen O, about 15.999. Carbon is the skeleton of living chemistry. Oxygen is the breath gas.", quiz: [
       { q: "Carbon's symbol is…", a: ["C", "Ca", "Co", "Cl"], ok: 0 },
       { q: "Oxygen's atomic number is…", a: ["8", "1", "2", "6"], ok: 0 },
       { q: "Nitrogen's symbol is…", a: ["N", "Ni", "Na", "Ne"], ok: 0 },
       { q: "Boron is element…", a: ["5", "15", "50", "2"], ok: 0 }
     ]},
-    { id: "elements-9-12", marker: 18, title: "Elements 9–12", bands: UP, img: "images/body/atom.svg", notes: "9 Fluorine F, about 18.998. 10 Neon Ne, about 20.180. 11 Sodium Na, about 22.990. 12 Magnesium Mg, about 24.305. Sodium's symbol Na remembers an older name, natrium.", quiz: [
+    { id: "elements-9-12", marker: 19, title: "Elements 9–12", bands: UP, img: "images/body/atom.svg", notes: "9 Fluorine F, about 18.998. 10 Neon Ne, about 20.180. 11 Sodium Na, about 22.990. 12 Magnesium Mg, about 24.305. Sodium's symbol Na remembers an older name, natrium.", quiz: [
       { q: "Sodium's symbol is…", a: ["Na", "S", "So", "Sd"], ok: 0 },
       { q: "Neon is element…", a: ["10", "2", "7", "18"], ok: 0 },
       { q: "Magnesium's symbol is…", a: ["Mg", "Mn", "Ma", "M"], ok: 0 },
       { q: "Fluorine's symbol is…", a: ["F", "Fl", "Fn", "Fe"], ok: 0 }
     ]},
-    { id: "acid-base", marker: 19, title: "Acid vs base", bands: UP, img: "images/body/atom.svg", notes: "Acids donate hydrogen ions and often taste sour (lemon). Bases accept them and often feel slippery (soap). pH 7 is near water. Below 7 leans acid. Above 7 leans base. Never taste lab chemicals — food-safe demos only, with a grown-up.", quiz: [
+    { id: "acid-base", marker: 20, title: "Acid vs base", bands: UP, img: "images/body/atom.svg", notes: "Acids donate hydrogen ions and often taste sour (lemon). Bases accept them and often feel slippery (soap). pH 7 is near water. Below 7 leans acid. Above 7 leans base. Never taste lab chemicals — food-safe demos only, with a grown-up.", quiz: [
       { q: "Lemon juice is a household…", a: ["Acid", "Base", "Element 10", "Bone"], ok: 0 },
       { q: "Soap water is a household…", a: ["Base", "Acid", "Noble gas", "Tendon"], ok: 0 },
       { q: "pH near 7 is…", a: ["Close to water", "The hottest fire", "A kind of muscle", "A cloud"], ok: 0 },
       { q: "A vinegar and baking-soda fizz is…", a: ["Acid meeting a base", "A pulley at work", "A fossil forming", "A nerve firing"], ok: 0 }
     ]},
-    { id: "heavens", marker: 20, title: "The heavens declare", bands: ["early", "primary", "upper"], img: "images/creation/heavens.svg", notes: "Psalm 19:1 (KJV): \"The heavens declare the glory of God; and the firmament sheweth his handywork.\" Night sky, sun path, and ordered lights are a public witness. We add no extra commentary from any class script — the verse stands, and we look up.", quiz: [
+    { id: "heavens", marker: 21, title: "The heavens declare", bands: ["early", "primary", "upper"], img: "images/creation/heavens.svg", notes: "Psalm 19:1 (KJV): \"The heavens declare the glory of God; and the firmament sheweth his handywork.\" Night sky, sun path, and ordered lights are a public witness. We add no extra commentary from any class script — the verse stands, and we look up.", quiz: [
       { q: "Psalm 19 says the heavens declare the…", a: ["Glory of God", "Names of clouds only", "Types of muscle", "Periodic table"], ok: 0 },
       { q: "\"Firmament\" in this verse points us to the…", a: ["Sky God spread out", "Stomach", "Inner ear", "Acorn cup"], ok: 0 },
       { q: "A field use of this verse is to…", a: ["Look up and give thanks", "Skip the stars", "Taste chemicals", "Name a bone"], ok: 0 },
       { q: "Handywork here means…", a: ["What God has made", "A human factory only", "A pulley", "A lymph node"], ok: 0 }
     ]},
-    { id: "evolution-relies", marker: 21, title: "What the theory of evolution relies on", bands: UP, img: "images/creation/kinds.svg", notes: "As a story of origins, the theory of evolution relies on the idea that living things arose and changed into new kinds by natural steps alone, without a designer. We do observe variation, and we do observe that some traits help a creature live. Those field facts are not the same as proving that all life made itself. Our journal keeps the observations, and it also keeps the confession that God made living things.", quiz: [
+    { id: "evolution-relies", marker: 22, title: "What the theory of evolution relies on", bands: UP, img: "images/creation/kinds.svg", notes: "As a story of origins, the theory of evolution relies on the idea that living things arose and changed into new kinds by natural steps alone, without a designer. We do observe variation, and we do observe that some traits help a creature live. Those field facts are not the same as proving that all life made itself. Our journal keeps the observations, and it also keeps the confession that God made living things.", quiz: [
       { q: "Origins-evolution, as a story, relies on…", a: ["Unguided natural steps without a designer", "Only the five senses", "Only levers", "Only weather"], ok: 0 },
       { q: "A thing we truly observe in the field is…", a: ["Living things vary", "Rocks singing", "Leaves writing books", "Stars tasting salt"], ok: 0 },
       { q: "Observing variation is…", a: ["Not the same as proving life made itself", "Proof that God is absent", "A kind of bone", "An element symbol"], ok: 0 },
       { q: "This expedition's framing is that…", a: ["God made living things", "Nothing was made", "Machines invented plants", "Rain invented eyes"], ok: 0 }
     ]},
-    { id: "design", marker: 22, title: "Intelligent design", bands: UP, img: "images/creation/eye.svg", notes: "Living things have parts fitted to a purpose: an eye for seeing, a wing for flying, information in a seed for becoming a plant. Intelligent design is the claim that this kind of order points to a mind. Our field journal names that mind: God, the Maker.", quiz: [
+    { id: "design", marker: 23, title: "Intelligent design", bands: UP, img: "images/creation/eye.svg", notes: "Living things have parts fitted to a purpose: an eye for seeing, a wing for flying, information in a seed for becoming a plant. Intelligent design is the claim that this kind of order points to a mind. Our field journal names that mind: God, the Maker.", quiz: [
       { q: "An eye is a clue of design because its parts…", a: ["Fit a purpose: seeing", "Are random junk", "Are clouds", "Are levers only"], ok: 0 },
       { q: "A seed carries…", a: ["Information for a plant", "A tiny pulley only", "A storm", "A planet"], ok: 0 },
       { q: "Intelligent design, in these notes, points to…", a: ["A mind — God the Maker", "A cloud type", "Element 2", "A hinge only"], ok: 0 },
       { q: "Purpose in living parts is…", a: ["What we mean by design", "A kind of rain", "A lymph fluid", "A pH number"], ok: 0 }
     ]},
-    { id: "records", marker: 23, title: "Ways earth's history is preserved", bands: UP, img: "images/creation/fossil.svg", notes: "The world keeps records: fossils in stone, rings in trees, layers of ice, stacked rock, and words people wrote. Fossils show that real plants and animals were buried. Christians study the records with care and read them alongside Scripture. Timescale debates are real; the records themselves are gifts to look at.", quiz: [
+    { id: "records", marker: 24, title: "Ways earth's history is preserved", bands: UP, img: "images/creation/fossil.svg", notes: "The world keeps records: fossils in stone, rings in trees, layers of ice, stacked rock, and words people wrote. Fossils show that real plants and animals were buried. Christians study the records with care and read them alongside Scripture. Timescale debates are real; the records themselves are gifts to look at.", quiz: [
       { q: "A fossil is often…", a: ["A buried leftover of life in stone", "A living bee", "A cloud", "A doorknob"], ok: 0 },
       { q: "Tree rings can preserve a record of…", a: ["Seasons of growth", "The periodic table", "Muscle kinds", "pH of soap"], ok: 0 },
       { q: "Ice layers can trap…", a: ["Old air and dust", "Living oak trees", "Pumping hearts", "Taste buds"], ok: 0 },
       { q: "Written history is also a…", a: ["Record people kept", "Kind of atom", "Simple machine", "Tissue type"], ok: 0 }
     ]},
-    { id: "selection", marker: 24, title: "Natural selection", bands: UP, img: "images/creation/kinds.svg", notes: "Natural selection describes how, in a place, creatures with traits that fit that place may live and have more babies. The trait was already in the kind. Selection can shift a flock toward darker shells; it does not write a new kind from scratch. Adaptation within a kind is part of the living world's built-in bounce.", quiz: [
+    { id: "selection", marker: 25, title: "Natural selection", bands: UP, img: "images/creation/kinds.svg", notes: "Natural selection describes how, in a place, creatures with traits that fit that place may live and have more babies. The trait was already in the kind. Selection can shift a flock toward darker shells; it does not write a new kind from scratch. Adaptation within a kind is part of the living world's built-in bounce.", quiz: [
       { q: "Natural selection works on traits that are…", a: ["Already in the kind", "Invented by rain", "Brought by the moon", "Made of clouds"], ok: 0 },
       { q: "A fair field example is…", a: ["Beetles with better camouflage leaving more young", "A fish becoming an oak", "A rock becoming a robin", "A star becoming a kidney"], ok: 0 },
       { q: "Selection by itself does not…", a: ["Write a brand-new kind from scratch", "Ever change a flock's mix of traits", "Happen in real places", "Matter to farmers"], ok: 0 },
@@ -243,39 +250,46 @@ window.HSScienceData = (function () {
     { id: "weather", bands: KID, text: "Sky: sun, cloud type, wind, wet or dry. One sentence." },
     { id: "thanks", bands: ALL, text: "Write one line of thanks for something in God's design you noticed." },
     { id: "question", bands: SCHOOL, text: "A question you still have. Good journals keep questions." },
-    { id: "element", bands: UP, text: "Name an element you used today without thinking (oxygen you breathed, iron in a pan, sodium in salt)." }
+    { id: "element", bands: MID, text: "Name an element you used today without thinking (oxygen you breathed, iron in a pan, sodium in salt)." }
   ];
 
   const babyPlates = [
     { id: "leaf", name: "Leaf", img: "images/ui/baby-leaf.svg", sound: "leaf", read: "Leaf." },
     { id: "sun", name: "Sun", img: "images/ui/baby-sun.svg", sound: "chirp", read: "Sun." },
-    { id: "rain", name: "Rain", img: "images/ui/baby-rain.svg", sound: "drop", read: "Rain." },
+    { id: "rain", name: "Rain", img: "images/ui/baby-rain.svg", sound: "drop", read: "Rain. A puddle." },
+    { id: "puddle", name: "Puddle", img: "images/habitats/pond.svg", sound: "drop", read: "Puddle." },
+    { id: "cloud", name: "Cloud", img: "images/weather/cloud-cumulus.svg", sound: "leaf", read: "Cloud." },
+    { id: "moon", name: "Moon", img: "images/creation/heavens.svg", sound: "chirp", read: "Moon." },
     { id: "bird", name: "Bird", img: "images/ui/baby-bird.svg", sound: "chirp", read: "Bird." },
-    { id: "fish", name: "Fish", img: "images/ui/baby-fish.svg", sound: "drop", read: "Fish." }
+    { id: "fish", name: "Fish", img: "images/ui/baby-fish.svg", sound: "drop", read: "Fish." },
+    { id: "seed", name: "Seed", img: "images/specimens/bean-seed.svg", sound: "leaf", read: "Seed." },
+    { id: "flower", name: "Flower", img: "images/specimens/dandelion.svg", sound: "chirp", read: "Flower." },
+    { id: "worm", name: "Worm", img: "images/specimens/earthworm.svg", sound: "leaf", read: "Worm." },
+    { id: "stone", name: "Stone", img: "images/habitats/mountain.svg", sound: "drop", read: "Stone." }
   ];
 
   const sorts = [
-    { id: "kind-sort", title: "After their kind", bands: ["preschool", "early", "primary"], prompt: "God made living things to bring forth after their kind. Sort these field finds.", bins: [
+    { id: "kind-sort", title: "After their kind", bands: ["preschool", "early", "primary"], prompt: "God made living things to bring forth after their kind. Sort these field finds.", img: "images/creation/kinds.svg", bins: [
       { id: "bird", name: "Bird" }, { id: "fish", name: "Fish" }, { id: "plant", name: "Plant" }, { id: "creeping", name: "Creeping" }
     ], items: [
-      { id: "robin", name: "Robin", bin: "bird" },
-      { id: "fish", name: "Fish", bin: "fish" },
-      { id: "oak-leaf", name: "Oak", bin: "plant" },
-      { id: "butterfly", name: "Butterfly", bin: "creeping" },
-      { id: "bee", name: "Bee", bin: "creeping" },
-      { id: "pine", name: "Pine", bin: "plant" },
-      { id: "feather", name: "Feather", bin: "bird" }
+      { id: "robin", name: "Robin", bin: "bird", img: "images/specimens/robin.svg" },
+      { id: "fish", name: "Fish", bin: "fish", img: "images/specimens/fish.svg" },
+      { id: "oak-leaf", name: "Oak", bin: "plant", img: "images/specimens/oak-leaf.svg" },
+      { id: "butterfly", name: "Butterfly", bin: "creeping", img: "images/specimens/butterfly.svg" },
+      { id: "bee", name: "Bee", bin: "creeping", img: "images/specimens/bee.svg" },
+      { id: "pine", name: "Pine", bin: "plant", img: "images/specimens/pine.svg" },
+      { id: "feather", name: "Feather", bin: "bird", img: "images/specimens/feather.svg" }
     ]},
-    { id: "sink-sort", title: "Sink or float", bands: ["toddler", "preschool", "early"], prompt: "Guess as a naturalist, then sort.", bins: [
+    { id: "sink-sort", title: "Sink or float", bands: ["toddler", "preschool", "early"], prompt: "Guess as a naturalist, then sort.", img: "images/habitats/pond.svg", bins: [
       { id: "sink", name: "Sinks" }, { id: "float", name: "Floats" }
     ], items: [
-      { id: "pebble", name: "Pebble", bin: "sink" },
-      { id: "twig", name: "Twig", bin: "float" },
-      { id: "shell", name: "Thick shell", bin: "sink" },
-      { id: "feather", name: "Feather", bin: "float" },
-      { id: "apple", name: "Whole apple", bin: "float" }
+      { id: "pebble", name: "Pebble", bin: "sink", img: "images/habitats/mountain.svg" },
+      { id: "twig", name: "Twig", bin: "float", img: "images/specimens/pine.svg" },
+      { id: "shell", name: "Thick shell", bin: "sink", img: "images/specimens/shell.svg" },
+      { id: "feather", name: "Feather", bin: "float", img: "images/specimens/feather.svg" },
+      { id: "puff", name: "Seed puff", bin: "float", img: "images/specimens/dandelion.svg" }
     ]},
-    { id: "acid-sort", title: "Acid or base", bands: UP, prompt: "Household clues only. Never taste a lab jar.", bins: [
+    { id: "acid-sort", title: "Acid or base", bands: UP, prompt: "Household clues only. Never taste a lab jar.", img: "images/body/atom.svg", bins: [
       { id: "acid", name: "Acid" }, { id: "base", name: "Base" }
     ], items: [
       { id: "lemon", name: "Lemon juice", bin: "acid" },
@@ -283,18 +297,18 @@ window.HSScienceData = (function () {
       { id: "soap", name: "Soap water", bin: "base" },
       { id: "soda", name: "Baking soda in water", bin: "base" }
     ]},
-    { id: "plant-parts", title: "Plant parts", bands: ["preschool", "early", "primary"], prompt: "Match the part to its job.", bins: [
+    { id: "plant-parts", title: "Plant parts", bands: ["preschool", "early", "primary"], prompt: "Match the part to its job.", img: "images/specimens/bean-seed.svg", bins: [
       { id: "root", name: "Root" }, { id: "leaf", name: "Leaf" }, { id: "flower", name: "Flower" }, { id: "seed", name: "Seed" }
     ], items: [
-      { id: "drink", name: "Drinks from soil", bin: "root" },
-      { id: "sun", name: "Catches light", bin: "leaf" },
-      { id: "bee", name: "Invites a bee", bin: "flower" },
-      { id: "baby", name: "Holds a baby plant", bin: "seed" }
+      { id: "drink", name: "Drinks from soil", bin: "root", img: "images/habitats/garden.svg" },
+      { id: "sun", name: "Catches light", bin: "leaf", img: "images/specimens/oak-leaf.svg" },
+      { id: "bee", name: "Invites a bee", bin: "flower", img: "images/specimens/dandelion.svg" },
+      { id: "baby", name: "Holds a baby plant", bin: "seed", img: "images/specimens/bean-seed.svg" }
     ]}
   ];
 
   const matches = [
-    { id: "machine-match", title: "Machine to job", bands: SCHOOL, pairs: [
+    { id: "machine-match", title: "Machine to job", bands: SCHOOL, img: "images/machines/lever.svg", pairs: [
       { l: "Lever", r: "Lift a lid with a bar" },
       { l: "Ramp", r: "Walk a load up a slope" },
       { l: "Pulley", r: "Pull down to lift a flag" },
@@ -302,12 +316,12 @@ window.HSScienceData = (function () {
       { l: "Screw", r: "Hold wood with a twist" },
       { l: "Wheel", r: "Roll a load" }
     ]},
-    { id: "sense-match", title: "Sense to organ", bands: ["toddler", "preschool", "early", "primary"], pairs: [
-      { l: "Sight", r: "Eyes" },
-      { l: "Hearing", r: "Ears" },
-      { l: "Smell", r: "Nose" },
-      { l: "Taste", r: "Tongue" },
-      { l: "Touch", r: "Skin" }
+    { id: "sense-match", title: "Sense to organ", bands: ["toddler", "preschool", "early", "primary"], img: "images/creation/eye.svg", pairs: [
+      { l: "Sight", r: "Eyes", lImg: "images/creation/eye.svg", rImg: "images/creation/eye.svg" },
+      { l: "Hearing", r: "Ears", lImg: "images/weather/wind.svg", rImg: "images/weather/wind.svg" },
+      { l: "Smell", r: "Nose", lImg: "images/specimens/dandelion.svg", rImg: "images/specimens/dandelion.svg" },
+      { l: "Taste", r: "Tongue", lImg: "images/body/digestive.svg", rImg: "images/body/digestive.svg" },
+      { l: "Touch", r: "Skin", lImg: "images/specimens/moss.svg", rImg: "images/specimens/moss.svg" }
     ]}
   ];
 

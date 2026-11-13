@@ -17,12 +17,19 @@
 <rect width="600" height="400" fill="#f4ead4"/>
 <rect width="600" height="400" fill="url(#grain)"/>
 
-    <path d="M300 80 C 220 120, 190 220, 250 300 C 200 280, 210 200, 260 150 C 240 240, 280 320, 300 340 C 320 320, 360 240, 340 150 C 390 200, 400 280, 350 300 C 410 220, 380 120, 300 80 Z" fill="#3d5a3a"/>
-    <path d="M300 140 v210" stroke="#241c12" stroke-width="5"/>
-    <path d="M300 210 l 40 20 M300 250 l -36 24 M300 180 l 28 -10" stroke="#241c12" stroke-width="3"/>
-    <ellipse cx="160" cy="200" rx="36" ry="22" fill="#3d5a3a" transform="rotate(-30 160 200)"/>
-    <path d="M160 200 l 50 70" stroke="#241c12" stroke-width="2"/>
-    <ellipse cx="170" cy="290" rx="10" ry="16" fill="#b5682a"/>
+    <path d="M300 56
+      C 268 70, 248 88, 262 112 C 232 118, 214 142, 248 152
+      C 216 164, 208 196, 250 204 C 222 220, 218 252, 258 258
+      C 236 278, 248 312, 286 322
+      C 294 348, 306 348, 314 322
+      C 352 312, 364 278, 342 258 C 382 252, 384 220, 350 204
+      C 392 196, 384 164, 352 152 C 386 142, 368 118, 338 112
+      C 352 88, 332 70, 300 56 Z" fill="#3d5a3a"/>
+    <path d="M300 78 v250" stroke="#241c12" stroke-width="4"/>
+    <path d="M300 120 l -28 12 M300 120 l 28 12 M300 168 l -40 8 M300 168 l 40 8 M300 216 l -36 10 M300 216 l 36 10 M300 264 l -22 14 M300 264 l 22 14" stroke="#241c12" stroke-width="2"/>
+    <ellipse cx="150" cy="292" rx="12" ry="18" fill="#b5682a"/>
+    <path d="M150 274 q 10 -22 0 -34" fill="none" stroke="#241c12" stroke-width="2"/>
+    <path d="M138 286 q 12 4 24 0" fill="none" stroke="#241c12" stroke-width="2"/>
     <text x="28" y="38" font-family="Georgia, serif" font-size="15" letter-spacing="2.4" fill="#241c12">QUERCUS  ·  OAK LEAF</text>
     <text x="28" y="372" font-family="Georgia, serif" font-size="11" letter-spacing="2.4" fill="#241c12">Lobed margin · acorn cup</text>
     

@@ -23,10 +23,13 @@
   w.HSScienceSpeech = {
     supported: supported,
     isOn: function () { return on; },
-    toggle: function () {
-      on = !on;
+    setOn: function (value) {
+      on = !!value;
       if (!on) stop();
       return on;
+    },
+    toggle: function () {
+      return this.setOn(!on);
     },
     speak: speak,
     stop: stop
