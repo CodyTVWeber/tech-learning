@@ -1,0 +1,22 @@
+{
+  "app": "drums",
+  "theme": "drum line shed",
+  "images": [
+    {
+      "file": "shed-chart.png",
+      "width": 640,
+      "height": 360,
+      "alt": "A maple snare on a stand beside a paper chart in a cool practice shed.",
+      "themeNotes": "Picture-wave slot. Runtime chart and drum are drawn in the page. Not a golden-hour scene.",
+      "slot": "shed"
+    },
+    {
+      "file": "shell-stamp.png",
+      "width": 256,
+      "height": 256,
+      "alt": "A small maple snare shell used as a practice stamp.",
+      "themeNotes": "Picture-wave slot for the shed stamp. The page uses a chalk label until a real photo exists.",
+      "slot": "stamp"
+    }
+  ]
+}

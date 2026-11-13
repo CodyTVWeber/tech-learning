@@ -56,6 +56,10 @@
     "singing": [
       { "id": "none", "label": "No singing track" },
       { "id": "family-hymns", "label": "Public-domain hymn tunes and solfege" }
+    ],
+    "drums": [
+      { "id": "none", "label": "No drum line yet" },
+      { "id": "play-along", "label": "Snare play-along" }
     ]
   },
   "stages": [
@@ -79,7 +83,8 @@
         "bible": "family-study",
         "science": "cycle3-topics",
         "art": "studio-basics",
-        "singing": "family-hymns"
+        "singing": "family-hymns",
+        "drums": "play-along"
       }
     },
     {
@@ -102,7 +107,8 @@
         "bible": "family-study",
         "science": "cycle3-topics",
         "art": "studio-basics",
-        "singing": "family-hymns"
+        "singing": "family-hymns",
+        "drums": "play-along"
       }
     },
     {
@@ -125,7 +131,8 @@
         "bible": "family-study",
         "science": "cycle3-topics",
         "art": "studio-basics",
-        "singing": "family-hymns"
+        "singing": "family-hymns",
+        "drums": "play-along"
       }
     },
     {
@@ -148,7 +155,8 @@
         "bible": "family-study",
         "science": "cycle3-topics",
         "art": "studio-basics",
-        "singing": "family-hymns"
+        "singing": "family-hymns",
+        "drums": "play-along"
       }
     },
     {
@@ -171,7 +179,8 @@
         "bible": "family-study",
         "science": "cycle3-topics",
         "art": "studio-basics",
-        "singing": "family-hymns"
+        "singing": "family-hymns",
+        "drums": "none"
       }
     },
     {
@@ -194,7 +203,8 @@
         "bible": "none",
         "science": "cycle3-topics",
         "art": "none",
-        "singing": "none"
+        "singing": "none",
+        "drums": "none"
       }
     }
   ]
