@@ -1,0 +1,34 @@
+{
+  "decks": [
+    {
+      "id": "movement-toddler",
+      "file": "movement-toddler.apkg",
+      "csv": "../movement-src/toddler.csv",
+      "cards": 12
+    },
+    {
+      "id": "movement-preschool",
+      "file": "movement-preschool.apkg",
+      "csv": "../movement-src/preschool.csv",
+      "cards": 12
+    },
+    {
+      "id": "movement-early",
+      "file": "movement-early.apkg",
+      "csv": "../movement-src/early.csv",
+      "cards": 12
+    },
+    {
+      "id": "movement-primary",
+      "file": "movement-primary.apkg",
+      "csv": "../movement-src/primary.csv",
+      "cards": 12
+    },
+    {
+      "id": "movement-upper",
+      "file": "movement-upper.apkg",
+      "csv": "../movement-src/upper.csv",
+      "cards": 12
+    }
+  ]
+}

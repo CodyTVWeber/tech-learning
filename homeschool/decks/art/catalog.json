@@ -1,0 +1,34 @@
+{
+  "decks": [
+    {
+      "id": "art-toddler",
+      "file": "art-toddler.apkg",
+      "csv": "../art-src/toddler.csv",
+      "cards": 8
+    },
+    {
+      "id": "art-preschool",
+      "file": "art-preschool.apkg",
+      "csv": "../art-src/preschool.csv",
+      "cards": 12
+    },
+    {
+      "id": "art-early",
+      "file": "art-early.apkg",
+      "csv": "../art-src/early.csv",
+      "cards": 12
+    },
+    {
+      "id": "art-primary",
+      "file": "art-primary.apkg",
+      "csv": "../art-src/primary.csv",
+      "cards": 20
+    },
+    {
+      "id": "art-upper",
+      "file": "art-upper.apkg",
+      "csv": "../art-src/upper.csv",
+      "cards": 20
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#24363c">
+  <meta name="description" content="Harbor Studio art app: drawing lessons that finish on paper, colors and shapes, a paint canvas, and public-domain masterpieces.">
+  <title>Harbor Studio — Art</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to studio</a>
+  <header class="top">
+    <button type="button" class="icon-btn" id="home-btn-top" aria-label="Studio home">
+      <svg viewBox="0 0 64 64" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M32 10L8 30h6v24h16V38h4v16h16V30h6z"/></svg>
+    </button>
+    <div class="brand">
+      <strong>Harbor Studio</strong>
+      <span>Art · look, mix, then paper</span>
+    </div>
+    <button type="button" class="chip" id="band-chip" hidden>Band</button>
+    <span class="stars" id="star-count" title="Stars collected">0</span>
+    <button type="button" class="icon-btn" id="quiet-btn" aria-label="Toggle sound"></button>
+  </header>
+  <p class="untested-banner" role="note">Untested, awaiting parent test.</p>
+  <main id="view"></main>
+  <div class="toast" id="toast" hidden></div>
+  <script src="content.js"></script>
+  <script src="audio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

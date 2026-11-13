@@ -1,0 +1,79 @@
+{
+  "app": "movement",
+  "subject": "movement",
+  "theme": "Circus parade — join the parade, earn ribbons",
+  "images": [
+    {
+      "file": "img/circus-parade-hero.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "A red and cream circus parade wagon and a white horse on a dusty fairground",
+      "theme": "Hero: wholesome daylight circus parade, sawdust, brass harness, no scary clowns.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/circus-tent.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "Vintage red and cream striped circus tent with a sawdust path",
+      "theme": "Practice tent and peekaboo flap. Ticket booth with prize ribbons.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/circus-ribbons.jpg",
+      "subject": "movement",
+      "size": "1024x1024",
+      "alt": "Prize ribbons in crimson, blue, gold, and green on navy cloth",
+      "theme": "Collectible ribbon board still life.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/circus-bandstand.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "Wooden circus bandstand with a snare drum and tuba",
+      "theme": "Freeze band and tap board. Empty of people.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/circus-horse.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "White parade horse in brass harness standing in sawdust",
+      "theme": "Follow-the-leader horse prance cue.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/circus-elephant.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "Calm elephant walking a sawdust circus track",
+      "theme": "Step-counter and elephant-swing move. Documentary, not cartoon.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/lap-quilt.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "Cream and crimson lap quilt with wooden circus blocks",
+      "theme": "Baby and toddler lap-play. No faces.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/freeze-ring.jpg",
+      "subject": "movement",
+      "size": "1152x864",
+      "alt": "Empty spotlighted circus ring of packed sawdust",
+      "theme": "Freeze band stage. Statue moment.",
+      "status": "generated-original"
+    },
+    {
+      "file": "img/noise.svg",
+      "subject": "movement",
+      "size": "120x120",
+      "alt": "Fine grain overlay",
+      "theme": "Letterpress paper tooth on the navy ground.",
+      "status": "placeholder-texture"
+    }
+  ]
+}
