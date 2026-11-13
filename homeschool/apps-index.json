@@ -1,7 +1,9 @@
 {
   "apps": [
+    "art",
     "bible",
     "math",
+    "movement",
     "reading",
     "singing"
   ],

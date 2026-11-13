@@ -1,0 +1,62 @@
+{
+  "app": "art",
+  "theme": "artist's harbor studio",
+  "images": [
+    {
+      "file": "studio-hero.png",
+      "width": 1024,
+      "height": 420,
+      "alt": "Watercolor studio inside a weathered harbor boathouse",
+      "themeNotes": "Hero: north-window studio, easel, copper pans, boats outside.",
+      "slot": "hero"
+    },
+    {
+      "file": "easel.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Wooden field easel on weathered pier planks",
+      "themeNotes": "Pier lessons and studio challenges.",
+      "slot": "easel"
+    },
+    {
+      "file": "palette.png",
+      "width": 256,
+      "height": 256,
+      "alt": "Worn wooden palette with oil paint dabs and a brush",
+      "themeNotes": "Mix pan and open canvas.",
+      "slot": "palette"
+    },
+    {
+      "file": "looking-wall.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Studio wall of frames, tacks, and study cards",
+      "themeNotes": "Looking Wall chrome. Famous works live in images/masters/.",
+      "slot": "looking"
+    },
+    {
+      "file": "still-life.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Apple, cobalt cup, napkin, and seashell on a pine table",
+      "themeNotes": "Still-life reference for drawing lessons.",
+      "slot": "still-life"
+    },
+    {
+      "file": "color-boats.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Red, yellow, and blue wooden toy boats on harbor planks",
+      "themeNotes": "Color dock — primaries in the real world.",
+      "slot": "boats"
+    },
+    {
+      "file": "shapes.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Wooden circle, square, triangle, rectangle, and oval blocks",
+      "themeNotes": "Shape harbor teaching still life.",
+      "slot": "shapes"
+    }
+  ]
+}

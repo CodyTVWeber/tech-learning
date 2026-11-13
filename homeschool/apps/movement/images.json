@@ -1,0 +1,70 @@
+{
+  "app": "movement",
+  "theme": "circus parade",
+  "images": [
+    {
+      "file": "parade-hero.png",
+      "width": 1024,
+      "height": 420,
+      "alt": "A circus parade wagon and horse on a dusty fairground",
+      "themeNotes": "Hero. Wholesome daylight circus parade, sawdust, brass harness, no scary clowns.",
+      "slot": "hero"
+    },
+    {
+      "file": "tent.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Vintage red and cream striped circus tent",
+      "themeNotes": "Practice tent and peekaboo flap.",
+      "slot": "tent"
+    },
+    {
+      "file": "ribbons.png",
+      "width": 256,
+      "height": 256,
+      "alt": "Prize ribbons in crimson, blue, gold, and green",
+      "themeNotes": "Collectible ribbon board.",
+      "slot": "ribbons"
+    },
+    {
+      "file": "bandstand.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Wooden circus bandstand with a snare drum and tuba",
+      "themeNotes": "Freeze band and tap board. Empty of people.",
+      "slot": "bandstand"
+    },
+    {
+      "file": "horse.png",
+      "width": 320,
+      "height": 240,
+      "alt": "White parade horse in brass harness",
+      "themeNotes": "Follow-the-leader horse prance cue.",
+      "slot": "horse"
+    },
+    {
+      "file": "elephant.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Calm elephant walking a sawdust circus track",
+      "themeNotes": "Step-counter and elephant-swing move.",
+      "slot": "elephant"
+    },
+    {
+      "file": "quilt.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Cream and crimson lap quilt with wooden circus blocks",
+      "themeNotes": "Baby and toddler lap-play. No faces.",
+      "slot": "quilt"
+    },
+    {
+      "file": "ring.png",
+      "width": 320,
+      "height": 240,
+      "alt": "Empty spotlighted circus ring of packed sawdust",
+      "themeNotes": "Freeze band stage.",
+      "slot": "ring"
+    }
+  ]
+}

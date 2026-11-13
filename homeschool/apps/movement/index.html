@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8e1d1a">
+  <meta name="description" content="Circus Parade movement app: follow-the-leader, freeze band, step counting, and lap rhymes. Offline homeschool practice.">
+  <title>Circus Parade — Movement</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#view">Skip to activity</a>
+  <header class="top">
+    <button type="button" class="icon-btn" id="home-btn-top" aria-label="Parade home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path fill="currentColor" d="M32 10L8 30h6v24h16V38h4v16h16V30h6z"/></svg>
+    </button>
+    <div class="brand">
+      <strong>Circus Parade</strong>
+      <span>Movement · ribbons, not grades</span>
+    </div>
+    <button type="button" class="chip" id="band-chip" hidden>Band</button>
+    <span class="stars" id="star-count" title="Stars collected">0</span>
+    <button type="button" class="icon-btn" id="quiet-btn" aria-label="Toggle sound"></button>
+  </header>
+  <p class="untested-banner" role="note">Untested, awaiting parent test.</p>
+  <main id="view"></main>
+  <div class="toast" id="toast" hidden></div>
+  <script src="content.js"></script>
+  <script src="audio.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
