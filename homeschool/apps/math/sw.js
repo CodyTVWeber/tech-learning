@@ -1,4 +1,4 @@
-const CACHE = "hs-math-v4";
+const CACHE = "hs-math-v5";
 const BASE = new URL("./", self.location);
 
 self.addEventListener("install", function (event) {

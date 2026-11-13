@@ -6,7 +6,7 @@ Theme: pirate treasure voyage (deep water, rope, brass, island chart, crew, ches
 
 | Band | Chart |
 | --- | --- |
-| baby | Care voyage: tap-and-hear coins 1–3, peek chest, rock the hull |
+| baby | Not a lesson track. Homes with math left off do not precache it. `?band=baby` shows a short note, not a chart. |
 | toddler | Counting 1–5 (tap each coin), more/fewer/same, one more/one less, match number to coins |
 | preschool | Ten-frames to 10, count-on add-to-10, before/after, shapes, skip 2s |
 | early | Add/sub facts, tens-crates (bundle ten ones), regrouping within 100, skip 2s/5s/10s, cents, hour clocks, length, rectangles, word problems, 3×4 arrays |

@@ -281,38 +281,110 @@
     return (
       '<div class="' +
       esc(cls || "voyage-porthole") +
-      '" aria-hidden="true"><div class="voyage-crew-face" style="--hat:' +
+      '" aria-hidden="true"><svg class="voyage-crew-svg" viewBox="0 0 64 64">' +
+      '<circle cx="32" cy="36" r="16" fill="#f3d2a8" stroke="#1a120c" stroke-width="2"/>' +
+      '<circle cx="26" cy="34" r="2.4" fill="#1a120c"/>' +
+      '<circle cx="38" cy="34" r="2.4" fill="#1a120c"/>' +
+      '<path d="M26 42c2.4 2.6 9.6 2.6 12 0" fill="none" stroke="#1a120c" stroke-width="2" stroke-linecap="round"/>' +
+      '<path d="M14 28h36l-5-14H19z" fill="' +
       c.hat +
-      ";--scarf:" +
+      '" stroke="#1a120c" stroke-width="2"/>' +
+      '<rect x="18" y="48" width="28" height="10" rx="3" fill="' +
       c.scarf +
-      '"><span class="hat"></span><span class="head"></span><span class="scarf"></span></div></div>'
+      '" stroke="#1a120c" stroke-width="2"/>' +
+      "</svg></div>"
     );
   }
-  function artIsland(slot, cls) {
-    if (slot === "hero") return artShip(cls);
+  function isleScene(id) {
+    const scenes = {
+      count: '<rect x="36" y="28" width="248" height="62" rx="8" fill="#f7f1dc" stroke="#1a120c" stroke-width="3"/>' + dots(48, 40, 5, 2, 46, 28),
+      tide: '<path d="M20 78c30-16 50 16 80 0s50 16 80 0 50 16 80 0 40 8 60 0" fill="none" stroke="#f3e2c4" stroke-width="6"/>' + coin(150, 48),
+      facts: '<rect x="24" y="70" width="272" height="14" fill="#6b3a1f" stroke="#1a120c"/>' + coin(70, 40) + coin(118, 40) + '<path d="M170 36h70" stroke="#8a2a2a" stroke-width="8"/>' + coin(250, 40),
+      regroup: '<rect x="36" y="34" width="70" height="54" fill="#6b3a1f" stroke="#1a120c" stroke-width="3"/>' + '<path d="M48 40l46 42M94 40L48 82" stroke="#e8c56a" stroke-width="4"/>' + coin(150, 48) + coin(198, 56) + coin(246, 44),
+      place: crate(40, 30) + crate(120, 30) + crate(200, 30),
+      match: coin(40, 48) + coin(88, 48) + coin(136, 48) + '<rect x="190" y="30" width="90" height="58" rx="6" fill="#f7f1dc" stroke="#1a120c" stroke-width="3"/>' + dots(204, 42, 3, 2, 22, 20),
+      skip: buoy(70, 70, 18) + buoy(150, 52, 26) + buoy(240, 34, 34),
+      money: '<ellipse cx="160" cy="64" rx="70" ry="36" fill="#7a3a4a" stroke="#1a120c" stroke-width="3"/>' + '<rect x="118" y="40" width="84" height="16" rx="6" fill="#c49a3c" stroke="#1a120c"/>' + coin(160, 72),
+      time: '<circle cx="160" cy="58" r="40" fill="#f7f1dc" stroke="#1a120c" stroke-width="4"/>' + '<path d="M160 58V30M160 58l22 10" stroke="#1a120c" stroke-width="4" stroke-linecap="round"/>',
+      measure: '<path d="M24 70h272" stroke="#c49a3c" stroke-width="8"/>' + '<path d="M24 58v24M96 62v16M168 58v24M240 62v16M296 58v24" stroke="#1a120c" stroke-width="3"/>',
+      shape: '<polygon points="70,90 120,28 170,90" fill="#3d6b4f" stroke="#1a120c" stroke-width="3"/>' + '<rect x="200" y="40" width="70" height="50" fill="#1a4a6b" stroke="#1a120c" stroke-width="3"/>',
+      story: '<path d="M70 28h80v64H70z" fill="#f3e2c4" stroke="#1a120c" stroke-width="3"/>' + '<path d="M150 28h80v64h-80z" fill="#ecd6b0" stroke="#1a120c" stroke-width="3"/>' + '<path d="M86 44h48M86 58h48M166 44h48M166 58h40" stroke="#6b3a1f" stroke-width="3"/>',
+      rows: dots(50, 36, 4, 3, 56, 24),
+      times: '<rect x="70" y="22" width="180" height="78" fill="#0e4a57" stroke="#f3e2c4" stroke-width="3"/>' + dots(86, 32, 3, 3, 52, 22),
+      share: hull(40) + hull(180),
+      frac: '<rect x="40" y="40" width="240" height="40" fill="#ecd6b0" stroke="#1a120c" stroke-width="3"/>' + '<rect x="40" y="40" width="120" height="40" fill="#c49a3c" stroke="#1a120c" stroke-width="3"/>',
+      dec: '<text x="70" y="78" font-size="48" font-family="Trebuchet MS,sans-serif" fill="#f7f1dc" stroke="#1a120c" stroke-width="2">0</text>' + '<circle cx="160" cy="70" r="8" fill="#c49a3c" stroke="#1a120c"/>' + '<text x="190" y="78" font-size="48" font-family="Trebuchet MS,sans-serif" fill="#e8c56a" stroke="#1a120c" stroke-width="2">3</text>',
+      long: '<path d="M90 24h160M90 24v70" fill="none" stroke="#f3e2c4" stroke-width="6"/>' + '<text x="110" y="72" font-size="28" font-family="Trebuchet MS,sans-serif" fill="#f7f1dc">145</text>',
+      mix: '<rect x="48" y="22" width="100" height="70" fill="#f7f1dc" stroke="#1a120c" stroke-width="3"/>' + '<rect x="172" y="22" width="100" height="70" fill="#e8c56a" stroke="#1a120c" stroke-width="3"/>',
+      laws: '<rect x="36" y="30" width="100" height="60" fill="#3d6b4f" stroke="#1a120c"/>' + dots(48, 38, 3, 2, 28, 24) + '<rect x="180" y="24" width="70" height="78" fill="#1a4a6b" stroke="#1a120c"/>' + dots(192, 32, 2, 3, 28, 22),
+      bond: '<rect x="50" y="28" width="220" height="64" rx="6" fill="#f7f1dc" stroke="#6b3a1f" stroke-width="4"/>' + dots(66, 38, 5, 2, 40, 28),
+      sense: coin(70, 62) + coin(108, 50) + coin(146, 66) + coin(250, 58),
+      next: coin(90, 56) + '<path d="M160 40v36M142 58h36" stroke="#f3e2c4" stroke-width="8"/>' + coin(230, 56),
+      peek: '<rect x="90" y="40" width="140" height="52" fill="#6b3a1f" stroke="#1a120c" stroke-width="3"/>' + '<path d="M90 40h140l-16-16H106z" fill="#c49a3c" stroke="#1a120c"/>',
+      rock: '<path d="M40 80h240l-30 16H70z" fill="#6b3a1f" stroke="#1a120c"/>' + '<path d="M160 20l50 48h-50z" fill="#f3e2c4" stroke="#1a120c"/>',
+    };
+    return scenes[id] || scenes.count;
+    function coin(x, y) {
+      return '<circle cx="' + x + '" cy="' + y + '" r="16" fill="#e8c56a" stroke="#1a120c" stroke-width="3"/>';
+    }
+    function dots(x, y, cols, rows, dx, dy) {
+      let s = "";
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) s += coin(x + c * dx, y + r * dy);
+      }
+      return s;
+    }
+    function crate(x, y) {
+      return '<rect x="' + x + '" y="' + y + '" width="64" height="52" fill="#8a5a2b" stroke="#1a120c" stroke-width="3"/>' + '<path d="M' + x + " " + (y + 26) + "h64M" + (x + 32) + " " + y + "v52\" stroke=\"#e8c56a\" stroke-width=\"3\"/>";
+    }
+    function buoy(x, y, r) {
+      return '<circle cx="' + x + '" cy="' + y + '" r="' + r + '" fill="#c4493c" stroke="#1a120c" stroke-width="3"/>' + '<rect x="' + (x - 3) + '" y="' + (y + r) + '" width="6" height="16" fill="#1a120c"/>';
+    }
+    function hull(x) {
+      return '<path d="M' + x + " 78h120l-16 16H" + (x + 16) + 'z" fill="#6b3a1f" stroke="#1a120c"/>' + '<path d="M' + (x + 50) + " 30l28 40h-28z\" fill=\"#f3e2c4\" stroke=\"#1a120c\"/>";
+    }
+  }
+  function artIsland(slot, cls, opts) {
+    opts = opts || {};
+    if (slot === "hero" || slot === "cabin" || slot === "paper") return artShip(cls);
     if (slot === "chest") return artChest(false, cls);
     if (slot === "chest-open") return artChest(true, cls);
     if (slot && slot.indexOf("crew-") === 0) return artCrew(slot.slice(5), cls);
-    if (slot === "cabin" || slot === "paper") return artShip(cls);
+    const id = opts.id || "";
+    const stowed = !!opts.stowed;
+    const crew = opts.crew || "pip";
+    const flag = stowed
+      ? '<polygon points="236,10 236,52 292,30" fill="#c49a3c" stroke="#1a120c" stroke-width="2"/>' +
+        '<rect x="232" y="8" width="5" height="78" fill="#1a120c"/>' +
+        '<rect x="168" y="72" width="40" height="26" rx="2" fill="#6b3a1f" stroke="#f3e2c4" stroke-width="2"/>' +
+        '<path d="M168 72h40l-6-10h-28z" fill="#e8c56a" stroke="#1a120c"/>' +
+        '<circle cx="28" cy="28" r="16" fill="#f3d2a8" stroke="#1a120c" stroke-width="2"/>' +
+        '<circle cx="23" cy="26" r="2" fill="#1a120c"/><circle cx="33" cy="26" r="2" fill="#1a120c"/>' +
+        '<path d="M22 33c2 2 8 2 10 0" fill="none" stroke="#1a120c" stroke-width="2"/>'
+      : "";
     return (
       '<div class="voyage-isle ' +
       esc(cls || "") +
-      '" data-slot="' +
-      esc(slot || "") +
-      '" aria-hidden="true"><span class="isle-sea"></span><span class="isle-land"></span><span class="isle-palm"></span>' +
-      (ISLE_EXTRAS[slot] || "") +
-      "</div>"
+      '" data-isle="' +
+      esc(id || slot || "") +
+      '" aria-hidden="true"><svg viewBox="0 0 320 112" preserveAspectRatio="xMidYMid slice">' +
+      '<rect width="320" height="112" fill="#165566"/>' +
+      '<path d="M0 78c40-18 70 10 110 0s70 12 110 0 60 8 100 0v34H0z" fill="#0e4a57"/>' +
+      '<ellipse cx="160" cy="86" rx="120" ry="22" fill="#e2c48a" stroke="#c49a3c" stroke-width="3"/>' +
+      isleScene(id || slot || "") +
+      flag +
+      "</svg></div>"
     );
   }
-  function coinsHtml(n, tap, selected) {
-    n = Math.max(0, Math.min(20, Number(n) || 0));
+  function coinsHtml(n, tap, selected, gone) {
+    n = Math.max(0, Math.min(24, Number(n) || 0));
     if (!n) return "";
     let h = '<div class="voyage-coins' + (tap ? " is-tap" : "") + '">';
     for (let i = 0; i < n; i++) {
       if (tap) {
         h +=
           '<button type="button" class="voyage-coin-btn' +
-          (selected && selected[i] ? " is-tapped" : "") +
+          (selected && selected[i] ? (gone ? " is-gone" : " is-tapped") : "") +
           '" data-coin="' +
           i +
           '" aria-label="Coin ' +
@@ -372,8 +444,24 @@
     }
     return '<div class="voyage-frac" style="grid-template-columns:repeat(' + parts + ',1fr)">' + bars + "</div>";
   }
-  function padHtml(entry) {
-    const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "⌫", "0", "OK"];
+  function answersMatch(entry, expect) {
+    const e = String(entry == null ? "" : entry).trim();
+    if (!e) return false;
+    const x = String(expect == null ? "" : expect)
+      .replace(/\$/g, "")
+      .replace(/%/g, "")
+      .trim();
+    if (e === x) return true;
+    const en = Number(e);
+    const xn = Number(x);
+    return x !== "" && !isNaN(en) && !isNaN(xn) && en === xn;
+  }
+  function padHtml(entry, expect) {
+    const exp = String(expect == null ? "" : expect);
+    const dot = exp.indexOf(".") !== -1 || exp.indexOf("$") !== -1;
+    const keys = dot
+      ? ["1", "2", "3", "4", "5", "6", "7", "8", "9", ".", "0", "⌫", "OK"]
+      : ["1", "2", "3", "4", "5", "6", "7", "8", "9", "⌫", "0", "OK"];
     return (
       '<div class="voyage-entry" id="math-entry">' +
       esc(entry || " ") +
@@ -680,6 +768,25 @@
       renderPicker(host);
       return;
     }
+    if (band === "baby") {
+      document.documentElement.dataset.mathBand = band;
+      host.innerHTML =
+        '<div class="voyage-cabin voyage-note"><h1>Treasure Voyage</h1>' +
+        "<p>Care time is not a lesson track. A home that leaves math off does not keep this chart on the device. Count coins together, with a grown-up, when you want. There is no voyage to sail here.</p>" +
+        '<button type="button" id="math-reband">Choose another band</button></div>';
+      const re = document.getElementById("math-reband");
+      if (re) {
+        re.onclick = function () {
+          try {
+            localStorage.removeItem("hs.band");
+          } catch (e) {}
+          const next = new URL(location.href);
+          next.searchParams.delete("band");
+          location.href = next.href;
+        };
+      }
+      return;
+    }
     writeBand(band);
     document.documentElement.dataset.mathBand = band;
 
@@ -724,11 +831,12 @@
     }
     saveProgress();
 
-    const art = function (slot, cls) {
-      return artIsland(slot, cls);
+    const art = function (slot, cls, opts) {
+      return artIsland(slot, cls, opts);
     };
 
     let screen = "map";
+    let justStowed = null;
     let island = null;
     let items = [];
     let i = 0;
@@ -787,6 +895,14 @@
         steps: [],
         meta: null,
         partsOn: {},
+        added: 0,
+        extra: 0,
+        gone: 0,
+        brought: 0,
+        given: 0,
+        zeroed: false,
+        cols: [],
+        sidesOn: {},
       };
       if (item.kind === "longdiv") work.steps = longDivSteps(item.dividend, item.divisor);
       if (item.kind === "longmul") work.steps = longMulSteps(item.a, item.b);
@@ -794,35 +910,99 @@
         work.meta = decimalSteps(item.addends || []);
         work.steps = work.meta.steps;
       }
-      if (item.kind === "fraction") work.partsOn = {};
+      if (item.kind === "stepskey") work.steps = item.steps || [];
+      if (item.kind === "product" || item.kind === "skip" || item.kind === "place" || item.kind === "money" || item.kind === "clock") {
+        work.steps = [{ prompt: item.kind === "skip" ? "Type the next number." : "Type it. The last digit stows the crate.", expect: item.answer }];
+      }
+      if (item.kind === "deal") {
+        const d = Number(item.divisor) || 0;
+        work.cols = [];
+        for (let c = 0; c < d; c++) work.cols.push(0);
+      }
+      if (item.kind === "fraction" || item.kind === "wholes") work.partsOn = {};
+    }
+    function marks(map) {
+      return Object.keys(map || {}).filter(function (k) {
+        return map[k];
+      }).length;
     }
     function workReady(item) {
-      const kind = item.kind;
-      if (kind === "tenframe") {
-        return Object.keys(tapped).filter(function (k) {
-          return tapped[k];
-        }).length === Number(item.fill || item.count || 0);
+      return gestureDone(item);
+    }
+    function gestureDone(item) {
+      const kind = item.kind || "choice";
+      if (kind === "tenframe" && item.ask === "empty") {
+        const empties = 10 - Number(item.fill || 0);
+        return empties > 0 && marks(tapped) === empties;
+      }
+      if (kind === "tenframe" || kind === "tenths") {
+        return marks(tapped) === Number(item.fill || item.count || 0) && Number(item.fill || item.count || 0) > 0;
       }
       if (kind === "array") {
         const need = (Number(item.rows) || 0) * (Number(item.cols) || 0);
-        return Object.keys(tapped).filter(function (k) {
-          return tapped[k];
-        }).length >= need;
+        return need > 0 && marks(tapped) === need;
       }
-      if (kind === "bundle") return work.ones < 10;
-      if (kind === "counton") {
-        return Object.keys(tapped).length >= Number(item.add || item.right || 0);
+      if (kind === "arraypair") {
+        const n = (Number(item.rows) || 0) * (Number(item.cols) || 0);
+        let left = 0;
+        let right = 0;
+        Object.keys(tapped).forEach(function (k) {
+          if (!tapped[k]) return;
+          if (k.charAt(0) === "L") left += 1;
+          if (k.charAt(0) === "R") right += 1;
+        });
+        return n > 0 && left === n && right === n;
       }
-      if (kind === "fraction") {
-        return Object.keys(work.partsOn || {}).length >= Number(item.filled || 0);
-      }
-      if (kind === "decimal" || kind === "longdiv" || kind === "longmul") {
-        return work.step >= (work.steps || []).length;
-      }
-      if (kind === "tap") return Object.keys(tapped).length >= (Number(item.count) || 1);
+      if (kind === "bundle") return work.ones < 10 && work.tens * 10 + work.ones === Number(item.answer);
+      if (kind === "counton") return marks(tapped) === Number(item.add || item.right || 0) && Number(item.add || item.right || 0) > 0;
+      if (kind === "fraction" || kind === "wholes") return marks(work.partsOn) === Number(item.filled || 0) && Number(item.filled || 0) > 0;
+      if (kind === "selectn") return marks(tapped) === Number(item.need || 0) && Number(item.need || 0) > 0;
+      if (kind === "tap") return marks(tapped) >= (Number(item.count) || 1);
+      if (kind === "takeaway") return marks(tapped) === Number(item.take || 0) && Number(item.take || 0) > 0;
+      if (kind === "maketen") return (work.added || 0) === Number(item.add || 0) && Number(item.add || 0) > 0;
+      if (kind === "moreone") return !!work.extra;
+      if (kind === "lessone") return !!work.gone;
       if (kind === "peek") return peeked;
       if (kind === "rock") return rocks >= (Number(item.count) || 3);
-      return true;
+      if (kind === "deal") {
+        if (Number(item.dividend) === 0) return !!work.zeroed;
+        const div = Number(item.divisor) || 1;
+        const cols = work.cols || [];
+        if (cols.length !== div) return false;
+        const sum = cols.reduce(function (s, n) {
+          return s + n;
+        }, 0);
+        if (sum !== Number(item.dividend)) return false;
+        const each = Number(item.answer);
+        return cols.every(function (n) {
+          return n === each;
+        });
+      }
+      if (kind === "regroup") {
+        const add = Number(item.add) || 0;
+        const take = Number(item.take) || 0;
+        return (
+          work.ones < 10 &&
+          (work.brought || 0) === add &&
+          (work.given || 0) === take &&
+          work.tens * 10 + work.ones === Number(item.answer)
+        );
+      }
+      if (kind === "perimeter") return (item.sides || []).length > 0 && marks(work.sidesOn) === item.sides.length;
+      if (
+        kind === "decimal" ||
+        kind === "longdiv" ||
+        kind === "longmul" ||
+        kind === "product" ||
+        kind === "stepskey" ||
+        kind === "skip" ||
+        kind === "place" ||
+        kind === "money" ||
+        kind === "clock"
+      ) {
+        return (work.steps || []).length > 0 && work.step >= work.steps.length;
+      }
+      return false;
     }
     function gatherItems() {
       if (island.drill && tableN != null) {
@@ -915,6 +1095,17 @@
           '<div class="voyage-crew-row" aria-label="Crew">' +
           crewHtml +
           "</div>" +
+          (justStowed
+            ? (function () {
+                const hailed = data.islands.find(function (x) {
+                  return x.id === justStowed;
+                });
+                const member = hailed && CREW[hailed.crew];
+                return member
+                  ? '<p class="voyage-hail">' + esc(member.name) + " is aboard. The chest is on the chart.</p>"
+                  : "";
+              })()
+            : "") +
           '<div class="voyage-diff" role="group" aria-label="Difficulty">' +
           ["easier", "steady", "harder"]
             .map(function (d) {
@@ -943,7 +1134,7 @@
                 '" data-island="' +
                 esc(isl.id) +
                 '">' +
-                art(isl.slot, "voyage-island-pic") +
+                art(isl.slot, "voyage-island-pic", { id: isl.id, stowed: !!stowed, crew: isl.crew }) +
                 '<span class="voyage-island-label">' +
                 (idx + 1) +
                 ". " +
@@ -987,16 +1178,13 @@
       tableN = null;
       i = 0;
       resetItemState();
-      const prelude = preludeItems(island);
-      if (prelude.length) screen = "lesson";
-      else if (island.drill) screen = "tables";
-      else screen = "lesson";
+      screen = "lesson";
       if (window.Ship) Ship.splash();
       render();
     }
 
     function startPlay() {
-      if (island.drill && tableN == null && !preludeItems(island).length) {
+      if (island.drill && tableN == null) {
         screen = "tables";
         render();
         return;
@@ -1073,7 +1261,7 @@
 
     function renderLesson() {
       host.innerHTML = chrome(
-        art(island.slot, "voyage-hero-art") +
+        art(island.slot, "voyage-hero-art", { id: island.id, crew: island.crew }) +
           '<div class="voyage-cabin">' +
           '<p class="voyage-kicker">' +
           esc(island.label) +
@@ -1100,39 +1288,40 @@
       speak(island.technique.audioText);
     }
 
-    function arrayHtml(item, fill) {
-      const rows = Number(item.rows) || 0;
-      const cols = Number(item.cols) || 0;
-      const total = Math.min(36, rows * cols);
-      let grid =
-        '<div class="voyage-array" style="--cols:' +
-        cols +
-        '">';
+    function arrayHtml(item, fill, prefix, rows, cols) {
+      rows = rows || Number(item.rows) || 0;
+      cols = cols || Number(item.cols) || 0;
+      prefix = prefix || "";
+      const total = Math.min(48, rows * cols);
+      let grid = '<div class="voyage-array" style="--cols:' + cols + '">';
       for (let k = 0; k < total; k++) {
-        const on = !fill || tapped[k];
+        const key = prefix + k;
         if (fill) {
           grid +=
             '<button type="button" class="voyage-cell' +
-            (tapped[k] ? " is-on" : "") +
+            (tapped[key] ? " is-on" : "") +
             '" data-cell="' +
-            k +
-            '" aria-label="Row ' +
-            (Math.floor(k / cols) + 1) +
-            " coin " +
-            ((k % cols) + 1) +
+            key +
+            '" aria-label="Cell ' +
+            (k + 1) +
             '">' +
-            (tapped[k] ? coinSvg() : "") +
+            (tapped[key] ? coinSvg() : "") +
             "</button>";
         } else {
           grid += '<div class="voyage-cell is-on">' + coinSvg() + "</div>";
         }
       }
-      grid += "</div>";
-      return grid;
+      return grid + "</div>";
     }
-    function tenframeHtml() {
+    function tenframeHtml(item) {
+      const ask = item && item.ask;
+      const preset = ask === "empty" ? Number(item.fill || item.count || 0) : 0;
       let h = '<div class="voyage-tenframe">';
       for (let k = 0; k < 10; k++) {
+        if (preset && k < preset) {
+          h += '<button type="button" class="is-on is-lock" disabled aria-label="Filled cell">' + coinSvg() + "</button>";
+          continue;
+        }
         h +=
           '<button type="button" class="' +
           (tapped[k] ? "is-on" : "") +
@@ -1190,6 +1379,146 @@
         coinsHtml(add, true, tapped)
       );
     }
+    function stepPad() {
+      const step = (work.steps || [])[work.step];
+      if (!step) return "";
+      return "<p>" + esc(step.prompt) + "</p>" + padHtml(work.entry, step.expect);
+    }
+    function shapeSvg(name) {
+      if (name === "circle")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><circle cx="40" cy="32" r="22" fill="#7ec8d4" stroke="#1a120c" stroke-width="3"/></svg>';
+      if (name === "square")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><rect x="16" y="10" width="48" height="44" fill="#e8c56a" stroke="#1a120c" stroke-width="3"/></svg>';
+      if (name === "rectangle")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><rect x="8" y="16" width="64" height="32" fill="#c49a3c" stroke="#1a120c" stroke-width="3"/></svg>';
+      if (name === "triangle")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><polygon points="40,8 72,56 8,56" fill="#3d6b4f" stroke="#1a120c" stroke-width="3"/></svg>';
+      if (name === "foot")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><rect x="10" y="28" width="60" height="10" fill="#6b3a1f" stroke="#1a120c"/></svg>';
+      if (name === "yard")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><rect x="4" y="26" width="72" height="12" fill="#1a4a6b" stroke="#1a120c"/><path d="M8 26v12M28 26v12M48 26v12M68 26v12" stroke="#f3e2c4"/></svg>';
+      if (name === "mile")
+        return '<svg viewBox="0 0 80 64" aria-hidden="true"><path d="M4 50h72" stroke="#c49a3c" stroke-width="4"/><path d="M6 50l10-22 10 22 10-30 10 30 10-16 12 16" fill="none" stroke="#3d6b4f" stroke-width="3"/></svg>';
+      return '<svg viewBox="0 0 80 64" aria-hidden="true"><circle cx="40" cy="32" r="16" fill="#e8c56a" stroke="#1a120c" stroke-width="3"/></svg>';
+    }
+    function partsHtml(parts) {
+      let bars = "";
+      for (let k = 0; k < parts; k++) {
+        bars +=
+          '<button type="button" class="' +
+          (work.partsOn[k] ? "is-filled" : "") +
+          '" data-part="' +
+          k +
+          '"></button>';
+      }
+      return '<div class="voyage-frac" style="grid-template-columns:repeat(' + parts + ',1fr)">' + bars + "</div>";
+    }
+    function wholesHtml(item) {
+      const parts = Number(item.parts) || 2;
+      const need = Number(item.filled) || 0;
+      const bars = Math.max(1, Math.ceil(need / parts));
+      let html = "";
+      for (let b = 0; b < bars; b++) {
+        html += '<div class="voyage-frac" style="grid-template-columns:repeat(' + parts + ',1fr)">';
+        for (let k = 0; k < parts; k++) {
+          const idx = b * parts + k;
+          html +=
+            '<button type="button" class="' +
+            (work.partsOn[idx] ? "is-filled" : "") +
+            '" data-part="' +
+            idx +
+            '"></button>';
+        }
+        html += "</div>";
+      }
+      return html;
+    }
+    function tenthStrip(n) {
+      return (
+        '<div class="voyage-dec voyage-tenth-strip" style="--dcols:2"><span>0</span><span class="pt">.</span><span class="is-hot">' +
+        n +
+        "</span></div>"
+      );
+    }
+    function maketenHtml(item) {
+      const hold = Number(item.hold) || 0;
+      const add = Number(item.add) || 0;
+      const added = work.added || 0;
+      const room = Math.max(0, 10 - hold);
+      let h = '<div class="voyage-tenframe">';
+      for (let k = 0; k < 10; k++) {
+        if (k < hold) h += '<button type="button" class="is-on is-lock" disabled aria-label="Held coin">' + coinSvg() + "</button>";
+        else if (k < hold + Math.min(added, room)) h += '<button type="button" class="is-on" disabled aria-label="Added coin">' + coinSvg() + "</button>";
+        else if (added < add && k < 10) h += '<button type="button" data-make="1" aria-label="Add a coin"></button>';
+        else h += '<button type="button" disabled aria-hidden="true"></button>';
+      }
+      h += "</div>";
+      const overflow = Math.max(0, add - room);
+      if (overflow) {
+        h += '<div class="voyage-ones">';
+        for (let i = 0; i < overflow; i++) {
+          if (i < Math.max(0, added - room)) h += '<span class="voyage-coin-btn is-on">' + coinSvg() + "</span>";
+          else h += '<button type="button" class="voyage-coin-btn" data-make="1" aria-label="Add a coin"></button>';
+        }
+        h += "</div>";
+      }
+      return h;
+    }
+    function regroupHtml(item) {
+      let crates = "";
+      for (let t = 0; t < work.tens; t++) crates += '<div class="voyage-crate-box" aria-label="Ten crate">10</div>';
+      const take = Number(item.take) || 0;
+      let ones = '<div class="voyage-ones">';
+      for (let o = 0; o < work.ones; o++) {
+        if (take) ones += '<button type="button" data-give="' + o + '" aria-label="Give away a one">' + coinSvg() + "</button>";
+        else ones += '<span class="voyage-coin-btn is-on">' + coinSvg() + "</span>";
+      }
+      ones += "</div>";
+      const add = Number(item.add) || 0;
+      const left = add - (work.brought || 0);
+      let bring = "";
+      if (add) {
+        bring = '<div class="voyage-ones" aria-label="Coins to bring in">';
+        for (let i = 0; i < left; i++) bring += '<button type="button" data-bring="1" aria-label="Bring in a coin">' + coinSvg() + "</button>";
+        bring += "</div>";
+      }
+      return (
+        '<div class="voyage-place"><div class="voyage-bundle-row">' +
+        crates +
+        "</div>" +
+        ones +
+        bring +
+        '<button type="button" id="math-bundle"' +
+        (work.ones < 10 ? " disabled" : "") +
+        ">Bundle 10 ones into a crate</button>" +
+        '<button type="button" id="math-unbundle"' +
+        (work.tens < 1 ? " disabled" : "") +
+        ">Unbundle a crate</button><p>" +
+        work.tens +
+        " tens, " +
+        work.ones +
+        " ones</p></div>"
+      );
+    }
+    function dealHtml(item) {
+      if (Number(item.dividend) === 0) {
+        return '<p>The coin pile is empty.</p><button type="button" id="math-zero">Each crew gets 0</button>';
+      }
+      const div = Number(item.divisor) || 1;
+      const placed = (work.cols || []).reduce(function (s, n) {
+        return s + n;
+      }, 0);
+      const bank = Math.max(0, Number(item.dividend) - placed);
+      let cols = '<div class="voyage-deal">';
+      for (let c = 0; c < div; c++) {
+        cols += '<button type="button" data-crew="' + c + '" aria-label="Crew ' + (c + 1) + '">';
+        const n = (work.cols && work.cols[c]) || 0;
+        for (let k = 0; k < n; k++) cols += coinSvg();
+        cols += "</button>";
+      }
+      cols += "</div>";
+      return coinsHtml(Math.min(bank, 12), false) + cols;
+    }
     function visual(item) {
       const kind = item.kind || "choice";
       if (kind === "clock") {
@@ -1202,47 +1531,111 @@
           hd +
           'deg)"></span><span class="voyage-clock-min" style="transform:rotate(' +
           md +
-          'deg)"></span></div>'
+          'deg)"></span></div>' +
+          stepPad()
         );
       }
-      if (kind === "fraction") {
-        const parts = Number(item.parts) || 2;
-        const filled = Object.keys(work.partsOn || {}).length;
-        let html = fracHtml(parts, filled, true);
-        if (String(item.answer) === "0.5" || String(item.prompt).indexOf("1/2") !== -1) {
-          html += '<p class="voyage-teach-eq">1/2 = 5 tenths = 0.5</p>' + tenthsBar(5);
-        }
-        return html;
-      }
-      if (kind === "tenframe") return tenframeHtml();
+      if (kind === "fraction") return partsHtml(Number(item.parts) || 2);
+      if (kind === "wholes") return wholesHtml(item);
+      if (kind === "tenths") return tenframeHtml(item) + tenthStrip(marks(tapped));
+      if (kind === "tenframe") return tenframeHtml(item);
+      if (kind === "maketen") return maketenHtml(item);
       if (kind === "bundle") return bundleHtml();
+      if (kind === "regroup") return regroupHtml(item);
       if (kind === "counton") return countOnHtml(item);
       if (kind === "array" && item.rows && item.cols) return arrayHtml(item, true);
-      if (kind === "decimal") {
-        const step = work.steps[work.step];
+      if (kind === "arraypair") return arrayHtml(item, true, "L", item.rows, item.cols) + arrayHtml(item, true, "R", item.cols, item.rows);
+      if (kind === "takeaway") return coinsHtml(item.start || item.count || 0, true, tapped, true);
+      if (kind === "selectn") return coinsHtml(item.count || 0, true, tapped);
+      if (kind === "moreone") {
         return (
-          decimalBoard(work.meta, step) +
-          (step ? "<p>" + esc(step.prompt) + "</p>" + padHtml(work.entry) : "")
+          coinsHtml(item.count || 0, false) +
+          '<button type="button" class="voyage-coin-btn voyage-more" data-more="1" aria-label="One more coin">' +
+          (work.extra ? coinSvg() : "") +
+          "</button>"
         );
       }
-      if (kind === "longdiv") {
+      if (kind === "lessone") {
+        const n = Number(item.count) || 0;
+        let h = '<div class="voyage-coins is-tap">';
+        for (let i = 0; i < n; i++) {
+          h +=
+            '<button type="button" class="voyage-coin-btn' +
+            (work.gone ? " is-gone" : "") +
+            '" data-less="1" aria-label="Take one away">' +
+            coinSvg() +
+            "</button>";
+        }
+        return h + "</div>";
+      }
+      if (kind === "deal") return dealHtml(item);
+      if (kind === "compare") {
+        const L = Number(item.leftLen) || 1;
+        const R = Number(item.rightLen) || 1;
+        return (
+          '<div class="voyage-ropes"><button type="button" data-rope="left" aria-label="First rope"><i style="width:' +
+          Math.max(36, L * 28) +
+          'px"></i></button><button type="button" data-rope="right" aria-label="Second rope"><i style="width:' +
+          Math.max(36, R * 28) +
+          'px"></i></button></div>'
+        );
+      }
+      if (kind === "shapepick") {
+        return (
+          '<div class="voyage-shapes">' +
+          (item.options || [])
+            .map(function (name) {
+              return (
+                '<button type="button" data-shape="' +
+                esc(name) +
+                '" aria-label="' +
+                esc(name) +
+                '">' +
+                shapeSvg(name) +
+                "</button>"
+              );
+            })
+            .join("") +
+          "</div>"
+        );
+      }
+      if (kind === "perimeter") {
+        return (
+          '<div class="voyage-sides">' +
+          (item.sides || [])
+            .map(function (len, idx) {
+              return (
+                '<button type="button" data-side="' +
+                idx +
+                '" class="' +
+                (work.sidesOn[idx] ? "is-on" : "") +
+                '" aria-label="Side ' +
+                (idx + 1) +
+                '"><i style="width:' +
+                (36 + Number(len) * 12) +
+                'px"></i></button>'
+              );
+            })
+            .join("") +
+          "</div>"
+        );
+      }
+      if (kind === "decimal") {
         const step = work.steps[work.step];
+        return decimalBoard(work.meta, step) + stepPad();
+      }
+      if (kind === "longdiv") {
         return (
           '<pre class="voyage-longboard">' +
           esc(longDivBoard(item.dividend, item.divisor, work.step, work.steps)) +
           "</pre>" +
-          (step ? "<p>" + esc(step.prompt) + "</p>" + padHtml(work.entry) : "")
+          stepPad()
         );
       }
       if (kind === "longmul") {
-        const step = work.steps[work.step];
-        return (
-          '<pre class="voyage-longboard">' +
-          esc(longMulBoard(item.a, item.b, work.step)) +
-          "</pre>" +
-          (step ? "<p>" + esc(step.prompt) + "</p>" + padHtml(work.entry) : "")
-        );
+        return '<pre class="voyage-longboard">' + esc(longMulBoard(item.a, item.b, work.step)) + "</pre>" + stepPad();
       }
+      if (kind === "product" || kind === "stepskey" || kind === "choice") return stepPad();
       if (kind === "place") {
         const hun = Number(item.hundreds) || 0;
         const tens = Number(item.tens) || 0;
@@ -1255,24 +1648,19 @@
           " ten-crate" +
           (tens === 1 ? "" : "s") +
           "</div>" +
-          coinsHtml(Math.min(ones, 12), false) +
-          "<p>" +
-          tens +
-          " tens, " +
-          ones +
-          " ones" +
-          (hun ? ", " + hun + " hundreds" : "") +
-          "</p></div>"
+          coinsHtml(Math.min(ones, 20), false) +
+          "</div>" +
+          stepPad()
         );
       }
-      if (kind === "money") return moneyHtml(item);
+      if (kind === "money") return moneyHtml(item) + stepPad();
       if (kind === "piles") {
         return (
-          '<div class="voyage-piles"><div><p>Left</p>' +
+          '<div class="voyage-piles"><button type="button" data-pile="left" aria-label="First pile">' +
           coinsHtml(item.left, false) +
-          "</div><div><p>Right</p>" +
+          '</button><button type="button" data-pile="right" aria-label="Second pile">' +
           coinsHtml(item.right, false) +
-          "</div></div>"
+          "</button></div>"
         );
       }
       if (kind === "skip" && item.seq) {
@@ -1283,7 +1671,8 @@
               return "<span>" + esc(n) + "</span>";
             })
             .join("<i></i>") +
-          '<span class="is-ask">?</span></p>'
+          '<span class="is-ask">?</span></p>' +
+          stepPad()
         );
       }
       if (kind === "steps" && item.board) {
@@ -1339,7 +1728,11 @@
       progress.lastItem = item.id;
       saveProgress();
       const status = document.getElementById("math-status");
-      if (status) status.textContent = "Stowed. On to the next crate.";
+      if (status) status.textContent = band === "toddler" || band === "preschool" || band === "baby" ? "Stowed." : "Stowed. On to the next crate.";
+      if (band === "toddler" || band === "preschool" || band === "baby") {
+        const n = Number(item.answer);
+        if (!isNaN(n) && WORDS[n]) speak(WORDS[n]);
+      }
       setTimeout(function () {
         i += 1;
         resetItemState();
@@ -1351,6 +1744,14 @@
         render();
         if (screen === "play" && items[i] && items[i].audioText) speak(items[i].audioText);
       }, 550);
+    }
+
+    function afterGesture(item) {
+      if (advancing) return;
+      if (gestureDone(item)) {
+        render();
+        succeed();
+      } else render();
     }
 
     function showMiss(item) {
@@ -1371,23 +1772,9 @@
         return;
       }
       ensureWork(item);
-      const babyish = band === "baby" || item.kind === "tap" || item.kind === "peek" || item.kind === "rock";
-      const keyed = item.kind === "longdiv" || item.kind === "longmul" || item.kind === "decimal";
-      const choices = item.choices || [];
-      const choiceBox =
-        babyish && band === "baby"
-          ? '<p class="voyage-hint">Tap the picture. Hear the number.</p>'
-          : keyed
-            ? ""
-            : '<div class="voyage-choices" id="math-choices" data-n="' +
-              choices.length +
-              '">' +
-              choices
-                .map(function (c) {
-                  return '<button type="button" data-v="' + esc(c) + '">' + esc(c) + "</button>";
-                })
-                .join("") +
-              "</div>";
+      const young = band === "baby" || band === "toddler" || band === "preschool";
+      const tapHint = { tap: 1, tenframe: 1, peek: 1, rock: 1, moreone: 1, lessone: 1, piles: 1, selectn: 1, takeaway: 1 };
+      const choiceBox = young && tapHint[item.kind] ? '<p class="voyage-hint">Tap the picture.</p>' : "";
       host.innerHTML = chrome(
         art("cabin", "voyage-hero-art") +
           '<div class="voyage-cabin">' +
@@ -1417,6 +1804,26 @@
         screen = "map";
         render();
       };
+      function advanceStep() {
+        work.step += 1;
+        work.entry = "";
+        missTeach = "";
+        cue("ok");
+        if (window.Ship) Ship.clink();
+        if (work.step >= work.steps.length) succeed();
+        else {
+          render();
+          speak(work.steps[work.step].prompt);
+        }
+      }
+      function missPad() {
+        work.entry = "";
+        missTeach = teachOf(item, island);
+        cue("tryAgain");
+        if (window.Ship) Ship.knock();
+        render();
+        speak(missTeach);
+      }
       const peek = document.getElementById("math-peek");
       if (peek) {
         peek.onclick = function () {
@@ -1425,8 +1832,7 @@
           if (window.Ship) Ship.latch();
           const n = Number(item.count) || 1;
           speak(WORDS[n] || String(n));
-          render();
-          if (band === "baby") setTimeout(succeed, 700);
+          afterGesture(item);
         };
       }
       const rock = document.getElementById("math-rock");
@@ -1437,38 +1843,63 @@
             Ship.creak();
             Ship.splash();
           }
-          if (rocks >= (Number(item.count) || 3)) {
-            if (band === "baby") succeed();
-            else render();
-          } else render();
+          afterGesture(item);
         };
       }
       host.querySelectorAll("[data-coin]").forEach(function (btn) {
         btn.onclick = function () {
           const idx = btn.getAttribute("data-coin");
+          if (item.kind === "takeaway" || item.kind === "selectn") {
+            if (tapped[idx]) delete tapped[idx];
+            else tapped[idx] = 1;
+            cue("ok");
+            afterGesture(item);
+            return;
+          }
           if (tapped[idx]) return;
           tapped[idx] = 1;
-          btn.classList.add("is-tapped");
           const n = Object.keys(tapped).length;
           cue("ok");
           if (window.Ship) Ship.clink();
           const hold = Number(item.hold || item.left || 0);
           if (item.kind === "counton") speak(String(hold + n));
-          else speak(WORDS[n] || String(n));
-          if (babyAuto(item) && band === "baby") succeed();
+          else if (band === "baby" || band === "toddler" || band === "preschool") speak(WORDS[n] || String(n));
+          afterGesture(item);
         };
       });
       host.querySelectorAll("[data-cell]").forEach(function (btn) {
         btn.onclick = function () {
           const idx = btn.getAttribute("data-cell");
-          if (tapped[idx]) {
-            delete tapped[idx];
-          } else {
+          if (tapped[idx]) delete tapped[idx];
+          else {
             tapped[idx] = 1;
             cue("ok");
             if (window.Ship) Ship.clink();
           }
-          render();
+          afterGesture(item);
+        };
+      });
+      host.querySelectorAll("[data-make]").forEach(function (btn) {
+        btn.onclick = function () {
+          if ((work.added || 0) >= Number(item.add || 0)) return;
+          work.added = (work.added || 0) + 1;
+          cue("ok");
+          if (window.Ship) Ship.clink();
+          afterGesture(item);
+        };
+      });
+      host.querySelectorAll("[data-more]").forEach(function (btn) {
+        btn.onclick = function () {
+          work.extra = 1;
+          cue("ok");
+          afterGesture(item);
+        };
+      });
+      host.querySelectorAll("[data-less]").forEach(function (btn) {
+        btn.onclick = function () {
+          work.gone = 1;
+          cue("ok");
+          afterGesture(item);
         };
       });
       host.querySelectorAll("[data-one]").forEach(function (btn) {
@@ -1484,19 +1915,126 @@
           const idx = btn.getAttribute("data-part");
           if (work.partsOn[idx]) delete work.partsOn[idx];
           else work.partsOn[idx] = 1;
-          render();
+          cue("ok");
+          afterGesture(item);
         };
       });
+      host.querySelectorAll("[data-side]").forEach(function (btn) {
+        btn.onclick = function () {
+          work.sidesOn[btn.getAttribute("data-side")] = 1;
+          cue("ok");
+          afterGesture(item);
+        };
+      });
+      host.querySelectorAll("[data-shape]").forEach(function (btn) {
+        btn.onclick = function () {
+          if (btn.getAttribute("data-shape") === String(item.answer)) succeed();
+          else showMiss(item);
+        };
+      });
+      host.querySelectorAll("[data-rope]").forEach(function (btn) {
+        btn.onclick = function () {
+          const L = Number(item.leftLen) || 0;
+          const R = Number(item.rightLen) || 0;
+          const win = L === R ? "same" : L > R ? "left" : "right";
+          if (btn.getAttribute("data-rope") === win) succeed();
+          else showMiss(item);
+        };
+      });
+      host.querySelectorAll("[data-pile]").forEach(function (btn) {
+        btn.onclick = function () {
+          const L = Number(item.left) || 0;
+          const R = Number(item.right) || 0;
+          let win = L === R ? "same" : L > R ? "left" : "right";
+          if (item.ask === "fewer") win = L === R ? "same" : L < R ? "left" : "right";
+          if (item.ask === "same") win = L === R ? "same" : "";
+          if (btn.getAttribute("data-pile") === win) succeed();
+          else showMiss(item);
+        };
+      });
+      host.querySelectorAll("[data-give]").forEach(function (btn) {
+        btn.onclick = function () {
+          const take = Number(item.take) || 0;
+          if ((work.given || 0) >= take) return;
+          if (work.ones < 1) return;
+          work.ones -= 1;
+          work.given = (work.given || 0) + 1;
+          cue("ok");
+          afterGesture(item);
+        };
+      });
+      host.querySelectorAll("[data-bring]").forEach(function (btn) {
+        btn.onclick = function () {
+          if ((work.brought || 0) >= (Number(item.add) || 0)) return;
+          work.ones += 1;
+          work.brought = (work.brought || 0) + 1;
+          cue("ok");
+          afterGesture(item);
+        };
+      });
+      host.querySelectorAll("[data-crew]").forEach(function (btn) {
+        btn.onclick = function () {
+          const div = Number(item.divisor) || 1;
+          const dividend = Number(item.dividend) || 0;
+          const placed = (work.cols || []).reduce(function (s, n) {
+            return s + n;
+          }, 0);
+          if (placed >= dividend) return;
+          const c = Number(btn.getAttribute("data-crew"));
+          work.cols[c] = (work.cols[c] || 0) + 1;
+          const sum = work.cols.reduce(function (s, n) {
+            return s + n;
+          }, 0);
+          cue("ok");
+          if (sum < dividend) {
+            render();
+            return;
+          }
+          if (gestureDone(item)) afterGesture(item);
+          else {
+            showMiss(item);
+            for (let k = 0; k < div; k++) work.cols[k] = 0;
+            render();
+          }
+        };
+      });
+      const zeroBtn = document.getElementById("math-zero");
+      if (zeroBtn) {
+        zeroBtn.onclick = function () {
+          work.zeroed = true;
+          afterGesture(item);
+        };
+      }
       const bund = document.getElementById("math-bundle");
       if (bund) {
         bund.onclick = function () {
+          if (item.kind === "regroup") {
+            if (work.ones < 10) return;
+            work.tens += 1;
+            work.ones -= 10;
+            cue("ok");
+            if (window.Ship) Ship.latch();
+            afterGesture(item);
+            return;
+          }
           if (Object.keys(work.selected).length < 10) return;
           work.tens += 1;
           work.ones -= 10;
           work.selected = {};
           cue("ok");
           if (window.Ship) Ship.latch();
-          render();
+          afterGesture(item);
+        };
+      }
+      const unbundle = document.getElementById("math-unbundle");
+      if (unbundle) {
+        unbundle.onclick = function () {
+          if (work.tens < 1) return;
+          work.tens -= 1;
+          work.ones += 10;
+          cue("ok");
+          if (window.Ship) Ship.latch();
+          afterGesture(item);
         };
       }
       const pad = document.getElementById("math-pad");
@@ -1513,54 +2051,28 @@
             return;
           }
           if (key === "OK") {
-            const val = Number(work.entry);
-            if (val === Number(step.expect)) {
-              work.step += 1;
-              work.entry = "";
-              missTeach = "";
-              cue("ok");
-              if (window.Ship) Ship.clink();
-              if (work.step >= work.steps.length) succeed();
-              else {
-                render();
-                speak(work.steps[work.step].prompt);
-              }
-            } else {
-              work.entry = "";
-              missTeach = teachOf(item, island);
-              cue("tryAgain");
-              if (window.Ship) Ship.knock();
-              render();
-              speak(missTeach);
-            }
+            if (answersMatch(work.entry, step.expect)) advanceStep();
+            else missPad();
             return;
           }
+          if (key === "." && String(work.entry || "").indexOf(".") !== -1) return;
           work.entry = String(work.entry || "") + key;
+          if (answersMatch(work.entry, step.expect)) {
+            const entry = document.getElementById("math-entry");
+            if (entry) entry.textContent = work.entry;
+            advanceStep();
+            return;
+          }
+          const expect = String(step.expect == null ? "" : step.expect)
+            .replace(/\$/g, "")
+            .replace(/%/g, "")
+            .trim();
+          if (String(work.entry).length > expect.length) {
+            missPad();
+            return;
+          }
           const entry = document.getElementById("math-entry");
           if (entry) entry.textContent = work.entry;
-        });
-      }
-      const box = document.getElementById("math-choices");
-      if (box) {
-        box.addEventListener("click", function (ev) {
-          const btn = ev.target.closest("button[data-v]");
-          if (!btn) return;
-          const val = btn.getAttribute("data-v");
-          if (!workReady(item)) {
-            missTeach = "Do the technique first. " + (island.technique.title || "");
-            const status = document.getElementById("math-status");
-            if (status) status.innerHTML = '<div class="voyage-teach">' + esc(missTeach) + "</div>";
-            speak(missTeach);
-            cue("tryAgain");
-            return;
-          }
-          if (val === String(item.answer)) {
-            btn.classList.add("is-right");
-            succeed();
-          } else {
-            btn.classList.add("is-wrong");
-            showMiss(item);
-          }
         });
       }
     }
@@ -1614,8 +2126,8 @@
       };
       document.getElementById("math-again").onclick = function () {
         i = 0;
+        tableN = null;
         screen = "lesson";
-        if (island.drill && !preludeItems(island).length) screen = "tables";
         render();
       };
       speak("Drop anchor. Now do this on paper.");
@@ -1645,6 +2157,7 @@
       );
       bindTools();
       document.getElementById("math-chart").onclick = function () {
+        justStowed = island.id;
         screen = "map";
         if (window.Ship) Ship.gull();
         render();
@@ -1670,7 +2183,9 @@
       "<h1>Treasure Voyage</h1>" +
       "<p>Pick a band. Names and ages stay off this page.</p>" +
       '<div class="voyage-pick-grid">' +
-      BANDS.map(function (b) {
+      BANDS.filter(function (b) {
+        return b !== "baby";
+      }).map(function (b) {
         return (
           '<button type="button" data-band="' +
           b +

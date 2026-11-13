@@ -1,22 +1,22 @@
 id,prompt,answer,audio_text,tags
-e-f-d4,4 + 4 =,8,4 + 4 =,math early facts
-e-f-d7,7 + 7 =,14,7 + 7 =,math early facts
-e-f-91,9 + 1 =,10,9 + 1 =,math early facts
-e-f-28,2 + 8 =,10,2 + 8 =,math early facts
-e-f-65,6 + 5 =,11,6 + 5 =,math early facts
-e-f-83,8 + 3 =,11,8 + 3 =,math early facts
-e-f-9m4,9 − 4 =,5,9 − 4 =,math early facts
-e-f-12m7,12 − 7 =,5,12 − 7 =,math early facts
-e-f-15m6,15 − 6 =,9,15 − 6 =,math early facts
+e-f-d4,Tap 2 rows of 4.,8,Tap 2 rows of 4.,math early facts
+e-f-d7,"Hold 7. Count on 7 more to make ten, then the rest.",14,"Hold 7. Count on 7 more to make ten, then the rest.",math early facts
+e-f-91,Hold 9. Add 1 to fill the ten.,10,Hold 9. Add 1 to fill the ten.,math early facts
+e-f-28,Hold 8. Add 2 to fill the ten.,10,Hold 8. Add 2 to fill the ten.,math early facts
+e-f-65,"Hold 6. Add 5. Fill the ten, then the extra.",11,"Hold 6. Add 5. Fill the ten, then the extra.",math early facts
+e-f-83,"Hold 8. Add 3. Fill the ten, then the extra.",11,"Hold 8. Add 3. Fill the ten, then the extra.",math early facts
+e-f-9m4,9 coins. Tap 4 to give away.,5,9 coins. Tap 4 to give away.,math early facts
+e-f-12m7,12 coins. Tap 7 to give away.,5,12 coins. Tap 7 to give away.,math early facts
+e-f-15m6,15 coins. Tap 6 to give away.,9,15 coins. Tap 6 to give away.,math early facts
 e-p-34,3 ten-crates and 4 ones. What number?,34,3 ten-crates and 4 ones. What number?,math early place
 e-p-50,5 ten-crates and 0 ones. What number?,50,5 ten-crates and 0 ones. What number?,math early place
 e-p-408,40 + 8 =,48,40 + 8 =,math early place
 e-p-27,Bundle extra ones: 2 tens and 17 ones. What number?,37,Two tens and seventeen ones. Bundle ten ones into a crate. What number?,math early place
-e-r-275,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,math early regroup
-e-r-467,46 + 7 =,53,46 + 7 =,math early regroup
-e-r-6010,60 − 10 =,50,60 − 10 =,math early regroup
-e-r-358,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,math early regroup
-e-r-29p6,29 + 6 =,35,29 + 6 =,math early regroup
+e-r-275,"27 + 5. Bring in 5 coins, then bundle a ten.",32,"27 + 5. Bring in 5 coins, then bundle a ten.",math early regroup
+e-r-467,"46 + 7. Bring in 7 coins, then bundle a ten.",53,"46 + 7. Bring in 7 coins, then bundle a ten.",math early regroup
+e-r-6010,"60 − 10. Unbundle a crate, then give away 10.",50,"60 − 10. Unbundle a crate, then give away 10.",math early regroup
+e-r-358,"35 − 8. Unbundle a crate, then give away 8.",27,"35 − 8. Unbundle a crate, then give away 8.",math early regroup
+e-r-29p6,"29 + 6. Bring in 6 coins, then bundle a ten.",35,"29 + 6. Bring in 6 coins, then bundle a ten.",math early regroup
 e-sk-2,"2, 4, 6, 8, 10. Next?",12,"2, 4, 6, 8, 10. Next?",math early skip
 e-sk-5,"5, 10, 15, 20. Next?",25,"5, 10, 15, 20. Next?",math early skip
 e-sk-10,"10, 20, 30, 40. Next?",50,"10, 20, 30, 40. Next?",math early skip
@@ -30,10 +30,10 @@ e-t-3,"Short hand on 3, long hand on 12. The hour is",3:00,"Short hand on 3, lon
 e-t-6,"Short hand on 6, long hand on 12. The hour is",6:00,"Short hand on 6, long hand on 12. The hour is",math early time
 e-t-9,The clock shows 9:00. The short hand points to,9,The clock shows 9:00. The short hand points to,math early time
 e-t-12,Both hands on 12. The hour is,12:00,Both hands on 12. The hour is,math early time
-e-me-long,A 5-inch rope and a 2-inch rope. Which is longer?,5-inch,A 5-inch rope and a 2-inch rope. Which is longer?,math early measure
-e-me-inch,12 inches make 1,foot,12 inches make 1,math early measure
-e-sh-rect,"Four sides, four square corners. Opposite sides match. This is a",rectangle,"Four sides, four square corners. Opposite sides match. This is a",math early shape
-e-sh-sides,A triangle has this many sides:,3,A triangle has this many sides:,math early shape
+e-me-long,Tap the longer rope.,5-inch,Tap the longer rope.,math early measure
+e-me-inch,12 inches make one of these. Tap it.,foot,12 inches make one of these. Tap it.,math early measure
+e-sh-rect,Tap the shape with four sides and four square corners.,rectangle,Tap the shape with four sides and four square corners.,math early shape
+e-sh-sides,Tap each side of the triangle.,3,Tap each side of the triangle.,math early shape
 e-st-18,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,15,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,math early story
 e-st-20,A chest has 12 coins. Nell spends 4. How many are left?,8,A chest has 12 coins. Nell spends 4. How many are left?,math early story
 e-st-equal,3 coils of 5 coins. How many coins in all?,15,3 coils of 5 coins. How many coins in all?,math early story
@@ -76,6 +76,7 @@ add-2+4,2 + 4 =,6,2 plus 4.,math early add
 add-2+5,2 + 5 =,7,2 plus 5.,math early add
 add-2+6,2 + 6 =,8,2 plus 6.,math early add
 add-2+7,2 + 7 =,9,2 plus 7.,math early add
+add-2+8,2 + 8 =,10,2 plus 8.,math early add
 add-2+9,2 + 9 =,11,2 plus 9.,math early add
 add-2+10,2 + 10 =,12,2 plus 10.,math early add
 add-3+0,3 + 0 =,3,3 plus 0.,math early add
@@ -101,6 +102,7 @@ add-4+2,4 + 2 =,6,4 plus 2.,math early add
 sub-4-2,4 − 2 =,2,4 minus 2.,math early sub
 add-4+3,4 + 3 =,7,4 plus 3.,math early add
 sub-4-3,4 − 3 =,1,4 minus 3.,math early sub
+add-4+4,4 + 4 =,8,4 plus 4.,math early add
 sub-4-4,4 − 4 =,0,4 minus 4.,math early sub
 add-4+5,4 + 5 =,9,4 plus 5.,math early add
 add-4+6,4 + 6 =,10,4 plus 6.,math early add
@@ -135,6 +137,7 @@ add-6+3,6 + 3 =,9,6 plus 3.,math early add
 sub-6-3,6 − 3 =,3,6 minus 3.,math early sub
 add-6+4,6 + 4 =,10,6 plus 4.,math early add
 sub-6-4,6 − 4 =,2,6 minus 4.,math early sub
+add-6+5,6 + 5 =,11,6 plus 5.,math early add
 sub-6-5,6 − 5 =,1,6 minus 5.,math early sub
 add-6+6,6 + 6 =,12,6 plus 6.,math early add
 sub-6-6,6 − 6 =,0,6 minus 6.,math early sub
@@ -156,6 +159,7 @@ add-7+5,7 + 5 =,12,7 plus 5.,math early add
 sub-7-5,7 − 5 =,2,7 minus 5.,math early sub
 add-7+6,7 + 6 =,13,7 plus 6.,math early add
 sub-7-6,7 − 6 =,1,7 minus 6.,math early sub
+add-7+7,7 + 7 =,14,7 plus 7.,math early add
 sub-7-7,7 − 7 =,0,7 minus 7.,math early sub
 add-7+8,7 + 8 =,15,7 plus 8.,math early add
 add-7+9,7 + 9 =,16,7 plus 9.,math early add
@@ -166,6 +170,7 @@ add-8+1,8 + 1 =,9,8 plus 1.,math early add
 sub-8-1,8 − 1 =,7,8 minus 1.,math early sub
 add-8+2,8 + 2 =,10,8 plus 2.,math early add
 sub-8-2,8 − 2 =,6,8 minus 2.,math early sub
+add-8+3,8 + 3 =,11,8 plus 3.,math early add
 sub-8-3,8 − 3 =,5,8 minus 3.,math early sub
 add-8+4,8 + 4 =,12,8 plus 4.,math early add
 sub-8-4,8 − 4 =,4,8 minus 4.,math early sub
@@ -181,12 +186,14 @@ add-8+9,8 + 9 =,17,8 plus 9.,math early add
 add-8+10,8 + 10 =,18,8 plus 10.,math early add
 add-9+0,9 + 0 =,9,9 plus 0.,math early add
 sub-9-0,9 − 0 =,9,9 minus 0.,math early sub
+add-9+1,9 + 1 =,10,9 plus 1.,math early add
 sub-9-1,9 − 1 =,8,9 minus 1.,math early sub
 add-9+2,9 + 2 =,11,9 plus 2.,math early add
 sub-9-2,9 − 2 =,7,9 minus 2.,math early sub
 add-9+3,9 + 3 =,12,9 plus 3.,math early add
 sub-9-3,9 − 3 =,6,9 minus 3.,math early sub
 add-9+4,9 + 4 =,13,9 plus 4.,math early add
+sub-9-4,9 − 4 =,5,9 minus 4.,math early sub
 add-9+5,9 + 5 =,14,9 plus 5.,math early add
 sub-9-5,9 − 5 =,4,9 minus 5.,math early sub
 add-9+6,9 + 6 =,15,9 plus 6.,math early add

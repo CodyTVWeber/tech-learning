@@ -1,16 +1,16 @@
 id,prompt,answer,audio_text,tags
-u-fr-halfdec,Shade 1 of 2 equal parts. 1/2 as a decimal is,0.5,Shade 1 of 2 equal parts. 1/2 as a decimal is,math upper frac
-u-fr-25,0.25 as a fraction is,1/4,0.25 as a fraction is,math upper frac
-u-fr-50p,50% of 10 is,5,50% of 10 is,math upper frac
-u-fr-3tenth,3/10 as a decimal is,0.3,3/10 as a decimal is,math upper frac
-u-fr-like,1/5 + 2/5 =,3/5,1/5 + 2/5 =,math upper frac
-u-fr-eq,1/2 is equivalent to,2/4,1/2 is equivalent to,math upper frac
-u-fr-of,3/4 of 12 is,9,3/4 of 12 is,math upper frac
-u-fr-mixed,1 1/2 as an improper fraction is,3/2,1 1/2 as an improper fraction is,math upper frac
+u-fr-halfdec,"Fill 5 of 10 tenths. That is one half, written 0.5.",0.5,"Fill 5 of 10 tenths. That is one half, written 0.5.",math upper frac
+u-fr-25,Shade 1 of 4 equal parts. That is 0.25.,1/4,Shade 1 of 4 equal parts. That is 0.25.,math upper frac
+u-fr-50p,Tap half of these 10 coins. 50% is half.,5,Tap half of these 10 coins. 50% is half.,math upper frac
+u-fr-3tenth,Fill 3 of 10 tenths. That decimal is 0.3.,0.3,Fill 3 of 10 tenths. That decimal is 0.3.,math upper frac
+u-fr-like,"Shade 1 fifth, then 2 more. Same-size parts.",3/5,"Shade 1 fifth, then 2 more. Same-size parts.",math upper frac
+u-fr-eq,Shade 2 of 4 equal parts. That matches 1/2.,2/4,Shade 2 of 4 equal parts. That matches 1/2.,math upper frac
+u-fr-of,Tap 3 of every 4 coins. 12 coins in all.,9,Tap 3 of every 4 coins. 12 coins in all.,math upper frac
+u-fr-mixed,"Fill 3 halves. One whole is 2/2, plus 1/2.",3/2,"Fill 3 halves. One whole is 2/2, plus 1/2.",math upper frac
 u-d-add,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",1.65,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",math upper dec
-u-d-tenth,7 tenths as a decimal is,0.7,7 tenths as a decimal is,math upper dec
-u-d-hund,0.40 equals how many tenths?,4,0.40 equals how many tenths?,math upper dec
-u-d-pct,0.5 = what percent?,50%,0.5 = what percent?,math upper dec
+u-d-tenth,Fill 7 of 10 tenths.,0.7,Fill 7 of 10 tenths.,math upper dec
+u-d-hund,0.40 is four tenths. Fill them.,4,0.40 is four tenths. Fill them.,math upper dec
+u-d-pct,0.5 is five tenths. Fill them. That is 50%.,50%,0.5 is five tenths. Fill them. That is 50%.,math upper dec
 u-m-add,$1.50 + $0.25 =,$1.75,$1.50 + $0.25 =,math upper money
 u-m-cents,$2.00 is how many cents?,200,$2.00 is how many cents?,math upper money
 u-m-chg,Pay $5.00 for a $3.25 coil. Change?,$1.75,Pay $5.00 for a $3.25 coil. Change?,math upper money
@@ -33,20 +33,20 @@ u-long-145,"Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",29,"L
 u-long-23x4,"Long multiply 23 × 4. Ones, then tens.",92,"Long multiply 23 × 4. Ones, then tens.",math upper long
 u-long-36x24,"Long multiply 36 × 24. Ones row, tens row, add.",864,"Long multiply 36 × 24. Ones row, tens row, add.",math upper long
 u-long-48x6,"Long multiply 48 × 6. Ones, then tens.",288,"Long multiply 48 × 6. Ones, then tens.",math upper long
-u-law-com,4 × 6 and 6 × 4. Same product?,yes,4 × 6 and 6 × 4. Same product?,math upper laws
+u-law-com,"Fill 4 rows of 6, and 6 rows of 4.",yes,"Fill 4 rows of 6, and 6 rows of 4.",math upper laws
 u-law-id,9 × 1 =,9,9 × 1 =,math upper laws
 u-law-zero,9 × 0 =,0,9 × 0 =,math upper laws
-u-law-dist,3 × (5 + 2) = 3×5 + 3×2. That value is,21,3 × (5 + 2) = 3×5 + 3×2. That value is,math upper laws
-u-law-assoc,(2 + 3) + 4 = 2 + (3 + 4). Both equal,9,(2 + 3) + 4 = 2 + (3 + 4). Both equal,math upper laws
+u-law-dist,"3 × (5 + 2). First type 5 + 2, then times 3.",21,"3 × (5 + 2). First type 5 + 2, then times 3.",math upper laws
+u-law-assoc,"(2 + 3) + 4. Add the pair, then the 4.",9,"(2 + 3) + 4. Add the pair, then the 4.",math upper laws
 u-sk-13,"13, 26, 39. Next?",52,"13, 26, 39. Next?",math upper skip
 u-sk-14,"14, 28, 42. Next?",56,"14, 28, 42. Next?",math upper skip
 u-sk-15,"15, 30, 45. Next?",60,"15, 30, 45. Next?",math upper skip
 u-sk-sq,"Squares: 1, 4, 9, 16. Next?",25,"Squares: 1, 4, 9, 16. Next?",math upper skip
 u-sk-cu,"Cubes: 1, 8, 27. Next?",64,"Cubes: 1, 8, 27. Next?",math upper skip
-u-st-area,A sail 8 by 5 feet. Area in square feet?,40,A sail 8 by 5 feet. Area in square feet?,math upper story
-u-st-two,3 coils at $2.00 each. Total?,$6.00,3 coils at $2.00 each. Total?,math upper story
-u-mix-paren,(9 + 3) × 2 =,24,(9 + 3) × 2 =,math upper mix
-u-mix-mdas,5 + 2 × 8 =,21,5 + 2 × 8 =,math upper mix
+u-st-area,"A sail 8 by 5 feet. Tap the grid, or the keys finish it.",40,"A sail 8 by 5 feet. Tap the grid, or the keys finish it.",math upper story
+u-st-two,3 coils at $2.00 each. Type the total.,$6.00,3 coils at $2.00 each. Type the total.,math upper story
+u-mix-paren,(9 + 3) × 2. Parentheses first.,24,(9 + 3) × 2. Parentheses first.,math upper mix
+u-mix-mdas,5 + 2 × 8. Multiply before you add.,21,5 + 2 × 8. Multiply before you add.,math upper mix
 x-0x0,0 × 0 =,0,0 times 0.,math upper times
 x-0x1,0 × 1 =,0,0 times 1.,math upper times
 x-0x2,0 × 2 =,0,0 times 2.,math upper times
