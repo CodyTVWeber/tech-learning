@@ -2,6 +2,7 @@
 """Generate learner PWAs, placeholder images, and validate assets.json lists."""
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -36,6 +37,16 @@ def apps():
     return out
 
 
+def slot_tint(app_name: str, filename: str) -> tuple[int, int, int]:
+    base = APP_TINTS.get(app_name, (140, 140, 132))
+    h = hashlib.sha256(filename.encode("utf-8")).digest()
+    return (
+        48 + (base[0] // 2 + h[0]) % 160,
+        48 + (base[1] // 2 + h[1]) % 160,
+        48 + (base[2] // 2 + h[2]) % 160,
+    )
+
+
 def gen_placeholders(app_dir: Path) -> None:
     man_path = app_dir / "images.json"
     tint = APP_TINTS.get(app_dir.name, (140, 140, 132))
@@ -44,7 +55,7 @@ def gen_placeholders(app_dir: Path) -> None:
         for img in man.get("images", []):
             dest = app_dir / "images" / img["file"]
             w, h = int(img.get("width", 256)), int(img.get("height", 256))
-            write_png(dest, w, h, tint)
+            write_png(dest, w, h, slot_tint(app_dir.name, img["file"]))
     assets = json.loads((app_dir / "assets.json").read_text())
     for f in assets.get("files", []):
         if f.endswith(".png"):

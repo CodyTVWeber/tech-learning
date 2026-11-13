@@ -90,6 +90,11 @@ test("hub and each learner PWA work offline", async ({ page, context }) => {
       await expect(page.locator("#app-root")).not.toHaveText(/Could not open|not on this device/);
       const text = (await page.locator("#app-root").innerText()).trim();
       expect(text.length, "app " + appId + " for " + stage.folder + " rendered").toBeGreaterThan(8);
+      if (appId === "reading" && (stage.band === "toddler" || stage.band === "preschool")) {
+        const beds = page.locator("#go-sounds");
+        if (await beds.count()) await beds.click();
+        await expect(page.locator(".garden-letter").first()).toBeVisible();
+      }
       await assertControlling(page);
       expect(errors, "offline play " + stage.folder + " " + appId).toEqual([]);
     }
@@ -115,4 +120,13 @@ test("missing assets.json does not break a home", async ({ page }) => {
   await expect(page.locator("#app-root")).toContainText("not on this device yet");
   expect(missingAssets).toEqual([]);
   expect(errors).toEqual([]);
+});
+
+test("standalone math and reading show a visible untested banner", async ({ page }) => {
+  for (const app of ["math", "reading"]) {
+    await page.goto(BASE + "apps/" + app + "/", { waitUntil: "load" });
+    const banner = page.locator(".untested-banner");
+    await expect(banner).toBeVisible();
+    await expect(banner).toHaveText(/Untested, awaiting parent test/);
+  }
 });

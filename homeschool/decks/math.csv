@@ -7,9 +7,12 @@ e5,46 + 7 =,53,46 plus 7.,math early
 e6,60 − 10 =,50,60 minus 10.,math early
 e7,35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?,27,35 minus 8. Unbundle a ten. What is the difference?,math early
 e8,4 + 4 + 4 =,12,4 plus 4 plus 4.,math early
-p1,How many coins?,6,How many coins?,math preschool
-p2,How many coins?,8,How many coins?,math preschool
-p3,How many coins?,10,How many coins?,math preschool
+p1,"How many coins?
+● ● ● ● ● ●",6,How many coins?,math preschool
+p2,"How many coins?
+● ● ● ● ● ● ● ●",8,How many coins?,math preschool
+p3,"How many coins?
+● ● ● ● ● ● ● ● ● ●",10,How many coins?,math preschool
 p4,3 coins and 2 more. How many?,5,3 coins and 2 more. How many?,math preschool
 p5,4 coins and 3 more. How many?,7,4 coins and 3 more. How many?,math preschool
 p6,6 coins and 4 more. How many?,10,6 coins and 4 more. How many?,math preschool
@@ -23,14 +26,22 @@ m5,12 coins in crews of 4. How many crews?,3,12 coins in crews of 4. How many cr
 m6,18 ÷ 3 =,6,18 divided by 3.,math primary
 m7,"If 7 × 8 = 56, then 56 ÷ 8 =",7,"If 7 times 8 is 56, then 56 divided by 8.",math primary
 m8,9 × 0 =,0,9 times 0.,math primary
-t1,How many coins?,1,How many coins?,math toddler
-t2,How many coins?,2,How many coins?,math toddler
-t3,How many coins?,3,How many coins?,math toddler
-t4,How many coins?,4,How many coins?,math toddler
-t5,How many coins?,5,How many coins?,math toddler
-t6,How many coins?,2,How many coins?,math toddler
-t7,How many coins?,3,How many coins?,math toddler
-t8,How many coins?,4,How many coins?,math toddler
+t1,"How many coins?
+●",1,How many coins?,math toddler
+t2,"How many coins?
+● ●",2,How many coins?,math toddler
+t3,"How many coins?
+● ● ●",3,How many coins?,math toddler
+t4,"How many coins?
+● ● ● ●",4,How many coins?,math toddler
+t5,"How many coins?
+● ● ● ● ●",5,How many coins?,math toddler
+t6,"How many coins?
+● ●",2,How many coins?,math toddler
+t7,"How many coins?
+● ● ●",3,How many coins?,math toddler
+t8,"How many coins?
+● ● ● ●",4,How many coins?,math toddler
 u1,1/2 as a decimal is,0.5,One half as a decimal.,math upper
 u2,0.25 as a fraction is,1/4,0.25 as a fraction.,math upper
 u3,50% of 10 is,5,50 percent of 10.,math upper

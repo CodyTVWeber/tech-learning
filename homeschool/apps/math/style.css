@@ -177,6 +177,20 @@
   background: #9aa7a3;
 }
 
+.untested-banner {
+  margin: 0;
+  padding: 10px 12px;
+  background: #c49a3c;
+  color: #1a120c;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Trebuchet MS", "Gill Sans", sans-serif;
+}
+
+html[data-runner] .untested-banner {
+  display: none;
+}
+
 .voyage .sr-only {
   position: absolute;
   width: 1px;

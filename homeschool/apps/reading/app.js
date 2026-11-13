@@ -131,6 +131,7 @@
         const item = data.items[i];
         if (!item) {
           progress.blooms += 1;
+          progress.soundsDone = true;
           save();
           cue("bloom");
           if (data.books) listBooks();
@@ -154,7 +155,9 @@
                   c +
                   '">' +
                   img("flower-" + c) +
-                  "<span class=\"sr-only\">sound choice</span></button>"
+                  '<span class="garden-letter">' +
+                  c +
+                  "</span></button>"
                 );
               })
               .join("") +
@@ -165,6 +168,22 @@
           };
           cue("bee");
           speak(item.audioText, { rate: 0.7 });
+        } else if (item.kind === "sight") {
+          host.innerHTML =
+            '<div class="garden-prompt"><h2>Helper word</h2><p>' +
+            (item.prompt || "Look and say. This word is not sounded out letter by letter.") +
+            '</p><button type="button" id="hear">Hear it</button></div>' +
+            '<div class="garden-flowers" id="choices">' +
+            item.choices
+              .map(function (c) {
+                return '<button type="button" data-v="' + c + '">' + c + "</button>";
+              })
+              .join("") +
+            '</div><p class="garden-status" id="st"></p>';
+          document.getElementById("hear").onclick = function () {
+            speak(item.audioText, { rate: 0.75 });
+          };
+          speak(item.audioText, { rate: 0.75 });
         } else {
           host.innerHTML =
             '<div class="garden-prompt"><h2>Blend</h2><p>' +
@@ -178,9 +197,9 @@
               .join("") +
             '</div><p class="garden-status" id="st"></p>';
           document.getElementById("hear").onclick = function () {
-            speak(item.audioText);
+            speak((item.sounds || []).join(", ") || item.audioText);
           };
-          speak(item.audioText);
+          speak((item.sounds || []).join(", ") || item.audioText);
         }
         document.getElementById("choices").onclick = function (ev) {
           const btn = ev.target.closest("button[data-v]");
@@ -190,7 +209,8 @@
           if (btn.getAttribute("data-v") === expect) {
             btn.classList.add("is-right");
             cue("bloom");
-            st.textContent = "That bed blooms. The sound again: " + (item.audioText || expect);
+            st.textContent = "That bed blooms.";
+            if (item.blend) speak(item.blend, { rate: 0.85 });
             setTimeout(function () {
               i += 1;
               show();
@@ -214,14 +234,27 @@
         '<div class="garden-beds" id="book-list"></div>' +
         '<p style="padding:12px"><button type="button" id="back-home">Back to garden</button></p>';
       const list = document.getElementById("book-list");
+      const titles = { "sam-sat": "Sam Sat", "the-fig": "The Fig" };
+      const gate = data.bookGate || {};
       (data.books || []).forEach(function (id) {
         const b = document.createElement("div");
         b.className = "garden-bed";
         const slot = id === "sam-sat" ? "sam-sat-cover" : "fig-cover";
-        b.innerHTML = img(slot) + '<button type="button">' + (id === "sam-sat" ? "Sam Sat" : "The Fig") + "</button>";
-        b.querySelector("button").onclick = function () {
-          openBook(id);
-        };
+        const need = gate[id];
+        const read = progress.booksRead || [];
+        const locked =
+          (need && read.indexOf(need) === -1) ||
+          (id === "the-fig" && data.mode === "blends" && !progress.soundsDone);
+        const label = titles[id] || id;
+        const btnLabel = locked
+          ? label + (need ? " — read " + (titles[need] || need) + " first" : " — finish the sound beds first")
+          : label;
+        b.innerHTML = img(slot) + '<button type="button"' + (locked ? " disabled" : "") + ">" + btnLabel + "</button>";
+        if (!locked) {
+          b.querySelector("button").onclick = function () {
+            openBook(id);
+          };
+        }
         list.appendChild(b);
       });
       document.getElementById("back-home").onclick = home;
@@ -236,6 +269,8 @@
         imgFor: img,
         onDone: function () {
           progress.blooms += 1;
+          progress.booksRead = progress.booksRead || [];
+          if (progress.booksRead.indexOf(id) === -1) progress.booksRead.push(id);
           save();
           listBooks();
         },

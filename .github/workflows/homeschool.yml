@@ -53,6 +53,8 @@ jobs:
           PY
       - name: Privacy scan
         run: python3 tools/homeschool/check_privacy.py
+        env:
+          HS_PRIVACY_TERMS: ${{ secrets.HS_PRIVACY_TERMS }}
       - uses: actions/setup-node@v4
         with:
           node-version: "22"

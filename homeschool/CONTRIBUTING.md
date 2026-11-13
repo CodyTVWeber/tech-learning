@@ -61,4 +61,4 @@ If you add a **new** subject id that is not in `stages.json`, ask the maintainer
 
 ## Anki
 
-Public-safe cards only. `python3 tools/anki/build_decks.py` turns `apps/<id>/data/*.json` items (`prompt`/`answer`) into `homeschool/decks/<id>.csv` + `.apkg`. Or commit your own `decks/<id>.*` if you build them another way — still no CC recitation text.
+Public-safe cards only. `python3 tools/anki/build_decks.py` turns `apps/<id>/data/*.json` items into `homeschool/decks/<id>.csv` + `.apkg`. Blend cards: sounds only on the front (`s · a · t`), word on the back. Count cards: put dots or digits in the prompt (the app’s pictures are not in Anki). Or commit your own `decks/<id>.*` — still no CC recitation text.

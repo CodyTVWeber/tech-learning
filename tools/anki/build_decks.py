@@ -39,20 +39,49 @@ MODEL = genanki.Model(
 )
 
 
+def _dot_count(n: int) -> str:
+    return " ".join("●" for _ in range(int(n)))
+
+
 def cards_from_json(path: Path, subject: str) -> list[dict]:
     data = json.loads(path.read_text())
     out = []
     for item in data.get("items") or []:
-        prompt = item.get("prompt") or item.get("audioText") or item.get("blend") or item.get("phoneme")
-        answer = item.get("answer") or item.get("blend") or ""
+        if item.get("kind") == "sight":
+            continue
+        sounds = item.get("sounds")
+        count = item.get("count")
+        if sounds:
+            prompt = " · ".join(str(s) for s in sounds)
+            answer = item.get("blend") or item.get("answer") or ""
+            audio = ", ".join(str(s) for s in sounds)
+        elif count is not None:
+            prompt = str(item.get("prompt") or "How many?")
+            if not any(ch.isdigit() for ch in prompt) and "●" not in prompt:
+                prompt = prompt.rstrip() + "\n" + _dot_count(count)
+            answer = str(item.get("answer") or count)
+            audio = item.get("audioText") or prompt
+        else:
+            prompt = item.get("prompt") or item.get("phoneme")
+            answer = item.get("answer") or item.get("blend") or ""
+            audio = item.get("audioText") or ""
         if not prompt or not answer:
             continue
+        prompt_l = str(prompt).lower()
+        answer_l = str(answer).lower().strip()
+        tokens = [t for t in prompt_l.replace("·", " ").replace(",", " ").split() if t]
+        if sounds and answer_l and answer_l in tokens:
+            raise SystemExit("%s: blend prompt leaks the word %r" % (item.get("id"), answer))
+        if "blend:" in prompt_l:
+            raise SystemExit("%s: prompt must not contain Blend:" % item.get("id"))
+        if "how many" in prompt_l and "●" not in str(prompt) and not any(ch.isdigit() for ch in str(prompt)):
+            raise SystemExit("%s: visual-only count card has no dots or digits" % item.get("id"))
         out.append(
             {
                 "id": item.get("id") or prompt,
                 "prompt": str(prompt),
                 "answer": str(answer),
-                "audio": item.get("audioText") or "",
+                "audio": audio,
                 "tags": " ".join(item.get("tags") or [subject, data.get("band") or ""]),
             }
         )

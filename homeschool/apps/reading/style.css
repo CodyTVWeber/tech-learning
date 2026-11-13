@@ -98,6 +98,28 @@
   border-bottom-width: 8px;
 }
 
+.garden-flowers button[data-v="s"] { background: #e8d36a; }
+.garden-flowers button[data-v="m"] { background: #7a9e6e; }
+.garden-flowers button[data-v="t"] { background: #d4a574; }
+.garden-flowers button[data-v="p"] { background: #d48aa0; }
+.garden-flowers button[data-v="a"] { background: #e08a6a; }
+.garden-flowers button[data-v="i"] { background: #8fbfd4; }
+
+.garden-letter {
+  display: block;
+  font-size: 2.2rem;
+  line-height: 1.1;
+  margin-top: 4px;
+  color: var(--ink);
+  text-transform: lowercase;
+  font-weight: 800;
+}
+
+.garden-bed button[disabled] {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
 .garden-flowers img {
   width: 100%;
   height: 96px;
@@ -181,6 +203,19 @@
 
 .garden img.slot {
   background: #b7c2a8;
+}
+
+.untested-banner {
+  margin: 0;
+  padding: 10px 12px;
+  background: #5c3b22;
+  color: #efe6d0;
+  font-weight: 700;
+  text-align: center;
+}
+
+html[data-runner] .untested-banner {
+  display: none;
 }
 
 .garden .sr-only,

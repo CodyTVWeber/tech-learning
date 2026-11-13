@@ -8,6 +8,7 @@
   },
   "minutes": 20,
   "books": ["sam-sat", "the-fig"],
+  "bookGate": { "the-fig": "sam-sat" },
   "vocab": [
     { "id": "v1", "word": "voyage", "audioText": "voyage", "hint": "A long trip. (Not today’s garden word — skip if you like.)" },
     { "id": "v2", "word": "plot", "audioText": "plot", "hint": "A small piece of garden, or the events in a story." }

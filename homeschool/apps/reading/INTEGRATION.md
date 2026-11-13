@@ -9,8 +9,8 @@ Band via `?band=` or `hs.band`. Progress: `hs.progress.reading`.
 | Band | What happens |
 | --- | --- |
 | baby | Not linked |
-| toddler / preschool | Sound-to-flower. TTS speaks the phoneme (`sss`, not “ess”). |
-| early | Blends, then two original decodable books |
+| toddler / preschool | Sound-to-flower. Each choice shows a visible grapheme. TTS speaks the phoneme (`sss`, not “ess”). |
+| early | Blends (sounds on the prompt, word after a correct tap), helper words *the* / *is*, then *Sam Sat*. *The Fig* unlocks after *Sam Sat*. |
 | primary / upper | Garden reading timer + the same books + a few vocabulary blooms |
 
 ## Books

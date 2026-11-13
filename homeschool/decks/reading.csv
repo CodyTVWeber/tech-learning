@@ -1,15 +1,19 @@
 id,prompt,answer,audio_text,tags
-b1,"s, a, t. Blend: sat.",sat,"s, a, t. Blend: sat.",reading early
-b2,"m, a, t. Blend: mat.",mat,"m, a, t. Blend: mat.",reading early
-b3,"p, a, t. Blend: pat.",pat,"p, a, t. Blend: pat.",reading early
-b4,"t, a, p. Blend: tap.",tap,"t, a, p. Blend: tap.",reading early
-b5,"s, i, t. Blend: sit.",sit,"s, i, t. Blend: sit.",reading early
-b6,"p, i. Blend: pig. (You will hear pig.)",pig,"p, i. Blend: pig. (You will hear pig.)",reading early
+b1,s · a · t,sat,"s, a, t",reading early
+b2,m · a · t,mat,"m, a, t",reading early
+b3,p · a · t,pat,"p, a, t",reading early
+b4,t · a · p,tap,"t, a, p",reading early
+b5,s · i · t,sit,"s, i, t",reading early
+b6,p · i · g,pig,"p, i, g",reading early
+b7,f · i · g,fig,"f, i, g",reading early
+b8,b · i · g,big,"b, i, g",reading early
+b9,d · i · g,dig,"d, i, g",reading early
+b10,n · a · p,nap,"n, a, p",reading early
 q1,sss,s,sss,reading preschool
 q2,mmm,m,mmm,reading preschool
 q3,t,t,t,reading preschool
 q4,p,p,p,reading preschool
-q5,a,a,a,reading preschool
+q5,aaa,a,a,reading preschool
 q6,i,i,i,reading preschool
 q7,sss,s,sss,reading preschool
 q8,t,t,t,reading preschool
@@ -19,7 +23,7 @@ s1,sss,s,sss,reading toddler
 s2,mmm,m,mmm,reading toddler
 s3,t,t,t,reading toddler
 s4,p,p,p,reading toddler
-s5,a,a,a,reading toddler
+s5,aaa,a,a,reading toddler
 s6,sss,s,sss,reading toddler
 s7,mmm,m,mmm,reading toddler
 s8,p,p,p,reading toddler

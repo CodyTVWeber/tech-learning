@@ -31,7 +31,7 @@ Codes K1–K6 = birth order, eldest → youngest. **Do not print K-codes or exac
 | Code | Folder / UI name | Band | Label (UI) | Age band (UI) |
 | --- | --- | --- | --- | --- |
 | K1 | Joey | `upper` | Essentials + Foundations | upper elementary |
-| K2 | Theo | `primary` | Foundations | early elementary |
+| K2 | Theo | `primary` | Foundations | early-middle elementary |
 | K3 | Bella | `early` | Foundations | early elementary |
 | K4 | Piper | `preschool` | Foundations, early learner | early learner |
 | K5 | Hanna | `toddler` | Toddler | toddler |
@@ -158,7 +158,6 @@ Latin John 1:1–7 is Scripture (public domain in English/Vulgate). Do not paste
 
 Write **TBD — confirm with the parents** on the site until answered.
 
-- Official grade (or “we don’t use grades”) — currently **no grades on the site**.
 - Named paper math curriculum placement (Math Map skills vs a named book).
 - Named reading curriculum for Joey/Theo/Bella. Independent reading levels.
 - Does Hanna (or later Shiloh) attend Foundations community day?
