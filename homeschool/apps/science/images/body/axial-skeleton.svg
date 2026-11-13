@@ -17,13 +17,13 @@
 <rect width="600" height="400" fill="#f4ead4"/>
 <rect width="600" height="400" fill="url(#grain)"/>
 
-    <ellipse cx="300" cy="90" rx="32" ry="38" fill="#e6d8b8" stroke="#241c12"/>
-    <rect x="292" y="128" width="16" height="28" fill="#e6d8b8" stroke="#241c12"/>
-    <path d="M250 170 q 50 20 100 0" fill="none" stroke="#241c12" stroke-width="6"/>
-    <path d="M260 190 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 200 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 210 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 220 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 230 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 240 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 250 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M260 260 q 40 6 80 0" fill="none" stroke="#241c12" stroke-width="3"/>
-    <rect x="294" y="180" width="12" height="120" fill="#e6d8b8" stroke="#241c12"/>
-    <path d="M300 300 L 260 370 M300 300 L 340 370" stroke="#241c12" stroke-width="7"/>
-    <path d="M250 175 L 210 250 M350 175 L 390 250" stroke="#241c12" stroke-width="6"/>
+    <ellipse cx="300" cy="88" rx="32" ry="38" fill="#e6d8b8" stroke="#241c12"/>
+    <rect x="292" y="124" width="16" height="24" fill="#e6d8b8" stroke="#241c12"/>
+    <path d="M248 168 q 52 18 104 0" fill="none" stroke="#241c12" stroke-width="6"/>
+    <path d="M258 186 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 197 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 208 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 219 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 230 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 241 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 252 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/><path d="M258 263 q 42 6 84 0" fill="none" stroke="#241c12" stroke-width="3"/>
+    <rect x="294" y="168" width="12" height="132" fill="#e6d8b8" stroke="#241c12"/>
+    <rect x="296" y="176" width="8" height="70" fill="#c9a24a" opacity="0.7"/>
+    <path d="M278 318 q 22 18 44 0 q -8 22 -22 28 q -14 -6 -22 -28 z" fill="#e6d8b8" stroke="#241c12"/>
     <text x="28" y="38" font-family="Georgia, serif" font-size="15" letter-spacing="2.4" fill="#241c12">AXIAL FRAME</text>
     <text x="28" y="372" font-family="Georgia, serif" font-size="11" letter-spacing="2.4" fill="#241c12">Skull · spine · ribs · sternum</text>
     

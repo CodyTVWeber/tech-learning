@@ -9,6 +9,7 @@
 
   function asset(path) {
     if (!path) return path;
+    if (/^(data:|blob:|https?:)/i.test(path)) return path;
     if (window.HS && typeof window.HS.url === "function") return window.HS.url(path);
     const base = document.documentElement.dataset.appBase || "./";
     try { return new URL(path, new URL(base, location.href)).href; } catch (e) { return path; }
@@ -29,7 +30,8 @@
     habitatId: null,
     expId: null,
     journalId: null,
-    magSrc: "images/specimens/oak-leaf.svg"
+    magSrc: "images/specimens/oak-leaf.svg",
+    babyIndex: 0
   };
 
   function toast(msg) {
@@ -40,6 +42,7 @@
   }
 
   function say(text) {
+    if (document.documentElement.dataset.runner === "1") return;
     Speech.speak(text, state.band);
   }
 
@@ -98,11 +101,24 @@
     show("picker");
   }
 
+  function syncSpeakBtn() {
+    const on = Speech.isOn();
+    const btn = $("#btn-speak");
+    if (!btn) return;
+    btn.classList.toggle("speak-on", on);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+  }
+
   function enterBand(id) {
     state.band = id;
     Store.setBand(id);
-    document.body.classList.toggle("baby-mode", id === "baby");
-    $("#app").classList.toggle("baby-mode", id === "baby");
+    document.body.classList.toggle("baby-mode", id === "baby" && !document.documentElement.dataset.runner);
+    const root = $("#app");
+    if (root) root.classList.toggle("baby-mode", id === "baby");
+    if (id === "baby" || id === "toddler") {
+      Speech.setOn(true);
+      syncSpeakBtn();
+    }
     paintStats();
     if (id === "baby") renderBaby();
     else renderCamp();
@@ -125,12 +141,24 @@
   }
 
   function renderBaby() {
-    const box = $("#baby-grid");
-    box.innerHTML = D.babyPlates.map(function (pl) {
-      return '<button class="card" data-act="baby" data-id="' + pl.id + '" style="min-height:220px">' +
-        img(pl.img, pl.name, "hero-plate") + "<h3>" + pl.name + "</h3></button>";
-    }).join("");
+    const plates = D.babyPlates;
+    const n = plates.length;
+    state.babyIndex = ((state.babyIndex % n) + n) % n;
+    const pl = plates[state.babyIndex];
+    const box = $("#baby-stage");
+    box.innerHTML =
+      '<button class="baby-plate" data-act="baby" data-id="' + pl.id + '">' +
+        img(pl.img, pl.name, "hero-plate") +
+        '<span class="baby-word">' + pl.name + "</span>" +
+      "</button>" +
+      '<div class="puddle-grow" id="baby-puddle" hidden></div>' +
+      '<div class="baby-nav">' +
+        '<button type="button" data-act="baby-prev">Back</button>' +
+        '<span class="chip">' + (state.babyIndex + 1) + " / " + n + "</span>" +
+        '<button type="button" data-act="baby-next">Next</button>' +
+      "</div>";
     show("baby");
+    say(pl.read);
   }
 
   function renderHabitats() {
@@ -354,21 +382,37 @@
     state.quizIndex = 0;
     state.quizRight = 0;
     $("#trail-detail").innerHTML =
+      "<div id='trail-brief'>" +
       "<p class='kicker'>Field marker " + t.marker + "</p><h2>" + t.title + "</h2>" +
       img(t.img, t.title, "hero-plate") +
       "<p class='lede'>" + t.notes + "</p>" +
       "<div class='row'><button class='moss' data-act='speak-text' data-text=\"" + encodeURIComponent(t.notes) + "\">Read notes</button>" +
       "<button class='ink' data-act='quiz-start' data-id='" + t.id + "'>Walk the quiz trail</button></div>" +
+      "</div>" +
       "<div id='quiz-box'></div>";
     show("trail");
     say(t.title + ". " + t.notes);
   }
 
+  function shuffleOrder(n) {
+    const order = [];
+    for (let i = 0; i < n; i++) order.push(i);
+    for (let i = n - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const tmp = order[i];
+      order[i] = order[j];
+      order[j] = tmp;
+    }
+    return order;
+  }
+
   function renderQuiz() {
     const t = D.topics.filter(function (x) { return x.id === state.trailId; })[0];
     if (!t) return;
+    const brief = $("#trail-brief");
     const box = $("#quiz-box");
     if (state.quizIndex >= t.quiz.length) {
+      if (brief) brief.hidden = false;
       award("trail", t.id, 3, "Trail stamped: " + t.title);
       box.innerHTML = "<p>Trail complete. Footprints logged — no grades, just stamps.</p>" +
         "<p>Right steps on this walk: " + state.quizRight + " of " + t.quiz.length + ".</p>" +
@@ -376,28 +420,32 @@
       AudioX.ok();
       return;
     }
+    if (brief) brief.hidden = true;
     const item = t.quiz[state.quizIndex];
+    const order = shuffleOrder(item.a.length);
     box.innerHTML = "<p class='kicker'>Step " + (state.quizIndex + 1) + " of " + t.quiz.length + "</p><h3>" + item.q + "</h3>" +
-      "<div class='choices'>" + item.a.map(function (ans, i) {
-        return "<button data-act='quiz-ans' data-i='" + i + "'>" + ans + "</button>";
+      "<div class='choices'>" + order.map(function (orig) {
+        return "<button data-act='quiz-ans' data-i='" + orig + "'>" + item.a[orig] + "</button>";
       }).join("") + "</div>";
     say(item.q);
+    box.scrollIntoView({ block: "start" });
   }
 
-  function answerQuiz(i) {
+  function answerQuiz(orig) {
     const t = D.topics.filter(function (x) { return x.id === state.trailId; })[0];
     const item = t.quiz[state.quizIndex];
     const buttons = $$("#quiz-box .choices button");
     buttons.forEach(function (b) { b.disabled = true; });
-    const pick = buttons[i];
-    if (i === item.ok) {
-      pick.classList.add("right");
+    const pick = buttons.filter(function (b) { return Number(b.getAttribute("data-i")) === orig; })[0];
+    const right = buttons.filter(function (b) { return Number(b.getAttribute("data-i")) === item.ok; })[0];
+    if (orig === item.ok) {
+      if (pick) pick.classList.add("right");
       state.quizRight += 1;
       AudioX.ok();
       toast("True field note.");
     } else {
-      pick.classList.add("wrong");
-      buttons[item.ok].classList.add("right");
+      if (pick) pick.classList.add("wrong");
+      if (right) right.classList.add("right");
       AudioX.miss();
       toast("Look again at the plate.");
     }
@@ -407,15 +455,28 @@
     }, 900);
   }
 
+  function picFirst() {
+    return state.band === "toddler" || state.band === "preschool";
+  }
+
+  function chipButton(act, id, label, src) {
+    const pic = (picFirst() && src) ? img(src, label, "chip-pic") : "";
+    return '<button class="chip-btn' + (pic ? " pic" : "") + '" data-act="' + act + '" data-id="' + id + '">' +
+      pic + "<span>" + label + "</span></button>";
+  }
+
   function renderSorts() {
     const list = D.sorts.filter(function (s) { return D.inBand(s, state.band); }).concat(
       D.matches.filter(function (m) { return D.inBand(m, state.band); }).map(function (m) {
-        return { id: "match:" + m.id, title: m.title, kind: "match" };
+        return { id: "match:" + m.id, title: m.title, kind: "match", img: m.img };
       })
     );
     $("#sort-grid").innerHTML = list.map(function (s) {
       const act = (s.id.indexOf("match:") === 0) ? "match" : "sort";
       const id = s.id.replace("match:", "");
+      if (s.img) {
+        return cardButton({ act: act, id: id, img: s.img, title: s.title, blurb: s.prompt || "Pairs", tag: act, alt: s.title });
+      }
       return '<button class="card" data-act="' + act + '" data-id="' + id + '"><h3>' + s.title + "</h3></button>";
     }).join("");
     show("sorts");
@@ -442,7 +503,7 @@
     const s = D.sorts.filter(function (x) { return x.id === state.sortId; })[0];
     const used = state.placed;
     $("#sort-pool").innerHTML = s.items.filter(function (it) { return !used[it.id]; }).map(function (it) {
-      return '<button class="chip-btn" data-act="sort-pick" data-id="' + it.id + '">' + it.name + "</button>";
+      return chipButton("sort-pick", it.id, it.name, it.img);
     }).join("") || "<p class='chip'>All placed. Check the table.</p>";
   }
 
@@ -459,10 +520,16 @@
       "<p class='kicker'>Match</p><h2>" + m.title + "</h2>" +
       "<div class='row' id='match-left'></div><div class='row' id='match-right'></div>";
     $("#match-left").innerHTML = left.map(function (x) {
-      return '<button class="chip-btn" data-act="match-tap" data-side="l" data-i="' + x.i + '">' + x.t + "</button>";
+      const src = m.pairs[x.i].lImg;
+      const pic = (picFirst() && src) ? img(src, x.t, "chip-pic") : "";
+      return '<button class="chip-btn' + (pic ? " pic" : "") + '" data-act="match-tap" data-side="l" data-i="' + x.i + '">' +
+        pic + "<span>" + x.t + "</span></button>";
     }).join("");
     $("#match-right").innerHTML = right.map(function (x) {
-      return '<button class="chip-btn" data-act="match-tap" data-side="r" data-i="' + x.i + '">' + x.t + "</button>";
+      const src = m.pairs[x.i].rImg;
+      const pic = (picFirst() && src) ? img(src, x.t, "chip-pic") : "";
+      return '<button class="chip-btn' + (pic ? " pic" : "") + '" data-act="match-tap" data-side="r" data-i="' + x.i + '">' +
+        pic + "<span>" + x.t + "</span></button>";
     }).join("");
     show("sort");
   }
@@ -526,6 +593,8 @@
     else if (act === "trail") renderTrail(id);
     else if (act === "quiz-start") { state.trailId = id; state.quizIndex = 0; state.quizRight = 0; renderQuiz(); }
     else if (act === "quiz-ans") answerQuiz(Number(id));
+    else if (act === "baby-next") { state.babyIndex += 1; renderBaby(); }
+    else if (act === "baby-prev") { state.babyIndex -= 1; renderBaby(); }
     else if (act === "sort") renderSort(id);
     else if (act === "match") renderMatch(id);
     else if (act === "stamp-id") award("stamp", id, 1, "Sky or shed stamped.");
@@ -537,6 +606,20 @@
         else if (pl.sound === "chirp") AudioX.chirp();
         else AudioX.ok();
         say(pl.read);
+        if (pl.id === "rain") {
+          const puddle = $("#baby-puddle");
+          if (puddle) {
+            puddle.hidden = false;
+            requestAnimationFrame(function () { puddle.classList.add("on"); });
+          }
+          setTimeout(function () {
+            const idx = D.babyPlates.findIndex(function (x) { return x.id === "puddle"; });
+            if (idx >= 0) {
+              state.babyIndex = idx;
+              renderBaby();
+            }
+          }, 900);
+        }
       }
     } else if (act === "speak-text") {
       try { say(decodeURIComponent(id)); } catch (e) { say(id); }
@@ -599,7 +682,7 @@
       const slot = b.querySelector(".bin-items");
       if (slot) {
         slot.innerHTML = hold.map(function (it) {
-          return '<button class="chip-btn" data-act="sort-pick" data-id="' + it.id + '">' + it.name + "</button>";
+          return chipButton("sort-pick", it.id, it.name, it.img);
         }).join("");
       }
     });
@@ -626,8 +709,7 @@
 
   function toggleSpeech() {
     const on = Speech.toggle();
-    $("#btn-speak").classList.toggle("speak-on", on);
-    $("#btn-speak").setAttribute("aria-pressed", on ? "true" : "false");
+    syncSpeakBtn();
     toast(on ? (Speech.supported ? "Read-aloud on." : "Read-aloud on — no voice on this device, words still show.") : "Read-aloud off.");
     if (on && Speech.supported) say("Read aloud is on.");
   }

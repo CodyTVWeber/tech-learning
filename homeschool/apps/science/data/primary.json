@@ -312,6 +312,50 @@
     },
     {
       "id": "primary-29",
+      "prompt": "Atomic number counts which particles in the nucleus?",
+      "answer": "Protons",
+      "audioText": "That count names the element.",
+      "tags": [
+        "primary",
+        "chemistry",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-30",
+      "prompt": "An atom with eight protons is which element?",
+      "answer": "Oxygen",
+      "audioText": "Atomic number eight.",
+      "tags": [
+        "primary",
+        "chemistry",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-31",
+      "prompt": "A substance made of only one kind of atom is called an\u2026",
+      "answer": "Element",
+      "audioText": "Gold is gold atoms.",
+      "tags": [
+        "primary",
+        "chemistry",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-32",
+      "prompt": "Protons live in which part of an atom?",
+      "answer": "The nucleus",
+      "audioText": "Plus charge.",
+      "tags": [
+        "primary",
+        "chemistry",
+        "primary"
+      ]
+    },
+    {
+      "id": "primary-33",
       "prompt": "Lemon juice is a household example of an\u2026",
       "answer": "Acid",
       "audioText": "Do not taste lab jars.",
@@ -322,7 +366,7 @@
       ]
     },
     {
-      "id": "primary-30",
+      "id": "primary-34",
       "prompt": "Soap water leans toward being a\u2026",
       "answer": "Base",
       "audioText": "Slippery clue.",
@@ -333,7 +377,7 @@
       ]
     },
     {
-      "id": "primary-31",
+      "id": "primary-35",
       "prompt": "A vinegar and baking-soda fizz shows an acid meeting a\u2026",
       "answer": "Base",
       "audioText": "Carbon dioxide gas. Adult required. Open jar.",
@@ -344,7 +388,7 @@
       ]
     },
     {
-      "id": "primary-32",
+      "id": "primary-36",
       "prompt": "A food chain starts with a plant that catches\u2026",
       "answer": "Light",
       "audioText": "Design in provision.",
@@ -355,7 +399,7 @@
       ]
     },
     {
-      "id": "primary-33",
+      "id": "primary-37",
       "prompt": "A habitat must offer food, water, shelter, and a\u2026",
       "answer": "Fitting place",
       "audioText": "Yard to woodland.",
@@ -366,7 +410,7 @@
       ]
     },
     {
-      "id": "primary-34",
+      "id": "primary-38",
       "prompt": "Buried leftovers of life in stone are called\u2026",
       "answer": "Fossils",
       "audioText": "Records, not toys.",
@@ -377,7 +421,7 @@
       ]
     },
     {
-      "id": "primary-35",
+      "id": "primary-39",
       "prompt": "Tree rings can record seasons of\u2026",
       "answer": "Growth",
       "audioText": "A quiet history.",
@@ -388,7 +432,7 @@
       ]
     },
     {
-      "id": "primary-36",
+      "id": "primary-40",
       "prompt": "The water cycle is powered largely by the\u2026",
       "answer": "Sun",
       "audioText": "Evaporate, condense, fall, run.",
@@ -399,7 +443,7 @@
       ]
     },
     {
-      "id": "primary-37",
+      "id": "primary-41",
       "prompt": "Simple machines do not make energy from nothing; they change how\u2026",
       "answer": "Work is applied",
       "audioText": "Direction, distance, force.",
@@ -410,7 +454,7 @@
       ]
     },
     {
-      "id": "primary-38",
+      "id": "primary-42",
       "prompt": "Celery tubes carrying dye are a picture of how plants\u2026",
       "answer": "Move water",
       "audioText": "Home lab with a grown-up.",
@@ -421,7 +465,7 @@
       ]
     },
     {
-      "id": "primary-39",
+      "id": "primary-43",
       "prompt": "A seed's baby plant plus packed lunch is a clue that a\u2026 already exists.",
       "answer": "Plan",
       "audioText": "The plan does not write itself.",
@@ -432,7 +476,7 @@
       ]
     },
     {
-      "id": "primary-40",
+      "id": "primary-44",
       "prompt": "Oak from oak and robin from robin is reproduction after a creature's\u2026",
       "answer": "Kind",
       "audioText": "Public-domain idea, original wording.",
@@ -443,7 +487,7 @@
       ]
     },
     {
-      "id": "primary-41",
+      "id": "primary-45",
       "prompt": "Psalm 19 points a naturalist to look up and see whose glory in the sky?",
       "answer": "God's",
       "audioText": "KJV public domain.",
@@ -454,7 +498,7 @@
       ]
     },
     {
-      "id": "primary-42",
+      "id": "primary-46",
       "prompt": "A good field journal records date, place, true observations, and\u2026",
       "answer": "Questions",
       "audioText": "No made-up grades.",
@@ -465,7 +509,7 @@
       ]
     },
     {
-      "id": "primary-43",
+      "id": "primary-47",
       "prompt": "Under a hand lens, a leaf's edge and veins help you study\u2026",
       "answer": "What is truly there, not what you guessed",
       "audioText": "Draw one small square.",

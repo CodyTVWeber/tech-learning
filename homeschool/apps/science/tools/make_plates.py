@@ -228,12 +228,19 @@ def habitat_backyard():
 
 def spec_oak():
     inner = f'''
-    <path d="M300 80 C 220 120, 190 220, 250 300 C 200 280, 210 200, 260 150 C 240 240, 280 320, 300 340 C 320 320, 360 240, 340 150 C 390 200, 400 280, 350 300 C 410 220, 380 120, 300 80 Z" fill="{MOSS}"/>
-    <path d="M300 140 v210" stroke="{INK}" stroke-width="5"/>
-    <path d="M300 210 l 40 20 M300 250 l -36 24 M300 180 l 28 -10" stroke="{INK}" stroke-width="3"/>
-    <ellipse cx="160" cy="200" rx="36" ry="22" fill="{MOSS}" transform="rotate(-30 160 200)"/>
-    <path d="M160 200 l 50 70" stroke="{INK}" stroke-width="2"/>
-    <ellipse cx="170" cy="290" rx="10" ry="16" fill="{OCHRE}"/>
+    <path d="M300 56
+      C 268 70, 248 88, 262 112 C 232 118, 214 142, 248 152
+      C 216 164, 208 196, 250 204 C 222 220, 218 252, 258 258
+      C 236 278, 248 312, 286 322
+      C 294 348, 306 348, 314 322
+      C 352 312, 364 278, 342 258 C 382 252, 384 220, 350 204
+      C 392 196, 384 164, 352 152 C 386 142, 368 118, 338 112
+      C 352 88, 332 70, 300 56 Z" fill="{MOSS}"/>
+    <path d="M300 78 v250" stroke="{INK}" stroke-width="4"/>
+    <path d="M300 120 l -28 12 M300 120 l 28 12 M300 168 l -40 8 M300 168 l 40 8 M300 216 l -36 10 M300 216 l 36 10 M300 264 l -22 14 M300 264 l 22 14" stroke="{INK}" stroke-width="2"/>
+    <ellipse cx="150" cy="292" rx="12" ry="18" fill="{OCHRE}"/>
+    <path d="M150 274 q 10 -22 0 -34" fill="none" stroke="{INK}" stroke-width="2"/>
+    <path d="M138 286 q 12 4 24 0" fill="none" stroke="{INK}" stroke-width="2"/>
     {plate_label(28, 38, "QUERCUS  ·  OAK LEAF")}
     {plate_label(28, 372, "Lobed margin · acorn cup", True)}
     '''
@@ -248,6 +255,50 @@ def spec_maple():
     {plate_label(28, 372, "Palmate veins · five lobes", True)}
     '''
     save("specimens/maple-leaf.svg", svg(600, 400, inner))
+
+
+def spec_cactus():
+    inner = f'''
+    <path d="M300 330 v-170 q 0 -28 22 -28 q 22 0 22 28 v70" fill="none" stroke="{MOSS}" stroke-width="28" stroke-linecap="round"/>
+    <path d="M300 230 h-70 q -24 0 -24 -26 q 0 -24 24 -24 h70" fill="none" stroke="{MOSS}" stroke-width="22" stroke-linecap="round"/>
+    <path d="M322 210 h54 q 20 0 20 -22 q 0 -20 -20 -20 h-40" fill="none" stroke="{MOSS}" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="300" cy="132" r="8" fill="{CLAY}"/>
+    <path d="M270 180 l -10 -16 M250 200 l -14 -12 M330 170 l 12 -14 M348 198 l 14 -10" stroke="{INK}" stroke-width="2"/>
+    {plate_label(28, 38, "CACTUS  ·  DESERT")}
+    {plate_label(28, 372, "Stored water · spines · dry wash", True)}
+    '''
+    save("specimens/cactus.svg", svg(600, 400, inner))
+
+
+def spec_pebble():
+    inner = f'''
+    <ellipse cx="300" cy="220" rx="90" ry="58" fill="{INK}" opacity="0.55"/>
+    <ellipse cx="290" cy="210" rx="40" ry="18" fill="{CREAM}" opacity="0.35"/>
+    {plate_label(28, 38, "PEBBLE")}
+    {plate_label(28, 372, "Heavy · no trapped air", True)}
+    '''
+    save("specimens/pebble.svg", svg(600, 400, inner))
+
+
+def spec_twig():
+    inner = f'''
+    <path d="M120 260 C 200 200, 280 240, 360 180 C 420 140, 480 150, 520 120" fill="none" stroke="{INK}" stroke-width="10" stroke-linecap="round"/>
+    <path d="M280 220 l 24 -40 M400 160 l 18 -34" stroke="{INK}" stroke-width="5" stroke-linecap="round"/>
+    {plate_label(28, 38, "TWIG")}
+    {plate_label(28, 372, "Light wood · air in the grain", True)}
+    '''
+    save("specimens/twig.svg", svg(600, 400, inner))
+
+
+def spec_apple():
+    inner = f'''
+    <path d="M300 130 C 230 130, 200 200, 210 250 C 220 320, 280 340, 300 340 C 320 340, 380 320, 390 250 C 400 200, 370 130, 300 130 Z" fill="{CLAY}"/>
+    <path d="M300 130 q 10 -40 28 -48" fill="none" stroke="{INK}" stroke-width="4"/>
+    <path d="M318 92 q 24 10 20 32" fill="{MOSS}"/>
+    {plate_label(28, 38, "APPLE")}
+    {plate_label(28, 372, "Whole fruit · trapped air", True)}
+    '''
+    save("specimens/apple.svg", svg(600, 400, inner))
 
 
 def spec_pine():
@@ -484,13 +535,13 @@ def tool_compass():
 
 def body_skeleton():
     inner = f'''
-    <ellipse cx="300" cy="90" rx="32" ry="38" fill="{BONE}" stroke="{INK}"/>
-    <rect x="292" y="128" width="16" height="28" fill="{BONE}" stroke="{INK}"/>
-    <path d="M250 170 q 50 20 100 0" fill="none" stroke="{INK}" stroke-width="6"/>
-    {''.join(f'<path d="M260 {190+i*10} q 40 6 80 0" fill="none" stroke="{INK}" stroke-width="3"/>' for i in range(8))}
-    <rect x="294" y="180" width="12" height="120" fill="{BONE}" stroke="{INK}"/>
-    <path d="M300 300 L 260 370 M300 300 L 340 370" stroke="{INK}" stroke-width="7"/>
-    <path d="M250 175 L 210 250 M350 175 L 390 250" stroke="{INK}" stroke-width="6"/>
+    <ellipse cx="300" cy="88" rx="32" ry="38" fill="{BONE}" stroke="{INK}"/>
+    <rect x="292" y="124" width="16" height="24" fill="{BONE}" stroke="{INK}"/>
+    <path d="M248 168 q 52 18 104 0" fill="none" stroke="{INK}" stroke-width="6"/>
+    {''.join(f'<path d="M258 {186+i*11} q 42 6 84 0" fill="none" stroke="{INK}" stroke-width="3"/>' for i in range(8))}
+    <rect x="294" y="168" width="12" height="132" fill="{BONE}" stroke="{INK}"/>
+    <rect x="296" y="176" width="8" height="70" fill="{GOLD}" opacity="0.7"/>
+    <path d="M278 318 q 22 18 44 0 q -8 22 -22 28 q -14 -6 -22 -28 z" fill="{BONE}" stroke="{INK}"/>
     {plate_label(28, 38, "AXIAL FRAME")}
     {plate_label(28, 372, "Skull · spine · ribs · sternum", True)}
     '''
@@ -537,6 +588,55 @@ def body_senses():
     {plate_label(28, 372, "See · hear · smell · taste · touch", True)}
     '''
     save("body/senses.svg", svg(600, 400, inner))
+
+
+def body_ear():
+    inner = f'''
+    <path d="M300 80 q 90 20 90 120 q 0 110 -70 150 q -40 24 -70 8 q 30 -40 36 -80 q -50 -10 -50 -70 q 0 -90 64 -128 z" fill="{GOLD}" stroke="{INK}" stroke-width="3"/>
+    <path d="M318 140 q 40 20 36 70 q -6 40 -30 58" fill="none" stroke="{INK}" stroke-width="3"/>
+    <ellipse cx="310" cy="200" rx="16" ry="22" fill="{CREAM}" stroke="{INK}"/>
+    {plate_label(28, 38, "HEARING  ·  EAR")}
+    {plate_label(28, 372, "Catch a wave · tiny bones", True)}
+    '''
+    save("body/ear.svg", svg(600, 400, inner))
+
+
+def body_nose():
+    inner = f'''
+    <path d="M300 70 q 40 80 50 160 q 8 50 -50 90 q -58 -40 -50 -90 q 10 -80 50 -160 z" fill="{CREAM}" stroke="{INK}" stroke-width="3"/>
+    <ellipse cx="278" cy="290" rx="14" ry="10" fill="{INK}"/>
+    <ellipse cx="322" cy="290" rx="14" ry="10" fill="{INK}"/>
+    {plate_label(28, 38, "SMELL  ·  NOSE")}
+    {plate_label(28, 372, "Chemicals in air", True)}
+    '''
+    save("body/nose.svg", svg(600, 400, inner))
+
+
+def body_tongue():
+    inner = f'''
+    <ellipse cx="300" cy="230" rx="110" ry="70" fill="{CLAY}" stroke="{INK}" stroke-width="3"/>
+    <path d="M210 220 q 90 40 180 0" fill="none" stroke="{INK}" stroke-width="2" opacity="0.45"/>
+    <circle cx="250" cy="210" r="6" fill="{INK}" opacity="0.35"/>
+    <circle cx="300" cy="200" r="6" fill="{INK}" opacity="0.35"/>
+    <circle cx="350" cy="214" r="6" fill="{INK}" opacity="0.35"/>
+    {plate_label(28, 38, "TASTE  ·  TONGUE")}
+    {plate_label(28, 372, "Buds · partners with smell", True)}
+    '''
+    save("body/tongue.svg", svg(600, 400, inner))
+
+
+def body_hand():
+    inner = f'''
+    <rect x="250" y="200" width="100" height="110" rx="18" fill="{BONE}" stroke="{INK}" stroke-width="3"/>
+    <rect x="258" y="90" width="18" height="120" rx="9" fill="{BONE}" stroke="{INK}"/>
+    <rect x="284" y="70" width="18" height="140" rx="9" fill="{BONE}" stroke="{INK}"/>
+    <rect x="310" y="78" width="18" height="132" rx="9" fill="{BONE}" stroke="{INK}"/>
+    <rect x="336" y="96" width="18" height="114" rx="9" fill="{BONE}" stroke="{INK}"/>
+    <rect x="220" y="200" width="28" height="70" rx="12" fill="{BONE}" stroke="{INK}"/>
+    {plate_label(28, 38, "TOUCH  ·  SKIN")}
+    {plate_label(28, 372, "Pressure · warmth · care", True)}
+    '''
+    save("body/hand.svg", svg(600, 400, inner))
 
 
 def body_digest():
@@ -763,7 +863,7 @@ def ui():
     '''
     save("ui/placeholder.svg", svg(600, 400, inner))
 
-    # high-contrast baby plates
+    # high-contrast baby plates (Nest reuses habitat/specimen plates for extra taps)
     for name, shape in [
         ("leaf", f'<path d="M300 70 C 180 160, 180 280, 300 340 C 420 280, 420 160, 300 70 Z" fill="{INK}"/><path d="M300 90 v230" stroke="{PAPER}" stroke-width="6"/>'),
         ("sun", f'<circle cx="300" cy="200" r="80" fill="{INK}"/>' + "".join(f'<rect x="292" y="40" width="16" height="40" fill="{INK}" transform="rotate({i*45} 300 200)"/>' for i in range(8))),
