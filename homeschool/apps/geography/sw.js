@@ -1,4 +1,4 @@
-var CACHE = "hs-geography-v3";
+var CACHE = "hs-geography-v4";
 var ASSETS = [
   "./",
   "./index.html",
