@@ -42,8 +42,18 @@
   }
 
   function say(text) {
-    if (document.documentElement.dataset.runner === "1") return;
     Speech.speak(text, state.band);
+  }
+
+  function markerLine(t) {
+    if (t && t.warmUp) return "Warm-up";
+    return "Field marker " + t.marker;
+  }
+
+  function quizItems(t) {
+    if (!t) return [];
+    if (state.band === "upper" && t.quizUpper && t.quizUpper.length) return t.quizUpper;
+    return t.quiz || [];
   }
 
   function show(id) {
@@ -115,7 +125,7 @@
     document.body.classList.toggle("baby-mode", id === "baby" && !document.documentElement.dataset.runner);
     const root = $("#app");
     if (root) root.classList.toggle("baby-mode", id === "baby");
-    if (id === "baby" || id === "toddler") {
+    if (id === "baby" || id === "toddler" || id === "preschool") {
       Speech.setOn(true);
       syncSpeakBtn();
     }
@@ -297,7 +307,7 @@
     $("#body-systems").innerHTML = topics.length
       ? topics.map(function (t) {
         const got = !!progress().trails[t.id];
-        return cardButton({ act: "trail", id: t.id, img: t.img, title: t.title, blurb: "Marker " + t.marker, tag: "body trail", got: got, alt: t.title });
+        return cardButton({ act: "trail", id: t.id, img: t.img, title: t.title, blurb: markerLine(t), tag: "body trail", got: got, alt: t.title });
       }).join("")
       : "<p>Body system trails open on Ridge and Summit Lab.</p>";
     show("body");
@@ -360,7 +370,7 @@
       cardButton({ act: "magnify-src", id: "images/creation/eye.svg", img: "images/creation/eye.svg", title: "The eye", blurb: "Parts fitted for seeing", tag: "lookout", alt: "Eye" })
     ].join("") + notes.map(function (t) {
       const got = !!progress().trails[t.id];
-      return cardButton({ act: "trail", id: t.id, img: t.img, title: t.title, blurb: "Marker " + t.marker, tag: "creation trail", got: got, alt: t.title });
+      return cardButton({ act: "trail", id: t.id, img: t.img, title: t.title, blurb: markerLine(t), tag: "creation trail", got: got, alt: t.title });
     }).join("");
     show("creation");
   }
@@ -369,7 +379,7 @@
     const list = D.topics.filter(function (t) { return D.inBand(t, state.band); });
     $("#trail-grid").innerHTML = list.map(function (t) {
       const got = !!progress().trails[t.id];
-      return cardButton({ act: "trail", id: t.id, img: t.img, title: t.title, blurb: "Field marker " + t.marker, tag: "topic", got: got, alt: t.title });
+      return cardButton({ act: "trail", id: t.id, img: t.img, title: t.title, blurb: markerLine(t), tag: "topic", got: got, alt: t.title });
     }).join("");
     $("#trail-note").textContent = "Topic titles only. Original field notes and quizzes — not class recitation wording.";
     show("trails");
@@ -383,7 +393,7 @@
     state.quizRight = 0;
     $("#trail-detail").innerHTML =
       "<div id='trail-brief'>" +
-      "<p class='kicker'>Field marker " + t.marker + "</p><h2>" + t.title + "</h2>" +
+      "<p class='kicker'>" + markerLine(t) + "</p><h2>" + t.title + "</h2>" +
       img(t.img, t.title, "hero-plate") +
       "<p class='lede'>" + t.notes + "</p>" +
       "<div class='row'><button class='moss' data-act='speak-text' data-text=\"" + encodeURIComponent(t.notes) + "\">Read notes</button>" +
@@ -411,19 +421,28 @@
     if (!t) return;
     const brief = $("#trail-brief");
     const box = $("#quiz-box");
-    if (state.quizIndex >= t.quiz.length) {
+    const items = quizItems(t);
+    if (state.quizIndex >= items.length) {
       if (brief) brief.hidden = false;
-      award("trail", t.id, 3, "Trail stamped: " + t.title);
-      box.innerHTML = "<p>Trail complete. Footprints logged — no grades, just stamps.</p>" +
-        "<p>Right steps on this walk: " + state.quizRight + " of " + t.quiz.length + ".</p>" +
-        "<button class='moss' data-act='nav' data-id='trails'>Back to markers</button>";
-      AudioX.ok();
+      const again = "<button class='moss' data-act='quiz-start' data-id='" + t.id + "'>Walk it again</button>";
+      const back = "<button data-act='nav' data-id='trails'>Back to markers</button>";
+      if (state.quizRight > 0) {
+        award("trail", t.id, state.quizRight, "Trail stamped: " + t.title);
+        box.innerHTML = "<p>Trail stamped for true answers. Stamps are not grades.</p>" +
+          "<p>Right steps on this walk: " + state.quizRight + " of " + items.length + ".</p>" +
+          "<div class='row'>" + back + again + "</div>";
+        AudioX.ok();
+      } else {
+        box.innerHTML = "<p>No stamp this walk. A stamp follows a true answer.</p>" +
+          "<p>Right steps on this walk: 0 of " + items.length + ".</p>" +
+          "<div class='row'>" + again + back + "</div>";
+      }
       return;
     }
     if (brief) brief.hidden = true;
-    const item = t.quiz[state.quizIndex];
+    const item = items[state.quizIndex];
     const order = shuffleOrder(item.a.length);
-    box.innerHTML = "<p class='kicker'>Step " + (state.quizIndex + 1) + " of " + t.quiz.length + "</p><h3>" + item.q + "</h3>" +
+    box.innerHTML = "<p class='kicker'>Step " + (state.quizIndex + 1) + " of " + items.length + "</p><h3>" + item.q + "</h3>" +
       "<div class='choices'>" + order.map(function (orig) {
         return "<button data-act='quiz-ans' data-i='" + orig + "'>" + item.a[orig] + "</button>";
       }).join("") + "</div>";
@@ -433,7 +452,7 @@
 
   function answerQuiz(orig) {
     const t = D.topics.filter(function (x) { return x.id === state.trailId; })[0];
-    const item = t.quiz[state.quizIndex];
+    const item = quizItems(t)[state.quizIndex];
     const buttons = $$("#quiz-box .choices button");
     buttons.forEach(function (b) { b.disabled = true; });
     const pick = buttons.filter(function (b) { return Number(b.getAttribute("data-i")) === orig; })[0];

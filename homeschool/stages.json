@@ -169,7 +169,7 @@
         "movement": "creative-movement",
         "presentation": "none",
         "bible": "family-study",
-        "science": "none",
+        "science": "cycle3-topics",
         "art": "studio-basics",
         "singing": "family-hymns"
       }
@@ -192,7 +192,7 @@
         "movement": "none",
         "presentation": "none",
         "bible": "none",
-        "science": "none",
+        "science": "cycle3-topics",
         "art": "none",
         "singing": "none"
       }
