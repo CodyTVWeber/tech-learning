@@ -2,8 +2,8 @@
   "band": "preschool",
   "title": "Garden sounds",
   "intro": {
-    "audioText": "More sounds in the garden. Still sounds first, not the ABC song.",
-    "body": "Same garden, more sounds. Sounds first \u2014 never letter names as the first teaching. After the sound beds, try oral blending, then one short book."
+    "audioText": "More sounds in the garden. Still sounds first, not the ABC song. After sound beds, tap each seed in order, then blend.",
+    "body": "Same garden, more sounds. Sounds first — never letter names as the first teaching. After the sound beds, tap each seed in order, then blend. Then one short book."
   },
   "beds": [
     {
@@ -403,7 +403,7 @@
         "t"
       ],
       "blend": "sat",
-      "audioText": "s, a, t",
+      "audioText": "sss. aaa. tuh",
       "answer": "sat",
       "choices": [
         "sat",
@@ -420,7 +420,7 @@
         "t"
       ],
       "blend": "mat",
-      "audioText": "m, a, t",
+      "audioText": "mmm. aaa. tuh",
       "answer": "mat",
       "choices": [
         "sat",
@@ -437,7 +437,7 @@
         "n"
       ],
       "blend": "pan",
-      "audioText": "p, a, n",
+      "audioText": "puh. aaa. nnn",
       "answer": "pan",
       "choices": [
         "pan",
@@ -454,7 +454,7 @@
         "p"
       ],
       "blend": "tap",
-      "audioText": "t, a, p",
+      "audioText": "tuh. aaa. puh",
       "answer": "tap",
       "choices": [
         "tap",
@@ -471,7 +471,7 @@
         "t"
       ],
       "blend": "sit",
-      "audioText": "s, i, t",
+      "audioText": "sss. iii. tuh",
       "answer": "sit",
       "choices": [
         "sit",
@@ -488,7 +488,7 @@
         "p"
       ],
       "blend": "map",
-      "audioText": "m, a, p",
+      "audioText": "mmm. aaa. puh",
       "answer": "map",
       "choices": [
         "map",
@@ -505,7 +505,7 @@
         "p"
       ],
       "blend": "nap",
-      "audioText": "n, a, p",
+      "audioText": "nnn. aaa. puh",
       "answer": "nap",
       "choices": [
         "nap",
@@ -522,7 +522,7 @@
         "n"
       ],
       "blend": "pin",
-      "audioText": "p, i, n",
+      "audioText": "puh. iii. nnn",
       "answer": "pin",
       "choices": [
         "pin",

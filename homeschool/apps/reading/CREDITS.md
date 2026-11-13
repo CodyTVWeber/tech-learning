@@ -1,6 +1,6 @@
 # Garden reading — credits
 
-Until the final picture wave, page and flower slots are original **block-print placeholders** drawn in this repo (soil beds, sun, clay, leaf). No third-party art.
+Until the final picture wave, the reader and beds use original SVG garden art in `art.js` (soil beds, bee, sun, clay, leaf). PNG files listed in `images.json` stay as generated placeholders for the assets contract. No third-party art.
 
 | File | Source | License |
 | --- | --- | --- |

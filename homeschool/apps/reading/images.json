@@ -1537,6 +1537,358 @@
       "alt": "The pumpkin loaded in the cart.",
       "themeNotes": "Book page. The Pumpkin",
       "slot": "the-pumpkin-p4"
+    },
+    {
+      "file": "sun-on-the-rows-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: sun over garden rows.",
+      "themeNotes": "Book cover. Sun on the Rows",
+      "slot": "sun-on-the-rows-cover"
+    },
+    {
+      "file": "sun-on-the-rows-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sun rising over garden rows.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p1"
+    },
+    {
+      "file": "sun-on-the-rows-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child walking a garden path with a pail.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p2"
+    },
+    {
+      "file": "sun-on-the-rows-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bean plants lifting leaves toward light.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p3"
+    },
+    {
+      "file": "sun-on-the-rows-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A weed dropped into a compost heap.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p4"
+    },
+    {
+      "file": "sun-on-the-rows-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A bee on a yellow bloom.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p5"
+    },
+    {
+      "file": "sun-on-the-rows-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Warm soil under feet.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p6"
+    },
+    {
+      "file": "sun-on-the-rows-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pail at a rain barrel.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p7"
+    },
+    {
+      "file": "sun-on-the-rows-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Water running down a furrow.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p8"
+    },
+    {
+      "file": "sun-on-the-rows-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Wrens on a garden fence.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p9"
+    },
+    {
+      "file": "sun-on-the-rows-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Shining rows after morning work.",
+      "themeNotes": "Book page. Sun on the Rows",
+      "slot": "sun-on-the-rows-p10"
+    },
+    {
+      "file": "harvest-day-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a harvest cart in a garden.",
+      "themeNotes": "Book cover. Harvest Day",
+      "slot": "harvest-day-cover"
+    },
+    {
+      "file": "harvest-day-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A garden at dawn on harvest day.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p1"
+    },
+    {
+      "file": "harvest-day-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A wooden cart between garden beds.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p2"
+    },
+    {
+      "file": "harvest-day-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Ripe beans in a basket.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p3"
+    },
+    {
+      "file": "harvest-day-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A pumpkin lifted from a vine.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p4"
+    },
+    {
+      "file": "harvest-day-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Corn stacked in shed shade.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p5"
+    },
+    {
+      "file": "harvest-day-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A neighbor at the garden gate.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p6"
+    },
+    {
+      "file": "harvest-day-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Beans placed in a neighbor's basket.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p7"
+    },
+    {
+      "file": "harvest-day-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bread and plums on a picnic cloth.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p8"
+    },
+    {
+      "file": "harvest-day-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A cart rolling as the sun lowers.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p9"
+    },
+    {
+      "file": "harvest-day-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Pantry shelves holding harvested food.",
+      "themeNotes": "Book page. Harvest Day",
+      "slot": "harvest-day-p10"
+    },
+    {
+      "file": "the-garden-gate-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: a wooden garden gate.",
+      "themeNotes": "Book cover. The Garden Gate",
+      "slot": "the-garden-gate-cover"
+    },
+    {
+      "file": "the-garden-gate-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "An old garden gate on hinges.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p1"
+    },
+    {
+      "file": "the-garden-gate-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Oil on gate hinges.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p2"
+    },
+    {
+      "file": "the-garden-gate-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Sweet peas planted along a fence.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p3"
+    },
+    {
+      "file": "the-garden-gate-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Vines reaching a trellis.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p4"
+    },
+    {
+      "file": "the-garden-gate-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A green curtain of peas in June.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p5"
+    },
+    {
+      "file": "the-garden-gate-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Children ducking under vines.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p6"
+    },
+    {
+      "file": "the-garden-gate-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A wren nest in a gourd.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p7"
+    },
+    {
+      "file": "the-garden-gate-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A gate left to swing gently.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p8"
+    },
+    {
+      "file": "the-garden-gate-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Dried peas rattling in late summer.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p9"
+    },
+    {
+      "file": "the-garden-gate-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "An open gate on a tended path.",
+      "themeNotes": "Book page. The Garden Gate",
+      "slot": "the-garden-gate-p10"
+    },
+    {
+      "file": "under-the-trellis-cover.png",
+      "width": 800,
+      "height": 800,
+      "alt": "Cover: grapes hanging under a trellis.",
+      "themeNotes": "Book cover. Under the Trellis",
+      "slot": "under-the-trellis-cover"
+    },
+    {
+      "file": "under-the-trellis-p1.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Grape clusters under a wooden trellis.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p1"
+    },
+    {
+      "file": "under-the-trellis-p2.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Cool shade under the trellis.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p2"
+    },
+    {
+      "file": "under-the-trellis-p3.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A child reading under the trellis.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p3"
+    },
+    {
+      "file": "under-the-trellis-p4.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Watering roots under dusty leaves.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p4"
+    },
+    {
+      "file": "under-the-trellis-p5.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bees on tiny spring flowers.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p5"
+    },
+    {
+      "file": "under-the-trellis-p6.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Dark sweet fruit in fall.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p6"
+    },
+    {
+      "file": "under-the-trellis-p7.png",
+      "width": 800,
+      "height": 500,
+      "alt": "A basket of grapes, plenty left for birds.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p7"
+    },
+    {
+      "file": "under-the-trellis-p8.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Rain tapping trellis boards.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p8"
+    },
+    {
+      "file": "under-the-trellis-p9.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Bare winter slats making shade.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p9"
+    },
+    {
+      "file": "under-the-trellis-p10.png",
+      "width": 800,
+      "height": 500,
+      "alt": "Spring vines climbing the trellis again.",
+      "themeNotes": "Book page. Under the Trellis",
+      "slot": "under-the-trellis-p10"
     }
   ]
 }

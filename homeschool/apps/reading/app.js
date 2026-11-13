@@ -47,22 +47,87 @@
   function inRunner() {
     return document.documentElement.dataset.runner === "1";
   }
+  const PHONEME = {
+    s: "sss",
+    m: "mmm",
+    a: "aaa",
+    t: "tuh",
+    p: "puh",
+    i: "iii",
+    n: "nnn",
+    d: "duh",
+    g: "guh",
+    o: "ooo",
+    c: "kuh",
+    k: "kuh",
+    e: "eh",
+    u: "uhh",
+    r: "rrr",
+    h: "huh",
+    b: "buh",
+    f: "fff",
+    l: "lll",
+    j: "juh",
+    v: "vvv",
+    w: "wuh",
+    x: "ks",
+    y: "yuh",
+    z: "zzz",
+    qu: "kwuh",
+    sh: "shh",
+    ch: "chuh",
+    th: "thhh",
+    ck: "kuh",
+    ng: "ing",
+    st: "sss tuh",
+    sl: "sss lll",
+    pl: "puh lll",
+    fl: "fff lll",
+    cl: "kuh lll",
+    gr: "guh rrr",
+    tr: "tuh rrr",
+    fr: "fff rrr",
+    nd: "nnn duh",
+    ft: "fff tuh",
+    ll: "lll",
+    ai: "ay",
+    ay: "ay",
+    ee: "eee",
+    ea: "eee",
+    oa: "oh",
+    ow: "oh",
+    oo: "ooo",
+    ar: "ar",
+    or: "or",
+    er: "er",
+    ir: "er",
+    ur: "er",
+    a_e: "ay",
+    i_e: "eye",
+    o_e: "oh",
+    u_e: "yoo",
+  };
   function validBand(b) {
     return BANDS.indexOf(b) !== -1;
   }
+  function phonemeOf(g) {
+    return PHONEME[g] || String(g);
+  }
+  function phonemeLine(sounds) {
+    return (sounds || []).map(phonemeOf).join(". ");
+  }
+  function graphemeLabel(g) {
+    return String(g || "").replace(/_/g, "-");
+  }
   function band() {
+    if (hs().getBand) return hs().getBand();
     const q = new URLSearchParams(location.search).get("band");
     if (validBand(q)) return q;
-    if (hs().getBand) {
-      const g = hs().getBand();
-      if (validBand(g)) return g;
-    }
     try {
       const stored = localStorage.getItem("hs.band");
       if (validBand(stored)) return stored;
     } catch (e) {}
-    if (inRunner()) return "early";
-    return null;
+    return "early";
   }
   function setBand(b) {
     if (!validBand(b)) return;
@@ -126,6 +191,8 @@
       const item = (manifest.images || []).find(function (i) {
         return i.slot === slot;
       });
+      const alt = item ? item.alt : slot;
+      if (window.GardenArt && GardenArt.forSlot) return GardenArt.forSlot(slot, cls || "slot", alt);
       if (!item) return "";
       return (
         '<img class="' +
@@ -133,10 +200,16 @@
         '" src="' +
         url("images/" + item.file) +
         '" alt="' +
-        esc(item.alt) +
+        esc(alt) +
         '">'
       );
     };
+  }
+  function bloomLabel(n) {
+    return n + (n === 1 ? " bloom" : " blooms");
+  }
+  function stampLabel(n) {
+    return n + (n === 1 ? " stamp" : " stamps");
   }
   function wait() {
     return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches
@@ -335,10 +408,9 @@
         "</h1><p>" +
         esc(data.intro.body) +
         '</p><p class="garden-blooms">' +
-        progress.blooms +
-        " blooms · " +
-        (progress.stamps.length || 0) +
-        " stamps" +
+        bloomLabel(progress.blooms) +
+        " · " +
+        stampLabel(progress.stamps.length || 0) +
         (progress.totalMinutes ? " · " + progress.totalMinutes + " min in the sundial" : "") +
         "</p><div class=\"garden-stamps\">" +
         stamps +
@@ -375,60 +447,135 @@
 
     function startItems(bed) {
       const items = itemsFor(bed);
-      let i = 0;
+      let itemIndex = 0;
+      function chrome(hearLabel) {
+        return (
+          '<div class="garden-toolbar garden-toolbar-top">' +
+          '<button type="button" id="back-home">Garden</button>' +
+          (hearLabel
+            ? '<button type="button" class="garden-hear" id="hear">' + hearLabel + "</button>"
+            : "") +
+          "</div>"
+        );
+      }
+      function bindChrome() {
+        document.getElementById("back-home").onclick = home;
+      }
+      function nextItem() {
+        itemIndex += 1;
+        show();
+      }
       function show() {
-        const item = items[i];
+        const item = items[itemIndex];
         if (!item) {
           finishBed(bed);
           return;
         }
         const expect = item.answer || item.blend;
+        const isSound = bed.kind === "sounds" || (!item.kind && item.phoneme);
+        const isBlend = !!(item.sounds && item.sounds.length) && !item.kind;
+        host.className = "garden band-" + b;
+
+        if (isBlend) {
+          const sounds = item.sounds || [];
+          const line = phonemeLine(sounds);
+          host.innerHTML =
+            chrome("Hear the sounds") +
+            '<div class="garden-prompt"><h2>Blend</h2><p>Tap each seed in order, then blend.</p></div>' +
+            '<div class="garden-seeds" id="seeds">' +
+            sounds
+              .map(function (g, idx) {
+                return (
+                  '<button type="button" data-i="' +
+                  idx +
+                  '"><span class="garden-letter">' +
+                  esc(graphemeLabel(g)) +
+                  "</span></button>"
+                );
+              })
+              .join("") +
+            '</div><p class="garden-status" id="st">Listen. Then tap the seeds.</p>';
+          bindChrome();
+          let next = 0;
+          const seeds = host.querySelectorAll("#seeds button");
+          function hearSounds() {
+            cue("bee");
+            speak(line, { rate: 0.62 });
+          }
+          document.getElementById("hear").onclick = hearSounds;
+          hearSounds();
+          host.querySelector("#seeds").onclick = function (ev) {
+            const btn = ev.target.closest("button[data-i]");
+            if (!btn) return;
+            const idx = Number(btn.getAttribute("data-i"));
+            const st = document.getElementById("st");
+            if (idx === next) {
+              btn.classList.add("is-right");
+              speak(phonemeOf(sounds[idx]), { rate: 0.6 });
+              next += 1;
+              if (next >= sounds.length) {
+                cue("bloom");
+                st.textContent = "Blend: " + (item.blend || expect);
+                speak((item.blend || expect) + ".", { rate: 0.85 });
+                setTimeout(nextItem, wait() + 500);
+              }
+            } else {
+              cue("rustle");
+              st.textContent = "Start at the first seed. Listen again.";
+              next = 0;
+              seeds.forEach(function (b) {
+                b.classList.remove("is-right", "is-on");
+              });
+              speak(line, { rate: 0.62 });
+            }
+          };
+          return;
+        }
+
         const choices = item.choices || [];
         let promptHtml = "";
         let autoSpeak = item.audioText || "";
         let rate = 0.75;
-        if (bed.kind === "sounds" || (!item.kind && item.phoneme)) {
+        let hearLabel = "Hear it";
+        if (isSound) {
           promptHtml =
             img("bee", "garden-bee") +
             "<h2>Find the sound</h2>" +
-            "<p>The bee says a sound — not a letter name.</p>" +
-            '<button type="button" id="hear">Hear the sound</button>';
-          autoSpeak = item.audioText;
-          rate = 0.7;
+            "<p>The bee says a sound — not a letter name.</p>";
+          autoSpeak = item.audioText || item.phoneme || phonemeOf(expect);
+          rate = 0.65;
+          hearLabel = "Hear the sound";
         } else if (item.kind === "helper" || item.kind === "sight") {
           promptHtml =
             "<h2>Helper word</h2><p>" +
             esc(item.prompt || "Look and say. This word is not sounded out letter by letter.") +
-            '</p><button type="button" id="hear">Hear it</button>';
+            "</p>";
           autoSpeak = item.audioText || expect;
-        } else if (item.kind === "vocab") {
+          hearLabel = "Hear it";
+        } else if (item.kind === "vocab" || bed.kind === "vocab") {
           promptHtml =
             "<h2>" +
-            esc(item.word || "Word bloom") +
+            esc(item.word || "Vocabulary bloom") +
             "</h2><p>" +
             esc(item.prompt || "What does this garden word mean?") +
-            '</p><button type="button" id="hear">Hear the word</button>';
+            "</p>";
           autoSpeak = item.audioText || item.word;
+          hearLabel = "Hear the word";
         } else {
-          promptHtml =
-            "<h2>Blend</h2><p>" +
-            esc((item.sounds || []).join(" · ")) +
-            '</p><button type="button" id="hear">Hear the sounds</button>';
-          autoSpeak = (item.sounds || []).join(", ") || item.audioText;
+          promptHtml = "<h2>" + esc(bed.title || "Garden") + "</h2><p>" + esc(item.prompt || "") + "</p>";
+          autoSpeak = item.audioText || expect;
         }
         const choiceHtml = choices
           .map(function (c) {
-            const flower = img("flower-" + c);
-            const letter =
-              bed.kind === "sounds" || item.phoneme
-                ? '<span class="garden-letter">' + esc(c) + "</span>"
-                : esc(c);
+            const flower = isSound ? img("flower-" + c) : "";
+            const letter = isSound
+              ? '<span class="garden-letter">' + esc(c) + "</span>"
+              : esc(c);
             return '<button type="button" data-v="' + esc(c) + '">' + flower + letter + "</button>";
           })
           .join("");
-        host.className = "garden band-" + b;
         host.innerHTML =
-          img("hero", "garden-hero") +
+          chrome(hearLabel) +
           '<div class="garden-prompt">' +
           promptHtml +
           "</div>" +
@@ -436,15 +583,14 @@
           (choices.length > 2 ? " cols-3" : "") +
           '" id="choices">' +
           choiceHtml +
-          '</div><p class="garden-status" id="st"></p>' +
-          '<div class="garden-toolbar"><button type="button" id="back-home">Garden</button></div>';
+          '</div><p class="garden-status" id="st"></p>';
+        bindChrome();
         const hear = document.getElementById("hear");
         if (hear)
           hear.onclick = function () {
             cue("bee");
             speak(autoSpeak, { rate: rate });
           };
-        document.getElementById("back-home").onclick = home;
         cue("bee");
         speak(autoSpeak, { rate: rate });
         document.getElementById("choices").onclick = function (ev) {
@@ -455,17 +601,13 @@
             btn.classList.add("is-right");
             cue("bloom");
             st.textContent = "That bed blooms.";
-            if (item.blend) speak(item.blend, { rate: 0.85 });
-            else if (item.kind === "vocab") speak(expect, { rate: 0.9 });
-            setTimeout(function () {
-              i += 1;
-              show();
-            }, wait());
+            if (item.kind === "vocab") speak(expect, { rate: 0.9 });
+            setTimeout(nextItem, wait());
           } else {
             btn.classList.add("is-wrong");
             cue("rustle");
             st.textContent = "Try another flower. Listen again.";
-            speak(item.audioText || autoSpeak, { rate: 0.7 });
+            speak(autoSpeak, { rate: 0.65 });
           }
         };
       }
@@ -501,12 +643,12 @@
           "</button></div>";
       });
       host.innerHTML =
+        '<div class="garden-toolbar garden-toolbar-top"><button type="button" id="back-home">Garden</button></div>' +
         img("hero", "garden-hero") +
-        '<div class="garden-intro"><h1>Garden books</h1><p>Original decodable text. Each book uses only sounds taught so far. Tap a word to hear it.</p></div>' +
+        '<div class="garden-intro"><h1>Garden books</h1><p>Original stories. Tap a word to hear it. The sun follows as the page is read.</p></div>' +
         '<div class="garden-path" id="book-list">' +
         plots +
-        "</div>" +
-        '<p style="padding:12px"><button type="button" id="back-home">Back to garden</button></p>';
+        "</div>";
       document.getElementById("book-list").onclick = function (ev) {
         const btn = ev.target.closest("button[data-book]");
         if (!btn || btn.disabled) return;
@@ -544,6 +686,9 @@
         const s = String(left % 60).padStart(2, "0");
         host.className = "garden band-" + b;
         host.innerHTML =
+          '<div class="garden-toolbar garden-toolbar-top">' +
+          '<button type="button" id="t-home">Garden</button>' +
+          '<button type="button" id="t-books">Books</button></div>' +
           img("hero", "garden-hero") +
           '<div class="garden-intro"><h1>Sundial reading</h1><p class="garden-timer">' +
           m +
@@ -553,9 +698,7 @@
           '<div class="garden-toolbar">' +
           '<button type="button" id="t-toggle">' +
           (running ? "Pause" : "Start") +
-          "</button>" +
-          '<button type="button" id="t-books">Books</button>' +
-          '<button type="button" id="t-home">Garden</button></div></div>';
+          "</button></div></div>";
         document.getElementById("t-toggle").onclick = function () {
           if (tick) {
             clearInterval(tick);
@@ -609,6 +752,9 @@
         }
         host.className = "garden band-" + b;
         host.innerHTML =
+          '<div class="garden-toolbar garden-toolbar-top">' +
+          '<button type="button" id="back-home">Garden</button>' +
+          '<button type="button" class="garden-hear" id="hear">Hear the story</button></div>' +
           '<div class="garden-passage">' +
           img(pas.slot) +
           "<h2>" +
@@ -617,9 +763,7 @@
           esc(pas.text) +
           "</p></div>" +
           '<div class="garden-toolbar">' +
-          '<button type="button" id="hear">Hear the story</button>' +
-          '<button type="button" id="go-q">Questions</button>' +
-          '<button type="button" id="back-home">Garden</button></div>';
+          '<button type="button" id="go-q">Questions</button></div>';
         document.getElementById("hear").onclick = function () {
           speak(pas.text, { rate: 0.92 });
         };
@@ -644,19 +788,21 @@
           return;
         }
         host.innerHTML =
+          '<div class="garden-toolbar garden-toolbar-top">' +
+          '<button type="button" id="back-home">Garden</button>' +
+          '<button type="button" class="garden-hear" id="hear">Hear the question</button></div>' +
           '<div class="garden-prompt"><h2>' +
           esc(pas.title) +
           "</h2><p>" +
           esc(item.prompt) +
-          '</p><button type="button" id="hear">Hear the question</button></div>' +
+          "</p></div>" +
           '<div class="garden-flowers" id="choices">' +
           (item.choices || [])
             .map(function (c) {
               return '<button type="button" data-v="' + esc(c) + '">' + esc(c) + "</button>";
             })
             .join("") +
-          '</div><p class="garden-status" id="st"></p>' +
-          '<div class="garden-toolbar"><button type="button" id="back-home">Garden</button></div>';
+          '</div><p class="garden-status" id="st"></p>';
         document.getElementById("hear").onclick = function () {
           speak(item.audioText || item.prompt);
         };

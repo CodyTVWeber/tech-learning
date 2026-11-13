@@ -34,6 +34,11 @@
       "id": "multisyllable",
       "title": "Tall plants",
       "audioText": "Words with more than one part."
+    },
+    {
+      "id": "volume",
+      "title": "Garden volume",
+      "audioText": "Longer garden stories for volume reading."
     }
   ],
   "books": [
@@ -288,6 +293,42 @@
       "requires": "the-sunflower",
       "requiresBed": "multisyllable",
       "pages": 4
+    },
+    {
+      "id": "sun-on-the-rows",
+      "title": "Sun on the Rows",
+      "level": "volume",
+      "coverSlot": "sun-on-the-rows-cover",
+      "requires": "the-pumpkin",
+      "requiresBed": null,
+      "pages": 10
+    },
+    {
+      "id": "harvest-day",
+      "title": "Harvest Day",
+      "level": "volume",
+      "coverSlot": "harvest-day-cover",
+      "requires": "sun-on-the-rows",
+      "requiresBed": null,
+      "pages": 10
+    },
+    {
+      "id": "the-garden-gate",
+      "title": "The Garden Gate",
+      "level": "volume",
+      "coverSlot": "the-garden-gate-cover",
+      "requires": "harvest-day",
+      "requiresBed": null,
+      "pages": 10
+    },
+    {
+      "id": "under-the-trellis",
+      "title": "Under the Trellis",
+      "level": "volume",
+      "coverSlot": "under-the-trellis-cover",
+      "requires": "the-garden-gate",
+      "requiresBed": null,
+      "pages": 10
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
   "band": "early",
-  "title": "Blends in the garden",
+  "title": "Blends and teams in the garden",
   "intro": {
-    "audioText": "Walk the garden path. Short words, then blends, letter teams, and silent e. Books unlock in order.",
-    "body": "Walk the path. Finish a plot to unlock its books. Each book uses only sounds taught so far."
+    "audioText": "Walk the garden path. Short words, blends, silent e, then vowel teams. Books unlock in order.",
+    "body": "Walk the path. Finish a plot to unlock its books. After silent e, tend the vowel orchard. Each book uses only sounds taught so far."
   },
   "beds": [
     {
@@ -46,6 +46,14 @@
       "audioText": "Silent e. The vowel says its long sound."
     },
     {
+      "id": "teams",
+      "kind": "words",
+      "title": "Vowel orchard",
+      "slot": "bed-teams",
+      "requires": "silent-e",
+      "audioText": "Vowel teams. Two letters, one long sound."
+    },
+    {
       "id": "books",
       "kind": "books",
       "title": "Picture books",
@@ -69,7 +77,11 @@
     "the-cake",
     "the-vine",
     "the-rose",
-    "the-mule"
+    "the-mule",
+    "the-rain",
+    "the-bee",
+    "the-boat",
+    "the-moon-pool"
   ],
   "items": [
     {
@@ -81,7 +93,7 @@
         "t"
       ],
       "blend": "sat",
-      "audioText": "s, a, t",
+      "audioText": "sss. aaa. tuh",
       "answer": "sat",
       "choices": [
         "sat",
@@ -98,7 +110,7 @@
         "t"
       ],
       "blend": "mat",
-      "audioText": "m, a, t",
+      "audioText": "mmm. aaa. tuh",
       "answer": "mat",
       "choices": [
         "sat",
@@ -115,7 +127,7 @@
         "t"
       ],
       "blend": "pat",
-      "audioText": "p, a, t",
+      "audioText": "puh. aaa. tuh",
       "answer": "pat",
       "choices": [
         "pat",
@@ -132,7 +144,7 @@
         "p"
       ],
       "blend": "tap",
-      "audioText": "t, a, p",
+      "audioText": "tuh. aaa. puh",
       "answer": "tap",
       "choices": [
         "tap",
@@ -149,7 +161,7 @@
         "t"
       ],
       "blend": "sit",
-      "audioText": "s, i, t",
+      "audioText": "sss. iii. tuh",
       "answer": "sit",
       "choices": [
         "sat",
@@ -166,7 +178,7 @@
         "g"
       ],
       "blend": "pig",
-      "audioText": "p, i, g",
+      "audioText": "puh. iii. guh",
       "answer": "pig",
       "choices": [
         "pig",
@@ -183,7 +195,7 @@
         "g"
       ],
       "blend": "fig",
-      "audioText": "f, i, g",
+      "audioText": "fff. iii. guh",
       "answer": "fig",
       "choices": [
         "fig",
@@ -200,7 +212,7 @@
         "t"
       ],
       "blend": "hot",
-      "audioText": "h, o, t",
+      "audioText": "huh. ooo. tuh",
       "answer": "hot",
       "choices": [
         "hot",
@@ -217,7 +229,7 @@
         "t"
       ],
       "blend": "pot",
-      "audioText": "p, o, t",
+      "audioText": "puh. ooo. tuh",
       "answer": "pot",
       "choices": [
         "pot",
@@ -234,7 +246,7 @@
         "n"
       ],
       "blend": "hen",
-      "audioText": "h, e, n",
+      "audioText": "huh. eh. nnn",
       "answer": "hen",
       "choices": [
         "hen",
@@ -251,7 +263,7 @@
         "d"
       ],
       "blend": "red",
-      "audioText": "r, e, d",
+      "audioText": "rrr. eh. duh",
       "answer": "red",
       "choices": [
         "red",
@@ -268,7 +280,7 @@
         "g"
       ],
       "blend": "bug",
-      "audioText": "b, u, g",
+      "audioText": "buh. uhh. guh",
       "answer": "bug",
       "choices": [
         "bug",
@@ -364,7 +376,7 @@
         "n"
       ],
       "blend": "stan",
-      "audioText": "s, t, a, n",
+      "audioText": "sss. tuh. aaa. nnn",
       "answer": "stan",
       "choices": [
         "stan",
@@ -382,7 +394,7 @@
         "m"
       ],
       "blend": "plum",
-      "audioText": "p, l, u, m",
+      "audioText": "puh. lll. uhh. mmm",
       "answer": "plum",
       "choices": [
         "plum",
@@ -400,7 +412,7 @@
         "p"
       ],
       "blend": "slip",
-      "audioText": "s, l, i, p",
+      "audioText": "sss. lll. iii. puh",
       "answer": "slip",
       "choices": [
         "slip",
@@ -418,7 +430,7 @@
         "t"
       ],
       "blend": "flat",
-      "audioText": "f, l, a, t",
+      "audioText": "fff. lll. aaa. tuh",
       "answer": "flat",
       "choices": [
         "flat",
@@ -436,7 +448,7 @@
         "g"
       ],
       "blend": "frog",
-      "audioText": "f, r, o, g",
+      "audioText": "fff. rrr. ooo. guh",
       "answer": "frog",
       "choices": [
         "frog",
@@ -454,7 +466,7 @@
         "t"
       ],
       "blend": "trot",
-      "audioText": "t, r, o, t",
+      "audioText": "tuh. rrr. ooo. tuh",
       "answer": "trot",
       "choices": [
         "trot",
@@ -472,7 +484,7 @@
         "d"
       ],
       "blend": "pond",
-      "audioText": "p, o, n, d",
+      "audioText": "puh. ooo. nnn. duh",
       "answer": "pond",
       "choices": [
         "pond",
@@ -490,7 +502,7 @@
         "t"
       ],
       "blend": "soft",
-      "audioText": "s, o, f, t",
+      "audioText": "sss. ooo. fff. tuh",
       "answer": "soft",
       "choices": [
         "soft",
@@ -508,7 +520,7 @@
         "t"
       ],
       "blend": "nest",
-      "audioText": "n, e, s, t",
+      "audioText": "nnn. eh. sss. tuh",
       "answer": "nest",
       "choices": [
         "nest",
@@ -526,7 +538,7 @@
         "ll"
       ],
       "blend": "still",
-      "audioText": "s, t, i, ll",
+      "audioText": "sss. tuh. iii. lll",
       "answer": "still",
       "choices": [
         "still",
@@ -543,7 +555,7 @@
         "d"
       ],
       "blend": "shed",
-      "audioText": "sh, e, d",
+      "audioText": "shh. eh. duh",
       "answer": "shed",
       "choices": [
         "shed",
@@ -560,7 +572,7 @@
         "sh"
       ],
       "blend": "dish",
-      "audioText": "d, i, sh",
+      "audioText": "duh. iii. shh",
       "answer": "dish",
       "choices": [
         "dish",
@@ -577,7 +589,7 @@
         "p"
       ],
       "blend": "chop",
-      "audioText": "ch, o, p",
+      "audioText": "chuh. ooo. puh",
       "answer": "chop",
       "choices": [
         "chop",
@@ -594,7 +606,7 @@
         "p"
       ],
       "blend": "chip",
-      "audioText": "ch, i, p",
+      "audioText": "chuh. iii. puh",
       "answer": "chip",
       "choices": [
         "chip",
@@ -611,7 +623,7 @@
         "ch"
       ],
       "blend": "rich",
-      "audioText": "r, i, ch",
+      "audioText": "rrr. iii. chuh",
       "answer": "rich",
       "choices": [
         "rich",
@@ -628,7 +640,7 @@
         "ck"
       ],
       "blend": "duck",
-      "audioText": "d, u, ck",
+      "audioText": "duh. uhh. kuh",
       "answer": "duck",
       "choices": [
         "duck",
@@ -645,7 +657,7 @@
         "ck"
       ],
       "blend": "sock",
-      "audioText": "s, o, ck",
+      "audioText": "sss. ooo. kuh",
       "answer": "sock",
       "choices": [
         "sock",
@@ -662,7 +674,7 @@
         "th"
       ],
       "blend": "moth",
-      "audioText": "m, o, th",
+      "audioText": "mmm. ooo. thhh",
       "answer": "moth",
       "choices": [
         "moth",
@@ -679,7 +691,7 @@
         "n"
       ],
       "blend": "thin",
-      "audioText": "th, i, n",
+      "audioText": "thhh. iii. nnn",
       "answer": "thin",
       "choices": [
         "thin",
@@ -696,7 +708,7 @@
         "th"
       ],
       "blend": "path",
-      "audioText": "p, a, th",
+      "audioText": "puh. aaa. thhh",
       "answer": "path",
       "choices": [
         "path",
@@ -713,7 +725,7 @@
         "ng"
       ],
       "blend": "song",
-      "audioText": "s, o, ng",
+      "audioText": "sss. ooo. ing",
       "answer": "song",
       "choices": [
         "song",
@@ -730,7 +742,7 @@
         "ng"
       ],
       "blend": "long",
-      "audioText": "l, o, ng",
+      "audioText": "lll. ooo. ing",
       "answer": "long",
       "choices": [
         "long",
@@ -747,7 +759,7 @@
         "k"
       ],
       "blend": "cake",
-      "audioText": "c, a_e, k",
+      "audioText": "kuh. ay. kuh",
       "answer": "cake",
       "choices": [
         "cake",
@@ -764,7 +776,7 @@
         "k"
       ],
       "blend": "rake",
-      "audioText": "r, a_e, k",
+      "audioText": "rrr. ay. kuh",
       "answer": "rake",
       "choices": [
         "rake",
@@ -781,7 +793,7 @@
         "k"
       ],
       "blend": "bake",
-      "audioText": "b, a_e, k",
+      "audioText": "buh. ay. kuh",
       "answer": "bake",
       "choices": [
         "bake",
@@ -798,7 +810,7 @@
         "n"
       ],
       "blend": "vine",
-      "audioText": "v, i_e, n",
+      "audioText": "vvv. eye. nnn",
       "answer": "vine",
       "choices": [
         "vine",
@@ -815,7 +827,7 @@
         "p"
       ],
       "blend": "ripe",
-      "audioText": "r, i_e, p",
+      "audioText": "rrr. eye. puh",
       "answer": "ripe",
       "choices": [
         "ripe",
@@ -832,7 +844,7 @@
         "n"
       ],
       "blend": "mine",
-      "audioText": "m, i_e, n",
+      "audioText": "mmm. eye. nnn",
       "answer": "mine",
       "choices": [
         "mine",
@@ -849,7 +861,7 @@
         "s"
       ],
       "blend": "rose",
-      "audioText": "r, o_e, s",
+      "audioText": "rrr. oh. sss",
       "answer": "rose",
       "choices": [
         "rose",
@@ -866,7 +878,7 @@
         "l"
       ],
       "blend": "pole",
-      "audioText": "p, o_e, l",
+      "audioText": "puh. oh. lll",
       "answer": "pole",
       "choices": [
         "pole",
@@ -883,7 +895,7 @@
         "l"
       ],
       "blend": "mule",
-      "audioText": "m, u_e, l",
+      "audioText": "mmm. yoo. lll",
       "answer": "mule",
       "choices": [
         "mule",
@@ -900,12 +912,214 @@
         "t"
       ],
       "blend": "cute",
-      "audioText": "c, u_e, t",
+      "audioText": "kuh. yoo. tuh",
       "answer": "cute",
       "choices": [
         "cute",
         "cut",
         "cube"
+      ]
+    },
+    {
+      "id": "e-t1",
+      "bed": "teams",
+      "sounds": [
+        "r",
+        "ai",
+        "n"
+      ],
+      "blend": "rain",
+      "audioText": "rrr. ay. nnn",
+      "answer": "rain",
+      "choices": [
+        "rain",
+        "ran",
+        "raid"
+      ]
+    },
+    {
+      "id": "e-t2",
+      "bed": "teams",
+      "sounds": [
+        "h",
+        "ay"
+      ],
+      "blend": "hay",
+      "audioText": "huh. ay",
+      "answer": "hay",
+      "choices": [
+        "hay",
+        "hat",
+        "had"
+      ]
+    },
+    {
+      "id": "e-t3",
+      "bed": "teams",
+      "sounds": [
+        "p",
+        "ai",
+        "l"
+      ],
+      "blend": "pail",
+      "audioText": "puh. ay. lll",
+      "answer": "pail",
+      "choices": [
+        "pail",
+        "pal",
+        "pale"
+      ]
+    },
+    {
+      "id": "e-t4",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "t",
+        "ay"
+      ],
+      "blend": "stay",
+      "audioText": "sss. tuh. ay",
+      "answer": "stay",
+      "choices": [
+        "stay",
+        "sat",
+        "say"
+      ]
+    },
+    {
+      "id": "e-t5",
+      "bed": "teams",
+      "sounds": [
+        "b",
+        "ee"
+      ],
+      "blend": "bee",
+      "audioText": "buh. eee",
+      "answer": "bee",
+      "choices": [
+        "bee",
+        "be",
+        "bed"
+      ]
+    },
+    {
+      "id": "e-t6",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "ee",
+        "d"
+      ],
+      "blend": "seed",
+      "audioText": "sss. eee. duh",
+      "answer": "seed",
+      "choices": [
+        "seed",
+        "sad",
+        "said"
+      ]
+    },
+    {
+      "id": "e-t7",
+      "bed": "teams",
+      "sounds": [
+        "l",
+        "ea",
+        "f"
+      ],
+      "blend": "leaf",
+      "audioText": "lll. eee. fff",
+      "answer": "leaf",
+      "choices": [
+        "leaf",
+        "loaf",
+        "left"
+      ]
+    },
+    {
+      "id": "e-t8",
+      "bed": "teams",
+      "sounds": [
+        "b",
+        "oa",
+        "t"
+      ],
+      "blend": "boat",
+      "audioText": "buh. oh. tuh",
+      "answer": "boat",
+      "choices": [
+        "boat",
+        "boot",
+        "bat"
+      ]
+    },
+    {
+      "id": "e-t9",
+      "bed": "teams",
+      "sounds": [
+        "t",
+        "oa",
+        "d"
+      ],
+      "blend": "toad",
+      "audioText": "tuh. oh. duh",
+      "answer": "toad",
+      "choices": [
+        "toad",
+        "tod",
+        "tide"
+      ]
+    },
+    {
+      "id": "e-t10",
+      "bed": "teams",
+      "sounds": [
+        "s",
+        "l",
+        "ow"
+      ],
+      "blend": "slow",
+      "audioText": "sss. lll. oh",
+      "answer": "slow",
+      "choices": [
+        "slow",
+        "slew",
+        "slot"
+      ]
+    },
+    {
+      "id": "e-t11",
+      "bed": "teams",
+      "sounds": [
+        "m",
+        "oo",
+        "n"
+      ],
+      "blend": "moon",
+      "audioText": "mmm. ooo. nnn",
+      "answer": "moon",
+      "choices": [
+        "moon",
+        "man",
+        "moan"
+      ]
+    },
+    {
+      "id": "e-t12",
+      "bed": "teams",
+      "sounds": [
+        "p",
+        "oo",
+        "l"
+      ],
+      "blend": "pool",
+      "audioText": "puh. ooo. lll",
+      "answer": "pool",
+      "choices": [
+        "pool",
+        "pole",
+        "poll"
       ]
     }
   ]

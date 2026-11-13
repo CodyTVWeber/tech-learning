@@ -2,26 +2,25 @@
   "band": "upper",
   "title": "Garden reading time",
   "intro": {
-    "audioText": "Read. Use the sundial. Tend vocabulary blooms and story questions. Short books are a warm-up.",
-    "body": "Volume reading lives mostly on paper. The sundial keeps time. Vocabulary and story questions grow this plot. Decodable books are a warm-up, not the whole garden."
+    "audioText": "Read the longer garden books. Tend vocabulary blooms and story questions. The sundial is for paper reading.",
+    "body": "Volume reading lives in these longer garden books and on paper. Vocabulary blooms and story questions grow this plot. Short decodables are a warm-up."
   },
   "minutes": 25,
   "unlockAllBooks": true,
   "beds": [
     {
-      "id": "timer",
-      "kind": "timer",
-      "title": "Sundial reading",
-      "slot": "bed-timer",
-      "minutes": 25,
-      "audioText": "Reading time. Bring a paper book if you like."
+      "id": "books",
+      "kind": "books",
+      "title": "Garden books",
+      "slot": "bed-books",
+      "audioText": "Longer garden books first. Tap a word to hear it."
     },
     {
       "id": "vocab",
       "kind": "vocab",
-      "title": "Word blooms",
+      "title": "Vocabulary blooms",
       "slot": "bed-vocab",
-      "audioText": "Garden and story words. Hear the word, tap the meaning."
+      "audioText": "Vocabulary blooms. Hear the word, tap the meaning."
     },
     {
       "id": "comprehend",
@@ -31,14 +30,19 @@
       "audioText": "Read the garden story. Then answer."
     },
     {
-      "id": "books",
-      "kind": "books",
-      "title": "Picture books",
-      "slot": "bed-books",
-      "audioText": "Decodable warm-up books. Tap a word to hear it."
+      "id": "timer",
+      "kind": "timer",
+      "title": "Sundial reading",
+      "slot": "bed-timer",
+      "minutes": 25,
+      "audioText": "Reading time. Bring a paper book if you like."
     }
   ],
   "books": [
+    "sun-on-the-rows",
+    "harvest-day",
+    "the-garden-gate",
+    "under-the-trellis",
     "sam-sat",
     "the-fig",
     "a-hot-pot",

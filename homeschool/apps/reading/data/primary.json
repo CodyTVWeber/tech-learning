@@ -2,24 +2,34 @@
   "band": "primary",
   "title": "Garden reading time",
   "intro": {
-    "audioText": "Read in the garden. Use the sundial, tend new plots, then open a book.",
-    "body": "Volume reading lives on paper and in these garden books. New plots: vowel teams, r-controlled roses, tall plants. Earlier books are open as a warm-up."
+    "audioText": "Read the garden books. Tend vocabulary blooms. The sundial is for paper reading beside you.",
+    "body": "Volume reading lives in these longer garden books and on paper. Vocabulary blooms grow word meaning. The sundial keeps time for a paper book. Short decodables are a warm-up."
   },
   "minutes": 20,
   "unlockLevels": [
     "cvc",
     "blends",
     "digraphs",
-    "silent-e"
+    "silent-e",
+    "teams",
+    "r-controlled",
+    "multisyllable",
+    "volume"
   ],
   "beds": [
     {
-      "id": "timer",
-      "kind": "timer",
-      "title": "Sundial reading",
-      "slot": "bed-timer",
-      "minutes": 20,
-      "audioText": "Reading time. A paper book beside you is fine."
+      "id": "books",
+      "kind": "books",
+      "title": "Garden books",
+      "slot": "bed-books",
+      "audioText": "Garden books. Longer stories first. Tap a word to hear it."
+    },
+    {
+      "id": "vocab",
+      "kind": "vocab",
+      "title": "Vocabulary blooms",
+      "slot": "bed-vocab",
+      "audioText": "Vocabulary blooms. Hear the word, tap the meaning."
     },
     {
       "id": "teams",
@@ -52,21 +62,19 @@
       "audioText": "More helper words. Look and say."
     },
     {
-      "id": "vocab",
-      "kind": "vocab",
-      "title": "Word blooms",
-      "slot": "bed-vocab",
-      "audioText": "Garden words. Hear the word, tap the meaning."
-    },
-    {
-      "id": "books",
-      "kind": "books",
-      "title": "Picture books",
-      "slot": "bed-books",
-      "audioText": "All garden books. Earlier plots are a warm-up."
+      "id": "timer",
+      "kind": "timer",
+      "title": "Sundial reading",
+      "slot": "bed-timer",
+      "minutes": 20,
+      "audioText": "Reading time. A paper book beside you is fine."
     }
   ],
   "books": [
+    "sun-on-the-rows",
+    "harvest-day",
+    "the-garden-gate",
+    "under-the-trellis",
     "sam-sat",
     "the-fig",
     "a-hot-pot",
@@ -106,7 +114,7 @@
         "n"
       ],
       "blend": "rain",
-      "audioText": "r, ai, n",
+      "audioText": "rrr. ay. nnn",
       "answer": "rain",
       "choices": [
         "rain",
@@ -122,7 +130,7 @@
         "ay"
       ],
       "blend": "hay",
-      "audioText": "h, ay",
+      "audioText": "huh. ay",
       "answer": "hay",
       "choices": [
         "hay",
@@ -139,7 +147,7 @@
         "l"
       ],
       "blend": "pail",
-      "audioText": "p, ai, l",
+      "audioText": "puh. ay. lll",
       "answer": "pail",
       "choices": [
         "pail",
@@ -156,7 +164,7 @@
         "ay"
       ],
       "blend": "stay",
-      "audioText": "s, t, ay",
+      "audioText": "sss. tuh. ay",
       "answer": "stay",
       "choices": [
         "stay",
@@ -172,7 +180,7 @@
         "ee"
       ],
       "blend": "bee",
-      "audioText": "b, ee",
+      "audioText": "buh. eee",
       "answer": "bee",
       "choices": [
         "bee",
@@ -189,7 +197,7 @@
         "d"
       ],
       "blend": "seed",
-      "audioText": "s, ee, d",
+      "audioText": "sss. eee. duh",
       "answer": "seed",
       "choices": [
         "seed",
@@ -206,7 +214,7 @@
         "f"
       ],
       "blend": "leaf",
-      "audioText": "l, ea, f",
+      "audioText": "lll. eee. fff",
       "answer": "leaf",
       "choices": [
         "leaf",
@@ -223,7 +231,7 @@
         "t"
       ],
       "blend": "boat",
-      "audioText": "b, oa, t",
+      "audioText": "buh. oh. tuh",
       "answer": "boat",
       "choices": [
         "boat",
@@ -240,7 +248,7 @@
         "d"
       ],
       "blend": "toad",
-      "audioText": "t, oa, d",
+      "audioText": "tuh. oh. duh",
       "answer": "toad",
       "choices": [
         "toad",
@@ -257,7 +265,7 @@
         "ow"
       ],
       "blend": "slow",
-      "audioText": "s, l, ow",
+      "audioText": "sss. lll. oh",
       "answer": "slow",
       "choices": [
         "slow",
@@ -274,7 +282,7 @@
         "n"
       ],
       "blend": "moon",
-      "audioText": "m, oo, n",
+      "audioText": "mmm. ooo. nnn",
       "answer": "moon",
       "choices": [
         "moon",
@@ -291,7 +299,7 @@
         "l"
       ],
       "blend": "pool",
-      "audioText": "p, oo, l",
+      "audioText": "puh. ooo. lll",
       "answer": "pool",
       "choices": [
         "pool",
@@ -308,7 +316,7 @@
         "t"
       ],
       "blend": "cart",
-      "audioText": "c, ar, t",
+      "audioText": "kuh. ar. tuh",
       "answer": "cart",
       "choices": [
         "cart",
@@ -324,7 +332,7 @@
         "ar"
       ],
       "blend": "jar",
-      "audioText": "j, ar",
+      "audioText": "juh. ar",
       "answer": "jar",
       "choices": [
         "jar",
@@ -341,7 +349,7 @@
         "n"
       ],
       "blend": "barn",
-      "audioText": "b, ar, n",
+      "audioText": "buh. ar. nnn",
       "answer": "barn",
       "choices": [
         "barn",
@@ -358,7 +366,7 @@
         "n"
       ],
       "blend": "corn",
-      "audioText": "c, or, n",
+      "audioText": "kuh. or. nnn",
       "answer": "corn",
       "choices": [
         "corn",
@@ -375,7 +383,7 @@
         "k"
       ],
       "blend": "fork",
-      "audioText": "f, or, k",
+      "audioText": "fff. or. kuh",
       "answer": "fork",
       "choices": [
         "fork",
@@ -392,7 +400,7 @@
         "n"
       ],
       "blend": "fern",
-      "audioText": "f, er, n",
+      "audioText": "fff. er. nnn",
       "answer": "fern",
       "choices": [
         "fern",
@@ -409,7 +417,7 @@
         "d"
       ],
       "blend": "bird",
-      "audioText": "b, ir, d",
+      "audioText": "buh. er. duh",
       "answer": "bird",
       "choices": [
         "bird",
@@ -426,7 +434,7 @@
         "t"
       ],
       "blend": "dirt",
-      "audioText": "d, ir, t",
+      "audioText": "duh. er. tuh",
       "answer": "dirt",
       "choices": [
         "dirt",
@@ -443,7 +451,7 @@
         "n"
       ],
       "blend": "turn",
-      "audioText": "t, ur, n",
+      "audioText": "tuh. er. nnn",
       "answer": "turn",
       "choices": [
         "turn",
@@ -460,7 +468,7 @@
         "d"
       ],
       "blend": "herd",
-      "audioText": "h, er, d",
+      "audioText": "huh. er. duh",
       "answer": "herd",
       "choices": [
         "herd",
@@ -476,7 +484,7 @@
         "nic"
       ],
       "blend": "picnic",
-      "audioText": "pic, nic",
+      "audioText": "pic. nic",
       "answer": "picnic",
       "choices": [
         "picnic",
@@ -492,7 +500,7 @@
         "ket"
       ],
       "blend": "basket",
-      "audioText": "bas, ket",
+      "audioText": "bas. ket",
       "answer": "basket",
       "choices": [
         "basket",
@@ -508,7 +516,7 @@
         "kin"
       ],
       "blend": "napkin",
-      "audioText": "nap, kin",
+      "audioText": "nap. kin",
       "answer": "napkin",
       "choices": [
         "napkin",
@@ -524,7 +532,7 @@
         "bit"
       ],
       "blend": "rabbit",
-      "audioText": "rab, bit",
+      "audioText": "rab. bit",
       "answer": "rabbit",
       "choices": [
         "rabbit",
@@ -540,7 +548,7 @@
         "rot"
       ],
       "blend": "carrot",
-      "audioText": "car, rot",
+      "audioText": "car. rot",
       "answer": "carrot",
       "choices": [
         "carrot",
@@ -557,7 +565,7 @@
         "er"
       ],
       "blend": "sunflower",
-      "audioText": "sun, flow, er",
+      "audioText": "sun. flow. er",
       "answer": "sunflower",
       "choices": [
         "sunflower",
@@ -573,7 +581,7 @@
         "kin"
       ],
       "blend": "pumpkin",
-      "audioText": "pump, kin",
+      "audioText": "pump. kin",
       "answer": "pumpkin",
       "choices": [
         "pumpkin",
@@ -589,7 +597,7 @@
         "den"
       ],
       "blend": "garden",
-      "audioText": "gar, den",
+      "audioText": "gar. den",
       "answer": "garden",
       "choices": [
         "garden",

@@ -1,0 +1,420 @@
+{
+  "id": "harvest-day",
+  "title": "Harvest Day",
+  "coverSlot": "harvest-day-cover",
+  "level": "volume",
+  "graphemes": [],
+  "sightWords": [],
+  "pages": [
+    {
+      "slot": "harvest-day-p1",
+      "words": [
+        {
+          "t": "Harvest",
+          "say": "harvest"
+        },
+        {
+          "t": "day",
+          "say": "day"
+        },
+        {
+          "t": "began",
+          "say": "began"
+        },
+        {
+          "t": "before",
+          "say": "before"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "dew",
+          "say": "dew"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "gone.",
+          "say": "gone"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p2",
+      "words": [
+        {
+          "t": "Mark",
+          "say": "mark"
+        },
+        {
+          "t": "rolled",
+          "say": "rolled"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "wooden",
+          "say": "wooden"
+        },
+        {
+          "t": "cart",
+          "say": "cart"
+        },
+        {
+          "t": "between",
+          "say": "between"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "beds.",
+          "say": "beds"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p3",
+      "words": [
+        {
+          "t": "Jane",
+          "say": "jane"
+        },
+        {
+          "t": "cut",
+          "say": "cut"
+        },
+        {
+          "t": "ripe",
+          "say": "ripe"
+        },
+        {
+          "t": "beans",
+          "say": "beans"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "laid",
+          "say": "laid"
+        },
+        {
+          "t": "them",
+          "say": "them"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "basket.",
+          "say": "basket"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p4",
+      "words": [
+        {
+          "t": "Sam",
+          "say": "sam"
+        },
+        {
+          "t": "lifted",
+          "say": "lifted"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "heavy",
+          "say": "heavy"
+        },
+        {
+          "t": "pumpkin",
+          "say": "pumpkin"
+        },
+        {
+          "t": "from",
+          "say": "from"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "vine.",
+          "say": "vine"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p5",
+      "words": [
+        {
+          "t": "They",
+          "say": "they"
+        },
+        {
+          "t": "stacked",
+          "say": "stacked"
+        },
+        {
+          "t": "corn",
+          "say": "corn"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shade",
+          "say": "shade"
+        },
+        {
+          "t": "of",
+          "say": "of"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "shed.",
+          "say": "shed"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p6",
+      "words": [
+        {
+          "t": "A",
+          "say": "a"
+        },
+        {
+          "t": "neighbor",
+          "say": "neighbor"
+        },
+        {
+          "t": "paused",
+          "say": "paused"
+        },
+        {
+          "t": "at",
+          "say": "at"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "gate",
+          "say": "gate"
+        },
+        {
+          "t": "with",
+          "say": "with"
+        },
+        {
+          "t": "an",
+          "say": "an"
+        },
+        {
+          "t": "empty",
+          "say": "empty"
+        },
+        {
+          "t": "basket.",
+          "say": "basket"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p7",
+      "words": [
+        {
+          "t": "Mark",
+          "say": "mark"
+        },
+        {
+          "t": "set",
+          "say": "set"
+        },
+        {
+          "t": "extra",
+          "say": "extra"
+        },
+        {
+          "t": "beans",
+          "say": "beans"
+        },
+        {
+          "t": "in",
+          "say": "in"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "neighbor's",
+          "say": "neighbor's"
+        },
+        {
+          "t": "basket.",
+          "say": "basket"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p8",
+      "words": [
+        {
+          "t": "At",
+          "say": "at"
+        },
+        {
+          "t": "noon",
+          "say": "noon"
+        },
+        {
+          "t": "they",
+          "say": "they"
+        },
+        {
+          "t": "ate",
+          "say": "ate"
+        },
+        {
+          "t": "bread",
+          "say": "bread"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "plums",
+          "say": "plums"
+        },
+        {
+          "t": "on",
+          "say": "on"
+        },
+        {
+          "t": "a",
+          "say": "a"
+        },
+        {
+          "t": "cloth.",
+          "say": "cloth"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p9",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "cart",
+          "say": "cart"
+        },
+        {
+          "t": "went",
+          "say": "went"
+        },
+        {
+          "t": "back",
+          "say": "back"
+        },
+        {
+          "t": "and",
+          "say": "and"
+        },
+        {
+          "t": "forth",
+          "say": "forth"
+        },
+        {
+          "t": "until",
+          "say": "until"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "sun",
+          "say": "sun"
+        },
+        {
+          "t": "was",
+          "say": "was"
+        },
+        {
+          "t": "low.",
+          "say": "low"
+        }
+      ]
+    },
+    {
+      "slot": "harvest-day-p10",
+      "words": [
+        {
+          "t": "The",
+          "say": "the"
+        },
+        {
+          "t": "pantry",
+          "say": "pantry"
+        },
+        {
+          "t": "shelves",
+          "say": "shelves"
+        },
+        {
+          "t": "held",
+          "say": "held"
+        },
+        {
+          "t": "the",
+          "say": "the"
+        },
+        {
+          "t": "day's",
+          "say": "day's"
+        },
+        {
+          "t": "quiet",
+          "say": "quiet"
+        },
+        {
+          "t": "work.",
+          "say": "work"
+        }
+      ]
+    }
+  ]
+}

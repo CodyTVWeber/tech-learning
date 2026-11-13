@@ -12,16 +12,19 @@
     return global.matchMedia && global.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
+  function art(slot, cls, alt) {
+    if (global.GardenArt && GardenArt.forSlot) return GardenArt.forSlot(slot, cls, alt);
+    return "";
+  }
+
   const GardenReader = {
     async open(opts) {
       const host = opts.host;
       const cue = opts.cue || function () {};
-      const imgFor = opts.imgFor;
       const book = await (await fetch(opts.url)).json();
       let page = -1;
       let playing = false;
       let playTimer = 0;
-      let currentUtter = null;
 
       function stopPlay() {
         playing = false;
@@ -31,7 +34,6 @@
         }
         const synth = global.speechSynthesis;
         if (synth) synth.cancel();
-        currentUtter = null;
       }
 
       function say(text, done) {
@@ -58,7 +60,6 @@
         u.rate = 0.88;
         u.pitch = 1;
         u.lang = "en-US";
-        currentUtter = u;
         u.onend = finishOnce;
         u.onerror = finishOnce;
         const wait = reduceMotion() ? 280 : Math.min(1400, 420 + String(text).length * 70);
@@ -66,27 +67,27 @@
         synth.speak(u);
       }
 
+      function picture(slot, cls) {
+        return art(slot, cls, book.title);
+      }
+
       function renderCover() {
         stopPlay();
         host.className = "book";
         host.innerHTML =
-          '<div class="book-page">' +
-          imgFor(book.coverSlot, "slot") +
-          "</div>" +
+          '<div class="book-spread">' +
+          picture(book.coverSlot, "book-art book-art-cover") +
           '<div class="book-cover-copy">' +
           "<h1>" +
           book.title +
           "</h1>" +
           "<p>Original garden story. Tap a word to hear it. The sun follows as the page is read.</p>" +
-          '<p class="sr-only">' +
-          book.title +
-          ". Untested, awaiting parent test.</p>" +
           "</div>" +
           '<div class="book-nav">' +
           '<button type="button" id="book-close">Garden</button>' +
           '<button type="button" id="book-open">Open</button>' +
           "</div>" +
-          '<p class="garden-status">Untested, awaiting parent test.</p>';
+          '<p class="garden-status">Untested, awaiting parent test.</p></div>';
         host.querySelector("#book-close").onclick = function () {
           stopPlay();
           if (opts.onClose) opts.onClose();
@@ -116,9 +117,8 @@
         const p = book.pages[page];
         host.className = "book";
         host.innerHTML =
-          '<div class="book-page">' +
-          imgFor(p.slot, "slot") +
-          "</div>" +
+          '<div class="book-spread">' +
+          picture(p.slot, "book-art") +
           '<p class="sr-only">' +
           book.title +
           ", page " +
@@ -142,7 +142,7 @@
           '<button type="button" id="book-next">' +
           (page === book.pages.length - 1 ? "Finish" : "Next") +
           "</button></div>" +
-          '<p class="garden-status">Tap a word to hear it. Untested, awaiting parent test.</p>';
+          '<p class="garden-status">Tap a word to hear it. Untested, awaiting parent test.</p></div>';
 
         const wordBtns = host.querySelectorAll("#book-words button");
         wordBtns.forEach(function (btn) {
