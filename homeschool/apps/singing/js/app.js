@@ -18,7 +18,26 @@
   function load() {
     try { return JSON.parse(localStorage.getItem(KEY_PROG) || "{}") || {}; } catch (e) { return {}; }
   }
-  function save(p) { localStorage.setItem(KEY_PROG, JSON.stringify(p)); }
+  function save(p) {
+    p.updatedAt = Date.now();
+    localStorage.setItem(KEY_PROG, JSON.stringify(p));
+  }
+  function reduceMotion() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+  const PITCH_START = { baby: "mid", toddler: "high", preschool: "c4", early: "g4", primary: "c5", upper: "c5" };
+  const RHYTHM_START = { baby: "ta", toddler: "titi", preschool: "ta-titi", early: "rest", primary: "sync", upper: "dotted" };
+  function defaultPitch(b) {
+    const list = pitchesFor(b);
+    const want = PITCH_START[b];
+    return list.find((p) => p.id === want) || list[Math.min(1, list.length - 1)] || list[0];
+  }
+  function defaultRhythmIndex(b) {
+    const list = SINGING.rhythm.filter((r) => ok(r, b));
+    const want = RHYTHM_START[b];
+    const i = list.findIndex((r) => r.id === want);
+    return i >= 0 ? i : 0;
+  }
   function prog() {
     const p = load();
     p.birds = p.birds || [];
@@ -39,12 +58,14 @@
     url.searchParams.set("band", b);
     history.replaceState({}, "", url);
     document.body.className = "band-" + b;
+    pitchTarget = defaultPitch(b);
+    rhythmAt = defaultRhythmIndex(b);
   }
   function from(min) { return BANDS.slice(BANDS.indexOf(min)); }
   function ok(item, b) { return from(item.minBand || "baby").includes(b); }
   function url(path) {
     if (window.HS && window.HS.url) return window.HS.url(path);
-    const base = document.documentElement.dataset.appBase || "./";
+    const base = document.documentElement.dataset.appBase || document.baseURI;
     return new URL(path, base).href;
   }
   function img(k) {
@@ -56,7 +77,7 @@
     $("#celebrate-sub").textContent = sub;
     $("#celebrate").classList.add("show");
     ForestSynth.chirp();
-    setTimeout(() => $("#celebrate").classList.remove("show"), 1400);
+    setTimeout(() => $("#celebrate").classList.remove("show"), reduceMotion() ? 400 : 1400);
   }
   function addBird(id) {
     setProg((p) => { if (!p.birds.includes(id)) p.birds.push(id); });
@@ -75,21 +96,25 @@
   function shell(inner) {
     const b = band();
     const label = SINGING.bands.find((x) => x.id === b).label;
+    const screen = hashScreen();
+    const hero = screen === "home"
+      ? `<div class="hero">
+      <img src="${img("forest")}" alt="Dawn light through a mossy forest canopy">
+      <div class="caption">Birds join the choir as skills grow</div>
+    </div>`
+      : "";
     return `<header class="mast">
       <h1>Songbird Forest</h1>
       <button class="band-chip touchy" type="button" data-act="reband">${label}</button>
     </header>
-    <div class="hero">
-      <img src="${img("forest")}" alt="Dawn light through a mossy forest canopy">
-      <div class="caption">Birds join the choir as skills grow</div>
-    </div>
+    ${hero}
     ${inner}
     <nav class="dock" aria-label="Forest paths">
-      <button type="button" data-go="home" class="${hashScreen()==="home"?"on":""}">Grove</button>
-      <button type="button" data-go="pitch" class="${hashScreen()==="pitch"?"on":""}">Pitch</button>
-      <button type="button" data-go="rhythm" class="${hashScreen()==="rhythm"?"on":""}">Beat</button>
-      <button type="button" data-go="solfege" class="${hashScreen()==="solfege"?"on":""}">Solfege</button>
-      <button type="button" data-go="songs" class="${hashScreen()==="songs"?"on":""}">Songs</button>
+      <button type="button" data-go="home" class="${screen==="home"?"on":""}">Grove</button>
+      <button type="button" data-go="pitch" class="${screen==="pitch"?"on":""}">Pitch</button>
+      <button type="button" data-go="rhythm" class="${screen==="rhythm"?"on":""}">Beat</button>
+      <button type="button" data-go="solfege" class="${screen==="solfege"?"on":""}">Solfege</button>
+      <button type="button" data-go="songs" class="${screen==="songs"?"on":""}">Songs</button>
     </nav>`;
   }
 
@@ -139,24 +164,28 @@
     const b = band();
     const list = pitchesFor(b);
     const p = prog();
-    const t = pitchTarget || list[0];
+    const t = pitchTarget && list.some((x) => x.id === pitchTarget.id) ? pitchTarget : defaultPitch(b);
     pitchTarget = t;
     const hz = ForestSynth.midiToHz(t.midi);
+    const micOn = p.mic && PitchMic.allowed;
+    const meter = micOn
+      ? `<div class="pitch-meter" id="meter">
+          <div class="target" style="bottom:46%"></div>
+          <div class="needle" id="needle" style="bottom:8%"></div>
+        </div>
+        <p class="pitch-readout" id="readout">Listening · target ${Math.round(hz)} Hz</p>`
+      : `<p class="pitch-readout" id="readout">Mic off · tap High / Same / Low</p>`;
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
         <p class="kicker">Pitch nest</p>
         <h2>${t.label}</h2>
         <img class="story-art" src="${img(t.img)}" alt="">
         <p class="lead">Hear the bird. Match with your voice, or tap High / Same / Low if the mic stays off.</p>
-        <div class="pitch-meter" id="meter">
-          <div class="target" style="bottom:46%"></div>
-          <div class="needle" id="needle" style="bottom:8%"></div>
-        </div>
-        <p class="pitch-readout" id="readout">Mic off · target ${Math.round(hz)} Hz</p>
+        ${meter}
         <div class="mic-warn">The microphone is optional. If you allow it, sound is measured here only. It is never sent anywhere.</div>
         <div class="grid">
           <button class="btn sky touchy" type="button" data-act="hearpitch">Hear the bird</button>
-          <button class="btn cardinal touchy" type="button" data-act="mic">${p.mic && PitchMic.allowed ? "Stop mic" : "Allow mic (local)"}</button>
+          <button class="btn cardinal touchy" type="button" data-act="mic">${micOn ? "Stop mic" : "Allow mic (local)"}</button>
         </div>
         <p class="tiny">Which call matches? (works with no mic)</p>
         <div class="grid" id="match-birds"></div>
@@ -172,10 +201,10 @@
     }
     const box = $("#match-birds");
     if (box) {
-      const labels = ["Call A", "Call B", "Call C"];
-      box.innerHTML = choices.map((m, i) =>
-        `<button class="choice touchy" type="button" data-match="${m}" data-right="${t.midi}">${labels[i]}</button>`
-      ).join("");
+      box.innerHTML = choices.map((m) => {
+        const label = m < t.midi ? "Low" : m > t.midi ? "High" : "Same";
+        return `<button class="choice touchy" type="button" data-match="${m}" data-right="${t.midi}">${label}</button>`;
+      }).join("");
     }
     startMeter();
   }
@@ -230,6 +259,11 @@
   }
   let rhythmAt = 0;
   let taps = [];
+  let expectedTaps = [];
+  const heardSong = {};
+  let heardPitch = false;
+  let solTapped = false;
+  let initedBand = null;
   function drawRhythm(r) {
     const el = $("#rhythm-vis");
     if (!el) return;
@@ -247,10 +281,13 @@
     const beat = 60 / bpm;
     const pad = $("#pad");
     taps = [];
+    expectedTaps = [];
+    const origin = performance.now() + 40;
     let t = 0;
     r.pattern.forEach((d) => {
       const dur = (d === 0 ? 1 : d) * beat * 1000;
       if (d !== 0) {
+        expectedTaps.push(origin + t);
         setTimeout(() => {
           ForestSynth.click(d >= 1);
           if (pad) { pad.classList.add("pulse"); setTimeout(() => pad.classList.remove("pulse"), 120); }
@@ -259,13 +296,22 @@
       t += dur;
     });
   }
+  function scoreRhythm() {
+    const need = expectedTaps.length;
+    if (!need || taps.length < need) return false;
+    const got = taps.slice(0, need);
+    const g0 = got[0];
+    const e0 = expectedTaps[0];
+    const tol = 280;
+    return got.every((g, i) => Math.abs((g - g0) - (expectedTaps[i] - e0)) < tol);
+  }
 
   function solfegeScreen() {
     const b = band();
     let notes = SINGING.solfege;
-    if (b === "baby" || b === "toddler") notes = notes.filter((n) => ["Do", "Sol", "Do2"].includes(n.syl) || n.syl === "Mi" && b !== "baby");
+    if (b === "baby" || b === "toddler") notes = notes.filter((n) => ["Do", "Sol", "high Do"].includes(n.syl) || n.syl === "Mi" && b !== "baby");
     if (b === "baby") notes = SINGING.solfege.filter((n) => ["Do", "Sol"].includes(n.syl));
-    if (b === "preschool") notes = SINGING.solfege.filter((n) => ["Do", "Re", "Mi", "Sol", "Do2"].includes(n.syl));
+    if (b === "preschool") notes = SINGING.solfege.filter((n) => ["Do", "Re", "Mi", "Sol", "high Do"].includes(n.syl));
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
         <p class="kicker">Solfege trail</p>
@@ -288,9 +334,14 @@
   function songsScreen() {
     const b = band();
     const hymns = SINGING.songs.filter((s) => s.kind === "hymn" && ok(s, b));
+    if (b === "upper") {
+      hymns.sort((a, c) => (a.id === "come-thou-fount" ? -1 : c.id === "come-thou-fount" ? 1 : 0));
+    }
+    const tunes = SINGING.songs.filter((s) => s.kind === "tune" && ok(s, b));
     const orig = SINGING.songs.filter((s) => s.kind === "original" && ok(s, b));
+    const kindLabel = (s) => (s.kind === "hymn" ? "hymn" : s.kind === "tune" ? "teaching tune" : "original");
     const row = (s) => `<button class="row ${prog().done.songs[s.id]?"done":""} touchy" type="button" data-song="${s.id}">
-      <span>${s.title}</span><span class="tiny">${s.kind === "hymn" ? "hymn" : "original"}</span>
+      <span>${s.title}</span><span class="tiny">${kindLabel(s)}</span>
     </button>`;
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
@@ -299,6 +350,12 @@
         <p class="lead">Melodies are played by the device, not by a recording. Lyrics are old enough to share.</p>
         <div class="list">${hymns.map(row).join("")}</div>
       </section>
+      ${tunes.length ? `<section class="panel">
+        <p class="kicker">Practice perch</p>
+        <h2>Teaching tunes</h2>
+        <p class="lead">Pitch games, not church hymns.</p>
+        <div class="list">${tunes.map(row).join("")}</div>
+      </section>` : ""}
       <section class="panel">
         <p class="kicker">Forest school</p>
         <h2>Original learning songs</h2>
@@ -312,15 +369,15 @@
     if (!s) return songsScreen();
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
-        <p class="kicker">${s.kind === "hymn" ? "Hymn" : "Original song"}</p>
+        <p class="kicker">${s.kind === "hymn" ? "Hymn" : s.kind === "tune" ? "Teaching tune" : "Original song"}</p>
         <img class="story-art" src="${img(s.img)}" alt="">
         <h2>${s.title}</h2>
         <p class="tiny">${s.source}</p>
-        <p class="lyrics" id="lyrics">${s.lyrics}</p>
+        <p class="lyrics" id="lyrics">${s.lyrics.split("\n").map((ln) => `<span>${ln}</span>`).join("\n")}</p>
         <div class="grid">
           <button class="btn sky touchy" type="button" data-act="playsong" data-songid="${s.id}">Play melody</button>
           <button class="btn olive touchy" type="button" data-speak="${encodeURIComponent(s.title + ". " + s.lyrics)}">Hear words</button>
-          <button class="btn primary wide touchy" type="button" data-songdone="${s.id}">This bird can sing it</button>
+          <button class="btn primary wide touchy" type="button" data-songdone="${s.id}">I echoed the call</button>
           <button class="btn wide touchy" type="button" data-go="songs">All songs</button>
         </div>
       </section>
@@ -330,6 +387,11 @@
   function render() {
     const b = band();
     if (!b) { picker(); return; }
+    if (initedBand !== b) {
+      pitchTarget = defaultPitch(b);
+      rhythmAt = defaultRhythmIndex(b);
+      initedBand = b;
+    }
     document.body.className = "band-" + b;
     const sc = hashScreen();
     if (sc.startsWith("song/")) return songView(sc.slice(5));
@@ -356,7 +418,12 @@
       picker();
       return;
     }
+    if (t.dataset.act === "tap") {
+      taps.push(performance.now());
+      return;
+    }
     if (t.dataset.act === "hearpitch") {
+      heardPitch = true;
       ForestSynth.playNote(pitchTarget.midi, 0.8);
       return;
     }
@@ -377,12 +444,17 @@
     }
     if (t.dataset.pitch) {
       pitchTarget = SINGING.pitches.find((x) => x.id === t.dataset.pitch);
+      heardPitch = false;
       pitchScreen();
       return;
     }
     if (t.dataset.match) {
       const midi = Number(t.dataset.match);
       ForestSynth.playNote(midi, 0.5);
+      if (!heardPitch && !(prog().mic && PitchMic.allowed)) {
+        celebrate("Hear the bird first.", "Echo the call, then tap High, Same, or Low.");
+        return;
+      }
       if (midi === Number(t.dataset.right)) {
         t.classList.add("right");
         setProg((p) => { p.done.pitch[pitchTarget.id] = true; });
@@ -395,6 +467,11 @@
     }
     if (t.dataset.act === "playrhythm") { playRhythm(); return; }
     if (t.dataset.act === "checkrhythm") {
+      if (!scoreRhythm()) {
+        ForestSynth.miss();
+        celebrate("Keep the woodpecker’s beat.", "Hear the pattern, then tap with it.");
+        return;
+      }
       setProg((p) => { p.done.rhythm[String(rhythmAt)] = true; });
       addBird("rhythm-" + rhythmAt);
       return;
@@ -413,6 +490,7 @@
     }
     if (t.dataset.sol) {
       const n = SINGING.solfege.find((x) => x.syl === t.dataset.sol);
+      solTapped = true;
       ForestSynth.playNote(n.midi, 0.55);
       ForestSynth.speak(n.syl);
       const hint = $("#sol-hint");
@@ -421,16 +499,22 @@
       return;
     }
     if (t.dataset.act === "scaleup") {
+      solTapped = true;
       const notes = SINGING.solfege;
       notes.forEach((n, i) => setTimeout(() => ForestSynth.playNote(n.midi, 0.35), i * 380));
       return;
     }
     if (t.dataset.act === "scaledown") {
+      solTapped = true;
       const notes = SINGING.solfege.slice().reverse();
       notes.forEach((n, i) => setTimeout(() => ForestSynth.playNote(n.midi, 0.35), i * 380));
       return;
     }
     if (t.dataset.act === "solfege-done") {
+      if (!solTapped) {
+        celebrate("Climb a perch first.", "Tap a syllable or climb the scale, then a bird may join.");
+        return;
+      }
       setProg((p) => { p.done.solfege.scale = true; });
       addBird("solfege");
       return;
@@ -438,10 +522,21 @@
     if (t.dataset.song) { go("song/" + t.dataset.song); return; }
     if (t.dataset.act === "playsong") {
       const s = SINGING.songs.find((x) => x.id === t.dataset.songid);
-      ForestSynth.playMelody(s.melody, s.bpm);
+      heardSong[s.id] = true;
+      ForestSynth.playMelody(s.melody, s.bpm, (i) => {
+        const el = $("#lyrics");
+        if (!el) return;
+        const lines = s.lyrics.split("\n");
+        const line = Math.min(lines.length - 1, Math.floor(i * lines.length / s.melody.length));
+        el.innerHTML = lines.map((ln, li) => `<span class="${li === line ? "on" : ""}">${ln}</span>`).join("\n");
+      });
       return;
     }
     if (t.dataset.songdone) {
+      if (!heardSong[t.dataset.songdone]) {
+        celebrate("Hear it first.", "Play the melody, echo the call, then a bird may join.");
+        return;
+      }
       setProg((p) => { p.done.songs[t.dataset.songdone] = true; });
       addBird(t.dataset.songdone);
       return;

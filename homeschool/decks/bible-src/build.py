@@ -46,12 +46,27 @@ def from_band(min_band: str) -> list[str]:
     return BANDS[i:]
 
 
+def clean_kjv(text: str) -> str:
+    text = text.replace("\u00a0", " ")
+    text = re.sub(r"LORD\s+([,;:.!?])", r"LORD\1", text)
+    text = text.replace("Lord seeth", "LORD seeth")
+    text = re.sub(r"\s{2,}", " ", text)
+    return text.strip()
+
+
 def clean_web(text: str) -> str:
     text = text.replace("\u00a0", " ").strip()
     text = re.sub(r"\s+'\s+", "'", text)
     text = re.sub(r"'\s+", "'", text)
     text = re.sub(r"\s+'", "'", text)
     text = re.sub(r"\s+([;:,.!?])", r"\1", text)
+    # Drop leftover unmatched quotation marks from verse-span extraction.
+    quotes = "\"'“”‘’"
+    text = text.strip()
+    while text and text[0] in quotes and text[-1] not in quotes:
+        text = text[1:].lstrip()
+    while text and text[-1] in quotes and text[0] not in quotes:
+        text = text[:-1].rstrip()
     text = re.sub(r"\s{2,}", " ", text)
     return text.strip()
 
@@ -67,7 +82,7 @@ def load_bibles():
 
 def verse_text(bibles, version, book, chapter, verse) -> str:
     raw = bibles[version][book][chapter - 1][verse - 1]
-    return clean_web(raw) if version == "web" else raw.strip()
+    return clean_web(raw) if version == "web" else clean_kjv(raw)
 
 
 def span_text(bibles, version, book, chapter, start, end) -> str:
@@ -107,7 +122,7 @@ VERSE_SPECS = [
     ("jer29-11", "Jeremiah", 29, 11, 11, "primary", "thoughts", "wheat"),
     ("jonah1-17", "Jonah", 1, 17, 17, "toddler", "fish", "waters"),
     ("mic6-8", "Micah", 6, 8, 8, "upper", "mercy", "olives"),
-    ("rom1-16", "Romans", 1, 16, 16, "upper", "gospel", "stars"),
+    ("rom1-16", "Romans", 1, 16, 16, "upper", "power", "stars"),
     ("matt5-9", "Matthew", 5, 9, 9, "preschool", "peacemakers", "waters"),
     ("matt5-14", "Matthew", 5, 14, 14, "early", "light", "lantern"),
     ("matt6-9", "Matthew", 6, 9, 9, "early", "Father", "stars"),
@@ -117,7 +132,7 @@ VERSE_SPECS = [
     ("matt19-14", "Matthew", 19, 14, 14, "toddler", "children", "sheep"),
     ("matt22-37", "Matthew", 22, 37, 37, "early", "heart", "hillside"),
     ("matt28-6", "Matthew", 28, 6, 6, "preschool", "risen", "stars"),
-    ("luke2-11", "Luke", 2, 11, 11, "toddler", "Saviour", "stars"),
+    ("luke2-11", "Luke", 2, 11, 11, "toddler", "born", "stars"),
     ("luke6-31", "Luke", 6, 31, 31, "preschool", "do", "wheat"),
     ("john3-16", "John", 3, 16, 16, "preschool", "loved", "stars"),
     ("john8-12", "John", 8, 12, 12, "early", "light", "lantern"),
@@ -132,7 +147,7 @@ VERSE_SPECS = [
     ("rom12-21", "Romans", 12, 21, 21, "early", "overcome", "olives"),
     ("1cor10-31", "1 Corinthians", 10, 31, 31, "primary", "glory", "wheat"),
     ("1cor13-4", "1 Corinthians", 13, 4, 4, "early", "kind", "sheep"),
-    ("1cor16-14", "1 Corinthians", 16, 14, 14, "toddler", "charity", "sheep"),
+    ("1cor16-14", "1 Corinthians", 16, 14, 14, "toddler", "done", "sheep"),
     ("gal5-22-23", "Galatians", 5, 22, 23, "primary", "fruit", "wheat"),
     ("eph2-8", "Ephesians", 2, 8, 8, "upper", "grace", "stars"),
     ("eph4-32", "Ephesians", 4, 32, 32, "preschool", "kind", "sheep"),
@@ -639,6 +654,12 @@ def main():
         verses = build_verses(bibles)
     elif extracted.exists():
         verses = json.loads(extracted.read_text())
+        blank_fix = {"rom1-16": "power", "luke2-11": "born", "1cor16-14": "done"}
+        for v in verses:
+            v["kjv"] = clean_kjv(v.get("kjv") or "")
+            v["web"] = clean_web(v.get("web") or "")
+            if v.get("id") in blank_fix:
+                v["blank"] = pick_blank(v["kjv"], blank_fix[v["id"]])
         print("rebuilding from", extracted)
     else:
         sys.exit("Need /tmp/biblejson/kjv.json and web.json, or verses-extracted.json")
@@ -657,13 +678,13 @@ def main():
         "translationNote": "Scripture: King James Version (public domain) and World English Bible (public domain).",
         "bands": [{"id": b, "label": BAND_LABELS[b]} for b in BANDS],
         "images": {
-            "hillside": "img/bible-hillside-hero.jpg",
-            "sheep": "img/bible-sheep.jpg",
-            "lantern": "img/bible-lantern.jpg",
-            "stars": "img/bible-stars.jpg",
-            "waters": "img/bible-waters.jpg",
-            "olives": "img/bible-olives.jpg",
-            "wheat": "img/bible-wheat.jpg",
+            "hillside": "images/hillside-hero.png",
+            "sheep": "images/sheep.png",
+            "lantern": "images/lantern.png",
+            "stars": "images/stars.png",
+            "waters": "images/waters.png",
+            "olives": "images/olives.png",
+            "wheat": "images/wheat.png",
         },
         "verses": verses,
         "stories": STORIES,

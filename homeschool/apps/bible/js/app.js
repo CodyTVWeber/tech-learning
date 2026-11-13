@@ -34,7 +34,11 @@
     }
   }
   function saveProg(p) {
+    p.updatedAt = Date.now();
     localStorage.setItem(KEY_PROG, JSON.stringify(p));
+  }
+  function reduceMotion() {
+    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
   function prog() {
     const p = loadProg();
@@ -80,7 +84,13 @@
     if (b === "baby") return BIBLE.books.filter((x) => ["Genesis", "Matthew", "Psalms"].includes(x.name));
     if (b === "toddler") return BIBLE.books.filter((x) => x.n <= 5 || ["Matthew", "Mark", "Luke", "John", "Psalms", "Proverbs"].includes(x.name));
     if (b === "preschool") return BIBLE.books.filter((x) => x.n <= 5 || ["Matthew", "Mark", "Luke", "John", "Acts", "Psalms", "Proverbs"].includes(x.name));
-    if (b === "early") return BIBLE.books.filter((x) => x.testament === "OT" && x.group === "Law" || x.group === "Gospels" || ["Psalms", "Proverbs", "Acts"].includes(x.name));
+    if (b === "early") {
+      return BIBLE.books.filter((x) =>
+        (x.testament === "OT" && (x.group === "Law" || x.group === "History")) ||
+        x.group === "Gospels" ||
+        ["Psalms", "Proverbs", "Acts"].includes(x.name)
+      );
+    }
     return BIBLE.books;
   }
   function qualitiesFor(b) {
@@ -91,7 +101,7 @@
   }
   function url(path) {
     if (window.HS && window.HS.url) return window.HS.url(path);
-    const base = document.documentElement.dataset.appBase || "./";
+    const base = document.documentElement.dataset.appBase || document.baseURI;
     return new URL(path, base).href;
   }
   function img(key) {
@@ -124,7 +134,8 @@
     $("#celebrate-title").textContent = title;
     $("#celebrate-sub").textContent = sub;
     el.classList.add("show");
-    setTimeout(() => el.classList.remove("show"), 1600);
+    const ms = reduceMotion() ? 400 : 1600;
+    setTimeout(() => el.classList.remove("show"), ms);
   }
 
   function sheepSvg(n) {
@@ -149,21 +160,25 @@
   function shell(inner) {
     const b = band();
     const label = BIBLE.bands.find((x) => x.id === b).label;
+    const screen = hashScreen();
+    const hero = screen === "home"
+      ? `<div class="hero">
+        <img src="${img("hillside")}" alt="Golden-hour hillside with a flock of sheep">
+        <div class="caption">Gather the flock · light a lantern · watch the stars</div>
+      </div>`
+      : "";
     return `<header class="mast">
         <h1>Shepherd’s Hillside</h1>
         <button class="band-chip touchy" type="button" data-act="reband">${label}</button>
       </header>
-      <div class="hero">
-        <img src="${img("hillside")}" alt="Golden-hour hillside with a flock of sheep">
-        <div class="caption">Gather the flock · light a lantern · watch the stars</div>
-      </div>
+      ${hero}
       ${inner}
       <nav class="dock" aria-label="Hillside paths">
-        <button type="button" data-go="home" class="${hashScreen()==="home"?"on":""}">Fold</button>
-        <button type="button" data-go="memory" class="${hashScreen()==="memory"?"on":""}">Memory</button>
-        <button type="button" data-go="stories" class="${hashScreen()==="stories"?"on":""}">Stories</button>
-        <button type="button" data-go="books" class="${hashScreen()==="books"?"on":""}">Books</button>
-        <button type="button" data-go="character" class="${hashScreen()==="character"?"on":""}">Heart</button>
+        <button type="button" data-go="home" class="${screen==="home"?"on":""}">Fold</button>
+        <button type="button" data-go="memory" class="${screen==="memory"?"on":""}">Memory</button>
+        <button type="button" data-go="stories" class="${screen==="stories"?"on":""}">Stories</button>
+        <button type="button" data-go="books" class="${screen==="books"?"on":""}">Books</button>
+        <button type="button" data-go="character" class="${screen==="character"?"on":""}">Heart</button>
       </nav>`;
   }
 
@@ -209,15 +224,34 @@
     `)}</div>`;
   }
 
+  function escapeRe(word) {
+    return word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+  function blankWord(v, text) {
+    const hint = v.blank || "";
+    const aliases = {
+      Saviour: ["Savior", "Saviour"],
+      charity: ["love", "charity"],
+      gospel: ["gospel", "Good"],
+    };
+    const tries = [hint].concat(aliases[hint] || []);
+    for (let i = 0; i < tries.length; i++) {
+      if (tries[i] && new RegExp("\\b" + escapeRe(tries[i]) + "\\b", "i").test(text)) return tries[i];
+    }
+    const stop = /^(that|this|with|from|unto|them|they|shall|thou|thee|your|have|been|into|upon)$/i;
+    const words = (text.match(/[A-Za-z']{4,}/g) || []).filter((w) => !stop.test(w));
+    return words[Math.min(2, words.length - 1)] || words[0] || hint || "word";
+  }
   function blanked(text, word) {
-    const re = new RegExp("\\b" + word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
+    const re = new RegExp("\\b" + escapeRe(word) + "\\b", "i");
     if (!re.test(text)) return text + ' <span class="blank">____</span>';
     return text.replace(re, '<span class="blank">____</span>');
   }
-  function distractors(correct, pool) {
+  function distractors(correct, pool, p) {
     const words = new Set();
     pool.forEach((v) => {
-      (v.kjv.match(/[A-Za-z']{4,}/g) || []).forEach((w) => {
+      const src = textOf(v, p);
+      (src.match(/[A-Za-z']{4,}/g) || []).forEach((w) => {
         if (w.toLowerCase() !== correct.toLowerCase()) words.add(w);
       });
     });
@@ -246,10 +280,18 @@
     const v = list[memCursor];
     const t = textOf(v, p);
     const baby = b === "baby";
-    const toddler = b === "toddler" || b === "preschool";
-    const upper = b === "upper" || b === "primary";
+    const hideTarget = b === "toddler" || b === "preschool";
+    const firstLetters = b === "upper" || b === "primary";
+    const word = blankWord(v, t);
     const first = t.split(/\s+/).map((w) => w[0] + w.slice(1).replace(/[A-Za-z]/g, "·")).join(" ");
-    const choices = baby ? [] : distractors(v.blank, list);
+    const verseHtml = baby
+      ? t
+      : (firstLetters
+        ? `<span class="first-letters">${first}</span>`
+        : (hideTarget
+          ? `<span class="blank">____</span>`
+          : blanked(t, word)));
+    const choices = baby ? [] : distractors(word, list, p);
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
         <p class="kicker">Memory pasture · ${memCursor + 1} of ${list.length}</p>
@@ -259,12 +301,12 @@
         </div>
         <img class="story-art" src="${img(v.img)}" alt="">
         <p class="ref">${v.ref}</p>
-        <p class="verse" id="verse-full">${baby || toddler ? t : (upper ? `<span class="first-letters">${first}</span>` : blanked(t, v.blank))}</p>
-        ${baby ? `<p class="tiny">Tap Hear, then tap the sheep when you have listened.</p>` : `<p class="tiny">Fill the hillside word.</p>`}
+        <p class="verse" id="verse-full">${verseHtml}</p>
+        ${baby ? `<p class="tiny">Tap Hear, then tap the sheep when you have listened.</p>` : `<p class="tiny">${firstLetters ? "First letters hide the words. Hear, then fill the hillside word." : hideTarget ? "Hear the verse. The missing word stays hidden until you pick it, or tap Show." : "The missing word is hidden. Hear it, then pick it."}</p>`}
         <div class="grid ${baby ? "one" : ""}" id="choices">
           ${baby
             ? `<button class="btn lantern wide touchy" type="button" data-sheep="${v.id}">The sheep heard it</button>`
-            : choices.map((c) => `<button class="choice touchy" type="button" data-pick="${c.replace(/"/g, "&quot;")}" data-right="${v.blank}">${c}</button>`).join("")}
+            : choices.map((c) => `<button class="choice touchy" type="button" data-pick="${c.replace(/"/g, "&quot;")}" data-right="${word.replace(/"/g, "&quot;")}">${c}</button>`).join("")}
         </div>
         <div class="grid" style="margin-top:10px">
           <button class="btn olive touchy" type="button" data-speak="${encodeURIComponent(v.ref + ". " + t)}">Hear</button>
@@ -280,10 +322,11 @@
     const b = band();
     const list = storiesFor(b);
     const p = prog();
-    const rows = list.map((s) => {
+    const rows = list.map((s, i) => {
       const done = p.done.stories[s.id];
+      const n = b === "baby" || b === "toddler" ? i + 1 : s.order;
       return `<button class="row ${done ? "done" : ""} touchy" type="button" data-story="${s.id}">
-        <span><span class="num">${s.order}</span> ${s.title}</span>
+        <span><span class="num">${n}</span> ${s.title}</span>
         <span class="tiny">${s.ref}</span>
       </button>`;
     }).join("");
@@ -369,7 +412,7 @@
       <section class="panel">
         <p class="kicker">The names of the fold</p>
         <h2>Books of the Bible</h2>
-        <p class="lead">Sixty-six books, in order. Tap a name. For this path you will see ${list.length} books.</p>
+        <p class="lead">${list.length === 66 ? "Sixty-six books, in order." : list.length + " books for this path, in order."} Tap a name, then name the next book.</p>
         <p><button class="btn primary wide touchy" type="button" data-act="bookquiz">What comes next?</button></p>
         ${blocks}
       </section>
@@ -379,6 +422,25 @@
   function bookView(name) {
     const bk = BIBLE.books.find((x) => x.name === name);
     if (!bk) return books();
+    const list = booksFor(band());
+    const idx = list.findIndex((x) => x.name === bk.name);
+    const next = idx >= 0 && idx < list.length - 1 ? list[idx + 1] : null;
+    let quiz = "";
+    if (next) {
+      const pool = list.filter((x) => x.name !== next.name && x.name !== bk.name);
+      const opts = [next];
+      while (opts.length < 3 && pool.length) opts.push(pool.splice(Math.floor(Math.random() * pool.length), 1)[0]);
+      for (let i = opts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [opts[i], opts[j]] = [opts[j], opts[i]];
+      }
+      quiz = `<p class="tiny">Which book comes after ${bk.name}?</p>
+        <div class="grid">
+          ${opts.map((o) => `<button class="choice touchy" type="button" data-stampbook="${bk.name}" data-nextbook="${o.name}" data-right="${next.name}">${o.name}</button>`).join("")}
+        </div>`;
+    } else {
+      quiz = `<button class="btn lantern wide touchy" type="button" data-bookdone="${bk.name}">This is the last book on this path</button>`;
+    }
     appEl.innerHTML = `<div class="app">${shell(`
       <section class="panel">
         <p class="kicker">${bk.testament} · ${bk.group} · book ${bk.n}</p>
@@ -386,9 +448,9 @@
         <p class="lead">${bk.blurb}</p>
         <div class="grid">
           <button class="btn olive touchy" type="button" data-speak="${encodeURIComponent(bk.name + ". " + bk.blurb)}">Hear</button>
-          <button class="btn lantern touchy" type="button" data-bookdone="${bk.name}">Stamp this fold</button>
           <button class="btn wide touchy" type="button" data-go="books">All books</button>
         </div>
+        ${quiz}
       </section>
     `)}</div>`;
   }
@@ -573,9 +635,10 @@
     if (t.dataset.nextbook) {
       if (t.dataset.nextbook === t.dataset.right) {
         t.classList.add("right");
-        setProg((p) => { p.done.books[t.dataset.nextbook] = true; });
+        const stamped = t.dataset.stampbook || t.dataset.nextbook;
+        setProg((p) => { p.done.books[stamped] = true; });
         addStar();
-        setTimeout(bookQuiz, 700);
+        if (!t.dataset.stampbook) setTimeout(bookQuiz, reduceMotion() ? 200 : 700);
       } else {
         t.classList.add("wrong");
         HillSFX.miss();
