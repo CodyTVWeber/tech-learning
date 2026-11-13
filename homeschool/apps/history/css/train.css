@@ -110,13 +110,29 @@ body.band-early .touch {
 
 .topbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  padding: 10px 12px;
+  gap: 8px;
+  padding: 8px 10px;
   background:
     linear-gradient(#3a2418, #2a1810);
   border-bottom: 6px solid var(--brass-dark);
   box-shadow: inset 0 -2px 0 var(--brass), 0 8px 0 #0c0907;
+}
+
+.topbar .icon-btn.touch {
+  min-width: 44px;
+  min-height: 44px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.topbar-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
 }
 
 .enamel {
@@ -124,17 +140,18 @@ body.band-early .touch {
   color: var(--cream);
   border: 3px solid var(--brass);
   box-shadow: inset 0 0 0 2px #0e1720, 0 2px 0 #0c0907;
-  padding: 6px 12px;
-  letter-spacing: 0.14em;
+  padding: 6px 10px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   font-family: "Copperplate Gothic", Copperplate, "Courier New", monospace;
   font-size: 13px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .brand {
-  flex: 1;
-  min-width: 0;
+  flex: 1 1 auto;
+  min-width: 12em;
 }
 
 .brand small {
@@ -161,9 +178,10 @@ body.band-early .touch {
 
 .stats {
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   font-family: "Courier New", Courier, monospace;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--brass);
 }
 
@@ -480,10 +498,47 @@ body.band-early .touch {
 
 .muted { color: #8a7a64; font-size: 0.9rem; }
 
+.pres-table-wrap { overflow: auto; margin-top: 12px; }
+
 @media (max-width: 640px) {
   .hero img { height: 160px; }
   .photo-row { grid-template-columns: 1fr; }
-  .enamel { font-size: 11px; letter-spacing: 0.08em; }
+  .enamel { font-size: 12px; letter-spacing: 0.06em; white-space: normal; }
+  .brand { min-width: 0; flex: 1 1 100%; }
+  .topbar-tools { margin-left: 0; width: 100%; }
+  .track-wrap {
+    overflow-x: visible;
+    padding: 12px 8px;
+  }
+  .track {
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    padding-bottom: 0;
+    gap: 8px;
+  }
+  .track::before { display: none; }
+  .engine {
+    width: 120px;
+    align-self: center;
+    margin: 0 0 8px;
+  }
+  .station-stop {
+    width: 100%;
+    margin-right: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  .station-stop .post {
+    width: 8px;
+    height: 48px;
+  }
+  .station-stop .sign {
+    width: auto;
+    flex: 1;
+    min-height: 48px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -10,6 +10,7 @@
     quizLock: false,
     babyFound: {},
     pinDone: {},
+    quizCard: null,
   };
 
   function assetUrl(path) {
@@ -41,6 +42,10 @@
     document.body.className = "band-" + id;
   }
 
+  function isLittle() {
+    return state.band === "baby" || state.band === "toddler";
+  }
+
   function flightsForBand() {
     return HS_FLIGHTS.filter(function (f) {
       return hsBandAtLeast(state.band, f.min);
@@ -55,9 +60,50 @@
   }
 
   function quizzesFor(fl) {
+    if (!fl) return [];
     var pack = HS_GEO_QUIZZES[fl.id] || {};
     var b = state.band;
+    if (b === "baby" || b === "toddler") return (pack[b] || []).slice();
     return (pack[b] || pack.early || pack.preschool || pack.toddler || []).slice();
+  }
+
+  function shuffledChoices(item) {
+    var pairs = item.choices.map(function (c, i) { return { c: c, i: i }; });
+    var n = pairs.length;
+    while (n > 1) {
+      var j = Math.floor(Math.random() * n);
+      n -= 1;
+      var tmp = pairs[n];
+      pairs[n] = pairs[j];
+      pairs[j] = tmp;
+    }
+    var a = 0;
+    pairs.forEach(function (p, idx) { if (p.i === item.a) a = idx; });
+    return { q: item.q, choices: pairs.map(function (p) { return p.c; }), a: a };
+  }
+
+  function flightMarks(fl) {
+    if (!fl) return [];
+    if (fl.states && fl.states.length) {
+      return fl.states.map(function (ab) {
+        var st = HS_STATES.filter(function (s) { return s.abbr === ab; })[0];
+        return { kind: "state", id: ab, label: ab, sub: st ? st.capital : "" };
+      });
+    }
+    var list = fl.features || fl.rivers || [];
+    return list.map(function (x) {
+      return { kind: "feature", id: x.id, label: x.name, sub: x.hint || "" };
+    });
+  }
+
+  function flightBlurb(f) {
+    if (f.states && f.states.length) return f.states.join(" · ");
+    if (f.features && f.features.length) return f.features.map(function (x) { return x.name; }).join(" · ");
+    if (f.rivers && f.rivers.length) return f.rivers.map(function (x) { return x.name; }).join(" · ");
+    if (f.trails && f.trails.length) return f.trails.join(" · ");
+    if (f.canals && f.canals.length) return f.canals.join(" · ");
+    if (f.regions && f.regions.length) return f.regions.join(" · ");
+    return "";
   }
 
   document.addEventListener("pointerdown", function first() {
@@ -71,10 +117,12 @@
     return (
       '<header class="topbar"><div class="topbar-inner">' +
         '<div class="brand"><strong>Hot-Air Balloon Expedition</strong><small>US maps · pins · stamps</small></div>' +
-        '<div class="stats"><span>' + (p.pins.length) + ' pins</span><span>' + Object.keys(p.stamps).length + ' stamps</span><span>' + p.stars + ' stars</span></div>' +
-        '<button type="button" class="icon-btn touch" data-act="stamps">Log</button>' +
-        '<button type="button" class="icon-btn touch" data-act="mute" aria-pressed="' + mute + '">' + (mute ? "Sound off" : "Sound on") + "</button>" +
-        '<button type="button" class="icon-btn touch" data-act="band">Band</button>' +
+        '<div class="topbar-tools">' +
+          '<div class="stats"><span>' + (p.pins.length) + " pins</span><span>" + Object.keys(p.stamps).length + " stamps</span><span>" + p.stars + " ★</span></div>" +
+          '<button type="button" class="icon-btn touch" data-act="stamps">Log</button>' +
+          '<button type="button" class="icon-btn touch" data-act="mute" aria-pressed="' + mute + '">' + (mute ? "Off" : "Sound") + "</button>" +
+          '<button type="button" class="icon-btn touch" data-act="band">Band</button>' +
+        "</div>" +
       "</div></header>"
     );
   }
@@ -98,10 +146,11 @@
     var list = flightsForBand().map(function (f) {
       var stamped = p.stamps[f.id] ? " stamped" : "";
       var rec = String(f.week) === String(week) ? " aria-current=\"true\"" : "";
+      var blurb = flightBlurb(f);
       return (
         '<button type="button" class="flight-btn touch' + stamped + '" data-flight="' + f.id + '"' + rec + ">" +
           '<span class="week">W' + f.week + "</span>" +
-          "<span><strong>" + f.title + "</strong><br>" + (f.states ? f.states.join(" · ") : (f.fact || "").slice(0, 72)) + "</span>" +
+          "<span><strong>" + f.title + "</strong>" + (blurb ? "<br>" + blurb : "") + "</span>" +
         "</button>"
       );
     }).join("");
@@ -113,16 +162,16 @@
             "<figcaption>Basket and burner. Each flight is a map topic. Drop pins; collect stamps.</figcaption>" +
           "</figure>" +
           "<h1>Expedition board</h1>" +
-          '<p class="lede">Original flights aligned to Cycle 3 U.S. geography <em>topics</em>. Public names of states, capitals, and features. No recitation sentences.</p>' +
+          (state.band === "baby" ? '<div class="actions"><button type="button" class="brass-btn touch" data-act="baby">Sky play</button></div>' : "") +
+          (isLittle() ? "" : '<p class="lede">Original flights aligned to Cycle 3 U.S. geography <em>topics</em>. Public names of states, capitals, and features. No recitation sentences.</p>') +
           '<div class="photo-row">' +
             '<img src="' + assetUrl("images/basket-map.jpg") + '" alt="Wicker balloon basket rim with a brass compass and folded map">' +
             '<img src="' + assetUrl("images/aerial-usa.jpg") + '" alt="High-altitude aerial of North American land and water">' +
           "</div>" +
           '<div class="basket-panel"><div class="flight-list">' + list + "</div>" +
             '<div class="actions">' +
-              '<button type="button" class="brass-btn touch" data-act="map">Open the chart</button>' +
+              (state.band === "baby" ? "" : '<button type="button" class="brass-btn touch" data-act="map">Open the chart</button>') +
               '<button type="button" class="brass-btn secondary touch" data-act="songs">Song</button>' +
-              (state.band === "baby" ? '<button type="button" class="brass-btn touch" data-act="baby">Sky play</button>' : "") +
             "</div></div>" +
         "</main></div>";
     HSAudio.wind();
@@ -137,6 +186,9 @@
     if (fl.type === "features" && /mtn|west-mtns|nw-mtns|appalach/.test(fl.id)) photo = "images/mountains-aerial.jpg";
     if (fl.id === "deserts" || fl.id === "features-a") photo = "images/desert-aerial.jpg";
     if (fl.id === "great-lakes") photo = "images/lakes-aerial.jpg";
+    var marks = flightMarks(fl);
+    var canDrop = marks.length && !isLittle() && hsBandAtLeast(state.band, "early");
+    var canQuiz = state.band !== "baby" && quizzesFor(fl).length;
     root.innerHTML =
       '<div class="app-shell">' + header() +
         '<main id="main" class="main">' +
@@ -147,8 +199,8 @@
             "<p>" + fl.fact + "</p>" +
             '<div class="actions">' +
               '<button type="button" class="brass-btn touch" data-act="talk" data-text="' + encodeURIComponent(fl.fact) + '">Read aloud</button>' +
-              '<button type="button" class="brass-btn touch" data-act="quiz">Pin quiz</button>' +
-              (fl.states && hsBandAtLeast(state.band, "early") ? '<button type="button" class="brass-btn secondary touch" data-act="drop">Drop pins</button>' : "") +
+              (canQuiz ? '<button type="button" class="brass-btn touch" data-act="quiz">Pin quiz</button>' : "") +
+              (canDrop ? '<button type="button" class="brass-btn secondary touch" data-act="drop">Drop pins</button>' : "") +
               '<button type="button" class="brass-btn secondary touch" data-act="map">Chart</button>' +
             "</div>" +
           "</section>" +
@@ -159,7 +211,6 @@
     var fl = flightById(state.flightId);
     var items = quizzesFor(fl);
     if (!items.length) {
-      HSProgress.addStamp(fl.id);
       state.screen = "flight";
       flightView();
       return;
@@ -171,7 +222,11 @@
       flightView();
       return;
     }
-    var item = items[state.quizIndex];
+    var raw = items[state.quizIndex];
+    if (!state.quizCard || state.quizCard.index !== state.quizIndex) {
+      state.quizCard = { index: state.quizIndex, item: shuffledChoices(raw) };
+    }
+    var item = state.quizCard.item;
     var choices = item.choices.map(function (c, i) {
       return '<button type="button" class="choice touch" data-choice="' + i + '">' + c + "</button>";
     }).join("");
@@ -191,43 +246,47 @@
 
   function mapView(withPins) {
     var fl = withPins ? flightById(state.flightId) : null;
+    var marks = fl ? flightMarks(fl) : [];
     var pinHtml = "";
-    if (fl && fl.states) {
-      pinHtml = '<div class="pin-tray" id="pin-tray">' + fl.states.map(function (ab) {
-        var st = HS_STATES.filter(function (s) { return s.abbr === ab; })[0];
-        return '<button type="button" class="pin touch" data-abbr="' + ab + '">' + ab + (st ? "<br>" + st.capital : "") + "</button>";
-      }).join("") + "</div><p>Drag a pin onto its state on the chart.</p>";
+    if (fl && marks.length) {
+      pinHtml = '<div class="pin-tray" id="pin-tray">' + marks.map(function (m) {
+        var extra = m.kind === "feature" ? ' data-feature="' + m.id + '"' : ' data-abbr="' + m.id + '"';
+        return '<button type="button" class="pin touch"' + extra + ">" + m.label + (m.sub ? "<br>" + m.sub : "") + "</button>";
+      }).join("") + "</div><p>Drag a pin onto its glowing mark on the chart.</p>";
     }
     root.innerHTML =
       '<div class="app-shell">' + header() +
         '<main id="main" class="main">' +
           '<p><button type="button" class="brass-btn secondary touch" data-act="hub">Back</button></p>' +
           "<h1>Expedition chart</h1>" +
-          '<p class="lede">Original schematic navigator chart — not a survey plat. Drop pins on glowing states.</p>' +
+          '<p class="lede">Original schematic navigator chart — not a survey plat. Drop pins on glowing states and features.</p>' +
           pinHtml +
           '<div class="map-wrap" id="map-host"></div>' +
           '<p class="live" id="live" aria-live="polite"></p>' +
         "</main></div>";
     var host = document.getElementById("map-host");
     HSMap.loadChart(host).then(function () {
-      if (fl && fl.states) {
-        HSMap.highlight(host, fl.states);
+      if (fl && marks.length) {
+        var abbrs = marks.filter(function (m) { return m.kind === "state"; }).map(function (m) { return m.id; });
+        var feats = marks.filter(function (m) { return m.kind === "feature"; }).map(function (m) { return m.id; });
+        HSMap.highlight(host, abbrs, feats);
+        HSMap.scrollToGlow(host);
         var tray = document.getElementById("pin-tray");
-        HSMap.bindPins(tray, host, null, function (ok, abbr, pin) {
+        HSMap.bindPins(tray, host, null, function (ok, id, pin) {
           var live = document.getElementById("live");
           if (ok) {
             pin.disabled = true;
-            state.pinDone[abbr] = true;
+            state.pinDone[id] = true;
             HSProgress.addStar();
-            if (live) live.textContent = abbr + " is home. Stamp that pin.";
-            var all = fl.states.every(function (a) { return state.pinDone[a]; });
+            if (live) live.textContent = (pin.textContent || id) + " is home. Stamp that pin.";
+            var all = marks.every(function (m) { return state.pinDone[m.id]; });
             if (all) {
               HSProgress.addStamp(fl.id);
               HSAudio.celebrate();
               if (live) live.textContent = "Every pin is home. Expedition stamp earned.";
             }
           } else if (live) {
-            live.textContent = "That pin belongs on a different state. Try again.";
+            live.textContent = "That pin belongs on a different mark. Try again.";
           }
         });
       }
@@ -318,7 +377,7 @@
     if (t.classList.contains("pin")) return;
     if (t.dataset.band) {
       setBand(t.dataset.band);
-      state.screen = "hub";
+      state.screen = t.dataset.band === "baby" ? "baby" : "hub";
       HSAudio.burner();
       render();
       return;
@@ -333,7 +392,7 @@
     if (act === "map") { state.screen = "map"; render(); return; }
     if (act === "drop") { state.pinDone = {}; state.screen = "drop"; render(); return; }
     if (act === "flight") { state.screen = "flight"; render(); return; }
-    if (act === "quiz") { state.screen = "quiz"; state.quizIndex = 0; state.quizLock = false; render(); return; }
+    if (act === "quiz") { state.screen = "quiz"; state.quizIndex = 0; state.quizLock = false; state.quizCard = null; render(); return; }
     if (act === "talk") { HSAudio.talk(decodeURIComponent(t.dataset.text || "")); return; }
     if (act === "melody") {
       var song = HS_GEO_SONGS[0];
@@ -353,7 +412,8 @@
       if (state.quizLock) return;
       var fl = flightById(state.flightId);
       var items = quizzesFor(fl);
-      var item = items[state.quizIndex];
+      var raw = items[state.quizIndex];
+      var item = (state.quizCard && state.quizCard.item) || shuffledChoices(raw);
       var pick = Number(t.dataset.choice);
       var live = document.getElementById("live");
       if (pick === item.a) {
@@ -365,6 +425,7 @@
         setTimeout(function () {
           state.quizIndex += 1;
           state.quizLock = false;
+          state.quizCard = null;
           render();
         }, 550);
       } else {
@@ -402,7 +463,10 @@
 
   state.band = readBand();
   var week = qs().get("week");
-  if (state.band && week) {
+  if (state.band === "baby" && !week) {
+    state.screen = "baby";
+  }
+  if (state.band && week && state.band !== "baby") {
     var match = HS_FLIGHTS.filter(function (f) { return String(f.week) === String(week); })[0];
     if (match && hsBandAtLeast(state.band, match.min)) {
       state.flightId = match.id;

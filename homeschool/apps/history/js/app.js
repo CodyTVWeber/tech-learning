@@ -11,6 +11,11 @@
     quizLock: false,
     timelinePick: [],
     babyFound: {},
+    quizCard: null,
+    presQ: null,
+    presAttempted: false,
+    presLive: "",
+    presSolved: false,
   };
 
   function assetUrl(path) {
@@ -60,11 +65,31 @@
     return (st.fact && (st.fact[b] || st.fact.early || st.fact.preschool || st.fact.toddler || st.fact.baby)) || "";
   }
 
+  function isLittle() {
+    return state.band === "baby" || state.band === "toddler";
+  }
+
   function quizzesFor(st) {
+    if (!st) return [];
     var pack = HS_HISTORY_QUIZZES[st.id] || {};
     var b = state.band;
-    var list = pack[b] || pack.early || pack.preschool || pack.toddler || [];
-    return list.slice();
+    if (b === "baby" || b === "toddler") return (pack[b] || []).slice();
+    return (pack[b] || pack.early || pack.preschool || pack.toddler || []).slice();
+  }
+
+  function shuffledChoices(item) {
+    var pairs = item.choices.map(function (c, i) { return { c: c, i: i }; });
+    var n = pairs.length;
+    while (n > 1) {
+      var j = Math.floor(Math.random() * n);
+      n -= 1;
+      var tmp = pairs[n];
+      pairs[n] = pairs[j];
+      pairs[j] = tmp;
+    }
+    var a = 0;
+    pairs.forEach(function (p, idx) { if (p.i === item.a) a = idx; });
+    return { q: item.q, choices: pairs.map(function (p) { return p.c; }), a: a };
   }
 
   function firstGesture() {
@@ -78,15 +103,17 @@
     var mute = HSAudio.isMuted();
     return (
       '<header class="topbar">' +
-        '<div class="brand enamel">Time-Travel Train<small>History line · tickets &amp; stamps</small></div>' +
-        '<div class="stats" aria-live="polite">' +
-          '<span>' + p.tickets.length + ' tickets</span>' +
-          '<span>' + Object.keys(p.stamps).length + ' stamps</span>' +
-          '<span>' + p.stars + ' stars</span>' +
+        '<div class="brand enamel">Time-Travel Train<small>Tickets &amp; stamps</small></div>' +
+        '<div class="topbar-tools">' +
+          '<div class="stats" aria-live="polite">' +
+            '<span>' + p.tickets.length + ' tix</span>' +
+            '<span>' + Object.keys(p.stamps).length + ' stamps</span>' +
+            '<span>' + p.stars + ' ★</span>' +
+          "</div>" +
+          '<button type="button" class="icon-btn touch" data-act="stamps">Stamps</button>' +
+          '<button type="button" class="icon-btn touch" data-act="mute" aria-pressed="' + mute + '">' + (mute ? "Off" : "Sound") + "</button>" +
+          '<button type="button" class="icon-btn touch" data-act="band">Band</button>' +
         "</div>" +
-        '<button type="button" class="icon-btn touch" data-act="stamps">Stamp book</button>' +
-        '<button type="button" class="icon-btn touch" data-act="mute" aria-pressed="' + mute + '">' + (mute ? "Sound off" : "Sound on") + "</button>" +
-        '<button type="button" class="icon-btn touch" data-act="band">Band</button>' +
       "</header>"
     );
   }
@@ -146,17 +173,17 @@
             "<figcaption>All aboard. Each stop is an era. Collect tickets and brass stamps.</figcaption>" +
           "</figure>" +
           "<h1>Railway of American eras</h1>" +
-          '<p class="lede">Original station quizzes aligned to Cycle 3 U.S. history <em>topics</em>. Public-domain documents are quoted; memory-work sentences are not.</p>' +
+          (isLittle() ? "" : '<p class="lede">Original station quizzes aligned to Cycle 3 U.S. history <em>topics</em>. Public-domain documents are quoted; memory-work sentences are not.</p>') +
           '<div class="photo-row">' +
             '<img src="' + assetUrl("images/tickets.jpg") + '" alt="Antique railway tickets and a brass punch on a wooden counter">' +
             '<img src="' + assetUrl("images/stamp-album.jpg") + '" alt="Open leather stamp album with wax seals">' +
           "</div>" +
           '<div class="track-wrap"><div class="track">' + engineSvg() + stops + "</div></div>" +
           '<div class="actions">' +
-            '<button type="button" class="brass-btn touch" data-act="timeline">Timeline car</button>' +
+            (isLittle() ? '<button type="button" class="brass-btn touch" data-act="baby">Play car</button>' : "") +
+            (isLittle() ? "" : '<button type="button" class="brass-btn touch" data-act="timeline">Timeline car</button>') +
             (hsBandAtLeast(state.band, "primary") ? '<button type="button" class="brass-btn secondary touch" data-act="presidents">Presidents car</button>' : "") +
             '<button type="button" class="brass-btn secondary touch" data-act="songs">Song car</button>' +
-            (state.band === "baby" ? '<button type="button" class="brass-btn touch" data-act="baby">Play car</button>' : "") +
           "</div>" +
         "</main></div>";
     HSAudio.chuff();
@@ -186,8 +213,8 @@
             "<p>" + fact + "</p>" + extra +
             '<div class="actions">' +
               '<button type="button" class="brass-btn touch" data-act="talk" data-text="' + encodeURIComponent(fact) + '">Read aloud</button>' +
-              '<button type="button" class="brass-btn touch" data-act="quiz">Ticket quiz</button>' +
-              '<button type="button" class="brass-btn secondary touch" data-act="timeline">Timeline</button>' +
+              (state.band === "baby" || !quizzesFor(st).length ? "" : '<button type="button" class="brass-btn touch" data-act="quiz">Ticket quiz</button>') +
+              (isLittle() ? "" : '<button type="button" class="brass-btn secondary touch" data-act="timeline">Timeline</button>') +
               '<button type="button" class="brass-btn secondary touch" data-act="songs">Song</button>' +
             "</div>" +
           "</section>" +
@@ -198,9 +225,8 @@
     var st = stationById(state.stationId);
     var items = quizzesFor(st);
     if (!items.length) {
-      state.activity = "fact";
+      state.screen = "station";
       stationView();
-      celebrateStamp(st);
       return;
     }
     if (state.quizIndex >= items.length) {
@@ -209,7 +235,11 @@
       stationView();
       return;
     }
-    var item = items[state.quizIndex];
+    var raw = items[state.quizIndex];
+    if (!state.quizCard || state.quizCard.index !== state.quizIndex) {
+      state.quizCard = { index: state.quizIndex, item: shuffledChoices(raw) };
+    }
+    var item = state.quizCard.item;
     var choices = item.choices.map(function (c, i) {
       return '<button type="button" class="choice touch" data-choice="' + i + '">' + c + "</button>";
     }).join("");
@@ -249,7 +279,7 @@
     var shuffled = pick.slice().sort(function () { return Math.random() - 0.5; });
     state.timelinePick = [];
     var cards = shuffled.map(function (t) {
-      return '<button type="button" class="tl-card touch" data-tl="' + t.id + '"><span class="yr">' + t.year + "</span>" + t.label + "</button>";
+      return '<button type="button" class="tl-card touch" data-tl="' + t.id + '">' + t.label + "</button>";
     }).join("");
     root.innerHTML =
       '<div class="app-shell">' + header() +
@@ -337,9 +367,6 @@
   }
 
   function presidentsView() {
-    var rows = HS_PRESIDENTS.map(function (r) {
-      return "<tr><td>" + r[0] + "</td><td>" + r[1] + "</td><td>" + r[2] + "</td></tr>";
-    }).join("");
     var qBank = [
       { q: "Who was the first U.S. president?", a: "George Washington" },
       { q: "Who was president during the Civil War?", a: "Abraham Lincoln" },
@@ -347,20 +374,38 @@
       { q: "Who is president number 46 in this list?", a: "Joe Biden" },
       { q: "Who is president number 47 in this list?", a: "Donald Trump" }
     ];
-    var item = qBank[Math.floor(Math.random() * qBank.length)];
-    state.presQ = item;
+    if (!state.presQ) {
+      var item = qBank[Math.floor(Math.random() * qBank.length)];
+      var decoys = qBank.map(function (x) { return x.a; }).filter(function (n) { return n !== item.a; });
+      decoys.sort(function () { return Math.random() - 0.5; });
+      var names = [item.a, decoys[0], decoys[1]];
+      names.sort(function () { return Math.random() - 0.5; });
+      state.presQ = { q: item.q, a: item.a, names: names };
+      state.presAttempted = false;
+      state.presLive = "";
+      state.presSolved = false;
+    }
+    var rows = HS_PRESIDENTS.map(function (r) {
+      return "<tr><td>" + r[0] + "</td><td>" + r[1] + "</td><td>" + r[2] + "</td></tr>";
+    }).join("");
+    var guesses = state.presQ.names.map(function (n) {
+      return '<button type="button" class="choice touch" data-pres-guess="' + n.replace(/"/g, "&quot;") + '">' + n + "</button>";
+    }).join("");
     root.innerHTML =
       '<div class="app-shell">' + header() +
         '<main id="main" class="main">' +
           '<p class="muted"><button type="button" class="brass-btn secondary touch" data-act="hub">Back</button></p>' +
           '<section class="fact-card">' +
             "<h2>Presidents car</h2>" +
-            "<p>Public-office list (1–47). Original question below — not a recitation card.</p>" +
-            "<p><strong>" + item.q + "</strong></p>" +
-            '<button type="button" class="brass-btn touch" data-act="pres-reveal">Show the name</button>' +
-            '<p class="live" id="live" aria-live="polite"></p>' +
-            '<div style="overflow:auto"><table class="source-block">' +
-              "<thead><tr><th>#</th><th>Name</th><th>Years</th></tr></thead><tbody>" + rows + "</tbody></table></div>" +
+            "<p>Try the question first. The 1–47 list stays covered until you answer or peek.</p>" +
+            "<p><strong>" + state.presQ.q + "</strong></p>" +
+            guesses +
+            '<button type="button" class="brass-btn secondary touch" data-act="pres-reveal">Show the name</button>' +
+            '<p class="live" id="live" aria-live="polite">' + (state.presLive || "") + "</p>" +
+            (state.presAttempted
+              ? '<div class="pres-table-wrap"><table class="source-block">' +
+                "<thead><tr><th>#</th><th>Name</th><th>Years</th></tr></thead><tbody>" + rows + "</tbody></table></div>"
+              : "") +
           "</section>" +
         "</main></div>";
   }
@@ -386,7 +431,7 @@
 
     if (t.dataset.band) {
       setBand(t.dataset.band);
-      state.screen = "hub";
+      state.screen = t.dataset.band === "baby" ? "baby" : "hub";
       HSAudio.whistle();
       render();
       return;
@@ -403,12 +448,13 @@
     if (act === "baby") { state.screen = "baby"; render(); return; }
     if (act === "songs") { state.screen = "songs"; render(); return; }
     if (act === "timeline") { state.screen = "timeline"; render(); return; }
-    if (act === "presidents") { state.screen = "presidents"; render(); return; }
+    if (act === "presidents") { state.screen = "presidents"; state.presQ = null; state.presAttempted = false; state.presLive = ""; state.presSolved = false; render(); return; }
     if (act === "station") { state.screen = "station"; render(); return; }
     if (act === "quiz") {
       state.screen = "quiz";
       state.quizIndex = 0;
       state.quizLock = false;
+      state.quizCard = null;
       render();
       return;
     }
@@ -435,7 +481,8 @@
       if (state.quizLock) return;
       var st = stationById(state.stationId);
       var items = quizzesFor(st);
-      var item = items[state.quizIndex];
+      var raw = items[state.quizIndex];
+      var item = (state.quizCard && state.quizCard.item) || shuffledChoices(raw);
       var pick = Number(t.dataset.choice);
       var live = document.getElementById("live");
       if (pick === item.a) {
@@ -447,6 +494,7 @@
         setTimeout(function () {
           state.quizIndex += 1;
           state.quizLock = false;
+          state.quizCard = null;
           render();
         }, 550);
       } else {
@@ -497,11 +545,27 @@
       }
       return;
     }
+    if (t.dataset.presGuess) {
+      state.presAttempted = true;
+      if (t.dataset.presGuess === state.presQ.a) {
+        state.presLive = "Correct. The roster is open.";
+        if (!state.presSolved) {
+          state.presSolved = true;
+          HSAudio.celebrate();
+          HSProgress.addStar();
+        }
+      } else if (!state.presSolved) {
+        state.presLive = "Not that name. Try another, or peek.";
+        HSAudio.wrong();
+      }
+      render();
+      return;
+    }
     if (act === "pres-reveal") {
-      var live4 = document.getElementById("live");
-      if (live4 && state.presQ) live4.textContent = state.presQ.a;
-      HSAudio.talk(state.presQ.a);
-      HSProgress.addStar();
+      state.presAttempted = true;
+      state.presLive = state.presQ ? state.presQ.a : "";
+      if (state.presQ) HSAudio.talk(state.presQ.a);
+      render();
       return;
     }
   });
@@ -516,9 +580,12 @@
 
   state.band = readBand();
   var week = qs().get("week");
+  if (state.band === "baby" && !week) {
+    state.screen = "baby";
+  }
   if (state.band && week) {
     var match = HS_HISTORY_STATIONS.filter(function (s) { return String(s.week) === String(week); })[0];
-    if (match && hsBandAtLeast(state.band, match.min)) {
+    if (match && hsBandAtLeast(state.band, match.min) && state.band !== "baby") {
       state.stationId = match.id;
       state.screen = "station";
     }

@@ -44,6 +44,7 @@
 <path id="mtn-green" data-feature="green-mountains" d="M848 90 l11 -20 11 20 z"/>
 <path id="mtn-adirondack" data-feature="adirondack" d="M798 120 l12 -22 12 22 z"/>
 <path id="mtn-allegheny" data-feature="allegheny" d="M728 190 l12 -20 12 20 z"/>
+<ellipse id="feat-great-valley" data-feature="great-valley" cx="730" cy="280" rx="22" ry="12" fill="#cbb98a" fill-opacity="0.45" stroke="#6a5a38"/>
 <path id="mtn-blue-ridge" data-feature="blue-ridge" d="M748 330 l14 -24 14 24 z"/>
 <path id="mtn-smoky" data-feature="great-smoky" d="M678 340 l14 -24 14 24 z"/>
 <path id="mtn-mitchell" data-feature="mt-mitchell" d="M758 320 l10 -26 10 26 z"/>
