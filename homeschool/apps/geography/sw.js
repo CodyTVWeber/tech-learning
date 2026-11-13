@@ -1,4 +1,4 @@
-var CACHE = "hs-geography-v2";
+var CACHE = "hs-geography-v3";
 var ASSETS = [
   "./",
   "./index.html",
@@ -18,7 +18,8 @@ var ASSETS = [
   "./images/mountains-aerial.jpg",
   "./images/desert-aerial.jpg",
   "./images/lakes-aerial.jpg",
-  "./images/us-chart.svg"
+  "./images/us-chart.svg",
+  "./assets/svg/us-chart.svg"
 ];
 
 self.addEventListener("install", function (event) {

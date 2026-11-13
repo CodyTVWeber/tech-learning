@@ -1,7 +1,7 @@
 {
   "app": "history",
   "theme": "time-travel train",
-  "images": [
+  "slots": [
     {
       "file": "hero-station.jpg",
       "width": 1600,

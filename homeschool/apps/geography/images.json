@@ -1,7 +1,7 @@
 {
   "app": "geography",
   "theme": "hot-air balloon expedition",
-  "images": [
+  "slots": [
     {
       "file": "hero-balloon.jpg",
       "width": 1600,
