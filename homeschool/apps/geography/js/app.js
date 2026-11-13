@@ -219,6 +219,7 @@
               (state.band === "baby" ? "" : '<button type="button" class="brass-btn touch" data-act="map">Open the chart</button>') +
               (state.band === "upper" ? '<button type="button" class="brass-btn touch" data-act="capitals">All 50 capitals</button>' : "") +
               '<button type="button" class="brass-btn secondary touch" data-act="songs">Song</button>' +
+              (window.HS && HS.inRunner ? '<button type="button" class="brass-btn secondary touch" data-act="stamps">Log</button>' : "") +
             "</div></div>" +
         "</main></div>";
     HSAudio.wind();
@@ -492,6 +493,7 @@
   }
 
   function render() {
+    window.scrollTo(0, 0);
     if (!state.band) { picker(); return; }
     document.body.className = "band-" + state.band;
     if (state.screen === "stamps") { stampBook(); return; }

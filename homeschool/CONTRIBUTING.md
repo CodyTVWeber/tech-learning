@@ -36,7 +36,7 @@ const band =
   "early";
 // baby | toddler | preschool | early | primary | upper
 
-const key = "hs.progress." + id;
+const key = HS.progressKey(id); // hs.progress.<learner folder>.<id>
 const progress = JSON.parse(localStorage.getItem(key) || "{}");
 localStorage.setItem(key, JSON.stringify(progress));
 ```

@@ -22,12 +22,53 @@
     return new URL(path, base).href;
   };
 
+  function markRunner() {
+    HS.inRunner = true;
+    document.documentElement.dataset.runner = "1";
+    document.documentElement.classList.add("hs-runner");
+  }
+
+  function learnerFolder() {
+    const parts = global.location.pathname.split("/").filter(Boolean);
+    const i = parts.lastIndexOf("play.html");
+    if (i > 0) return decodeURIComponent(parts[i - 1]);
+    return decodeURIComponent(parts[parts.length - 1] || "");
+  }
+
   HS.runApp = async function runApp() {
+    markRunner();
     const params = new URLSearchParams(global.location.search);
     const id = params.get("app") || "";
     const root = document.getElementById("app-root");
     if (!APP_ID.test(id)) {
+      if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
       root.innerHTML = "<p>Pick a lesson from Home.</p>";
+      return;
+    }
+    const stages = HS.fetchJson ? await HS.fetchJson(new URL("../stages.json", global.location.href)) : null;
+    const me = stages && (stages.stages || []).find(function (s) {
+      return s.folder === learnerFolder();
+    });
+    if (me && me.subjects && (!me.subjects[id] || me.subjects[id] === "none")) {
+      // History and geography stay on the kit page when omitted.
+      // Reading and the other none subjects stay on the quiet care page, with no app fetch.
+      const omittedKit = id === "history" || id === "geography";
+      if (HS.mountChrome) {
+        HS.mountChrome(
+          omittedKit
+            ? { title: "Lesson", homeHref: "./" }
+            : {
+                title: me.displayName || "Home",
+                sub: (me.label || "") + (me.ageBand ? " · " + me.ageBand : ""),
+                homeHref: "./",
+              }
+        );
+      }
+      root.innerHTML = omittedKit
+        ? "<p>That lesson is not on this device yet. Try again after it has been added.</p>"
+        : HS.notOnThisHomeHtml
+          ? HS.notOnThisHomeHtml()
+          : "<p>Not on this home.</p>";
       return;
     }
     const appBase = new URL("../apps/" + id + "/", global.location.href).href;
@@ -48,31 +89,24 @@
         "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
       return;
     }
-    const pathParts = global.location.pathname.split("/").filter(Boolean);
-    const playAt = pathParts.lastIndexOf("play.html");
-    const learnerFolder = playAt > 0 ? decodeURIComponent(pathParts[playAt - 1]) : "";
-    if (learnerFolder && HS.fetchJson) {
-      const stages = await HS.fetchJson(new URL("../stages.json", global.location.href));
-      const me = stages && (stages.stages || []).find(function (s) { return s.folder === learnerFolder; });
-      const level = me && me.subjects ? me.subjects[id] : null;
-      // Reading keeps its own empty-track page when the subject is none.
-      // History, geography, and the other omitted lessons stay on the kit page.
-      if (me && id !== "reading" && (!level || level === "none")) {
-        if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
-        root.innerHTML =
-          "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
-        return;
+    let band = params.get("band");
+    if (!band || HS.BANDS.indexOf(band) === -1) {
+      band = me ? HS.bandFor(me) : HS.getBand();
+    }
+    if (band) {
+      HS.setBand(band);
+      if (params.get("band") !== band) {
+        const next = new URL(global.location.href);
+        next.searchParams.set("band", band);
+        global.history.replaceState({}, "", next);
       }
     }
-    const band = HS.getBand();
-    HS.setBand(band);
     HS.subject = assets.id || id;
     HS.appBase = appBase;
     HS.band = band;
-    document.documentElement.dataset.runner = "1";
     document.documentElement.dataset.appBase = appBase;
     document.documentElement.dataset.subject = HS.subject;
-    document.documentElement.dataset.band = band;
+    document.documentElement.dataset.band = band || "";
 
     HS.mountChrome({
       title: assets.title || assets.shortTitle || id,

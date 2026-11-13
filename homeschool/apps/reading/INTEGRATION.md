@@ -2,7 +2,7 @@
 
 Theme: garden (soil beds, clay pots, seed-packet marks, a bee that speaks **sounds**). Letter **sounds** first for `toddler` and `preschool` (never letter names as the first prompt). Picture-book reader for every band that has books.
 
-Band via `?band=` else, in the runner, `HS.getBand`, else `hs.band`. Standalone with neither shows a band picker (no ages). Standalone loads kit `audio.js`, `tts.js`, and `progress.js` so TTS, cues, and progress match the runner. The service worker matches `?band=` with `ignoreSearch` and falls back to `index.html` when offline. Progress: `hs.progress.reading`.
+Band via `HS.getBand()` (`?band=` else `hs.band`). Unset stays unset — standalone shows the plot picker; the runner always passes `?band=`. Standalone loads kit `audio.js`, `tts.js`, and `progress.js` so TTS, cues, and progress match the runner. Read-aloud uses `HS.speak`. The service worker matches `?band=` with `ignoreSearch` and falls back to `index.html` when offline. Progress: `HS.progressKey('reading')` (`hs.progress.<folder>.reading`).
 
 ## Bands
 
@@ -32,7 +32,7 @@ Band via `?band=` else, in the runner, `HS.getBand`, else `hs.band`. Standalone 
 
 ## Progress shape
 
-`localStorage['hs.progress.reading']`:
+`HS.progressKey('reading')` (`hs.progress.<folder>.reading`):
 
 - `blooms` — collectible count (not a grade)
 - `stamps` — plot and book ids collected

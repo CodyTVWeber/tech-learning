@@ -44,6 +44,12 @@
     if (hs().setMuted) hs().setMuted(on);
     else localStorage.setItem("hs.mute", on ? "1" : "0");
   }
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function (on) {
+      if (!on || !window.speechSynthesis) return;
+      try { window.speechSynthesis.cancel(); } catch (e) {}
+    });
+  }
   function inRunner() {
     return document.documentElement.dataset.runner === "1";
   }
@@ -130,8 +136,7 @@
       const stored = localStorage.getItem("hs.band");
       if (validBand(stored)) return stored;
     } catch (e) {}
-    if (inRunner()) return "early";
-    return null;
+    return "";
   }
   function setBand(b) {
     if (!validBand(b)) return;
@@ -317,13 +322,15 @@
       if (hs().writeProgress) hs().writeProgress(SUBJECT, progress);
       else {
         try {
-          localStorage.setItem("hs.progress." + SUBJECT, JSON.stringify(progress));
+          const key = hs().progressKey ? hs().progressKey(SUBJECT) : "hs.progress.standalone." + SUBJECT;
+          localStorage.setItem(key, JSON.stringify(progress));
         } catch (e) {}
       }
     }
     function readProgressLocal() {
       try {
-        return JSON.parse(localStorage.getItem("hs.progress." + SUBJECT) || "{}");
+        const key = hs().progressKey ? hs().progressKey(SUBJECT) : "hs.progress.standalone." + SUBJECT;
+        return JSON.parse(localStorage.getItem(key) || "{}");
       } catch (e) {
         return {};
       }
@@ -404,6 +411,7 @@
     }
 
     function home() {
+      window.scrollTo(0, 0);
       silence();
       host.className = "garden band-" + b;
       const stamps = (progress.stamps || [])
@@ -496,6 +504,7 @@
         show();
       }
       function show() {
+        window.scrollTo(0, 0);
         const item = items[itemIndex];
         if (!item) {
           finishBed(bed);

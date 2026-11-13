@@ -7,7 +7,7 @@ Theme: a balloon over a U.S. expedition chart. Flights match Cycle 3 *geography 
 - Folder id: `geography` (replaces any old `maps` id)
 - Band: `?band=` else `localStorage['hs.band']` else a picker
 - Optional: `?week=1`–`24` opens that flight
-- Progress: `localStorage['hs.progress.geography']` (stamps, pins, stars, `updatedAt`)
+- Progress: `HS.progressKey('geography')` (`hs.progress.<folder>.geography`) (stamps, pins, stars, `updatedAt`)
 - Mute: `hs.mute`
 - Do **not** register `sw.js` when `dataset.runner === "1"`
 - Chart fetch: `HS.url('images/us-chart.svg')` (inline SVG for hit-testing)

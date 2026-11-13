@@ -3,7 +3,7 @@
   "theme": "artist's harbor studio",
   "images": [
     {
-      "file": "studio-hero.png",
+      "file": "images/harbor-studio-hero.jpg",
       "width": 1024,
       "height": 420,
       "alt": "Watercolor studio inside a weathered harbor boathouse",
@@ -11,7 +11,7 @@
       "slot": "hero"
     },
     {
-      "file": "easel.png",
+      "file": "images/harbor-easel.jpg",
       "width": 320,
       "height": 240,
       "alt": "Wooden field easel on weathered pier planks",
@@ -19,7 +19,7 @@
       "slot": "easel"
     },
     {
-      "file": "palette.png",
+      "file": "images/harbor-palette.jpg",
       "width": 256,
       "height": 256,
       "alt": "Worn wooden palette with oil paint dabs and a brush",
@@ -27,7 +27,7 @@
       "slot": "palette"
     },
     {
-      "file": "looking-wall.png",
+      "file": "images/harbor-looking-wall.jpg",
       "width": 320,
       "height": 240,
       "alt": "Studio wall of frames, tacks, and study cards",
@@ -35,7 +35,7 @@
       "slot": "looking"
     },
     {
-      "file": "still-life.png",
+      "file": "images/harbor-still-life.jpg",
       "width": 320,
       "height": 240,
       "alt": "Apple, cobalt cup, napkin, and seashell on a pine table",
@@ -43,7 +43,7 @@
       "slot": "still-life"
     },
     {
-      "file": "color-boats.png",
+      "file": "images/color-boats.jpg",
       "width": 320,
       "height": 240,
       "alt": "Red, yellow, and blue wooden toy boats on harbor planks",
@@ -51,7 +51,7 @@
       "slot": "boats"
     },
     {
-      "file": "shapes.png",
+      "file": "images/harbor-shapes.jpg",
       "width": 320,
       "height": 240,
       "alt": "Wooden circle, square, triangle, rectangle, and oval blocks",

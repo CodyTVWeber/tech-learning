@@ -1,6 +1,10 @@
 (function (w) {
-  const KEY = "hs.progress.science";
   const BAND = "hs.band";
+
+  function progressKey() {
+    if (w.HS && typeof w.HS.progressKey === "function") return w.HS.progressKey("science");
+    return "hs.progress.standalone.science";
+  }
   const empty = function () {
     return {
       band: null,
@@ -18,7 +22,7 @@
 
   function read() {
     try {
-      const raw = localStorage.getItem(KEY);
+      const raw = localStorage.getItem(progressKey());
       if (!raw) return empty();
       const data = JSON.parse(raw);
       return Object.assign(empty(), data);
@@ -31,7 +35,7 @@
     data.updated = Date.now();
     data.updatedAt = new Date().toISOString();
     try {
-      localStorage.setItem(KEY, JSON.stringify(data));
+      localStorage.setItem(progressKey(), JSON.stringify(data));
     } catch (e) { /* private mode or full */ }
   }
 
@@ -61,7 +65,7 @@
   }
 
   w.HSScienceStore = {
-    key: KEY,
+    get key() { return progressKey(); },
     read: read,
     write: write,
     getBand: getBand,

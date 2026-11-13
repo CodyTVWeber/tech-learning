@@ -1,6 +1,6 @@
 # Math — Treasure Voyage
 
-Theme: pirate treasure voyage (deep water, rope, brass, island chart, crew, chests). No skulls. Band via `HS.getBand` (`?band=` then `hs.band`); standalone shows a picker if both are unset. Progress: `hs.progress.math`. Art is original SVG/CSS (coins, islands, ship, crew). Placeholder PNGs stay in `images.json` for the later picture wave.
+Theme: pirate treasure voyage (deep water, rope, brass, island chart, crew, chests). No skulls. Band via `HS.getBand` (`?band=` then `hs.band`); standalone shows a picker if both are unset. Progress: `HS.progressKey('math')` (`hs.progress.<folder>.math`). Art is original SVG/CSS (coins, islands, ship, crew). Placeholder PNGs stay in `images.json` for the later picture wave.
 
 ## Bands
 
@@ -21,7 +21,7 @@ Standalone installs `HS.getBand`, `HS.setBand`, `HS.speak`, `HS.playCue`, `HS.re
 
 ## Progress shape
 
-`localStorage['hs.progress.math']`:
+`HS.progressKey('math')` (`hs.progress.<folder>.math`):
 
 - `by.<learnerFolder>` — chests, crew, tables, lastItem for that home (`Joey`, `Hanna`, or `standalone`). Not a shared lifetime pile.
 - Visit doubloons live in memory for this page load only, labeled **This visit**.

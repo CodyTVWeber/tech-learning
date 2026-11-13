@@ -3,7 +3,7 @@
   "theme": "circus parade",
   "images": [
     {
-      "file": "parade-hero.png",
+      "file": "images/circus-parade-hero.jpg",
       "width": 1024,
       "height": 420,
       "alt": "A circus parade wagon and horse on a dusty fairground",
@@ -11,7 +11,7 @@
       "slot": "hero"
     },
     {
-      "file": "tent.png",
+      "file": "images/circus-tent.jpg",
       "width": 320,
       "height": 240,
       "alt": "Vintage red and cream striped circus tent",
@@ -19,7 +19,7 @@
       "slot": "tent"
     },
     {
-      "file": "ribbons.png",
+      "file": "images/circus-ribbons.jpg",
       "width": 256,
       "height": 256,
       "alt": "Prize ribbons in crimson, blue, gold, and green",
@@ -27,7 +27,7 @@
       "slot": "ribbons"
     },
     {
-      "file": "bandstand.png",
+      "file": "images/circus-bandstand.jpg",
       "width": 320,
       "height": 240,
       "alt": "Wooden circus bandstand with a snare drum and tuba",
@@ -35,7 +35,7 @@
       "slot": "bandstand"
     },
     {
-      "file": "horse.png",
+      "file": "images/circus-horse.jpg",
       "width": 320,
       "height": 240,
       "alt": "White parade horse in brass harness",
@@ -43,7 +43,7 @@
       "slot": "horse"
     },
     {
-      "file": "elephant.png",
+      "file": "images/circus-elephant.jpg",
       "width": 320,
       "height": 240,
       "alt": "Calm elephant walking a sawdust circus track",
@@ -51,7 +51,7 @@
       "slot": "elephant"
     },
     {
-      "file": "quilt.png",
+      "file": "images/lap-quilt.jpg",
       "width": 320,
       "height": 240,
       "alt": "Cream and crimson lap quilt with wooden circus blocks",
@@ -59,7 +59,7 @@
       "slot": "quilt"
     },
     {
-      "file": "ring.png",
+      "file": "images/freeze-ring.jpg",
       "width": 320,
       "height": 240,
       "alt": "Empty spotlighted circus ring of packed sawdust",

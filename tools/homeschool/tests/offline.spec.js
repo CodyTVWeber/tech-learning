@@ -1,6 +1,11 @@
 import { test, expect } from "@playwright/test";
-
-const BASE = "/tech-learning/homeschool/";
+import {
+  BASE,
+  assertNoHorizontalOverflow,
+  clickKitMuteExpectQuiet,
+  offlineReloadToddler,
+  trackErrFailed,
+} from "./helpers.js";
 
 function onErrors(page, bucket) {
   page.on("pageerror", (err) => bucket.push(String(err)));
@@ -102,9 +107,63 @@ test("hub and each learner PWA work offline", async ({ page, context }) => {
         await expect(page.locator(".garden-flowers .garden-letter").first()).toBeHidden();
       }
       await assertControlling(page);
+      const duplicateChrome = await page
+        .locator("#app-root .untested-banner, #app-root header.top, #app-root header.topbar, #app-root header.mast")
+        .evaluateAll((els) => els.filter((el) => getComputedStyle(el).display !== "none").length);
+      expect(duplicateChrome, "second header or banner " + stage.folder + " " + appId).toBe(0);
+      await expect(page.locator("#hs-chrome .hs-banner")).toBeVisible();
       expect(errors, "offline play " + stage.folder + " " + appId).toEqual([]);
     }
   }
+});
+
+test("subject marked none shows the quiet home page and prefetches nothing", async ({ page }) => {
+  const errors = [];
+  const appHits = [];
+  onErrors(page, errors);
+  page.on("request", (req) => {
+    if (/\/apps\/(reading|movement)\//.test(req.url())) appHits.push(req.url());
+  });
+  await page.goto(BASE + "Shiloh/", { waitUntil: "load" });
+  await waitPrecache(page);
+  await expect(page.locator("h1")).toContainText("Shiloh");
+  const homeLinks = await page.locator("#home-root a").evaluateAll((els) =>
+    els.map((a) => a.getAttribute("href") || "")
+  );
+  expect(homeLinks.join("\n"), "none subjects stay off the home").not.toMatch(/app=reading/);
+  appHits.length = 0;
+  errors.length = 0;
+  await page.goto(BASE + "Shiloh/play.html?app=reading&band=baby", { waitUntil: "load" });
+  await expect(page.locator(".hs-empty")).toContainText(
+    "Not on this home. This is a quiet page for care time."
+  );
+  await expect(page.locator("#hs-chrome .hs-banner")).toBeVisible();
+  expect(appHits, "reading must not be fetched when the level is none").toEqual([]);
+  expect(errors).toEqual([]);
+
+  appHits.length = 0;
+  await page.goto(BASE + "Joey/play.html?app=movement", { waitUntil: "load" });
+  await expect(page.locator(".hs-empty")).toContainText(
+    "Not on this home. This is a quiet page for care time."
+  );
+  expect(appHits, "movement must not be fetched when the level is none").toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test("standalone toddler apps reload offline and fit 412px", async ({ page, context }) => {
+  test.setTimeout(180000);
+  const failed = [];
+  trackErrFailed(page, failed);
+  await page.goto(BASE, { waitUntil: "load" });
+  const appIds = await page.evaluate(async () => {
+    const idx = await fetch("./apps-index.json").then((r) => r.json());
+    return idx.apps || [];
+  });
+  expect(appIds.length).toBeGreaterThan(0);
+  for (const appId of appIds) {
+    await offlineReloadToddler(page, context, appId, failed);
+  }
+  await assertNoHorizontalOverflow(page);
 });
 
 test("missing assets.json does not break a home", async ({ page }) => {
@@ -256,6 +315,28 @@ test("science speaks a prompt inside play.html for a young band", async ({ page 
   expect(errors).toEqual([]);
 });
 
+test("index.html is the learner home and progress keys include the folder", async ({ page }) => {
+  await page.goto(BASE + "Joey/index.html", { waitUntil: "load" });
+  await expect(page.locator("h1")).toContainText("Joey");
+  await expect(page.locator("#home-root")).not.toContainText("Unknown home");
+  const joey = await page.evaluate(() => HS.progressKey("bible"));
+  expect(joey).toBe("hs.progress.Joey.bible");
+
+  await page.evaluate(() => {
+    localStorage.setItem(HS.progressKey("bible"), JSON.stringify({ sheep: ["joey-flock"] }));
+  });
+  await page.goto(BASE + "Bella/", { waitUntil: "load" });
+  await expect(page.locator("h1")).toContainText("Bella");
+  const split = await page.evaluate(() => ({
+    bella: HS.progressKey("bible"),
+    bellaFlock: localStorage.getItem(HS.progressKey("bible")),
+    joeyFlock: localStorage.getItem("hs.progress.Joey.bible"),
+  }));
+  expect(split.bella).toBe("hs.progress.Bella.bible");
+  expect(split.bellaFlock || "").not.toContain("joey-flock");
+  expect(split.joeyFlock).toContain("joey-flock");
+});
+
 test("standalone reading reloads offline with band query", async ({ page, context }) => {
   const failed = [];
   page.on("requestfailed", (req) => {
@@ -294,10 +375,21 @@ test("runner baby band does not fetch missing reading json", async ({ page }) =>
     if (res.url().includes("/apps/reading/data/baby.json")) babyHits.push(res.status());
   });
   page.on("pageerror", (err) => errors.push(String(err)));
-  await page.goto(BASE + "Shiloh/play.html?app=reading&band=baby", { waitUntil: "load" });
+  await page.goto(BASE + "Joey/play.html?app=reading&band=baby", { waitUntil: "load" });
   await expect(page.locator("#app-root")).toContainText(/No garden lessons/);
   expect(babyHits, "data/baby.json should not be requested").toEqual([]);
   expect(errors.join("\n")).not.toMatch(/JSON|Unexpected token|no data/);
+});
+
+test("kit mute quiets runner apps that hide their own chrome", async ({ page }) => {
+  test.setTimeout(120000);
+  const apps = ["movement", "art", "math", "reading", "science", "bible", "singing", "history", "geography"];
+  for (const id of apps) {
+    await page.goto(BASE + "Theo/play.html?app=" + id + "&band=primary", { waitUntil: "load" });
+    await expect(page.locator("html")).toHaveAttribute("data-runner", "1");
+    await expect(page.locator("#app-root").locator("h1:visible, h2:visible, button:visible").first()).toBeVisible();
+    await clickKitMuteExpectQuiet(page);
+  }
 });
 
 test("standalone math and reading show a visible untested banner", async ({ page }) => {

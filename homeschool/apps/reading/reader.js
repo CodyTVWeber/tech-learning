@@ -32,6 +32,7 @@
           clearTimeout(playTimer);
           playTimer = 0;
         }
+        if (global.HS && HS.silence) HS.silence();
         const synth = global.speechSynthesis;
         if (synth) synth.cancel();
       }
@@ -47,6 +48,12 @@
         })();
         if (!text || muted()) {
           playTimer = setTimeout(finishOnce, reduceMotion() ? 80 : 220);
+          return;
+        }
+        if (global.HS && typeof HS.speak === "function") {
+          HS.speak(text, { rate: 0.88 });
+          const wait = reduceMotion() ? 280 : Math.min(1400, 420 + String(text).length * 70);
+          playTimer = setTimeout(finishOnce, wait);
           return;
         }
         const synth = global.speechSynthesis;

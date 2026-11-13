@@ -71,7 +71,12 @@
     },
     speak(text) {
       try {
-        if (muted() || !window.speechSynthesis) return false;
+        if (muted()) return false;
+        if (window.HS && typeof HS.speak === "function") {
+          HS.speak(text, { rate: 0.92 });
+          return true;
+        }
+        if (!window.speechSynthesis) return false;
         window.speechSynthesis.cancel();
         const u = new SpeechSynthesisUtterance(text);
         u.rate = 0.92;
@@ -87,4 +92,9 @@
     }
   };
   global.HillSFX = sfx;
+  if (window.HS && typeof HS.followMute === "function") {
+    HS.followMute(function (on) {
+      if (on) sfx.hush();
+    });
+  }
 })(window);

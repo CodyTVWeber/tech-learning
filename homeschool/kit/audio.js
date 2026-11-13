@@ -1,18 +1,117 @@
-/* Mute plumbing + tiny synth. Each app chooses its own cue recipe. */
+/* Mute plumbing + tiny synth. Each app chooses its own cue recipe.
+   The kit Sound button is the only mute contract: hs.mute / HS.muted(). */
 (function (global) {
   const HS = (global.HS = global.HS || {});
   const MUTE_KEY = "hs.mute";
   let ctx = null;
+  let origConnect = null;
+  const buses = [];
+  let speechSuppressed = 0;
 
   function muted() {
-    return global.localStorage.getItem(MUTE_KEY) === "1";
+    try {
+      return global.localStorage.getItem(MUTE_KEY) === "1";
+    } catch (e) {
+      return false;
+    }
   }
 
   HS.muted = muted;
 
+  function busGain(audioCtx) {
+    if (audioCtx.__hsMuteGain) return audioCtx.__hsMuteGain;
+    const g = audioCtx.createGain();
+    audioCtx.__hsMuteGain = g;
+    g.gain.value = muted() ? 0 : 1;
+    origConnect.call(g, audioCtx.destination);
+    buses.push(g);
+    return g;
+  }
+
+  function installBus() {
+    const proto = global.AudioNode && global.AudioNode.prototype;
+    if (!proto || origConnect) return;
+    origConnect = proto.connect;
+    proto.connect = function (dest) {
+      if (
+        dest &&
+        this.context &&
+        dest === this.context.destination &&
+        typeof this.context.startRendering !== "function" &&
+        this !== this.context.__hsMuteGain
+      ) {
+        const g = busGain(this.context);
+        if (arguments.length > 1) return origConnect.call(this, g, arguments[1]);
+        return origConnect.call(this, g);
+      }
+      return origConnect.apply(this, arguments);
+    };
+  }
+
+  function installSpeech() {
+    const synth = global.speechSynthesis;
+    if (!synth || synth.__hsPatched || typeof synth.speak !== "function") return;
+    const orig = synth.speak.bind(synth);
+    synth.__hsPatched = true;
+    synth.speak = function (utterance) {
+      if (muted()) {
+        speechSuppressed += 1;
+        return;
+      }
+      return orig(utterance);
+    };
+  }
+
+  function applyBus(on) {
+    buses.forEach(function (g) {
+      try {
+        g.gain.value = on ? 0 : 1;
+      } catch (e) {}
+    });
+  }
+
+  HS.speechSuppressed = function speechSuppressedCount() {
+    return speechSuppressed;
+  };
+
+  HS.reportQuiet = function reportQuiet(quiet) {
+    document.documentElement.dataset.appQuiet = quiet ? "1" : "0";
+  };
+
+  /**
+   * Apps that hide their chrome call this once.
+   * `apply(on)` stops that app's own WebAudio and speech.
+   * The page then reports quiet on html[data-app-quiet].
+   */
+  HS.followMute = function followMute(apply) {
+    function run(on) {
+      try {
+        if (typeof apply === "function") apply(!!on);
+      } catch (e) {}
+      HS.reportQuiet(!!on);
+    }
+    global.addEventListener("hs-mute", function (e) {
+      const on = e && e.detail ? !!e.detail.muted : muted();
+      run(on);
+    });
+    run(muted());
+  };
+
   HS.setMuted = function setMuted(on) {
-    global.localStorage.setItem(MUTE_KEY, on ? "1" : "0");
-    global.dispatchEvent(new CustomEvent("hs-mute", { detail: { muted: on } }));
+    const next = !!on;
+    try {
+      global.localStorage.setItem(MUTE_KEY, next ? "1" : "0");
+    } catch (e) {}
+    applyBus(next);
+    if (next) {
+      if (typeof HS.silence === "function") HS.silence();
+      else if (global.speechSynthesis) {
+        try {
+          global.speechSynthesis.cancel();
+        } catch (e) {}
+      }
+    }
+    global.dispatchEvent(new CustomEvent("hs-mute", { detail: { muted: next } }));
   };
 
   HS.toggleMute = function toggleMute() {
@@ -56,6 +155,9 @@
       o.stop(t0 + (n.t || 0) + (n.d || 0.18) + 0.02);
     });
   };
+
+  installBus();
+  installSpeech();
 
   global.addEventListener(
     "pointerdown",

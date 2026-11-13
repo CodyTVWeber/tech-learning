@@ -71,4 +71,14 @@
     miss: function () { beep(196, 0.16, "triangle", 0.04); },
     wind: function () { noise(0.3, 0.025); }
   };
+
+  if (w.HS && typeof w.HS.followMute === "function") {
+    w.HS.followMute(function (on) {
+      if (!on) return;
+      if (w.HSScienceSpeech && w.HSScienceSpeech.stop) w.HSScienceSpeech.stop();
+      if (w.speechSynthesis) {
+        try { w.speechSynthesis.cancel(); } catch (e) {}
+      }
+    });
+  }
 })(window);

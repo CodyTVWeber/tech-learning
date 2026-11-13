@@ -36,8 +36,12 @@ self.addEventListener("fetch", function (event) {
         const res = await fetch(event.request);
         return res;
       } catch (err) {
-        const fallback = await caches.match(new URL("./index.html", BASE).href);
-        if (fallback) return fallback;
+        if (event.request.mode === "navigate") {
+          const fallback = await caches.match(new URL("./index.html", BASE).href, { ignoreSearch: true });
+          if (fallback) return fallback;
+        }
+        const again = await caches.match(event.request, { ignoreSearch: true });
+        if (again) return again;
         throw err;
       }
     })()

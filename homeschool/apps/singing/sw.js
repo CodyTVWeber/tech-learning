@@ -12,10 +12,12 @@ self.addEventListener("activate", (event) => {
 });
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then((hit) => hit || fetch(event.request).then((res) => {
+    caches.match(event.request, { ignoreSearch: true }).then((hit) => hit || fetch(event.request).then((res) => {
       const copy = res.clone();
       caches.open(CACHE).then((c) => c.put(event.request, copy));
       return res;
-    }).catch(() => caches.match("./index.html")))
+    }).catch(() => event.request.mode === "navigate"
+      ? caches.match("./index.html", { ignoreSearch: true })
+      : caches.match(event.request, { ignoreSearch: true })))
   );
 });

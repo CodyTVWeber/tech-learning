@@ -13,7 +13,7 @@ Looks nothing like Shepherd’s Hillside (Bible): cool moss/teal, leaf-cut panel
 - Pictures in `images.json`. The screen uses the photoreal JPGs in `img/` (`src` on each slot). `images/*.png` stay as kit placeholders.
 - Band: `?band=` else `localStorage['hs.band']` else picker.
   Bands: `baby`, `toddler`, `preschool`, `early`, `primary`, `upper`.
-- Progress: `localStorage['hs.progress.singing']`.
+- Progress: `HS.progressKey('singing')` (`hs.progress.<folder>.singing`).
 - Microphone is optional, local, never uploaded. Pitch matching still works by tapping matching calls if the mic is off.
 - Melodies are WebAudio oscillators, not audio files.
 - Registers folder-scoped `sw.js` for standalone offline, unless `document.documentElement.dataset.runner === "1"` (the learner runner already controls the page).

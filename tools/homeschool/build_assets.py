@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -20,6 +21,9 @@ APP_TINTS = {
     "math": (14, 74, 87),
     "reading": (44, 90, 50),
 }
+# A generated flat PNG is a few KB. Real photos are far larger.
+TINY_IMAGE = 20 * 1024
+IMAGE_REF = re.compile(r"""['"]([^'"]+\.(?:png|jpe?g|webp))['"]""", re.I)
 
 
 def load_stages():
@@ -47,26 +51,100 @@ def slot_tint(app_name: str, filename: str) -> tuple[int, int, int]:
     )
 
 
+def image_rel(img: dict) -> str:
+    name = str(img.get("file") or "").lstrip("./")
+    if name.startswith("images/") or name.startswith("img/"):
+        return Path(name).as_posix()
+    return "images/" + name
+
+
+def is_real_image(path: Path) -> bool:
+    return path.is_file() and path.stat().st_size >= TINY_IMAGE
+
+
 def gen_placeholders(app_dir: Path) -> None:
+    """Write missing flat PNGs. Never replace a non-tiny PNG or JPG."""
     man_path = app_dir / "images.json"
     tint = APP_TINTS.get(app_dir.name, (140, 140, 132))
     if man_path.is_file():
         man = json.loads(man_path.read_text())
         for img in man.get("images", []):
-            dest = app_dir / "images" / img["file"]
+            dest = app_dir / image_rel(img)
             # Original stills (svg, jpg, and any non-png) stay as authored.
-            # Flat swatches are only for missing png slots.
+            # Flat swatches are only for missing png slots, and a real photo is never replaced.
             if dest.suffix.lower() != ".png":
                 continue
+            if is_real_image(dest):
+                continue
+            dest.parent.mkdir(parents=True, exist_ok=True)
             w, h = int(img.get("width", 256)), int(img.get("height", 256))
             write_png(dest, w, h, slot_tint(app_dir.name, img["file"]))
     assets = json.loads((app_dir / "assets.json").read_text())
     for f in assets.get("files", []):
         if f.endswith(".png"):
             dest = app_dir / f
-            if not dest.exists():
-                size = 192 if "192" in f else 512 if "512" in f else 256
-                write_png(dest, size, size, tint)
+            if dest.exists():
+                continue
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            size = 192 if "192" in f else 512 if "512" in f else 256
+            write_png(dest, size, size, tint)
+
+
+def runtime_image_rels(app_dir: Path) -> list[str]:
+    rels: list[str] = []
+    man_path = app_dir / "images.json"
+    if man_path.is_file():
+        man = json.loads(man_path.read_text())
+        for img in man.get("images") or []:
+            src = str(img.get("src") or "").lstrip("./")
+            rels.append(src or image_rel(img))
+    for js in app_dir.rglob("data.js"):
+        text = js.read_text(encoding="utf-8", errors="replace")
+        for match in IMAGE_REF.findall(text):
+            rels.append(match.lstrip("./"))
+    return rels
+
+
+def sibling_real_jpg(app_dir: Path, rel: str) -> Path | None:
+    stem = Path(rel).stem.lower()
+    target = (app_dir / rel).resolve()
+    for path in app_dir.rglob("*"):
+        if not path.is_file() or path.suffix.lower() not in {".jpg", ".jpeg"}:
+            continue
+        if not is_real_image(path):
+            continue
+        if path.resolve() == target:
+            continue
+        other = path.stem.lower()
+        if other == stem or other.endswith("-" + stem) or stem.endswith("-" + other):
+            return path
+    return None
+
+
+def check_runtime_images(app_dir: Path) -> list[str]:
+    """Fail when a runtime slot still shows a tiny placeholder beside a real JPG."""
+    errors = []
+    seen = set()
+    for rel in runtime_image_rels(app_dir):
+        if rel in seen:
+            continue
+        seen.add(rel)
+        dest = app_dir / rel
+        if not dest.is_file() or is_real_image(dest):
+            continue
+        sibling = sibling_real_jpg(app_dir, rel)
+        if sibling is None:
+            continue
+        errors.append(
+            "%s: %s is a tiny placeholder (%d bytes) but %s is a real photo for that slot"
+            % (
+                app_dir.name,
+                rel,
+                dest.stat().st_size,
+                sibling.relative_to(app_dir).as_posix(),
+            )
+        )
+    return errors
 
 
 def fill_template(text: str, stage: dict) -> str:
@@ -128,7 +206,7 @@ def validate_app(app_dir: Path) -> list[str]:
     if img_man.is_file():
         man = json.loads(img_man.read_text())
         for img in man.get("images", []):
-            rel = "images/" + img["file"]
+            rel = image_rel(img)
             if rel not in listed:
                 errors.append(f"{app_dir.name}: {rel} from images.json not in assets.json")
     return errors
@@ -157,6 +235,7 @@ def main(check: bool) -> int:
     for app in apps():
         gen_placeholders(app)
         errors.extend(validate_app(app))
+        errors.extend(check_runtime_images(app))
     index = json.loads((HS / "apps-index.json").read_text())
     found = [p.name for p in apps()]
     if index.get("apps") != found:

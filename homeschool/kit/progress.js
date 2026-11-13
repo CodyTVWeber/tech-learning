@@ -10,7 +10,7 @@
     if (q && BANDS.indexOf(q) !== -1) return q;
     const stored = global.localStorage.getItem("hs.band");
     if (stored && BANDS.indexOf(stored) !== -1) return stored;
-    return "early";
+    return "";
   };
 
   HS.setBand = function setBand(band) {
@@ -39,9 +39,35 @@
     return stage.band || "early";
   };
 
+  function safeDecode(value) {
+    try {
+      return decodeURIComponent(value);
+    } catch (e) {
+      return value;
+    }
+  }
+
+  // Folder name only (Joey, Shiloh, …). Never an age or a surname.
+  HS.learnerFolder = function learnerFolder() {
+    const parts = String(global.location.pathname || "").split("/").filter(Boolean);
+    if (parts.length && parts[parts.length - 1].toLowerCase() === "index.html") parts.pop();
+    if (parts.length && parts[parts.length - 1].toLowerCase() === "play.html") parts.pop();
+    const appsAt = parts.lastIndexOf("apps");
+    if (appsAt !== -1 && appsAt >= parts.length - 2) return "standalone";
+    const folder = parts.length ? safeDecode(parts[parts.length - 1]) : "";
+    if (!/^[A-Za-z0-9-]+$/.test(folder)) return "standalone";
+    if (folder === "homeschool" || folder === "kit" || folder === "apps") return "standalone";
+    return folder;
+  };
+
+  HS.progressKey = function progressKey(subject) {
+    const id = String(subject || "").toLowerCase().replace(/[^a-z0-9-]/g, "");
+    return "hs.progress." + HS.learnerFolder() + "." + id;
+  };
+
   HS.readProgress = function readProgress(subject) {
     try {
-      return JSON.parse(global.localStorage.getItem("hs.progress." + subject) || "{}");
+      return JSON.parse(global.localStorage.getItem(HS.progressKey(subject)) || "{}");
     } catch (e) {
       return {};
     }
@@ -50,7 +76,7 @@
   HS.writeProgress = function writeProgress(subject, data) {
     data = data || {};
     data.updatedAt = new Date().toISOString();
-    global.localStorage.setItem("hs.progress." + subject, JSON.stringify(data));
+    global.localStorage.setItem(HS.progressKey(subject), JSON.stringify(data));
   };
 
   HS.exportAll = function exportAll() {

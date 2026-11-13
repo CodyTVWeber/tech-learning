@@ -6,7 +6,10 @@
   }
   const BAND_KEY = "hs.band";
   const QUIET_KEY = "hs.art.quiet";
-  const PROGRESS_KEY = "hs.progress.art";
+  function progressKey() {
+    if (window.HS && typeof HS.progressKey === "function") return HS.progressKey("art");
+    return "hs.progress.standalone.art";
+  }
   const BAND_IDS = C.bands.map(function (b) { return b.id; });
 
   const icon = {
@@ -25,7 +28,7 @@
 
   function loadProgress() {
     try {
-      const raw = localStorage.getItem(PROGRESS_KEY);
+      const raw = localStorage.getItem(progressKey());
       if (raw) {
         const p = JSON.parse(raw);
         p.stars = p.stars || 0;
@@ -40,7 +43,7 @@
 
   function saveProgress() {
     state.progress.updated = new Date().toISOString();
-    localStorage.setItem(PROGRESS_KEY, JSON.stringify(state.progress));
+    localStorage.setItem(progressKey(), JSON.stringify(state.progress));
     paintChrome();
   }
 
@@ -143,6 +146,7 @@
   }
 
   function render() {
+    window.scrollTo(0, 0);
     const root = document.getElementById("view");
     if (!state.band) {
       root.innerHTML = pickerHTML();

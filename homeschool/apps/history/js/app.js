@@ -222,6 +222,7 @@
             (hsBandAtLeast(state.band, "early") ? '<button type="button" class="brass-btn secondary touch" data-act="preamble">Preamble fill-in</button>' : "") +
             (hsBandAtLeast(state.band, "primary") ? '<button type="button" class="brass-btn secondary touch" data-act="presidents">Presidents car</button>' : "") +
             '<button type="button" class="brass-btn secondary touch" data-act="songs">Song car</button>' +
+            (window.HS && HS.inRunner ? '<button type="button" class="brass-btn secondary touch" data-act="stamps">Stamps</button>' : "") +
           "</div>" +
         "</main></div>";
     HSAudio.chuff();
@@ -558,6 +559,7 @@
   }
 
   function render() {
+    window.scrollTo(0, 0);
     if (!state.band) { picker(); return; }
     document.body.className = "band-" + state.band;
     if (state.screen === "picker") { picker(); return; }

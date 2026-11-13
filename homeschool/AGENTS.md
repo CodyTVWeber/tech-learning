@@ -15,7 +15,7 @@ Hard rules are also summarized in `SPEC.md` §1 and `DESIGN.md`.
 - Math is original practice aligned to CC Math Map **skills**, not a copy of the Map. Teach technique, then **now do this on paper**.
 - `toddler` and `preschool` phonics: letter **sounds** first, not letter names.
 - Never write “kid-friendly” or “kid-tested.” Mark UI **Untested, awaiting parent test.**
-- Progress: `localStorage['hs.progress.<subject>']`, plus other `hs.*` keys. Export/import JSON from the homes.
+- Progress: `localStorage['hs.progress.<folder>.<subject>']` via `HS.progressKey(subject)`. `<folder>` is the learner folder (`Joey`) or `standalone` under `/apps/`. Never store an age or a surname in the key. Other `hs.*` keys are still exported.
 
 ## Layout
 
@@ -30,10 +30,35 @@ Hard rules are also summarized in `SPEC.md` §1 and `DESIGN.md`.
 Documented in `DESIGN.md`. Short version:
 
 - `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`
-- Band: `?band=` else `localStorage['hs.band']`
-- Progress: `localStorage['hs.progress.<id>']`
+- Band: `HS.getBand()` reads `?band=` else `localStorage['hs.band']`. If both are unset it returns `""` — **not** `early`. Standalone apps show a band picker. The runner always sets `?band=` from the learner before the app starts.
+- Progress: `HS.readProgress(id)` / `HS.writeProgress(id)` (`hs.progress.<folder>.<id>`)
 - Learner SW and CI **consume `assets.json`**. New apps plug in without kit edits.
 - Runner: `play.html?app=<id>&band=<band>` loads the app **inside** the learner scope. Never navigate to `../apps/`.
+- If that learner’s `stages.json` level for the subject is `"none"`, the home does not link it, and `play.html?app=` shows the same quiet page as an empty home (`Not on this home. This is a quiet page for care time.`) without fetching the app (no `assets.json`, no `data/<band>.json`). Do not write a shared `hs.progress.<id>` key. Two learners on one origin must not share a flock.
+
+## Runner chrome and speech
+
+Before app scripts run, the runner sets:
+
+- `document.documentElement.dataset.runner = "1"` so CSS can use `html[data-runner]` (also class `hs-runner` on `<html>`)
+- `HS.inRunner = true`
+- `HS.speak(text, { rate, pitch, lang })`, `HS.silence()`, `HS.muted()`, `HS.setMuted(on)`, `HS.toggleMute()`
+
+Apps **hide their own top bar** (title, mute, band switch) and their own “Untested” banner when `html[data-runner]` or `HS.inRunner` is set. The kit keeps one banner (`.hs-banner` in `#hs-chrome`) and one mute control. Kit tap targets stay at least 56px. Do not paint a second header.
+
+Route read-aloud through `HS.speak`. It already no-ops while muted. Do not skip `speechSynthesis` just because the page is inside the runner, and do not treat `HS.muted` as always-on — call `HS.muted()`.
+
+## Mute contract
+
+The kit Sound button (`#hs-mute-btn` in `#hs-chrome`) is the single mute control in the runner. It calls `HS.toggleMute()` / `HS.setMuted(on)` and stores `localStorage['hs.mute']` (`"1"` means muted). `HS.muted()` is the read. The button fires `hs-mute` with `{ muted: true|false }`.
+
+While `HS.muted()` is true the kit silences sound for every app, including apps whose own header is hidden:
+
+- WebAudio that targets the live destination goes through a kit gain held at 0, so notes already playing stop.
+- `speechSynthesis.speak` is blocked and any current utterance is canceled.
+- `HS.speak` and `HS.playCue` return immediately.
+
+Apps call `HS.followMute(function (on) { ... })` once so their own engine stops (master gain 0, cancel speech, drop queued cues) and the page reports quiet: `html[data-app-quiet="1"]` while the kit is muted, `"0"` while sound is on. Do not keep a second mute key that the runner button cannot reach. A standalone quiet button, when the kit is loaded, toggles `HS.toggleMute()` instead of a private flag.
 
 ## Parallel work
 

@@ -10,7 +10,7 @@ Plug this folder in as subject `art`. Visual language is a **harbor studio** (sa
 
 ## Contract
 - Band: `?band=` (`baby` | `toddler` | `preschool` | `early` | `primary` | `upper`). Else `localStorage['hs.band']`. Else picker. No exact ages.
-- Progress: `localStorage['hs.progress.art']` — `{ stars, postcards[], stamps[], done{}, updated }`.
+- Progress: `HS.progressKey('art')` (`hs.progress.<folder>.art`) — `{ stars, postcards[], stamps[], done{}, updated }`.
 - Quiet: `localStorage['hs.art.quiet']`
 - Precache: `assets.json` → `files`. Standalone `sw.js` caches that list. Do **not** register it inside the learner runner (`dataset.runner`).
 - Visible banner: “Untested, awaiting parent test.” (not screen-reader-only).

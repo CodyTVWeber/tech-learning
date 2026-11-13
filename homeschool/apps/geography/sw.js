@@ -45,13 +45,14 @@ self.addEventListener("activate", function (event) {
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
   event.respondWith(
-    caches.match(event.request).then(function (hit) {
+    caches.match(event.request, { ignoreSearch: true }).then(function (hit) {
       return hit || fetch(event.request).then(function (res) {
         var copy = res.clone();
         caches.open(CACHE).then(function (cache) { cache.put(event.request, copy); });
         return res;
       }).catch(function () {
-        return caches.match("./index.html");
+        if (event.request.mode === "navigate") return caches.match("./index.html", { ignoreSearch: true });
+        return caches.match(event.request, { ignoreSearch: true });
       });
     })
   );

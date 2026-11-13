@@ -10,7 +10,7 @@ Plug this folder in as subject `movement`. Do not rewrite files here unless the 
 
 ## Contract
 - Band: `?band=` (`baby` | `toddler` | `preschool` | `early` | `primary` | `upper`). Else `localStorage['hs.band']`. Else in-app picker. No exact ages on screen.
-- Progress: `localStorage['hs.progress.movement']` — `{ stars, ribbons[], stamps[], done{}, updated }`. Stars/ribbons/stamps only; never grades.
+- Progress: `HS.progressKey('movement')` (`hs.progress.<folder>.movement`) — `{ stars, ribbons[], stamps[], done{}, updated }`. Stars/ribbons/stamps only; never grades.
 - Quiet toggle: `localStorage['hs.movement.quiet']`
 - Precache: read `assets.json` → `files`. Standalone `sw.js` precaches that list. Do **not** register it inside the learner runner (`dataset.runner`).
 - Visible banner: “Untested, awaiting parent test.” (not screen-reader-only).

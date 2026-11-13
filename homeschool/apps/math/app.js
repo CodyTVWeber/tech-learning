@@ -202,7 +202,8 @@
     if (!HS.readProgress) {
       HS.readProgress = function (subject) {
         try {
-          return JSON.parse(localStorage.getItem("hs.progress." + subject) || "{}");
+          const key = HS.progressKey ? HS.progressKey(subject) : "hs.progress.standalone." + subject;
+          return JSON.parse(localStorage.getItem(key) || "{}");
         } catch (e) {
           return {};
         }
@@ -213,7 +214,8 @@
         data = data || {};
         data.updatedAt = new Date().toISOString();
         try {
-          localStorage.setItem("hs.progress." + subject, JSON.stringify(data));
+          const key = HS.progressKey ? HS.progressKey(subject) : "hs.progress.standalone." + subject;
+          localStorage.setItem(key, JSON.stringify(data));
         } catch (e) {}
       };
     }
@@ -2166,6 +2168,7 @@
     }
 
     function render() {
+      window.scrollTo(0, 0);
       if (screen === "map") renderMap();
       else if (screen === "tables") renderTables();
       else if (screen === "lesson") renderLesson();
