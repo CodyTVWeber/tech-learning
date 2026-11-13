@@ -1,27 +1,1976 @@
 {
   "band": "primary",
-  "title": "Crews and shares",
-  "technique": {
-    "title": "Rows and shares",
-    "audioText": "Multiplication is equal rows. Division is sharing into equal crews. 3 times 4 and 12 divided by 4 are the same family.",
-    "body": "Multiplication is equal rows of coins. Division is sharing a chest into equal crews. 3 × 4 = 12 and 12 ÷ 4 = 3 are one family."
+  "title": "Crews, shares, and every table",
+  "intro": {
+    "body": "Sail every times table 0 through 12, then the matching shares. Fractions, money, time, and perimeter wait down the chart. Finish each island on paper.",
+    "audioText": "Equal rows for multiplying. Equal crews for dividing. Sail every table, then finish on paper."
   },
   "islands": [
-    { "id": "facts", "slot": "island-facts", "label": "Row island" }
+    {
+      "id": "facts",
+      "slot": "island-add",
+      "label": "Fast Dock",
+      "crew": "pip",
+      "chest": "A worn slate",
+      "technique": {
+        "title": "Fact families",
+        "body": "If 8 + 6 = 14, then 6 + 8 = 14, 14 − 8 = 6, and 14 − 6 = 8. One family, four facts.",
+        "audioText": "If 8 plus 6 is 14, then 6 plus 8 is 14, 14 minus 8 is 6, and 14 minus 6 is 8."
+      },
+      "paper": [
+        {
+          "prompt": "Write the fact family for 9, 7, and 16."
+        },
+        {
+          "prompt": "13 − 8 =     and 8 + 5 ="
+        }
+      ]
+    },
+    {
+      "id": "place",
+      "slot": "island-place",
+      "label": "Hundred Crates",
+      "crew": "reed",
+      "chest": "A hundred-crate",
+      "technique": {
+        "title": "Hundreds, tens, ones",
+        "body": "10 tens make 1 hundred. 2 hundreds, 3 tens, and 5 ones is 235.",
+        "audioText": "Ten tens make one hundred. Two hundreds, three tens, and five ones is two hundred thirty-five."
+      },
+      "paper": [
+        {
+          "prompt": "Write 4 hundreds, 0 tens, 6 ones."
+        },
+        {
+          "prompt": "Expand 508 as hundreds + tens + ones."
+        }
+      ]
+    },
+    {
+      "id": "skip",
+      "slot": "island-skip",
+      "label": "Skip Shoals",
+      "crew": "moss",
+      "chest": "A skip chart",
+      "technique": {
+        "title": "Skip 3s through 11s",
+        "body": "Keep adding the same jump. 3, 6, 9, 12… 4, 8, 12… 7, 14, 21… 9, 18, 27… 11, 22, 33…",
+        "audioText": "Keep adding the same jump. Threes, fours, sixes, sevens, eights, nines, and elevens."
+      },
+      "paper": [
+        {
+          "prompt": "Skip 3s from 3 to 36."
+        },
+        {
+          "prompt": "Skip 7s from 7 to 70."
+        },
+        {
+          "prompt": "Skip 9s from 9 to 90."
+        },
+        {
+          "prompt": "Skip 11s from 11 to 99."
+        }
+      ]
+    },
+    {
+      "id": "times",
+      "slot": "island-facts",
+      "label": "Row Island",
+      "crew": "cal",
+      "chest": "Twelve tidy rows",
+      "drill": {
+        "kind": "mul",
+        "from": 0,
+        "to": 12
+      },
+      "technique": {
+        "title": "Equal rows",
+        "body": "Multiplication is equal rows of coins. Pick a table. Sail every fact from 0 through 12. Then write that table on paper.",
+        "audioText": "Multiplication is equal rows. Pick a table. Sail every fact from 0 through 12. Then write that table on paper."
+      },
+      "paper": [
+        {
+          "prompt": "Write the n times facts from 0 to 12 on paper. Circle any you paused on."
+        }
+      ]
+    },
+    {
+      "id": "share",
+      "slot": "island-share",
+      "label": "Share Crews",
+      "crew": "nell",
+      "chest": "Equal pouches",
+      "drill": {
+        "kind": "div",
+        "from": 1,
+        "to": 12
+      },
+      "technique": {
+        "title": "Share into equal crews",
+        "body": "Division is sharing a chest into equal crews, or making equal groups. 12 ÷ 4 = 3 because 4 rows of 3 make 12. There is no table for dividing by 0.",
+        "audioText": "Division is sharing into equal crews. 12 divided by 4 is 3 because 4 rows of 3 make 12."
+      },
+      "paper": [
+        {
+          "prompt": "Write the divide-by-n facts that land on whole numbers, n from 1 to 12. Skip divide-by-0."
+        }
+      ]
+    },
+    {
+      "id": "frac",
+      "slot": "island-share",
+      "label": "Half Chest",
+      "crew": "kit",
+      "chest": "A split lid",
+      "technique": {
+        "title": "Equal shares",
+        "body": "Halves split one whole into 2 equal parts. Thirds into 3. Fourths into 4. The bottom number names the equal parts.",
+        "audioText": "Halves split one whole into 2 equal parts. Thirds into 3. Fourths into 4."
+      },
+      "paper": [
+        {
+          "prompt": "Shade 1/2, 1/3, and 1/4 of three equal chests."
+        },
+        {
+          "prompt": "Which is more: 1/2 or 1/4? Draw both."
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "slot": "island-money",
+      "label": "Purse Dock",
+      "crew": "bram",
+      "chest": "A quarter and a dollar",
+      "technique": {
+        "title": "Quarters and dollars",
+        "body": "A quarter is 25 cents. 4 quarters make 100 cents, which is 1 dollar. Count quarters by 25s.",
+        "audioText": "A quarter is 25 cents. Four quarters make one dollar."
+      },
+      "paper": [
+        {
+          "prompt": "3 quarters + 1 dime =    cents"
+        },
+        {
+          "prompt": "$1 =     cents. 2 dollars =     cents."
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "slot": "island-time",
+      "label": "Half-Hour Reef",
+      "crew": "oat",
+      "chest": "A clock with a half mark",
+      "technique": {
+        "title": "Half and quarter past",
+        "body": "Long hand on 6 means 30 minutes (half past). Long hand on 3 means 15 minutes (quarter past). Long hand on 9 means 45 minutes.",
+        "audioText": "Long hand on 6 means 30 minutes, half past. Long hand on 3 means 15 minutes. Long hand on 9 means 45 minutes."
+      },
+      "paper": [
+        {
+          "prompt": "Draw 2:30 and 4:15."
+        },
+        {
+          "prompt": "What time is a quarter to 5?"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "slot": "island-measure",
+      "label": "Measure Key",
+      "crew": "wren",
+      "chest": "A cup and a foot-rope",
+      "technique": {
+        "title": "Feet, inches, cups",
+        "body": "12 inches = 1 foot. 3 feet = 1 yard. 8 fluid ounces = 1 cup. 2 cups = 1 pint.",
+        "audioText": "12 inches make 1 foot. 3 feet make 1 yard. 8 fluid ounces make 1 cup. 2 cups make 1 pint."
+      },
+      "paper": [
+        {
+          "prompt": "5 feet =     inches"
+        },
+        {
+          "prompt": "2 pints =     cups"
+        },
+        {
+          "prompt": "A 1-yard rope is how many feet?"
+        }
+      ]
+    },
+    {
+      "id": "shape",
+      "slot": "island-shape",
+      "label": "Perimeter Atoll",
+      "crew": "sol",
+      "chest": "A fence of rope",
+      "technique": {
+        "title": "Walk the edge",
+        "body": "Perimeter is the distance around. For a rectangle, add length + width + length + width, or 2 × (length + width).",
+        "audioText": "Perimeter is the distance around. For a rectangle, add both lengths and both widths."
+      },
+      "paper": [
+        {
+          "prompt": "A hatch 6 by 4. Perimeter?"
+        },
+        {
+          "prompt": "A square with side 5. Perimeter?"
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "slot": "island-story",
+      "label": "Story Inlet",
+      "crew": "pike",
+      "chest": "A plotted course",
+      "technique": {
+        "title": "Choose the operation",
+        "body": "Equal groups → multiply. Sharing or grouping → divide. Joining leftover amounts → add. Write the sentence, then paper.",
+        "audioText": "Equal groups, multiply. Sharing, divide. Then write the sentence on paper."
+      },
+      "paper": [
+        {
+          "prompt": "6 crews of 8 sailors. How many sailors?"
+        },
+        {
+          "prompt": "A chest of 36 coins, 9 pouches. How many each?"
+        },
+        {
+          "prompt": "24 biscuits, 6 eaten, then shared by 3. How many each? Show two steps."
+        }
+      ]
+    }
   ],
   "items": [
-    { "id": "m1", "prompt": "3 rows of 4 coins. How many?", "audioText": "3 rows of 4 coins. How many?", "rows": 3, "cols": 4, "answer": "12", "choices": ["7", "12", "16"] },
-    { "id": "m2", "prompt": "2 rows of 5 coins. How many?", "audioText": "2 rows of 5 coins. How many?", "rows": 2, "cols": 5, "answer": "10", "choices": ["7", "10", "25"] },
-    { "id": "m3", "prompt": "4 × 6 =", "audioText": "4 times 6.", "answer": "24", "choices": ["10", "24", "46"] },
-    { "id": "m4", "prompt": "5 × 5 =", "audioText": "5 times 5.", "answer": "25", "choices": ["10", "20", "25"] },
-    { "id": "m5", "prompt": "12 coins in crews of 4. How many crews?", "audioText": "12 coins in crews of 4. How many crews?", "answer": "3", "choices": ["2", "3", "8"] },
-    { "id": "m6", "prompt": "18 ÷ 3 =", "audioText": "18 divided by 3.", "answer": "6", "choices": ["5", "6", "15"] },
-    { "id": "m7", "prompt": "If 7 × 8 = 56, then 56 ÷ 8 =", "audioText": "If 7 times 8 is 56, then 56 divided by 8.", "answer": "7", "choices": ["6", "7", "8"] },
-    { "id": "m8", "prompt": "9 × 0 =", "audioText": "9 times 0.", "answer": "0", "choices": ["0", "9", "90"] }
-  ],
-  "paper": [
-    { "prompt": "Draw 6 rows of 3. Write 6 × 3 and 18 ÷ 3." },
-    { "prompt": "8 × 7 =     and 56 ÷ 7 =" },
-    { "prompt": "A chest of 24 coins, 4 crews. How many each?" }
+    {
+      "id": "m-f-86",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "If 8 + 6 = 14, then 14 − 6 =",
+      "audioText": "If 8 + 6 = 14, then 14 − 6 =",
+      "answer": "8",
+      "choices": [
+        "8",
+        "6",
+        "14"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "facts"
+      ]
+    },
+    {
+      "id": "m-f-97",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "9 + 7 =",
+      "audioText": "9 + 7 =",
+      "answer": "16",
+      "choices": [
+        "63",
+        "15",
+        "16"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "facts"
+      ]
+    },
+    {
+      "id": "m-f-13m5",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "13 − 5 =",
+      "audioText": "13 − 5 =",
+      "answer": "8",
+      "choices": [
+        "18",
+        "7",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "facts"
+      ]
+    },
+    {
+      "id": "m-pl-235",
+      "island": "place",
+      "kind": "place",
+      "prompt": "2 hundreds, 3 tens, 5 ones is",
+      "audioText": "2 hundreds, 3 tens, 5 ones is",
+      "answer": "235",
+      "choices": [
+        "253",
+        "235",
+        "325"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "place"
+      ],
+      "hundreds": 2,
+      "tens": 3,
+      "ones": 5
+    },
+    {
+      "id": "m-pl-508",
+      "island": "place",
+      "kind": "place",
+      "prompt": "5 hundreds, 0 tens, 8 ones is",
+      "audioText": "5 hundreds, 0 tens, 8 ones is",
+      "answer": "508",
+      "choices": [
+        "580",
+        "58",
+        "508"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "place"
+      ],
+      "hundreds": 5,
+      "tens": 0,
+      "ones": 8
+    },
+    {
+      "id": "m-pl-10tens",
+      "island": "place",
+      "kind": "choice",
+      "prompt": "10 tens make how many hundreds?",
+      "audioText": "10 tens make how many hundreds?",
+      "answer": "1",
+      "choices": [
+        "10",
+        "100",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "place"
+      ]
+    },
+    {
+      "id": "m-sk-3",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "3, 6, 9, 12. Next?",
+      "audioText": "3, 6, 9, 12. Next?",
+      "answer": "15",
+      "choices": [
+        "15",
+        "14",
+        "18"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        3,
+        6,
+        9,
+        12
+      ]
+    },
+    {
+      "id": "m-sk-4",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "4, 8, 12, 16. Next?",
+      "audioText": "4, 8, 12, 16. Next?",
+      "answer": "20",
+      "choices": [
+        "20",
+        "24",
+        "18"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        4,
+        8,
+        12,
+        16
+      ]
+    },
+    {
+      "id": "m-sk-6",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "6, 12, 18, 24. Next?",
+      "audioText": "6, 12, 18, 24. Next?",
+      "answer": "30",
+      "choices": [
+        "28",
+        "36",
+        "30"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        6,
+        12,
+        18,
+        24
+      ]
+    },
+    {
+      "id": "m-sk-7",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "7, 14, 21, 28. Next?",
+      "audioText": "7, 14, 21, 28. Next?",
+      "answer": "35",
+      "choices": [
+        "42",
+        "32",
+        "35"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        7,
+        14,
+        21,
+        28
+      ]
+    },
+    {
+      "id": "m-sk-8",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "8, 16, 24, 32. Next?",
+      "audioText": "8, 16, 24, 32. Next?",
+      "answer": "40",
+      "choices": [
+        "48",
+        "36",
+        "40"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        8,
+        16,
+        24,
+        32
+      ]
+    },
+    {
+      "id": "m-sk-9",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "9, 18, 27, 36. Next?",
+      "audioText": "9, 18, 27, 36. Next?",
+      "answer": "45",
+      "choices": [
+        "54",
+        "40",
+        "45"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        9,
+        18,
+        27,
+        36
+      ]
+    },
+    {
+      "id": "m-sk-11",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "11, 22, 33, 44. Next?",
+      "audioText": "11, 22, 33, 44. Next?",
+      "answer": "55",
+      "choices": [
+        "55",
+        "66",
+        "54"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "skip"
+      ],
+      "seq": [
+        11,
+        22,
+        33,
+        44
+      ]
+    },
+    {
+      "id": "m-fr-half",
+      "island": "frac",
+      "kind": "fraction",
+      "prompt": "1 of 2 equal shares of a chest is",
+      "audioText": "1 of 2 equal shares of a chest is",
+      "answer": "1/2",
+      "choices": [
+        "1/3",
+        "2/2",
+        "1/2"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "frac"
+      ],
+      "filled": 1,
+      "parts": 2
+    },
+    {
+      "id": "m-fr-third",
+      "island": "frac",
+      "kind": "fraction",
+      "prompt": "1 of 3 equal shares is",
+      "audioText": "1 of 3 equal shares is",
+      "answer": "1/3",
+      "choices": [
+        "1/2",
+        "1/3",
+        "1/4"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "frac"
+      ],
+      "filled": 1,
+      "parts": 3
+    },
+    {
+      "id": "m-fr-fourth",
+      "island": "frac",
+      "kind": "fraction",
+      "prompt": "1 of 4 equal shares is",
+      "audioText": "1 of 4 equal shares is",
+      "answer": "1/4",
+      "choices": [
+        "1/2",
+        "1/3",
+        "1/4"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "frac"
+      ],
+      "filled": 1,
+      "parts": 4
+    },
+    {
+      "id": "m-fr-2fourths",
+      "island": "frac",
+      "kind": "fraction",
+      "prompt": "2 of 4 equal shares is the same as",
+      "audioText": "2 of 4 equal shares is the same as",
+      "answer": "1/2",
+      "choices": [
+        "1/4",
+        "1/2",
+        "2/2"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "frac"
+      ],
+      "filled": 2,
+      "parts": 4
+    },
+    {
+      "id": "m-mo-q",
+      "island": "money",
+      "kind": "money",
+      "prompt": "1 quarter is how many cents?",
+      "audioText": "1 quarter is how many cents?",
+      "answer": "25",
+      "choices": [
+        "50",
+        "25",
+        "10"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "money"
+      ],
+      "quarters": 1
+    },
+    {
+      "id": "m-mo-4q",
+      "island": "money",
+      "kind": "money",
+      "prompt": "4 quarters make how many cents?",
+      "audioText": "4 quarters make how many cents?",
+      "answer": "100",
+      "choices": [
+        "100",
+        "4",
+        "25"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "money"
+      ],
+      "quarters": 4
+    },
+    {
+      "id": "m-mo-3q1d",
+      "island": "money",
+      "kind": "money",
+      "prompt": "3 quarters and 1 dime. How many cents?",
+      "audioText": "3 quarters and 1 dime. How many cents?",
+      "answer": "85",
+      "choices": [
+        "75",
+        "85",
+        "40"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "money"
+      ],
+      "quarters": 3,
+      "dimes": 1
+    },
+    {
+      "id": "m-mo-dollar",
+      "island": "money",
+      "kind": "choice",
+      "prompt": "1 dollar is how many cents?",
+      "audioText": "1 dollar is how many cents?",
+      "answer": "100",
+      "choices": [
+        "100",
+        "10",
+        "25"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "money"
+      ]
+    },
+    {
+      "id": "m-t-230",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "Short hand past 2, long hand on 6. The time is",
+      "audioText": "Short hand past 2, long hand on 6. The time is",
+      "answer": "2:30",
+      "choices": [
+        "2:30",
+        "6:10",
+        "2:00"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "time"
+      ],
+      "hour": 2,
+      "minute": 30
+    },
+    {
+      "id": "m-t-415",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "Short hand a little past 4, long hand on 3. The time is",
+      "audioText": "Short hand a little past 4, long hand on 3. The time is",
+      "answer": "4:15",
+      "choices": [
+        "4:00",
+        "3:20",
+        "4:15"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "time"
+      ],
+      "hour": 4,
+      "minute": 15
+    },
+    {
+      "id": "m-t-545",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "Long hand on 9, short hand near 6. The time is",
+      "audioText": "Long hand on 9, short hand near 6. The time is",
+      "answer": "5:45",
+      "choices": [
+        "5:45",
+        "9:30",
+        "6:00"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "time"
+      ],
+      "hour": 5,
+      "minute": 45
+    },
+    {
+      "id": "m-me-12in",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "12 inches = how many feet?",
+      "audioText": "12 inches = how many feet?",
+      "answer": "1",
+      "choices": [
+        "1",
+        "12",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "measure"
+      ]
+    },
+    {
+      "id": "m-me-3ft",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "3 feet = how many yards?",
+      "audioText": "3 feet = how many yards?",
+      "answer": "1",
+      "choices": [
+        "3",
+        "36",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "measure"
+      ]
+    },
+    {
+      "id": "m-me-cup",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "8 fluid ounces = how many cups?",
+      "audioText": "8 fluid ounces = how many cups?",
+      "answer": "1",
+      "choices": [
+        "1",
+        "2",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "measure"
+      ]
+    },
+    {
+      "id": "m-me-pint",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "2 cups = how many pints?",
+      "audioText": "2 cups = how many pints?",
+      "answer": "1",
+      "choices": [
+        "8",
+        "1",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "measure"
+      ]
+    },
+    {
+      "id": "m-sh-per",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "A rectangle 5 by 3. Perimeter?",
+      "audioText": "A rectangle 5 by 3. Perimeter?",
+      "answer": "16",
+      "choices": [
+        "8",
+        "15",
+        "16"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "shape"
+      ]
+    },
+    {
+      "id": "m-sh-sq",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "A square with side 6. Perimeter?",
+      "audioText": "A square with side 6. Perimeter?",
+      "answer": "24",
+      "choices": [
+        "24",
+        "12",
+        "36"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "shape"
+      ]
+    },
+    {
+      "id": "m-st-68",
+      "island": "story",
+      "kind": "word",
+      "prompt": "6 crews of 8 sailors. How many sailors?",
+      "audioText": "6 crews of 8 sailors. How many sailors?",
+      "answer": "48",
+      "choices": [
+        "14",
+        "48",
+        "68"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "story"
+      ]
+    },
+    {
+      "id": "m-st-369",
+      "island": "story",
+      "kind": "word",
+      "prompt": "36 coins in 9 pouches, equal share. How many each?",
+      "audioText": "36 coins in 9 pouches, equal share. How many each?",
+      "answer": "4",
+      "choices": [
+        "27",
+        "45",
+        "4"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "story"
+      ]
+    },
+    {
+      "id": "m-st-fam",
+      "island": "story",
+      "kind": "choice",
+      "prompt": "If 7 × 8 = 56, then 56 ÷ 8 =",
+      "audioText": "If 7 × 8 = 56, then 56 ÷ 8 =",
+      "answer": "7",
+      "choices": [
+        "8",
+        "6",
+        "7"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "story"
+      ]
+    },
+    {
+      "id": "m-mul-0x9",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "0 × 9 =",
+      "audioText": "0 times 9.",
+      "answer": "0",
+      "choices": [
+        "1",
+        "9",
+        "0"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ]
+    },
+    {
+      "id": "m-mul-1x7",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "1 × 7 =",
+      "audioText": "1 times 7.",
+      "answer": "7",
+      "choices": [
+        "7",
+        "8",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 1,
+      "cols": 7
+    },
+    {
+      "id": "m-div-7d1",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "7 ÷ 1 =",
+      "audioText": "7 divided by 1.",
+      "answer": "7",
+      "choices": [
+        "6",
+        "1",
+        "7"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-2x2",
+      "island": "times",
+      "kind": "array",
+      "prompt": "2 × 2 =",
+      "audioText": "2 times 2.",
+      "answer": "4",
+      "choices": [
+        "2",
+        "4",
+        "6"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 2,
+      "cols": 2
+    },
+    {
+      "id": "m-div-4d2",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "4 ÷ 2 =",
+      "audioText": "4 divided by 2.",
+      "answer": "2",
+      "choices": [
+        "2",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-2x5",
+      "island": "times",
+      "kind": "array",
+      "prompt": "2 × 5 =",
+      "audioText": "2 times 5.",
+      "answer": "10",
+      "choices": [
+        "7",
+        "5",
+        "10",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 2,
+      "cols": 5
+    },
+    {
+      "id": "m-div-10d2",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "10 ÷ 2 =",
+      "audioText": "10 divided by 2.",
+      "answer": "5",
+      "choices": [
+        "8",
+        "2",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-2x10",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "2 × 10 =",
+      "audioText": "2 times 10.",
+      "answer": "20",
+      "choices": [
+        "12",
+        "20",
+        "10",
+        "22"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 2,
+      "cols": 10
+    },
+    {
+      "id": "m-div-20d2",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "20 ÷ 2 =",
+      "audioText": "20 divided by 2.",
+      "answer": "10",
+      "choices": [
+        "18",
+        "10",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-3x3",
+      "island": "times",
+      "kind": "array",
+      "prompt": "3 × 3 =",
+      "audioText": "3 times 3.",
+      "answer": "9",
+      "choices": [
+        "12",
+        "9",
+        "6"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 3,
+      "cols": 3
+    },
+    {
+      "id": "m-div-9d3",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "9 ÷ 3 =",
+      "audioText": "9 divided by 3.",
+      "answer": "3",
+      "choices": [
+        "6",
+        "3",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-3x4",
+      "island": "times",
+      "kind": "array",
+      "prompt": "3 × 4 =",
+      "audioText": "3 times 4.",
+      "answer": "12",
+      "choices": [
+        "8",
+        "15",
+        "12",
+        "7"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 3,
+      "cols": 4
+    },
+    {
+      "id": "m-div-12d3",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "12 ÷ 3 =",
+      "audioText": "12 divided by 3.",
+      "answer": "4",
+      "choices": [
+        "4",
+        "3",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-3x7",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "3 × 7 =",
+      "audioText": "3 times 7.",
+      "answer": "21",
+      "choices": [
+        "14",
+        "10",
+        "24",
+        "21"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 3,
+      "cols": 7
+    },
+    {
+      "id": "m-div-21d3",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "21 ÷ 3 =",
+      "audioText": "21 divided by 3.",
+      "answer": "7",
+      "choices": [
+        "7",
+        "18",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-4x4",
+      "island": "times",
+      "kind": "array",
+      "prompt": "4 × 4 =",
+      "audioText": "4 times 4.",
+      "answer": "16",
+      "choices": [
+        "8",
+        "20",
+        "16",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 4,
+      "cols": 4
+    },
+    {
+      "id": "m-div-16d4",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "16 ÷ 4 =",
+      "audioText": "16 divided by 4.",
+      "answer": "4",
+      "choices": [
+        "4",
+        "12",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-4x6",
+      "island": "times",
+      "kind": "array",
+      "prompt": "4 × 6 =",
+      "audioText": "4 times 6.",
+      "answer": "24",
+      "choices": [
+        "10",
+        "18",
+        "24",
+        "28"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 4,
+      "cols": 6
+    },
+    {
+      "id": "m-div-24d4",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "24 ÷ 4 =",
+      "audioText": "24 divided by 4.",
+      "answer": "6",
+      "choices": [
+        "4",
+        "20",
+        "6"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-4x9",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "4 × 9 =",
+      "audioText": "4 times 9.",
+      "answer": "36",
+      "choices": [
+        "27",
+        "36",
+        "40",
+        "13"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 4,
+      "cols": 9
+    },
+    {
+      "id": "m-div-36d4",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "36 ÷ 4 =",
+      "audioText": "36 divided by 4.",
+      "answer": "9",
+      "choices": [
+        "9",
+        "4",
+        "32"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-5x5",
+      "island": "times",
+      "kind": "array",
+      "prompt": "5 × 5 =",
+      "audioText": "5 times 5.",
+      "answer": "25",
+      "choices": [
+        "20",
+        "25",
+        "30",
+        "10"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 5,
+      "cols": 5
+    },
+    {
+      "id": "m-div-25d5",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "25 ÷ 5 =",
+      "audioText": "25 divided by 5.",
+      "answer": "5",
+      "choices": [
+        "20",
+        "5",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-5x6",
+      "island": "times",
+      "kind": "array",
+      "prompt": "5 × 6 =",
+      "audioText": "5 times 6.",
+      "answer": "30",
+      "choices": [
+        "35",
+        "11",
+        "24",
+        "30"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 5,
+      "cols": 6
+    },
+    {
+      "id": "m-div-30d5",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "30 ÷ 5 =",
+      "audioText": "30 divided by 5.",
+      "answer": "6",
+      "choices": [
+        "25",
+        "5",
+        "6"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-5x8",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "5 × 8 =",
+      "audioText": "5 times 8.",
+      "answer": "40",
+      "choices": [
+        "13",
+        "32",
+        "40",
+        "45"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 5,
+      "cols": 8
+    },
+    {
+      "id": "m-div-40d5",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "40 ÷ 5 =",
+      "audioText": "40 divided by 5.",
+      "answer": "8",
+      "choices": [
+        "8",
+        "5",
+        "35"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-5x12",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "5 × 12 =",
+      "audioText": "5 times 12.",
+      "answer": "60",
+      "choices": [
+        "60",
+        "65",
+        "48",
+        "17"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 5,
+      "cols": 12
+    },
+    {
+      "id": "m-div-60d5",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "60 ÷ 5 =",
+      "audioText": "60 divided by 5.",
+      "answer": "12",
+      "choices": [
+        "12",
+        "5",
+        "55"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-6x6",
+      "island": "times",
+      "kind": "array",
+      "prompt": "6 × 6 =",
+      "audioText": "6 times 6.",
+      "answer": "36",
+      "choices": [
+        "36",
+        "30",
+        "12",
+        "42"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 6,
+      "cols": 6
+    },
+    {
+      "id": "m-div-36d6",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "36 ÷ 6 =",
+      "audioText": "36 divided by 6.",
+      "answer": "6",
+      "choices": [
+        "6",
+        "30",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-6x7",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "6 × 7 =",
+      "audioText": "6 times 7.",
+      "answer": "42",
+      "choices": [
+        "35",
+        "42",
+        "48",
+        "13"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 6,
+      "cols": 7
+    },
+    {
+      "id": "m-div-42d6",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "42 ÷ 6 =",
+      "audioText": "42 divided by 6.",
+      "answer": "7",
+      "choices": [
+        "6",
+        "7",
+        "36"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-6x8",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "6 × 8 =",
+      "audioText": "6 times 8.",
+      "answer": "48",
+      "choices": [
+        "54",
+        "14",
+        "40",
+        "48"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 6,
+      "cols": 8
+    },
+    {
+      "id": "m-div-48d6",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "48 ÷ 6 =",
+      "audioText": "48 divided by 6.",
+      "answer": "8",
+      "choices": [
+        "6",
+        "42",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-7x7",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "7 × 7 =",
+      "audioText": "7 times 7.",
+      "answer": "49",
+      "choices": [
+        "56",
+        "14",
+        "49",
+        "42"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 7,
+      "cols": 7
+    },
+    {
+      "id": "m-div-49d7",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "49 ÷ 7 =",
+      "audioText": "49 divided by 7.",
+      "answer": "7",
+      "choices": [
+        "42",
+        "7",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-7x8",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "7 × 8 =",
+      "audioText": "7 times 8.",
+      "answer": "56",
+      "choices": [
+        "56",
+        "48",
+        "15",
+        "63"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 7,
+      "cols": 8
+    },
+    {
+      "id": "m-div-56d7",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "56 ÷ 7 =",
+      "audioText": "56 divided by 7.",
+      "answer": "8",
+      "choices": [
+        "8",
+        "7",
+        "49"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-8x8",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "8 × 8 =",
+      "audioText": "8 times 8.",
+      "answer": "64",
+      "choices": [
+        "56",
+        "64",
+        "16",
+        "72"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 8,
+      "cols": 8
+    },
+    {
+      "id": "m-div-64d8",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "64 ÷ 8 =",
+      "audioText": "64 divided by 8.",
+      "answer": "8",
+      "choices": [
+        "8",
+        "56",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-8x9",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "8 × 9 =",
+      "audioText": "8 times 9.",
+      "answer": "72",
+      "choices": [
+        "80",
+        "17",
+        "63",
+        "72"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 8,
+      "cols": 9
+    },
+    {
+      "id": "m-div-72d8",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "72 ÷ 8 =",
+      "audioText": "72 divided by 8.",
+      "answer": "9",
+      "choices": [
+        "64",
+        "8",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-9x9",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "9 × 9 =",
+      "audioText": "9 times 9.",
+      "answer": "81",
+      "choices": [
+        "81",
+        "18",
+        "90",
+        "72"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 9,
+      "cols": 9
+    },
+    {
+      "id": "m-div-81d9",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "81 ÷ 9 =",
+      "audioText": "81 divided by 9.",
+      "answer": "9",
+      "choices": [
+        "9",
+        "72",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-9x12",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "9 × 12 =",
+      "audioText": "9 times 12.",
+      "answer": "108",
+      "choices": [
+        "21",
+        "96",
+        "117",
+        "108"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 9,
+      "cols": 12
+    },
+    {
+      "id": "m-div-108d9",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "108 ÷ 9 =",
+      "audioText": "108 divided by 9.",
+      "answer": "12",
+      "choices": [
+        "99",
+        "12",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-10x10",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "10 × 10 =",
+      "audioText": "10 times 10.",
+      "answer": "100",
+      "choices": [
+        "20",
+        "110",
+        "100",
+        "90"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 10,
+      "cols": 10
+    },
+    {
+      "id": "m-div-100d10",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "100 ÷ 10 =",
+      "audioText": "100 divided by 10.",
+      "answer": "10",
+      "choices": [
+        "10",
+        "90",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-11x11",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "11 × 11 =",
+      "audioText": "11 times 11.",
+      "answer": "121",
+      "choices": [
+        "121",
+        "132",
+        "110",
+        "22"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 11,
+      "cols": 11
+    },
+    {
+      "id": "m-div-121d11",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "121 ÷ 11 =",
+      "audioText": "121 divided by 11.",
+      "answer": "11",
+      "choices": [
+        "110",
+        "11",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-12x8",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "12 × 8 =",
+      "audioText": "12 times 8.",
+      "answer": "96",
+      "choices": [
+        "108",
+        "88",
+        "20",
+        "96"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 12,
+      "cols": 8
+    },
+    {
+      "id": "m-div-96d12",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "96 ÷ 12 =",
+      "audioText": "96 divided by 12.",
+      "answer": "8",
+      "choices": [
+        "84",
+        "8",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    },
+    {
+      "id": "m-mul-12x12",
+      "island": "times",
+      "kind": "choice",
+      "prompt": "12 × 12 =",
+      "audioText": "12 times 12.",
+      "answer": "144",
+      "choices": [
+        "156",
+        "144",
+        "132",
+        "24"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "times"
+      ],
+      "rows": 12,
+      "cols": 12
+    },
+    {
+      "id": "m-div-144d12",
+      "island": "share",
+      "kind": "choice",
+      "prompt": "144 ÷ 12 =",
+      "audioText": "144 divided by 12.",
+      "answer": "12",
+      "choices": [
+        "132",
+        "12",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "primary",
+        "share"
+      ]
+    }
   ]
 }

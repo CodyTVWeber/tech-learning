@@ -1,0 +1,23 @@
+id,prompt,answer,audio_text,tags
+t-c1,"How many coins?
+●",1,How many coins?,math toddler count
+t-c2,"How many coins?
+● ●",2,How many coins?,math toddler count
+t-c3,"How many coins?
+● ● ●",3,How many coins?,math toddler count
+t-c4,"How many coins?
+● ● ● ●",4,How many coins?,math toddler count
+t-c5,"How many coins?
+● ● ● ● ●",5,How many coins?,math toddler count
+t-more-41,Which pile has more coins?,4,Left pile has four. Right pile has one. Which pile has more?,math toddler sense
+t-more-25,Which pile has more coins this time?,5,Left pile has two. Right pile has five. Which pile has more?,math toddler sense
+t-few-31,Which pile has fewer coins?,1,Left pile has three. Right pile has one. Which pile has fewer?,math toddler sense
+t-same-22,"Do these piles match, or is one more?",same,Two coins and two coins. Do they match?,math toddler sense
+t-next-1,One more than 1 is,2,One more than 1.,math toddler next
+t-next-3,One more than 3 is,4,One more than 3.,math toddler next
+t-next-4,One more than 4 is,5,One more than 4.,math toddler next
+t-less-5,One less than 5 is,4,One less than 5.,math toddler next
+t-less-2,One less than 2 is,1,One less than 2.,math toddler next
+t-match-1,"Count, then pick the matching number.",1,"Count, then pick the matching number.",math toddler match
+t-match-3,These coins match which number?,3,These coins match which number?,math toddler match
+t-match-5,Stamp the number that matches this pile.,5,Stamp the number that matches this pile.,math toddler match

@@ -1,28 +1,1170 @@
 {
   "band": "upper",
   "title": "Shares, points, and long work",
-  "technique": {
-    "title": "Write the steps, then paper",
-    "audioText": "Name the place. Line up the decimal point. For long division, divide, multiply, subtract, bring down. Then do a fresh problem on paper.",
-    "body": "Fractions, decimals, and percents name the same share (1/2 = 0.5 = 50%). For long multiplication and division: keep places in columns. Divide → multiply → subtract → bring down. The app shows the path once. The real work is on paper."
+  "intro": {
+    "body": "Fractions, decimals, money, time, measurement, area, long multiply and divide, and the four turn-and-group rules. The app shows the path. Paper finishes it.",
+    "audioText": "Name the place. Line up the decimal point. For long division: divide, multiply, subtract, bring down. Then do a fresh problem on paper."
   },
   "islands": [
-    { "id": "share", "slot": "island-share", "label": "Share cove" }
+    {
+      "id": "frac",
+      "slot": "island-share",
+      "label": "Share Cove",
+      "crew": "pip",
+      "chest": "Equal-part lids",
+      "technique": {
+        "title": "Same whole, named parts",
+        "body": "The bottom number names equal parts. The top number counts how many you have. Equivalent shares: 1/2 = 2/4 = 3/6. Add like fractions by adding the tops, keeping the bottom. Mixed number 1 1/2 = 3/2.",
+        "audioText": "The bottom number names equal parts. One half equals two fourths. Add like fractions by adding the tops."
+      },
+      "paper": [
+        {
+          "prompt": "1/5 + 2/5 ="
+        },
+        {
+          "prompt": "Write 3/4 and 6/8. Are they equivalent? Show a drawing."
+        },
+        {
+          "prompt": "1 1/2 + 1/2 ="
+        },
+        {
+          "prompt": "3/4 of 12 ="
+        }
+      ]
+    },
+    {
+      "id": "dec",
+      "slot": "island-share",
+      "label": "Point Harbor",
+      "crew": "reed",
+      "chest": "A tenths rule",
+      "technique": {
+        "title": "Line up the point",
+        "body": "Tenths, hundredths. 0.5 = 1/2 = 50%. When you add, line up the decimal points so tenths sit under tenths.",
+        "audioText": "Tenths and hundredths. One half is 0.5, which is 50 percent. Line up the decimal points to add."
+      },
+      "paper": [
+        {
+          "prompt": "4.6 + 0.75  (line up the points)"
+        },
+        {
+          "prompt": "0.2 + 0.35 ="
+        },
+        {
+          "prompt": "Write 7/10 as a decimal."
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "slot": "island-money",
+      "label": "Ledger Dock",
+      "crew": "moss",
+      "chest": "A cents column",
+      "technique": {
+        "title": "Dollars and cents",
+        "body": "Money is a decimal. $1.50 is 1 dollar and 50 cents. Line up the points. 100 cents = $1.00.",
+        "audioText": "Money is a decimal. One dollar fifty is 1 dollar and 50 cents. Line up the points."
+      },
+      "paper": [
+        {
+          "prompt": "$2.45 + $0.80 ="
+        },
+        {
+          "prompt": "A rope costs $3.00. You pay $5.00. Change?"
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "slot": "island-time",
+      "label": "Watch Reef",
+      "crew": "cal",
+      "chest": "An elapsed-time glass",
+      "technique": {
+        "title": "Elapsed time",
+        "body": "Count hours, then minutes. From 2:10 to 3:40 is 1 hour 30 minutes. If minutes pass 60, bundle into an hour.",
+        "audioText": "Count hours, then minutes. From 2:10 to 3:40 is 1 hour 30 minutes."
+      },
+      "paper": [
+        {
+          "prompt": "Watch starts 1:15, ends 2:05. Elapsed?"
+        },
+        {
+          "prompt": "A 45-minute watch starts at 4:20. When does it end?"
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "slot": "island-measure",
+      "label": "Measure Key",
+      "crew": "nell",
+      "chest": "Spoons, cups, and a meter tape",
+      "technique": {
+        "title": "Equivalents",
+        "body": "3 teaspoons = 1 tablespoon. 2 tablespoons = 1 fluid ounce. 8 fl oz = 1 cup. 2 cups = 1 pint. 2 pints = 1 quart. 4 quarts = 1 gallon. 12 in = 1 ft. 3 ft = 1 yd. 10 mm = 1 cm. 100 cm = 1 m. 1000 m = 1 km.",
+        "audioText": "Three teaspoons make one tablespoon. Two cups make a pint. Two pints make a quart. Four quarts make a gallon. One hundred centimeters make a meter."
+      },
+      "paper": [
+        {
+          "prompt": "6 teaspoons =     tablespoons"
+        },
+        {
+          "prompt": "3 gallons =     quarts"
+        },
+        {
+          "prompt": "2.5 m =     cm"
+        },
+        {
+          "prompt": "36 inches =     yards"
+        }
+      ]
+    },
+    {
+      "id": "shape",
+      "slot": "island-shape",
+      "label": "Area Atoll",
+      "crew": "kit",
+      "chest": "A hatch plan",
+      "technique": {
+        "title": "Cover, then wrap",
+        "body": "Area of a rectangle: length × width. Square: side × side. Triangle: (base × height) ÷ 2. Circle area: π × r × r. Circumference: 2 × π × r. Use π ≈ 3.14. Then do fresh problems on paper.",
+        "audioText": "Area of a rectangle is length times width. Triangle is base times height divided by 2. Circle area is pi r squared. Circumference is 2 pi r. Use 3.14 for pi. Then paper."
+      },
+      "paper": [
+        {
+          "prompt": "Rectangle 9 by 4. Area?"
+        },
+        {
+          "prompt": "Triangle base 10, height 6. Area?"
+        },
+        {
+          "prompt": "Circle r = 2. Area ≈ ?  Circumference ≈ ?  (π = 3.14)"
+        }
+      ]
+    },
+    {
+      "id": "long",
+      "slot": "island-long",
+      "label": "Long-Work Harbor",
+      "crew": "bram",
+      "chest": "A column slate",
+      "technique": {
+        "title": "Keep the places in columns",
+        "body": "Long multiply: ones first, then tens (shift one place), then add. Long divide: divide, multiply, subtract, bring down. Repeat. The app shows the path once. The real work is on paper.",
+        "audioText": "Long multiply: ones, then tens, then add. Long divide: divide, multiply, subtract, bring down. Then do a fresh problem on paper."
+      },
+      "paper": [
+        {
+          "prompt": "Long multiply: 36 × 24. Show ones, tens, and the sum."
+        },
+        {
+          "prompt": "Long divide: 145 ÷ 5. Show divide, multiply, subtract, bring down."
+        },
+        {
+          "prompt": "48 × 16"
+        },
+        {
+          "prompt": "196 ÷ 7"
+        }
+      ]
+    },
+    {
+      "id": "laws",
+      "slot": "island-sense",
+      "label": "Law Lagoon",
+      "crew": "oat",
+      "chest": "Four brass rules",
+      "technique": {
+        "title": "Turn, group, share-out, stay-the-same",
+        "body": "Turn-around (commutative): 4 + 5 = 5 + 4 and 3 × 6 = 6 × 3. Group (associative): (2+3)+4 = 2+(3+4). Share-out (distributive): 3 × (5+2) = 3×5 + 3×2. Stay-the-same (identity): n + 0 = n and n × 1 = n.",
+        "audioText": "Turn around: 4 plus 5 equals 5 plus 4. Group: you may add in grouped steps. Share out: 3 times a sum is 3 times each part. Stay the same: plus 0 or times 1 leaves n."
+      },
+      "paper": [
+        {
+          "prompt": "Rewrite 7 × (10 + 4) with the share-out rule, then solve."
+        },
+        {
+          "prompt": "Show (8+2)+5 = 8+(2+5)."
+        },
+        {
+          "prompt": "Why is 9 × 1 = 9 but 9 × 0 = 0?"
+        }
+      ]
+    },
+    {
+      "id": "skip",
+      "slot": "island-skip",
+      "label": "Square Wake",
+      "crew": "wren",
+      "chest": "Square and cube beads",
+      "technique": {
+        "title": "Skip 13s, 14s, 15s, squares, cubes",
+        "body": "A square is a number times itself: 1, 4, 9, 16, 25… A cube is n × n × n: 1, 8, 27, 64, 125… Skip 13s: 13, 26, 39…",
+        "audioText": "A square is a number times itself. A cube is n times n times n. Skip thirteens: 13, 26, 39."
+      },
+      "paper": [
+        {
+          "prompt": "Skip 13s from 13 to 78."
+        },
+        {
+          "prompt": "Skip 14s from 14 to 70."
+        },
+        {
+          "prompt": "Skip 15s from 15 to 90."
+        },
+        {
+          "prompt": "List squares from 1×1 to 12×12."
+        },
+        {
+          "prompt": "List cubes from 1×1×1 to 6×6×6."
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "slot": "island-story",
+      "label": "Story Inlet",
+      "crew": "sol",
+      "chest": "A two-step chart",
+      "technique": {
+        "title": "Two steps, then paper",
+        "body": "Some problems hide two actions. Find the first result, then use it. Estimate whether the answer should be larger or smaller before you compute. Finish the arithmetic on paper.",
+        "audioText": "Some problems hide two actions. Find the first result, then use it. Finish the arithmetic on paper."
+      },
+      "paper": [
+        {
+          "prompt": "A sail is 8 by 5 feet. Area? Then 3 of those sails. Total area?"
+        },
+        {
+          "prompt": "You have $10.00. Buy 3 coils at $2.25 each. How much is left?"
+        }
+      ]
+    },
+    {
+      "id": "mix",
+      "slot": "island-long",
+      "label": "Mix Channel",
+      "crew": "pike",
+      "chest": "A mixed-ops slate",
+      "technique": {
+        "title": "One operation at a time",
+        "body": "Do the work inside parentheses first. Then multiply or divide from left to right. Then add or subtract from left to right. Write each line. Finish on paper.",
+        "audioText": "Parentheses first. Then multiply or divide left to right. Then add or subtract. Write each line on paper."
+      },
+      "paper": [
+        {
+          "prompt": "(9 + 3) × 4 − 6 ="
+        },
+        {
+          "prompt": "5 + 2 × 8 =     (not 56)"
+        },
+        {
+          "prompt": "48 ÷ (3 × 4) ="
+        }
+      ]
+    }
   ],
   "items": [
-    { "id": "u1", "prompt": "1/2 as a decimal is", "audioText": "One half as a decimal.", "answer": "0.5", "choices": ["0.2", "0.5", "2.0"] },
-    { "id": "u2", "prompt": "0.25 as a fraction is", "audioText": "0.25 as a fraction.", "answer": "1/4", "choices": ["1/25", "1/4", "25/1"] },
-    { "id": "u3", "prompt": "50% of 10 is", "audioText": "50 percent of 10.", "answer": "5", "choices": ["2", "5", "50"] },
-    { "id": "u4", "prompt": "3/10 as a decimal is", "audioText": "3 tenths as a decimal.", "answer": "0.3", "choices": ["0.03", "0.3", "3.10"] },
-    { "id": "u5", "prompt": "Line up 1.2 + 0.45. The sum is", "audioText": "1.2 plus 0.45.", "answer": "1.65", "choices": ["1.65", "0.57", "5.7"] },
-    { "id": "u6", "prompt": "Long divide 84 ÷ 4. First: how many 4s in 8?", "audioText": "84 divided by 4. How many 4s in 8?", "answer": "2", "choices": ["1", "2", "4"] },
-    { "id": "u7", "prompt": "After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =", "audioText": "Bring down 4. 4 divided by 4.", "answer": "1", "choices": ["0", "1", "4"] },
-    { "id": "u8", "prompt": "So 84 ÷ 4 =", "audioText": "So 84 divided by 4 equals.", "answer": "21", "choices": ["20", "21", "24"] }
-  ],
-  "paper": [
-    { "prompt": "4.6 + 0.75  (line up the points)" },
-    { "prompt": "3/4 of 12" },
-    { "prompt": "Long division: 145 ÷ 5  (show divide, multiply, subtract, bring down)" },
-    { "prompt": "Long multiply: 36 × 24" }
+    {
+      "id": "u-fr-halfdec",
+      "island": "frac",
+      "kind": "choice",
+      "prompt": "1/2 as a decimal is",
+      "audioText": "1/2 as a decimal is",
+      "answer": "0.5",
+      "choices": [
+        "2.0",
+        "0.2",
+        "0.5"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ]
+    },
+    {
+      "id": "u-fr-25",
+      "island": "frac",
+      "kind": "choice",
+      "prompt": "0.25 as a fraction is",
+      "audioText": "0.25 as a fraction is",
+      "answer": "1/4",
+      "choices": [
+        "25/1",
+        "1/4",
+        "1/25"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ]
+    },
+    {
+      "id": "u-fr-50p",
+      "island": "frac",
+      "kind": "choice",
+      "prompt": "50% of 10 is",
+      "audioText": "50% of 10 is",
+      "answer": "5",
+      "choices": [
+        "5",
+        "50",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ]
+    },
+    {
+      "id": "u-fr-3tenth",
+      "island": "frac",
+      "kind": "choice",
+      "prompt": "3/10 as a decimal is",
+      "audioText": "3/10 as a decimal is",
+      "answer": "0.3",
+      "choices": [
+        "0.03",
+        "3.10",
+        "0.3"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ]
+    },
+    {
+      "id": "u-fr-like",
+      "island": "frac",
+      "kind": "fraction",
+      "prompt": "1/5 + 2/5 =",
+      "audioText": "1/5 + 2/5 =",
+      "answer": "3/5",
+      "choices": [
+        "3/5",
+        "3/10",
+        "2/5"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ],
+      "filled": 3,
+      "parts": 5
+    },
+    {
+      "id": "u-fr-eq",
+      "island": "frac",
+      "kind": "fraction",
+      "prompt": "1/2 is equivalent to",
+      "audioText": "1/2 is equivalent to",
+      "answer": "2/4",
+      "choices": [
+        "1/4",
+        "2/4",
+        "2/2"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ],
+      "filled": 2,
+      "parts": 4
+    },
+    {
+      "id": "u-fr-of",
+      "island": "frac",
+      "kind": "choice",
+      "prompt": "3/4 of 12 is",
+      "audioText": "3/4 of 12 is",
+      "answer": "9",
+      "choices": [
+        "9",
+        "3",
+        "16"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ]
+    },
+    {
+      "id": "u-fr-mixed",
+      "island": "frac",
+      "kind": "choice",
+      "prompt": "1 1/2 as an improper fraction is",
+      "audioText": "1 1/2 as an improper fraction is",
+      "answer": "3/2",
+      "choices": [
+        "1/2",
+        "2/3",
+        "3/2"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "frac"
+      ]
+    },
+    {
+      "id": "u-d-add",
+      "island": "dec",
+      "kind": "choice",
+      "prompt": "Line up 1.2 + 0.45. The sum is",
+      "audioText": "Line up 1.2 + 0.45. The sum is",
+      "answer": "1.65",
+      "choices": [
+        "5.7",
+        "1.65",
+        "0.57"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "dec"
+      ]
+    },
+    {
+      "id": "u-d-tenth",
+      "island": "dec",
+      "kind": "choice",
+      "prompt": "7 tenths as a decimal is",
+      "audioText": "7 tenths as a decimal is",
+      "answer": "0.7",
+      "choices": [
+        "0.7",
+        "7.0",
+        "0.07"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "dec"
+      ]
+    },
+    {
+      "id": "u-d-hund",
+      "island": "dec",
+      "kind": "choice",
+      "prompt": "0.40 equals how many tenths?",
+      "audioText": "0.40 equals how many tenths?",
+      "answer": "4",
+      "choices": [
+        "40",
+        "2",
+        "4"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "dec"
+      ]
+    },
+    {
+      "id": "u-d-pct",
+      "island": "dec",
+      "kind": "choice",
+      "prompt": "0.5 = what percent?",
+      "audioText": "0.5 = what percent?",
+      "answer": "50%",
+      "choices": [
+        "5%",
+        "0.5%",
+        "50%"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "dec"
+      ]
+    },
+    {
+      "id": "u-m-add",
+      "island": "money",
+      "kind": "money",
+      "prompt": "$1.50 + $0.25 =",
+      "audioText": "$1.50 + $0.25 =",
+      "answer": "$1.75",
+      "choices": [
+        "$1.75",
+        "$2.50",
+        "$1.25"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "money"
+      ]
+    },
+    {
+      "id": "u-m-cents",
+      "island": "money",
+      "kind": "choice",
+      "prompt": "$2.00 is how many cents?",
+      "audioText": "$2.00 is how many cents?",
+      "answer": "200",
+      "choices": [
+        "20",
+        "200",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "money"
+      ]
+    },
+    {
+      "id": "u-m-chg",
+      "island": "money",
+      "kind": "choice",
+      "prompt": "Pay $5.00 for a $3.25 coil. Change?",
+      "audioText": "Pay $5.00 for a $3.25 coil. Change?",
+      "answer": "$1.75",
+      "choices": [
+        "$2.75",
+        "$1.75",
+        "$8.25"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "money"
+      ]
+    },
+    {
+      "id": "u-t-elapse",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "From 2:00 to 2:45 is how many minutes?",
+      "audioText": "From 2:00 to 2:45 is how many minutes?",
+      "answer": "45",
+      "choices": [
+        "30",
+        "45",
+        "15"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "time"
+      ],
+      "hour": 2,
+      "minute": 45
+    },
+    {
+      "id": "u-t-hourmin",
+      "island": "time",
+      "kind": "choice",
+      "prompt": "From 1:10 to 3:10 is how many hours?",
+      "audioText": "From 1:10 to 3:10 is how many hours?",
+      "answer": "2",
+      "choices": [
+        "2",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "time"
+      ]
+    },
+    {
+      "id": "u-t-bundle",
+      "island": "time",
+      "kind": "choice",
+      "prompt": "75 minutes is 1 hour and how many minutes?",
+      "audioText": "75 minutes is 1 hour and how many minutes?",
+      "answer": "15",
+      "choices": [
+        "15",
+        "25",
+        "75"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "time"
+      ]
+    },
+    {
+      "id": "u-me-tsp",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "3 teaspoons = how many tablespoons?",
+      "audioText": "3 teaspoons = how many tablespoons?",
+      "answer": "1",
+      "choices": [
+        "6",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "measure"
+      ]
+    },
+    {
+      "id": "u-me-tbsp",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "2 tablespoons = how many fluid ounces?",
+      "audioText": "2 tablespoons = how many fluid ounces?",
+      "answer": "1",
+      "choices": [
+        "8",
+        "1",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "measure"
+      ]
+    },
+    {
+      "id": "u-me-gal",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "4 quarts = how many gallons?",
+      "audioText": "4 quarts = how many gallons?",
+      "answer": "1",
+      "choices": [
+        "4",
+        "8",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "measure"
+      ]
+    },
+    {
+      "id": "u-me-cm",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "100 centimeters = how many meters?",
+      "audioText": "100 centimeters = how many meters?",
+      "answer": "1",
+      "choices": [
+        "10",
+        "100",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "measure"
+      ]
+    },
+    {
+      "id": "u-me-km",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "1000 meters = how many kilometers?",
+      "audioText": "1000 meters = how many kilometers?",
+      "answer": "1",
+      "choices": [
+        "1",
+        "100",
+        "1000"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "measure"
+      ]
+    },
+    {
+      "id": "u-me-in",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "36 inches = how many yards?",
+      "audioText": "36 inches = how many yards?",
+      "answer": "1",
+      "choices": [
+        "12",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "measure"
+      ]
+    },
+    {
+      "id": "u-sh-rect",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Rectangle 7 by 3. Area?",
+      "audioText": "Rectangle 7 by 3. Area?",
+      "answer": "21",
+      "choices": [
+        "21",
+        "10",
+        "20"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "shape"
+      ]
+    },
+    {
+      "id": "u-sh-sq",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Square side 5. Area?",
+      "audioText": "Square side 5. Area?",
+      "answer": "25",
+      "choices": [
+        "10",
+        "25",
+        "20"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "shape"
+      ]
+    },
+    {
+      "id": "u-sh-tri",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Triangle base 8, height 5. Area?",
+      "audioText": "Triangle base 8, height 5. Area?",
+      "answer": "20",
+      "choices": [
+        "20",
+        "13",
+        "40"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "shape"
+      ]
+    },
+    {
+      "id": "u-sh-circA",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Circle r = 2. Area ≈ (π = 3.14)",
+      "audioText": "Circle r = 2. Area ≈ (π = 3.14)",
+      "answer": "12.56",
+      "choices": [
+        "12.14",
+        "6.28",
+        "12.56"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "shape"
+      ]
+    },
+    {
+      "id": "u-sh-circC",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Circle r = 2. Circumference ≈ (π = 3.14)",
+      "audioText": "Circle r = 2. Circumference ≈ (π = 3.14)",
+      "answer": "12.56",
+      "choices": [
+        "3.14",
+        "6.28",
+        "12.56"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "shape"
+      ]
+    },
+    {
+      "id": "u-long-howmany",
+      "island": "long",
+      "kind": "steps",
+      "prompt": "Long divide 84 ÷ 4. First: how many 4s in 8?",
+      "audioText": "Long divide 84 ÷ 4. First: how many 4s in 8?",
+      "answer": "2",
+      "choices": [
+        "1",
+        "2",
+        "4"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ],
+      "board": "  4 ) 84"
+    },
+    {
+      "id": "u-long-bring",
+      "island": "long",
+      "kind": "steps",
+      "prompt": "After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",
+      "audioText": "After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",
+      "answer": "1",
+      "choices": [
+        "4",
+        "1",
+        "0"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ],
+      "board": "   2\n  4 ) 84\n     −8\n      04"
+    },
+    {
+      "id": "u-long-84",
+      "island": "long",
+      "kind": "choice",
+      "prompt": "So 84 ÷ 4 =",
+      "audioText": "So 84 ÷ 4 =",
+      "answer": "21",
+      "choices": [
+        "24",
+        "20",
+        "21"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ]
+    },
+    {
+      "id": "u-long-23x4",
+      "island": "long",
+      "kind": "steps",
+      "prompt": "23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",
+      "audioText": "23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",
+      "answer": "9",
+      "choices": [
+        "9",
+        "12",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ],
+      "board": "   23\n ×  4"
+    },
+    {
+      "id": "u-long-92",
+      "island": "long",
+      "kind": "choice",
+      "prompt": "So 23 × 4 =",
+      "audioText": "So 23 × 4 =",
+      "answer": "92",
+      "choices": [
+        "86",
+        "92",
+        "26"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ]
+    },
+    {
+      "id": "u-law-com",
+      "island": "laws",
+      "kind": "choice",
+      "prompt": "4 × 6 and 6 × 4. Same product?",
+      "audioText": "4 × 6 and 6 × 4. Same product?",
+      "answer": "yes",
+      "choices": [
+        "only add",
+        "yes",
+        "no"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "laws"
+      ]
+    },
+    {
+      "id": "u-law-id",
+      "island": "laws",
+      "kind": "choice",
+      "prompt": "9 × 1 =",
+      "audioText": "9 × 1 =",
+      "answer": "9",
+      "choices": [
+        "10",
+        "9",
+        "0"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "laws"
+      ]
+    },
+    {
+      "id": "u-law-zero",
+      "island": "laws",
+      "kind": "choice",
+      "prompt": "9 × 0 =",
+      "audioText": "9 × 0 =",
+      "answer": "0",
+      "choices": [
+        "90",
+        "0",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "laws"
+      ]
+    },
+    {
+      "id": "u-law-dist",
+      "island": "laws",
+      "kind": "choice",
+      "prompt": "3 × (5 + 2) = 3×5 + 3×2. That value is",
+      "audioText": "3 × (5 + 2) = 3×5 + 3×2. That value is",
+      "answer": "21",
+      "choices": [
+        "21",
+        "17",
+        "10"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "laws"
+      ]
+    },
+    {
+      "id": "u-law-assoc",
+      "island": "laws",
+      "kind": "choice",
+      "prompt": "(2 + 3) + 4 = 2 + (3 + 4). Both equal",
+      "audioText": "(2 + 3) + 4 = 2 + (3 + 4). Both equal",
+      "answer": "9",
+      "choices": [
+        "5",
+        "9",
+        "24"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "laws"
+      ]
+    },
+    {
+      "id": "u-sk-13",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "13, 26, 39. Next?",
+      "audioText": "13, 26, 39. Next?",
+      "answer": "52",
+      "choices": [
+        "50",
+        "65",
+        "52"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "skip"
+      ],
+      "seq": [
+        13,
+        26,
+        39
+      ]
+    },
+    {
+      "id": "u-sk-14",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "14, 28, 42. Next?",
+      "audioText": "14, 28, 42. Next?",
+      "answer": "56",
+      "choices": [
+        "54",
+        "56",
+        "70"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "skip"
+      ],
+      "seq": [
+        14,
+        28,
+        42
+      ]
+    },
+    {
+      "id": "u-sk-15",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "15, 30, 45. Next?",
+      "audioText": "15, 30, 45. Next?",
+      "answer": "60",
+      "choices": [
+        "75",
+        "50",
+        "60"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "skip"
+      ],
+      "seq": [
+        15,
+        30,
+        45
+      ]
+    },
+    {
+      "id": "u-sk-sq",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "Squares: 1, 4, 9, 16. Next?",
+      "audioText": "Squares: 1, 4, 9, 16. Next?",
+      "answer": "25",
+      "choices": [
+        "20",
+        "36",
+        "25"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "skip"
+      ],
+      "seq": [
+        1,
+        4,
+        9,
+        16
+      ]
+    },
+    {
+      "id": "u-sk-cu",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "Cubes: 1, 8, 27. Next?",
+      "audioText": "Cubes: 1, 8, 27. Next?",
+      "answer": "64",
+      "choices": [
+        "64",
+        "81",
+        "36"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "skip"
+      ],
+      "seq": [
+        1,
+        8,
+        27
+      ]
+    },
+    {
+      "id": "u-st-area",
+      "island": "story",
+      "kind": "word",
+      "prompt": "A sail 8 by 5 feet. Area in square feet?",
+      "audioText": "A sail 8 by 5 feet. Area in square feet?",
+      "answer": "40",
+      "choices": [
+        "26",
+        "13",
+        "40"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "story"
+      ]
+    },
+    {
+      "id": "u-st-two",
+      "island": "story",
+      "kind": "word",
+      "prompt": "3 coils at $2.00 each. Total?",
+      "audioText": "3 coils at $2.00 each. Total?",
+      "answer": "$6.00",
+      "choices": [
+        "$5.00",
+        "$6.00",
+        "$2.00"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "story"
+      ]
+    },
+    {
+      "id": "u-mix-paren",
+      "island": "mix",
+      "kind": "choice",
+      "prompt": "(9 + 3) × 2 =",
+      "audioText": "(9 + 3) × 2 =",
+      "answer": "24",
+      "choices": [
+        "11",
+        "15",
+        "24"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "mix"
+      ]
+    },
+    {
+      "id": "u-mix-mdas",
+      "island": "mix",
+      "kind": "choice",
+      "prompt": "5 + 2 × 8 =",
+      "audioText": "5 + 2 × 8 =",
+      "answer": "21",
+      "choices": [
+        "13",
+        "56",
+        "21"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "mix"
+      ]
+    }
   ]
 }

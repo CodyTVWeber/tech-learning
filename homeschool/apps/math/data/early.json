@@ -1,28 +1,1002 @@
 {
   "band": "early",
-  "title": "Tens and ones",
-  "technique": {
-    "title": "Make a ten, then add",
-    "audioText": "If the ones make ten or more, bundle ten ones into a ten crate. Then add the tens.",
-    "body": "If the ones make ten or more, bundle ten ones into a ten-crate. Write the extra ones. Then add the tens."
+  "title": "Tens, ones, and a full chart",
+  "intro": {
+    "body": "Bundle tens, skip-count, count cents, read the hour, then drop anchor for paper.",
+    "audioText": "Bundle tens. Skip count. Count cents. Then finish on paper."
   },
   "islands": [
-    { "id": "add", "slot": "island-add", "label": "Add dock" },
-    { "id": "place", "slot": "island-place", "label": "Ten crates" }
+    {
+      "id": "facts",
+      "slot": "island-add",
+      "label": "Fact Dock",
+      "crew": "pip",
+      "chest": "A tally slate",
+      "technique": {
+        "title": "Use what you know",
+        "body": "Doubles, plus one, and make-ten help you add and subtract within 20 without counting every coin.",
+        "audioText": "Doubles, plus one, and make ten help you add and subtract."
+      },
+      "paper": [
+        {
+          "prompt": "Write the doubles from 1+1 to 10+10."
+        },
+        {
+          "prompt": "8 + 5  (make 10, then add the rest)"
+        },
+        {
+          "prompt": "14 − 6 ="
+        }
+      ]
+    },
+    {
+      "id": "place",
+      "slot": "island-place",
+      "label": "Ten Crates",
+      "crew": "reed",
+      "chest": "A crate stamped 10",
+      "technique": {
+        "title": "Tens and ones",
+        "body": "Ten ones bundle into one ten-crate. 3 tens and 4 ones is 34, not 43.",
+        "audioText": "Ten ones bundle into one ten crate. Three tens and four ones is thirty-four."
+      },
+      "paper": [
+        {
+          "prompt": "Draw 4 tens and 7 ones. Write the number."
+        },
+        {
+          "prompt": "3 tens + 12 ones =  ?"
+        }
+      ]
+    },
+    {
+      "id": "regroup",
+      "slot": "island-add",
+      "label": "Bundle Dock",
+      "crew": "moss",
+      "chest": "A spare ten strap",
+      "technique": {
+        "title": "Make a ten, then add",
+        "body": "If the ones make ten or more, bundle ten ones into a ten-crate. Write the extra ones. Then add the tens. To subtract, unbundle a ten if ones are too small.",
+        "audioText": "If the ones make ten or more, bundle ten ones into a ten crate. Then add the tens."
+      },
+      "paper": [
+        {
+          "prompt": "58 + 7. Show the bundled ten."
+        },
+        {
+          "prompt": "42 − 9. Show the unbundled ten."
+        }
+      ]
+    },
+    {
+      "id": "skip",
+      "slot": "island-skip",
+      "label": "Skip Wake",
+      "crew": "cal",
+      "chest": "A counted oar",
+      "technique": {
+        "title": "Skip 2s, 5s, and 10s",
+        "body": "Skip counting jumps by the same amount: 2, 4, 6… or 5, 10, 15… or 10, 20, 30…",
+        "audioText": "Skip counting jumps by the same amount. Twos, fives, and tens."
+      },
+      "paper": [
+        {
+          "prompt": "Write skip 2s from 2 to 20."
+        },
+        {
+          "prompt": "Write skip 5s from 5 to 50."
+        },
+        {
+          "prompt": "Write skip 10s from 10 to 100."
+        }
+      ]
+    },
+    {
+      "id": "money",
+      "slot": "island-money",
+      "label": "Coin Purse",
+      "crew": "nell",
+      "chest": "A penny, nickel, and dime",
+      "technique": {
+        "title": "Count cents",
+        "body": "A penny is 1 cent. A nickel is 5 cents. A dime is 10 cents. Count the dimes first, then nickels, then pennies.",
+        "audioText": "A penny is 1 cent. A nickel is 5 cents. A dime is 10 cents."
+      },
+      "paper": [
+        {
+          "prompt": "3 dimes + 1 nickel =    cents"
+        },
+        {
+          "prompt": "Draw 4 pennies and 1 dime. Write the total cents."
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "slot": "island-time",
+      "label": "Clock Reef",
+      "crew": "kit",
+      "chest": "A brass ship clock",
+      "technique": {
+        "title": "Read the hour",
+        "body": "The short hand names the hour. When it points to 3 and the long hand points to 12, the clock says 3:00.",
+        "audioText": "The short hand names the hour. When it points to 3 and the long hand to 12, the clock says 3 o'clock."
+      },
+      "paper": [
+        {
+          "prompt": "Draw a clock that shows 4:00."
+        },
+        {
+          "prompt": "Draw a clock that shows 9:00."
+        }
+      ]
+    },
+    {
+      "id": "measure",
+      "slot": "island-measure",
+      "label": "Measure Key",
+      "crew": "bram",
+      "chest": "A short brass ruler",
+      "technique": {
+        "title": "Compare length",
+        "body": "Line the ropes up at one end. The one that sticks out farther is longer. An inch is a small unit on a ruler.",
+        "audioText": "Line the ropes up at one end. The one that sticks out farther is longer."
+      },
+      "paper": [
+        {
+          "prompt": "Trace a paper clip. About how many inches long is it? Ask a grown-up to check."
+        }
+      ]
+    },
+    {
+      "id": "shape",
+      "slot": "island-shape",
+      "label": "Shape Atoll",
+      "crew": "oat",
+      "chest": "A four-sided hatch",
+      "technique": {
+        "title": "Count sides",
+        "body": "A rectangle has four sides and four square corners. Opposite sides match. A triangle has three sides.",
+        "audioText": "A rectangle has four sides and four square corners. A triangle has three sides."
+      },
+      "paper": [
+        {
+          "prompt": "Draw a rectangle. Label length and width."
+        },
+        {
+          "prompt": "How many sides does a triangle have?"
+        }
+      ]
+    },
+    {
+      "id": "story",
+      "slot": "island-story",
+      "label": "Story Inlet",
+      "crew": "wren",
+      "chest": "A logbook page",
+      "technique": {
+        "title": "Find the numbers, then the action",
+        "body": "Underline the amounts. Decide if you join (add) or take away (subtract). Write a number sentence, then finish on paper.",
+        "audioText": "Find the numbers. Decide if you join or take away. Write a number sentence."
+      },
+      "paper": [
+        {
+          "prompt": "Pip has 18 coins. Reed finds 7 more. How many now? Write the sentence and the answer."
+        },
+        {
+          "prompt": "A crate holds 20 biscuits. The crew eats 9. How many are left?"
+        }
+      ]
+    },
+    {
+      "id": "rows",
+      "slot": "island-facts",
+      "label": "Early Rows",
+      "crew": "sol",
+      "chest": "Three equal coils",
+      "technique": {
+        "title": "Equal groups",
+        "body": "3 rows of 4 is 4 + 4 + 4. That is the start of multiplication: equal groups.",
+        "audioText": "Three rows of four is four plus four plus four. That is equal groups."
+      },
+      "paper": [
+        {
+          "prompt": "Draw 2 rows of 5. Write 5 + 5 and 2 × 5."
+        },
+        {
+          "prompt": "4 + 4 + 4 =     and 3 × 4 ="
+        }
+      ]
+    }
   ],
   "items": [
-    { "id": "e1", "prompt": "What number is 3 tens and 4 ones?", "audioText": "What number is 3 tens and 4 ones?", "answer": "34", "choices": ["34", "43", "304"] },
-    { "id": "e2", "prompt": "What number is 5 tens and 0 ones?", "audioText": "What number is 5 tens and 0 ones?", "answer": "50", "choices": ["5", "15", "50"] },
-    { "id": "e3", "prompt": "40 + 8 =", "audioText": "40 plus 8.", "answer": "48", "choices": ["48", "408", "32"] },
-    { "id": "e4", "prompt": "27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?", "audioText": "27 plus 5. Ones are 12. Bundle a ten. What is the sum?", "answer": "32", "choices": ["22", "32", "212"] },
-    { "id": "e5", "prompt": "46 + 7 =", "audioText": "46 plus 7.", "answer": "53", "choices": ["43", "53", "413"] },
-    { "id": "e6", "prompt": "60 − 10 =", "audioText": "60 minus 10.", "answer": "50", "choices": ["50", "70", "6"] },
-    { "id": "e7", "prompt": "35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?", "audioText": "35 minus 8. Unbundle a ten. What is the difference?", "answer": "27", "choices": ["27", "33", "43"] },
-    { "id": "e8", "prompt": "4 + 4 + 4 =", "audioText": "4 plus 4 plus 4.", "answer": "12", "choices": ["8", "12", "16"] }
-  ],
-  "paper": [
-    { "prompt": "58 + 7. Show the bundled ten." },
-    { "prompt": "42 − 9. Show the unbundled ten." },
-    { "prompt": "3 tens + 12 ones =  ?" }
+    {
+      "id": "e-f-d4",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "4 + 4 =",
+      "audioText": "4 + 4 =",
+      "answer": "8",
+      "choices": [
+        "6",
+        "8",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-d7",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "7 + 7 =",
+      "audioText": "7 + 7 =",
+      "answer": "14",
+      "choices": [
+        "14",
+        "16",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-91",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "9 + 1 =",
+      "audioText": "9 + 1 =",
+      "answer": "10",
+      "choices": [
+        "11",
+        "10",
+        "8"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-28",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "2 + 8 =",
+      "audioText": "2 + 8 =",
+      "answer": "10",
+      "choices": [
+        "9",
+        "11",
+        "10"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-65",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "6 + 5 =",
+      "audioText": "6 + 5 =",
+      "answer": "11",
+      "choices": [
+        "10",
+        "12",
+        "11"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-83",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "8 + 3 =",
+      "audioText": "8 + 3 =",
+      "answer": "11",
+      "choices": [
+        "10",
+        "13",
+        "11"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-9m4",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "9 − 4 =",
+      "audioText": "9 − 4 =",
+      "answer": "5",
+      "choices": [
+        "5",
+        "4",
+        "6"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-12m7",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "12 − 7 =",
+      "audioText": "12 − 7 =",
+      "answer": "5",
+      "choices": [
+        "6",
+        "19",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-f-15m6",
+      "island": "facts",
+      "kind": "choice",
+      "prompt": "15 − 6 =",
+      "audioText": "15 − 6 =",
+      "answer": "9",
+      "choices": [
+        "8",
+        "9",
+        "11"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "facts"
+      ]
+    },
+    {
+      "id": "e-p-34",
+      "island": "place",
+      "kind": "place",
+      "prompt": "What number is 3 tens and 4 ones?",
+      "audioText": "What number is 3 tens and 4 ones?",
+      "answer": "34",
+      "choices": [
+        "304",
+        "43",
+        "34"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "place"
+      ],
+      "tens": 3,
+      "ones": 4
+    },
+    {
+      "id": "e-p-50",
+      "island": "place",
+      "kind": "place",
+      "prompt": "What number is 5 tens and 0 ones?",
+      "audioText": "What number is 5 tens and 0 ones?",
+      "answer": "50",
+      "choices": [
+        "50",
+        "5",
+        "15"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "place"
+      ],
+      "tens": 5,
+      "ones": 0
+    },
+    {
+      "id": "e-p-408",
+      "island": "place",
+      "kind": "choice",
+      "prompt": "40 + 8 =",
+      "audioText": "40 + 8 =",
+      "answer": "48",
+      "choices": [
+        "32",
+        "48",
+        "408"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "place"
+      ]
+    },
+    {
+      "id": "e-p-27",
+      "island": "place",
+      "kind": "place",
+      "prompt": "2 tens and 17 ones bundles to",
+      "audioText": "Two tens and seventeen ones. Bundle the extra ten. What number?",
+      "answer": "37",
+      "choices": [
+        "27",
+        "37",
+        "217"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "place"
+      ],
+      "tens": 2,
+      "ones": 17
+    },
+    {
+      "id": "e-r-275",
+      "island": "regroup",
+      "kind": "choice",
+      "prompt": "27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?",
+      "audioText": "27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?",
+      "answer": "32",
+      "choices": [
+        "32",
+        "212",
+        "22"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "regroup"
+      ]
+    },
+    {
+      "id": "e-r-467",
+      "island": "regroup",
+      "kind": "choice",
+      "prompt": "46 + 7 =",
+      "audioText": "46 + 7 =",
+      "answer": "53",
+      "choices": [
+        "43",
+        "53",
+        "413"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "regroup"
+      ]
+    },
+    {
+      "id": "e-r-6010",
+      "island": "regroup",
+      "kind": "choice",
+      "prompt": "60 − 10 =",
+      "audioText": "60 − 10 =",
+      "answer": "50",
+      "choices": [
+        "50",
+        "6",
+        "70"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "regroup"
+      ]
+    },
+    {
+      "id": "e-r-358",
+      "island": "regroup",
+      "kind": "choice",
+      "prompt": "35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?",
+      "audioText": "35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?",
+      "answer": "27",
+      "choices": [
+        "43",
+        "33",
+        "27"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "regroup"
+      ]
+    },
+    {
+      "id": "e-r-29p6",
+      "island": "regroup",
+      "kind": "choice",
+      "prompt": "29 + 6 =",
+      "audioText": "29 + 6 =",
+      "answer": "35",
+      "choices": [
+        "35",
+        "215",
+        "25"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "regroup"
+      ]
+    },
+    {
+      "id": "e-sk-2",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "2, 4, 6, 8, 10. Next?",
+      "audioText": "2, 4, 6, 8, 10. Next?",
+      "answer": "12",
+      "choices": [
+        "12",
+        "11",
+        "14"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "skip"
+      ],
+      "seq": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "id": "e-sk-5",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "5, 10, 15, 20. Next?",
+      "audioText": "5, 10, 15, 20. Next?",
+      "answer": "25",
+      "choices": [
+        "30",
+        "25",
+        "24"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "skip"
+      ],
+      "seq": [
+        5,
+        10,
+        15,
+        20
+      ]
+    },
+    {
+      "id": "e-sk-10",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "10, 20, 30, 40. Next?",
+      "audioText": "10, 20, 30, 40. Next?",
+      "answer": "50",
+      "choices": [
+        "41",
+        "60",
+        "50"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "skip"
+      ],
+      "seq": [
+        10,
+        20,
+        30,
+        40
+      ]
+    },
+    {
+      "id": "e-sk-2from14",
+      "island": "skip",
+      "kind": "skip",
+      "prompt": "Skip by 2s: 14, 16, 18. Next?",
+      "audioText": "Skip by 2s: 14, 16, 18. Next?",
+      "answer": "20",
+      "choices": [
+        "19",
+        "22",
+        "20"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "skip"
+      ],
+      "seq": [
+        14,
+        16,
+        18
+      ]
+    },
+    {
+      "id": "e-m-3p",
+      "island": "money",
+      "kind": "money",
+      "prompt": "3 pennies are how many cents?",
+      "audioText": "3 pennies are how many cents?",
+      "answer": "3",
+      "choices": [
+        "5",
+        "30",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "money"
+      ],
+      "pennies": 3
+    },
+    {
+      "id": "e-m-nickel",
+      "island": "money",
+      "kind": "money",
+      "prompt": "1 nickel is how many cents?",
+      "audioText": "1 nickel is how many cents?",
+      "answer": "5",
+      "choices": [
+        "10",
+        "5",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "money"
+      ],
+      "nickels": 1
+    },
+    {
+      "id": "e-m-dime",
+      "island": "money",
+      "kind": "money",
+      "prompt": "1 dime is how many cents?",
+      "audioText": "1 dime is how many cents?",
+      "answer": "10",
+      "choices": [
+        "1",
+        "10",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "money"
+      ],
+      "dimes": 1
+    },
+    {
+      "id": "e-m-2d1n",
+      "island": "money",
+      "kind": "money",
+      "prompt": "2 dimes and 1 nickel. How many cents?",
+      "audioText": "2 dimes and 1 nickel. How many cents?",
+      "answer": "25",
+      "choices": [
+        "15",
+        "25",
+        "30"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "money"
+      ],
+      "dimes": 2,
+      "nickels": 1
+    },
+    {
+      "id": "e-m-4p1n",
+      "island": "money",
+      "kind": "money",
+      "prompt": "1 nickel and 4 pennies. How many cents?",
+      "audioText": "1 nickel and 4 pennies. How many cents?",
+      "answer": "9",
+      "choices": [
+        "14",
+        "5",
+        "9"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "money"
+      ],
+      "nickels": 1,
+      "pennies": 4
+    },
+    {
+      "id": "e-t-3",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "Short hand on 3, long hand on 12. The hour is",
+      "audioText": "Short hand on 3, long hand on 12. The hour is",
+      "answer": "3:00",
+      "choices": [
+        "12:00",
+        "3:30",
+        "3:00"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "time"
+      ],
+      "hour": 3,
+      "minute": 0
+    },
+    {
+      "id": "e-t-6",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "Short hand on 6, long hand on 12. The hour is",
+      "audioText": "Short hand on 6, long hand on 12. The hour is",
+      "answer": "6:00",
+      "choices": [
+        "12:00",
+        "6:30",
+        "6:00"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "time"
+      ],
+      "hour": 6,
+      "minute": 0
+    },
+    {
+      "id": "e-t-9",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "The clock shows 9:00. The short hand points to",
+      "audioText": "The clock shows 9:00. The short hand points to",
+      "answer": "9",
+      "choices": [
+        "3",
+        "9",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "time"
+      ],
+      "hour": 9,
+      "minute": 0
+    },
+    {
+      "id": "e-t-12",
+      "island": "time",
+      "kind": "clock",
+      "prompt": "Both hands on 12. The hour is",
+      "audioText": "Both hands on 12. The hour is",
+      "answer": "12:00",
+      "choices": [
+        "1:00",
+        "6:00",
+        "12:00"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "time"
+      ],
+      "hour": 12,
+      "minute": 0
+    },
+    {
+      "id": "e-me-long",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "A 5-inch rope and a 2-inch rope. Which is longer?",
+      "audioText": "A 5-inch rope and a 2-inch rope. Which is longer?",
+      "answer": "5-inch",
+      "choices": [
+        "same",
+        "2-inch",
+        "5-inch"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "measure"
+      ]
+    },
+    {
+      "id": "e-me-inch",
+      "island": "measure",
+      "kind": "choice",
+      "prompt": "12 inches make 1",
+      "audioText": "12 inches make 1",
+      "answer": "foot",
+      "choices": [
+        "foot",
+        "mile",
+        "yard"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "measure"
+      ]
+    },
+    {
+      "id": "e-sh-rect",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "Four sides, four square corners. Opposite sides match. This is a",
+      "audioText": "Four sides, four square corners. Opposite sides match. This is a",
+      "answer": "rectangle",
+      "choices": [
+        "triangle",
+        "rectangle",
+        "circle"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "shape"
+      ]
+    },
+    {
+      "id": "e-sh-sides",
+      "island": "shape",
+      "kind": "choice",
+      "prompt": "A triangle has this many sides:",
+      "audioText": "A triangle has this many sides:",
+      "answer": "3",
+      "choices": [
+        "4",
+        "3",
+        "5"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "shape"
+      ]
+    },
+    {
+      "id": "e-st-18",
+      "island": "story",
+      "kind": "word",
+      "prompt": "Pip stacks 9 crates. Reed stacks 6 more. How many crates?",
+      "audioText": "Pip stacks 9 crates. Reed stacks 6 more. How many crates?",
+      "answer": "15",
+      "choices": [
+        "3",
+        "96",
+        "15"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "story"
+      ]
+    },
+    {
+      "id": "e-st-20",
+      "island": "story",
+      "kind": "word",
+      "prompt": "A chest has 12 coins. Nell spends 4. How many are left?",
+      "audioText": "A chest has 12 coins. Nell spends 4. How many are left?",
+      "answer": "8",
+      "choices": [
+        "8",
+        "4",
+        "16"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "story"
+      ]
+    },
+    {
+      "id": "e-st-equal",
+      "island": "story",
+      "kind": "word",
+      "prompt": "3 coils of 5 coins. How many coins in all?",
+      "audioText": "3 coils of 5 coins. How many coins in all?",
+      "answer": "15",
+      "choices": [
+        "15",
+        "8",
+        "35"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "story"
+      ]
+    },
+    {
+      "id": "e-row-34",
+      "island": "rows",
+      "kind": "array",
+      "prompt": "3 rows of 4 coins. How many?",
+      "audioText": "3 rows of 4 coins. How many?",
+      "answer": "12",
+      "choices": [
+        "12",
+        "7",
+        "16"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "rows"
+      ],
+      "rows": 3,
+      "cols": 4
+    },
+    {
+      "id": "e-row-444",
+      "island": "rows",
+      "kind": "choice",
+      "prompt": "4 + 4 + 4 =",
+      "audioText": "4 + 4 + 4 =",
+      "answer": "12",
+      "choices": [
+        "16",
+        "8",
+        "12"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "rows"
+      ]
+    },
+    {
+      "id": "e-row-25",
+      "island": "rows",
+      "kind": "array",
+      "prompt": "2 rows of 5 coins. How many?",
+      "audioText": "2 rows of 5 coins. How many?",
+      "answer": "10",
+      "choices": [
+        "25",
+        "7",
+        "10"
+      ],
+      "tags": [
+        "math",
+        "early",
+        "rows"
+      ],
+      "rows": 2,
+      "cols": 5
+    }
   ]
 }

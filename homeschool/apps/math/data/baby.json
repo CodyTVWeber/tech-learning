@@ -1,0 +1,177 @@
+{
+  "band": "baby",
+  "title": "Care voyage",
+  "intro": {
+    "body": "A quiet sail. Tap, hear, and rock. No rush. Untested, awaiting parent test.",
+    "audioText": "A quiet sail. Tap the coins and hear the numbers."
+  },
+  "islands": [
+    {
+      "id": "tide",
+      "slot": "island-count",
+      "label": "Soft Tide",
+      "crew": "pip",
+      "chest": "A warm brass coin",
+      "technique": {
+        "title": "Tap and hear",
+        "body": "Hold the little sailor. Tap each coin. Hear one number for each tap. No rush.",
+        "audioText": "Tap each coin. Hear one number for each tap."
+      },
+      "paper": [
+        {
+          "prompt": "With a grown-up, draw one round coin. Point to it and say one."
+        }
+      ]
+    },
+    {
+      "id": "peek",
+      "slot": "chest",
+      "label": "Peek Chest",
+      "crew": "kit",
+      "chest": "A tiny latch",
+      "technique": {
+        "title": "Open, then look",
+        "body": "Tap the chest. When it opens, point to each coin you see.",
+        "audioText": "Tap the chest. Point to each coin you see."
+      },
+      "paper": [
+        {
+          "prompt": "Draw a closed chest. Then draw it open with 2 coins."
+        }
+      ]
+    },
+    {
+      "id": "rock",
+      "slot": "hero",
+      "label": "Rock the Hull",
+      "crew": "wren",
+      "chest": "A smooth pebble from the deck",
+      "technique": {
+        "title": "Tap to rock",
+        "body": "Tap the ship. Hear the wood creak and the water splash. Three taps finish the care voyage.",
+        "audioText": "Tap the ship. Hear the wood and the water."
+      },
+      "paper": [
+        {
+          "prompt": "Sway together three times. Count the sways out loud."
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "b-tide-1",
+      "island": "tide",
+      "kind": "tap",
+      "prompt": "Tap the coin. How many?",
+      "audioText": "Tap the coin. How many?",
+      "answer": "1",
+      "choices": [
+        "2",
+        "3",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "baby",
+        "tide"
+      ],
+      "count": 1
+    },
+    {
+      "id": "b-tide-2",
+      "island": "tide",
+      "kind": "tap",
+      "prompt": "Tap each coin. How many now?",
+      "audioText": "Tap each coin. How many now?",
+      "answer": "2",
+      "choices": [
+        "3",
+        "1",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "baby",
+        "tide"
+      ],
+      "count": 2
+    },
+    {
+      "id": "b-tide-3",
+      "island": "tide",
+      "kind": "tap",
+      "prompt": "Three taps. How many coins?",
+      "audioText": "Three taps. How many coins?",
+      "answer": "3",
+      "choices": [
+        "3",
+        "4",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "baby",
+        "tide"
+      ],
+      "count": 3
+    },
+    {
+      "id": "b-peek-1",
+      "island": "peek",
+      "kind": "peek",
+      "prompt": "Open the chest. How many coins inside?",
+      "audioText": "Open the chest. How many coins inside?",
+      "answer": "1",
+      "choices": [
+        "1",
+        "3",
+        "2"
+      ],
+      "tags": [
+        "math",
+        "baby",
+        "peek"
+      ],
+      "count": 1
+    },
+    {
+      "id": "b-peek-2",
+      "island": "peek",
+      "kind": "peek",
+      "prompt": "The latch pops. How many coins in this chest?",
+      "audioText": "The latch pops. How many coins in this chest?",
+      "answer": "2",
+      "choices": [
+        "3",
+        "2",
+        "1"
+      ],
+      "tags": [
+        "math",
+        "baby",
+        "peek"
+      ],
+      "count": 2
+    },
+    {
+      "id": "b-rock-1",
+      "island": "rock",
+      "kind": "rock",
+      "prompt": "Rock the hull. How many creaks to finish?",
+      "audioText": "Rock the hull. How many creaks to finish?",
+      "answer": "3",
+      "choices": [
+        "2",
+        "1",
+        "3"
+      ],
+      "tags": [
+        "math",
+        "baby",
+        "rock"
+      ],
+      "count": 3
+    }
+  ]
+}
