@@ -18,7 +18,7 @@
   const state = {
     band: null,
     view: "home",
-    quiet: localStorage.getItem(QUIET_KEY) === "1",
+    quiet: false,
     progress: loadProgress(),
     run: null
   };
@@ -46,6 +46,7 @@
 
   function award(opts) {
     opts = opts || {};
+    if (opts.done && state.progress.done[opts.done]) return false;
     if (opts.stars) state.progress.stars += opts.stars;
     if (opts.postcard && state.progress.postcards.indexOf(opts.postcard) === -1) {
       state.progress.postcards.push(opts.postcard);
@@ -53,10 +54,32 @@
     if (opts.stamp && state.progress.stamps.indexOf(opts.stamp) === -1) {
       state.progress.stamps.push(opts.stamp);
     }
-    if (opts.done) state.progress.done[opts.done] = (state.progress.done[opts.done] || 0) + 1;
+    if (opts.done) state.progress.done[opts.done] = 1;
     saveProgress();
     toast(opts.msg || "Postcard earned.");
     HSAudio.blip("star");
+    return true;
+  }
+
+  function readQuiet() {
+    try {
+      if (localStorage.getItem("hs.mute") === "1" || localStorage.getItem(QUIET_KEY) === "1") return true;
+      if (window.HS && typeof window.HS.muted === "function") return !!window.HS.muted();
+    } catch (e) { /* ignore */ }
+    return false;
+  }
+
+  function applyQuiet(on, fromKit) {
+    state.quiet = !!on;
+    try { localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0"); } catch (e) { /* ignore */ }
+    if (!fromKit) {
+      try {
+        if (window.HS && typeof window.HS.setMuted === "function") window.HS.setMuted(state.quiet);
+        else localStorage.setItem("hs.mute", state.quiet ? "1" : "0");
+      } catch (e) { /* ignore */ }
+    }
+    if (window.HSAudio) HSAudio.setQuiet(state.quiet);
+    paintChrome();
   }
 
   function toast(msg) {
@@ -116,6 +139,7 @@
     url.hash = view === "home" ? "" : view;
     history.replaceState({}, "", url);
     render();
+    window.scrollTo(0, 0);
   }
 
   function render() {
@@ -326,7 +350,11 @@
             });
             if (m) {
               speak(picked[0] + " and " + picked[1] + " make " + m.out + ". Mix it on paper.");
-              award({ stars: 1, postcard: "shell", stamp: "mix", done: "mix-" + m.out, msg: "Now mix it on paper." });
+              award({ stars: 1, stamp: "mix", done: "mix-" + m.out, msg: "Now mix " + m.out + " on paper." });
+              const trio = ["orange", "green", "purple"].every(function (id) {
+                return state.progress.done["mix-" + id];
+              });
+              if (trio) award({ postcard: "shell", done: "mix-postcard", msg: "Mix postcard." });
             } else {
               speak("Those two are the same family. Try red, yellow, or blue pairs.");
             }
@@ -342,7 +370,6 @@
 
   function drawOps(ctx, ops, w, h) {
     ctx.strokeStyle = "#1c1814";
-    ctx.fillStyle = "rgba(61,107,99,0.12)";
     ctx.lineWidth = 3;
     ctx.lineJoin = "round";
     ctx.lineCap = "round";
@@ -350,23 +377,50 @@
     const sy = h / 220;
     ctx.save();
     ctx.scale(sx, sy);
+    function closed(op, trace) {
+      ctx.save();
+      ctx.translate(7, 9);
+      ctx.fillStyle = "rgba(36,54,60,0.35)";
+      trace();
+      ctx.fill();
+      ctx.restore();
+      ctx.fillStyle = op.fill || "rgba(196,160,90,0.55)";
+      trace();
+      ctx.fill();
+      ctx.strokeStyle = "#1c1814";
+      ctx.stroke();
+    }
     ops.forEach(function (op) {
-      ctx.beginPath();
       if (op.op === "line") {
+        ctx.beginPath();
         ctx.moveTo(op.x1, op.y1);
         ctx.lineTo(op.x2, op.y2);
         ctx.stroke();
       } else if (op.op === "circle") {
-        ctx.arc(op.x, op.y, op.r, 0, Math.PI * 2);
-        ctx.stroke();
+        closed(op, function () {
+          ctx.beginPath();
+          ctx.arc(op.x, op.y, op.r, 0, Math.PI * 2);
+        });
       } else if (op.op === "ellipse") {
-        ctx.ellipse(op.x, op.y, op.rx, op.ry, 0, 0, Math.PI * 2);
-        ctx.stroke();
+        closed(op, function () {
+          ctx.beginPath();
+          ctx.ellipse(op.x, op.y, op.rx, op.ry, 0, 0, Math.PI * 2);
+        });
       } else if (op.op === "rect") {
-        ctx.strokeRect(op.x, op.y, op.w, op.h);
+        closed(op, function () {
+          ctx.beginPath();
+          ctx.rect(op.x, op.y, op.w, op.h);
+        });
       } else if (op.op === "path") {
-        const p = new Path2D(op.d);
-        ctx.stroke(p);
+        const path = new Path2D(op.d);
+        ctx.save();
+        ctx.translate(7, 9);
+        ctx.fillStyle = "rgba(36,54,60,0.35)";
+        ctx.fill(path);
+        ctx.restore();
+        ctx.fillStyle = op.fill || "rgba(166,91,50,0.45)";
+        ctx.fill(path);
+        ctx.stroke(path);
       } else if (op.op === "rays") {
         for (let k = 0; k < op.n; k++) {
           const a = (Math.PI * 2 * k) / op.n;
@@ -378,15 +432,19 @@
       } else if (op.op === "petals") {
         for (let k = 0; k < op.n; k++) {
           const a = (Math.PI * 2 * k) / op.n;
-          ctx.beginPath();
-          ctx.ellipse(op.x + Math.cos(a) * op.r, op.y + Math.sin(a) * op.r, 14, 10, a, 0, Math.PI * 2);
-          ctx.stroke();
+          const petal = Object.assign({}, op, { fill: op.fill || "rgba(196,90,58,0.45)" });
+          closed(petal, function () {
+            ctx.beginPath();
+            ctx.ellipse(op.x + Math.cos(a) * op.r, op.y + Math.sin(a) * op.r, 14, 10, a, 0, Math.PI * 2);
+          });
         }
       } else if (op.op === "value") {
         const bw = op.w / op.n;
         for (let k = 0; k < op.n; k++) {
-          const g = Math.round(255 - k * (180 / (op.n - 1)));
-          ctx.fillStyle = "rgb(" + g + "," + g + "," + (g - 10) + ")";
+          const g = op.dir === "up"
+            ? Math.round(36 + k * (200 / (op.n - 1)))
+            : Math.round(255 - k * (180 / (op.n - 1)));
+          ctx.fillStyle = "rgb(" + g + "," + g + "," + g + ")";
           ctx.fillRect(op.x + k * bw, op.y, bw - 4, 18);
           ctx.strokeRect(op.x + k * bw, op.y, bw - 4, 18);
         }
@@ -406,14 +464,16 @@
         bindBack();
         return;
       }
+      const ready = state.run.step >= lesson.steps.length;
       root.innerHTML =
-        '<article class="panel"><p class="kicker">Technique on screen · work on paper</p><h1>' + lesson.title + "</h1>" +
-        '<p class="lede">Watch each step. When the demo is done, draw it on paper — the app is not the finished picture.</p></article>' +
+        '<article class="panel"><p class="kicker">Step one on screen</p><h1>' + lesson.title + "</h1>" +
+        '<p class="lede">Watch the drawing: shapes overlap, and the strip runs dark to light. Paper is the second step.</p></article>' +
+        '<figure class="lesson-model"><img src="' + u("images/harbor-still-life.jpg") + '" alt="Harbor still life, the model for this lesson"><figcaption>Model — the harbor still. Then the steps. Then paper.</figcaption></figure>' +
         '<div class="lesson-board"><canvas id="demo" width="640" height="440"></canvas></div>' +
         '<p class="prompt" id="say"></p>' +
         '<div class="btn-row">' +
           '<button type="button" class="btn btn-main" id="next">Next step</button>' +
-          '<button type="button" class="btn" id="paper">I drew it on paper</button>' +
+          '<button type="button" class="btn" id="paper"' + (ready ? "" : " disabled") + '>Second step: I drew it on paper</button>' +
         "</div>" +
         '<div class="btn-row">' + list.map(function (l, idx) {
           return '<button type="button" class="btn' + (idx === state.run.i ? " btn-main" : "") + '" data-l="' + idx + '">' + l.title + "</button>";
@@ -424,27 +484,30 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.fillStyle = "#fbf7ee";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        for (let s = 0; s <= state.run.step && s < lesson.steps.length; s++) {
+        const shown = Math.min(state.run.step, lesson.steps.length - 1);
+        for (let s = 0; s <= shown; s++) {
           drawOps(ctx, lesson.steps[s].ops, canvas.width, canvas.height);
         }
-        const step = lesson.steps[Math.min(state.run.step, lesson.steps.length - 1)];
-        document.getElementById("say").textContent = state.run.step >= lesson.steps.length ? lesson.paper : step.say;
+        drawOps(ctx, [{ op: "value", x: 20, y: 196, w: 280, n: 5, dir: "up" }], canvas.width, canvas.height);
+        const step = lesson.steps[shown];
+        document.getElementById("say").textContent = ready ? lesson.paper : step.say;
       }
       redraw();
-      if (state.run.step < lesson.steps.length) speak(lesson.steps[state.run.step].say);
+      if (!ready) speak(lesson.steps[state.run.step].say);
       else speak(lesson.paper);
       document.getElementById("next").addEventListener("click", function () {
         if (state.run.step < lesson.steps.length) {
           state.run.step += 1;
-          if (state.run.step === lesson.steps.length) {
-            speak(lesson.paper);
-            toast("Now draw it on paper.");
-          }
+          if (state.run.step === lesson.steps.length) toast("Paper is the second step.");
           paint();
         }
       });
       document.getElementById("paper").addEventListener("click", function () {
-        award({ stars: 1, postcard: "bridge", stamp: "paper", done: "lesson-" + lesson.id, msg: "Paper finish stamp." });
+        if (state.run.step < lesson.steps.length) {
+          toast("Finish the steps first.");
+          return;
+        }
+        award({ stars: 1, stamp: "paper", done: "lesson-" + lesson.id, msg: "Paper is the second step." });
       });
       root.querySelectorAll("[data-l]").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -543,6 +606,31 @@
     return C.artworks.filter(function (a) { return a.bands.indexOf(state.band) !== -1; });
   }
 
+  const SPARK = {
+    "starry-night": "Dark sky swirls",
+    "impression-sunrise": "Orange sun",
+    "pearl-earring": "Pearl and dark",
+    "night-watch": "Step into light",
+    "breezing-up": "Boat in wind",
+    "fighting-temeraire": "Pale old ship",
+    "great-wave": "Find the boats",
+    "hay-wain": "Wagon in water",
+    "woman-parasol": "Look up high",
+    "sunflowers": "Yellow on yellow",
+    "bedroom-arles": "A small room",
+    "grande-jatte": "Still Sunday people",
+    "childs-bath": "Bath and stripes",
+    "dance-class": "Dancers at rest",
+    "fog-warning": "One small boat",
+    "rembrandt-self": "Light on face",
+    "canaletto-grand-canal": "Count the boats",
+    "monet-japanese-bridge": "Green garden arch",
+    "childrens-games": "Find one game",
+    "whistlers-mother": "Grey and black",
+    "girl-reading": "Girl with book",
+    "sargent-carnation": "Lantern dusk flowers"
+  };
+
   function renderLooking(startId) {
     const list = artworksForBand();
     let start = 0;
@@ -555,20 +643,28 @@
     function paint() {
       const a = list[state.run.i];
       const q = a.look[state.run.q % a.look.length];
-      root.innerHTML =
-        '<article class="panel"><p class="kicker">Look closely</p><h1>' + a.title + "</h1>" +
-        "<p>" + a.artist + " · " + a.year + "</p></article>" +
-        '<figure class="look-frame"><img src="' + u(a.file) + '" alt="' + a.title + " by " + a.artist + '"></figure>' +
-        '<p class="credit">' + a.museum + " · " + a.credit + "</p>" +
-        '<article class="panel"><p class="prompt">' + q + "</p>" +
-        '<div class="btn-row"><button type="button" class="btn btn-main" id="hear">Read the looking question</button>' +
-        '<button type="button" class="btn" id="nextq">Another look</button></div></article>' +
+      const toddler = state.band === "toddler";
+      const showCredit = state.band === "early" || state.band === "primary" || state.band === "upper";
+      const prompt = toddler ? (SPARK[a.id] || "Look here") : q;
+      const frame = '<figure class="look-frame"><img src="' + u(a.file) + '" alt="' + a.title + " by " + a.artist + '"></figure>';
+      const credit = showCredit ? '<p class="credit">' + a.museum + " · " + a.credit + "</p>" : "";
+      root.innerHTML = toddler
+        ? frame + '<p class="spark">' + prompt + "</p>"
+        : '<article class="panel"><p class="kicker">Look closely</p><h1>' + a.title + "</h1>" +
+          "<p>" + a.artist + " · " + a.year + "</p></article>" +
+          frame + credit +
+          '<article class="panel"><p class="prompt">' + prompt + "</p>" +
+          '<div class="btn-row"><button type="button" class="btn btn-main" id="hear">Hear it again</button>' +
+          '<button type="button" class="btn" id="nextq">Another look</button></div></article>';
+      root.innerHTML +=
         '<div class="btn-row">' +
           '<button type="button" class="btn" id="prev">Previous</button>' +
           '<button type="button" class="btn" id="next">Next picture</button>' +
         "</div>" + backRow();
-      document.getElementById("hear").addEventListener("click", function () { speak(q); });
-      document.getElementById("nextq").addEventListener("click", function () {
+      const hear = document.getElementById("hear");
+      if (hear) hear.addEventListener("click", function () { speak(prompt); });
+      const nextq = document.getElementById("nextq");
+      if (nextq) nextq.addEventListener("click", function () {
         state.run.q += 1;
         paint();
       });
@@ -584,7 +680,7 @@
         paint();
       });
       bindBack();
-      speak(a.title + " by " + a.artist + ". " + q);
+      speak(toddler ? prompt : a.title + ". " + prompt);
     }
     paint();
   }
@@ -688,7 +784,7 @@
 
   function finishChallenge(id, msg) {
     speak(msg);
-    award({ stars: 1, stamp: "paper", postcard: "bridge", done: "ch-" + id, msg: msg });
+    award({ stars: 1, stamp: "paper", done: "ch-" + id, msg: msg });
   }
 
   function renderStudioList() {
@@ -745,9 +841,11 @@
     ctx.stroke();
     fold();
     let last = null;
+    let ink = 0;
     studioCanvas(root, function (p, kind) {
       if (kind === "start") last = p;
       if (!last) return;
+      ink += Math.hypot(p.x - last.x, p.y - last.y);
       ctx.strokeStyle = "#1c1814";
       ctx.lineWidth = 5;
       ctx.lineCap = "round";
@@ -762,6 +860,10 @@
       last = p;
     });
     document.getElementById("done").addEventListener("click", function () {
+      if (ink < 48) {
+        toast("Draw on the fold first.");
+        return;
+      }
       finishChallenge("mirror", "Both sides match.");
     });
     document.getElementById("back-ch").addEventListener("click", function () {
@@ -878,8 +980,9 @@
     const root = document.getElementById("view");
     const steps = [0, 0, 0, 0, 0];
     root.innerHTML =
-      '<article class="panel"><p class="kicker">Five values</p><h1>Light to dark</h1>' +
-      '<p class="lede">Tap each box to step it darker. Then tap the sphere’s light, mid, and shadow.</p></article>' +
+      '<article class="panel"><p class="kicker">Five values</p><h1>Dark to light</h1>' +
+      '<p class="lede">Tap each box to step it darker. The strip has to run dark to light before it counts.</p></article>' +
+      '<p class="kicker">Dark → light</p>' +
       '<div class="value-row" id="vals"></div>' +
       '<div class="studio-board"><canvas id="studio-c" width="640" height="280"></canvas></div>' +
       '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Value strip done</button>' +
@@ -931,7 +1034,15 @@
       drawSphere();
     });
     document.getElementById("done").addEventListener("click", function () {
-      finishChallenge("value", "Five values are marked.");
+      let graded = true;
+      for (let i = 0; i < steps.length - 1; i++) {
+        if (!(steps[i] > steps[i + 1])) graded = false;
+      }
+      if (!graded) {
+        toast("Make the strip dark, then lighter.");
+        return;
+      }
+      finishChallenge("value", "Dark runs to light.");
     });
     document.getElementById("back-ch").addEventListener("click", function () {
       state.run = {};
@@ -952,17 +1063,27 @@
       '<div class="btn-row"><button type="button" class="btn btn-main" id="done">Boat is on a third</button>' +
       '<button type="button" class="btn" id="back-ch">All challenges</button></div>';
     const hits = document.getElementById("hits");
+    let picked = null;
     for (let i = 0; i < 9; i++) {
       const b = document.createElement("button");
       b.type = "button";
-      b.setAttribute("aria-label", "cell " + (i + 1));
+      b.setAttribute("aria-label", i === 4 ? "center, not a crossing" : "crossing " + (i + 1));
       b.addEventListener("click", function () {
         hits.querySelectorAll("button").forEach(function (x) { x.classList.remove("on"); });
         b.classList.add("on");
+        picked = i;
       });
       hits.appendChild(b);
     }
     document.getElementById("done").addEventListener("click", function () {
+      if (picked == null) {
+        toast("Tap a crossing first.");
+        return;
+      }
+      if (picked === 4) {
+        toast("Not the center. Pick another crossing.");
+        return;
+      }
       finishChallenge("thirds", "Boat sits on a third.");
     });
     document.getElementById("back-ch").addEventListener("click", function () {
@@ -1003,12 +1124,20 @@
   }
 
   function boot() {
-    HSAudio.setQuiet(state.quiet);
+    state.quiet = readQuiet();
+    try {
+      localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0");
+      if (state.quiet) {
+        if (window.HS && typeof window.HS.setMuted === "function") window.HS.setMuted(true);
+        else localStorage.setItem("hs.mute", "1");
+      }
+    } catch (e) { /* ignore */ }
+    window.addEventListener("hs-mute", function (ev) {
+      applyQuiet(!!(ev.detail && ev.detail.muted), true);
+    });
     document.getElementById("home-btn-top").addEventListener("click", function () { go("home"); });
     document.getElementById("quiet-btn").addEventListener("click", function () {
-      state.quiet = !state.quiet;
-      localStorage.setItem(QUIET_KEY, state.quiet ? "1" : "0");
-      paintChrome();
+      applyQuiet(!readQuiet(), false);
     });
     document.getElementById("band-chip").addEventListener("click", function () {
       state.band = null;
@@ -1022,6 +1151,7 @@
     if (hash && hash !== "home") state.view = hash;
     paintChrome();
     render();
+    window.scrollTo(0, 0);
     if (!document.documentElement.dataset.runner && "serviceWorker" in navigator) {
       navigator.serviceWorker.register("sw.js").catch(function () {});
     }

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Wagon pull">
+  <title>Wagon pull</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing Wagon pull. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="117.9" y1="172.8" x2="90.0" y2="272.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="117.9" y1="172.8" x2="148.9" y2="272.6" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="90.0" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="78.0" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="148.9" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="136.9" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="133.4" y1="90.2" x2="71.4" y2="138.4" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="133.4" y1="90.2" x2="83.8" y2="152.2" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="71.4" cy="138.4" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="83.8" cy="152.2" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M107.4 94.2 L159.4 94.2 L139.9 180.8 L95.9 180.8 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="117.9" cy="106.2" r="3" fill="#e8d48a"/><circle cx="117.9" cy="120.2" r="3" fill="#e8d48a"/><circle cx="117.9" cy="134.2" r="3" fill="#e8d48a"/>
+  <path d="M123.4 92.2 L133.4 106.2 L143.4 92.2" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="133.4" y1="90.2" x2="139.6" y2="66.2" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="139.6" cy="66.2" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="134.6" cy="64.2" r="1.6" fill="#1a1a14"/><circle cx="144.6" cy="64.2" r="1.6" fill="#1a1a14"/><path d="M134.6 72.2 Q139.6 76.2 144.6 72.2" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="125.6" y="38.2" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="119.6" y="52.2" width="40" height="5" rx="1" fill="#171e2b"/><rect x="125.6" y="48.2" width="28" height="4" fill="#c4a35a"/>
+  <line x1="71.4" y1="138.4" x2="35.4" y2="158.4" stroke="#c4a06a" stroke-width="4"/>
+</svg>

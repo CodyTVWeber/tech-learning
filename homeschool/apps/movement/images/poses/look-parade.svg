@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Look left, look right">
+  <title>Look left, look right</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing Look left, look right. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="121.0" y1="169.4" x2="99.3" y2="272.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="121.0" y1="169.4" x2="142.7" y2="272.6" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="99.3" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="87.3" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="142.7" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="130.7" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="111.7" y1="79.9" x2="77.6" y2="138.4" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="111.7" y1="79.9" x2="164.4" y2="138.4" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="77.6" cy="138.4" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="164.4" cy="138.4" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M85.7 83.9 L137.7 83.9 L143.0 177.4 L99.0 177.4 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="121.0" cy="95.9" r="3" fill="#e8d48a"/><circle cx="121.0" cy="109.9" r="3" fill="#e8d48a"/><circle cx="121.0" cy="123.9" r="3" fill="#e8d48a"/>
+  <path d="M101.7 81.9 L111.7 95.9 L121.7 81.9" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="111.7" y1="79.9" x2="102.4" y2="55.8" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="102.4" cy="55.8" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="97.4" cy="53.8" r="1.6" fill="#1a1a14"/><circle cx="107.4" cy="53.8" r="1.6" fill="#1a1a14"/><path d="M97.4 61.8 Q102.4 65.8 107.4 61.8" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="88.4" y="27.8" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="82.4" y="41.8" width="40" height="5" rx="1" fill="#171e2b"/><rect x="88.4" y="37.8" width="28" height="4" fill="#c4a35a"/>
+  <circle cx="124.4" cy="55.8" r="5" fill="#e8d48a"/>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 320" role="img" aria-label="Bow to the crowd">
+  <title>Bow to the crowd</title>
+  <desc>Original drawing for Circus Parade. A costumed marcher showing Bow to the crowd. Not a photograph.</desc>
+  <rect width="240" height="320" rx="8" fill="#222b3c"/>
+  <ellipse cx="120" cy="286" rx="78" ry="14" fill="#3a2a18"/>
+  <ellipse cx="120" cy="280" rx="70" ry="8" fill="#c4a06a" opacity="0.35"/>
+  <line x1="121.0" y1="169.4" x2="102.4" y2="272.6" stroke="#f3e6c4" stroke-width="20" stroke-linecap="round"/>
+  <line x1="121.0" y1="169.4" x2="139.6" y2="272.6" stroke="#e7d7b0" stroke-width="20" stroke-linecap="round"/>
+  <ellipse cx="102.4" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="90.4" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <ellipse cx="139.6" cy="278.6" rx="14" ry="8" fill="#2a1a10"/><rect x="127.6" y="270.6" width="22" height="10" rx="3" fill="#3a2414"/>
+  <line x1="121.0" y1="121.2" x2="77.6" y2="172.8" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <line x1="121.0" y1="121.2" x2="164.4" y2="172.8" stroke="#8e1d1a" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="77.6" cy="172.8" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <circle cx="164.4" cy="172.8" r="7" fill="#f0c9a0" stroke="#1a1a14" stroke-width="1.5"/>
+  <path d="M95.0 125.2 L147.0 125.2 L143.0 177.4 L99.0 177.4 Z" fill="#8e1d1a" stroke="#5c120f" stroke-width="2"/>
+  <circle cx="121.0" cy="137.2" r="3" fill="#e8d48a"/><circle cx="121.0" cy="151.2" r="3" fill="#e8d48a"/><circle cx="121.0" cy="165.2" r="3" fill="#e8d48a"/>
+  <path d="M111.0 123.2 L121.0 137.2 L131.0 123.2" fill="none" stroke="#f3e6c4" stroke-width="3"/>
+  <line x1="121.0" y1="121.2" x2="121.0" y2="100.6" stroke="#f0c9a0" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="121.0" cy="100.6" r="16" fill="#f0c9a0" stroke="#1a1a14" stroke-width="2"/><circle cx="116.0" cy="98.6" r="1.6" fill="#1a1a14"/><circle cx="126.0" cy="98.6" r="1.6" fill="#1a1a14"/><path d="M116.0 106.6 Q121.0 110.6 126.0 106.6" fill="none" stroke="#1a1a14" stroke-width="1.5" stroke-linecap="round"/>
+  <rect x="107.0" y="72.6" width="28" height="16" rx="2" fill="#171e2b" stroke="#c4a35a" stroke-width="2"/><rect x="101.0" y="86.6" width="40" height="5" rx="1" fill="#171e2b"/><rect x="107.0" y="82.6" width="28" height="4" fill="#c4a35a"/>
+  
+</svg>

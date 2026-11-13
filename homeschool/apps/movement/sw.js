@@ -1,4 +1,4 @@
-const CACHE = "hs-movement-v2";
+const CACHE = "hs-movement-v3";
 const BASE = new URL("./", self.location);
 
 self.addEventListener("install", function (event) {

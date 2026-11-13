@@ -252,43 +252,43 @@ window.HSArt = {
       id: "mirror",
       title: "Mirror dock",
       bands: ["early", "primary", "upper"],
-      say: "Fold a page. Draw half a boat on the fold. Match the other half.",
-      paper: "Finish the symmetric drawing on paper. Check that both sides agree."
+      say: "Draw on the fold. The pad copies the other side.",
+      paper: "Second step: fold real paper and match a boat the same way."
     },
     {
       id: "upside",
       title: "Upside-down lines",
       bands: ["early", "primary", "upper"],
-      say: "Turn a simple picture upside down. Copy edges, not objects.",
-      paper: "Copy the upside-down vase from the lesson, then turn your paper and look."
+      say: "Copy the flipped edges on the pad. Do not name the object.",
+      paper: "Second step: copy an upside-down picture on paper, then turn it."
     },
     {
       id: "abstract",
       title: "Abstract from still life",
       bands: ["primary", "upper"],
-      say: "Look at the apple still life. Paint only its colors and biggest shapes — no outline of ‘apple’.",
-      paper: "On paper, three large shapes and three colors from the still life. No details."
+      say: "Dab the still life's biggest colors on the pad. No apple outline.",
+      paper: "Second step: three shapes and three colors on paper."
     },
     {
       id: "perspective",
       title: "Pier perspective",
       bands: ["primary", "upper"],
-      say: "All receding lines run to one point on the horizon.",
-      paper: "Draw a one-point pier. Vanishing point marked. Planks get closer."
+      say: "Tap the pad. Each plank runs to the point on the horizon.",
+      paper: "Second step: draw a one-point pier on paper."
     },
     {
       id: "value",
       title: "Five values",
       bands: ["upper"],
-      say: "Make a strip from paper-white to almost black in five boxes.",
-      paper: "Shade the strip, then a sphere with a light side, a mid, and a shadow."
+      say: "Tap the boxes so the strip runs dark to light.",
+      paper: "Second step: shade a dark-to-light strip and a sphere on paper."
     },
     {
       id: "thirds",
       title: "Harbor thirds",
       bands: ["upper"],
-      say: "Divide the page in thirds both ways. Set the boat on a crossing, not dead center.",
-      paper: "Thumbnail three compositions of the same harbor. Pick one to finish."
+      say: "Tap a crossing on the grid. The center box does not count.",
+      paper: "Second step: thumbnail the harbor on paper with the boat off center."
     }
   ],
   artists: [
