@@ -52,6 +52,9 @@
         choices: choices(p, [p + n || 1, Math.abs(p - b) || p + 1, n + b], id),
         rows: row ? n : undefined,
         cols: row ? b : undefined,
+        teach: row
+          ? n + " rows of " + b + " is " + p + "."
+          : n + " times " + b + " is " + p + ".",
       });
     }
     return items;
@@ -70,6 +73,7 @@
         audioText: p + " divided by " + n + ".",
         answer: String(b),
         choices: choices(b, [b + 1, Math.max(0, b - 1), n], id),
+        teach: p + " shared into " + n + " equal crews is " + b + " each.",
       });
     }
     return items;

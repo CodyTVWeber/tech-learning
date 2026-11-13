@@ -85,8 +85,8 @@
       },
       "technique": {
         "title": "Equal rows",
-        "body": "Multiplication is equal rows of coins. Pick a table. Sail every fact from 0 through 12. Then write that table on paper.",
-        "audioText": "Multiplication is equal rows. Pick a table. Sail every fact from 0 through 12. Then write that table on paper."
+        "body": "Tap coins into equal rows — 3 rows of 4 stay a 3-by-4 grid. Then pick a table and sail every fact from 0 through 12. Write that table on paper.",
+        "audioText": "Tap coins into equal rows. Three rows of four stay a three by four grid. Then pick a table."
       },
       "paper": [
         {
@@ -920,7 +920,8 @@
         "math",
         "primary",
         "times"
-      ]
+      ],
+      "teach": "0 times 9 is 0."
     },
     {
       "id": "m-mul-1x7",
@@ -940,7 +941,8 @@
         "times"
       ],
       "rows": 1,
-      "cols": 7
+      "cols": 7,
+      "teach": "1 times 7 is 7."
     },
     {
       "id": "m-div-7d1",
@@ -978,7 +980,8 @@
         "times"
       ],
       "rows": 2,
-      "cols": 2
+      "cols": 2,
+      "teach": "2 rows of 2 is 4."
     },
     {
       "id": "m-div-4d2",
@@ -1017,7 +1020,8 @@
         "times"
       ],
       "rows": 2,
-      "cols": 5
+      "cols": 5,
+      "teach": "2 rows of 5 is 10."
     },
     {
       "id": "m-div-10d2",
@@ -1056,7 +1060,8 @@
         "times"
       ],
       "rows": 2,
-      "cols": 10
+      "cols": 10,
+      "teach": "2 times 10 is 20."
     },
     {
       "id": "m-div-20d2",
@@ -1094,7 +1099,8 @@
         "times"
       ],
       "rows": 3,
-      "cols": 3
+      "cols": 3,
+      "teach": "3 rows of 3 is 9."
     },
     {
       "id": "m-div-9d3",
@@ -1133,7 +1139,8 @@
         "times"
       ],
       "rows": 3,
-      "cols": 4
+      "cols": 4,
+      "teach": "3 rows of 4 is 12."
     },
     {
       "id": "m-div-12d3",
@@ -1172,7 +1179,8 @@
         "times"
       ],
       "rows": 3,
-      "cols": 7
+      "cols": 7,
+      "teach": "3 times 7 is 21."
     },
     {
       "id": "m-div-21d3",
@@ -1211,7 +1219,8 @@
         "times"
       ],
       "rows": 4,
-      "cols": 4
+      "cols": 4,
+      "teach": "4 rows of 4 is 16."
     },
     {
       "id": "m-div-16d4",
@@ -1250,7 +1259,8 @@
         "times"
       ],
       "rows": 4,
-      "cols": 6
+      "cols": 6,
+      "teach": "4 rows of 6 is 24."
     },
     {
       "id": "m-div-24d4",
@@ -1289,7 +1299,8 @@
         "times"
       ],
       "rows": 4,
-      "cols": 9
+      "cols": 9,
+      "teach": "4 times 9 is 36."
     },
     {
       "id": "m-div-36d4",
@@ -1328,7 +1339,8 @@
         "times"
       ],
       "rows": 5,
-      "cols": 5
+      "cols": 5,
+      "teach": "5 rows of 5 is 25."
     },
     {
       "id": "m-div-25d5",
@@ -1367,7 +1379,8 @@
         "times"
       ],
       "rows": 5,
-      "cols": 6
+      "cols": 6,
+      "teach": "5 rows of 6 is 30."
     },
     {
       "id": "m-div-30d5",
@@ -1406,7 +1419,8 @@
         "times"
       ],
       "rows": 5,
-      "cols": 8
+      "cols": 8,
+      "teach": "5 times 8 is 40."
     },
     {
       "id": "m-div-40d5",
@@ -1445,7 +1459,8 @@
         "times"
       ],
       "rows": 5,
-      "cols": 12
+      "cols": 12,
+      "teach": "5 times 12 is 60."
     },
     {
       "id": "m-div-60d5",
@@ -1484,7 +1499,8 @@
         "times"
       ],
       "rows": 6,
-      "cols": 6
+      "cols": 6,
+      "teach": "6 rows of 6 is 36."
     },
     {
       "id": "m-div-36d6",
@@ -1523,7 +1539,8 @@
         "times"
       ],
       "rows": 6,
-      "cols": 7
+      "cols": 7,
+      "teach": "6 times 7 is 42."
     },
     {
       "id": "m-div-42d6",
@@ -1562,7 +1579,8 @@
         "times"
       ],
       "rows": 6,
-      "cols": 8
+      "cols": 8,
+      "teach": "6 times 8 is 48."
     },
     {
       "id": "m-div-48d6",
@@ -1601,7 +1619,8 @@
         "times"
       ],
       "rows": 7,
-      "cols": 7
+      "cols": 7,
+      "teach": "7 times 7 is 49."
     },
     {
       "id": "m-div-49d7",
@@ -1640,7 +1659,8 @@
         "times"
       ],
       "rows": 7,
-      "cols": 8
+      "cols": 8,
+      "teach": "7 times 8 is 56."
     },
     {
       "id": "m-div-56d7",
@@ -1679,7 +1699,8 @@
         "times"
       ],
       "rows": 8,
-      "cols": 8
+      "cols": 8,
+      "teach": "8 times 8 is 64."
     },
     {
       "id": "m-div-64d8",
@@ -1718,7 +1739,8 @@
         "times"
       ],
       "rows": 8,
-      "cols": 9
+      "cols": 9,
+      "teach": "8 times 9 is 72."
     },
     {
       "id": "m-div-72d8",
@@ -1757,7 +1779,8 @@
         "times"
       ],
       "rows": 9,
-      "cols": 9
+      "cols": 9,
+      "teach": "9 times 9 is 81."
     },
     {
       "id": "m-div-81d9",
@@ -1796,7 +1819,8 @@
         "times"
       ],
       "rows": 9,
-      "cols": 12
+      "cols": 12,
+      "teach": "9 times 12 is 108."
     },
     {
       "id": "m-div-108d9",
@@ -1835,7 +1859,8 @@
         "times"
       ],
       "rows": 10,
-      "cols": 10
+      "cols": 10,
+      "teach": "10 times 10 is 100."
     },
     {
       "id": "m-div-100d10",
@@ -1874,7 +1899,8 @@
         "times"
       ],
       "rows": 11,
-      "cols": 11
+      "cols": 11,
+      "teach": "11 times 11 is 121."
     },
     {
       "id": "m-div-121d11",
@@ -1913,7 +1939,8 @@
         "times"
       ],
       "rows": 12,
-      "cols": 8
+      "cols": 8,
+      "teach": "12 times 8 is 96."
     },
     {
       "id": "m-div-96d12",
@@ -1952,7 +1979,8 @@
         "times"
       ],
       "rows": 12,
-      "cols": 12
+      "cols": 12,
+      "teach": "12 times 12 is 144."
     },
     {
       "id": "m-div-144d12",

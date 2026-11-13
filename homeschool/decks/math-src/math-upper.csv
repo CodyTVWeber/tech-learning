@@ -1,5 +1,5 @@
 id,prompt,answer,audio_text,tags
-u-fr-halfdec,1/2 as a decimal is,0.5,1/2 as a decimal is,math upper frac
+u-fr-halfdec,Shade 1 of 2 equal parts. 1/2 as a decimal is,0.5,Shade 1 of 2 equal parts. 1/2 as a decimal is,math upper frac
 u-fr-25,0.25 as a fraction is,1/4,0.25 as a fraction is,math upper frac
 u-fr-50p,50% of 10 is,5,50% of 10 is,math upper frac
 u-fr-3tenth,3/10 as a decimal is,0.3,3/10 as a decimal is,math upper frac
@@ -7,7 +7,7 @@ u-fr-like,1/5 + 2/5 =,3/5,1/5 + 2/5 =,math upper frac
 u-fr-eq,1/2 is equivalent to,2/4,1/2 is equivalent to,math upper frac
 u-fr-of,3/4 of 12 is,9,3/4 of 12 is,math upper frac
 u-fr-mixed,1 1/2 as an improper fraction is,3/2,1 1/2 as an improper fraction is,math upper frac
-u-d-add,Line up 1.2 + 0.45. The sum is,1.65,Line up 1.2 + 0.45. The sum is,math upper dec
+u-d-add,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",1.65,"Line up 1.20 + 0.45. Add hundredths, tenths, ones.",math upper dec
 u-d-tenth,7 tenths as a decimal is,0.7,7 tenths as a decimal is,math upper dec
 u-d-hund,0.40 equals how many tenths?,4,0.40 equals how many tenths?,math upper dec
 u-d-pct,0.5 = what percent?,50%,0.5 = what percent?,math upper dec
@@ -28,11 +28,11 @@ u-sh-sq,Square side 5. Area?,25,Square side 5. Area?,math upper shape
 u-sh-tri,"Triangle base 8, height 5. Area?",20,"Triangle base 8, height 5. Area?",math upper shape
 u-sh-circA,Circle r = 2. Area ≈ (π = 3.14),12.56,Circle r = 2. Area ≈ (π = 3.14),math upper shape
 u-sh-circC,Circle r = 2. Circumference ≈ (π = 3.14),12.56,Circle r = 2. Circumference ≈ (π = 3.14),math upper shape
-u-long-howmany,Long divide 84 ÷ 4. First: how many 4s in 8?,2,Long divide 84 ÷ 4. First: how many 4s in 8?,math upper long
-u-long-bring,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",1,"After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",math upper long
-u-long-84,So 84 ÷ 4 =,21,So 84 ÷ 4 =,math upper long
-u-long-23x4,"23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",9,"23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",math upper long
-u-long-92,So 23 × 4 =,92,So 23 × 4 =,math upper long
+u-long-84,"Long divide 84 ÷ 4. Divide, multiply, subtract, bring down.",21,"Long divide 84 ÷ 4. Divide, multiply, subtract, bring down.",math upper long
+u-long-145,"Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",29,"Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",math upper long
+u-long-23x4,"Long multiply 23 × 4. Ones, then tens.",92,"Long multiply 23 × 4. Ones, then tens.",math upper long
+u-long-36x24,"Long multiply 36 × 24. Ones row, tens row, add.",864,"Long multiply 36 × 24. Ones row, tens row, add.",math upper long
+u-long-48x6,"Long multiply 48 × 6. Ones, then tens.",288,"Long multiply 48 × 6. Ones, then tens.",math upper long
 u-law-com,4 × 6 and 6 × 4. Same product?,yes,4 × 6 and 6 × 4. Same product?,math upper laws
 u-law-id,9 × 1 =,9,9 × 1 =,math upper laws
 u-law-zero,9 × 0 =,0,9 × 0 =,math upper laws

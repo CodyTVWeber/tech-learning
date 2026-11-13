@@ -1,19 +1,16 @@
 id,prompt,answer,audio_text,tags
-s-c6,"How many coins?
-● ● ● ● ● ●",6,How many coins?,math preschool count
-s-c7,"Count this crate. How many?
-● ● ● ● ● ● ●",7,Count this crate. How many?,math preschool count
-s-c8,"How many coins on this dock?
-● ● ● ● ● ● ● ●",8,How many coins on this dock?,math preschool count
-s-c9,Nine coins. Which number?,9,Nine coins. Which number?,math preschool count
-s-c10,"A full ten crate. How many?
-● ● ● ● ● ● ● ● ● ●",10,A full ten crate. How many?,math preschool count
-s-b32,3 coins and 2 more. How many?,5,3 coins and 2 more. How many?,math preschool bond
-s-b43,4 coins and 3 more. How many?,7,4 coins and 3 more. How many?,math preschool bond
-s-b64,6 coins and 4 more. How many?,10,6 coins and 4 more. How many?,math preschool bond
-s-b55,5 coins and 5 more. How many?,10,5 coins and 5 more. How many?,math preschool bond
-s-b72,7 coins and 2 more. How many?,9,7 coins and 2 more. How many?,math preschool bond
-s-b19,1 coin and 9 more. How many?,10,1 coin and 9 more. How many?,math preschool bond
+s-c6,Drop 6 coins in the ten-frame. How many are filled?,6,Drop 6 coins in the ten-frame. How many are filled?,math preschool count
+s-c7,Drop 7 coins in the ten-frame. How many are filled?,7,Drop 7 coins in the ten-frame. How many are filled?,math preschool count
+s-c8,Fill the ten-frame with 8 coins. How many empty?,2,Fill the ten-frame with 8 coins. How many empty?,math preschool count
+s-c9,Fill the ten-frame with 9 coins. How many empty?,1,Fill the ten-frame with 9 coins. How many empty?,math preschool count
+s-c10,"Fill every cell. How many coins in a full ten-frame?
+● ● ● ● ● ● ● ● ● ●",10,Fill every cell. How many coins in a full ten-frame?,math preschool count
+s-b32,Hold 3. Count on 2 more. How many?,5,Hold 3. Count on 2 more. How many?,math preschool bond
+s-b43,Hold 4. Count on 3 more. How many?,7,Hold 4. Count on 3 more. How many?,math preschool bond
+s-b64,Hold 6. Count on 4 more. How many?,10,Hold 6. Count on 4 more. How many?,math preschool bond
+s-b55,Hold 5. Count on 5 more. How many?,10,Hold 5. Count on 5 more. How many?,math preschool bond
+s-b72,Hold 7. Count on 2 more. How many?,9,Hold 7. Count on 2 more. How many?,math preschool bond
+s-b19,Hold 1. Count on 9 more. How many?,10,Hold 1. Count on 9 more. How many?,math preschool bond
 s-after6,What number comes after 6?,7,What number comes after 6?,math preschool sense
 s-before10,What number comes before 10?,9,What number comes before 10?,math preschool sense
 s-big,"Which number is bigger, 4 or 9?",9,"Which number is bigger, 4 or 9?",math preschool sense

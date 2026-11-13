@@ -40,7 +40,7 @@
       "chest": "A tenths rule",
       "technique": {
         "title": "Line up the point",
-        "body": "Tenths, hundredths. 0.5 = 1/2 = 50%. When you add, line up the decimal points so tenths sit under tenths.",
+        "body": "Tenths, hundredths. 0.5 = 1/2 = 50%. Add in the app with the points stacked so tenths sit under tenths. Then a fresh sum on paper.",
         "audioText": "Tenths and hundredths. One half is 0.5, which is 50 percent. Line up the decimal points to add."
       },
       "paper": [
@@ -152,7 +152,7 @@
       "chest": "A column slate",
       "technique": {
         "title": "Keep the places in columns",
-        "body": "Long multiply: ones first, then tens (shift one place), then add. Long divide: divide, multiply, subtract, bring down. Repeat. The app shows the path once. The real work is on paper.",
+        "body": "Long multiply in the app: ones first, then tens (shift one place), then add. Long divide: divide, multiply, subtract, bring down. Repeat until the quotient is done. Then a fresh problem on paper.",
         "audioText": "Long multiply: ones, then tens, then add. Long divide: divide, multiply, subtract, bring down. Then do a fresh problem on paper."
       },
       "paper": [
@@ -270,9 +270,9 @@
     {
       "id": "u-fr-halfdec",
       "island": "frac",
-      "kind": "choice",
-      "prompt": "1/2 as a decimal is",
-      "audioText": "1/2 as a decimal is",
+      "kind": "fraction",
+      "prompt": "Shade 1 of 2 equal parts. 1/2 as a decimal is",
+      "audioText": "Shade 1 of 2 equal parts. 1/2 as a decimal is",
       "answer": "0.5",
       "choices": [
         "2.0",
@@ -283,12 +283,15 @@
         "math",
         "upper",
         "frac"
-      ]
+      ],
+      "filled": 1,
+      "parts": 2,
+      "teach": "Two equal parts of one whole. One part is 1/2, which is 5 tenths, written 0.5."
     },
     {
       "id": "u-fr-25",
       "island": "frac",
-      "kind": "choice",
+      "kind": "fraction",
       "prompt": "0.25 as a fraction is",
       "audioText": "0.25 as a fraction is",
       "answer": "1/4",
@@ -301,7 +304,10 @@
         "math",
         "upper",
         "frac"
-      ]
+      ],
+      "filled": 1,
+      "parts": 4,
+      "teach": "0.25 is 25 hundredths, one of four equal parts: 1/4."
     },
     {
       "id": "u-fr-50p",
@@ -319,7 +325,8 @@
         "math",
         "upper",
         "frac"
-      ]
+      ],
+      "teach": "50% is 1/2. Half of 10 is 5."
     },
     {
       "id": "u-fr-3tenth",
@@ -337,7 +344,8 @@
         "math",
         "upper",
         "frac"
-      ]
+      ],
+      "teach": "The 10 says tenths. Three tenths is 0.3, not 0.03."
     },
     {
       "id": "u-fr-like",
@@ -357,7 +365,8 @@
         "frac"
       ],
       "filled": 3,
-      "parts": 5
+      "parts": 5,
+      "teach": "Same bottoms. Add the tops: 1 + 2 = 3. Keep the 5. 3/5."
     },
     {
       "id": "u-fr-eq",
@@ -377,7 +386,8 @@
         "frac"
       ],
       "filled": 2,
-      "parts": 4
+      "parts": 4,
+      "teach": "Two of four equal parts is the same share as one of two: 2/4 = 1/2."
     },
     {
       "id": "u-fr-of",
@@ -395,7 +405,8 @@
         "math",
         "upper",
         "frac"
-      ]
+      ],
+      "teach": "12 into 4 equal parts is 3 each. Three of those parts is 9."
     },
     {
       "id": "u-fr-mixed",
@@ -413,14 +424,15 @@
         "math",
         "upper",
         "frac"
-      ]
+      ],
+      "teach": "One whole is 2/2. Plus 1/2 is 3/2."
     },
     {
       "id": "u-d-add",
       "island": "dec",
-      "kind": "choice",
-      "prompt": "Line up 1.2 + 0.45. The sum is",
-      "audioText": "Line up 1.2 + 0.45. The sum is",
+      "kind": "decimal",
+      "prompt": "Line up 1.20 + 0.45. Add hundredths, tenths, ones.",
+      "audioText": "Line up 1.20 + 0.45. Add hundredths, tenths, ones.",
       "answer": "1.65",
       "choices": [
         "5.7",
@@ -431,7 +443,12 @@
         "math",
         "upper",
         "dec"
-      ]
+      ],
+      "addends": [
+        "1.20",
+        "0.45"
+      ],
+      "teach": "Points stacked. Hundredths 0+5=5, tenths 2+4=6, ones 1+0=1. Sum 1.65."
     },
     {
       "id": "u-d-tenth",
@@ -449,7 +466,8 @@
         "math",
         "upper",
         "dec"
-      ]
+      ],
+      "teach": "The first place after the point is tenths. Seven tenths is 0.7."
     },
     {
       "id": "u-d-hund",
@@ -467,7 +485,8 @@
         "math",
         "upper",
         "dec"
-      ]
+      ],
+      "teach": "40 hundredths is 4 tenths. 0.40 = 0.4."
     },
     {
       "id": "u-d-pct",
@@ -485,7 +504,8 @@
         "math",
         "upper",
         "dec"
-      ]
+      ],
+      "teach": "0.5 is 5 tenths, which is 50 hundredths, which is 50%."
     },
     {
       "id": "u-m-add",
@@ -796,49 +816,11 @@
       ]
     },
     {
-      "id": "u-long-howmany",
-      "island": "long",
-      "kind": "steps",
-      "prompt": "Long divide 84 ÷ 4. First: how many 4s in 8?",
-      "audioText": "Long divide 84 ÷ 4. First: how many 4s in 8?",
-      "answer": "2",
-      "choices": [
-        "1",
-        "2",
-        "4"
-      ],
-      "tags": [
-        "math",
-        "upper",
-        "long"
-      ],
-      "board": "  4 ) 84"
-    },
-    {
-      "id": "u-long-bring",
-      "island": "long",
-      "kind": "steps",
-      "prompt": "After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",
-      "audioText": "After that 2, multiply 2 × 4 = 8, subtract from 8, bring down 4. 4 ÷ 4 =",
-      "answer": "1",
-      "choices": [
-        "4",
-        "1",
-        "0"
-      ],
-      "tags": [
-        "math",
-        "upper",
-        "long"
-      ],
-      "board": "   2\n  4 ) 84\n     −8\n      04"
-    },
-    {
       "id": "u-long-84",
       "island": "long",
-      "kind": "choice",
-      "prompt": "So 84 ÷ 4 =",
-      "audioText": "So 84 ÷ 4 =",
+      "kind": "longdiv",
+      "prompt": "Long divide 84 ÷ 4. Divide, multiply, subtract, bring down.",
+      "audioText": "Long divide 84 ÷ 4. Divide, multiply, subtract, bring down.",
       "answer": "21",
       "choices": [
         "24",
@@ -849,44 +831,94 @@
         "math",
         "upper",
         "long"
-      ]
+      ],
+      "dividend": 84,
+      "divisor": 4,
+      "teach": "How many 4s in 8? 2. Multiply 2×4=8, subtract 0, bring down 4. 4÷4=1. Quotient 21."
+    },
+    {
+      "id": "u-long-145",
+      "island": "long",
+      "kind": "longdiv",
+      "prompt": "Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",
+      "audioText": "Long divide 145 ÷ 5. Divide, multiply, subtract, bring down.",
+      "answer": "29",
+      "choices": [
+        "35",
+        "25",
+        "29"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ],
+      "dividend": 145,
+      "divisor": 5,
+      "teach": "How many 5s in 14? 2. Multiply 10, subtract 4, bring down 5 → 45. 45÷5=9. Quotient 29."
     },
     {
       "id": "u-long-23x4",
       "island": "long",
-      "kind": "steps",
-      "prompt": "23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",
-      "audioText": "23 × 4. Ones: 3 × 4 = 12. Write 2, carry 1. Tens: 2 × 4 = 8, plus 1 =",
-      "answer": "9",
-      "choices": [
-        "9",
-        "12",
-        "8"
-      ],
-      "tags": [
-        "math",
-        "upper",
-        "long"
-      ],
-      "board": "   23\n ×  4"
-    },
-    {
-      "id": "u-long-92",
-      "island": "long",
-      "kind": "choice",
-      "prompt": "So 23 × 4 =",
-      "audioText": "So 23 × 4 =",
+      "kind": "longmul",
+      "prompt": "Long multiply 23 × 4. Ones, then tens.",
+      "audioText": "Long multiply 23 × 4. Ones, then tens.",
       "answer": "92",
       "choices": [
-        "86",
         "92",
-        "26"
+        "26",
+        "86"
       ],
       "tags": [
         "math",
         "upper",
         "long"
-      ]
+      ],
+      "a": 23,
+      "b": 4,
+      "teach": "3×4=12. Write 2, carry 1. 2×4=8 plus 1 is 9. Product 92."
+    },
+    {
+      "id": "u-long-36x24",
+      "island": "long",
+      "kind": "longmul",
+      "prompt": "Long multiply 36 × 24. Ones row, tens row, add.",
+      "audioText": "Long multiply 36 × 24. Ones row, tens row, add.",
+      "answer": "864",
+      "choices": [
+        "720",
+        "864",
+        "144"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ],
+      "a": 36,
+      "b": 24,
+      "teach": "36×4=144. 36×2=72, shift one place → 720. 144+720=864."
+    },
+    {
+      "id": "u-long-48x6",
+      "island": "long",
+      "kind": "longmul",
+      "prompt": "Long multiply 48 × 6. Ones, then tens.",
+      "audioText": "Long multiply 48 × 6. Ones, then tens.",
+      "answer": "288",
+      "choices": [
+        "54",
+        "240",
+        "288"
+      ],
+      "tags": [
+        "math",
+        "upper",
+        "long"
+      ],
+      "a": 48,
+      "b": 6,
+      "teach": "8×6=48. Write 8, carry 4. 4×6=24 plus 4 is 28. Product 288."
     },
     {
       "id": "u-law-com",

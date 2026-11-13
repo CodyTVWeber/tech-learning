@@ -1,14 +1,14 @@
 id,prompt,answer,audio_text,tags
-t-c1,"How many coins?
-●",1,How many coins?,math toddler count
-t-c2,"How many coins?
-● ●",2,How many coins?,math toddler count
-t-c3,"How many coins?
-● ● ●",3,How many coins?,math toddler count
-t-c4,"How many coins?
-● ● ● ●",4,How many coins?,math toddler count
-t-c5,"How many coins?
-● ● ● ● ●",5,How many coins?,math toddler count
+t-c1,"Tap the coin. How many?
+●",1,Tap the coin. How many?,math toddler count
+t-c2,"Tap each coin. How many?
+● ●",2,Tap each coin. How many?,math toddler count
+t-c3,"Tap each coin. How many now?
+● ● ●",3,Tap each coin. How many now?,math toddler count
+t-c4,"Tap every coin in this pile. How many?
+● ● ● ●",4,Tap every coin in this pile. How many?,math toddler count
+t-c5,"Tap all five coins. How many?
+● ● ● ● ●",5,Tap all five coins. How many?,math toddler count
 t-more-41,Which pile has more coins?,4,Left pile has four. Right pile has one. Which pile has more?,math toddler sense
 t-more-25,Which pile has more coins this time?,5,Left pile has two. Right pile has five. Which pile has more?,math toddler sense
 t-few-31,Which pile has fewer coins?,1,Left pile has three. Right pile has one. Which pile has fewer?,math toddler sense

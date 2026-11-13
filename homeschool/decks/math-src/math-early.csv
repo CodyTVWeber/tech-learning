@@ -8,10 +8,10 @@ e-f-83,8 + 3 =,11,8 + 3 =,math early facts
 e-f-9m4,9 − 4 =,5,9 − 4 =,math early facts
 e-f-12m7,12 − 7 =,5,12 − 7 =,math early facts
 e-f-15m6,15 − 6 =,9,15 − 6 =,math early facts
-e-p-34,What number is 3 tens and 4 ones?,34,What number is 3 tens and 4 ones?,math early place
-e-p-50,What number is 5 tens and 0 ones?,50,What number is 5 tens and 0 ones?,math early place
+e-p-34,3 ten-crates and 4 ones. What number?,34,3 ten-crates and 4 ones. What number?,math early place
+e-p-50,5 ten-crates and 0 ones. What number?,50,5 ten-crates and 0 ones. What number?,math early place
 e-p-408,40 + 8 =,48,40 + 8 =,math early place
-e-p-27,2 tens and 17 ones bundles to,37,Two tens and seventeen ones. Bundle the extra ten. What number?,math early place
+e-p-27,Bundle extra ones: 2 tens and 17 ones. What number?,37,Two tens and seventeen ones. Bundle ten ones into a crate. What number?,math early place
 e-r-275,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,32,27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?,math early regroup
 e-r-467,46 + 7 =,53,46 + 7 =,math early regroup
 e-r-6010,60 − 10 =,50,60 − 10 =,math early regroup
@@ -37,9 +37,9 @@ e-sh-sides,A triangle has this many sides:,3,A triangle has this many sides:,mat
 e-st-18,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,15,Pip stacks 9 crates. Reed stacks 6 more. How many crates?,math early story
 e-st-20,A chest has 12 coins. Nell spends 4. How many are left?,8,A chest has 12 coins. Nell spends 4. How many are left?,math early story
 e-st-equal,3 coils of 5 coins. How many coins in all?,15,3 coils of 5 coins. How many coins in all?,math early story
-e-row-34,3 rows of 4 coins. How many?,12,3 rows of 4 coins. How many?,math early rows
+e-row-34,Tap coins into 3 rows of 4. How many?,12,Tap coins into 3 rows of 4. How many?,math early rows
 e-row-444,4 + 4 + 4 =,12,4 + 4 + 4 =,math early rows
-e-row-25,2 rows of 5 coins. How many?,10,2 rows of 5 coins. How many?,math early rows
+e-row-25,Tap coins into 2 rows of 5. How many?,10,Tap coins into 2 rows of 5. How many?,math early rows
 add-0+0,0 + 0 =,0,0 plus 0.,math early add
 sub-0-0,0 − 0 =,0,0 minus 0.,math early sub
 add-0+1,0 + 1 =,1,0 plus 1.,math early add
