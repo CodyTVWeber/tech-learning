@@ -27,15 +27,17 @@ self.addEventListener("activate", function (event) {
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
   event.respondWith(
-    caches.match(event.request).then(function (hit) {
+    caches.match(event.request, { ignoreSearch: true }).then(function (hit) {
       if (hit) return hit;
       return fetch(event.request).then(function (res) {
         const copy = res.clone();
         caches.open(CACHE).then(function (cache) { cache.put(event.request, copy); });
         return res;
       }).catch(function () {
-        if (event.request.mode === "navigate") return caches.match(new URL("./index.html", BASE));
-        return new Response("", { status: 503, statusText: "offline" });
+        if (event.request.mode === "navigate") {
+          return caches.match(new URL("./index.html", BASE).href, { ignoreSearch: true });
+        }
+        return caches.match(event.request, { ignoreSearch: true });
       });
     })
   );

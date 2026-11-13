@@ -95,3 +95,24 @@ body.hs-play {
 body.hs-play #app-root {
   min-height: calc(100dvh - 96px);
 }
+
+.hs-empty {
+  margin: 16px;
+  padding: 16px;
+  border: 2px solid #161616;
+  background: #fff;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #161616;
+}
+
+/* Runner owns the only top bar, mute, band, and untested banner. */
+html[data-runner] #app-root .untested-banner,
+html[data-runner] #app-root .hs-app-topbar,
+html[data-runner] #app-root .app-topbar,
+html[data-runner] #app-root header.top,
+html[data-runner] #app-root header.topbar,
+html[data-runner] #app-root header.mast,
+html[data-runner] #app-root .voyage-tools,
+html[data-runner] #app-root .garden-mute {
+  display: none !important;
+}

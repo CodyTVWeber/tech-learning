@@ -42,7 +42,13 @@
   }
 
   function say(text) {
-    if (document.documentElement.dataset.runner === "1") return;
+    if (!text || !Speech.isOn()) return;
+    const rate = state.band === "baby" || state.band === "toddler" ? 0.85 : 0.95;
+    const pitch = state.band === "baby" ? 1.05 : 1;
+    if (window.HS && typeof HS.speak === "function" && (HS.inRunner || document.documentElement.dataset.runner === "1")) {
+      HS.speak(text, { rate: rate, pitch: pitch });
+      return;
+    }
     Speech.speak(text, state.band);
   }
 

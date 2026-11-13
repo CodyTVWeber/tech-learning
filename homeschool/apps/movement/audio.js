@@ -22,6 +22,7 @@
 
   function ensure() {
     if (AudioEngine.quiet) return null;
+    if (window.HS && typeof HS.muted === "function" && HS.muted()) return null;
     const AC = window.AudioContext || window.webkitAudioContext;
     if (!AC) return null;
     if (!AudioEngine.ctx) {
@@ -151,8 +152,12 @@
   };
 
   AudioEngine.speak = function (text) {
-    if (!text) return;
-    if (AudioEngine.quiet || !AudioEngine.voiceReady) return;
+    if (!text || AudioEngine.quiet) return;
+    if (window.HS && typeof HS.speak === "function") {
+      HS.speak(text, { rate: 0.92, pitch: 1.05 });
+      return;
+    }
+    if (!AudioEngine.voiceReady) return;
     try {
       window.speechSynthesis.cancel();
       const u = new SpeechSynthesisUtterance(text);

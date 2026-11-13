@@ -1,6 +1,10 @@
 (function (global) {
   const HS = (global.HS = global.HS || {});
 
+  HS.notOnThisHomeHtml = function notOnThisHomeHtml() {
+    return '<p class="hs-empty">Not on this home. This is a quiet page for care time.</p>';
+  };
+
   HS.mountChrome = function mountChrome(opts) {
     opts = opts || {};
     const host = document.getElementById("hs-chrome");

@@ -28,8 +28,8 @@
   <script>
     (function () {
       var base = document.documentElement.dataset.appBase;
-      if (!base) return;
-      var band = document.documentElement.dataset.band || "early";
+      var band = document.documentElement.dataset.band || "";
+      if (!base || !band || band === "baby") return;
       function grab(path) {
         return fetch(new URL(path, base).href).then(function (r) {
           return r.json();

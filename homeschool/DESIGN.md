@@ -72,7 +72,7 @@ Apps must **not** use grade labels. They read a **band**:
 
 1. Query `?band=` on the page URL (the runner always sets this)
 2. Else `localStorage['hs.band']`
-3. Else `'early'`
+3. Else unset (`""`). Standalone apps show a band picker. Do not assume `early`.
 
 Allowed bands: `baby` | `toddler` | `preschool` | `early` | `primary` | `upper`.
 
@@ -99,11 +99,12 @@ Learner PWAs live at `/homeschool/<FirstName>/` with `scope: "./"`. They **must 
 
 `play.html?app=<id>&band=<band>` (inside the learner folder):
 
-1. Fetches `../apps/<id>/assets.json` (subresource → learner SW)
-2. Fetches `../apps/<id>/index.html`
-3. Sets `document.documentElement.dataset.runner = "1"`, `dataset.appBase` to the app directory URL, `dataset.subject`, `dataset.band`
-4. Sets `window.HS` (`appBase`, `subject`, `band`, `url(path)`, mute/TTS helpers)
-5. Injects the app’s stylesheets and scripts with URLs resolved against `appBase`, and the body into `#app-root`
+1. Sets `html[data-runner="1"]`, class `hs-runner`, and `HS.inRunner` before any app file is fetched
+2. If that learner’s subject level is `"none"`, shows the quiet home page and stops (no `assets.json`, no `index.html`, no `data/<band>.json`)
+3. Sets `?band=` from the query, else the learner’s band (including a per-learner override), and writes `localStorage['hs.band']`
+4. Fetches `../apps/<id>/assets.json` (subresource → learner SW), then `index.html`
+5. Sets `dataset.appBase`, `dataset.subject`, `dataset.band`, and `window.HS` (`appBase`, `subject`, `band`, `url(path)`, `speak`, mute helpers)
+6. Injects the app’s stylesheets and scripts with URLs resolved against `appBase`, and the body into `#app-root`
 
 Relative `fetch('data/x.json')` from app JS would hit the **learner** folder. Always use:
 

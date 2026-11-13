@@ -22,12 +22,44 @@
     return new URL(path, base).href;
   };
 
+  function markRunner() {
+    HS.inRunner = true;
+    document.documentElement.dataset.runner = "1";
+    document.documentElement.classList.add("hs-runner");
+  }
+
+  function learnerFolder() {
+    const parts = global.location.pathname.split("/").filter(Boolean);
+    const i = parts.lastIndexOf("play.html");
+    if (i > 0) return decodeURIComponent(parts[i - 1]);
+    return decodeURIComponent(parts[parts.length - 1] || "");
+  }
+
   HS.runApp = async function runApp() {
+    markRunner();
     const params = new URLSearchParams(global.location.search);
     const id = params.get("app") || "";
     const root = document.getElementById("app-root");
     if (!APP_ID.test(id)) {
+      if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
       root.innerHTML = "<p>Pick a lesson from Home.</p>";
+      return;
+    }
+    const stages = HS.fetchJson ? await HS.fetchJson(new URL("../stages.json", global.location.href)) : null;
+    const me = stages && (stages.stages || []).find(function (s) {
+      return s.folder === learnerFolder();
+    });
+    if (me && me.subjects && me.subjects[id] === "none") {
+      if (HS.mountChrome) {
+        HS.mountChrome({
+          title: me.displayName || "Home",
+          sub: (me.label || "") + (me.ageBand ? " · " + me.ageBand : ""),
+          homeHref: "./",
+        });
+      }
+      root.innerHTML = HS.notOnThisHomeHtml
+        ? HS.notOnThisHomeHtml()
+        : "<p>Not on this home.</p>";
       return;
     }
     const appBase = new URL("../apps/" + id + "/", global.location.href).href;
@@ -48,15 +80,24 @@
         "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
       return;
     }
-    const band = HS.getBand();
-    HS.setBand(band);
+    let band = params.get("band");
+    if (!band || HS.BANDS.indexOf(band) === -1) {
+      band = me ? HS.bandFor(me) : HS.getBand();
+    }
+    if (band) {
+      HS.setBand(band);
+      if (params.get("band") !== band) {
+        const next = new URL(global.location.href);
+        next.searchParams.set("band", band);
+        global.history.replaceState({}, "", next);
+      }
+    }
     HS.subject = assets.id || id;
     HS.appBase = appBase;
     HS.band = band;
-    document.documentElement.dataset.runner = "1";
     document.documentElement.dataset.appBase = appBase;
     document.documentElement.dataset.subject = HS.subject;
-    document.documentElement.dataset.band = band;
+    document.documentElement.dataset.band = band || "";
 
     HS.mountChrome({
       title: assets.title || assets.shortTitle || id,

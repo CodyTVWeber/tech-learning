@@ -30,10 +30,23 @@ Hard rules are also summarized in `SPEC.md` §1 and `DESIGN.md`.
 Documented in `DESIGN.md`. Short version:
 
 - `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`
-- Band: `?band=` else `localStorage['hs.band']`
+- Band: `HS.getBand()` reads `?band=` else `localStorage['hs.band']`. If both are unset it returns `""` — **not** `early`. Standalone apps show a band picker. The runner always sets `?band=` from the learner before the app starts.
 - Progress: `localStorage['hs.progress.<id>']`
 - Learner SW and CI **consume `assets.json`**. New apps plug in without kit edits.
 - Runner: `play.html?app=<id>&band=<band>` loads the app **inside** the learner scope. Never navigate to `../apps/`.
+- If that learner’s `stages.json` level for the subject is `"none"`, the runner shows the same quiet page as an empty home (`Not on this home. This is a quiet page for care time.`) and does **not** fetch the app (no `assets.json`, no `data/<band>.json`).
+
+## Runner chrome and speech
+
+Before app scripts run, the runner sets:
+
+- `document.documentElement.dataset.runner = "1"` so CSS can use `html[data-runner]` (also class `hs-runner` on `<html>`)
+- `HS.inRunner = true`
+- `HS.speak(text, { rate, pitch, lang })`, `HS.silence()`, `HS.muted()`, `HS.setMuted(on)`, `HS.toggleMute()`
+
+Apps **hide their own top bar** (title, mute, band switch) and their own “Untested” banner when `html[data-runner]` or `HS.inRunner` is set. The kit keeps one banner (`.hs-banner` in `#hs-chrome`) and one mute control. Kit tap targets stay at least 56px. Do not paint a second header.
+
+Route read-aloud through `HS.speak`. It already no-ops while muted. Do not skip `speechSynthesis` just because the page is inside the runner, and do not treat `HS.muted` as always-on — call `HS.muted()`.
 
 ## Parallel work
 

@@ -24,8 +24,14 @@ self.addEventListener("activate", function (event) {
 self.addEventListener("fetch", function (event) {
   if (event.request.method !== "GET") return;
   event.respondWith(
-    caches.match(event.request).then(function (hit) {
-      return hit || fetch(event.request);
+    caches.match(event.request, { ignoreSearch: true }).then(function (hit) {
+      if (hit) return hit;
+      return fetch(event.request);
+    }).catch(function () {
+      if (event.request.mode === "navigate") {
+        return caches.match(new URL("./index.html", BASE).href, { ignoreSearch: true });
+      }
+      return caches.match(event.request, { ignoreSearch: true });
     })
   );
 });

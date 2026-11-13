@@ -216,6 +216,10 @@
 
   function talk(text) {
     if (muted || !text) return;
+    if (global.HS && typeof global.HS.speak === "function") {
+      global.HS.speak(text, { rate: 0.92 });
+      return;
+    }
     stopTalk();
     if (!global.speechSynthesis || !global.SpeechSynthesisUtterance) return;
     var u = new SpeechSynthesisUtterance(String(text));

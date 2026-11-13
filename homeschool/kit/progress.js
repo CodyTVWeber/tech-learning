@@ -10,7 +10,7 @@
     if (q && BANDS.indexOf(q) !== -1) return q;
     const stored = global.localStorage.getItem("hs.band");
     if (stored && BANDS.indexOf(stored) !== -1) return stored;
-    return "early";
+    return "";
   };
 
   HS.setBand = function setBand(band) {

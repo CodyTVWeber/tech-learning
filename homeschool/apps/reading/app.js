@@ -127,7 +127,7 @@
       const stored = localStorage.getItem("hs.band");
       if (validBand(stored)) return stored;
     } catch (e) {}
-    return "early";
+    return "";
   }
   function setBand(b) {
     if (!validBand(b)) return;

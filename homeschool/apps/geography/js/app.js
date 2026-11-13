@@ -172,6 +172,7 @@
             '<div class="actions">' +
               (state.band === "baby" ? "" : '<button type="button" class="brass-btn touch" data-act="map">Open the chart</button>') +
               '<button type="button" class="brass-btn secondary touch" data-act="songs">Song</button>' +
+              (window.HS && HS.inRunner ? '<button type="button" class="brass-btn secondary touch" data-act="stamps">Log</button>' : "") +
             "</div></div>" +
         "</main></div>";
     HSAudio.wind();

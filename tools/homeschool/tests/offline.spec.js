@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test";
-
-const BASE = "/tech-learning/homeschool/";
+import { BASE, assertNoHorizontalOverflow, offlineReloadToddler, trackErrFailed } from "./helpers.js";
 
 function onErrors(page, bucket) {
   page.on("pageerror", (err) => bucket.push(String(err)));
@@ -100,9 +99,55 @@ test("hub and each learner PWA work offline", async ({ page, context }) => {
         await expect(page.locator(".garden-letter").first()).toBeVisible();
       }
       await assertControlling(page);
+      const duplicateChrome = await page
+        .locator("#app-root .untested-banner, #app-root header.top, #app-root header.topbar, #app-root header.mast")
+        .evaluateAll((els) => els.filter((el) => getComputedStyle(el).display !== "none").length);
+      expect(duplicateChrome, "second header or banner " + stage.folder + " " + appId).toBe(0);
+      await expect(page.locator("#hs-chrome .hs-banner")).toBeVisible();
       expect(errors, "offline play " + stage.folder + " " + appId).toEqual([]);
     }
   }
+});
+
+test("subject marked none shows the quiet home page and prefetches nothing", async ({ page }) => {
+  const errors = [];
+  const appHits = [];
+  onErrors(page, errors);
+  page.on("request", (req) => {
+    if (/\/apps\/(reading|movement)\//.test(req.url())) appHits.push(req.url());
+  });
+  await page.goto(BASE + "Shiloh/", { waitUntil: "load" });
+  await waitPrecache(page);
+  await expect(page.locator(".hs-empty")).toContainText("Not on this home");
+  appHits.length = 0;
+  errors.length = 0;
+  await page.goto(BASE + "Shiloh/play.html?app=reading&band=baby", { waitUntil: "load" });
+  await expect(page.locator(".hs-empty")).toContainText("Not on this home");
+  await expect(page.locator("#hs-chrome .hs-banner")).toBeVisible();
+  expect(appHits, "reading must not be fetched when the level is none").toEqual([]);
+  expect(errors).toEqual([]);
+
+  appHits.length = 0;
+  await page.goto(BASE + "Joey/play.html?app=movement", { waitUntil: "load" });
+  await expect(page.locator(".hs-empty")).toContainText("Not on this home");
+  expect(appHits, "movement must not be fetched when the level is none").toEqual([]);
+  expect(errors).toEqual([]);
+});
+
+test("standalone toddler apps reload offline and fit 412px", async ({ page, context }) => {
+  test.setTimeout(180000);
+  const failed = [];
+  trackErrFailed(page, failed);
+  await page.goto(BASE, { waitUntil: "load" });
+  const appIds = await page.evaluate(async () => {
+    const idx = await fetch("./apps-index.json").then((r) => r.json());
+    return idx.apps || [];
+  });
+  expect(appIds.length).toBeGreaterThan(0);
+  for (const appId of appIds) {
+    await offlineReloadToddler(page, context, appId, failed);
+  }
+  await assertNoHorizontalOverflow(page);
 });
 
 test("missing assets.json does not break a home", async ({ page }) => {

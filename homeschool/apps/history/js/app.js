@@ -184,6 +184,7 @@
             (isLittle() ? "" : '<button type="button" class="brass-btn touch" data-act="timeline">Timeline car</button>') +
             (hsBandAtLeast(state.band, "primary") ? '<button type="button" class="brass-btn secondary touch" data-act="presidents">Presidents car</button>' : "") +
             '<button type="button" class="brass-btn secondary touch" data-act="songs">Song car</button>' +
+            (window.HS && HS.inRunner ? '<button type="button" class="brass-btn secondary touch" data-act="stamps">Stamps</button>' : "") +
           "</div>" +
         "</main></div>";
     HSAudio.chuff();

@@ -54,8 +54,7 @@
     html += "</header>";
 
     if (!cards.length) {
-      html +=
-        '<p class="hs-empty">No lessons on this home yet. This is a quiet page for care time.</p>';
+      html += HS.notOnThisHomeHtml();
     } else {
       html += '<ul class="hs-app-list">';
       cards.forEach(function (c) {
