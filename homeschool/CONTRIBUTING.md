@@ -7,7 +7,7 @@ You can add a subject **without editing shared kit files**, so several agents ca
 - `homeschool/apps/<id>/` (your whole app)
 - `homeschool/decks/<id>.apkg` and `homeschool/decks/<id>.csv` (optional)
 
-`<id>` must match a key in `stages.json` `subjects` (examples: `math`, `reading`, `history`, `maps`, `science`, `bible`, `singing`, `dancing`, `art`, `cc-cycle3`, `essentials-points`, `presentation`).
+`<id>` must match a key in `stages.json` `subjects`. Current ids: `math`, `reading`, `history`, `geography`, `science`, `bible`, `singing`, `movement`, `art`, `essentials-points`, `presentation`. There is **no** `cc-cycle3`, `maps`, or `dancing` folder — history covers Cycle 3 history review; geography replaced maps; movement replaced dancing.
 
 ## You must not write
 

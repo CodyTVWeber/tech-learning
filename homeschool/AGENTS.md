@@ -20,7 +20,7 @@ Hard rules are also summarized in `SPEC.md` §1 and `DESIGN.md`.
 ## Layout
 
 - `stages.json` — learner folders, first names, `age`, band, subject levels. Hub, SW, and tests **read this file**. Rename a learner with a one-line edit here plus `git mv` of the folder, then `python3 tools/homeschool/build_assets.py`.
-- `apps/<id>/` — one app per subject. This lane ships **math** and **reading**. Other subjects: other PRs, same contract (`DESIGN.md`).
+- `apps/<id>/` — one app per subject. This lane ships **math** and **reading**. Parallel ids: `history` (time-travel train; includes Cycle 3 history review), `geography`, `science`, `bible`, `singing`, `movement`, `art`. Later: `essentials-points`, `presentation`. No `cc-cycle3`, `maps`, or `dancing` folders.
 - `<FirstName>/` — generated learner PWA (manifest, SW, `play.html` runner). Do not hand-edit; change `pwa-templates/` and regenerate.
 - `kit/` — nav, PWA, a11y, runner, progress. **No visual theme.**
 - `decks/` — public-safe `.apkg` + CSV. Not the private Cycle 3 pack.

@@ -119,25 +119,42 @@ def validate_app(app_dir: Path) -> list[str]:
     return errors
 
 
-def write_apps_index() -> None:
-    ids = [p.name for p in apps()]
-    (HS / "apps-index.json").write_text(json.dumps({"apps": ids}, indent=2) + "\n")
+def write_apps_index(stages: dict) -> None:
+    present = [p.name for p in apps()]
+    known = sorted(
+        {
+            key
+            for stage in stages.get("stages") or []
+            for key in (stage.get("subjects") or {})
+        }
+    )
+    payload = {"apps": present, "ids": known}
+    (HS / "apps-index.json").write_text(json.dumps(payload, indent=2) + "\n")
 
 
 def main(check: bool) -> int:
     stages = load_stages()
     write_hub_icons()
-    write_apps_index()
+    write_apps_index(stages)
     for stage in stages.get("stages", []):
         write_kid(stage)
     errors = []
     for app in apps():
         gen_placeholders(app)
         errors.extend(validate_app(app))
-    listed = json.loads((HS / "apps-index.json").read_text()).get("apps") or []
+    index = json.loads((HS / "apps-index.json").read_text())
     found = [p.name for p in apps()]
-    if listed != found:
-        errors.append("apps-index.json stale: %s vs %s" % (listed, found))
+    if index.get("apps") != found:
+        errors.append("apps-index.json apps stale: %s vs %s" % (index.get("apps"), found))
+    known = sorted(
+        {
+            key
+            for stage in stages.get("stages") or []
+            for key in (stage.get("subjects") or {})
+        }
+    )
+    if index.get("ids") != known:
+        errors.append("apps-index.json ids stale: %s vs %s" % (index.get("ids"), known))
     if errors:
         print("assets.json problems:")
         for e in errors:

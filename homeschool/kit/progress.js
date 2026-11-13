@@ -69,6 +69,16 @@
     });
   };
 
+  HS.fetchJson = async function fetchJson(url) {
+    try {
+      const res = await fetch(url);
+      if (!res.ok) return null;
+      return await res.json();
+    } catch (e) {
+      return null;
+    }
+  };
+
   HS.downloadExport = function downloadExport() {
     const blob = new Blob([JSON.stringify(HS.exportAll(), null, 2)], {
       type: "application/json",

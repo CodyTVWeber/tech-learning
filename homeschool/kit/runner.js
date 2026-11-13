@@ -31,13 +31,23 @@
       return;
     }
     const appBase = new URL("../apps/" + id + "/", global.location.href).href;
-    const assetsRes = await fetch(appBase + "assets.json");
-    if (!assetsRes.ok) {
+    const index =
+      (HS.fetchJson && (await HS.fetchJson(new URL("../apps-index.json", global.location.href)))) ||
+      { apps: [] };
+    const listed = (index.apps || []).indexOf(id) !== -1;
+    if (!listed) {
+      if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
       root.innerHTML =
         "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
       return;
     }
-    const assets = await assetsRes.json();
+    const assets = HS.fetchJson ? await HS.fetchJson(appBase + "assets.json") : null;
+    if (!assets) {
+      if (HS.mountChrome) HS.mountChrome({ title: "Lesson", homeHref: "./" });
+      root.innerHTML =
+        "<p>That lesson is not on this device yet. Try again after it has been added.</p>";
+      return;
+    }
     const band = HS.getBand();
     HS.setBand(band);
     HS.subject = assets.id || id;

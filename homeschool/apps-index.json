@@ -2,5 +2,18 @@
   "apps": [
     "math",
     "reading"
+  ],
+  "ids": [
+    "art",
+    "bible",
+    "essentials-points",
+    "geography",
+    "history",
+    "math",
+    "movement",
+    "presentation",
+    "reading",
+    "science",
+    "singing"
   ]
 }

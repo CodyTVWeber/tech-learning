@@ -95,3 +95,24 @@ test("hub and each learner PWA work offline", async ({ page, context }) => {
     }
   }
 });
+
+test("missing assets.json does not break a home", async ({ page }) => {
+  const errors = [];
+  const missingAssets = [];
+  onErrors(page, errors);
+  page.on("response", (res) => {
+    if (res.status() === 404 && /\/apps\/[^/]+\/assets\.json$/.test(res.url())) {
+      missingAssets.push(res.url());
+    }
+  });
+  await page.goto(BASE + "Joey/", { waitUntil: "load" });
+  await waitPrecache(page);
+  await expect(page.locator("h1")).toContainText("Joey");
+  expect(missingAssets, "home must not GET assets.json for unbuilt apps").toEqual([]);
+  expect(errors).toEqual([]);
+
+  await page.goto(BASE + "Joey/play.html?app=history&band=upper", { waitUntil: "load" });
+  await expect(page.locator("#app-root")).toContainText("not on this device yet");
+  expect(missingAssets).toEqual([]);
+  expect(errors).toEqual([]);
+});

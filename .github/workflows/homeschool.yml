@@ -31,11 +31,26 @@ jobs:
       - name: Fail if generated files are stale
         run: |
           git add -A
-          git diff --cached --exit-code || {
+          # .apkg zip wrappers are not byte-stable across hosts; CSV + catalog + card counts are.
+          git diff --cached --exit-code -- . ":(exclude)*.apkg" || {
             echo "Generated files are stale. Run tools/homeschool/build_assets.py and tools/anki/build_decks.py and commit."
             git diff --cached --stat
             exit 1
           }
+          python3 - <<'PY'
+          import json, sqlite3, tempfile, zipfile
+          from pathlib import Path
+          cat = json.loads(Path("homeschool/decks/catalog.json").read_text())
+          for d in cat["decks"]:
+              z = zipfile.ZipFile(Path("homeschool/decks") / d["file"])
+              name = "collection.anki21" if "collection.anki21" in z.namelist() else "collection.anki2"
+              tmp = tempfile.NamedTemporaryFile(suffix=".sqlite", delete=False)
+              tmp.write(z.read(name)); tmp.close()
+              n = sqlite3.connect(tmp.name).execute("select count(*) from notes").fetchone()[0]
+              if n != d["cards"]:
+                  raise SystemExit("%s notes %s != catalog %s" % (d["file"], n, d["cards"]))
+              print(d["file"], n, "ok")
+          PY
       - name: Privacy scan
         run: python3 tools/homeschool/check_privacy.py
       - uses: actions/setup-node@v4

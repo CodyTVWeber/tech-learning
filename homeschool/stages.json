@@ -17,19 +17,20 @@
       { "id": "blends-teams", "label": "Blends, letter teams, long vowels" },
       { "id": "volume-reading", "label": "Volume reading and vocabulary" }
     ],
-    "cc-cycle3": [
-      { "id": "none", "label": "No Cycle 3 review yet" },
-      { "id": "foundations-review", "label": "Foundations Cycle 3 weekly review" }
+    "history": [
+      { "id": "none", "label": "No history track" },
+      { "id": "foundations-review", "label": "Cycle 3 history review (public-domain / original only)" },
+      { "id": "cycle3-topics", "label": "Public-domain facts on Cycle 3 history topic titles" }
+    ],
+    "geography": [
+      { "id": "none", "label": "No geography track" },
+      { "id": "us-geography", "label": "US geography and feature names" }
     ],
     "essentials-points": [
       { "id": "none", "label": "No Essentials tracker" },
       { "id": "charts-tracker", "label": "Blank charts A–M points tracker" }
     ],
-    "maps": [
-      { "id": "none", "label": "No maps track" },
-      { "id": "us-geography", "label": "US geography and feature names" }
-    ],
-    "dancing": [
+    "movement": [
       { "id": "none", "label": "No movement track" },
       { "id": "creative-movement", "label": "Creative movement" },
       { "id": "ballet-creative", "label": "Ballet and creative movement" },
@@ -47,10 +48,6 @@
     "science": [
       { "id": "none", "label": "No science track" },
       { "id": "cycle3-topics", "label": "Original science facts on Cycle 3 topic titles" }
-    ],
-    "history": [
-      { "id": "none", "label": "No history track" },
-      { "id": "cycle3-topics", "label": "Public-domain facts on Cycle 3 history topic titles" }
     ],
     "art": [
       { "id": "none", "label": "No art track" },
@@ -72,16 +69,15 @@
       "label": "Essentials + Foundations",
       "themeColor": "#1f4d3a",
       "subjects": {
-        "cc-cycle3": "foundations-review",
         "essentials-points": "charts-tracker",
         "math": "decimals-fractions-long-ops",
         "reading": "volume-reading",
-        "maps": "us-geography",
-        "dancing": "none",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "none",
         "presentation": "weekly-outline",
         "bible": "family-study",
         "science": "cycle3-topics",
-        "history": "cycle3-topics",
         "art": "studio-basics",
         "singing": "family-hymns"
       }
@@ -96,16 +92,15 @@
       "label": "Foundations",
       "themeColor": "#1e4a6d",
       "subjects": {
-        "cc-cycle3": "foundations-review",
         "essentials-points": "none",
         "math": "multiply-divide",
         "reading": "volume-reading",
-        "maps": "us-geography",
-        "dancing": "tap-hiphop",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "tap-hiphop",
         "presentation": "weekly-outline",
         "bible": "family-study",
         "science": "cycle3-topics",
-        "history": "cycle3-topics",
         "art": "studio-basics",
         "singing": "family-hymns"
       }
@@ -120,16 +115,15 @@
       "label": "Foundations",
       "themeColor": "#7a3050",
       "subjects": {
-        "cc-cycle3": "foundations-review",
         "essentials-points": "none",
         "math": "add-sub-100",
         "reading": "blends-teams",
-        "maps": "us-geography",
-        "dancing": "ballet-tap",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "ballet-tap",
         "presentation": "weekly-outline",
         "bible": "family-study",
         "science": "cycle3-topics",
-        "history": "cycle3-topics",
         "art": "studio-basics",
         "singing": "family-hymns"
       }
@@ -144,16 +138,15 @@
       "label": "Foundations, early learner",
       "themeColor": "#8a5a12",
       "subjects": {
-        "cc-cycle3": "foundations-review",
         "essentials-points": "none",
         "math": "numbers-to-10",
         "reading": "letter-sounds",
-        "maps": "us-geography",
-        "dancing": "ballet-creative",
+        "history": "foundations-review",
+        "geography": "us-geography",
+        "movement": "ballet-creative",
         "presentation": "weekly-outline",
         "bible": "family-study",
         "science": "cycle3-topics",
-        "history": "cycle3-topics",
         "art": "studio-basics",
         "singing": "family-hymns"
       }
@@ -168,16 +161,15 @@
       "label": "Toddler",
       "themeColor": "#9a4a2a",
       "subjects": {
-        "cc-cycle3": "none",
         "essentials-points": "none",
         "math": "play-counting",
         "reading": "letter-sounds",
-        "maps": "none",
-        "dancing": "creative-movement",
+        "history": "none",
+        "geography": "none",
+        "movement": "creative-movement",
         "presentation": "none",
         "bible": "family-study",
         "science": "none",
-        "history": "none",
         "art": "studio-basics",
         "singing": "family-hymns"
       }
@@ -192,16 +184,15 @@
       "label": "Care time",
       "themeColor": "#5a4a78",
       "subjects": {
-        "cc-cycle3": "none",
         "essentials-points": "none",
         "math": "none",
         "reading": "none",
-        "maps": "none",
-        "dancing": "none",
+        "history": "none",
+        "geography": "none",
+        "movement": "none",
         "presentation": "none",
         "bible": "none",
         "science": "none",
-        "history": "none",
         "art": "none",
         "singing": "none"
       }

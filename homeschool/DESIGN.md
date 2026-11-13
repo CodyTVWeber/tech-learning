@@ -122,9 +122,11 @@ On install and whenever the home page asks (`ensure-apps`), the learner SW:
 1. Caches its own folder, `../kit/`, `../stages.json`
 2. For each subject in that learner’s `stages.json` whose level is not `"none"`, fetches `../apps/<id>/assets.json` if it exists and caches every listed file
 
-A new app **plugs in** by adding `apps/<id>/` with `assets.json`. No kit edit. First visit while the files are reachable lets the SW cache them; then the runner works offline.
+A new app **plugs in** by adding `apps/<id>/` with `assets.json` and running `python3 tools/homeschool/build_assets.py`. That regenerates `apps-index.json` `apps` (folders that exist). The kit never fetches `assets.json` for an id that is not in that list, so a missing app **does not 404 and does not break a learner home**. The runner shows a calm “not on this device yet” page if someone opens `play.html?app=<missing>`.
 
-CI does the same discovery (stages.json + existing `assets.json` files). It does not hard-code subject names beyond math/reading fixtures.
+`apps-index.json` also lists `ids` (every subject key in `stages.json`). Homes only link ids that are in **both** `apps` (folder exists) and the learner’s non-`none` subjects.
+
+CI discovers the same way. It does not hard-code subject names beyond math/reading fixtures.
 
 ### What subject agents must not do
 
@@ -187,28 +189,25 @@ Each app should be recognizable from a screenshot with the logo cropped off.
 15. **Contract.** `assets.json` complete; band and progress keys as specified; works in the runner offline.
 16. **Faith-friendly.** Wholesome. KJV (public domain) only where it belongs.
 
-## The twelve apps — theme and style direction
+## Apps — theme and style direction
 
-Assigned now so later agents do not invent a second theme. **This lane implements math and reading only.**
+Subject-agent ids and themes **win** where they already chose. There is **no** separate `cc-cycle3` or `maps` or `dancing` folder. **This lane implements math and reading only.**
 
-| App id | Theme | Style direction | Motion / sound | Reward |
-| --- | --- | --- | --- | --- |
-| **math** | Pirate treasure voyage | Deep water, rope and timber, brass compass, island path. No skulls. Old-style serif logs, stout sans buttons. Voyage on top, cabin below. | Swell; coin clink; chest latch | Doubloons, then paper |
-| **reading** | Garden | Soil beds, seed packets. Picture-book spread **only when a book is open**. Rounded sans in the garden; bookish face on pages. | Leaf rustle; bee; page turn | A bed blooms; a book finished |
-| **cc-cycle3** | Time-travel train | Timetable, ticket punches, car-per-week. Condensed station type. Horizontal train. | Rail clack; soft whistle | Ticket punch |
-| **singing** | Songbird forest | Canopy, staff-as-branches. No copyrighted lyrics. Italic serif titles. | Bird phrase; pitch pipe | Bird on the staff |
-| **dancing** | Circus parade | Big-top stripes, parade route, heavy poster type. Match tap/hip hop vs ballet vs creative. | Drum pickup | Float advances |
-| **essentials-points** | Lantern library | Dark wood, one lamp per chart row. Parent types chart *titles* only — never CC wording. | Wick; stamp | Lamps; mastery mark |
-| **maps** | Trail scout | Topo lines, compass, trail log. Earth pigments (not pirate). Geography lives here. | Pencil tick | Log stamp |
-| **presentation** | Town-square stage | Curtain, boards, cue cards. Hard spotlight circle, not a blur. | Board tap | Curtain call |
-| **bible** | Shepherd’s hillside | Olive, wool, evening sky. KJV old-style serif. Calm. | Quiet chime | Verse stars |
-| **science** | Creek-side nature bench | Specimen labels, wood, water. Original facts only. | Drop; pebble | Drawer check |
-| **history** | Quilt of stories | Patchwork blocks; public-domain facts. Distinct from the train. | Soft stitch | Patch sewn |
-| **art** | Pottery studio | Wet clay, kiln shelves, glaze chips. | Clay thump | Pot on a shelf |
+| App id | Theme | Who | Notes |
+| --- | --- | --- | --- |
+| **math** | Pirate treasure voyage | This PR | Deep water, rope, brass, island path. No skulls. Technique → paper. |
+| **reading** | Garden | This PR | Soil beds; picture-book spread **only when a book is open**. Sounds-first for toddler/preschool. |
+| **history** | Time-travel train | Parallel agent | Also covers Cycle 3 *history* review (public-domain / original items only — no CC recitation). |
+| **geography** | Hot-air balloon expedition | Parallel agent | Replaces the old `maps` / trail-scout id. |
+| **science** | Naturalist’s field expedition | Parallel agent | Original facts; no Student Body pages. |
+| **bible** | Shepherd’s hillside | Parallel agent | KJV / public-domain Scripture. Calm. |
+| **singing** | Songbird forest | Parallel agent | No copyrighted lyrics. |
+| **movement** | Circus parade | Parallel agent | Replaces `dancing`. Match tap/hip hop vs ballet vs creative. |
+| **art** | Artist’s harbor studio | Parallel agent | That agent may pick another distinct theme; update this row when its PR lands. |
+| **essentials-points** | Lantern library | Later | Blank tracker; never CC chart wording. |
+| **presentation** | Town-square stage | Later | Timer + outline. |
 
-Do not reassign these themes without the owner.
-
-Parallel agents (other PRs): history + maps (geography), science, bible + singing, dancing (movement) + art.
+Do not reintroduce `cc-cycle3`, `maps`, or `dancing` as app ids.
 
 ## UX checklist
 

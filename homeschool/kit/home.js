@@ -35,18 +35,16 @@
     const subjects = Object.keys(me.subjects || {}).filter(function (id) {
       return me.subjects[id] && me.subjects[id] !== "none";
     });
-    const index = await fetch(new URL("../apps-index.json", global.location.href)).then(function (r) {
-      return r.json();
-    });
+    const index =
+      (await HS.fetchJson(new URL("../apps-index.json", global.location.href))) || { apps: [] };
     const present = index.apps || [];
 
     const cards = [];
     for (let i = 0; i < subjects.length; i++) {
       const id = subjects[i];
       if (present.indexOf(id) === -1) continue;
-      const res = await fetch(new URL("../apps/" + id + "/assets.json", global.location.href));
-      if (!res.ok) continue;
-      const assets = await res.json();
+      const assets = await HS.fetchJson(new URL("../apps/" + id + "/assets.json", global.location.href));
+      if (!assets) continue;
       cards.push({ id: id, assets: assets });
     }
 

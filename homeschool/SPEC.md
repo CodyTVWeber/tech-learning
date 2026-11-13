@@ -20,7 +20,7 @@ Checked into this public repo at the maintainer’s request. It is a builder bri
   - Site may use *topic titles* (e.g. “Week 11 History: Civil War”), public-domain facts (states/capitals, presidents, formulas, geography feature names), and original games/quizzes.
   - No copyrighted song lyrics; no CC audio/video.
   - Note: “deck TSVs / apkg exist privately; share with the family on request,” not as a public download of the 532-card pack.
-- **App contract:** `DESIGN.md`. Each app: `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`. Band from `?band=` else `localStorage['hs.band']`. Progress `localStorage['hs.progress.<subject>']`.
+- **App contract:** `DESIGN.md`. Each app: `index.html`, `assets.json`, `images.json`, `INTEGRATION.md`. Band from `?band=` else `localStorage['hs.band']`. Progress `localStorage['hs.progress.<subject>']`. Subject folder ids: `math`, `reading`, `history`, `geography`, `science`, `bible`, `singing`, `movement`, `art`, `essentials-points`, `presentation`. There is no separate `cc-cycle3` app (history covers Cycle 3 history review). `geography` replaced `maps`. `movement` replaced `dancing`.
 
 ---
 
@@ -200,4 +200,4 @@ Write **TBD — confirm with the parents** on the site until answered.
 5. Each app is built once at `/homeschool/apps/<subject>/`. Each learner home is `/homeschool/<FirstName>/` and links via `play.html?app=&band=` so the PWA never leaves its scope.
 6. Pictures: `images.json` slots; placeholders until the final wave. Reading may use picture-book spreads; other apps use pictures without picture-book chrome.
 7. Shared kit is plumbing only. Each app owns its theme (`DESIGN.md`).
-8. Parallel agents: history+maps, science, bible+singing, dancing+art. This foundation PR: kit, homes, runner, CI, math, reading.
+8. Parallel agents: history + geography, science, bible + singing, movement + art. This foundation PR: kit, homes, runner, CI, math, reading. No `cc-cycle3` app.
