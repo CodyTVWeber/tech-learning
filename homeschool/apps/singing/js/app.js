@@ -42,7 +42,14 @@
   }
   function from(min) { return BANDS.slice(BANDS.indexOf(min)); }
   function ok(item, b) { return from(item.minBand || "baby").includes(b); }
-  function img(k) { return SINGING.images[k] || SINGING.images.forest; }
+  function url(path) {
+    if (window.HS && window.HS.url) return window.HS.url(path);
+    const base = document.documentElement.dataset.appBase || "./";
+    return new URL(path, base).href;
+  }
+  function img(k) {
+    return url(SINGING.images[k] || SINGING.images.forest);
+  }
 
   function celebrate(title, sub) {
     $("#celebrate-title").textContent = title;
@@ -445,7 +452,7 @@
   });
 
   window.addEventListener("hashchange", render);
-  if ("serviceWorker" in navigator) {
+  if (document.documentElement.dataset.runner !== "1" && "serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
   render();

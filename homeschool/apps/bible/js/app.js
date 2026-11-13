@@ -89,8 +89,13 @@
   function verseById(id) {
     return BIBLE.verses.find((v) => v.id === id);
   }
+  function url(path) {
+    if (window.HS && window.HS.url) return window.HS.url(path);
+    const base = document.documentElement.dataset.appBase || "./";
+    return new URL(path, base).href;
+  }
   function img(key) {
-    return BIBLE.images[key] || BIBLE.images.hillside;
+    return url(BIBLE.images[key] || BIBLE.images.hillside);
   }
   function textOf(v, p) {
     return (p.translation === "web" ? v.web : v.kjv) || v.kjv;
@@ -591,7 +596,7 @@
   });
 
   window.addEventListener("hashchange", render);
-  if ("serviceWorker" in navigator) {
+  if (document.documentElement.dataset.runner !== "1" && "serviceWorker" in navigator) {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   }
   render();
