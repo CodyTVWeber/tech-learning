@@ -1,0 +1,20 @@
+{
+  "id": "drums",
+  "title": "Drum Line Shed",
+  "shortTitle": "Drums",
+  "theme": "drum line shed",
+  "version": "1",
+  "files": [
+    "index.html",
+    "css/shed.css",
+    "js/exercises.js",
+    "js/audio.js",
+    "js/staff.js",
+    "js/app.js",
+    "sw.js",
+    "assets.json",
+    "images.json",
+    "images/shed-chart.png",
+    "images/shell-stamp.png"
+  ]
+}
