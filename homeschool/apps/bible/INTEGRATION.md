@@ -7,15 +7,16 @@ Theme: a shepherd’s hillside. Kids gather sheep as they memorize, light lanter
 ## Plug-in contract
 
 - Standalone HTML/CSS/JS. Relative paths only. No CDN, no build step.
-- Precache every path in `assets.json` → `files`.
-- Pictures are listed in `images.json`.
-- Band from `?band=` else `localStorage['hs.band']` else an in-app picker.
+- Precache every path in `assets.json` → `files`. `id` matches the folder name.
+- Pictures are listed in `images.json` (kit slots under `images/`) and shown from `img/` via `window.HS.url(...)`.
+- Band from `?band=` else `localStorage['hs.band']` else an in-app picker (runner always passes `?band=`).
   Bands: `baby`, `toddler`, `preschool`, `early`, `primary`, `upper`.
-- Progress: `localStorage['hs.progress.bible']` (sheep ids, lantern count, stars, done maps, KJV/WEB toggle).
+- Progress: `localStorage['hs.progress.bible']` (sheep ids, lantern count, stars, done maps, KJV/WEB toggle). Uses `HS.readProgress` / `HS.writeProgress` inside the runner.
+- Data: `fetch(HS.url('data/content.json'))` (standalone uses the same helper against `dataset.appBase`).
 - No grades. Rewards are sheep, lanterns, and stars.
 - No runtime network. Web Speech for read-aloud when the browser has it. WebAudio for chimes.
 - Registers `sw.js` scoped to this folder so the app can run offline on its own, unless `document.documentElement.dataset.runner === "1"` (the learner runner already controls the page).
-- Visible banner on every screen, including the band picker: “Untested, awaiting parent test.” Not screen-reader-only.
+- Visible banner on every screen, including the band picker: “Untested, awaiting parent test.” Hidden inside the runner (`html[data-runner]`), matching math/reading.
 
 Offline check (Playwright): load `index.html`, wait for the service worker, set offline, reload, pick a band, play Memory and a story. Passed.
 

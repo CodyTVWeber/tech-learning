@@ -8,17 +8,29 @@
     primary: "Rhythm names, scale climbs, longer hymns.",
     upper: "Cents-close matching, dotted rhythms, full hymn lines."
   };
+  const SUBJECT = "singing";
   const KEY_BAND = "hs.band";
   const KEY_PROG = "hs.progress.singing";
   const $ = (s, el) => (el || document).querySelector(s);
   const appEl = $("#app");
 
+  function hs() { return window.HS || {}; }
+  function url(path) {
+    if (hs().url) return hs().url(path);
+    const base = document.documentElement.dataset.appBase || new URL("./", location.href).href;
+    return new URL(path, base).href;
+  }
+
   function hashScreen() { return (location.hash || "#home").replace("#", "") || "home"; }
   function go(s) { location.hash = s; render(); }
   function load() {
+    if (hs().readProgress) return hs().readProgress(SUBJECT) || {};
     try { return JSON.parse(localStorage.getItem(KEY_PROG) || "{}") || {}; } catch (e) { return {}; }
   }
-  function save(p) { localStorage.setItem(KEY_PROG, JSON.stringify(p)); }
+  function save(p) {
+    if (hs().writeProgress) { hs().writeProgress(SUBJECT, p); return; }
+    localStorage.setItem(KEY_PROG, JSON.stringify(p));
+  }
   function prog() {
     const p = load();
     p.birds = p.birds || [];
@@ -30,10 +42,16 @@
   function band() {
     const q = new URLSearchParams(location.search).get("band");
     if (q && BANDS.includes(q)) return q;
+    if (document.documentElement.dataset.runner === "1") {
+      const hb = (hs().getBand && hs().getBand()) || hs().band;
+      if (hb && BANDS.includes(hb)) return hb;
+      return "early";
+    }
     const s = localStorage.getItem(KEY_BAND);
     return (s && BANDS.includes(s)) ? s : null;
   }
   function setBand(b) {
+    if (hs().setBand) hs().setBand(b);
     localStorage.setItem(KEY_BAND, b);
     const url = new URL(location.href);
     url.searchParams.set("band", b);
@@ -42,7 +60,10 @@
   }
   function from(min) { return BANDS.slice(BANDS.indexOf(min)); }
   function ok(item, b) { return from(item.minBand || "baby").includes(b); }
-  function img(k) { return SINGING.images[k] || SINGING.images.forest; }
+  function img(k) {
+    const rel = (window.SINGING && SINGING.images && (SINGING.images[k] || SINGING.images.forest)) || "img/singing-forest-hero.jpg";
+    return url(rel);
+  }
 
   function celebrate(title, sub) {
     $("#celebrate-title").textContent = title;
@@ -444,9 +465,27 @@
     }
   });
 
-  window.addEventListener("hashchange", render);
-  if (document.documentElement.dataset.runner !== "1" && "serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+  async function boot() {
+    if (document.documentElement.dataset.runner !== "1") {
+      const base = new URL("./", location.href).href;
+      document.documentElement.dataset.appBase = document.documentElement.dataset.appBase || base;
+      window.HS = window.HS || {};
+      HS.appBase = HS.appBase || base;
+      HS.subject = SUBJECT;
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(() => {});
+      }
+    }
+    if (!window.SINGING) {
+      const res = await fetch(url("data/content.json"));
+      if (!res.ok) throw new Error("Could not load forest data");
+      window.SINGING = await res.json();
+    }
+    window.addEventListener("hashchange", render);
+    render();
   }
-  render();
+  boot().catch((err) => {
+    if (appEl) appEl.textContent = "Could not open this forest.";
+    console.error(err);
+  });
 })();

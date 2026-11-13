@@ -1,23 +1,32 @@
 {
-  "subject": "singing",
+  "id": "singing",
   "title": "Songbird Forest",
+  "shortTitle": "Singing",
+  "theme": "songbird forest",
+  "version": "1",
   "files": [
-    "./",
     "index.html",
     "css/forest.css",
-    "js/data.js",
     "js/synth.js",
     "js/pitch.js",
     "js/app.js",
     "sw.js",
     "assets.json",
     "images.json",
+    "data/content.json",
     "img/singing-forest-hero.jpg",
     "img/singing-wren.jpg",
     "img/singing-choir.jpg",
     "img/singing-nest.jpg",
     "img/singing-cardinal.jpg",
     "img/singing-owl.jpg",
-    "img/singing-path.jpg"
+    "img/singing-path.jpg",
+    "images/hero.png",
+    "images/wren.png",
+    "images/choir.png",
+    "images/nest.png",
+    "images/cardinal.png",
+    "images/owl.png",
+    "images/path.png"
   ]
 }

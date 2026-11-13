@@ -10,7 +10,7 @@ Uses `web-verses.json` (clean WEB) plus KJV from `/tmp/biblejson/kjv.json` when 
 
 Writes:
 
-- `homeschool/apps/bible/js/data.js`
+- `homeschool/apps/bible/data/content.json`
 - `verses-extracted.json` (selected KJV+WEB verses only)
 - `web-verses.json`
 - `cards.csv`

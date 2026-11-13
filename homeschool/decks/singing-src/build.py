@@ -14,7 +14,6 @@ import io
 import json
 import re
 import sqlite3
-import subprocess
 import sys
 import tempfile
 import time
@@ -25,7 +24,7 @@ import genanki
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parents[2]
-APP_DATA = REPO / "homeschool" / "apps" / "singing" / "js" / "data.js"
+APP_DATA = REPO / "homeschool" / "apps" / "singing" / "data" / "content.json"
 DECKS = REPO / "homeschool" / "decks" / "singing"
 APKG_TS = 1700000000.0
 
@@ -97,15 +96,7 @@ RHYTHM_CARDS = [
 
 
 def load_singing():
-    path = json.dumps(str(APP_DATA))
-    script = (
-        "const fs=require('fs');const vm=require('vm');"
-        "const ctx={window:{}};"
-        f"vm.runInNewContext(fs.readFileSync({path},'utf8'),ctx);"
-        "process.stdout.write(JSON.stringify(ctx.window.SINGING));"
-    )
-    raw = subprocess.check_output(["node", "-e", script])
-    return json.loads(raw)
+    return json.loads(APP_DATA.read_text(encoding="utf-8"))
 
 
 def from_band(min_band: str):
@@ -270,5 +261,5 @@ if __name__ == "__main__":
     try:
         main()
     except json.JSONDecodeError as e:
-        print("Could not parse singing data.js as JSON:", e, file=sys.stderr)
+        print("Could not parse singing data/content.json:", e, file=sys.stderr)
         sys.exit(1)

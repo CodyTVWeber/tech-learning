@@ -9,15 +9,16 @@ Looks nothing like Shepherd’s Hillside (Bible): cool moss/teal, leaf-cut panel
 ## Plug-in contract
 
 - Standalone HTML/CSS/JS. Relative paths. No CDN. No build.
-- Precache `assets.json` → `files`.
-- Pictures in `images.json`.
-- Band: `?band=` else `localStorage['hs.band']` else picker.
+- Precache `assets.json` → `files`. `id` matches the folder name.
+- Pictures in `images.json` (kit slots under `images/`) and shown from `img/` via `window.HS.url(...)`.
+- Band: `?band=` else `localStorage['hs.band']` else picker (runner always passes `?band=`).
   Bands: `baby`, `toddler`, `preschool`, `early`, `primary`, `upper`.
-- Progress: `localStorage['hs.progress.singing']`.
+- Progress: `localStorage['hs.progress.singing']`. Uses `HS.readProgress` / `HS.writeProgress` inside the runner.
+- Data: `fetch(HS.url('data/content.json'))`.
 - Microphone is optional, local, never uploaded. Pitch matching still works by tapping matching calls if the mic is off.
 - Melodies are WebAudio oscillators, not audio files.
 - Registers folder-scoped `sw.js` for standalone offline, unless `document.documentElement.dataset.runner === "1"` (the learner runner already controls the page).
-- Visible banner on every screen, including the band picker: “Untested, awaiting parent test.” Not screen-reader-only.
+- Visible banner on every screen, including the band picker: “Untested, awaiting parent test.” Hidden inside the runner (`html[data-runner]`), matching math/reading.
 
 Offline check (Playwright): load `index.html`, wait for the service worker, set offline, reload, pick a band, match a pitch call and play a hymn melody. Passed.
 

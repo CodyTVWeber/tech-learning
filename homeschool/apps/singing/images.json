@@ -1,55 +1,62 @@
 {
-  "subject": "singing",
-  "theme": "Songbird Forest — moss, bark, cardinal, dawn gold, fern path",
-  "slots": [
+  "app": "singing",
+  "theme": "songbird forest",
+  "images": [
     {
-      "file": "img/singing-forest-hero.jpg",
-      "subject": "singing",
-      "size": "1280x720",
-      "alt": "Dawn light through a mossy forest canopy",
-      "theme": "Home hero. Cool green, not the Bible hillside."
+      "file": "hero.png",
+      "width": 1024,
+      "height": 512,
+      "alt": "Dawn light through a mossy forest canopy. No people.",
+      "themeNotes": "Home hero. Cool moss, not ochre pasture.",
+      "slot": "hero"
     },
     {
-      "file": "img/singing-wren.jpg",
-      "subject": "singing",
-      "size": "1024x1024",
-      "alt": "Wren singing on a mossy branch",
-      "theme": "Mid pitch; mid choir bird."
+      "file": "wren.png",
+      "width": 512,
+      "height": 512,
+      "alt": "A wren singing on a mossy branch.",
+      "themeNotes": "Mid pitch perch.",
+      "slot": "wren"
     },
     {
-      "file": "img/singing-choir.jpg",
-      "subject": "singing",
-      "size": "1024x768",
-      "alt": "Several wild songbirds perched together on a fallen log",
-      "theme": "Choir collectible."
+      "file": "choir.png",
+      "width": 800,
+      "height": 600,
+      "alt": "Several wild songbirds perched together on a fallen log.",
+      "themeNotes": "Choir collectible.",
+      "slot": "choir"
     },
     {
-      "file": "img/singing-nest.jpg",
-      "subject": "singing",
-      "size": "1024x1024",
-      "alt": "Bird nest with speckled eggs in ferns",
-      "theme": "Pitch nest; baby songs."
+      "file": "nest.png",
+      "width": 512,
+      "height": 512,
+      "alt": "A bird nest with speckled eggs in ferns.",
+      "themeNotes": "Pitch nest.",
+      "slot": "nest"
     },
     {
-      "file": "img/singing-cardinal.jpg",
-      "subject": "singing",
-      "size": "1024x1024",
-      "alt": "Northern cardinal singing on a wet pine branch",
-      "theme": "High pitch bird."
+      "file": "cardinal.png",
+      "width": 512,
+      "height": 512,
+      "alt": "A northern cardinal singing on a wet pine branch.",
+      "themeNotes": "High pitch bird.",
+      "slot": "cardinal"
     },
     {
-      "file": "img/singing-owl.jpg",
-      "subject": "singing",
-      "size": "768x1024",
-      "alt": "Barred owl on a mossy oak limb at blue hour",
-      "theme": "Low pitch bird."
+      "file": "owl.png",
+      "width": 512,
+      "height": 640,
+      "alt": "A barred owl on a mossy oak limb at blue hour.",
+      "themeNotes": "Low pitch bird.",
+      "slot": "owl"
     },
     {
-      "file": "img/singing-path.jpg",
-      "subject": "singing",
-      "size": "1280x720",
-      "alt": "Sunlit forest path with ferns and pine needles",
-      "theme": "Solfege trail."
+      "file": "path.png",
+      "width": 1024,
+      "height": 512,
+      "alt": "A sunlit forest path with ferns and pine needles.",
+      "themeNotes": "Solfege trail.",
+      "slot": "path"
     }
   ]
 }

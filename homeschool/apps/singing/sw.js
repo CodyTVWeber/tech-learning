@@ -1,21 +1,38 @@
-const CACHE = "hs-singing-v1";
-self.addEventListener("install", (event) => {
+const CACHE = "hs-singing-v2";
+const BASE = new URL("./", self.location);
+
+self.addEventListener("install", function (event) {
   event.waitUntil(
-    fetch("assets.json")
-      .then((r) => r.json())
-      .then((j) => caches.open(CACHE).then((c) => c.addAll(j.files)))
-      .then(() => self.skipWaiting())
+    (async function () {
+      const assets = await (await fetch(new URL("./assets.json", BASE), { cache: "reload" })).json();
+      const cache = await caches.open(CACHE);
+      const files = (assets.files || []).map(function (f) {
+        return new URL(f, BASE).href;
+      });
+      for (let i = 0; i < files.length; i++) {
+        try {
+          const res = await fetch(files[i], { cache: "reload" });
+          if (res.ok) await cache.put(files[i], res.clone());
+        } catch (e) {}
+      }
+      await self.skipWaiting();
+    })()
   );
 });
-self.addEventListener("activate", (event) => {
+self.addEventListener("activate", function (event) {
   event.waitUntil(self.clients.claim());
 });
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", function (event) {
+  if (event.request.method !== "GET") return;
   event.respondWith(
-    caches.match(event.request).then((hit) => hit || fetch(event.request).then((res) => {
-      const copy = res.clone();
-      caches.open(CACHE).then((c) => c.put(event.request, copy));
-      return res;
-    }).catch(() => caches.match("./index.html")))
+    caches.match(event.request).then(function (hit) {
+      return hit || fetch(event.request);
+    })
   );
+});
+self.addEventListener("message", function (event) {
+  if (event.data && event.data.type === "skip-waiting") self.skipWaiting();
+  if (event.data && event.data.type === "ensure-apps" && event.ports && event.ports[0]) {
+    event.ports[0].postMessage({ ok: true });
+  }
 });

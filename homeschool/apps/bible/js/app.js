@@ -8,12 +8,21 @@
     primary: "Longer verses, all sixty-six books, character flock.",
     upper: "Passages, story order, and the whole hillside."
   };
+  const SUBJECT = "bible";
   const KEY_BAND = "hs.band";
   const KEY_PROG = "hs.progress.bible";
 
   const $ = (sel, el) => (el || document).querySelector(sel);
   const appEl = $("#app");
 
+  function hs() {
+    return window.HS || {};
+  }
+  function url(path) {
+    if (hs().url) return hs().url(path);
+    const base = document.documentElement.dataset.appBase || new URL("./", location.href).href;
+    return new URL(path, base).href;
+  }
   function params() {
     return new URLSearchParams(location.search);
   }
@@ -27,6 +36,7 @@
   }
 
   function loadProg() {
+    if (hs().readProgress) return hs().readProgress(SUBJECT) || {};
     try {
       return JSON.parse(localStorage.getItem(KEY_PROG) || "{}") || {};
     } catch (e) {
@@ -34,6 +44,10 @@
     }
   }
   function saveProg(p) {
+    if (hs().writeProgress) {
+      hs().writeProgress(SUBJECT, p);
+      return;
+    }
     localStorage.setItem(KEY_PROG, JSON.stringify(p));
   }
   function prog() {
@@ -54,11 +68,17 @@
   function band() {
     const q = params().get("band");
     if (q && BANDS.includes(q)) return q;
+    if (document.documentElement.dataset.runner === "1") {
+      const hb = (hs().getBand && hs().getBand()) || hs().band;
+      if (hb && BANDS.includes(hb)) return hb;
+      return "early";
+    }
     const stored = localStorage.getItem(KEY_BAND);
     if (stored && BANDS.includes(stored)) return stored;
     return null;
   }
   function setBand(b) {
+    if (hs().setBand) hs().setBand(b);
     localStorage.setItem(KEY_BAND, b);
     const url = new URL(location.href);
     url.searchParams.set("band", b);
@@ -90,7 +110,8 @@
     return BIBLE.verses.find((v) => v.id === id);
   }
   function img(key) {
-    return BIBLE.images[key] || BIBLE.images.hillside;
+    const rel = (BIBLE.images && (BIBLE.images[key] || BIBLE.images.hillside)) || "img/bible-hillside-hero.jpg";
+    return url(rel);
   }
   function textOf(v, p) {
     return (p.translation === "web" ? v.web : v.kjv) || v.kjv;
@@ -590,9 +611,27 @@
     }
   });
 
-  window.addEventListener("hashchange", render);
-  if (document.documentElement.dataset.runner !== "1" && "serviceWorker" in navigator) {
-    navigator.serviceWorker.register("sw.js").catch(() => {});
+  async function boot() {
+    if (document.documentElement.dataset.runner !== "1") {
+      const base = new URL("./", location.href).href;
+      document.documentElement.dataset.appBase = document.documentElement.dataset.appBase || base;
+      window.HS = window.HS || {};
+      HS.appBase = HS.appBase || base;
+      HS.subject = SUBJECT;
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js", { scope: "./" }).catch(() => {});
+      }
+    }
+    if (!window.BIBLE) {
+      const res = await fetch(url("data/content.json"));
+      if (!res.ok) throw new Error("Could not load hillside data");
+      window.BIBLE = await res.json();
+    }
+    window.addEventListener("hashchange", render);
+    render();
   }
-  render();
+  boot().catch((err) => {
+    if (appEl) appEl.textContent = "Could not open this hillside.";
+    console.error(err);
+  });
 })();

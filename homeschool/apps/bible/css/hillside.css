@@ -84,6 +84,9 @@ img { max-width: 100%; display: block; }
   border-bottom: 4px solid var(--ochre-deep);
   box-shadow: 0 4px 0 #1a1208;
 }
+html[data-runner] .untested-banner {
+  display: none;
+}
 
 .app {
   position: relative;

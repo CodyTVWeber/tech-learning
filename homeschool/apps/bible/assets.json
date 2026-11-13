@@ -1,22 +1,31 @@
 {
-  "subject": "bible",
+  "id": "bible",
   "title": "Shepherd’s Hillside",
+  "shortTitle": "Bible",
+  "theme": "shepherd’s hillside",
+  "version": "1",
   "files": [
-    "./",
     "index.html",
     "css/hillside.css",
-    "js/data.js",
     "js/sfx.js",
     "js/app.js",
     "sw.js",
     "assets.json",
     "images.json",
+    "data/content.json",
     "img/bible-hillside-hero.jpg",
     "img/bible-sheep.jpg",
     "img/bible-lantern.jpg",
     "img/bible-stars.jpg",
     "img/bible-waters.jpg",
     "img/bible-olives.jpg",
-    "img/bible-wheat.jpg"
+    "img/bible-wheat.jpg",
+    "images/hero.png",
+    "images/sheep.png",
+    "images/lantern.png",
+    "images/stars.png",
+    "images/waters.png",
+    "images/olives.png",
+    "images/wheat.png"
   ]
 }
