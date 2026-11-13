@@ -270,9 +270,9 @@
     {
       "id": "u-fr-halfdec",
       "island": "frac",
-      "kind": "fraction",
-      "prompt": "Shade 1 of 2 equal parts. 1/2 as a decimal is",
-      "audioText": "Shade 1 of 2 equal parts. 1/2 as a decimal is",
+      "kind": "tenths",
+      "prompt": "Fill 5 of 10 tenths. That is one half, written 0.5.",
+      "audioText": "Fill 5 of 10 tenths. That is one half, written 0.5.",
       "answer": "0.5",
       "choices": [
         "2.0",
@@ -284,16 +284,15 @@
         "upper",
         "frac"
       ],
-      "filled": 1,
-      "parts": 2,
-      "teach": "Two equal parts of one whole. One part is 1/2, which is 5 tenths, written 0.5."
+      "fill": 5,
+      "teach": "Five tenths is 0.5. That is the same share as 1/2. Not 0.2 and not 2.0."
     },
     {
       "id": "u-fr-25",
       "island": "frac",
       "kind": "fraction",
-      "prompt": "0.25 as a fraction is",
-      "audioText": "0.25 as a fraction is",
+      "prompt": "Shade 1 of 4 equal parts. That is 0.25.",
+      "audioText": "Shade 1 of 4 equal parts. That is 0.25.",
       "answer": "1/4",
       "choices": [
         "25/1",
@@ -307,14 +306,14 @@
       ],
       "filled": 1,
       "parts": 4,
-      "teach": "0.25 is 25 hundredths, one of four equal parts: 1/4."
+      "teach": "One of four equal parts is 1/4, written 0.25."
     },
     {
       "id": "u-fr-50p",
       "island": "frac",
-      "kind": "choice",
-      "prompt": "50% of 10 is",
-      "audioText": "50% of 10 is",
+      "kind": "selectn",
+      "prompt": "Tap half of these 10 coins. 50% is half.",
+      "audioText": "Tap half of these 10 coins. 50% is half.",
       "answer": "5",
       "choices": [
         "5",
@@ -326,14 +325,16 @@
         "upper",
         "frac"
       ],
-      "teach": "50% is 1/2. Half of 10 is 5."
+      "count": 10,
+      "need": 5,
+      "teach": "50% is half. Half of 10 coins is 5."
     },
     {
       "id": "u-fr-3tenth",
       "island": "frac",
-      "kind": "choice",
-      "prompt": "3/10 as a decimal is",
-      "audioText": "3/10 as a decimal is",
+      "kind": "tenths",
+      "prompt": "Fill 3 of 10 tenths. That decimal is 0.3.",
+      "audioText": "Fill 3 of 10 tenths. That decimal is 0.3.",
       "answer": "0.3",
       "choices": [
         "0.03",
@@ -345,14 +346,15 @@
         "upper",
         "frac"
       ],
-      "teach": "The 10 says tenths. Three tenths is 0.3, not 0.03."
+      "fill": 3,
+      "teach": "Three of ten equal parts is 0.3. 0.03 would be three hundredths."
     },
     {
       "id": "u-fr-like",
       "island": "frac",
       "kind": "fraction",
-      "prompt": "1/5 + 2/5 =",
-      "audioText": "1/5 + 2/5 =",
+      "prompt": "Shade 1 fifth, then 2 more. Same-size parts.",
+      "audioText": "Shade 1 fifth, then 2 more. Same-size parts.",
       "answer": "3/5",
       "choices": [
         "3/5",
@@ -366,14 +368,14 @@
       ],
       "filled": 3,
       "parts": 5,
-      "teach": "Same bottoms. Add the tops: 1 + 2 = 3. Keep the 5. 3/5."
+      "teach": "Same bottoms. 1 + 2 tops is 3. Keep the 5. 3/5."
     },
     {
       "id": "u-fr-eq",
       "island": "frac",
       "kind": "fraction",
-      "prompt": "1/2 is equivalent to",
-      "audioText": "1/2 is equivalent to",
+      "prompt": "Shade 2 of 4 equal parts. That matches 1/2.",
+      "audioText": "Shade 2 of 4 equal parts. That matches 1/2.",
       "answer": "2/4",
       "choices": [
         "1/4",
@@ -387,14 +389,14 @@
       ],
       "filled": 2,
       "parts": 4,
-      "teach": "Two of four equal parts is the same share as one of two: 2/4 = 1/2."
+      "teach": "Two of four equal parts is the same share as one of two."
     },
     {
       "id": "u-fr-of",
       "island": "frac",
-      "kind": "choice",
-      "prompt": "3/4 of 12 is",
-      "audioText": "3/4 of 12 is",
+      "kind": "selectn",
+      "prompt": "Tap 3 of every 4 coins. 12 coins in all.",
+      "audioText": "Tap 3 of every 4 coins. 12 coins in all.",
       "answer": "9",
       "choices": [
         "9",
@@ -406,14 +408,16 @@
         "upper",
         "frac"
       ],
+      "count": 12,
+      "need": 9,
       "teach": "12 into 4 equal parts is 3 each. Three of those parts is 9."
     },
     {
       "id": "u-fr-mixed",
       "island": "frac",
-      "kind": "choice",
-      "prompt": "1 1/2 as an improper fraction is",
-      "audioText": "1 1/2 as an improper fraction is",
+      "kind": "wholes",
+      "prompt": "Fill 3 halves. One whole is 2/2, plus 1/2.",
+      "audioText": "Fill 3 halves. One whole is 2/2, plus 1/2.",
       "answer": "3/2",
       "choices": [
         "1/2",
@@ -425,7 +429,9 @@
         "upper",
         "frac"
       ],
-      "teach": "One whole is 2/2. Plus 1/2 is 3/2."
+      "parts": 2,
+      "filled": 3,
+      "teach": "One whole is 2/2. One more half makes 3/2."
     },
     {
       "id": "u-d-add",
@@ -453,9 +459,9 @@
     {
       "id": "u-d-tenth",
       "island": "dec",
-      "kind": "choice",
-      "prompt": "7 tenths as a decimal is",
-      "audioText": "7 tenths as a decimal is",
+      "kind": "tenths",
+      "prompt": "Fill 7 of 10 tenths.",
+      "audioText": "Fill 7 of 10 tenths.",
       "answer": "0.7",
       "choices": [
         "0.7",
@@ -467,14 +473,15 @@
         "upper",
         "dec"
       ],
-      "teach": "The first place after the point is tenths. Seven tenths is 0.7."
+      "fill": 7,
+      "teach": "Seven tenths is 0.7. The first place after the point is tenths, not hundredths."
     },
     {
       "id": "u-d-hund",
       "island": "dec",
-      "kind": "choice",
-      "prompt": "0.40 equals how many tenths?",
-      "audioText": "0.40 equals how many tenths?",
+      "kind": "tenths",
+      "prompt": "0.40 is four tenths. Fill them.",
+      "audioText": "0.40 is four tenths. Fill them.",
       "answer": "4",
       "choices": [
         "40",
@@ -486,14 +493,15 @@
         "upper",
         "dec"
       ],
-      "teach": "40 hundredths is 4 tenths. 0.40 = 0.4."
+      "fill": 4,
+      "teach": "40 hundredths is 4 tenths. 0.40 = 0.4. Not 40 and not 2."
     },
     {
       "id": "u-d-pct",
       "island": "dec",
-      "kind": "choice",
-      "prompt": "0.5 = what percent?",
-      "audioText": "0.5 = what percent?",
+      "kind": "tenths",
+      "prompt": "0.5 is five tenths. Fill them. That is 50%.",
+      "audioText": "0.5 is five tenths. Fill them. That is 50%.",
       "answer": "50%",
       "choices": [
         "5%",
@@ -505,7 +513,8 @@
         "upper",
         "dec"
       ],
-      "teach": "0.5 is 5 tenths, which is 50 hundredths, which is 50%."
+      "fill": 5,
+      "teach": "Five tenths is 0.5, which is 50 hundredths, which is 50%."
     },
     {
       "id": "u-m-add",
@@ -528,7 +537,7 @@
     {
       "id": "u-m-cents",
       "island": "money",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "$2.00 is how many cents?",
       "audioText": "$2.00 is how many cents?",
       "answer": "200",
@@ -541,12 +550,13 @@
         "math",
         "upper",
         "money"
-      ]
+      ],
+      "teach": "The answer is 200."
     },
     {
       "id": "u-m-chg",
       "island": "money",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "Pay $5.00 for a $3.25 coil. Change?",
       "audioText": "Pay $5.00 for a $3.25 coil. Change?",
       "answer": "$1.75",
@@ -559,7 +569,8 @@
         "math",
         "upper",
         "money"
-      ]
+      ],
+      "teach": "The answer is $1.75."
     },
     {
       "id": "u-t-elapse",
@@ -584,7 +595,7 @@
     {
       "id": "u-t-hourmin",
       "island": "time",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "From 1:10 to 3:10 is how many hours?",
       "audioText": "From 1:10 to 3:10 is how many hours?",
       "answer": "2",
@@ -597,12 +608,13 @@
         "math",
         "upper",
         "time"
-      ]
+      ],
+      "teach": "The answer is 2."
     },
     {
       "id": "u-t-bundle",
       "island": "time",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "75 minutes is 1 hour and how many minutes?",
       "audioText": "75 minutes is 1 hour and how many minutes?",
       "answer": "15",
@@ -615,12 +627,13 @@
         "math",
         "upper",
         "time"
-      ]
+      ],
+      "teach": "The answer is 15."
     },
     {
       "id": "u-me-tsp",
       "island": "measure",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "3 teaspoons = how many tablespoons?",
       "audioText": "3 teaspoons = how many tablespoons?",
       "answer": "1",
@@ -633,12 +646,13 @@
         "math",
         "upper",
         "measure"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "u-me-tbsp",
       "island": "measure",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "2 tablespoons = how many fluid ounces?",
       "audioText": "2 tablespoons = how many fluid ounces?",
       "answer": "1",
@@ -651,12 +665,13 @@
         "math",
         "upper",
         "measure"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "u-me-gal",
       "island": "measure",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "4 quarts = how many gallons?",
       "audioText": "4 quarts = how many gallons?",
       "answer": "1",
@@ -669,12 +684,13 @@
         "math",
         "upper",
         "measure"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "u-me-cm",
       "island": "measure",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "100 centimeters = how many meters?",
       "audioText": "100 centimeters = how many meters?",
       "answer": "1",
@@ -687,12 +703,13 @@
         "math",
         "upper",
         "measure"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "u-me-km",
       "island": "measure",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "1000 meters = how many kilometers?",
       "audioText": "1000 meters = how many kilometers?",
       "answer": "1",
@@ -705,12 +722,13 @@
         "math",
         "upper",
         "measure"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "u-me-in",
       "island": "measure",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "36 inches = how many yards?",
       "audioText": "36 inches = how many yards?",
       "answer": "1",
@@ -723,12 +741,13 @@
         "math",
         "upper",
         "measure"
-      ]
+      ],
+      "teach": "The answer is 1."
     },
     {
       "id": "u-sh-rect",
       "island": "shape",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "Rectangle 7 by 3. Area?",
       "audioText": "Rectangle 7 by 3. Area?",
       "answer": "21",
@@ -741,12 +760,13 @@
         "math",
         "upper",
         "shape"
-      ]
+      ],
+      "teach": "The answer is 21."
     },
     {
       "id": "u-sh-sq",
       "island": "shape",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "Square side 5. Area?",
       "audioText": "Square side 5. Area?",
       "answer": "25",
@@ -759,12 +779,13 @@
         "math",
         "upper",
         "shape"
-      ]
+      ],
+      "teach": "The answer is 25."
     },
     {
       "id": "u-sh-tri",
       "island": "shape",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "Triangle base 8, height 5. Area?",
       "audioText": "Triangle base 8, height 5. Area?",
       "answer": "20",
@@ -777,12 +798,13 @@
         "math",
         "upper",
         "shape"
-      ]
+      ],
+      "teach": "The answer is 20."
     },
     {
       "id": "u-sh-circA",
       "island": "shape",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "Circle r = 2. Area ≈ (π = 3.14)",
       "audioText": "Circle r = 2. Area ≈ (π = 3.14)",
       "answer": "12.56",
@@ -795,12 +817,13 @@
         "math",
         "upper",
         "shape"
-      ]
+      ],
+      "teach": "The answer is 12.56."
     },
     {
       "id": "u-sh-circC",
       "island": "shape",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "Circle r = 2. Circumference ≈ (π = 3.14)",
       "audioText": "Circle r = 2. Circumference ≈ (π = 3.14)",
       "answer": "12.56",
@@ -813,7 +836,8 @@
         "math",
         "upper",
         "shape"
-      ]
+      ],
+      "teach": "The answer is 12.56."
     },
     {
       "id": "u-long-84",
@@ -923,9 +947,9 @@
     {
       "id": "u-law-com",
       "island": "laws",
-      "kind": "choice",
-      "prompt": "4 × 6 and 6 × 4. Same product?",
-      "audioText": "4 × 6 and 6 × 4. Same product?",
+      "kind": "arraypair",
+      "prompt": "Fill 4 rows of 6, and 6 rows of 4.",
+      "audioText": "Fill 4 rows of 6, and 6 rows of 4.",
       "answer": "yes",
       "choices": [
         "only add",
@@ -936,12 +960,15 @@
         "math",
         "upper",
         "laws"
-      ]
+      ],
+      "rows": 4,
+      "cols": 6,
+      "teach": "4×6 and 6×4 are the same coins turned. Both are 24."
     },
     {
       "id": "u-law-id",
       "island": "laws",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "9 × 1 =",
       "audioText": "9 × 1 =",
       "answer": "9",
@@ -954,12 +981,13 @@
         "math",
         "upper",
         "laws"
-      ]
+      ],
+      "teach": "One group of 9 is 9. Multiplying by 1 leaves the number."
     },
     {
       "id": "u-law-zero",
       "island": "laws",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "9 × 0 =",
       "audioText": "9 × 0 =",
       "answer": "0",
@@ -972,14 +1000,15 @@
         "math",
         "upper",
         "laws"
-      ]
+      ],
+      "teach": "Zero groups of 9 is 0. Nothing to count."
     },
     {
       "id": "u-law-dist",
       "island": "laws",
-      "kind": "choice",
-      "prompt": "3 × (5 + 2) = 3×5 + 3×2. That value is",
-      "audioText": "3 × (5 + 2) = 3×5 + 3×2. That value is",
+      "kind": "stepskey",
+      "prompt": "3 × (5 + 2). First type 5 + 2, then times 3.",
+      "audioText": "3 × (5 + 2). First type 5 + 2, then times 3.",
       "answer": "21",
       "choices": [
         "21",
@@ -990,14 +1019,25 @@
         "math",
         "upper",
         "laws"
-      ]
+      ],
+      "steps": [
+        {
+          "prompt": "5 + 2 =",
+          "expect": "7"
+        },
+        {
+          "prompt": "3 × 7 =",
+          "expect": "21"
+        }
+      ],
+      "teach": "Share the 3: 3×5 + 3×2 = 15 + 6 = 21."
     },
     {
       "id": "u-law-assoc",
       "island": "laws",
-      "kind": "choice",
-      "prompt": "(2 + 3) + 4 = 2 + (3 + 4). Both equal",
-      "audioText": "(2 + 3) + 4 = 2 + (3 + 4). Both equal",
+      "kind": "stepskey",
+      "prompt": "(2 + 3) + 4. Add the pair, then the 4.",
+      "audioText": "(2 + 3) + 4. Add the pair, then the 4.",
       "answer": "9",
       "choices": [
         "5",
@@ -1008,7 +1048,18 @@
         "math",
         "upper",
         "laws"
-      ]
+      ],
+      "steps": [
+        {
+          "prompt": "2 + 3 =",
+          "expect": "5"
+        },
+        {
+          "prompt": "5 + 4 =",
+          "expect": "9"
+        }
+      ],
+      "teach": "The grouping changes. The sum does not. Both ways make 9."
     },
     {
       "id": "u-sk-13",
@@ -1129,9 +1180,9 @@
     {
       "id": "u-st-area",
       "island": "story",
-      "kind": "word",
-      "prompt": "A sail 8 by 5 feet. Area in square feet?",
-      "audioText": "A sail 8 by 5 feet. Area in square feet?",
+      "kind": "product",
+      "prompt": "A sail 8 by 5 feet. Tap the grid, or the keys finish it.",
+      "audioText": "A sail 8 by 5 feet. Tap the grid, or the keys finish it.",
       "answer": "40",
       "choices": [
         "26",
@@ -1142,14 +1193,15 @@
         "math",
         "upper",
         "story"
-      ]
+      ],
+      "teach": "Area is 8 × 5 = 40 square feet. Not 8 + 5."
     },
     {
       "id": "u-st-two",
       "island": "story",
-      "kind": "word",
-      "prompt": "3 coils at $2.00 each. Total?",
-      "audioText": "3 coils at $2.00 each. Total?",
+      "kind": "product",
+      "prompt": "3 coils at $2.00 each. Type the total.",
+      "audioText": "3 coils at $2.00 each. Type the total.",
       "answer": "$6.00",
       "choices": [
         "$5.00",
@@ -1160,14 +1212,15 @@
         "math",
         "upper",
         "story"
-      ]
+      ],
+      "teach": "3 × 2 dollars is 6 dollars."
     },
     {
       "id": "u-mix-paren",
       "island": "mix",
-      "kind": "choice",
-      "prompt": "(9 + 3) × 2 =",
-      "audioText": "(9 + 3) × 2 =",
+      "kind": "stepskey",
+      "prompt": "(9 + 3) × 2. Parentheses first.",
+      "audioText": "(9 + 3) × 2. Parentheses first.",
       "answer": "24",
       "choices": [
         "11",
@@ -1178,14 +1231,25 @@
         "math",
         "upper",
         "mix"
-      ]
+      ],
+      "steps": [
+        {
+          "prompt": "9 + 3 =",
+          "expect": "12"
+        },
+        {
+          "prompt": "12 × 2 =",
+          "expect": "24"
+        }
+      ],
+      "teach": "Inside the parentheses first: 12. Then 12 × 2 = 24."
     },
     {
       "id": "u-mix-mdas",
       "island": "mix",
-      "kind": "choice",
-      "prompt": "5 + 2 × 8 =",
-      "audioText": "5 + 2 × 8 =",
+      "kind": "stepskey",
+      "prompt": "5 + 2 × 8. Multiply before you add.",
+      "audioText": "5 + 2 × 8. Multiply before you add.",
       "answer": "21",
       "choices": [
         "13",
@@ -1196,7 +1260,18 @@
         "math",
         "upper",
         "mix"
-      ]
+      ],
+      "steps": [
+        {
+          "prompt": "2 × 8 =",
+          "expect": "16"
+        },
+        {
+          "prompt": "5 + 16 =",
+          "expect": "21"
+        }
+      ],
+      "teach": "Multiply first: 16. Then 5 + 16 = 21. Not 7 × 8."
     }
   ]
 }

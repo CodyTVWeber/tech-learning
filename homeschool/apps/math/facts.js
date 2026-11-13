@@ -45,7 +45,7 @@
       const row = n > 0 && n <= 6 && b > 0 && b <= 6;
       items.push({
         id: id,
-        kind: row ? "array" : "choice",
+        kind: row ? "array" : "product",
         prompt: n + " × " + b + " =",
         audioText: n + " times " + b + ".",
         answer: String(p),
@@ -66,13 +66,16 @@
     for (let b = 0; b <= 12; b++) {
       const p = n * b;
       const id = "drill-div-" + p + "d" + n;
+      const deal = p <= 20;
       items.push({
         id: id,
-        kind: "choice",
-        prompt: p + " ÷ " + n + " =",
+        kind: deal ? "deal" : "product",
+        prompt: deal ? "Deal " + p + " coins into " + n + " crews." : p + " ÷ " + n + " =",
         audioText: p + " divided by " + n + ".",
         answer: String(b),
         choices: choices(b, [b + 1, Math.max(0, b - 1), n], id),
+        dividend: p,
+        divisor: n,
         teach: p + " shared into " + n + " equal crews is " + b + " each.",
       });
     }

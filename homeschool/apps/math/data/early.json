@@ -214,9 +214,9 @@
     {
       "id": "e-f-d4",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "4 + 4 =",
-      "audioText": "4 + 4 =",
+      "kind": "array",
+      "prompt": "Tap 2 rows of 4.",
+      "audioText": "Tap 2 rows of 4.",
       "answer": "8",
       "choices": [
         "6",
@@ -227,14 +227,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "rows": 2,
+      "cols": 4,
+      "teach": "2 rows of 4 is 8. That is the double."
     },
     {
       "id": "e-f-d7",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "7 + 7 =",
-      "audioText": "7 + 7 =",
+      "kind": "maketen",
+      "prompt": "Hold 7. Count on 7 more to make ten, then the rest.",
+      "audioText": "Hold 7. Count on 7 more to make ten, then the rest.",
       "answer": "14",
       "choices": [
         "14",
@@ -245,14 +248,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "hold": 7,
+      "add": 7,
+      "teach": "7 + 3 makes 10. 4 more makes 14."
     },
     {
       "id": "e-f-91",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "9 + 1 =",
-      "audioText": "9 + 1 =",
+      "kind": "maketen",
+      "prompt": "Hold 9. Add 1 to fill the ten.",
+      "audioText": "Hold 9. Add 1 to fill the ten.",
       "answer": "10",
       "choices": [
         "11",
@@ -263,14 +269,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "hold": 9,
+      "add": 1,
+      "teach": "9 + 1 fills the ten-frame. That is 10."
     },
     {
       "id": "e-f-28",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "2 + 8 =",
-      "audioText": "2 + 8 =",
+      "kind": "maketen",
+      "prompt": "Hold 8. Add 2 to fill the ten.",
+      "audioText": "Hold 8. Add 2 to fill the ten.",
       "answer": "10",
       "choices": [
         "9",
@@ -281,14 +290,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "hold": 8,
+      "add": 2,
+      "teach": "8 + 2 fills the ten-frame. That is 10."
     },
     {
       "id": "e-f-65",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "6 + 5 =",
-      "audioText": "6 + 5 =",
+      "kind": "maketen",
+      "prompt": "Hold 6. Add 5. Fill the ten, then the extra.",
+      "audioText": "Hold 6. Add 5. Fill the ten, then the extra.",
       "answer": "11",
       "choices": [
         "10",
@@ -299,14 +311,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "hold": 6,
+      "add": 5,
+      "teach": "6 + 4 makes 10. 1 more makes 11."
     },
     {
       "id": "e-f-83",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "8 + 3 =",
-      "audioText": "8 + 3 =",
+      "kind": "maketen",
+      "prompt": "Hold 8. Add 3. Fill the ten, then the extra.",
+      "audioText": "Hold 8. Add 3. Fill the ten, then the extra.",
       "answer": "11",
       "choices": [
         "10",
@@ -317,14 +332,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "hold": 8,
+      "add": 3,
+      "teach": "8 + 2 makes 10. 1 more makes 11."
     },
     {
       "id": "e-f-9m4",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "9 − 4 =",
-      "audioText": "9 − 4 =",
+      "kind": "takeaway",
+      "prompt": "9 coins. Tap 4 to give away.",
+      "audioText": "9 coins. Tap 4 to give away.",
       "answer": "5",
       "choices": [
         "5",
@@ -335,14 +353,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "start": 9,
+      "take": 4,
+      "teach": "9 take away 4 leaves 5."
     },
     {
       "id": "e-f-12m7",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "12 − 7 =",
-      "audioText": "12 − 7 =",
+      "kind": "takeaway",
+      "prompt": "12 coins. Tap 7 to give away.",
+      "audioText": "12 coins. Tap 7 to give away.",
       "answer": "5",
       "choices": [
         "6",
@@ -353,14 +374,17 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "start": 12,
+      "take": 7,
+      "teach": "12 take away 7 leaves 5. Not 12 + 7."
     },
     {
       "id": "e-f-15m6",
       "island": "facts",
-      "kind": "choice",
-      "prompt": "15 − 6 =",
-      "audioText": "15 − 6 =",
+      "kind": "takeaway",
+      "prompt": "15 coins. Tap 6 to give away.",
+      "audioText": "15 coins. Tap 6 to give away.",
       "answer": "9",
       "choices": [
         "8",
@@ -371,7 +395,10 @@
         "math",
         "early",
         "facts"
-      ]
+      ],
+      "start": 15,
+      "take": 6,
+      "teach": "15 take away 6 leaves 9."
     },
     {
       "id": "e-p-34",
@@ -418,7 +445,7 @@
     {
       "id": "e-p-408",
       "island": "place",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "40 + 8 =",
       "audioText": "40 + 8 =",
       "answer": "48",
@@ -458,9 +485,9 @@
     {
       "id": "e-r-275",
       "island": "regroup",
-      "kind": "choice",
-      "prompt": "27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?",
-      "audioText": "27 + 5. Ones: 7+5=12. Bundle a ten. What is the sum?",
+      "kind": "regroup",
+      "prompt": "27 + 5. Bring in 5 coins, then bundle a ten.",
+      "audioText": "27 + 5. Bring in 5 coins, then bundle a ten.",
       "answer": "32",
       "choices": [
         "32",
@@ -471,14 +498,18 @@
         "math",
         "early",
         "regroup"
-      ]
+      ],
+      "tens": 2,
+      "ones": 7,
+      "add": 5,
+      "teach": "7 + 5 = 12 ones. Bundle 10. 3 tens and 2 ones is 32."
     },
     {
       "id": "e-r-467",
       "island": "regroup",
-      "kind": "choice",
-      "prompt": "46 + 7 =",
-      "audioText": "46 + 7 =",
+      "kind": "regroup",
+      "prompt": "46 + 7. Bring in 7 coins, then bundle a ten.",
+      "audioText": "46 + 7. Bring in 7 coins, then bundle a ten.",
       "answer": "53",
       "choices": [
         "43",
@@ -489,14 +520,18 @@
         "math",
         "early",
         "regroup"
-      ]
+      ],
+      "tens": 4,
+      "ones": 6,
+      "add": 7,
+      "teach": "6 + 7 = 13 ones. Bundle 10. 5 tens and 3 ones is 53."
     },
     {
       "id": "e-r-6010",
       "island": "regroup",
-      "kind": "choice",
-      "prompt": "60 − 10 =",
-      "audioText": "60 − 10 =",
+      "kind": "regroup",
+      "prompt": "60 − 10. Unbundle a crate, then give away 10.",
+      "audioText": "60 − 10. Unbundle a crate, then give away 10.",
       "answer": "50",
       "choices": [
         "50",
@@ -507,14 +542,18 @@
         "math",
         "early",
         "regroup"
-      ]
+      ],
+      "tens": 6,
+      "ones": 0,
+      "take": 10,
+      "teach": "Unbundle 1 ten. Give those 10 away. 5 tens are left: 50."
     },
     {
       "id": "e-r-358",
       "island": "regroup",
-      "kind": "choice",
-      "prompt": "35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?",
-      "audioText": "35 − 8. Ones cannot do 5 minus 8. Unbundle a ten. What is the difference?",
+      "kind": "regroup",
+      "prompt": "35 − 8. Unbundle a crate, then give away 8.",
+      "audioText": "35 − 8. Unbundle a crate, then give away 8.",
       "answer": "27",
       "choices": [
         "43",
@@ -525,14 +564,18 @@
         "math",
         "early",
         "regroup"
-      ]
+      ],
+      "tens": 3,
+      "ones": 5,
+      "take": 8,
+      "teach": "5 ones cannot give 8. Unbundle a ten: 2 tens and 15 ones. Give away 8. 27 left."
     },
     {
       "id": "e-r-29p6",
       "island": "regroup",
-      "kind": "choice",
-      "prompt": "29 + 6 =",
-      "audioText": "29 + 6 =",
+      "kind": "regroup",
+      "prompt": "29 + 6. Bring in 6 coins, then bundle a ten.",
+      "audioText": "29 + 6. Bring in 6 coins, then bundle a ten.",
       "answer": "35",
       "choices": [
         "35",
@@ -543,7 +586,11 @@
         "math",
         "early",
         "regroup"
-      ]
+      ],
+      "tens": 2,
+      "ones": 9,
+      "add": 6,
+      "teach": "9 + 6 = 15 ones. Bundle 10. 3 tens and 5 ones is 35."
     },
     {
       "id": "e-sk-2",
@@ -821,9 +868,9 @@
     {
       "id": "e-me-long",
       "island": "measure",
-      "kind": "choice",
-      "prompt": "A 5-inch rope and a 2-inch rope. Which is longer?",
-      "audioText": "A 5-inch rope and a 2-inch rope. Which is longer?",
+      "kind": "compare",
+      "prompt": "Tap the longer rope.",
+      "audioText": "Tap the longer rope.",
       "answer": "5-inch",
       "choices": [
         "same",
@@ -834,14 +881,17 @@
         "math",
         "early",
         "measure"
-      ]
+      ],
+      "leftLen": 5,
+      "rightLen": 2,
+      "teach": "The 5-inch rope sticks out farther."
     },
     {
       "id": "e-me-inch",
       "island": "measure",
-      "kind": "choice",
-      "prompt": "12 inches make 1",
-      "audioText": "12 inches make 1",
+      "kind": "shapepick",
+      "prompt": "12 inches make one of these. Tap it.",
+      "audioText": "12 inches make one of these. Tap it.",
       "answer": "foot",
       "choices": [
         "foot",
@@ -852,14 +902,20 @@
         "math",
         "early",
         "measure"
-      ]
+      ],
+      "options": [
+        "foot",
+        "yard",
+        "mile"
+      ],
+      "teach": "12 inches make 1 foot."
     },
     {
       "id": "e-sh-rect",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "Four sides, four square corners. Opposite sides match. This is a",
-      "audioText": "Four sides, four square corners. Opposite sides match. This is a",
+      "kind": "shapepick",
+      "prompt": "Tap the shape with four sides and four square corners.",
+      "audioText": "Tap the shape with four sides and four square corners.",
       "answer": "rectangle",
       "choices": [
         "triangle",
@@ -870,14 +926,20 @@
         "math",
         "early",
         "shape"
-      ]
+      ],
+      "options": [
+        "rectangle",
+        "triangle",
+        "circle"
+      ],
+      "teach": "A rectangle has four sides. Opposite sides match."
     },
     {
       "id": "e-sh-sides",
       "island": "shape",
-      "kind": "choice",
-      "prompt": "A triangle has this many sides:",
-      "audioText": "A triangle has this many sides:",
+      "kind": "perimeter",
+      "prompt": "Tap each side of the triangle.",
+      "audioText": "Tap each side of the triangle.",
       "answer": "3",
       "choices": [
         "4",
@@ -888,12 +950,18 @@
         "math",
         "early",
         "shape"
-      ]
+      ],
+      "sides": [
+        1,
+        1,
+        1
+      ],
+      "teach": "A triangle has 3 sides. You tapped each one."
     },
     {
       "id": "e-st-18",
       "island": "story",
-      "kind": "word",
+      "kind": "product",
       "prompt": "Pip stacks 9 crates. Reed stacks 6 more. How many crates?",
       "audioText": "Pip stacks 9 crates. Reed stacks 6 more. How many crates?",
       "answer": "15",
@@ -906,12 +974,13 @@
         "math",
         "early",
         "story"
-      ]
+      ],
+      "teach": "The answer is 15."
     },
     {
       "id": "e-st-20",
       "island": "story",
-      "kind": "word",
+      "kind": "product",
       "prompt": "A chest has 12 coins. Nell spends 4. How many are left?",
       "audioText": "A chest has 12 coins. Nell spends 4. How many are left?",
       "answer": "8",
@@ -924,12 +993,13 @@
         "math",
         "early",
         "story"
-      ]
+      ],
+      "teach": "The answer is 8."
     },
     {
       "id": "e-st-equal",
       "island": "story",
-      "kind": "word",
+      "kind": "product",
       "prompt": "3 coils of 5 coins. How many coins in all?",
       "audioText": "3 coils of 5 coins. How many coins in all?",
       "answer": "15",
@@ -942,7 +1012,8 @@
         "math",
         "early",
         "story"
-      ]
+      ],
+      "teach": "The answer is 15."
     },
     {
       "id": "e-row-34",
@@ -968,7 +1039,7 @@
     {
       "id": "e-row-444",
       "island": "rows",
-      "kind": "choice",
+      "kind": "product",
       "prompt": "4 + 4 + 4 =",
       "audioText": "4 + 4 + 4 =",
       "answer": "12",

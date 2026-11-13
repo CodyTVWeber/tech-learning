@@ -272,8 +272,8 @@
     {
       "id": "t-next-1",
       "island": "next",
-      "kind": "choice",
-      "prompt": "One more than 1 is",
+      "kind": "moreone",
+      "prompt": "Tap one more coin.",
       "audioText": "One more than 1.",
       "answer": "2",
       "choices": [
@@ -286,13 +286,14 @@
         "toddler",
         "next"
       ],
-      "count": 1
+      "count": 1,
+      "teach": "One coin, and one more, is 2."
     },
     {
       "id": "t-next-3",
       "island": "next",
-      "kind": "choice",
-      "prompt": "One more than 3 is",
+      "kind": "moreone",
+      "prompt": "Tap one more coin.",
       "audioText": "One more than 3.",
       "answer": "4",
       "choices": [
@@ -305,13 +306,14 @@
         "toddler",
         "next"
       ],
-      "count": 3
+      "count": 3,
+      "teach": "Three coins, and one more, is 4."
     },
     {
       "id": "t-next-4",
       "island": "next",
-      "kind": "choice",
-      "prompt": "One more than 4 is",
+      "kind": "moreone",
+      "prompt": "Tap one more coin.",
       "audioText": "One more than 4.",
       "answer": "5",
       "choices": [
@@ -324,13 +326,14 @@
         "toddler",
         "next"
       ],
-      "count": 4
+      "count": 4,
+      "teach": "Four coins, and one more, is 5."
     },
     {
       "id": "t-less-5",
       "island": "next",
-      "kind": "choice",
-      "prompt": "One less than 5 is",
+      "kind": "lessone",
+      "prompt": "Tap one coin to take away.",
       "audioText": "One less than 5.",
       "answer": "4",
       "choices": [
@@ -343,13 +346,14 @@
         "toddler",
         "next"
       ],
-      "count": 5
+      "count": 5,
+      "teach": "Five coins, take one away, is 4."
     },
     {
       "id": "t-less-2",
       "island": "next",
-      "kind": "choice",
-      "prompt": "One less than 2 is",
+      "kind": "lessone",
+      "prompt": "Tap one coin to take away.",
       "audioText": "One less than 2.",
       "answer": "1",
       "choices": [
@@ -362,7 +366,8 @@
         "toddler",
         "next"
       ],
-      "count": 2
+      "count": 2,
+      "teach": "Two coins, take one away, is 1."
     },
     {
       "id": "t-match-1",
